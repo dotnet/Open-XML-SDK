@@ -66,8 +66,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TemplateCommandGroup>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations), 0, 0),
@@ -160,8 +158,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Mcds>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcd), 0, 0)
@@ -221,8 +217,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         public VbaSuppData(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VbaSuppData>();
 
         /// <summary>
         /// <para>DocEvents.</para>
@@ -340,8 +334,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailMergeRecipients>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord), 1, 0)
@@ -376,7 +368,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public StringValue CommandName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CommandName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fciIndex</para>
@@ -385,7 +381,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public HexBinaryValue CommandIndex { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue CommandIndex
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>swArg</para>
@@ -394,8 +394,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public HexBinaryValue Argument { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FixedCommandKeyboardCustomization>();
+        public HexBinaryValue Argument
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -432,8 +435,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MacroKeyboardCustomization>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MacroKeyboardCustomization>(deep);
     }
@@ -453,8 +454,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         public WllMacroKeyboardCustomization() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WllMacroKeyboardCustomization>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WllMacroKeyboardCustomization>(deep);
@@ -481,7 +480,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public StringValue MacroName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MacroName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -507,8 +510,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AllocatedCommandKeyboardCustomization>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommandKeyboardCustomization>(deep);
     }
@@ -528,8 +529,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         public AllocatedCommandManifestEntry() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AllocatedCommandManifestEntry>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommandManifestEntry>(deep);
@@ -556,7 +555,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public StringValue AcceleratorName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AcceleratorName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -589,8 +592,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CharacterInsertion>();
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -669,7 +675,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public HexBinaryValue CharacterMapPrimary { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue CharacterMapPrimary
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>chmSecondary</para>
@@ -678,7 +688,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public HexBinaryValue CharacterMapSecondary { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue CharacterMapSecondary
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>kcmPrimary</para>
@@ -687,7 +701,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public HexBinaryValue KeyCodePrimary { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue KeyCodePrimary
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>kcmSecondary</para>
@@ -696,7 +714,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public HexBinaryValue KeyCodeSecondary { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue KeyCodeSecondary
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mask</para>
@@ -705,8 +727,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public OnOffValue Mask { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<KeyMapEntry>();
+        public OnOffValue Mask
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -834,7 +859,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public StringValue ArgumentValue { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ArgumentValue
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fciBasedOn</para>
@@ -843,7 +872,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public StringValue CommandBasedOn { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CommandBasedOn
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fciIndexBasedOn</para>
@@ -852,7 +885,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public HexBinaryValue CommandIndexBasedOn { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue CommandIndexBasedOn
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>acdName</para>
@@ -861,8 +898,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public StringValue AcceleratorName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AllocatedCommand>();
+        public StringValue AcceleratorName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -904,7 +944,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public StringValue MacroName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MacroName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
@@ -913,7 +957,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>menuHelp</para>
@@ -922,7 +970,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public StringValue MenuHelp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MenuHelp
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bEncrypt</para>
@@ -931,7 +983,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public HexBinaryValue BEncrypt { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue BEncrypt
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cmg</para>
@@ -940,8 +996,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public HexBinaryValue Cmg { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Mcd>();
+        public HexBinaryValue Cmg
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1001,8 +1060,6 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocNewXsdString>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocNewXsdString>(deep);
     }
@@ -1035,8 +1092,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocOpenXsdString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocOpenXsdString>(deep);
@@ -1071,8 +1126,6 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocCloseXsdString>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocCloseXsdString>(deep);
     }
@@ -1105,8 +1158,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocSyncXsdString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocSyncXsdString>(deep);
@@ -1141,8 +1192,6 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocXmlAfterInsertXsdString>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocXmlAfterInsertXsdString>(deep);
     }
@@ -1175,8 +1224,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocXmlBeforeDeleteXsdString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocXmlBeforeDeleteXsdString>(deep);
@@ -1211,8 +1258,6 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocContentControlAfterInsertXsdString>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlAfterInsertXsdString>(deep);
     }
@@ -1245,8 +1290,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocContentControlBeforeDeleteXsdString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlBeforeDeleteXsdString>(deep);
@@ -1281,8 +1324,6 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocContentControlOnExistXsdString>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlOnExistXsdString>(deep);
     }
@@ -1315,8 +1356,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocContentControlOnEnterXsdString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlOnEnterXsdString>(deep);
@@ -1351,8 +1390,6 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocStoreUpdateXsdString>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocStoreUpdateXsdString>(deep);
     }
@@ -1386,8 +1423,6 @@ namespace DocumentFormat.OpenXml.Office.Word
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocContentControlUpdateXsdString>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlUpdateXsdString>(deep);
     }
@@ -1420,8 +1455,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EventDocBuildingBlockAfterInsertXsdString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocBuildingBlockAfterInsertXsdString>(deep);
@@ -1497,8 +1530,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         public DocEvents(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocEvents>();
 
         /// <summary>
         /// <para>EventDocNewXsdString.</para>
@@ -1739,8 +1770,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AllocatedCommandManifest>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry), 0, 0)
@@ -1775,8 +1804,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ToolbarData>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1838,8 +1870,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<KeyMapCustomizations>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
@@ -1896,8 +1926,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         public MismatchedKeyMapCustomization(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MismatchedKeyMapCustomization>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2005,8 +2033,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Toolbars>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest), 0, 0),
@@ -2066,8 +2092,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AllocatedCommands>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommand), 0, 0)
@@ -2102,8 +2126,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public OnOffValue Val { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RecordIncluded>();
+        public OnOffValue Val
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2139,8 +2166,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public IntegerValue Val { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RecordHashCode>();
+        public IntegerValue Val
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2204,8 +2234,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         public SingleDataSourceRecord(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SingleDataSourceRecord>();
 
         /// <summary>
         /// <para>RecordIncluded.</para>

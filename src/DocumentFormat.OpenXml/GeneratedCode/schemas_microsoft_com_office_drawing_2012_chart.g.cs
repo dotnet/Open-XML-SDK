@@ -65,8 +65,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotSource>();
-
         /// <summary>
         /// <para>Pivot Name.</para>
         /// <para>Represents the following element tag in the schema: c:name.</para>
@@ -139,14 +137,21 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Number Format Code</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        public StringValue FormatCode { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FormatCode
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Linked to Source</para>
         /// <para>Represents the following attribute in the schema: sourceLinked</para>
         /// </summary>
-        public BooleanValue SourceLinked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingFormat>();
+        public BooleanValue SourceLinked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -242,8 +247,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -360,8 +368,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Layout>();
-
         /// <summary>
         /// <para>Manual Layout.</para>
         /// <para>Represents the following element tag in the schema: c:manualLayout.</para>
@@ -447,8 +453,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FullReference>();
-
         /// <summary>
         /// <para>SequenceOfReferences.</para>
         /// <para>Represents the following element tag in the schema: c15:sqref.</para>
@@ -519,8 +523,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public LevelReference(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelReference>();
 
         /// <summary>
         /// <para>SequenceOfReferences.</para>
@@ -593,8 +595,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormulaReference>();
-
         /// <summary>
         /// <para>SequenceOfReferences.</para>
         /// <para>Represents the following element tag in the schema: c15:sqref.</para>
@@ -665,8 +665,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public FilteredSeriesTitle(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilteredSeriesTitle>();
 
         /// <summary>
         /// <para>ChartText.</para>
@@ -739,8 +737,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilteredCategoryTitle>();
-
         /// <summary>
         /// <para>AxisDataSourceType.</para>
         /// <para>Represents the following element tag in the schema: c15:cat.</para>
@@ -811,8 +807,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public FilteredAreaSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilteredAreaSeries>();
 
         /// <summary>
         /// <para>AreaChartSeries.</para>
@@ -885,8 +879,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilteredBarSeries>();
-
         /// <summary>
         /// <para>BarChartSeries.</para>
         /// <para>Represents the following element tag in the schema: c15:ser.</para>
@@ -957,8 +949,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public FilteredBubbleSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilteredBubbleSeries>();
 
         /// <summary>
         /// <para>BubbleChartSeries.</para>
@@ -1031,8 +1021,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilteredLineSeriesExtension>();
-
         /// <summary>
         /// <para>LineChartSeries.</para>
         /// <para>Represents the following element tag in the schema: c15:ser.</para>
@@ -1103,8 +1091,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public FilteredPieSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilteredPieSeries>();
 
         /// <summary>
         /// <para>PieChartSeries.</para>
@@ -1177,8 +1163,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilteredRadarSeries>();
-
         /// <summary>
         /// <para>RadarChartSeries.</para>
         /// <para>Represents the following element tag in the schema: c15:ser.</para>
@@ -1250,8 +1234,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilteredScatterSeries>();
-
         /// <summary>
         /// <para>ScatterChartSeries.</para>
         /// <para>Represents the following element tag in the schema: c15:ser.</para>
@@ -1322,8 +1304,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public FilteredSurfaceSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilteredSurfaceSeries>();
 
         /// <summary>
         /// <para>SurfaceChartSeries.</para>
@@ -1397,8 +1377,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public DataLabelsRange(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabelsRange>();
 
         /// <summary>
         /// <para>Formula.</para>
@@ -1485,8 +1463,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryFilterExceptions>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterException), 1, 0, version: FileFormatVersions.Office2013)
@@ -1545,8 +1521,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabelFieldTable>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableEntry), 0, 0, version: FileFormatVersions.Office2013)
@@ -1574,8 +1548,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExceptionForSave>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExceptionForSave>(deep);
     }
@@ -1595,8 +1567,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public ShowDataLabelsRange() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowDataLabelsRange>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowDataLabelsRange>(deep);
@@ -1618,8 +1588,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowLeaderLines>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowLeaderLines>(deep);
     }
@@ -1639,8 +1607,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public AutoGeneneratedCategories() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoGeneneratedCategories>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoGeneneratedCategories>(deep);
@@ -1662,8 +1628,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InvertIfNegativeBoolean>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InvertIfNegativeBoolean>(deep);
     }
@@ -1683,8 +1647,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public Bubble3D() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bubble3D>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bubble3D>(deep);
@@ -1708,7 +1670,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1768,8 +1734,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public ChartText(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartText>();
 
         /// <summary>
         /// <para>String Reference.</para>
@@ -1873,8 +1837,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeaderLines>();
-
         /// <summary>
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
@@ -1928,8 +1890,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SequenceOfReferences>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SequenceOfReferences>(deep);
     }
@@ -1963,8 +1923,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formula>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
     }
@@ -1997,8 +1955,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextFieldGuid>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextFieldGuid>(deep);
@@ -2058,8 +2014,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public AxisDataSourceType(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisDataSourceType>();
 
         /// <summary>
         /// <para>Multi Level String Reference.</para>
@@ -2216,8 +2170,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public BarChartSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -2400,8 +2352,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineChartSeries>();
-
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -2581,8 +2531,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterChartSeries>();
-
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -2746,8 +2694,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaChartSeries>();
-
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -2907,8 +2853,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public PieChartSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -3090,8 +3034,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleChartSeries>();
-
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -3268,8 +3210,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarChartSeries>();
-
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -3437,8 +3377,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public SurfaceChartSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -3630,8 +3568,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabelsRangeChache>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
@@ -3692,8 +3628,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public DataLabelFieldTableCache(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabelFieldTableCache>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3791,8 +3725,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Explosion>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3860,8 +3797,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public Marker(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Marker>();
 
         /// <summary>
         /// <para>Symbol.</para>
@@ -4006,8 +3941,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabel>();
-
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -4120,8 +4053,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public CategoryFilterException(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryFilterException>();
 
         /// <summary>
         /// <para>SequenceOfReferences.</para>
@@ -4281,8 +4212,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         public DataLabelFieldTableEntry(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabelFieldTableEntry>();
 
         /// <summary>
         /// <para>TextFieldGuid.</para>

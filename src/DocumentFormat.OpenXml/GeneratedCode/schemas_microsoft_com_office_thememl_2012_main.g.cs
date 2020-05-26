@@ -65,20 +65,31 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>vid, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: vid</para>
         /// </summary>
-        public StringValue Vid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeFamily>();
+        public StringValue Vid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -177,8 +188,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -247,25 +256,41 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>vid, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: vid</para>
         /// </summary>
-        public StringValue Vid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Vid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cx, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        public Int64Value X { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value X
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cy, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        public Int64Value Y { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Y
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2013, Office2016</para>
@@ -274,8 +299,11 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeVariant>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -376,8 +404,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         public ThemeVariantList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeVariantList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

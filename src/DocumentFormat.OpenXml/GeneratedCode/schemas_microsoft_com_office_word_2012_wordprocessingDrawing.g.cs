@@ -33,20 +33,31 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>embeddedHtml, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: embeddedHtml</para>
         /// </summary>
-        public StringValue EmbeddedHtml { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue EmbeddedHtml
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>h, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
-        public UInt32Value Height { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Height
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>w, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        public UInt32Value Width { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebVideoProperty>();
+        public UInt32Value Width
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

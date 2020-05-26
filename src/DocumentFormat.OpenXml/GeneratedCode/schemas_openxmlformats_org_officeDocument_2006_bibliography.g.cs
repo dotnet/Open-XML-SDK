@@ -63,20 +63,31 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Selected Style</para>
         /// <para>Represents the following attribute in the schema: SelectedStyle</para>
         /// </summary>
-        public StringValue SelectedStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SelectedStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Documentation Style Name</para>
         /// <para>Represents the following attribute in the schema: StyleName</para>
         /// </summary>
-        public StringValue StyleName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue StyleName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Uniform Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: URI</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Sources>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -158,8 +169,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Person>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
@@ -203,8 +212,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Last>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Last>(deep);
     }
@@ -238,8 +245,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<First>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<First>(deep);
@@ -275,8 +280,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Middle>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Middle>(deep);
     }
@@ -310,8 +313,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Corporate>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Corporate>(deep);
@@ -347,8 +348,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AbbreviatedCaseNumber>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbbreviatedCaseNumber>(deep);
     }
@@ -382,8 +381,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlbumTitle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlbumTitle>(deep);
@@ -419,8 +416,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookTitle>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookTitle>(deep);
     }
@@ -454,8 +449,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Broadcaster>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Broadcaster>(deep);
@@ -491,8 +484,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BroadcastTitle>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BroadcastTitle>(deep);
     }
@@ -526,8 +517,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CaseNumber>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CaseNumber>(deep);
@@ -563,8 +552,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChapterNumber>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChapterNumber>(deep);
     }
@@ -598,8 +585,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<City>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<City>(deep);
@@ -635,8 +620,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Comments>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comments>(deep);
     }
@@ -670,8 +653,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConferenceName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConferenceName>(deep);
@@ -707,8 +688,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CountryRegion>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CountryRegion>(deep);
     }
@@ -742,8 +721,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Court>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Court>(deep);
@@ -779,8 +756,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Day>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Day>(deep);
     }
@@ -814,8 +789,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DayAccessed>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayAccessed>(deep);
@@ -851,8 +824,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Department>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Department>(deep);
     }
@@ -886,8 +857,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Distributor>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Distributor>(deep);
@@ -923,8 +892,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Edition>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Edition>(deep);
     }
@@ -958,8 +925,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GuidString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GuidString>(deep);
@@ -995,8 +960,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Institution>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Institution>(deep);
     }
@@ -1030,8 +993,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InternetSiteTitle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InternetSiteTitle>(deep);
@@ -1067,8 +1028,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Issue>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Issue>(deep);
     }
@@ -1102,8 +1061,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<JournalName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<JournalName>(deep);
@@ -1139,8 +1096,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LcId>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LcId>(deep);
     }
@@ -1174,8 +1129,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Medium>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Medium>(deep);
@@ -1211,8 +1164,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Month>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Month>(deep);
     }
@@ -1246,8 +1197,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MonthAccessed>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthAccessed>(deep);
@@ -1283,8 +1232,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberVolumes>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberVolumes>(deep);
     }
@@ -1318,8 +1265,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pages>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
@@ -1355,8 +1300,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PatentNumber>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PatentNumber>(deep);
     }
@@ -1390,8 +1333,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PeriodicalTitle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PeriodicalTitle>(deep);
@@ -1427,8 +1368,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ProductionCompany>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProductionCompany>(deep);
     }
@@ -1462,8 +1401,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PublicationTitle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PublicationTitle>(deep);
@@ -1499,8 +1436,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Publisher>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Publisher>(deep);
     }
@@ -1534,8 +1469,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RecordingNumber>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecordingNumber>(deep);
@@ -1571,8 +1504,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ReferenceOrder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReferenceOrder>(deep);
     }
@@ -1606,8 +1537,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Reporter>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Reporter>(deep);
@@ -1643,8 +1572,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShortTitle>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShortTitle>(deep);
     }
@@ -1678,8 +1605,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StandardNumber>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StandardNumber>(deep);
@@ -1715,8 +1640,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StateProvince>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StateProvince>(deep);
     }
@@ -1750,8 +1673,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Station>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Station>(deep);
@@ -1787,8 +1708,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tag>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tag>(deep);
     }
@@ -1822,8 +1741,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Theater>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Theater>(deep);
@@ -1859,8 +1776,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThesisType>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThesisType>(deep);
     }
@@ -1894,8 +1809,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Title>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Title>(deep);
@@ -1931,8 +1844,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PatentType>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PatentType>(deep);
     }
@@ -1966,8 +1877,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UrlString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UrlString>(deep);
@@ -2003,8 +1912,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Version>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Version>(deep);
     }
@@ -2038,8 +1945,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Volume>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Volume>(deep);
@@ -2075,8 +1980,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Year>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Year>(deep);
     }
@@ -2110,8 +2013,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<YearAccessed>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearAccessed>(deep);
@@ -2163,8 +2064,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public NameList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NameList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2223,8 +2122,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Artist>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2281,8 +2178,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public BookAuthor(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookAuthor>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2341,8 +2236,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Compiler>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2399,8 +2292,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public Composer(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Composer>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2459,8 +2350,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Conductor>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2517,8 +2406,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public Counsel(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Counsel>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2577,8 +2464,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Director>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2635,8 +2520,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public Editor(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Editor>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2695,8 +2578,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Interviewee>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2753,8 +2634,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public Interviewer(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Interviewer>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2813,8 +2692,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Inventor>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2871,8 +2748,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public ProducerName(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ProducerName>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2931,8 +2806,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Translator>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
@@ -2989,8 +2862,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public Writer(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Writer>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3109,8 +2980,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Author>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 0, 1)
@@ -3172,8 +3041,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public Performer(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Performer>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3340,8 +3207,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public AuthorList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AuthorList>();
 
         /// <summary>
         /// <para>Artist.</para>
@@ -3610,8 +3475,6 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SourceType>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SourceType>(deep);
     }
@@ -3764,8 +3627,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         public Source(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Source>();
 
         /// <summary>
         /// <para>Abbreviated Case Number.</para>

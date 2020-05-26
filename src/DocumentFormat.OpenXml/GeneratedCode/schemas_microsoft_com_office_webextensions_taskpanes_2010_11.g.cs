@@ -62,8 +62,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Taskpanes>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane), 0, 0, version: FileFormatVersions.Office2013)
@@ -129,8 +127,11 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionPartReference>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -198,8 +199,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -271,32 +270,51 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <para>dockstate, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dockstate</para>
         /// </summary>
-        public StringValue DockState { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DockState
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visibility, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visibility</para>
         /// </summary>
-        public BooleanValue Visibility { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visibility
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>width, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        public DoubleValue Width { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Width
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>row, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: row</para>
         /// </summary>
-        public UInt32Value Row { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Row
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>locked, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        public BooleanValue Locked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionTaskpane>();
+        public BooleanValue Locked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

@@ -78,14 +78,21 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>meth, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: meth</para>
         /// </summary>
-        public StringValue Method { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Method
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorStyle>();
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -271,8 +278,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartStyle>();
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -871,8 +881,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorStyleVariation>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -963,8 +971,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1088,8 +1094,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>val, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleColor>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1202,8 +1211,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineReference>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -1279,8 +1286,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillReference>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -1355,8 +1360,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public EffectReference(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EffectReference>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1442,13 +1445,21 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>idx, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mods, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
-        public ListValue<StringValue> Modifiers { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> Modifiers
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1491,8 +1502,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
             return new DoubleValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineWidthScale>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineWidthScale>(deep);
@@ -1561,14 +1570,21 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>idx, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues> Index { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues> Index
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mods, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
-        public ListValue<StringValue> Modifiers { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontReference>();
+        public ListValue<StringValue> Modifiers
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1684,8 +1700,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1846,116 +1865,191 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>kumimoji</para>
         /// <para>Represents the following attribute in the schema: kumimoji</para>
         /// </summary>
-        public BooleanValue Kumimoji { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Kumimoji
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lang</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>altLang</para>
         /// <para>Represents the following attribute in the schema: altLang</para>
         /// </summary>
-        public StringValue AlternativeLanguage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlternativeLanguage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sz</para>
         /// <para>Represents the following attribute in the schema: sz</para>
         /// </summary>
-        public Int32Value FontSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FontSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>b</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public BooleanValue Bold { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Bold
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>i</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public BooleanValue Italic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Italic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>u</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues> Underline { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues> Underline
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>strike</para>
         /// <para>Represents the following attribute in the schema: strike</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues> Strike { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues> Strike
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>kern</para>
         /// <para>Represents the following attribute in the schema: kern</para>
         /// </summary>
-        public Int32Value Kerning { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Kerning
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cap</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues> Capital { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues> Capital
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>spc</para>
         /// <para>Represents the following attribute in the schema: spc</para>
         /// </summary>
-        public Int32Value Spacing { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Spacing
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>normalizeH</para>
         /// <para>Represents the following attribute in the schema: normalizeH</para>
         /// </summary>
-        public BooleanValue NormalizeHeight { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NormalizeHeight
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>baseline</para>
         /// <para>Represents the following attribute in the schema: baseline</para>
         /// </summary>
-        public Int32Value Baseline { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Baseline
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>noProof</para>
         /// <para>Represents the following attribute in the schema: noProof</para>
         /// </summary>
-        public BooleanValue NoProof { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoProof
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dirty</para>
         /// <para>Represents the following attribute in the schema: dirty</para>
         /// </summary>
-        public BooleanValue Dirty { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Dirty
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>err</para>
         /// <para>Represents the following attribute in the schema: err</para>
         /// </summary>
-        public BooleanValue SpellingError { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SpellingError
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>smtClean</para>
         /// <para>Represents the following attribute in the schema: smtClean</para>
         /// </summary>
-        public BooleanValue SmtClean { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SmtClean
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>smtId</para>
         /// <para>Represents the following attribute in the schema: smtId</para>
         /// </summary>
-        public UInt32Value SmtId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SmtId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bmk</para>
         /// <para>Represents the following attribute in the schema: bmk</para>
         /// </summary>
-        public StringValue Bookmark { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextCharacterPropertiesType>();
+        public StringValue Bookmark
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2134,116 +2228,191 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Paragraph Spacing</para>
         /// <para>Represents the following attribute in the schema: spcFirstLastPara</para>
         /// </summary>
-        public BooleanValue UseParagraphSpacing { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UseParagraphSpacing
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Vertical Overflow</para>
         /// <para>Represents the following attribute in the schema: vertOverflow</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Horizontal Overflow</para>
         /// <para>Represents the following attribute in the schema: horzOverflow</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Text</para>
         /// <para>Represents the following attribute in the schema: vert</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Wrapping Type</para>
         /// <para>Represents the following attribute in the schema: wrap</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Left Inset</para>
         /// <para>Represents the following attribute in the schema: lIns</para>
         /// </summary>
-        public Int32Value LeftInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value LeftInset
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Inset</para>
         /// <para>Represents the following attribute in the schema: tIns</para>
         /// </summary>
-        public Int32Value TopInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value TopInset
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right Inset</para>
         /// <para>Represents the following attribute in the schema: rIns</para>
         /// </summary>
-        public Int32Value RightInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value RightInset
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Inset</para>
         /// <para>Represents the following attribute in the schema: bIns</para>
         /// </summary>
-        public Int32Value BottomInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value BottomInset
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number of Columns</para>
         /// <para>Represents the following attribute in the schema: numCol</para>
         /// </summary>
-        public Int32Value ColumnCount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ColumnCount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Space Between Columns</para>
         /// <para>Represents the following attribute in the schema: spcCol</para>
         /// </summary>
-        public Int32Value ColumnSpacing { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ColumnSpacing
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Columns Right-To-Left</para>
         /// <para>Represents the following attribute in the schema: rtlCol</para>
         /// </summary>
-        public BooleanValue RightToLeftColumns { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RightToLeftColumns
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>From WordArt</para>
         /// <para>Represents the following attribute in the schema: fromWordArt</para>
         /// </summary>
-        public BooleanValue FromWordArt { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FromWordArt
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Anchor</para>
         /// <para>Represents the following attribute in the schema: anchor</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Anchor Center</para>
         /// <para>Represents the following attribute in the schema: anchorCtr</para>
         /// </summary>
-        public BooleanValue AnchorCenter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AnchorCenter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Anti-Alias</para>
         /// <para>Represents the following attribute in the schema: forceAA</para>
         /// </summary>
-        public BooleanValue ForceAntiAlias { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ForceAntiAlias
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Upright</para>
         /// <para>Represents the following attribute in the schema: upright</para>
         /// </summary>
-        public BooleanValue UpRight { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UpRight
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Compatible Line Spacing</para>
         /// <para>Represents the following attribute in the schema: compatLnSpc</para>
         /// </summary>
-        public BooleanValue CompatibleLineSpacing { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBodyProperties>();
+        public BooleanValue CompatibleLineSpacing
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2350,8 +2519,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryAxisProperties>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryAxisProperties>(deep);
     }
@@ -2372,8 +2539,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesAxisProperties>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeriesAxisProperties>(deep);
     }
@@ -2393,8 +2558,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public ValueAxisProperties() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValueAxisProperties>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ValueAxisProperties>(deep);
@@ -2418,43 +2581,71 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>visible, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Visible { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Visible
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>majorTick, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: majorTick</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch> MajorTick { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch> MajorTick
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>minorTick, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: minorTick</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch> MinorTickProp { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch> MinorTickProp
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>labelPosition, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: labelPosition</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch> LabelPosition { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch> LabelPosition
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>majorGridlines, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: majorGridlines</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MajorGridlines { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MajorGridlines
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>minorGridlines, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: minorGridlines</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MinorGridlinesProp { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MinorGridlinesProp
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> TitleProp { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> TitleProp
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2511,50 +2702,81 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>overlap, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: overlap</para>
         /// </summary>
-        public SByteValue Overlap { get => GetAttribute<SByteValue>(); set => SetAttribute(value); }
+        public SByteValue Overlap
+        {
+            get => GetAttribute<SByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>gapWidth, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: gapWidth</para>
         /// </summary>
-        public UInt16Value GapWidth { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value GapWidth
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>gapDepth, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: gapDepth</para>
         /// </summary>
-        public UInt16Value GapDepth { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value GapDepth
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>doughnutHoleSize, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: doughnutHoleSize</para>
         /// </summary>
-        public ByteValue DoughnutHoleSize { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue DoughnutHoleSize
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>markerVisible, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: markerVisible</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MarkerVisible { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MarkerVisible
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hiloLines, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: hiloLines</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> HiloLines { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> HiloLines
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dropLines, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dropLines</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> DropLines { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> DropLines
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>seriesLines, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: seriesLines</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> SeriesLines { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataSeries>();
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> SeriesLines
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2618,38 +2840,61 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>position, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition> Position { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition> Position
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>value, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Value { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Value
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>seriesName, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: seriesName</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> SeriesName { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> SeriesName
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>categoryName, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: categoryName</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> CategoryName { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> CategoryName
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>legendKey, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: legendKey</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> LegendKey { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> LegendKey
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>percentage, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: percentage</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Percentage { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabels>();
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Percentage
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2705,26 +2950,41 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>legendKeys, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: legendKeys</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> LegendKeys { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> LegendKeys
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>horizontalBorder, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: horizontalBorder</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> HorizontalBorder { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> HorizontalBorder
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>verticalBorder, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: verticalBorder</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> VerticalBorder { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> VerticalBorder
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>outlineBorder, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: outlineBorder</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> OutlineBorder { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataTable>();
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> OutlineBorder
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2772,20 +3032,31 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>visible, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Visible { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Visible
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>includeInLayout, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: includeInLayout</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> IncludeInLayout { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> IncludeInLayout
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>position, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition> Position { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Legend>();
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition> Position
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2829,8 +3100,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>position, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition> Position { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Title>();
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition> Position
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2866,20 +3140,31 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>add, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: add</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Add { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Add
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>equation, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: equation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Equation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Equation
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rsquared, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rsquared</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> RSquared { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Trendline>();
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> RSquared
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2923,38 +3208,61 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>rotX, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rotX</para>
         /// </summary>
-        public SByteValue RotX { get => GetAttribute<SByteValue>(); set => SetAttribute(value); }
+        public SByteValue RotX
+        {
+            get => GetAttribute<SByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rotY, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rotY</para>
         /// </summary>
-        public UInt16Value RotY { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value RotY
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rAngAx, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rAngAx</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> RightAngleAxes { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> RightAngleAxes
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>perspective, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: perspective</para>
         /// </summary>
-        public ByteValue Perspective { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue Perspective
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>heightPercent, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: heightPercent</para>
         /// </summary>
-        public UInt16Value HeightPercent { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value HeightPercent
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>depthPercent, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: depthPercent</para>
         /// </summary>
-        public UInt16Value DepthPercent { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<View3DProperties>();
+        public UInt16Value DepthPercent
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3044,8 +3352,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisTitle>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -3118,8 +3424,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public CategoryAxis(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryAxis>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3194,8 +3498,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartArea>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -3268,8 +3570,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public DataLabel(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabel>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3344,8 +3644,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabelCallout>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -3418,8 +3716,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public DataPoint(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataPoint>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3494,8 +3790,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataPoint3D>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -3568,8 +3862,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public DataPointLine(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataPointLine>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3644,8 +3936,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataPointMarker>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -3718,8 +4008,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public DataPointWireframe(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataPointWireframe>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3794,8 +4082,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataTableStyle>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -3868,8 +4154,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public DownBar(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DownBar>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3944,8 +4228,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropLine>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -4018,8 +4300,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public ErrorBar(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorBar>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4094,8 +4374,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Floor>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -4168,8 +4446,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public GridlineMajor(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridlineMajor>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4244,8 +4520,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridlineMinor>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -4318,8 +4592,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public HiLoLine(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiLoLine>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4394,8 +4666,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeaderLine>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -4468,8 +4738,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public LegendStyle(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegendStyle>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4544,8 +4812,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlotArea>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -4618,8 +4884,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public PlotArea3D(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlotArea3D>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4694,8 +4958,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesAxis>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -4768,8 +5030,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public SeriesLine(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesLine>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4844,8 +5104,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TitleStyle>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -4918,8 +5176,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public TrendlineStyle(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TrendlineStyle>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4994,8 +5250,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TrendlineLabel>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -5068,8 +5322,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public UpBar(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UpBar>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5144,8 +5396,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValueAxis>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
@@ -5218,8 +5468,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         public Wall(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Wall>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5305,7 +5553,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>mods, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
-        public ListValue<StringValue> Modifiers { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> Modifiers
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5452,14 +5704,21 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>symbol, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: symbol</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle> Symbol { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle> Symbol
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>size, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public ByteValue Size { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MarkerLayoutProperties>();
+        public ByteValue Size
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

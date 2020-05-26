@@ -61,8 +61,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Properties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty), 0, 0)
@@ -222,26 +220,41 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Format ID</para>
         /// <para>Represents the following attribute in the schema: fmtid</para>
         /// </summary>
-        public StringValue FormatId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FormatId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Property ID</para>
         /// <para>Represents the following attribute in the schema: pid</para>
         /// </summary>
-        public Int32Value PropertyId { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value PropertyId
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom File Property Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bookmark Link Target</para>
         /// <para>Represents the following attribute in the schema: linkTarget</para>
         /// </summary>
-        public StringValue LinkTarget { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomDocumentProperty>();
+        public StringValue LinkTarget
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

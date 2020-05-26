@@ -73,8 +73,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSpace>();
-
         /// <summary>
         /// <para>ChartData.</para>
         /// <para>Represents the following element tag in the schema: cx:chartData.</para>
@@ -244,8 +242,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new UInt32Value { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BinCountXsdunsignedInt>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BinCountXsdunsignedInt>(deep);
     }
@@ -294,8 +290,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>uri, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Extension2>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -351,8 +350,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartStringValue>();
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -401,8 +403,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Idx { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumericValue>();
+        public UInt32Value Idx
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -471,8 +476,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Dimension data type, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumericDimension>();
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -552,8 +560,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Dimension data type, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringDimension>();
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -627,8 +638,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2), 0, 0, version: FileFormatVersions.Office2016)
@@ -663,7 +672,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>True if the external link should automatically update, this property is only available in Office2016</para>
@@ -672,8 +685,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx=http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public BooleanValue AutoUpdate { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalData>();
+        public BooleanValue AutoUpdate
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -748,8 +764,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>id, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Data>();
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -826,8 +845,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextData>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -891,8 +908,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RichTextBody>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
@@ -953,8 +968,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public TxPrTextBody(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TxPrTextBody>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1094,8 +1107,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Text>();
-
         /// <summary>
         /// <para>TextData.</para>
         /// <para>Represents the following element tag in the schema: cx:txData.</para>
@@ -1216,8 +1227,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1338,8 +1352,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisUnitsLabel>();
-
         /// <summary>
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: cx:tx.</para>
@@ -1426,8 +1438,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>gapWidth, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: gapWidth</para>
         /// </summary>
-        public StringValue GapWidth { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryAxisScaling>();
+        public StringValue GapWidth
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1467,26 +1482,41 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>max, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        public StringValue Max { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Max
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>min, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        public StringValue Min { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Min
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>majorUnit, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: majorUnit</para>
         /// </summary>
-        public StringValue MajorUnit { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MajorUnit
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>minorUnit, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: minorUnit</para>
         /// </summary>
-        public StringValue MinorUnit { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValueAxisScaling>();
+        public StringValue MinorUnit
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1582,8 +1612,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public AxisTitle(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisTitle>();
 
         /// <summary>
         /// <para>Text.</para>
@@ -1704,8 +1732,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>unit, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: unit</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit> Unit { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisUnits>();
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit> Unit
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1799,8 +1830,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorGridlinesGridlines>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
@@ -1859,8 +1888,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public MinorGridlinesGridlines(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorGridlinesGridlines>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1994,8 +2021,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorTickMarksTickMarks>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
@@ -2052,8 +2077,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public MinorTickMarksTickMarks(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorTickMarksTickMarks>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2115,7 +2138,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>type, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2185,8 +2212,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TickLabels>();
-
         /// <summary>
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
@@ -2231,14 +2256,21 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>formatCode, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        public StringValue FormatCode { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FormatCode
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sourceLinked, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: sourceLinked</para>
         /// </summary>
-        public BooleanValue SourceLinked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberFormat>();
+        public BooleanValue SourceLinked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2285,8 +2317,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new DoubleValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Xsddouble>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Xsddouble>(deep);
     }
@@ -2311,8 +2341,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal> ParentLabelLayoutVal { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParentLabelLayout>();
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal> ParentLabelLayoutVal
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2348,32 +2381,51 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>connectorLines, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: connectorLines</para>
         /// </summary>
-        public BooleanValue ConnectorLines { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ConnectorLines
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>meanLine, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: meanLine</para>
         /// </summary>
-        public BooleanValue MeanLine { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MeanLine
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>meanMarker, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: meanMarker</para>
         /// </summary>
-        public BooleanValue MeanMarker { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MeanMarker
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>nonoutliers, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: nonoutliers</para>
         /// </summary>
-        public BooleanValue Nonoutliers { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Nonoutliers
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>outliers, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: outliers</para>
         /// </summary>
-        public BooleanValue Outliers { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesElementVisibilities>();
+        public BooleanValue Outliers
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2405,8 +2457,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public Aggregation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Aggregation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Aggregation>(deep);
@@ -2465,20 +2515,31 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>intervalClosed, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: intervalClosed</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide> IntervalClosed { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide> IntervalClosed
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>underflow, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: underflow</para>
         /// </summary>
-        public StringValue Underflow { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Underflow
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>overflow, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: overflow</para>
         /// </summary>
-        public StringValue Overflow { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Binning>();
+        public StringValue Overflow
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2561,8 +2622,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>quartileMethod, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: quartileMethod</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod> QuartileMethod { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Statistics>();
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod> QuartileMethod
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2622,8 +2686,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Subtotals>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType), 0, 0, version: FileFormatVersions.Office2016)
@@ -2655,20 +2717,31 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>seriesName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: seriesName</para>
         /// </summary>
-        public BooleanValue SeriesName { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SeriesName
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>categoryName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: categoryName</para>
         /// </summary>
-        public BooleanValue CategoryName { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CategoryName
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>value, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public BooleanValue Value { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabelVisibilities>();
+        public BooleanValue Value
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2712,8 +2785,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeparatorXsdstring>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeparatorXsdstring>(deep);
     }
@@ -2746,8 +2817,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OddHeaderXsdstring>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddHeaderXsdstring>(deep);
@@ -2782,8 +2851,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OddFooterXsdstring>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddFooterXsdstring>(deep);
     }
@@ -2816,8 +2883,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EvenHeaderXsdstring>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenHeaderXsdstring>(deep);
@@ -2852,8 +2917,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EvenFooterXsdstring>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenFooterXsdstring>(deep);
     }
@@ -2886,8 +2949,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstHeaderXsdstring>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstHeaderXsdstring>(deep);
@@ -2922,8 +2983,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstFooterXsdstring>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstFooterXsdstring>(deep);
     }
@@ -2956,8 +3015,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VXsdstring>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VXsdstring>(deep);
@@ -3024,14 +3081,21 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Idx { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Idx
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pos, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos> Pos { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabel>();
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos> Pos
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3158,8 +3222,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Idx { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabelHidden>();
+        public UInt32Value Idx
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3228,8 +3295,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>idx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Idx { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataPoint>();
+        public UInt32Value Idx
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3344,8 +3414,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>pos, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos> Pos { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabels>();
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos> Pos
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3457,8 +3530,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataId>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3532,8 +3608,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public SeriesLayoutProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesLayoutProperties>();
 
         /// <summary>
         /// <para>ParentLabelLayout.</para>
@@ -3611,8 +3685,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             return new UInt32Value { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisId>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisId>(deep);
     }
@@ -3665,8 +3737,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public PlotSurface(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlotSurface>();
 
         /// <summary>
         /// <para>ShapeProperties.</para>
@@ -3771,32 +3841,51 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>layoutId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: layoutId</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout> LayoutId { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout> LayoutId
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ownerIdx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ownerIdx</para>
         /// </summary>
-        public UInt32Value OwnerIdx { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value OwnerIdx
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>uniqueId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        public StringValue UniqueId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>formatIdx, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: formatIdx</para>
         /// </summary>
-        public UInt32Value FormatIdx { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Series>();
+        public UInt32Value FormatIdx
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3907,8 +3996,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlotAreaRegion>();
-
         /// <summary>
         /// <para>PlotSurface.</para>
         /// <para>Represents the following element tag in the schema: cx:plotSurface.</para>
@@ -4010,14 +4097,21 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>id, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Axis>();
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4113,20 +4207,31 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>pos, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos> Pos { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos> Pos
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>align, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: align</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign> Align { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign> Align
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>overlay, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: overlay</para>
         /// </summary>
-        public BooleanValue Overlay { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartTitle>();
+        public BooleanValue Overlay
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4256,8 +4361,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlotArea>();
-
         /// <summary>
         /// <para>PlotAreaRegion.</para>
         /// <para>Represents the following element tag in the schema: cx:plotAreaRegion.</para>
@@ -4340,20 +4443,31 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>pos, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos> Pos { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos> Pos
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>align, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: align</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign> Align { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign> Align
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>overlay, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: overlay</para>
         /// </summary>
-        public BooleanValue Overlay { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Legend>();
+        public BooleanValue Overlay
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4477,20 +4591,31 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>alignWithMargins, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: alignWithMargins</para>
         /// </summary>
-        public BooleanValue AlignWithMargins { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AlignWithMargins
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>differentOddEven, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: differentOddEven</para>
         /// </summary>
-        public BooleanValue DifferentOddEven { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DifferentOddEven
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>differentFirst, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: differentFirst</para>
         /// </summary>
-        public BooleanValue DifferentFirst { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderFooter>();
+        public BooleanValue DifferentFirst
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4615,38 +4740,61 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>l, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        public DoubleValue L { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue L
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>r, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public DoubleValue R { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue R
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>t, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public DoubleValue T { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue T
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>b, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public DoubleValue B { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue B
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>header, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: header</para>
         /// </summary>
-        public DoubleValue Header { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Header
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>footer, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: footer</para>
         /// </summary>
-        public DoubleValue Footer { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageMargins>();
+        public DoubleValue Footer
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4702,56 +4850,91 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>paperSize, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: paperSize</para>
         /// </summary>
-        public UInt32Value PaperSize { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PaperSize
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstPageNumber, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: firstPageNumber</para>
         /// </summary>
-        public UInt32Value FirstPageNumber { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FirstPageNumber
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>orientation, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation> Orientation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation> Orientation
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>blackAndWhite, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: blackAndWhite</para>
         /// </summary>
-        public BooleanValue BlackAndWhite { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BlackAndWhite
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>draft, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: draft</para>
         /// </summary>
-        public BooleanValue Draft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Draft
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>useFirstPageNumber, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: useFirstPageNumber</para>
         /// </summary>
-        public BooleanValue UseFirstPageNumber { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UseFirstPageNumber
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>horizontalDpi, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: horizontalDpi</para>
         /// </summary>
-        public Int32Value HorizontalDpi { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalDpi
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>verticalDpi, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: verticalDpi</para>
         /// </summary>
-        public Int32Value VerticalDpi { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalDpi
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>copies, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: copies</para>
         /// </summary>
-        public UInt32Value Copies { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageSetup>();
+        public UInt32Value Copies
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4822,8 +5005,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public ChartData(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartData>();
 
         /// <summary>
         /// <para>ExternalData.</para>
@@ -4903,8 +5084,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         public Chart(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Chart>();
 
         /// <summary>
         /// <para>ChartTitle.</para>
@@ -5023,74 +5202,121 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Background 1</para>
         /// <para>Represents the following attribute in the schema: bg1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text 1</para>
         /// <para>Represents the following attribute in the schema: tx1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Background 2</para>
         /// <para>Represents the following attribute in the schema: bg2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text 2</para>
         /// <para>Represents the following attribute in the schema: tx2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 1</para>
         /// <para>Represents the following attribute in the schema: accent1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 2</para>
         /// <para>Represents the following attribute in the schema: accent2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 3</para>
         /// <para>Represents the following attribute in the schema: accent3</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 4</para>
         /// <para>Represents the following attribute in the schema: accent4</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 5</para>
         /// <para>Represents the following attribute in the schema: accent5</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 6</para>
         /// <para>Represents the following attribute in the schema: accent6</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink</para>
         /// <para>Represents the following attribute in the schema: hlink</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Followed Hyperlink</para>
         /// <para>Represents the following attribute in the schema: folHlink</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorMappingType>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5233,8 +5459,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintSettings>();
-
         /// <summary>
         /// <para>HeaderFooter.</para>
         /// <para>Represents the following element tag in the schema: cx:headerFooter.</para>
@@ -5320,8 +5544,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>dir, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection> Dir { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formula>();
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection> Dir
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5385,8 +5612,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ptCount, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ptCount</para>
         /// </summary>
-        public UInt32Value PtCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringLevel>();
+        public UInt32Value PtCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5460,14 +5690,21 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ptCount, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: ptCount</para>
         /// </summary>
-        public UInt32Value PtCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PtCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>formatCode, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        public StringValue FormatCode { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumericLevel>();
+        public StringValue FormatCode
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5511,8 +5748,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsignedIntegerType>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

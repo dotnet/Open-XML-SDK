@@ -66,7 +66,11 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public StringValue ActiveXControlClassId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ActiveXControlClassId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>license</para>
@@ -75,7 +79,11 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public StringValue License { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue License
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
@@ -84,7 +92,11 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>persistence</para>
@@ -93,8 +105,11 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ActiveXControlData>();
+        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -179,7 +194,11 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>value</para>
@@ -188,8 +207,11 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public StringValue Value { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ActiveXObjectProperty>();
+        public StringValue Value
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -297,7 +319,11 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
@@ -306,8 +332,11 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharedComFont>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -351,8 +380,11 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharedComPicture>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

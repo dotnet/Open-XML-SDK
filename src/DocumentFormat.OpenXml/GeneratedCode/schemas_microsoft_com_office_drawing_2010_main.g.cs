@@ -34,14 +34,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>cellRange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cellRange</para>
         /// </summary>
-        public StringValue CellRange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CellRange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CameraTool>();
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -81,8 +88,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CompatExtension>();
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -121,8 +131,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IsCanvas>();
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -193,7 +206,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
@@ -202,8 +219,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue RelationshipId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GvmlContentPart>();
+        public StringValue RelationshipId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -291,8 +311,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShadowObscured>();
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -361,8 +384,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         public HiddenFillProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenFillProperties>();
 
         /// <summary>
         /// <para>NoFill.</para>
@@ -537,26 +558,41 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Line Width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        public Int32Value Width { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Width
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Ending Cap Type</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Compound Line Type</para>
         /// <para>Represents the following attribute in the schema: cmpd</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenLineProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -669,8 +705,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenEffectsProperties>();
-
         /// <summary>
         /// <para>Effect Container.</para>
         /// <para>Represents the following element tag in the schema: a:effectLst.</para>
@@ -767,8 +801,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         public HiddenScene3D(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenScene3D>();
 
         /// <summary>
         /// <para>Camera.</para>
@@ -895,26 +927,41 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Shape Depth</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
-        public Int64Value Z { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Z
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Height</para>
         /// <para>Represents the following attribute in the schema: extrusionH</para>
         /// </summary>
-        public Int64Value ExtrusionHeight { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value ExtrusionHeight
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contour Width</para>
         /// <para>Represents the following attribute in the schema: contourW</para>
         /// </summary>
-        public Int64Value ContourWidth { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value ContourWidth
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Preset Material Type</para>
         /// <para>Represents the following attribute in the schema: prstMaterial</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HiddenShape3D>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1065,8 +1112,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ImageProperties>();
-
         /// <summary>
         /// <para>ImageLayer.</para>
         /// <para>Represents the following element tag in the schema: a14:imgLayer.</para>
@@ -1111,8 +1156,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseLocalDpi>();
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1140,8 +1188,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         public TextMath() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextMath>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextMath>(deep);
@@ -1193,8 +1239,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1264,62 +1308,101 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Shape Grouping</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        public BooleanValue NoGrouping { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoGrouping
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Selection</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        public BooleanValue NoSelection { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoSelection
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Rotation</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        public BooleanValue NoRotation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoRotation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Aspect Ratio Change</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        public BooleanValue NoChangeAspect { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeAspect
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Movement</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        public BooleanValue NoMove { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoMove
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Resize</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        public BooleanValue NoResize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Point Editing</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        public BooleanValue NoEditPoints { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoEditPoints
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Showing Adjust Handles</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        public BooleanValue NoAdjustHandles { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoAdjustHandles
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Arrowhead Changes</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        public BooleanValue NoChangeArrowheads { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeArrowheads
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Type Change</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        public BooleanValue NoChangeShapeType { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContentPartLocks>();
+        public BooleanValue NoChangeShapeType
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1381,26 +1464,41 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>x1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
-        public Int32Value FirstXCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FirstXCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>y1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
-        public Int32Value FirstYCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FirstYCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>x2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
-        public Int32Value SecondXCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value SecondXCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>y2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
-        public Int32Value SecondYCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ForegroundMark>();
+        public Int32Value SecondYCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1452,26 +1550,41 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>x1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
-        public Int32Value FirstXCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FirstXCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>y1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
-        public Int32Value FirstYCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FirstYCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>x2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
-        public Int32Value SecondXCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value SecondXCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>y2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
-        public Int32Value SecondYCoordinate { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundMark>();
+        public Int32Value SecondYCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1523,8 +1636,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>radius, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: radius</para>
         /// </summary>
-        public Int32Value Radius { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticBlur>();
+        public Int32Value Radius
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1560,14 +1676,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>crackSpacing, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: crackSpacing</para>
         /// </summary>
-        public Int32Value CrackSpacing { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticCement>();
+        public Int32Value CrackSpacing
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1607,14 +1730,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        public Int32Value Pressure { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticChalkSketch>();
+        public Int32Value Pressure
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1654,14 +1784,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        public Int32Value Pressure { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticCrisscrossEtching>();
+        public Int32Value Pressure
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1701,14 +1838,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>numberOfShades, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: numberOfShades</para>
         /// </summary>
-        public Int32Value NumberOfShades { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticCutout>();
+        public Int32Value NumberOfShades
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1748,14 +1892,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>grainSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: grainSize</para>
         /// </summary>
-        public Int32Value GrainSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticFilmGrain>();
+        public Int32Value GrainSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1795,14 +1946,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        public Int32Value Scaling { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticGlass>();
+        public Int32Value Scaling
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1842,14 +2000,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>intensity, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
-        public Int32Value Intensity { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticGlowDiffused>();
+        public Int32Value Intensity
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1889,14 +2054,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>smoothness, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
-        public Int32Value Smoothness { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticGlowEdges>();
+        public Int32Value Smoothness
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1936,14 +2108,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>gridSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: gridSize</para>
         /// </summary>
-        public Int32Value GridSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticLightScreen>();
+        public Int32Value GridSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1983,14 +2162,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pencilSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
-        public Int32Value PencilSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticLineDrawing>();
+        public Int32Value PencilSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2030,14 +2216,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public Int32Value Size { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticMarker>();
+        public Int32Value Size
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2077,14 +2270,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        public Int32Value Pressure { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticMosaicBubbles>();
+        public Int32Value Pressure
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2124,14 +2324,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>intensity, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
-        public Int32Value Intensity { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPaintStrokes>();
+        public Int32Value Intensity
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2171,14 +2378,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>brushSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
-        public Int32Value BrushSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPaintBrush>();
+        public Int32Value BrushSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2218,14 +2432,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        public Int32Value BrushSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPastelsSmooth>();
+        public Int32Value BrushSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2265,14 +2486,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pencilSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
-        public Int32Value BrushSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPencilGrayscale>();
+        public Int32Value BrushSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2312,14 +2540,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        public Int32Value Pressure { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPencilSketch>();
+        public Int32Value Pressure
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2359,14 +2594,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>detail, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: detail</para>
         /// </summary>
-        public Int32Value Detail { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPhotocopy>();
+        public Int32Value Detail
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2406,14 +2648,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>smoothness, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
-        public Int32Value Smoothness { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticPlasticWrap>();
+        public Int32Value Smoothness
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2453,14 +2702,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        public Int32Value Scaling { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticTexturizer>();
+        public Int32Value Scaling
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2500,14 +2756,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        public Int32Value Transparancy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>brushSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
-        public Int32Value BrushSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArtisticWatercolorSponge>();
+        public Int32Value BrushSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2580,26 +2843,41 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>t, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public Int32Value MarqueeTop { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value MarqueeTop
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>b, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public Int32Value MarqueeBottom { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value MarqueeBottom
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>l, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        public Int32Value MarqueeLeft { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value MarqueeLeft
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>r, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public Int32Value MarqueeRight { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundRemoval>();
+        public Int32Value MarqueeRight
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2659,14 +2937,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>bright, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bright</para>
         /// </summary>
-        public Int32Value Bright { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Bright
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contrast, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: contrast</para>
         /// </summary>
-        public Int32Value Contrast { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BrightnessContrast>();
+        public Int32Value Contrast
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2706,8 +2991,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>colorTemp, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: colorTemp</para>
         /// </summary>
-        public Int32Value ColorTemperatureValue { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorTemperature>();
+        public Int32Value ColorTemperatureValue
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2743,8 +3031,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>sat, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sat</para>
         /// </summary>
-        public Int32Value SaturationAmount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Saturation>();
+        public Int32Value SaturationAmount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2780,8 +3071,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>amount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: amount</para>
         /// </summary>
-        public Int32Value Amount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharpenSoften>();
+        public Int32Value Amount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2900,8 +3194,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ImageEffect>();
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3352,8 +3649,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Embed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ImageLayer>();
+        public StringValue Embed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3428,32 +3728,51 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingProperties>();
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3577,8 +3896,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        public BooleanValue IsComment { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualInkContentPartProperties>();
+        public BooleanValue IsComment
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3674,8 +3996,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualContentPartProperties>();
-
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: a14:cNvPr.</para>
@@ -3767,20 +4087,31 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        public BooleanValue HorizontalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HorizontalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        public BooleanValue VerticalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Transform2D>();
+        public BooleanValue VerticalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

@@ -60,8 +60,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SchemaLibrary>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema), 0, 0)
@@ -96,7 +94,11 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Resource File Location</para>
@@ -105,7 +107,11 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        public StringValue ManifestLocation { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ManifestLocation
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom XML Schema Location</para>
@@ -114,8 +120,11 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        public StringValue SchemaLocation { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Schema>();
+        public StringValue SchemaLocation
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

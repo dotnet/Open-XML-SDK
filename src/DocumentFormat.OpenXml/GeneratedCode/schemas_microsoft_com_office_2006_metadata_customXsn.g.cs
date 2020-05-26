@@ -65,8 +65,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXsn>();
-
         /// <summary>
         /// <para>XsnLocation.</para>
         /// <para>Represents the following element tag in the schema: ntns:xsnLocation.</para>
@@ -162,8 +160,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<XsnLocation>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnLocation>(deep);
     }
@@ -196,8 +192,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CachedView>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedView>(deep);
@@ -232,8 +226,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OpenByDefault>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OpenByDefault>(deep);
     }
@@ -266,8 +258,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Scope>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scope>(deep);

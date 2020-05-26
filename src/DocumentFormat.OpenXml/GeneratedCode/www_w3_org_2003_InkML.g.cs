@@ -76,8 +76,11 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>documentID</para>
         /// <para>Represents the following attribute in the schema: documentID</para>
         /// </summary>
-        public StringValue DocumentId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Ink>();
+        public StringValue DocumentId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -126,26 +129,41 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>source</para>
         /// <para>Represents the following attribute in the schema: source</para>
         /// </summary>
-        public StringValue Source { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        public StringValue Target { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>column</para>
         /// <para>Represents the following attribute in the schema: column</para>
         /// </summary>
-        public StringValue Column { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Column
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>variable</para>
         /// <para>Represents the following attribute in the schema: variable</para>
         /// </summary>
-        public StringValue Variable { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bind>();
+        public StringValue Variable
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -197,20 +215,31 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>apply</para>
         /// <para>Represents the following attribute in the schema: apply</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues> Apply { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues> Apply
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>interpolation</para>
         /// <para>Represents the following attribute in the schema: interpolation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues> Interpolation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Table>();
+        public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues> Interpolation
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -261,8 +290,11 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Matrix>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -335,20 +367,31 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mappingRef</para>
         /// <para>Represents the following attribute in the schema: mappingRef</para>
         /// </summary>
-        public StringValue MappingRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Mapping>();
+        public StringValue MappingRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -439,56 +482,91 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>default</para>
         /// <para>Represents the following attribute in the schema: default</para>
         /// </summary>
-        public StringValue Default { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Default
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>min</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        public DecimalValue Min { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Min
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>max</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        public DecimalValue Max { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Max
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues> Orientation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues> Orientation
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>respectTo</para>
         /// <para>Represents the following attribute in the schema: respectTo</para>
         /// </summary>
-        public StringValue RespectTo { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue RespectTo
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        public StringValue Units { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Channel>();
+        public StringValue Units
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -603,8 +681,6 @@ namespace DocumentFormat.OpenXml.InkML
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IntermittentChannels>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
@@ -636,26 +712,41 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>channel</para>
         /// <para>Represents the following attribute in the schema: channel</para>
         /// </summary>
-        public StringValue Channel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Channel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public DecimalValue Value { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Value
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        public StringValue Units { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChannelProperty>();
+        public StringValue Units
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -768,8 +859,11 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TraceFormat>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -810,14 +904,21 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>uniform</para>
         /// <para>Represents the following attribute in the schema: uniform</para>
         /// </summary>
-        public BooleanValue Uniform { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Uniform
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public DecimalValue Value { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SampleRate>();
+        public DecimalValue Value
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -854,8 +955,11 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public DecimalValue Value { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Latency>();
+        public DecimalValue Value
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -891,26 +995,41 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public StringValue Size { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Size
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>height</para>
         /// <para>Represents the following attribute in the schema: height</para>
         /// </summary>
-        public DecimalValue Height { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Height
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>width</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        public DecimalValue Width { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Width
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        public StringValue Units { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ActiveArea>();
+        public StringValue Units
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -968,20 +1087,31 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public DecimalValue Value { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Value
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        public StringValue Units { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SourceProperty>();
+        public StringValue Units
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1071,8 +1201,6 @@ namespace DocumentFormat.OpenXml.InkML
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChannelProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
@@ -1117,14 +1245,21 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public StringValue Type { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>encoding</para>
         /// <para>Represents the following attribute in the schema: encoding</para>
         /// </summary>
-        public StringValue Encoding { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Annotation>();
+        public StringValue Encoding
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1189,20 +1324,31 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public StringValue Type { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>encoding</para>
         /// <para>Represents the following attribute in the schema: encoding</para>
         /// </summary>
-        public StringValue Encoding { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Encoding
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>href</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        public StringValue Href { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AnnotationXml>();
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1293,20 +1439,31 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public StringValue Value { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Value
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        public StringValue Units { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BrushProperty>();
+        public StringValue Units
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1424,14 +1581,21 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>traceFormatRef</para>
         /// <para>Represents the following attribute in the schema: traceFormatRef</para>
         /// </summary>
-        public StringValue TraceFormatRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Canvas>();
+        public StringValue TraceFormatRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1522,14 +1686,21 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invertible</para>
         /// <para>Represents the following attribute in the schema: invertible</para>
         /// </summary>
-        public BooleanValue Invertible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CanvasTransform>();
+        public BooleanValue Invertible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1614,38 +1785,61 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>manufacturer</para>
         /// <para>Represents the following attribute in the schema: manufacturer</para>
         /// </summary>
-        public StringValue Manufacturer { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Manufacturer
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>model</para>
         /// <para>Represents the following attribute in the schema: model</para>
         /// </summary>
-        public StringValue Model { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Model
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>serialNo</para>
         /// <para>Represents the following attribute in the schema: serialNo</para>
         /// </summary>
-        public StringValue SerialNo { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SerialNo
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>specificationRef</para>
         /// <para>Represents the following attribute in the schema: specificationRef</para>
         /// </summary>
-        public StringValue SpecificationRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SpecificationRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InkSource>();
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1791,14 +1985,21 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        public StringValue BrushRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Brush>();
+        public StringValue BrushRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1847,32 +2048,51 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        public DecimalValue Time { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Time
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>timestampRef</para>
         /// <para>Represents the following attribute in the schema: timestampRef</para>
         /// </summary>
-        public StringValue TimestampRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TimestampRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>timeString</para>
         /// <para>Represents the following attribute in the schema: timeString</para>
         /// </summary>
-        public DateTimeValue TimeString { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue TimeString
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>timeOffset</para>
         /// <para>Represents the following attribute in the schema: timeOffset</para>
         /// </summary>
-        public DecimalValue TimeOffset { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Timestamp>();
+        public DecimalValue TimeOffset
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1931,50 +2151,81 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>continuation</para>
         /// <para>Represents the following attribute in the schema: continuation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues> Continuation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues> Continuation
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>priorRef</para>
         /// <para>Represents the following attribute in the schema: priorRef</para>
         /// </summary>
-        public StringValue PriorRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue PriorRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        public StringValue ContextRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ContextRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        public StringValue BrushRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue BrushRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>duration</para>
         /// <para>Represents the following attribute in the schema: duration</para>
         /// </summary>
-        public DecimalValue Duration { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Duration
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>timeOffset</para>
         /// <para>Represents the following attribute in the schema: timeOffset</para>
         /// </summary>
-        public DecimalValue TimeOffset { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Trace>();
+        public DecimalValue TimeOffset
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2063,20 +2314,31 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        public StringValue ContextRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ContextRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        public StringValue BrushRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TraceGroup>();
+        public StringValue BrushRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2165,32 +2427,51 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        public StringValue ContextRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ContextRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>traceDataRef</para>
         /// <para>Represents the following attribute in the schema: traceDataRef</para>
         /// </summary>
-        public StringValue TraceDataRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TraceDataRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>from</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
-        public StringValue From { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue From
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>to</para>
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
-        public StringValue To { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TraceView>();
+        public StringValue To
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2286,50 +2567,81 @@ namespace DocumentFormat.OpenXml.InkML
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        public StringValue ContextRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ContextRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>canvasRef</para>
         /// <para>Represents the following attribute in the schema: canvasRef</para>
         /// </summary>
-        public StringValue CanvasRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CanvasRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>canvasTransformRef</para>
         /// <para>Represents the following attribute in the schema: canvasTransformRef</para>
         /// </summary>
-        public StringValue CanvasTransformRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CanvasTransformRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>traceFormatRef</para>
         /// <para>Represents the following attribute in the schema: traceFormatRef</para>
         /// </summary>
-        public StringValue TraceFromatRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TraceFromatRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>inkSourceRef</para>
         /// <para>Represents the following attribute in the schema: inkSourceRef</para>
         /// </summary>
-        public StringValue InkSourceRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InkSourceRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        public StringValue BrushRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue BrushRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>timestampRef</para>
         /// <para>Represents the following attribute in the schema: timestampRef</para>
         /// </summary>
-        public StringValue TimestampRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Context>();
+        public StringValue TimestampRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2526,8 +2838,6 @@ namespace DocumentFormat.OpenXml.InkML
         public Definitions(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Definitions>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {

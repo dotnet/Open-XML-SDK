@@ -62,8 +62,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Extension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -135,8 +138,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public CalculationChain(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculationChain>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -231,8 +232,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Comments(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Comments>();
 
         /// <summary>
         /// <para>Authors.</para>
@@ -370,8 +369,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Prefix Mappings for XPath Expressions</para>
         /// <para>Represents the following attribute in the schema: SelectionNamespaces</para>
         /// </summary>
-        public StringValue SelectionNamespaces { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MapInfo>();
+        public StringValue SelectionNamespaces
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -472,8 +474,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Connections(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Connections>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -591,116 +591,191 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalid</para>
         /// <para>Represents the following attribute in the schema: invalid</para>
         /// </summary>
-        public BooleanValue Invalid { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Invalid
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>saveData</para>
         /// <para>Represents the following attribute in the schema: saveData</para>
         /// </summary>
-        public BooleanValue SaveData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SaveData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>refreshOnLoad</para>
         /// <para>Represents the following attribute in the schema: refreshOnLoad</para>
         /// </summary>
-        public BooleanValue RefreshOnLoad { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RefreshOnLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>optimizeMemory</para>
         /// <para>Represents the following attribute in the schema: optimizeMemory</para>
         /// </summary>
-        public BooleanValue OptimizeMemory { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OptimizeMemory
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enableRefresh</para>
         /// <para>Represents the following attribute in the schema: enableRefresh</para>
         /// </summary>
-        public BooleanValue EnableRefresh { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EnableRefresh
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>refreshedBy</para>
         /// <para>Represents the following attribute in the schema: refreshedBy</para>
         /// </summary>
-        public StringValue RefreshedBy { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue RefreshedBy
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>refreshedDateIso</para>
         /// <para>Represents the following attribute in the schema: refreshedDateIso</para>
         /// </summary>
-        public DateTimeValue LastRefreshedDateIso { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue LastRefreshedDateIso
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>refreshedDate</para>
         /// <para>Represents the following attribute in the schema: refreshedDate</para>
         /// </summary>
-        public DoubleValue RefreshedDate { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue RefreshedDate
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>backgroundQuery</para>
         /// <para>Represents the following attribute in the schema: backgroundQuery</para>
         /// </summary>
-        public BooleanValue BackgroundQuery { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BackgroundQuery
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>missingItemsLimit</para>
         /// <para>Represents the following attribute in the schema: missingItemsLimit</para>
         /// </summary>
-        public UInt32Value MissingItemsLimit { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MissingItemsLimit
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>createdVersion</para>
         /// <para>Represents the following attribute in the schema: createdVersion</para>
         /// </summary>
-        public ByteValue CreatedVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue CreatedVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>refreshedVersion</para>
         /// <para>Represents the following attribute in the schema: refreshedVersion</para>
         /// </summary>
-        public ByteValue RefreshedVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue RefreshedVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>minRefreshableVersion</para>
         /// <para>Represents the following attribute in the schema: minRefreshableVersion</para>
         /// </summary>
-        public ByteValue MinRefreshableVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue MinRefreshableVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>recordCount</para>
         /// <para>Represents the following attribute in the schema: recordCount</para>
         /// </summary>
-        public UInt32Value RecordCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RecordCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>upgradeOnRefresh</para>
         /// <para>Represents the following attribute in the schema: upgradeOnRefresh</para>
         /// </summary>
-        public BooleanValue UpgradeOnRefresh { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UpgradeOnRefresh
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tupleCache</para>
         /// <para>Represents the following attribute in the schema: tupleCache</para>
         /// </summary>
-        public BooleanValue IsTupleCache { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsTupleCache
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supportSubquery</para>
         /// <para>Represents the following attribute in the schema: supportSubquery</para>
         /// </summary>
-        public BooleanValue SupportSubquery { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SupportSubquery
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supportAdvancedDrill</para>
         /// <para>Represents the following attribute in the schema: supportAdvancedDrill</para>
         /// </summary>
-        public BooleanValue SupportAdvancedDrill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotCacheDefinition>();
+        public BooleanValue SupportAdvancedDrill
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -981,8 +1056,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotCache Records Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotCacheRecords>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1117,410 +1195,681 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cacheId</para>
         /// <para>Represents the following attribute in the schema: cacheId</para>
         /// </summary>
-        public UInt32Value CacheId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value CacheId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dataOnRows</para>
         /// <para>Represents the following attribute in the schema: dataOnRows</para>
         /// </summary>
-        public BooleanValue DataOnRows { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DataOnRows
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dataPosition</para>
         /// <para>Represents the following attribute in the schema: dataPosition</para>
         /// </summary>
-        public UInt32Value DataPosition { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DataPosition
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Format Id</para>
         /// <para>Represents the following attribute in the schema: autoFormatId</para>
         /// </summary>
-        public UInt32Value AutoFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value AutoFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Number Formats</para>
         /// <para>Represents the following attribute in the schema: applyNumberFormats</para>
         /// </summary>
-        public BooleanValue ApplyNumberFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyNumberFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Border Formats</para>
         /// <para>Represents the following attribute in the schema: applyBorderFormats</para>
         /// </summary>
-        public BooleanValue ApplyBorderFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyBorderFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Font Formats</para>
         /// <para>Represents the following attribute in the schema: applyFontFormats</para>
         /// </summary>
-        public BooleanValue ApplyFontFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyFontFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Pattern Formats</para>
         /// <para>Represents the following attribute in the schema: applyPatternFormats</para>
         /// </summary>
-        public BooleanValue ApplyPatternFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyPatternFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Alignment Formats</para>
         /// <para>Represents the following attribute in the schema: applyAlignmentFormats</para>
         /// </summary>
-        public BooleanValue ApplyAlignmentFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyAlignmentFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Width / Height Formats</para>
         /// <para>Represents the following attribute in the schema: applyWidthHeightFormats</para>
         /// </summary>
-        public BooleanValue ApplyWidthHeightFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyWidthHeightFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dataCaption</para>
         /// <para>Represents the following attribute in the schema: dataCaption</para>
         /// </summary>
-        public StringValue DataCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DataCaption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>grandTotalCaption</para>
         /// <para>Represents the following attribute in the schema: grandTotalCaption</para>
         /// </summary>
-        public StringValue GrandTotalCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GrandTotalCaption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>errorCaption</para>
         /// <para>Represents the following attribute in the schema: errorCaption</para>
         /// </summary>
-        public StringValue ErrorCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ErrorCaption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showError</para>
         /// <para>Represents the following attribute in the schema: showError</para>
         /// </summary>
-        public BooleanValue ShowError { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowError
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>missingCaption</para>
         /// <para>Represents the following attribute in the schema: missingCaption</para>
         /// </summary>
-        public StringValue MissingCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MissingCaption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showMissing</para>
         /// <para>Represents the following attribute in the schema: showMissing</para>
         /// </summary>
-        public BooleanValue ShowMissing { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowMissing
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pageStyle</para>
         /// <para>Represents the following attribute in the schema: pageStyle</para>
         /// </summary>
-        public StringValue PageStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue PageStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pivotTableStyle</para>
         /// <para>Represents the following attribute in the schema: pivotTableStyle</para>
         /// </summary>
-        public StringValue PivotTableStyleName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue PivotTableStyleName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>vacatedStyle</para>
         /// <para>Represents the following attribute in the schema: vacatedStyle</para>
         /// </summary>
-        public StringValue VacatedStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue VacatedStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>updatedVersion</para>
         /// <para>Represents the following attribute in the schema: updatedVersion</para>
         /// </summary>
-        public ByteValue UpdatedVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue UpdatedVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>minRefreshableVersion</para>
         /// <para>Represents the following attribute in the schema: minRefreshableVersion</para>
         /// </summary>
-        public ByteValue MinRefreshableVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue MinRefreshableVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>asteriskTotals</para>
         /// <para>Represents the following attribute in the schema: asteriskTotals</para>
         /// </summary>
-        public BooleanValue AsteriskTotals { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AsteriskTotals
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItems</para>
         /// <para>Represents the following attribute in the schema: showItems</para>
         /// </summary>
-        public BooleanValue ShowItems { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItems
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>editData</para>
         /// <para>Represents the following attribute in the schema: editData</para>
         /// </summary>
-        public BooleanValue EditData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EditData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>disableFieldList</para>
         /// <para>Represents the following attribute in the schema: disableFieldList</para>
         /// </summary>
-        public BooleanValue DisableFieldList { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DisableFieldList
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showCalcMbrs</para>
         /// <para>Represents the following attribute in the schema: showCalcMbrs</para>
         /// </summary>
-        public BooleanValue ShowCalculatedMembers { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowCalculatedMembers
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visualTotals</para>
         /// <para>Represents the following attribute in the schema: visualTotals</para>
         /// </summary>
-        public BooleanValue VisualTotals { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue VisualTotals
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showMultipleLabel</para>
         /// <para>Represents the following attribute in the schema: showMultipleLabel</para>
         /// </summary>
-        public BooleanValue ShowMultipleLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowMultipleLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showDataDropDown</para>
         /// <para>Represents the following attribute in the schema: showDataDropDown</para>
         /// </summary>
-        public BooleanValue ShowDataDropDown { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowDataDropDown
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showDrill</para>
         /// <para>Represents the following attribute in the schema: showDrill</para>
         /// </summary>
-        public BooleanValue ShowDrill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowDrill
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>printDrill</para>
         /// <para>Represents the following attribute in the schema: printDrill</para>
         /// </summary>
-        public BooleanValue PrintDrill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PrintDrill
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showMemberPropertyTips</para>
         /// <para>Represents the following attribute in the schema: showMemberPropertyTips</para>
         /// </summary>
-        public BooleanValue ShowMemberPropertyTips { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowMemberPropertyTips
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showDataTips</para>
         /// <para>Represents the following attribute in the schema: showDataTips</para>
         /// </summary>
-        public BooleanValue ShowDataTips { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowDataTips
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enableWizard</para>
         /// <para>Represents the following attribute in the schema: enableWizard</para>
         /// </summary>
-        public BooleanValue EnableWizard { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EnableWizard
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enableDrill</para>
         /// <para>Represents the following attribute in the schema: enableDrill</para>
         /// </summary>
-        public BooleanValue EnableDrill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EnableDrill
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enableFieldProperties</para>
         /// <para>Represents the following attribute in the schema: enableFieldProperties</para>
         /// </summary>
-        public BooleanValue EnableFieldProperties { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EnableFieldProperties
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>preserveFormatting</para>
         /// <para>Represents the following attribute in the schema: preserveFormatting</para>
         /// </summary>
-        public BooleanValue PreserveFormatting { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PreserveFormatting
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>useAutoFormatting</para>
         /// <para>Represents the following attribute in the schema: useAutoFormatting</para>
         /// </summary>
-        public BooleanValue UseAutoFormatting { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UseAutoFormatting
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pageWrap</para>
         /// <para>Represents the following attribute in the schema: pageWrap</para>
         /// </summary>
-        public UInt32Value PageWrap { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PageWrap
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pageOverThenDown</para>
         /// <para>Represents the following attribute in the schema: pageOverThenDown</para>
         /// </summary>
-        public BooleanValue PageOverThenDown { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PageOverThenDown
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>subtotalHiddenItems</para>
         /// <para>Represents the following attribute in the schema: subtotalHiddenItems</para>
         /// </summary>
-        public BooleanValue SubtotalHiddenItems { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SubtotalHiddenItems
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rowGrandTotals</para>
         /// <para>Represents the following attribute in the schema: rowGrandTotals</para>
         /// </summary>
-        public BooleanValue RowGrandTotals { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RowGrandTotals
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>colGrandTotals</para>
         /// <para>Represents the following attribute in the schema: colGrandTotals</para>
         /// </summary>
-        public BooleanValue ColumnGrandTotals { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ColumnGrandTotals
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fieldPrintTitles</para>
         /// <para>Represents the following attribute in the schema: fieldPrintTitles</para>
         /// </summary>
-        public BooleanValue FieldPrintTitles { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FieldPrintTitles
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemPrintTitles</para>
         /// <para>Represents the following attribute in the schema: itemPrintTitles</para>
         /// </summary>
-        public BooleanValue ItemPrintTitles { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ItemPrintTitles
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mergeItem</para>
         /// <para>Represents the following attribute in the schema: mergeItem</para>
         /// </summary>
-        public BooleanValue MergeItem { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MergeItem
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showDropZones</para>
         /// <para>Represents the following attribute in the schema: showDropZones</para>
         /// </summary>
-        public BooleanValue ShowDropZones { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowDropZones
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>createdVersion</para>
         /// <para>Represents the following attribute in the schema: createdVersion</para>
         /// </summary>
-        public ByteValue CreatedVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue CreatedVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>indent</para>
         /// <para>Represents the following attribute in the schema: indent</para>
         /// </summary>
-        public UInt32Value Indent { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Indent
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showEmptyRow</para>
         /// <para>Represents the following attribute in the schema: showEmptyRow</para>
         /// </summary>
-        public BooleanValue ShowEmptyRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowEmptyRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showEmptyCol</para>
         /// <para>Represents the following attribute in the schema: showEmptyCol</para>
         /// </summary>
-        public BooleanValue ShowEmptyColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowEmptyColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showHeaders</para>
         /// <para>Represents the following attribute in the schema: showHeaders</para>
         /// </summary>
-        public BooleanValue ShowHeaders { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowHeaders
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>compact</para>
         /// <para>Represents the following attribute in the schema: compact</para>
         /// </summary>
-        public BooleanValue Compact { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Compact
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>outline</para>
         /// <para>Represents the following attribute in the schema: outline</para>
         /// </summary>
-        public BooleanValue Outline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Outline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>outlineData</para>
         /// <para>Represents the following attribute in the schema: outlineData</para>
         /// </summary>
-        public BooleanValue OutlineData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OutlineData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>compactData</para>
         /// <para>Represents the following attribute in the schema: compactData</para>
         /// </summary>
-        public BooleanValue CompactData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CompactData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>published</para>
         /// <para>Represents the following attribute in the schema: published</para>
         /// </summary>
-        public BooleanValue Published { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Published
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>gridDropZones</para>
         /// <para>Represents the following attribute in the schema: gridDropZones</para>
         /// </summary>
-        public BooleanValue GridDropZones { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue GridDropZones
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>immersive</para>
         /// <para>Represents the following attribute in the schema: immersive</para>
         /// </summary>
-        public BooleanValue StopImmersiveUi { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue StopImmersiveUi
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>multipleFieldFilters</para>
         /// <para>Represents the following attribute in the schema: multipleFieldFilters</para>
         /// </summary>
-        public BooleanValue MultipleFieldFilters { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MultipleFieldFilters
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>chartFormat</para>
         /// <para>Represents the following attribute in the schema: chartFormat</para>
         /// </summary>
-        public UInt32Value ChartFormat { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ChartFormat
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rowHeaderCaption</para>
         /// <para>Represents the following attribute in the schema: rowHeaderCaption</para>
         /// </summary>
-        public StringValue RowHeaderCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue RowHeaderCaption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>colHeaderCaption</para>
         /// <para>Represents the following attribute in the schema: colHeaderCaption</para>
         /// </summary>
-        public StringValue ColumnHeaderCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ColumnHeaderCaption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fieldListSortAscending</para>
         /// <para>Represents the following attribute in the schema: fieldListSortAscending</para>
         /// </summary>
-        public BooleanValue FieldListSortAscending { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FieldListSortAscending
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mdxSubqueries</para>
         /// <para>Represents the following attribute in the schema: mdxSubqueries</para>
         /// </summary>
-        public BooleanValue MdxSubqueries { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MdxSubqueries
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>customListSort</para>
         /// <para>Represents the following attribute in the schema: customListSort</para>
         /// </summary>
-        public BooleanValue CustomListSort { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotTableDefinition>();
+        public BooleanValue CustomListSort
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1955,134 +2304,221 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>headers</para>
         /// <para>Represents the following attribute in the schema: headers</para>
         /// </summary>
-        public BooleanValue Headers { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Headers
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rowNumbers</para>
         /// <para>Represents the following attribute in the schema: rowNumbers</para>
         /// </summary>
-        public BooleanValue RowNumbers { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RowNumbers
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>disableRefresh</para>
         /// <para>Represents the following attribute in the schema: disableRefresh</para>
         /// </summary>
-        public BooleanValue DisableRefresh { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DisableRefresh
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>backgroundRefresh</para>
         /// <para>Represents the following attribute in the schema: backgroundRefresh</para>
         /// </summary>
-        public BooleanValue BackgroundRefresh { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BackgroundRefresh
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstBackgroundRefresh</para>
         /// <para>Represents the following attribute in the schema: firstBackgroundRefresh</para>
         /// </summary>
-        public BooleanValue FirstBackgroundRefresh { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FirstBackgroundRefresh
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>refreshOnLoad</para>
         /// <para>Represents the following attribute in the schema: refreshOnLoad</para>
         /// </summary>
-        public BooleanValue RefreshOnLoad { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RefreshOnLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>growShrinkType</para>
         /// <para>Represents the following attribute in the schema: growShrinkType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GrowShrinkValues> GrowShrinkType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.GrowShrinkValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GrowShrinkValues> GrowShrinkType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.GrowShrinkValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fillFormulas</para>
         /// <para>Represents the following attribute in the schema: fillFormulas</para>
         /// </summary>
-        public BooleanValue FillFormulas { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FillFormulas
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>removeDataOnSave</para>
         /// <para>Represents the following attribute in the schema: removeDataOnSave</para>
         /// </summary>
-        public BooleanValue RemoveDataOnSave { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RemoveDataOnSave
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>disableEdit</para>
         /// <para>Represents the following attribute in the schema: disableEdit</para>
         /// </summary>
-        public BooleanValue DisableEdit { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DisableEdit
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>preserveFormatting</para>
         /// <para>Represents the following attribute in the schema: preserveFormatting</para>
         /// </summary>
-        public BooleanValue PreserveFormatting { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PreserveFormatting
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>adjustColumnWidth</para>
         /// <para>Represents the following attribute in the schema: adjustColumnWidth</para>
         /// </summary>
-        public BooleanValue AdjustColumnWidth { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AdjustColumnWidth
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>intermediate</para>
         /// <para>Represents the following attribute in the schema: intermediate</para>
         /// </summary>
-        public BooleanValue Intermediate { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Intermediate
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>connectionId</para>
         /// <para>Represents the following attribute in the schema: connectionId</para>
         /// </summary>
-        public UInt32Value ConnectionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ConnectionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Format Id</para>
         /// <para>Represents the following attribute in the schema: autoFormatId</para>
         /// </summary>
-        public UInt32Value AutoFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value AutoFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Number Formats</para>
         /// <para>Represents the following attribute in the schema: applyNumberFormats</para>
         /// </summary>
-        public BooleanValue ApplyNumberFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyNumberFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Border Formats</para>
         /// <para>Represents the following attribute in the schema: applyBorderFormats</para>
         /// </summary>
-        public BooleanValue ApplyBorderFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyBorderFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Font Formats</para>
         /// <para>Represents the following attribute in the schema: applyFontFormats</para>
         /// </summary>
-        public BooleanValue ApplyFontFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyFontFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Pattern Formats</para>
         /// <para>Represents the following attribute in the schema: applyPatternFormats</para>
         /// </summary>
-        public BooleanValue ApplyPatternFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyPatternFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Alignment Formats</para>
         /// <para>Represents the following attribute in the schema: applyAlignmentFormats</para>
         /// </summary>
-        public BooleanValue ApplyAlignmentFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyAlignmentFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Width / Height Formats</para>
         /// <para>Represents the following attribute in the schema: applyWidthHeightFormats</para>
         /// </summary>
-        public BooleanValue ApplyWidthHeightFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QueryTable>();
+        public BooleanValue ApplyWidthHeightFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2249,14 +2685,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>String Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unique String Count</para>
         /// <para>Represents the following attribute in the schema: uniqueCount</para>
         /// </summary>
-        public UInt32Value UniqueCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharedStringTable>();
+        public UInt32Value UniqueCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2367,74 +2810,121 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Last Revision GUID</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        public StringValue Guid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Guid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Last GUID</para>
         /// <para>Represents the following attribute in the schema: lastGuid</para>
         /// </summary>
-        public StringValue LastGuid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue LastGuid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shared Workbook</para>
         /// <para>Represents the following attribute in the schema: shared</para>
         /// </summary>
-        public BooleanValue Shared { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Shared
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disk Revisions</para>
         /// <para>Represents the following attribute in the schema: diskRevisions</para>
         /// </summary>
-        public BooleanValue DiskRevisions { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DiskRevisions
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>History</para>
         /// <para>Represents the following attribute in the schema: history</para>
         /// </summary>
-        public BooleanValue History { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue History
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Track Revisions</para>
         /// <para>Represents the following attribute in the schema: trackRevisions</para>
         /// </summary>
-        public BooleanValue TrackRevisions { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TrackRevisions
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exclusive Mode</para>
         /// <para>Represents the following attribute in the schema: exclusive</para>
         /// </summary>
-        public BooleanValue Exclusive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Exclusive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Id</para>
         /// <para>Represents the following attribute in the schema: revisionId</para>
         /// </summary>
-        public UInt32Value RevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Version</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-        public Int32Value Version { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Version
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Keep Change History</para>
         /// <para>Represents the following attribute in the schema: keepChangeHistory</para>
         /// </summary>
-        public BooleanValue KeepChangeHistory { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue KeepChangeHistory
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Protected</para>
         /// <para>Represents the following attribute in the schema: protected</para>
         /// </summary>
-        public BooleanValue Protected { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Protected
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Preserve History</para>
         /// <para>Represents the following attribute in the schema: preserveHistory</para>
         /// </summary>
-        public UInt32Value PreserveHistory { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Headers>();
+        public UInt32Value PreserveHistory
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2581,8 +3071,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Revisions>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn), 0, 0),
@@ -2687,8 +3175,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Active User Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Users>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2865,8 +3356,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Worksheet(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Worksheet>();
 
         /// <summary>
         /// <para>SheetProperties.</para>
@@ -3071,8 +3560,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Chartsheet(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Chartsheet>();
 
         /// <summary>
         /// <para>Chart Sheet Properties.</para>
@@ -3387,8 +3874,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public DialogSheet(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DialogSheet>();
 
         /// <summary>
         /// <para>Sheet Properties.</para>
@@ -3714,8 +4199,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Metadata>();
-
         /// <summary>
         /// <para>Metadata Types Collection.</para>
         /// <para>Represents the following element tag in the schema: x:metadataTypes.</para>
@@ -3850,8 +4333,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SingleXmlCells>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell), 1, 0)
@@ -3960,8 +4441,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Stylesheet(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Stylesheet>();
 
         /// <summary>
         /// <para>NumberingFormats.</para>
@@ -4211,8 +4690,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalLink>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -4320,134 +4797,221 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table Id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Name</para>
         /// <para>Represents the following attribute in the schema: displayName</para>
         /// </summary>
-        public StringValue DisplayName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DisplayName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Comment</para>
         /// <para>Represents the following attribute in the schema: comment</para>
         /// </summary>
-        public StringValue Comment { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Comment
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Type</para>
         /// <para>Represents the following attribute in the schema: tableType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableValues> TableType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableValues> TableType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Header Row Count</para>
         /// <para>Represents the following attribute in the schema: headerRowCount</para>
         /// </summary>
-        public UInt32Value HeaderRowCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value HeaderRowCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Insert Row Showing</para>
         /// <para>Represents the following attribute in the schema: insertRow</para>
         /// </summary>
-        public BooleanValue InsertRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InsertRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Insert Row Shift</para>
         /// <para>Represents the following attribute in the schema: insertRowShift</para>
         /// </summary>
-        public BooleanValue InsertRowShift { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InsertRowShift
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Totals Row Count</para>
         /// <para>Represents the following attribute in the schema: totalsRowCount</para>
         /// </summary>
-        public UInt32Value TotalsRowCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value TotalsRowCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Totals Row Shown</para>
         /// <para>Represents the following attribute in the schema: totalsRowShown</para>
         /// </summary>
-        public BooleanValue TotalsRowShown { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TotalsRowShown
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Published</para>
         /// <para>Represents the following attribute in the schema: published</para>
         /// </summary>
-        public BooleanValue Published { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Published
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Header Row Format Id</para>
         /// <para>Represents the following attribute in the schema: headerRowDxfId</para>
         /// </summary>
-        public UInt32Value HeaderRowFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value HeaderRowFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Area Format Id</para>
         /// <para>Represents the following attribute in the schema: dataDxfId</para>
         /// </summary>
-        public UInt32Value DataFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DataFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Totals Row Format Id</para>
         /// <para>Represents the following attribute in the schema: totalsRowDxfId</para>
         /// </summary>
-        public UInt32Value TotalsRowFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value TotalsRowFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Header Row Border Format Id</para>
         /// <para>Represents the following attribute in the schema: headerRowBorderDxfId</para>
         /// </summary>
-        public UInt32Value HeaderRowBorderFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value HeaderRowBorderFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Border Format Id</para>
         /// <para>Represents the following attribute in the schema: tableBorderDxfId</para>
         /// </summary>
-        public UInt32Value BorderFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value BorderFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Totals Row Border Format Id</para>
         /// <para>Represents the following attribute in the schema: totalsRowBorderDxfId</para>
         /// </summary>
-        public UInt32Value TotalsRowBorderFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value TotalsRowBorderFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Header Row Style</para>
         /// <para>Represents the following attribute in the schema: headerRowCellStyle</para>
         /// </summary>
-        public StringValue HeaderRowCellStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue HeaderRowCellStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Style Name</para>
         /// <para>Represents the following attribute in the schema: dataCellStyle</para>
         /// </summary>
-        public StringValue DataCellStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DataCellStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Totals Row Style</para>
         /// <para>Represents the following attribute in the schema: totalsRowCellStyle</para>
         /// </summary>
-        public StringValue TotalsRowCellStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TotalsRowCellStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Connection ID</para>
         /// <para>Represents the following attribute in the schema: connectionId</para>
         /// </summary>
-        public UInt32Value ConnectionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Table>();
+        public UInt32Value ConnectionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4666,8 +5230,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VolatileTypes>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VolatileType), 1, 0),
@@ -4796,8 +5358,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>conformance</para>
         /// <para>Represents the following attribute in the schema: conformance</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConformanceClass> Conformance { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConformanceClass>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Workbook>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConformanceClass> Conformance
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConformanceClass>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5127,20 +5692,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Filter Column Data</para>
         /// <para>Represents the following attribute in the schema: colId</para>
         /// </summary>
-        public UInt32Value ColumnId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ColumnId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden AutoFilter Button</para>
         /// <para>Represents the following attribute in the schema: hiddenButton</para>
         /// </summary>
-        public BooleanValue HiddenButton { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HiddenButton
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Filter Button</para>
         /// <para>Represents the following attribute in the schema: showButton</para>
         /// </summary>
-        public BooleanValue ShowButton { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FilterColumn>();
+        public BooleanValue ShowButton
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5345,26 +5921,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sort by Columns</para>
         /// <para>Represents the following attribute in the schema: columnSort</para>
         /// </summary>
-        public BooleanValue ColumnSort { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ColumnSort
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Case Sensitive</para>
         /// <para>Represents the following attribute in the schema: caseSensitive</para>
         /// </summary>
-        public BooleanValue CaseSensitive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CaseSensitive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sort Method</para>
         /// <para>Represents the following attribute in the schema: sortMethod</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues> SortMethod { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues> SortMethod
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sort Range</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SortState>();
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5442,8 +6033,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -5481,14 +6070,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Filter Comparison Operator</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues> Operator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues> Operator
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top or Bottom Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomFilter>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5522,38 +6118,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Cell Reference</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public StringValue CellReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CellReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public Int32Value SheetId { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value SheetId
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Child Chain</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        public BooleanValue InChildChain { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InChildChain
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>New Dependency Level</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        public BooleanValue NewLevel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NewLevel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>New Thread</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public BooleanValue NewThread { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NewThread
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Array</para>
         /// <para>Represents the following attribute in the schema: a</para>
         /// </summary>
-        public BooleanValue Array { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculationCell>();
+        public BooleanValue Array
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5629,8 +6248,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Authors>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Author), 0, 0)
@@ -5688,8 +6305,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public CommentList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5755,26 +6370,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Cell Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Author Id</para>
         /// <para>Represents the following attribute in the schema: authorId</para>
         /// </summary>
-        public UInt32Value AuthorId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value AuthorId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unique Identifier for Comment</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        public StringValue Guid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Guid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>shapeId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: shapeId</para>
         /// </summary>
-        public UInt32Value ShapeId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Comment>();
+        public UInt32Value ShapeId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5872,8 +6502,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Author>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Author>(deep);
     }
@@ -5906,8 +6534,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Text>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
@@ -5942,8 +6568,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellValue>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellValue>(deep);
     }
@@ -5976,8 +6600,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formula>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
@@ -6012,8 +6634,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OldFormula>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OldFormula>(deep);
     }
@@ -6046,8 +6666,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OddHeader>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddHeader>(deep);
@@ -6082,8 +6700,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OddFooter>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddFooter>(deep);
     }
@@ -6116,8 +6732,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EvenHeader>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenHeader>(deep);
@@ -6152,8 +6766,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EvenFooter>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenFooter>(deep);
     }
@@ -6186,8 +6798,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstHeader>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstHeader>(deep);
@@ -6222,8 +6832,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstFooter>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstFooter>(deep);
     }
@@ -6256,8 +6864,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DdeLinkValue>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeLinkValue>(deep);
@@ -6292,8 +6898,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Subtopic>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Subtopic>(deep);
     }
@@ -6327,8 +6931,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formula1>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula1>(deep);
     }
@@ -6361,8 +6963,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formula2>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula2>(deep);
@@ -6402,7 +7002,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6456,20 +7060,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Schema ID</para>
         /// <para>Represents the following attribute in the schema: ID</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Schema Reference</para>
         /// <para>Represents the following attribute in the schema: SchemaRef</para>
         /// </summary>
-        public StringValue SchemaReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SchemaReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Schema Root Namespace</para>
         /// <para>Represents the following attribute in the schema: Namespace</para>
         /// </summary>
-        public StringValue Namespace { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Schema>();
+        public StringValue Namespace
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6554,56 +7169,91 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>XML Mapping ID</para>
         /// <para>Represents the following attribute in the schema: ID</para>
         /// </summary>
-        public UInt32Value ID { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ID
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>XML Mapping Name</para>
         /// <para>Represents the following attribute in the schema: Name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Root Element Name</para>
         /// <para>Represents the following attribute in the schema: RootElement</para>
         /// </summary>
-        public StringValue RootElement { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue RootElement
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Schema Name</para>
         /// <para>Represents the following attribute in the schema: SchemaID</para>
         /// </summary>
-        public StringValue SchemaId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SchemaId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Validation Errors</para>
         /// <para>Represents the following attribute in the schema: ShowImportExportValidationErrors</para>
         /// </summary>
-        public BooleanValue ShowImportExportErrors { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImportExportErrors
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>AutoFit Table on Refresh</para>
         /// <para>Represents the following attribute in the schema: AutoFit</para>
         /// </summary>
-        public BooleanValue AutoFit { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoFit
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Append Data to Table</para>
         /// <para>Represents the following attribute in the schema: Append</para>
         /// </summary>
-        public BooleanValue AppendData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AppendData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Preserve AutoFilter State</para>
         /// <para>Represents the following attribute in the schema: PreserveSortAFLayout</para>
         /// </summary>
-        public BooleanValue PreserveAutoFilterState { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PreserveAutoFilterState
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Preserve Cell Formatting</para>
         /// <para>Represents the following attribute in the schema: PreserveFormat</para>
         /// </summary>
-        public BooleanValue PreserveFormat { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Map>();
+        public BooleanValue PreserveFormat
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6724,32 +7374,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DataBindingName</para>
         /// <para>Represents the following attribute in the schema: DataBindingName</para>
         /// </summary>
-        public StringValue DataBindingName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DataBindingName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>FileBinding</para>
         /// <para>Represents the following attribute in the schema: FileBinding</para>
         /// </summary>
-        public BooleanValue FileBinding { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FileBinding
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ConnectionID</para>
         /// <para>Represents the following attribute in the schema: ConnectionID</para>
         /// </summary>
-        public UInt32Value ConnectionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ConnectionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>FileBindingName</para>
         /// <para>Represents the following attribute in the schema: FileBindingName</para>
         /// </summary>
-        public StringValue FileBindingName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FileBindingName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>DataBindingLoadMode</para>
         /// <para>Represents the following attribute in the schema: DataBindingLoadMode</para>
         /// </summary>
-        public UInt32Value DataBindingLoadMode { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataBinding>();
+        public UInt32Value DataBindingLoadMode
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6851,122 +7520,201 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sourceFile</para>
         /// <para>Represents the following attribute in the schema: sourceFile</para>
         /// </summary>
-        public StringValue SourceFile { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SourceFile
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>odcFile</para>
         /// <para>Represents the following attribute in the schema: odcFile</para>
         /// </summary>
-        public StringValue ConnectionFile { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ConnectionFile
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keepAlive</para>
         /// <para>Represents the following attribute in the schema: keepAlive</para>
         /// </summary>
-        public BooleanValue KeepAlive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue KeepAlive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>interval</para>
         /// <para>Represents the following attribute in the schema: interval</para>
         /// </summary>
-        public UInt32Value Interval { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Interval
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public UInt32Value Type { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Type
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>reconnectionMethod</para>
         /// <para>Represents the following attribute in the schema: reconnectionMethod</para>
         /// </summary>
-        public UInt32Value ReconnectionMethod { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ReconnectionMethod
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>refreshedVersion</para>
         /// <para>Represents the following attribute in the schema: refreshedVersion</para>
         /// </summary>
-        public ByteValue RefreshedVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue RefreshedVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>minRefreshableVersion</para>
         /// <para>Represents the following attribute in the schema: minRefreshableVersion</para>
         /// </summary>
-        public ByteValue MinRefreshableVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue MinRefreshableVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>savePassword</para>
         /// <para>Represents the following attribute in the schema: savePassword</para>
         /// </summary>
-        public BooleanValue SavePassword { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SavePassword
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>new</para>
         /// <para>Represents the following attribute in the schema: new</para>
         /// </summary>
-        public BooleanValue New { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue New
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>deleted</para>
         /// <para>Represents the following attribute in the schema: deleted</para>
         /// </summary>
-        public BooleanValue Deleted { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Deleted
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onlyUseConnectionFile</para>
         /// <para>Represents the following attribute in the schema: onlyUseConnectionFile</para>
         /// </summary>
-        public BooleanValue OnlyUseConnectionFile { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OnlyUseConnectionFile
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>background</para>
         /// <para>Represents the following attribute in the schema: background</para>
         /// </summary>
-        public BooleanValue Background { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Background
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>refreshOnLoad</para>
         /// <para>Represents the following attribute in the schema: refreshOnLoad</para>
         /// </summary>
-        public BooleanValue RefreshOnLoad { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RefreshOnLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>saveData</para>
         /// <para>Represents the following attribute in the schema: saveData</para>
         /// </summary>
-        public BooleanValue SaveData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SaveData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>credentials</para>
         /// <para>Represents the following attribute in the schema: credentials</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CredentialsMethodValues> Credentials { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CredentialsMethodValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CredentialsMethodValues> Credentials
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CredentialsMethodValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>singleSignOnId</para>
         /// <para>Represents the following attribute in the schema: singleSignOnId</para>
         /// </summary>
-        public StringValue SingleSignOnId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Connection>();
+        public StringValue SingleSignOnId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7163,8 +7911,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Count of Tables</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tables>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7206,62 +7957,101 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Parameter Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>SQL Data Type</para>
         /// <para>Represents the following attribute in the schema: sqlType</para>
         /// </summary>
-        public Int32Value SqlType { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value SqlType
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Parameter Type</para>
         /// <para>Represents the following attribute in the schema: parameterType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ParameterValues> ParameterType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ParameterValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ParameterValues> ParameterType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ParameterValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Refresh on Change</para>
         /// <para>Represents the following attribute in the schema: refreshOnChange</para>
         /// </summary>
-        public BooleanValue RefreshOnChange { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RefreshOnChange
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Parameter Prompt String</para>
         /// <para>Represents the following attribute in the schema: prompt</para>
         /// </summary>
-        public StringValue Prompt { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Prompt
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Boolean</para>
         /// <para>Represents the following attribute in the schema: boolean</para>
         /// </summary>
-        public BooleanValue Boolean { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Boolean
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double</para>
         /// <para>Represents the following attribute in the schema: double</para>
         /// </summary>
-        public DoubleValue Double { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Double
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Integer</para>
         /// <para>Represents the following attribute in the schema: integer</para>
         /// </summary>
-        public Int32Value Integer { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Integer
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>String</para>
         /// <para>Represents the following attribute in the schema: string</para>
         /// </summary>
-        public StringValue String { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue String
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cell Reference</para>
         /// <para>Represents the following attribute in the schema: cell</para>
         /// </summary>
-        public StringValue Cell { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Parameter>();
+        public StringValue Cell
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7309,8 +8099,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MissingTable>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MissingTable>(deep);
     }
@@ -7335,8 +8123,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CharacterValue>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7372,8 +8163,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Shared Items Index</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldItem>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7409,14 +8203,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ExternalConnectionValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ExternalConnectionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ExternalConnectionValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ExternalConnectionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Position</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        public UInt32Value Position { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextField>();
+        public UInt32Value Position
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7493,80 +8294,131 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>caption</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>propertyName</para>
         /// <para>Represents the following attribute in the schema: propertyName</para>
         /// </summary>
-        public StringValue PropertyName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue PropertyName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>serverField</para>
         /// <para>Represents the following attribute in the schema: serverField</para>
         /// </summary>
-        public BooleanValue ServerField { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ServerField
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>uniqueList</para>
         /// <para>Represents the following attribute in the schema: uniqueList</para>
         /// </summary>
-        public BooleanValue UniqueList { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UniqueList
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>numFmtId</para>
         /// <para>Represents the following attribute in the schema: numFmtId</para>
         /// </summary>
-        public UInt32Value NumberFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NumberFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>formula</para>
         /// <para>Represents the following attribute in the schema: formula</para>
         /// </summary>
-        public StringValue Formula { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Formula
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sqlType</para>
         /// <para>Represents the following attribute in the schema: sqlType</para>
         /// </summary>
-        public Int32Value SqlType { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value SqlType
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hierarchy</para>
         /// <para>Represents the following attribute in the schema: hierarchy</para>
         /// </summary>
-        public Int32Value Hierarchy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Hierarchy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>level</para>
         /// <para>Represents the following attribute in the schema: level</para>
         /// </summary>
-        public UInt32Value Level { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Level
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>databaseField</para>
         /// <para>Represents the following attribute in the schema: databaseField</para>
         /// </summary>
-        public BooleanValue DatabaseField { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DatabaseField
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mappingCount</para>
         /// <para>Represents the following attribute in the schema: mappingCount</para>
         /// </summary>
-        public UInt32Value MappingCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MappingCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>memberPropertyField</para>
         /// <para>Represents the following attribute in the schema: memberPropertyField</para>
         /// </summary>
-        public BooleanValue MemberPropertyField { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheField>();
+        public BooleanValue MemberPropertyField
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7687,8 +8539,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Item String Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pages>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7759,8 +8614,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference and Page Item Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RangeSets>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7831,8 +8689,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Item String Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Page>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7872,8 +8733,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Item Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageItem>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7909,43 +8773,71 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Item Index Page 1</para>
         /// <para>Represents the following attribute in the schema: i1</para>
         /// </summary>
-        public UInt32Value FieldItemIndexPage1 { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FieldItemIndexPage1
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Item Index Page 2</para>
         /// <para>Represents the following attribute in the schema: i2</para>
         /// </summary>
-        public UInt32Value FieldItemIndexPage2 { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FieldItemIndexPage2
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Item index Page 3</para>
         /// <para>Represents the following attribute in the schema: i3</para>
         /// </summary>
-        public UInt32Value FieldItemIndexPage3 { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FieldItemIndexPage3
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Item Index Page 4</para>
         /// <para>Represents the following attribute in the schema: i4</para>
         /// </summary>
-        public UInt32Value FieldItemIndexPage4 { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FieldItemIndexPage4
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Named Range</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Name</para>
         /// <para>Represents the following attribute in the schema: sheet</para>
         /// </summary>
-        public StringValue Sheet { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Sheet
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship Id</para>
@@ -7954,8 +8846,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RangeSet>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8035,68 +8930,111 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Unused Item</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public BooleanValue Unused { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Unused
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculated Item</para>
         /// <para>Represents the following attribute in the schema: f</para>
         /// </summary>
-        public BooleanValue Calculated { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Calculated
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Caption</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Member Property Count</para>
         /// <para>Represents the following attribute in the schema: cp</para>
         /// </summary>
-        public UInt32Value PropertyCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PropertyCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Index</para>
         /// <para>Represents the following attribute in the schema: in</para>
         /// </summary>
-        public UInt32Value FormatIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>background Color</para>
         /// <para>Represents the following attribute in the schema: bc</para>
         /// </summary>
-        public HexBinaryValue BackgroundColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue BackgroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Foreground Color</para>
         /// <para>Represents the following attribute in the schema: fc</para>
         /// </summary>
-        public HexBinaryValue ForegroundColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue ForegroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Italic</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public BooleanValue Italic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Italic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Underline</para>
         /// <para>Represents the following attribute in the schema: un</para>
         /// </summary>
-        public BooleanValue Underline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Underline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Strikethrough</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        public BooleanValue Strikethrough { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Strikethrough
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bold</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public BooleanValue Bold { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MissingItem>();
+        public BooleanValue Bold
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8193,74 +9131,121 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unused Item</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public BooleanValue Unused { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Unused
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculated Item</para>
         /// <para>Represents the following attribute in the schema: f</para>
         /// </summary>
-        public BooleanValue Calculated { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Calculated
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Caption</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Member Property Count</para>
         /// <para>Represents the following attribute in the schema: cp</para>
         /// </summary>
-        public UInt32Value PropertyCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PropertyCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Index</para>
         /// <para>Represents the following attribute in the schema: in</para>
         /// </summary>
-        public UInt32Value FormatIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Background Color</para>
         /// <para>Represents the following attribute in the schema: bc</para>
         /// </summary>
-        public HexBinaryValue BackgroundColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue BackgroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Foreground Color</para>
         /// <para>Represents the following attribute in the schema: fc</para>
         /// </summary>
-        public HexBinaryValue ForegroundColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue ForegroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Italic</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public BooleanValue Italic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Italic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Underline</para>
         /// <para>Represents the following attribute in the schema: un</para>
         /// </summary>
-        public BooleanValue Underline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Underline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Strikethrough</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        public BooleanValue Strikethrough { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Strikethrough
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bold</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public BooleanValue Bold { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberItem>();
+        public BooleanValue Bold
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8360,32 +9345,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unused Item</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public BooleanValue Unused { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Unused
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculated Item</para>
         /// <para>Represents the following attribute in the schema: f</para>
         /// </summary>
-        public BooleanValue Calculated { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Calculated
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Caption</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Member Property Count</para>
         /// <para>Represents the following attribute in the schema: cp</para>
         /// </summary>
-        public UInt32Value PropertyCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BooleanItem>();
+        public UInt32Value PropertyCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8471,74 +9475,121 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unused Item</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public BooleanValue Unused { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Unused
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculated Item</para>
         /// <para>Represents the following attribute in the schema: f</para>
         /// </summary>
-        public BooleanValue Calculated { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Calculated
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Item Caption</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Member Property Count</para>
         /// <para>Represents the following attribute in the schema: cp</para>
         /// </summary>
-        public UInt32Value PropertyCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PropertyCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Index</para>
         /// <para>Represents the following attribute in the schema: in</para>
         /// </summary>
-        public UInt32Value FormatIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>background Color</para>
         /// <para>Represents the following attribute in the schema: bc</para>
         /// </summary>
-        public HexBinaryValue BackgroundColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue BackgroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Foreground Color</para>
         /// <para>Represents the following attribute in the schema: fc</para>
         /// </summary>
-        public HexBinaryValue ForegroundColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue ForegroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Italic</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public BooleanValue Italic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Italic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Underline</para>
         /// <para>Represents the following attribute in the schema: un</para>
         /// </summary>
-        public BooleanValue Underline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Underline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Strikethrough</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        public BooleanValue Strikethrough { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Strikethrough
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bold</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public BooleanValue Bold { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorItem>();
+        public BooleanValue Bold
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8652,74 +9703,121 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unused Item</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public BooleanValue Unused { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Unused
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculated Item</para>
         /// <para>Represents the following attribute in the schema: f</para>
         /// </summary>
-        public BooleanValue Calculated { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Calculated
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Item Caption</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Member Property Count</para>
         /// <para>Represents the following attribute in the schema: cp</para>
         /// </summary>
-        public UInt32Value PropertyCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PropertyCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Index</para>
         /// <para>Represents the following attribute in the schema: in</para>
         /// </summary>
-        public UInt32Value FormatIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Background Color</para>
         /// <para>Represents the following attribute in the schema: bc</para>
         /// </summary>
-        public HexBinaryValue BackgroundColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue BackgroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Foreground Color</para>
         /// <para>Represents the following attribute in the schema: fc</para>
         /// </summary>
-        public HexBinaryValue ForegroundColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue ForegroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Italic</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public BooleanValue Italic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Italic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Underline</para>
         /// <para>Represents the following attribute in the schema: un</para>
         /// </summary>
-        public BooleanValue Underline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Underline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Strikethrough</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        public BooleanValue Strikethrough { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Strikethrough
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bold</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public BooleanValue Bold { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringItem>();
+        public BooleanValue Bold
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8818,32 +9916,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        public DateTimeValue Val { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Val
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unused Item</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public BooleanValue Unused { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Unused
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculated Item Value</para>
         /// <para>Represents the following attribute in the schema: f</para>
         /// </summary>
-        public BooleanValue Calculated { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Calculated
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Caption</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Member Property Count</para>
         /// <para>Represents the following attribute in the schema: cp</para>
         /// </summary>
-        public UInt32Value PropertyCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DateTimeItem>();
+        public UInt32Value PropertyCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8922,8 +10039,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tuples>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuple), 1, 0)
@@ -8980,8 +10095,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public SortByTuple(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SortByTuple>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9043,7 +10156,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Member Name Count</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public UInt32Value MemberNameCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MemberNameCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9069,8 +10186,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MemberPropertyIndex>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MemberPropertyIndex>(deep);
     }
@@ -9090,8 +10205,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public MemberPropertiesMap() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MemberPropertiesMap>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new IndexReferenceConstraint(0 /*:v*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0)
@@ -9121,7 +10234,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Shared Items Index</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9190,8 +10307,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotCacheRecord>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
@@ -9229,62 +10344,101 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>KPI Unique Name</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>KPI Display Name</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>KPI Display Folder</para>
         /// <para>Represents the following attribute in the schema: displayFolder</para>
         /// </summary>
-        public StringValue DisplayFolder { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DisplayFolder
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>KPI Measure Group Name</para>
         /// <para>Represents the following attribute in the schema: measureGroup</para>
         /// </summary>
-        public StringValue MeasureGroup { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MeasureGroup
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Parent KPI</para>
         /// <para>Represents the following attribute in the schema: parent</para>
         /// </summary>
-        public StringValue ParentKpi { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ParentKpi
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>KPI Value Unique Name</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public StringValue Value { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Value
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>KPI Goal Unique Name</para>
         /// <para>Represents the following attribute in the schema: goal</para>
         /// </summary>
-        public StringValue Goal { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Goal
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>KPI Status Unique Name</para>
         /// <para>Represents the following attribute in the schema: status</para>
         /// </summary>
-        public StringValue Status { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Status
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>KPI Trend Unique Name</para>
         /// <para>Represents the following attribute in the schema: trend</para>
         /// </summary>
-        public StringValue Trend { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Trend
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>KPI Weight Unique Name</para>
         /// <para>Represents the following attribute in the schema: weight</para>
         /// </summary>
-        public StringValue Weight { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Kpi>();
+        public StringValue Weight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9350,8 +10504,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Index</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public Int32Value Index { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldUsage>();
+        public Int32Value Index
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9427,26 +10584,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Unique Name</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Grouping Level Display Name</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User-Defined Group Level</para>
         /// <para>Represents the following attribute in the schema: user</para>
         /// </summary>
-        public BooleanValue User { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue User
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Roll Up</para>
         /// <para>Represents the following attribute in the schema: customRollUp</para>
         /// </summary>
-        public BooleanValue CustomRollUp { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupLevel>();
+        public BooleanValue CustomRollUp
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9559,8 +10731,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Level Group Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Groups>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9631,32 +10806,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Group Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unique Group Name</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Group Caption</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Parent Unique Name</para>
         /// <para>Represents the following attribute in the schema: uniqueParent</para>
         /// </summary>
-        public StringValue UniqueParent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueParent
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Group Id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public Int32Value Id { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Group>();
+        public Int32Value Id
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9762,8 +10956,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Group Member Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupMembers>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9803,14 +11000,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Group Member Unique Name</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Group</para>
         /// <para>Represents the following attribute in the schema: group</para>
         /// </summary>
-        public BooleanValue Group { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupMember>();
+        public BooleanValue Group
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9891,8 +11095,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Tuple Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Entries>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9966,8 +11173,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Tuple Set Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Sets>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10038,8 +11248,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Cached Query Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QueryCache>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10110,8 +11323,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ServerFormats>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10151,14 +11367,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Culture</para>
         /// <para>Represents the following attribute in the schema: culture</para>
         /// </summary>
-        public StringValue Culture { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Culture
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        public StringValue Format { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ServerFormat>();
+        public StringValue Format
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10200,20 +11423,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Index</para>
         /// <para>Represents the following attribute in the schema: fld</para>
         /// </summary>
-        public UInt32Value Field { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Field
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hierarchy Index</para>
         /// <para>Represents the following attribute in the schema: hier</para>
         /// </summary>
-        public UInt32Value Hierarchy { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Hierarchy
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Item Index</para>
         /// <para>Represents the following attribute in the schema: item</para>
         /// </summary>
-        public UInt32Value Item { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tuple>();
+        public UInt32Value Item
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10292,32 +11526,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Number of Tuples</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum Rank Requested</para>
         /// <para>Represents the following attribute in the schema: maxRank</para>
         /// </summary>
-        public Int32Value MaxRank { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value MaxRank
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>MDX Set Definition</para>
         /// <para>Represents the following attribute in the schema: setDefinition</para>
         /// </summary>
-        public StringValue SetDefinition { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SetDefinition
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Set Sort Order</para>
         /// <para>Represents the following attribute in the schema: sortType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortValues> SortType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortValues> SortType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Query Failed</para>
         /// <para>Represents the following attribute in the schema: queryFailed</para>
         /// </summary>
-        public BooleanValue QueryFailed { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TupleSet>();
+        public BooleanValue QueryFailed
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10406,8 +11659,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>MDX Query String</para>
         /// <para>Represents the following attribute in the schema: mdx</para>
         /// </summary>
-        public StringValue Mdx { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Query>();
+        public StringValue Mdx
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10502,14 +11758,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Index</para>
         /// <para>Represents the following attribute in the schema: field</para>
         /// </summary>
-        public UInt32Value Field { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Field
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculated Item Formula</para>
         /// <para>Represents the following attribute in the schema: formula</para>
         /// </summary>
-        public StringValue Formula { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculatedItem>();
+        public StringValue Formula
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10610,74 +11873,121 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Index</para>
         /// <para>Represents the following attribute in the schema: field</para>
         /// </summary>
-        public Int32Value Field { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Field
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rule Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Only</para>
         /// <para>Represents the following attribute in the schema: dataOnly</para>
         /// </summary>
-        public BooleanValue DataOnly { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DataOnly
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Labels Only</para>
         /// <para>Represents the following attribute in the schema: labelOnly</para>
         /// </summary>
-        public BooleanValue LabelOnly { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LabelOnly
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Row Grand Total</para>
         /// <para>Represents the following attribute in the schema: grandRow</para>
         /// </summary>
-        public BooleanValue GrandRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue GrandRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Column Grand Total</para>
         /// <para>Represents the following attribute in the schema: grandCol</para>
         /// </summary>
-        public BooleanValue GrandColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue GrandColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cache Index</para>
         /// <para>Represents the following attribute in the schema: cacheIndex</para>
         /// </summary>
-        public BooleanValue CacheIndex { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CacheIndex
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Outline</para>
         /// <para>Represents the following attribute in the schema: outline</para>
         /// </summary>
-        public BooleanValue Outline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Outline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Offset Reference</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-        public StringValue Offset { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Offset
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Collapsed Levels Are Subtotals</para>
         /// <para>Represents the following attribute in the schema: collapsedLevelsAreSubtotals</para>
         /// </summary>
-        public BooleanValue CollapsedLevelsAreSubtotals { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CollapsedLevelsAreSubtotals
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Position</para>
         /// <para>Represents the following attribute in the schema: fieldPosition</para>
         /// </summary>
-        public UInt32Value FieldPosition { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotArea>();
+        public UInt32Value FieldPosition
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10792,44 +12102,71 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mdx</para>
         /// <para>Represents the following attribute in the schema: mdx</para>
         /// </summary>
-        public StringValue Mdx { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Mdx
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>memberName</para>
         /// <para>Represents the following attribute in the schema: memberName</para>
         /// </summary>
-        public StringValue MemberName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MemberName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hierarchy</para>
         /// <para>Represents the following attribute in the schema: hierarchy</para>
         /// </summary>
-        public StringValue Hierarchy { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Hierarchy
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>parent</para>
         /// <para>Represents the following attribute in the schema: parent</para>
         /// </summary>
-        public StringValue ParentName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ParentName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>solveOrder</para>
         /// <para>Represents the following attribute in the schema: solveOrder</para>
         /// </summary>
-        public Int32Value SolveOrder { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value SolveOrder
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>set</para>
         /// <para>Represents the following attribute in the schema: set</para>
         /// </summary>
-        public BooleanValue Set { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculatedMember>();
+        public BooleanValue Set
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10943,290 +12280,481 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Field</para>
         /// <para>Represents the following attribute in the schema: dataField</para>
         /// </summary>
-        public BooleanValue DataField { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DataField
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Subtotal Caption</para>
         /// <para>Represents the following attribute in the schema: subtotalCaption</para>
         /// </summary>
-        public StringValue SubtotalCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SubtotalCaption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show PivotField Header Drop Downs</para>
         /// <para>Represents the following attribute in the schema: showDropDowns</para>
         /// </summary>
-        public BooleanValue ShowDropDowns { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowDropDowns
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden Level</para>
         /// <para>Represents the following attribute in the schema: hiddenLevel</para>
         /// </summary>
-        public BooleanValue HiddenLevel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HiddenLevel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unique Member Property</para>
         /// <para>Represents the following attribute in the schema: uniqueMemberProperty</para>
         /// </summary>
-        public StringValue UniqueMemberProperty { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueMemberProperty
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Compact</para>
         /// <para>Represents the following attribute in the schema: compact</para>
         /// </summary>
-        public BooleanValue Compact { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Compact
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>All Items Expanded</para>
         /// <para>Represents the following attribute in the schema: allDrilled</para>
         /// </summary>
-        public BooleanValue AllDrilled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AllDrilled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number Format Id</para>
         /// <para>Represents the following attribute in the schema: numFmtId</para>
         /// </summary>
-        public UInt32Value NumberFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NumberFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Outline Items</para>
         /// <para>Represents the following attribute in the schema: outline</para>
         /// </summary>
-        public BooleanValue Outline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Outline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Subtotals At Top</para>
         /// <para>Represents the following attribute in the schema: subtotalTop</para>
         /// </summary>
-        public BooleanValue SubtotalTop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SubtotalTop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drag To Row</para>
         /// <para>Represents the following attribute in the schema: dragToRow</para>
         /// </summary>
-        public BooleanValue DragToRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DragToRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drag To Column</para>
         /// <para>Represents the following attribute in the schema: dragToCol</para>
         /// </summary>
-        public BooleanValue DragToColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DragToColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Multiple Field Filters</para>
         /// <para>Represents the following attribute in the schema: multipleItemSelectionAllowed</para>
         /// </summary>
-        public BooleanValue MultipleItemSelectionAllowed { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MultipleItemSelectionAllowed
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drag Field to Page</para>
         /// <para>Represents the following attribute in the schema: dragToPage</para>
         /// </summary>
-        public BooleanValue DragToPage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DragToPage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Can Drag to Data</para>
         /// <para>Represents the following attribute in the schema: dragToData</para>
         /// </summary>
-        public BooleanValue DragToData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DragToData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drag Off</para>
         /// <para>Represents the following attribute in the schema: dragOff</para>
         /// </summary>
-        public BooleanValue DragOff { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DragOff
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show All Items</para>
         /// <para>Represents the following attribute in the schema: showAll</para>
         /// </summary>
-        public BooleanValue ShowAll { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowAll
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Insert Blank Row</para>
         /// <para>Represents the following attribute in the schema: insertBlankRow</para>
         /// </summary>
-        public BooleanValue InsertBlankRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InsertBlankRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Server-based Page Field</para>
         /// <para>Represents the following attribute in the schema: serverField</para>
         /// </summary>
-        public BooleanValue ServerField { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ServerField
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Insert Item Page Break</para>
         /// <para>Represents the following attribute in the schema: insertPageBreak</para>
         /// </summary>
-        public BooleanValue InsertPageBreak { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InsertPageBreak
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Show</para>
         /// <para>Represents the following attribute in the schema: autoShow</para>
         /// </summary>
-        public BooleanValue AutoShow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoShow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Auto Show</para>
         /// <para>Represents the following attribute in the schema: topAutoShow</para>
         /// </summary>
-        public BooleanValue TopAutoShow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TopAutoShow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide New Items</para>
         /// <para>Represents the following attribute in the schema: hideNewItems</para>
         /// </summary>
-        public BooleanValue HideNewItems { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HideNewItems
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Measure Filter</para>
         /// <para>Represents the following attribute in the schema: measureFilter</para>
         /// </summary>
-        public BooleanValue MeasureFilter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MeasureFilter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inclusive Manual Filter</para>
         /// <para>Represents the following attribute in the schema: includeNewItemsInFilter</para>
         /// </summary>
-        public BooleanValue IncludeNewItemsInFilter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IncludeNewItemsInFilter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Items Per Page Count</para>
         /// <para>Represents the following attribute in the schema: itemPageCount</para>
         /// </summary>
-        public UInt32Value ItemPageCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ItemPageCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Sort Type</para>
         /// <para>Represents the following attribute in the schema: sortType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FieldSortValues> SortType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FieldSortValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FieldSortValues> SortType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FieldSortValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Source Sort</para>
         /// <para>Represents the following attribute in the schema: dataSourceSort</para>
         /// </summary>
-        public BooleanValue DataSourceSort { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DataSourceSort
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Sort</para>
         /// <para>Represents the following attribute in the schema: nonAutoSortDefault</para>
         /// </summary>
-        public BooleanValue NonAutoSortDefault { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NonAutoSortDefault
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Show Rank By</para>
         /// <para>Represents the following attribute in the schema: rankBy</para>
         /// </summary>
-        public UInt32Value RankBy { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RankBy
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Default Subtotal</para>
         /// <para>Represents the following attribute in the schema: defaultSubtotal</para>
         /// </summary>
-        public BooleanValue DefaultSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DefaultSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sum Subtotal</para>
         /// <para>Represents the following attribute in the schema: sumSubtotal</para>
         /// </summary>
-        public BooleanValue SumSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SumSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>CountA</para>
         /// <para>Represents the following attribute in the schema: countASubtotal</para>
         /// </summary>
-        public BooleanValue CountASubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CountASubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Average</para>
         /// <para>Represents the following attribute in the schema: avgSubtotal</para>
         /// </summary>
-        public BooleanValue AverageSubTotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AverageSubTotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Max Subtotal</para>
         /// <para>Represents the following attribute in the schema: maxSubtotal</para>
         /// </summary>
-        public BooleanValue MaxSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MaxSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Min Subtotal</para>
         /// <para>Represents the following attribute in the schema: minSubtotal</para>
         /// </summary>
-        public BooleanValue MinSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MinSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Product Subtotal</para>
         /// <para>Represents the following attribute in the schema: productSubtotal</para>
         /// </summary>
-        public BooleanValue ApplyProductInSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyProductInSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: countSubtotal</para>
         /// </summary>
-        public BooleanValue CountSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CountSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>StdDev Subtotal</para>
         /// <para>Represents the following attribute in the schema: stdDevSubtotal</para>
         /// </summary>
-        public BooleanValue ApplyStandardDeviationInSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyStandardDeviationInSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>StdDevP Subtotal</para>
         /// <para>Represents the following attribute in the schema: stdDevPSubtotal</para>
         /// </summary>
-        public BooleanValue ApplyStandardDeviationPInSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyStandardDeviationPInSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Variance Subtotal</para>
         /// <para>Represents the following attribute in the schema: varSubtotal</para>
         /// </summary>
-        public BooleanValue ApplyVarianceInSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyVarianceInSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>VarP Subtotal</para>
         /// <para>Represents the following attribute in the schema: varPSubtotal</para>
         /// </summary>
-        public BooleanValue ApplyVariancePInSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyVariancePInSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Member Property in Cell</para>
         /// <para>Represents the following attribute in the schema: showPropCell</para>
         /// </summary>
-        public BooleanValue ShowPropCell { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowPropCell
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Member Property ToolTip</para>
         /// <para>Represents the following attribute in the schema: showPropTip</para>
         /// </summary>
-        public BooleanValue ShowPropertyTooltip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowPropertyTooltip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show As Caption</para>
         /// <para>Represents the following attribute in the schema: showPropAsCaption</para>
         /// </summary>
-        public BooleanValue ShowPropAsCaption { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowPropAsCaption
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drill State</para>
         /// <para>Represents the following attribute in the schema: defaultAttributeDrillState</para>
         /// </summary>
-        public BooleanValue DefaultAttributeDrillState { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotField>();
+        public BooleanValue DefaultAttributeDrillState
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11360,68 +12888,111 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Item User Caption</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        public StringValue ItemName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ItemName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Item Type</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues> ItemType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues> ItemType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Character</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        public BooleanValue HasStringVlue { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HasStringVlue
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Details</para>
         /// <para>Represents the following attribute in the schema: sd</para>
         /// </summary>
-        public BooleanValue HideDetails { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HideDetails
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculated Member</para>
         /// <para>Represents the following attribute in the schema: f</para>
         /// </summary>
-        public BooleanValue Calculated { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Calculated
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Missing</para>
         /// <para>Represents the following attribute in the schema: m</para>
         /// </summary>
-        public BooleanValue Missing { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Missing
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Child Items</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public BooleanValue ChildItems { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ChildItems
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Item Index</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Expanded</para>
         /// <para>Represents the following attribute in the schema: d</para>
         /// </summary>
-        public BooleanValue Expanded { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Expanded
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drill Across Attributes</para>
         /// <para>Represents the following attribute in the schema: e</para>
         /// </summary>
-        public BooleanValue DrillAcrossAttributes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Item>();
+        public BooleanValue DrillAcrossAttributes
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11503,44 +13074,71 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fld</para>
         /// <para>Represents the following attribute in the schema: fld</para>
         /// </summary>
-        public UInt32Value Field { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Field
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>subtotal</para>
         /// <para>Represents the following attribute in the schema: subtotal</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues> Subtotal { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues> Subtotal
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showDataAs</para>
         /// <para>Represents the following attribute in the schema: showDataAs</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ShowDataAsValues> ShowDataAs { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ShowDataAsValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ShowDataAsValues> ShowDataAs
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ShowDataAsValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>baseField</para>
         /// <para>Represents the following attribute in the schema: baseField</para>
         /// </summary>
-        public Int32Value BaseField { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value BaseField
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>baseItem</para>
         /// <para>Represents the following attribute in the schema: baseItem</para>
         /// </summary>
-        public UInt32Value BaseItem { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value BaseItem
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>numFmtId</para>
         /// <para>Represents the following attribute in the schema: numFmtId</para>
         /// </summary>
-        public UInt32Value NumberFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataField>();
+        public UInt32Value NumberFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11639,20 +13237,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Item Type</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues> ItemType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues> ItemType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Repeated Items Count</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public UInt32Value RepeatedItemCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RepeatedItemCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Field Index</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowItem>();
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11700,8 +13309,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Index</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public Int32Value Index { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Field>();
+        public Int32Value Index
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11776,14 +13388,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Format Action</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormatActionValues> Action { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormatActionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormatActionValues> Action
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormatActionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Id</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        public UInt32Value FormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Format>();
+        public UInt32Value FormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11890,20 +13509,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Conditional Formatting Scope</para>
         /// <para>Represents the following attribute in the schema: scope</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues> Scope { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues> Scope
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Conditional Formatting Rule Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Priority</para>
         /// <para>Represents the following attribute in the schema: priority</para>
         /// </summary>
-        public UInt32Value Priority { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormat>();
+        public UInt32Value Priority
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12012,8 +13642,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pivot Area Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotAreas>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12084,20 +13717,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Chart Index</para>
         /// <para>Represents the following attribute in the schema: chart</para>
         /// </summary>
-        public UInt32Value Chart { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Chart
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pivot Format Id</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        public UInt32Value Format { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Format
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Series Format</para>
         /// <para>Represents the following attribute in the schema: series</para>
         /// </summary>
-        public BooleanValue Series { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartFormat>();
+        public BooleanValue Series
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12193,68 +13837,111 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Outline New Levels</para>
         /// <para>Represents the following attribute in the schema: outline</para>
         /// </summary>
-        public BooleanValue Outline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Outline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Multiple Field Filters</para>
         /// <para>Represents the following attribute in the schema: multipleItemSelectionAllowed</para>
         /// </summary>
-        public BooleanValue MultipleItemSelectionAllowed { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MultipleItemSelectionAllowed
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>New Levels Subtotals At Top</para>
         /// <para>Represents the following attribute in the schema: subtotalTop</para>
         /// </summary>
-        public BooleanValue SubtotalTop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SubtotalTop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show In Field List</para>
         /// <para>Represents the following attribute in the schema: showInFieldList</para>
         /// </summary>
-        public BooleanValue ShowInFieldList { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowInFieldList
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drag To Row</para>
         /// <para>Represents the following attribute in the schema: dragToRow</para>
         /// </summary>
-        public BooleanValue DragToRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DragToRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drag To Column</para>
         /// <para>Represents the following attribute in the schema: dragToCol</para>
         /// </summary>
-        public BooleanValue DragToColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DragToColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drag to Page</para>
         /// <para>Represents the following attribute in the schema: dragToPage</para>
         /// </summary>
-        public BooleanValue DragToPage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DragToPage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drag To Data</para>
         /// <para>Represents the following attribute in the schema: dragToData</para>
         /// </summary>
-        public BooleanValue DragToData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DragToData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drag Off</para>
         /// <para>Represents the following attribute in the schema: dragOff</para>
         /// </summary>
-        public BooleanValue DragOff { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DragOff
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inclusive Manual Filter</para>
         /// <para>Represents the following attribute in the schema: includeNewItemsInFilter</para>
         /// </summary>
-        public BooleanValue IncludeNewItemsInFilter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IncludeNewItemsInFilter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hierarchy Caption</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotHierarchy>();
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12321,8 +14008,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowHierarchyUsage>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowHierarchyUsage>(deep);
     }
@@ -12342,8 +14027,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public ColumnHierarchyUsage() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnHierarchyUsage>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnHierarchyUsage>(deep);
@@ -12367,7 +14050,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Hierarchy Usage</para>
         /// <para>Represents the following attribute in the schema: hierarchyUsage</para>
         /// </summary>
-        public Int32Value Value { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Value
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12400,56 +14087,91 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLAP Member Property Unique Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Cell</para>
         /// <para>Represents the following attribute in the schema: showCell</para>
         /// </summary>
-        public BooleanValue ShowCell { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowCell
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Tooltip</para>
         /// <para>Represents the following attribute in the schema: showTip</para>
         /// </summary>
-        public BooleanValue ShowTip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowTip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show As Caption</para>
         /// <para>Represents the following attribute in the schema: showAsCaption</para>
         /// </summary>
-        public BooleanValue ShowAsCaption { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowAsCaption
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Name Length</para>
         /// <para>Represents the following attribute in the schema: nameLen</para>
         /// </summary>
-        public UInt32Value NameLength { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NameLength
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Property Name Character Index</para>
         /// <para>Represents the following attribute in the schema: pPos</para>
         /// </summary>
-        public UInt32Value PropertyNamePosition { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PropertyNamePosition
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Property Name Length</para>
         /// <para>Represents the following attribute in the schema: pLen</para>
         /// </summary>
-        public UInt32Value PropertyNameLength { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PropertyNameLength
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Level Index</para>
         /// <para>Represents the following attribute in the schema: level</para>
         /// </summary>
-        public UInt32Value Level { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Level
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Index</para>
         /// <para>Represents the following attribute in the schema: field</para>
         /// </summary>
-        public UInt32Value Field { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MemberProperty>();
+        public UInt32Value Field
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12499,8 +14221,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Hidden Item Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Member>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12536,26 +14261,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Measure</para>
         /// <para>Represents the following attribute in the schema: measure</para>
         /// </summary>
-        public BooleanValue Measure { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Measure
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Dimension Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Dimension Unique Name</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Dimension Display Name</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Dimension>();
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12609,14 +14349,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Measure Group Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Measure Group Display Name</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MeasureGroup>();
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12663,14 +14410,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Measure Group Id</para>
         /// <para>Represents the following attribute in the schema: measureGroup</para>
         /// </summary>
-        public UInt32Value MeasureGroup { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MeasureGroup
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Dimension Id</para>
         /// <para>Represents the following attribute in the schema: dimension</para>
         /// </summary>
-        public UInt32Value Dimension { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MeasureDimensionMap>();
+        public UInt32Value Dimension
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12743,68 +14497,111 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>fld</para>
         /// <para>Represents the following attribute in the schema: fld</para>
         /// </summary>
-        public UInt32Value Field { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Field
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mpFld</para>
         /// <para>Represents the following attribute in the schema: mpFld</para>
         /// </summary>
-        public UInt32Value MemberPropertyFieldId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MemberPropertyFieldId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>evalOrder</para>
         /// <para>Represents the following attribute in the schema: evalOrder</para>
         /// </summary>
-        public Int32Value EvaluationOrder { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value EvaluationOrder
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>iMeasureHier</para>
         /// <para>Represents the following attribute in the schema: iMeasureHier</para>
         /// </summary>
-        public UInt32Value MeasureHierarchy { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MeasureHierarchy
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>iMeasureFld</para>
         /// <para>Represents the following attribute in the schema: iMeasureFld</para>
         /// </summary>
-        public UInt32Value MeasureField { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MeasureField
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>stringValue1</para>
         /// <para>Represents the following attribute in the schema: stringValue1</para>
         /// </summary>
-        public StringValue StringValue1 { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue StringValue1
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>stringValue2</para>
         /// <para>Represents the following attribute in the schema: stringValue2</para>
         /// </summary>
-        public StringValue StringValue2 { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFilter>();
+        public StringValue StringValue2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12934,134 +14731,221 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>uniqueName</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>caption</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>measure</para>
         /// <para>Represents the following attribute in the schema: measure</para>
         /// </summary>
-        public BooleanValue Measure { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Measure
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>set</para>
         /// <para>Represents the following attribute in the schema: set</para>
         /// </summary>
-        public BooleanValue Set { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Set
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>parentSet</para>
         /// <para>Represents the following attribute in the schema: parentSet</para>
         /// </summary>
-        public UInt32Value ParentSet { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ParentSet
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>iconSet</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public Int32Value IconSet { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value IconSet
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>attribute</para>
         /// <para>Represents the following attribute in the schema: attribute</para>
         /// </summary>
-        public BooleanValue Attribute { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Attribute
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        public BooleanValue Time { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Time
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keyAttribute</para>
         /// <para>Represents the following attribute in the schema: keyAttribute</para>
         /// </summary>
-        public BooleanValue KeyAttribute { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue KeyAttribute
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>defaultMemberUniqueName</para>
         /// <para>Represents the following attribute in the schema: defaultMemberUniqueName</para>
         /// </summary>
-        public StringValue DefaultMemberUniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DefaultMemberUniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allUniqueName</para>
         /// <para>Represents the following attribute in the schema: allUniqueName</para>
         /// </summary>
-        public StringValue AllUniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AllUniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allCaption</para>
         /// <para>Represents the following attribute in the schema: allCaption</para>
         /// </summary>
-        public StringValue AllCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AllCaption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dimensionUniqueName</para>
         /// <para>Represents the following attribute in the schema: dimensionUniqueName</para>
         /// </summary>
-        public StringValue DimensionUniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DimensionUniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>displayFolder</para>
         /// <para>Represents the following attribute in the schema: displayFolder</para>
         /// </summary>
-        public StringValue DisplayFolder { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DisplayFolder
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>measureGroup</para>
         /// <para>Represents the following attribute in the schema: measureGroup</para>
         /// </summary>
-        public StringValue MeasureGroup { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MeasureGroup
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>measures</para>
         /// <para>Represents the following attribute in the schema: measures</para>
         /// </summary>
-        public BooleanValue Measures { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Measures
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>oneField</para>
         /// <para>Represents the following attribute in the schema: oneField</para>
         /// </summary>
-        public BooleanValue OneField { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OneField
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>memberValueDatatype</para>
         /// <para>Represents the following attribute in the schema: memberValueDatatype</para>
         /// </summary>
-        public UInt16Value MemberValueDatatype { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value MemberValueDatatype
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>unbalanced</para>
         /// <para>Represents the following attribute in the schema: unbalanced</para>
         /// </summary>
-        public BooleanValue Unbalanced { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Unbalanced
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>unbalancedGroup</para>
         /// <para>Represents the following attribute in the schema: unbalancedGroup</para>
         /// </summary>
-        public BooleanValue UnbalancedGroup { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UnbalancedGroup
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheHierarchy>();
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13180,50 +15064,81 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Source Data Set Beginning Range</para>
         /// <para>Represents the following attribute in the schema: autoStart</para>
         /// </summary>
-        public BooleanValue AutoStart { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoStart
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Source Data Ending Range</para>
         /// <para>Represents the following attribute in the schema: autoEnd</para>
         /// </summary>
-        public BooleanValue AutoEnd { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoEnd
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Group By</para>
         /// <para>Represents the following attribute in the schema: groupBy</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GroupByValues> GroupBy { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.GroupByValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GroupByValues> GroupBy
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.GroupByValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Numeric Grouping Start Value</para>
         /// <para>Represents the following attribute in the schema: startNum</para>
         /// </summary>
-        public DoubleValue StartNumber { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue StartNumber
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Numeric Grouping End Value</para>
         /// <para>Represents the following attribute in the schema: endNum</para>
         /// </summary>
-        public DoubleValue EndNum { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue EndNum
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Date Grouping Start Value</para>
         /// <para>Represents the following attribute in the schema: startDate</para>
         /// </summary>
-        public DateTimeValue StartDate { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue StartDate
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Date Grouping End Value</para>
         /// <para>Represents the following attribute in the schema: endDate</para>
         /// </summary>
-        public DateTimeValue EndDate { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue EndDate
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Grouping Interval</para>
         /// <para>Represents the following attribute in the schema: groupInterval</para>
         /// </summary>
-        public DoubleValue GroupInterval { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RangeProperties>();
+        public DoubleValue GroupInterval
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13300,8 +15215,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Mapping Index Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DiscreteProperties>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13382,8 +15300,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Items Created Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupItems>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13459,32 +15380,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field</para>
         /// <para>Represents the following attribute in the schema: fld</para>
         /// </summary>
-        public Int32Value Field { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Field
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Item Index</para>
         /// <para>Represents the following attribute in the schema: item</para>
         /// </summary>
-        public UInt32Value Item { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Item
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLAP Hierarchy Index</para>
         /// <para>Represents the following attribute in the schema: hier</para>
         /// </summary>
-        public Int32Value Hierarchy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Hierarchy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hierarchy Unique Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hierarchy Display Name</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageField>();
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13582,8 +15522,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pivot Filter Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotAreaReferences>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13656,104 +15599,171 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Index</para>
         /// <para>Represents the following attribute in the schema: field</para>
         /// </summary>
-        public UInt32Value Field { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Field
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Item Index Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Selected</para>
         /// <para>Represents the following attribute in the schema: selected</para>
         /// </summary>
-        public BooleanValue Selected { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Selected
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Positional Reference</para>
         /// <para>Represents the following attribute in the schema: byPosition</para>
         /// </summary>
-        public BooleanValue ByPosition { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ByPosition
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Reference</para>
         /// <para>Represents the following attribute in the schema: relative</para>
         /// </summary>
-        public BooleanValue Relative { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Relative
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Default Filter</para>
         /// <para>Represents the following attribute in the schema: defaultSubtotal</para>
         /// </summary>
-        public BooleanValue DefaultSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DefaultSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Sum Filter</para>
         /// <para>Represents the following attribute in the schema: sumSubtotal</para>
         /// </summary>
-        public BooleanValue SumSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SumSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include CountA Filter</para>
         /// <para>Represents the following attribute in the schema: countASubtotal</para>
         /// </summary>
-        public BooleanValue CountASubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CountASubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Average Filter</para>
         /// <para>Represents the following attribute in the schema: avgSubtotal</para>
         /// </summary>
-        public BooleanValue AverageSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AverageSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Maximum Filter</para>
         /// <para>Represents the following attribute in the schema: maxSubtotal</para>
         /// </summary>
-        public BooleanValue MaxSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MaxSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Minimum Filter</para>
         /// <para>Represents the following attribute in the schema: minSubtotal</para>
         /// </summary>
-        public BooleanValue MinSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MinSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Product Filter</para>
         /// <para>Represents the following attribute in the schema: productSubtotal</para>
         /// </summary>
-        public BooleanValue ApplyProductInSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyProductInSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Count Subtotal</para>
         /// <para>Represents the following attribute in the schema: countSubtotal</para>
         /// </summary>
-        public BooleanValue CountSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CountSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include StdDev Filter</para>
         /// <para>Represents the following attribute in the schema: stdDevSubtotal</para>
         /// </summary>
-        public BooleanValue ApplyStandardDeviationInSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyStandardDeviationInSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include StdDevP Filter</para>
         /// <para>Represents the following attribute in the schema: stdDevPSubtotal</para>
         /// </summary>
-        public BooleanValue ApplyStandardDeviationPInSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyStandardDeviationPInSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Var Filter</para>
         /// <para>Represents the following attribute in the schema: varSubtotal</para>
         /// </summary>
-        public BooleanValue ApplyVarianceInSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyVarianceInSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include VarP Filter</para>
         /// <para>Represents the following attribute in the schema: varPSubtotal</para>
         /// </summary>
-        public BooleanValue ApplyVariancePInSubtotal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotAreaReference>();
+        public BooleanValue ApplyVariancePInSubtotal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13841,8 +15851,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Column Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QueryTableFields>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13913,8 +15926,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Deleted Fields Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QueryTableDeletedFields>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13954,8 +15970,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Deleted Fields Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DeletedField>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14028,44 +16047,71 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Bound Column</para>
         /// <para>Represents the following attribute in the schema: dataBound</para>
         /// </summary>
-        public BooleanValue DataBound { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DataBound
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Row Numbers</para>
         /// <para>Represents the following attribute in the schema: rowNumbers</para>
         /// </summary>
-        public BooleanValue RowNumbers { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RowNumbers
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill This Formula On Refresh</para>
         /// <para>Represents the following attribute in the schema: fillFormulas</para>
         /// </summary>
-        public BooleanValue FillFormulas { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FillFormulas
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipped Column</para>
         /// <para>Represents the following attribute in the schema: clipped</para>
         /// </summary>
-        public BooleanValue Clipped { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Clipped
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Column Id</para>
         /// <para>Represents the following attribute in the schema: tableColumnId</para>
         /// </summary>
-        public UInt32Value TableColumnId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QueryTableField>();
+        public UInt32Value TableColumnId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14167,8 +16213,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharedStringItem>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
@@ -14232,8 +16276,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InlineString>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
@@ -14296,8 +16338,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public CommentText(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentText>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -14394,8 +16434,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bold>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bold>(deep);
     }
@@ -14415,8 +16453,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Italic() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Italic>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Italic>(deep);
@@ -14438,8 +16474,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Strike>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Strike>(deep);
     }
@@ -14459,8 +16493,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Condense() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Condense>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Condense>(deep);
@@ -14482,8 +16514,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Extend>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Extend>(deep);
     }
@@ -14504,8 +16534,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Outline>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Outline>(deep);
     }
@@ -14525,8 +16553,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Shadow() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shadow>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shadow>(deep);
@@ -14550,7 +16576,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14580,8 +16610,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Underline Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.UnderlineValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.UnderlineValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Underline>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.UnderlineValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.UnderlineValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14614,8 +16647,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentRunValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentRunValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalTextAlignment>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentRunValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentRunValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14651,8 +16687,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontSize>();
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14690,8 +16729,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Color>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true) { Application = ApplicationType.Excel },
             new AttributeValueRangeConstraint(1 /*:indexed*/, true, double.NegativeInfinity, true, 255, true) { Application = ApplicationType.Excel },
@@ -14720,8 +16757,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabColor>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeMutualExclusive(0, 1, 2, 3) /*:auto, :indexed, :rgb, :theme*/ ,
             new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true)
@@ -14749,8 +16784,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ForegroundColor>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true)
         };
@@ -14776,8 +16809,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public BackgroundColor() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundColor>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true)
@@ -14807,31 +16838,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Automatic</para>
         /// <para>Represents the following attribute in the schema: auto</para>
         /// </summary>
-        public BooleanValue Auto { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Auto
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: indexed</para>
         /// </summary>
-        public UInt32Value Indexed { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Indexed
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alpha Red Green Blue Color Value</para>
         /// <para>Represents the following attribute in the schema: rgb</para>
         /// </summary>
-        public HexBinaryValue Rgb { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Rgb
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Theme Color</para>
         /// <para>Represents the following attribute in the schema: theme</para>
         /// </summary>
-        public UInt32Value Theme { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Theme
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Tint</para>
         /// <para>Represents the following attribute in the schema: tint</para>
         /// </summary>
-        public DoubleValue Tint { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Tint
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14868,8 +16919,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>String Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunFont>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14907,8 +16961,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontFamily>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 5, true) { Application = ApplicationType.Excel }
         };
@@ -14934,8 +16986,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public RunPropertyCharSet() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunPropertyCharSet>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 255, true)
@@ -14965,7 +17015,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14998,8 +17052,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Font Scheme</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FontSchemeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FontSchemeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontScheme>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FontSchemeValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FontSchemeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15090,8 +17147,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0, 1),
@@ -15165,8 +17220,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Run(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Run>();
 
         /// <summary>
         /// <para>Run Properties.</para>
@@ -15257,14 +17310,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Base Text Start Index</para>
         /// <para>Represents the following attribute in the schema: sb</para>
         /// </summary>
-        public UInt32Value BaseTextStartIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value BaseTextStartIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Base Text End Index</para>
         /// <para>Represents the following attribute in the schema: eb</para>
         /// </summary>
-        public UInt32Value EndingBaseIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PhoneticRun>();
+        public UInt32Value EndingBaseIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15330,20 +17390,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Font Id</para>
         /// <para>Represents the following attribute in the schema: fontId</para>
         /// </summary>
-        public UInt32Value FontId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FontId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Character Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alignment</para>
         /// <para>Represents the following attribute in the schema: alignment</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PhoneticProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15422,25 +17493,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>GUID</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        public StringValue Guid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Guid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Date Time</para>
         /// <para>Represents the following attribute in the schema: dateTime</para>
         /// </summary>
-        public DateTimeValue DateTime { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue DateTime
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Last Sheet Id</para>
         /// <para>Represents the following attribute in the schema: maxSheetId</para>
         /// </summary>
-        public UInt32Value MaxSheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MaxSheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User Name</para>
         /// <para>Represents the following attribute in the schema: userName</para>
         /// </summary>
-        public StringValue UserName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UserName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship ID</para>
@@ -15449,20 +17536,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Revision Id</para>
         /// <para>Represents the following attribute in the schema: minRId</para>
         /// </summary>
-        public UInt32Value MinRevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MinRevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Max Revision Id</para>
         /// <para>Represents the following attribute in the schema: maxRId</para>
         /// </summary>
-        public UInt32Value MaxRevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Header>();
+        public UInt32Value MaxRevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15608,50 +17706,81 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Revision Id</para>
         /// <para>Represents the following attribute in the schema: rId</para>
         /// </summary>
-        public UInt32Value RevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision From Rejection</para>
         /// <para>Represents the following attribute in the schema: ua</para>
         /// </summary>
-        public BooleanValue Ua { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ua
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Undo Rejected</para>
         /// <para>Represents the following attribute in the schema: ra</para>
         /// </summary>
-        public BooleanValue Ra { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ra
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>End Of List</para>
         /// <para>Represents the following attribute in the schema: eol</para>
         /// </summary>
-        public BooleanValue EndOfList { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EndOfList
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User Action</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RowColumnActionValues> Action { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RowColumnActionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RowColumnActionValues> Action
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RowColumnActionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Edge Deleted</para>
         /// <para>Represents the following attribute in the schema: edge</para>
         /// </summary>
-        public BooleanValue Edge { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionRowColumn>();
+        public BooleanValue Edge
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15753,44 +17882,71 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Revision Id</para>
         /// <para>Represents the following attribute in the schema: rId</para>
         /// </summary>
-        public UInt32Value RevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision From Rejection</para>
         /// <para>Represents the following attribute in the schema: ua</para>
         /// </summary>
-        public BooleanValue Ua { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ua
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Undo Rejected</para>
         /// <para>Represents the following attribute in the schema: ra</para>
         /// </summary>
-        public BooleanValue Ra { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ra
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Source</para>
         /// <para>Represents the following attribute in the schema: source</para>
         /// </summary>
-        public StringValue Source { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Destination</para>
         /// <para>Represents the following attribute in the schema: destination</para>
         /// </summary>
-        public StringValue Destination { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Destination
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Source Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sourceSheetId</para>
         /// </summary>
-        public UInt32Value SourceSheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionMove>();
+        public UInt32Value SourceSheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15857,14 +18013,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>GUID</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        public StringValue Guid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Guid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User Action</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues> Action { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionCustomView>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues> Action
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15936,38 +18099,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Revision Id</para>
         /// <para>Represents the following attribute in the schema: rId</para>
         /// </summary>
-        public UInt32Value RevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision From Rejection</para>
         /// <para>Represents the following attribute in the schema: ua</para>
         /// </summary>
-        public BooleanValue Ua { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ua
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Undo Rejected</para>
         /// <para>Represents the following attribute in the schema: ra</para>
         /// </summary>
-        public BooleanValue Ra { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ra
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Sheet Name</para>
         /// <para>Represents the following attribute in the schema: oldName</para>
         /// </summary>
-        public StringValue OldName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OldName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>New Sheet Name</para>
         /// <para>Represents the following attribute in the schema: newName</para>
         /// </summary>
-        public StringValue NewName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionSheetName>();
+        public StringValue NewName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16043,38 +18229,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Revision Id</para>
         /// <para>Represents the following attribute in the schema: rId</para>
         /// </summary>
-        public UInt32Value RevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision From Rejection</para>
         /// <para>Represents the following attribute in the schema: ua</para>
         /// </summary>
-        public BooleanValue Ua { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ua
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Undo Rejected</para>
         /// <para>Represents the following attribute in the schema: ra</para>
         /// </summary>
-        public BooleanValue Ra { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ra
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Position</para>
         /// <para>Represents the following attribute in the schema: sheetPosition</para>
         /// </summary>
-        public UInt32Value SheetPosition { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionInsertSheet>();
+        public UInt32Value SheetPosition
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16170,86 +18379,141 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Revision Id</para>
         /// <para>Represents the following attribute in the schema: rId</para>
         /// </summary>
-        public UInt32Value RevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision From Rejection</para>
         /// <para>Represents the following attribute in the schema: ua</para>
         /// </summary>
-        public BooleanValue Ua { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ua
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Undo Rejected</para>
         /// <para>Represents the following attribute in the schema: ra</para>
         /// </summary>
-        public BooleanValue Ra { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ra
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Formatting</para>
         /// <para>Represents the following attribute in the schema: odxf</para>
         /// </summary>
-        public BooleanValue OldFormatting { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OldFormatting
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Row Column Formatting Change</para>
         /// <para>Represents the following attribute in the schema: xfDxf</para>
         /// </summary>
-        public BooleanValue RowColumnFormattingAffected { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RowColumnFormattingAffected
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Style Revision</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        public BooleanValue StyleRevision { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue StyleRevision
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Formatting</para>
         /// <para>Represents the following attribute in the schema: dxf</para>
         /// </summary>
-        public BooleanValue Format { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Format
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number Format Id</para>
         /// <para>Represents the following attribute in the schema: numFmtId</para>
         /// </summary>
-        public UInt32Value NumberFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NumberFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Quote Prefix</para>
         /// <para>Represents the following attribute in the schema: quotePrefix</para>
         /// </summary>
-        public BooleanValue QuotePrefix { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue QuotePrefix
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Quote Prefix</para>
         /// <para>Represents the following attribute in the schema: oldQuotePrefix</para>
         /// </summary>
-        public BooleanValue OldQuotePrefix { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OldQuotePrefix
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Phonetic Text</para>
         /// <para>Represents the following attribute in the schema: ph</para>
         /// </summary>
-        public BooleanValue HasPhoneticText { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HasPhoneticText
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Phonetic Text</para>
         /// <para>Represents the following attribute in the schema: oldPh</para>
         /// </summary>
-        public BooleanValue OldPhoneticText { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OldPhoneticText
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>End of List  Formula Update</para>
         /// <para>Represents the following attribute in the schema: endOfListFormulaUpdate</para>
         /// </summary>
-        public BooleanValue EndOfListFormulaUpdate { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionCellChange>();
+        public BooleanValue EndOfListFormulaUpdate
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16416,38 +18680,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Row or Column Formatting Change</para>
         /// <para>Represents the following attribute in the schema: xfDxf</para>
         /// </summary>
-        public BooleanValue RowOrColumnAffected { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RowOrColumnAffected
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Style</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        public BooleanValue StyleAffected { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue StyleAffected
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sequence Of References</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        public ListValue<StringValue> SequenceOfReferences { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> SequenceOfReferences
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Start index</para>
         /// <para>Represents the following attribute in the schema: start</para>
         /// </summary>
-        public UInt32Value Start { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Start
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Length</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-        public UInt32Value Length { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionFormat>();
+        public UInt32Value Length
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16531,56 +18818,91 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Format Id</para>
         /// <para>Represents the following attribute in the schema: autoFormatId</para>
         /// </summary>
-        public UInt32Value AutoFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value AutoFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Number Formats</para>
         /// <para>Represents the following attribute in the schema: applyNumberFormats</para>
         /// </summary>
-        public BooleanValue ApplyNumberFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyNumberFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Border Formats</para>
         /// <para>Represents the following attribute in the schema: applyBorderFormats</para>
         /// </summary>
-        public BooleanValue ApplyBorderFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyBorderFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Font Formats</para>
         /// <para>Represents the following attribute in the schema: applyFontFormats</para>
         /// </summary>
-        public BooleanValue ApplyFontFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyFontFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Pattern Formats</para>
         /// <para>Represents the following attribute in the schema: applyPatternFormats</para>
         /// </summary>
-        public BooleanValue ApplyPatternFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyPatternFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Alignment Formats</para>
         /// <para>Represents the following attribute in the schema: applyAlignmentFormats</para>
         /// </summary>
-        public BooleanValue ApplyAlignmentFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyAlignmentFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Width / Height Formats</para>
         /// <para>Represents the following attribute in the schema: applyWidthHeightFormats</para>
         /// </summary>
-        public BooleanValue ApplyWidthHeightFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyWidthHeightFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionAutoFormat>();
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16669,146 +18991,241 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Revision Id</para>
         /// <para>Represents the following attribute in the schema: rId</para>
         /// </summary>
-        public UInt32Value RevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision From Rejection</para>
         /// <para>Represents the following attribute in the schema: ua</para>
         /// </summary>
-        public BooleanValue Ua { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ua
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Undo Rejected</para>
         /// <para>Represents the following attribute in the schema: ra</para>
         /// </summary>
-        public BooleanValue Ra { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ra
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Local Name Sheet Id</para>
         /// <para>Represents the following attribute in the schema: localSheetId</para>
         /// </summary>
-        public UInt32Value LocalSheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value LocalSheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom View</para>
         /// <para>Represents the following attribute in the schema: customView</para>
         /// </summary>
-        public BooleanValue CustomView { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CustomView
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Function</para>
         /// <para>Represents the following attribute in the schema: function</para>
         /// </summary>
-        public BooleanValue Function { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Function
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Function</para>
         /// <para>Represents the following attribute in the schema: oldFunction</para>
         /// </summary>
-        public BooleanValue OldFunction { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OldFunction
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Function Group Id</para>
         /// <para>Represents the following attribute in the schema: functionGroupId</para>
         /// </summary>
-        public ByteValue FunctionGroupId { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue FunctionGroupId
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Function Group Id</para>
         /// <para>Represents the following attribute in the schema: oldFunctionGroupId</para>
         /// </summary>
-        public ByteValue OldFunctionGroupId { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue OldFunctionGroupId
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shortcut Key</para>
         /// <para>Represents the following attribute in the schema: shortcutKey</para>
         /// </summary>
-        public ByteValue ShortcutKey { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue ShortcutKey
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Short Cut Key</para>
         /// <para>Represents the following attribute in the schema: oldShortcutKey</para>
         /// </summary>
-        public ByteValue OldShortcutKey { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue OldShortcutKey
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Named Range Hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Hidden</para>
         /// <para>Represents the following attribute in the schema: oldHidden</para>
         /// </summary>
-        public BooleanValue OldHidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OldHidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>New Custom Menu</para>
         /// <para>Represents the following attribute in the schema: customMenu</para>
         /// </summary>
-        public StringValue CustomMenu { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CustomMenu
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Custom Menu Text</para>
         /// <para>Represents the following attribute in the schema: oldCustomMenu</para>
         /// </summary>
-        public StringValue OldCustomMenu { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OldCustomMenu
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Description</para>
         /// <para>Represents the following attribute in the schema: oldDescription</para>
         /// </summary>
-        public StringValue OldDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OldDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>New Help Topic</para>
         /// <para>Represents the following attribute in the schema: help</para>
         /// </summary>
-        public StringValue Help { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Help
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Help Topic</para>
         /// <para>Represents the following attribute in the schema: oldHelp</para>
         /// </summary>
-        public StringValue OldHelp { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OldHelp
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Status Bar</para>
         /// <para>Represents the following attribute in the schema: statusBar</para>
         /// </summary>
-        public StringValue StatusBar { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue StatusBar
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Status Bar</para>
         /// <para>Represents the following attribute in the schema: oldStatusBar</para>
         /// </summary>
-        public StringValue OldStatusBar { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OldStatusBar
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Name Comment</para>
         /// <para>Represents the following attribute in the schema: comment</para>
         /// </summary>
-        public StringValue Comment { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Comment
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Name Comment</para>
         /// <para>Represents the following attribute in the schema: oldComment</para>
         /// </summary>
-        public StringValue OldComment { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionDefinedName>();
+        public StringValue OldComment
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16938,68 +19355,111 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cell</para>
         /// <para>Represents the following attribute in the schema: cell</para>
         /// </summary>
-        public StringValue Cell { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Cell
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>GUID</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        public StringValue Guid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Guid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User Action</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues> Action { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues> Action
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Always Show Comment</para>
         /// <para>Represents the following attribute in the schema: alwaysShow</para>
         /// </summary>
-        public BooleanValue AlwaysShow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AlwaysShow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Comment</para>
         /// <para>Represents the following attribute in the schema: old</para>
         /// </summary>
-        public BooleanValue Old { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Old
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Comment In Hidden Row</para>
         /// <para>Represents the following attribute in the schema: hiddenRow</para>
         /// </summary>
-        public BooleanValue HiddenRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HiddenRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden Column</para>
         /// <para>Represents the following attribute in the schema: hiddenColumn</para>
         /// </summary>
-        public BooleanValue HiddenColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HiddenColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Author</para>
         /// <para>Represents the following attribute in the schema: author</para>
         /// </summary>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Original Comment Length</para>
         /// <para>Represents the following attribute in the schema: oldLength</para>
         /// </summary>
-        public UInt32Value OldLength { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value OldLength
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>New Comment Length</para>
         /// <para>Represents the following attribute in the schema: newLength</para>
         /// </summary>
-        public UInt32Value NewLength { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionComment>();
+        public UInt32Value NewLength
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17061,20 +19521,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>QueryTable Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Id</para>
         /// <para>Represents the following attribute in the schema: fieldId</para>
         /// </summary>
-        public UInt32Value FieldId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionQueryTable>();
+        public UInt32Value FieldId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17118,26 +19589,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Revision Id</para>
         /// <para>Represents the following attribute in the schema: rId</para>
         /// </summary>
-        public UInt32Value RevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision From Rejection</para>
         /// <para>Represents the following attribute in the schema: ua</para>
         /// </summary>
-        public BooleanValue Ua { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ua
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Undo Rejected</para>
         /// <para>Represents the following attribute in the schema: ra</para>
         /// </summary>
-        public BooleanValue Ra { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Ra
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionConflict>();
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17213,8 +19699,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetIdMap>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17285,8 +19774,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reviewed Revisions Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ReviewedList>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17326,8 +19818,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>revision Id</para>
         /// <para>Represents the following attribute in the schema: rId</para>
         /// </summary>
-        public UInt32Value RevisionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Reviewed>();
+        public UInt32Value RevisionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17369,68 +19864,111 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: index</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Expression</para>
         /// <para>Represents the following attribute in the schema: exp</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormulaExpressionValues> Expression { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormulaExpressionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormulaExpressionValues> Expression
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormulaExpressionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference 3D</para>
         /// <para>Represents the following attribute in the schema: ref3D</para>
         /// </summary>
-        public BooleanValue Reference3D { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Reference3D
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Array Entered</para>
         /// <para>Represents the following attribute in the schema: array</para>
         /// </summary>
-        public BooleanValue Array { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Array
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value Needed</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Defined Name Formula</para>
         /// <para>Represents the following attribute in the schema: nf</para>
         /// </summary>
-        public BooleanValue DefinedNameFormula { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DefinedNameFormula
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cross Sheet Move</para>
         /// <para>Represents the following attribute in the schema: cs</para>
         /// </summary>
-        public BooleanValue CrossSheetMove { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CrossSheetMove
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Range</para>
         /// <para>Represents the following attribute in the schema: dr</para>
         /// </summary>
-        public StringValue DeletedRange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DeletedRange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Defined Name</para>
         /// <para>Represents the following attribute in the schema: dn</para>
         /// </summary>
-        public StringValue DefinedName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DefinedName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cell Reference</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public StringValue CellReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CellReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Undo>();
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17520,8 +20058,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OldCell>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new IndexReferenceConstraint(3 /*:cm*/, "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), "DocumentFormat.OpenXml.Spreadsheet.CellMetadata", 0),
             new IndexReferenceConstraint(1 /*:s*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyle), "DocumentFormat.OpenXml.Spreadsheet.CellStyle", 0),
@@ -17592,8 +20128,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Cell(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Cell>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(3 /*:cm*/, true, double.NegativeInfinity, true, 2147483647, true),
@@ -17675,37 +20209,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public StringValue CellReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CellReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Style Index</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        public UInt32Value StyleIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value StyleIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cell Data Type</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> DataType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> DataType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cell Metadata Index</para>
         /// <para>Represents the following attribute in the schema: cm</para>
         /// </summary>
-        public UInt32Value CellMetaIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value CellMetaIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value Metadata Index</para>
         /// <para>Represents the following attribute in the schema: vm</para>
         /// </summary>
-        public UInt32Value ValueMetaIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ValueMetaIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Phonetic</para>
         /// <para>Represents the following attribute in the schema: ph</para>
         /// </summary>
-        public BooleanValue ShowPhonetic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowPhonetic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17829,38 +20387,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public StringValue CellReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CellReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Style Index</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        public UInt32Value StyleIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value StyleIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cell Data Type</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> DataType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> DataType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cell Metadata Index</para>
         /// <para>Represents the following attribute in the schema: cm</para>
         /// </summary>
-        public UInt32Value CellMetaIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value CellMetaIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value Metadata Index</para>
         /// <para>Represents the following attribute in the schema: vm</para>
         /// </summary>
-        public UInt32Value ValueMetaIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ValueMetaIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Phonetic</para>
         /// <para>Represents the following attribute in the schema: ph</para>
         /// </summary>
-        public BooleanValue ShowPhonetic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NewCell>();
+        public BooleanValue ShowPhonetic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18003,8 +20584,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OldDifferentialFormat>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
@@ -18074,8 +20653,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NewDifferentialFormat>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
@@ -18144,8 +20721,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public DifferentialFormat(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DifferentialFormat>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18333,8 +20908,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetId>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18389,73 +20967,121 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Formula Type</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellFormulaValues> FormulaType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellFormulaValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellFormulaValues> FormulaType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellFormulaValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Always Calculate Array</para>
         /// <para>Represents the following attribute in the schema: aca</para>
         /// </summary>
-        public BooleanValue AlwaysCalculateArray { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AlwaysCalculateArray
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Range of Cells</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Table 2-D</para>
         /// <para>Represents the following attribute in the schema: dt2D</para>
         /// </summary>
-        public BooleanValue DataTable2D { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DataTable2D
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Table Row</para>
         /// <para>Represents the following attribute in the schema: dtr</para>
         /// </summary>
-        public BooleanValue DataTableRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DataTableRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Input 1 Deleted</para>
         /// <para>Represents the following attribute in the schema: del1</para>
         /// </summary>
-        public BooleanValue Input1Deleted { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Input1Deleted
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Input 2 Deleted</para>
         /// <para>Represents the following attribute in the schema: del2</para>
         /// </summary>
-        public BooleanValue Input2Deleted { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Input2Deleted
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Table Cell 1</para>
         /// <para>Represents the following attribute in the schema: r1</para>
         /// </summary>
-        public StringValue R1 { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue R1
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Input Cell 2</para>
         /// <para>Represents the following attribute in the schema: r2</para>
         /// </summary>
-        public StringValue R2 { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue R2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculate Cell</para>
         /// <para>Represents the following attribute in the schema: ca</para>
         /// </summary>
-        public BooleanValue CalculateCell { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CalculateCell
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shared Group Index</para>
         /// <para>Represents the following attribute in the schema: si</para>
         /// </summary>
-        public UInt32Value SharedIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SharedIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Assigns Value to Name</para>
         /// <para>Represents the following attribute in the schema: bx</para>
         /// </summary>
-        public BooleanValue Bx { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Bx
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Content Contains Significant Whitespace</para>
@@ -18464,8 +21090,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellFormula>();
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18548,26 +21177,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>User Revisions GUID</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        public StringValue Guid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Guid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User Id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public Int32Value Id { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Id
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Date Time</para>
         /// <para>Represents the following attribute in the schema: dateTime</para>
         /// </summary>
-        public DateTimeValue DateTime { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UserInfo>();
+        public DateTimeValue DateTime
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18669,73 +21313,121 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Row Index</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public UInt32Value RowIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RowIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Spans</para>
         /// <para>Represents the following attribute in the schema: spans</para>
         /// </summary>
-        public ListValue<StringValue> Spans { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> Spans
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Style Index</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        public UInt32Value StyleIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value StyleIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Format</para>
         /// <para>Represents the following attribute in the schema: customFormat</para>
         /// </summary>
-        public BooleanValue CustomFormat { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CustomFormat
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Row Height</para>
         /// <para>Represents the following attribute in the schema: ht</para>
         /// </summary>
-        public DoubleValue Height { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Height
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Height</para>
         /// <para>Represents the following attribute in the schema: customHeight</para>
         /// </summary>
-        public BooleanValue CustomHeight { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CustomHeight
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Outline Level</para>
         /// <para>Represents the following attribute in the schema: outlineLevel</para>
         /// </summary>
-        public ByteValue OutlineLevel { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue OutlineLevel
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Collapsed</para>
         /// <para>Represents the following attribute in the schema: collapsed</para>
         /// </summary>
-        public BooleanValue Collapsed { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Collapsed
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Thick Top Border</para>
         /// <para>Represents the following attribute in the schema: thickTop</para>
         /// </summary>
-        public BooleanValue ThickTop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ThickTop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Thick Bottom</para>
         /// <para>Represents the following attribute in the schema: thickBot</para>
         /// </summary>
-        public BooleanValue ThickBot { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ThickBot
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Phonetic</para>
         /// <para>Represents the following attribute in the schema: ph</para>
         /// </summary>
-        public BooleanValue ShowPhonetic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowPhonetic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dyDescent, this property is only available in Office2010, Office2013, Office2016</para>
@@ -18744,8 +21436,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x14ac=http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac
         /// </remark>
-        public DoubleValue DyDescent { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Row>();
+        public DoubleValue DyDescent
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18809,62 +21504,101 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Minimum Column</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        public UInt32Value Min { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Min
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum Column</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        public UInt32Value Max { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Max
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Column Width</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        public DoubleValue Width { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Width
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Style</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        public UInt32Value Style { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Style
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden Columns</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Best Fit Column Width</para>
         /// <para>Represents the following attribute in the schema: bestFit</para>
         /// </summary>
-        public BooleanValue BestFit { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BestFit
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Width</para>
         /// <para>Represents the following attribute in the schema: customWidth</para>
         /// </summary>
-        public BooleanValue CustomWidth { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CustomWidth
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Phonetic Information</para>
         /// <para>Represents the following attribute in the schema: phonetic</para>
         /// </summary>
-        public BooleanValue Phonetic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Phonetic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Outline Level</para>
         /// <para>Represents the following attribute in the schema: outlineLevel</para>
         /// </summary>
-        public ByteValue OutlineLevel { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue OutlineLevel
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Collapsed</para>
         /// <para>Represents the following attribute in the schema: collapsed</para>
         /// </summary>
-        public BooleanValue Collapsed { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Column>();
+        public BooleanValue Collapsed
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18924,26 +21658,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Apply Styles in Outline</para>
         /// <para>Represents the following attribute in the schema: applyStyles</para>
         /// </summary>
-        public BooleanValue ApplyStyles { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyStyles
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Summary Below</para>
         /// <para>Represents the following attribute in the schema: summaryBelow</para>
         /// </summary>
-        public BooleanValue SummaryBelow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SummaryBelow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Summary Right</para>
         /// <para>Represents the following attribute in the schema: summaryRight</para>
         /// </summary>
-        public BooleanValue SummaryRight { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SummaryRight
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Outline Symbols</para>
         /// <para>Represents the following attribute in the schema: showOutlineSymbols</para>
         /// </summary>
-        public BooleanValue ShowOutlineSymbols { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OutlineProperties>();
+        public BooleanValue ShowOutlineSymbols
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18979,14 +21728,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Show Auto Page Breaks</para>
         /// <para>Represents the following attribute in the schema: autoPageBreaks</para>
         /// </summary>
-        public BooleanValue AutoPageBreaks { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoPageBreaks
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fit To Page</para>
         /// <para>Represents the following attribute in the schema: fitToPage</para>
         /// </summary>
-        public BooleanValue FitToPage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageSetupProperties>();
+        public BooleanValue FitToPage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19020,32 +21776,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Horizontal Split Position</para>
         /// <para>Represents the following attribute in the schema: xSplit</para>
         /// </summary>
-        public DoubleValue HorizontalSplit { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue HorizontalSplit
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Split Position</para>
         /// <para>Represents the following attribute in the schema: ySplit</para>
         /// </summary>
-        public DoubleValue VerticalSplit { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue VerticalSplit
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Left Visible Cell</para>
         /// <para>Represents the following attribute in the schema: topLeftCell</para>
         /// </summary>
-        public StringValue TopLeftCell { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TopLeftCell
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Active Pane</para>
         /// <para>Represents the following attribute in the schema: activePane</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues> ActivePane { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues> ActivePane
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Split State</para>
         /// <para>Represents the following attribute in the schema: state</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneStateValues> State { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneStateValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pane>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneStateValues> State
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneStateValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19082,26 +21857,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pane</para>
         /// <para>Represents the following attribute in the schema: pane</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues> Pane { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues> Pane
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Active Cell Location</para>
         /// <para>Represents the following attribute in the schema: activeCell</para>
         /// </summary>
-        public StringValue ActiveCell { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ActiveCell
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Active Cell Index</para>
         /// <para>Represents the following attribute in the schema: activeCellId</para>
         /// </summary>
-        public UInt32Value ActiveCellId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ActiveCellId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sequence of References</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        public ListValue<StringValue> SequenceOfReferences { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Selection>();
+        public ListValue<StringValue> SequenceOfReferences
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19174,97 +21964,161 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pane</para>
         /// <para>Represents the following attribute in the schema: pane</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues> Pane { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues> Pane
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Header</para>
         /// <para>Represents the following attribute in the schema: showHeader</para>
         /// </summary>
-        public BooleanValue ShowHeader { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowHeader
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public BooleanValue Label { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Label
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Selection</para>
         /// <para>Represents the following attribute in the schema: data</para>
         /// </summary>
-        public BooleanValue Data { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Data
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extendable</para>
         /// <para>Represents the following attribute in the schema: extendable</para>
         /// </summary>
-        public BooleanValue Extendable { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Extendable
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Selection Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Dimension</para>
         /// <para>Represents the following attribute in the schema: dimension</para>
         /// </summary>
-        public UInt32Value Dimension { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Dimension
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Start</para>
         /// <para>Represents the following attribute in the schema: start</para>
         /// </summary>
-        public UInt32Value Start { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Start
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        public UInt32Value Min { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Min
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        public UInt32Value Max { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Max
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Active Row</para>
         /// <para>Represents the following attribute in the schema: activeRow</para>
         /// </summary>
-        public UInt32Value ActiveRow { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ActiveRow
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Active Column</para>
         /// <para>Represents the following attribute in the schema: activeCol</para>
         /// </summary>
-        public UInt32Value ActiveColumn { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ActiveColumn
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Previous Row</para>
         /// <para>Represents the following attribute in the schema: previousRow</para>
         /// </summary>
-        public UInt32Value PreviousRow { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PreviousRow
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Previous Column Selection</para>
         /// <para>Represents the following attribute in the schema: previousCol</para>
         /// </summary>
-        public UInt32Value PreviousColumn { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PreviousColumn
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Click Count</para>
         /// <para>Represents the following attribute in the schema: click</para>
         /// </summary>
-        public UInt32Value Click { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Click
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship Id</para>
@@ -19273,8 +22127,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotSelection>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19354,32 +22211,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        public UInt32Value Min { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Min
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        public UInt32Value Max { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Max
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Manual Page Break</para>
         /// <para>Represents the following attribute in the schema: man</para>
         /// </summary>
-        public BooleanValue ManualPageBreak { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ManualPageBreak
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pivot-Created Page Break</para>
         /// <para>Represents the following attribute in the schema: pt</para>
         /// </summary>
-        public BooleanValue PivotTablePageBreak { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Break>();
+        public BooleanValue PivotTablePageBreak
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19424,19 +22300,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Named Range</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Name</para>
         /// <para>Represents the following attribute in the schema: sheet</para>
         /// </summary>
-        public StringValue Sheet { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Sheet
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>relationship Id</para>
@@ -19445,8 +22333,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataReference>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19507,8 +22398,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public RowBreaks(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowBreaks>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 1022, true),
@@ -19573,8 +22462,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public ColumnBreaks(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnBreaks>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 1023, true),
@@ -19643,13 +22530,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Break Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Manual Break Count</para>
         /// <para>Represents the following attribute in the schema: manualBreakCount</para>
         /// </summary>
-        public UInt32Value ManualBreakCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ManualBreakCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19680,38 +22575,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Left Page Margin</para>
         /// <para>Represents the following attribute in the schema: left</para>
         /// </summary>
-        public DoubleValue Left { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Left
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right Page Margin</para>
         /// <para>Represents the following attribute in the schema: right</para>
         /// </summary>
-        public DoubleValue Right { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Right
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Page Margin</para>
         /// <para>Represents the following attribute in the schema: top</para>
         /// </summary>
-        public DoubleValue Top { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Top
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Page Margin</para>
         /// <para>Represents the following attribute in the schema: bottom</para>
         /// </summary>
-        public DoubleValue Bottom { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Bottom
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Header Page Margin</para>
         /// <para>Represents the following attribute in the schema: header</para>
         /// </summary>
-        public DoubleValue Header { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Header
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Footer Page Margin</para>
         /// <para>Represents the following attribute in the schema: footer</para>
         /// </summary>
-        public DoubleValue Footer { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageMargins>();
+        public DoubleValue Footer
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19778,32 +22696,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Horizontal Centered</para>
         /// <para>Represents the following attribute in the schema: horizontalCentered</para>
         /// </summary>
-        public BooleanValue HorizontalCentered { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HorizontalCentered
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Centered</para>
         /// <para>Represents the following attribute in the schema: verticalCentered</para>
         /// </summary>
-        public BooleanValue VerticalCentered { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue VerticalCentered
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Headings</para>
         /// <para>Represents the following attribute in the schema: headings</para>
         /// </summary>
-        public BooleanValue Headings { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Headings
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Grid Lines</para>
         /// <para>Represents the following attribute in the schema: gridLines</para>
         /// </summary>
-        public BooleanValue GridLines { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue GridLines
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Grid Lines Set</para>
         /// <para>Represents the following attribute in the schema: gridLinesSet</para>
         /// </summary>
-        public BooleanValue GridLinesSet { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintOptions>();
+        public BooleanValue GridLinesSet
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19840,97 +22777,161 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Paper Size</para>
         /// <para>Represents the following attribute in the schema: paperSize</para>
         /// </summary>
-        public UInt32Value PaperSize { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PaperSize
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Scale</para>
         /// <para>Represents the following attribute in the schema: scale</para>
         /// </summary>
-        public UInt32Value Scale { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Scale
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>First Page Number</para>
         /// <para>Represents the following attribute in the schema: firstPageNumber</para>
         /// </summary>
-        public UInt32Value FirstPageNumber { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FirstPageNumber
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fit To Width</para>
         /// <para>Represents the following attribute in the schema: fitToWidth</para>
         /// </summary>
-        public UInt32Value FitToWidth { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FitToWidth
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fit To Height</para>
         /// <para>Represents the following attribute in the schema: fitToHeight</para>
         /// </summary>
-        public UInt32Value FitToHeight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FitToHeight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Page Order</para>
         /// <para>Represents the following attribute in the schema: pageOrder</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PageOrderValues> PageOrder { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PageOrderValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PageOrderValues> PageOrder
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PageOrderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues> Orientation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues> Orientation
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Use Printer Defaults</para>
         /// <para>Represents the following attribute in the schema: usePrinterDefaults</para>
         /// </summary>
-        public BooleanValue UsePrinterDefaults { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UsePrinterDefaults
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black And White</para>
         /// <para>Represents the following attribute in the schema: blackAndWhite</para>
         /// </summary>
-        public BooleanValue BlackAndWhite { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BlackAndWhite
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Draft</para>
         /// <para>Represents the following attribute in the schema: draft</para>
         /// </summary>
-        public BooleanValue Draft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Draft
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Cell Comments</para>
         /// <para>Represents the following attribute in the schema: cellComments</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellCommentsValues> CellComments { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellCommentsValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellCommentsValues> CellComments
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellCommentsValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Use First Page Number</para>
         /// <para>Represents the following attribute in the schema: useFirstPageNumber</para>
         /// </summary>
-        public BooleanValue UseFirstPageNumber { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UseFirstPageNumber
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Error Handling</para>
         /// <para>Represents the following attribute in the schema: errors</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PrintErrorValues> Errors { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PrintErrorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PrintErrorValues> Errors
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PrintErrorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal DPI</para>
         /// <para>Represents the following attribute in the schema: horizontalDpi</para>
         /// </summary>
-        public UInt32Value HorizontalDpi { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value HorizontalDpi
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical DPI</para>
         /// <para>Represents the following attribute in the schema: verticalDpi</para>
         /// </summary>
-        public UInt32Value VerticalDpi { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value VerticalDpi
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number Of Copies</para>
         /// <para>Represents the following attribute in the schema: copies</para>
         /// </summary>
-        public UInt32Value Copies { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Copies
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Id</para>
@@ -19939,8 +22940,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageSetup>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20040,26 +23044,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Different Odd Even Header Footer</para>
         /// <para>Represents the following attribute in the schema: differentOddEven</para>
         /// </summary>
-        public BooleanValue DifferentOddEven { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DifferentOddEven
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Different First Page</para>
         /// <para>Represents the following attribute in the schema: differentFirst</para>
         /// </summary>
-        public BooleanValue DifferentFirst { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DifferentFirst
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Scale Header and Footer With Document</para>
         /// <para>Represents the following attribute in the schema: scaleWithDoc</para>
         /// </summary>
-        public BooleanValue ScaleWithDoc { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ScaleWithDoc
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Align Margins</para>
         /// <para>Represents the following attribute in the schema: alignWithMargins</para>
         /// </summary>
-        public BooleanValue AlignWithMargins { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderFooter>();
+        public BooleanValue AlignWithMargins
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20220,8 +23239,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Cell or Range Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoFilter>();
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20302,80 +23324,131 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Differential Formatting Id</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        public UInt32Value FormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Priority</para>
         /// <para>Represents the following attribute in the schema: priority</para>
         /// </summary>
-        public Int32Value Priority { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Priority
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stop If True</para>
         /// <para>Represents the following attribute in the schema: stopIfTrue</para>
         /// </summary>
-        public BooleanValue StopIfTrue { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue StopIfTrue
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Above Or Below Average</para>
         /// <para>Represents the following attribute in the schema: aboveAverage</para>
         /// </summary>
-        public BooleanValue AboveAverage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AboveAverage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top 10 Percent</para>
         /// <para>Represents the following attribute in the schema: percent</para>
         /// </summary>
-        public BooleanValue Percent { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Percent
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom N</para>
         /// <para>Represents the following attribute in the schema: bottom</para>
         /// </summary>
-        public BooleanValue Bottom { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Bottom
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Operator</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues> Operator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues> Operator
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text</para>
         /// <para>Represents the following attribute in the schema: text</para>
         /// </summary>
-        public StringValue Text { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Text
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Time Period</para>
         /// <para>Represents the following attribute in the schema: timePeriod</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues> TimePeriod { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues> TimePeriod
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rank</para>
         /// <para>Represents the following attribute in the schema: rank</para>
         /// </summary>
-        public UInt32Value Rank { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Rank
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>StdDev</para>
         /// <para>Represents the following attribute in the schema: stdDev</para>
         /// </summary>
-        public Int32Value StdDev { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value StdDev
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Equal Average</para>
         /// <para>Represents the following attribute in the schema: equalAverage</para>
         /// </summary>
-        public BooleanValue EqualAverage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormattingRule>();
+        public BooleanValue EqualAverage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20445,7 +23518,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship Id</para>
@@ -20454,26 +23531,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Location</para>
         /// <para>Represents the following attribute in the schema: location</para>
         /// </summary>
-        public StringValue Location { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Location
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Tool Tip</para>
         /// <para>Represents the following attribute in the schema: tooltip</para>
         /// </summary>
-        public StringValue Tooltip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tooltip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Display String</para>
         /// <para>Represents the following attribute in the schema: display</para>
         /// </summary>
-        public StringValue Display { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hyperlink>();
+        public StringValue Display
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20553,20 +23645,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Greater Than Or Equal</para>
         /// <para>Represents the following attribute in the schema: gte</para>
         /// </summary>
-        public BooleanValue GreaterThanOrEqual { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormatValueObject>();
+        public BooleanValue GreaterThanOrEqual
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20655,38 +23758,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Scenario Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Scenario Locked</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        public BooleanValue Locked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Locked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden Scenario</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Changing Cell Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User Name</para>
         /// <para>Represents the following attribute in the schema: user</para>
         /// </summary>
-        public StringValue User { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue User
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Scenario Comment</para>
         /// <para>Represents the following attribute in the schema: comment</para>
         /// </summary>
-        public StringValue Comment { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Scenario>();
+        public StringValue Comment
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20744,50 +23870,81 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>password</para>
         /// <para>Represents the following attribute in the schema: password</para>
         /// </summary>
-        public HexBinaryValue Password { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Password
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>algorithmName</para>
         /// <para>Represents the following attribute in the schema: algorithmName</para>
         /// </summary>
-        public StringValue AlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hashValue</para>
         /// <para>Represents the following attribute in the schema: hashValue</para>
         /// </summary>
-        public Base64BinaryValue HashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue HashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>saltValue</para>
         /// <para>Represents the following attribute in the schema: saltValue</para>
         /// </summary>
-        public Base64BinaryValue SaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue SaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>spinCount</para>
         /// <para>Represents the following attribute in the schema: spinCount</para>
         /// </summary>
-        public UInt32Value SpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sqref</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        public ListValue<StringValue> SequenceOfReferences { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> SequenceOfReferences
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>securityDescriptor</para>
         /// <para>Represents the following attribute in the schema: securityDescriptor</para>
         /// </summary>
-        public StringValue SecurityDescriptor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ProtectedRange>();
+        public StringValue SecurityDescriptor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20844,8 +24001,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public StringValue CellReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellWatch>();
+        public StringValue CellReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20887,61 +24047,101 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Paper Size</para>
         /// <para>Represents the following attribute in the schema: paperSize</para>
         /// </summary>
-        public UInt32Value PaperSize { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PaperSize
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>First Page Number</para>
         /// <para>Represents the following attribute in the schema: firstPageNumber</para>
         /// </summary>
-        public UInt32Value FirstPageNumber { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FirstPageNumber
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues> Orientation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues> Orientation
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Use Printer Defaults</para>
         /// <para>Represents the following attribute in the schema: usePrinterDefaults</para>
         /// </summary>
-        public BooleanValue UsePrinterDefaults { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UsePrinterDefaults
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black And White</para>
         /// <para>Represents the following attribute in the schema: blackAndWhite</para>
         /// </summary>
-        public BooleanValue BlackAndWhite { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BlackAndWhite
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Draft</para>
         /// <para>Represents the following attribute in the schema: draft</para>
         /// </summary>
-        public BooleanValue Draft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Draft
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Use First Page Number</para>
         /// <para>Represents the following attribute in the schema: useFirstPageNumber</para>
         /// </summary>
-        public BooleanValue UseFirstPageNumber { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UseFirstPageNumber
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal DPI</para>
         /// <para>Represents the following attribute in the schema: horizontalDpi</para>
         /// </summary>
-        public UInt32Value HorizontalDpi { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value HorizontalDpi
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical DPI</para>
         /// <para>Represents the following attribute in the schema: verticalDpi</para>
         /// </summary>
-        public UInt32Value VerticalDpi { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value VerticalDpi
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number Of Copies</para>
         /// <para>Represents the following attribute in the schema: copies</para>
         /// </summary>
-        public UInt32Value Copies { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Copies
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Id</para>
@@ -20950,8 +24150,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSheetPageSetup>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21002,7 +24205,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Custom Property Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship Id</para>
@@ -21011,8 +24218,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomProperty>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21058,50 +24268,81 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Destination Bookmark</para>
         /// <para>Represents the following attribute in the schema: divId</para>
         /// </summary>
-        public StringValue DivId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DivId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Web Source Type</para>
         /// <para>Represents the following attribute in the schema: sourceType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.WebSourceValues> SourceType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.WebSourceValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.WebSourceValues> SourceType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.WebSourceValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Source Id</para>
         /// <para>Represents the following attribute in the schema: sourceRef</para>
         /// </summary>
-        public StringValue SourceRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SourceRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Source Object Name</para>
         /// <para>Represents the following attribute in the schema: sourceObject</para>
         /// </summary>
-        public StringValue SourceObject { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SourceObject
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Destination File Name</para>
         /// <para>Represents the following attribute in the schema: destinationFile</para>
         /// </summary>
-        public StringValue DestinationFile { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DestinationFile
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Automatically Publish</para>
         /// <para>Represents the following attribute in the schema: autoRepublish</para>
         /// </summary>
-        public BooleanValue AutoRepublish { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebPublishItem>();
+        public BooleanValue AutoRepublish
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21168,8 +24409,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TablePart>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21236,26 +24480,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Tab Selected</para>
         /// <para>Represents the following attribute in the schema: tabSelected</para>
         /// </summary>
-        public BooleanValue TabSelected { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TabSelected
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Window Zoom Scale</para>
         /// <para>Represents the following attribute in the schema: zoomScale</para>
         /// </summary>
-        public UInt32Value ZoomScale { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ZoomScale
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Workbook View Id</para>
         /// <para>Represents the following attribute in the schema: workbookViewId</para>
         /// </summary>
-        public UInt32Value WorkbookViewId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value WorkbookViewId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Zoom To Fit</para>
         /// <para>Represents the following attribute in the schema: zoomToFit</para>
         /// </summary>
-        public BooleanValue ZoomToFit { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSheetView>();
+        public BooleanValue ZoomToFit
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21356,26 +24615,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>GUID</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        public StringValue Guid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Guid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Scale</para>
         /// <para>Represents the following attribute in the schema: scale</para>
         /// </summary>
-        public UInt32Value Scale { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Scale
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Visible State</para>
         /// <para>Represents the following attribute in the schema: state</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues> State { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues> State
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Zoom To Fit</para>
         /// <para>Represents the following attribute in the schema: zoomToFit</para>
         /// </summary>
-        public BooleanValue ZoomToFit { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomChartsheetView>();
+        public BooleanValue ZoomToFit
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21469,32 +24743,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public StringValue CellReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CellReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Deleted</para>
         /// <para>Represents the following attribute in the schema: deleted</para>
         /// </summary>
-        public BooleanValue Deleted { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Deleted
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Undone</para>
         /// <para>Represents the following attribute in the schema: undone</para>
         /// </summary>
-        public BooleanValue Undone { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Undone
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number Format Id</para>
         /// <para>Represents the following attribute in the schema: numFmtId</para>
         /// </summary>
-        public UInt32Value NumberFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InputCells>();
+        public UInt32Value NumberFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21574,7 +24867,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Shape Id</para>
         /// <para>Represents the following attribute in the schema: shapeId</para>
         /// </summary>
-        public UInt32Value ShapeId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ShapeId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship Id</para>
@@ -21583,14 +24880,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Control Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Control>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21659,62 +24963,101 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sequence of References</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        public ListValue<StringValue> SequenceOfReferences { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> SequenceOfReferences
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Evaluation Error</para>
         /// <para>Represents the following attribute in the schema: evalError</para>
         /// </summary>
-        public BooleanValue EvalError { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EvalError
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Two Digit Text Year</para>
         /// <para>Represents the following attribute in the schema: twoDigitTextYear</para>
         /// </summary>
-        public BooleanValue TwoDigitTextYear { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TwoDigitTextYear
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number Stored As Text</para>
         /// <para>Represents the following attribute in the schema: numberStoredAsText</para>
         /// </summary>
-        public BooleanValue NumberStoredAsText { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NumberStoredAsText
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Formula</para>
         /// <para>Represents the following attribute in the schema: formula</para>
         /// </summary>
-        public BooleanValue Formula { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Formula
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Formula Range</para>
         /// <para>Represents the following attribute in the schema: formulaRange</para>
         /// </summary>
-        public BooleanValue FormulaRange { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FormulaRange
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unlocked Formula</para>
         /// <para>Represents the following attribute in the schema: unlockedFormula</para>
         /// </summary>
-        public BooleanValue UnlockedFormula { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UnlockedFormula
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Empty Cell Reference</para>
         /// <para>Represents the following attribute in the schema: emptyCellReference</para>
         /// </summary>
-        public BooleanValue EmptyCellReference { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EmptyCellReference
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>List Data Validation</para>
         /// <para>Represents the following attribute in the schema: listDataValidation</para>
         /// </summary>
-        public BooleanValue ListDataValidation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ListDataValidation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculated Column</para>
         /// <para>Represents the following attribute in the schema: calculatedColumn</para>
         /// </summary>
-        public BooleanValue CalculatedColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IgnoredError>();
+        public BooleanValue CalculatedColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21765,8 +25108,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MergeCell>();
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21837,80 +25183,131 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>errorStyle</para>
         /// <para>Represents the following attribute in the schema: errorStyle</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imeMode</para>
         /// <para>Represents the following attribute in the schema: imeMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>operator</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allowBlank</para>
         /// <para>Represents the following attribute in the schema: allowBlank</para>
         /// </summary>
-        public BooleanValue AllowBlank { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AllowBlank
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showDropDown</para>
         /// <para>Represents the following attribute in the schema: showDropDown</para>
         /// </summary>
-        public BooleanValue ShowDropDown { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowDropDown
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showInputMessage</para>
         /// <para>Represents the following attribute in the schema: showInputMessage</para>
         /// </summary>
-        public BooleanValue ShowInputMessage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowInputMessage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showErrorMessage</para>
         /// <para>Represents the following attribute in the schema: showErrorMessage</para>
         /// </summary>
-        public BooleanValue ShowErrorMessage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowErrorMessage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>errorTitle</para>
         /// <para>Represents the following attribute in the schema: errorTitle</para>
         /// </summary>
-        public StringValue ErrorTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ErrorTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>error</para>
         /// <para>Represents the following attribute in the schema: error</para>
         /// </summary>
-        public StringValue Error { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Error
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>promptTitle</para>
         /// <para>Represents the following attribute in the schema: promptTitle</para>
         /// </summary>
-        public StringValue PromptTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue PromptTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>prompt</para>
         /// <para>Represents the following attribute in the schema: prompt</para>
         /// </summary>
-        public StringValue Prompt { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Prompt
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sqref</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        public ListValue<StringValue> SequenceOfReferences { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataValidation>();
+        public ListValue<StringValue> SequenceOfReferences
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22051,116 +25448,191 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Window Protection</para>
         /// <para>Represents the following attribute in the schema: windowProtection</para>
         /// </summary>
-        public BooleanValue WindowProtection { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue WindowProtection
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Formulas</para>
         /// <para>Represents the following attribute in the schema: showFormulas</para>
         /// </summary>
-        public BooleanValue ShowFormulas { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowFormulas
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Grid Lines</para>
         /// <para>Represents the following attribute in the schema: showGridLines</para>
         /// </summary>
-        public BooleanValue ShowGridLines { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowGridLines
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Headers</para>
         /// <para>Represents the following attribute in the schema: showRowColHeaders</para>
         /// </summary>
-        public BooleanValue ShowRowColHeaders { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowRowColHeaders
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Zero Values</para>
         /// <para>Represents the following attribute in the schema: showZeros</para>
         /// </summary>
-        public BooleanValue ShowZeros { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowZeros
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right To Left</para>
         /// <para>Represents the following attribute in the schema: rightToLeft</para>
         /// </summary>
-        public BooleanValue RightToLeft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RightToLeft
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Tab Selected</para>
         /// <para>Represents the following attribute in the schema: tabSelected</para>
         /// </summary>
-        public BooleanValue TabSelected { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TabSelected
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Ruler</para>
         /// <para>Represents the following attribute in the schema: showRuler</para>
         /// </summary>
-        public BooleanValue ShowRuler { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowRuler
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Outline Symbols</para>
         /// <para>Represents the following attribute in the schema: showOutlineSymbols</para>
         /// </summary>
-        public BooleanValue ShowOutlineSymbols { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowOutlineSymbols
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Grid Color</para>
         /// <para>Represents the following attribute in the schema: defaultGridColor</para>
         /// </summary>
-        public BooleanValue DefaultGridColor { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DefaultGridColor
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show White Space</para>
         /// <para>Represents the following attribute in the schema: showWhiteSpace</para>
         /// </summary>
-        public BooleanValue ShowWhiteSpace { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowWhiteSpace
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>View Type</para>
         /// <para>Represents the following attribute in the schema: view</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues> View { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues> View
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Left Visible Cell</para>
         /// <para>Represents the following attribute in the schema: topLeftCell</para>
         /// </summary>
-        public StringValue TopLeftCell { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TopLeftCell
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Color Id</para>
         /// <para>Represents the following attribute in the schema: colorId</para>
         /// </summary>
-        public UInt32Value ColorId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ColorId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Zoom Scale</para>
         /// <para>Represents the following attribute in the schema: zoomScale</para>
         /// </summary>
-        public UInt32Value ZoomScale { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ZoomScale
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Zoom Scale Normal View</para>
         /// <para>Represents the following attribute in the schema: zoomScaleNormal</para>
         /// </summary>
-        public UInt32Value ZoomScaleNormal { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ZoomScaleNormal
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Zoom Scale Page Break Preview</para>
         /// <para>Represents the following attribute in the schema: zoomScaleSheetLayoutView</para>
         /// </summary>
-        public UInt32Value ZoomScaleSheetLayoutView { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ZoomScaleSheetLayoutView
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Zoom Scale Page Layout View</para>
         /// <para>Represents the following attribute in the schema: zoomScalePageLayoutView</para>
         /// </summary>
-        public UInt32Value ZoomScalePageLayoutView { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ZoomScalePageLayoutView
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Workbook View Index</para>
         /// <para>Represents the following attribute in the schema: workbookViewId</para>
         /// </summary>
-        public UInt32Value WorkbookViewId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetView>();
+        public UInt32Value WorkbookViewId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22296,122 +25768,201 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>GUID</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        public StringValue Guid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Guid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Scale</para>
         /// <para>Represents the following attribute in the schema: scale</para>
         /// </summary>
-        public UInt32Value Scale { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Scale
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Color Id</para>
         /// <para>Represents the following attribute in the schema: colorId</para>
         /// </summary>
-        public UInt32Value ColorId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ColorId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Page Breaks</para>
         /// <para>Represents the following attribute in the schema: showPageBreaks</para>
         /// </summary>
-        public BooleanValue ShowPageBreaks { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowPageBreaks
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Formulas</para>
         /// <para>Represents the following attribute in the schema: showFormulas</para>
         /// </summary>
-        public BooleanValue ShowFormulas { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowFormulas
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Grid Lines</para>
         /// <para>Represents the following attribute in the schema: showGridLines</para>
         /// </summary>
-        public BooleanValue ShowGridLines { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowGridLines
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Headers</para>
         /// <para>Represents the following attribute in the schema: showRowCol</para>
         /// </summary>
-        public BooleanValue ShowRowColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowRowColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Outline Symbols</para>
         /// <para>Represents the following attribute in the schema: outlineSymbols</para>
         /// </summary>
-        public BooleanValue OutlineSymbols { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OutlineSymbols
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Zero Values</para>
         /// <para>Represents the following attribute in the schema: zeroValues</para>
         /// </summary>
-        public BooleanValue ZeroValues { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ZeroValues
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fit To Page</para>
         /// <para>Represents the following attribute in the schema: fitToPage</para>
         /// </summary>
-        public BooleanValue FitToPage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FitToPage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Area Defined</para>
         /// <para>Represents the following attribute in the schema: printArea</para>
         /// </summary>
-        public BooleanValue PrintArea { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PrintArea
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Filtered List</para>
         /// <para>Represents the following attribute in the schema: filter</para>
         /// </summary>
-        public BooleanValue Filter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Filter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show AutoFitler Drop Down Controls</para>
         /// <para>Represents the following attribute in the schema: showAutoFilter</para>
         /// </summary>
-        public BooleanValue ShowAutoFilter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowAutoFilter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden Rows</para>
         /// <para>Represents the following attribute in the schema: hiddenRows</para>
         /// </summary>
-        public BooleanValue HiddenRows { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HiddenRows
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden Columns</para>
         /// <para>Represents the following attribute in the schema: hiddenColumns</para>
         /// </summary>
-        public BooleanValue HiddenColumns { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HiddenColumns
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Visible State</para>
         /// <para>Represents the following attribute in the schema: state</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues> State { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues> State
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Filter</para>
         /// <para>Represents the following attribute in the schema: filterUnique</para>
         /// </summary>
-        public BooleanValue FilterUnique { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FilterUnique
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>View Type</para>
         /// <para>Represents the following attribute in the schema: view</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues> View { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues> View
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Ruler</para>
         /// <para>Represents the following attribute in the schema: showRuler</para>
         /// </summary>
-        public BooleanValue ShowRuler { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowRuler
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Left Visible Cell</para>
         /// <para>Represents the following attribute in the schema: topLeftCell</para>
         /// </summary>
-        public StringValue TopLeftCell { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomSheetView>();
+        public StringValue TopLeftCell
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22651,37 +26202,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLE ProgId</para>
         /// <para>Represents the following attribute in the schema: progId</para>
         /// </summary>
-        public StringValue ProgId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ProgId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data or View Aspect</para>
         /// <para>Represents the following attribute in the schema: dvAspect</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataViewAspectValues> DataOrViewAspect { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataViewAspectValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataViewAspectValues> DataOrViewAspect
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataViewAspectValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLE Link Moniker</para>
         /// <para>Represents the following attribute in the schema: link</para>
         /// </summary>
-        public StringValue Link { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Link
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLE Update</para>
         /// <para>Represents the following attribute in the schema: oleUpdate</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OleUpdateValues> OleUpdate { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.OleUpdateValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OleUpdateValues> OleUpdate
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.OleUpdateValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Load</para>
         /// <para>Represents the following attribute in the schema: autoLoad</para>
         /// </summary>
-        public BooleanValue AutoLoad { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Id</para>
         /// <para>Represents the following attribute in the schema: shapeId</para>
         /// </summary>
-        public UInt32Value ShapeId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ShapeId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship Id</para>
@@ -22690,8 +26265,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleObject>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22792,8 +26370,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Metadata Type Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MetadataTypes>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22870,8 +26451,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>MDX Metadata String Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MetadataStrings>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22948,8 +26532,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>MDX Metadata Record Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MdxMetadata>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23028,14 +26615,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Metadata Type Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Future Metadata Block Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FutureMetadata>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23115,8 +26709,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellMetadata>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
         };
@@ -23179,8 +26771,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public ValueMetadata(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValueMetadata>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
@@ -23248,7 +26838,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Metadata Block Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23278,170 +26872,281 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Metadata Type Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Supported Version</para>
         /// <para>Represents the following attribute in the schema: minSupportedVersion</para>
         /// </summary>
-        public UInt32Value MinSupportedVersion { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MinSupportedVersion
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Ghost Row</para>
         /// <para>Represents the following attribute in the schema: ghostRow</para>
         /// </summary>
-        public BooleanValue GhostRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue GhostRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Ghost Column</para>
         /// <para>Represents the following attribute in the schema: ghostCol</para>
         /// </summary>
-        public BooleanValue GhostColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue GhostColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Edit</para>
         /// <para>Represents the following attribute in the schema: edit</para>
         /// </summary>
-        public BooleanValue Edit { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Edit
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Cell Value Delete</para>
         /// <para>Represents the following attribute in the schema: delete</para>
         /// </summary>
-        public BooleanValue Delete { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Delete
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Copy</para>
         /// <para>Represents the following attribute in the schema: copy</para>
         /// </summary>
-        public BooleanValue Copy { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Copy
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Paste All</para>
         /// <para>Represents the following attribute in the schema: pasteAll</para>
         /// </summary>
-        public BooleanValue PasteAll { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PasteAll
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Paste Formulas</para>
         /// <para>Represents the following attribute in the schema: pasteFormulas</para>
         /// </summary>
-        public BooleanValue PasteFormulas { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PasteFormulas
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Paste Special Values</para>
         /// <para>Represents the following attribute in the schema: pasteValues</para>
         /// </summary>
-        public BooleanValue PasteValues { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PasteValues
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Paste Formats</para>
         /// <para>Represents the following attribute in the schema: pasteFormats</para>
         /// </summary>
-        public BooleanValue PasteFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PasteFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Paste Comments</para>
         /// <para>Represents the following attribute in the schema: pasteComments</para>
         /// </summary>
-        public BooleanValue PasteComments { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PasteComments
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Paste Data Validation</para>
         /// <para>Represents the following attribute in the schema: pasteDataValidation</para>
         /// </summary>
-        public BooleanValue PasteDataValidation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PasteDataValidation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Paste Borders</para>
         /// <para>Represents the following attribute in the schema: pasteBorders</para>
         /// </summary>
-        public BooleanValue PasteBorders { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PasteBorders
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Paste Column Widths</para>
         /// <para>Represents the following attribute in the schema: pasteColWidths</para>
         /// </summary>
-        public BooleanValue PasteColWidths { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PasteColWidths
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Paste Number Formats</para>
         /// <para>Represents the following attribute in the schema: pasteNumberFormats</para>
         /// </summary>
-        public BooleanValue PasteNumberFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PasteNumberFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Merge</para>
         /// <para>Represents the following attribute in the schema: merge</para>
         /// </summary>
-        public BooleanValue Merge { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Merge
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Meatadata Split First</para>
         /// <para>Represents the following attribute in the schema: splitFirst</para>
         /// </summary>
-        public BooleanValue SplitFirst { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SplitFirst
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Split All</para>
         /// <para>Represents the following attribute in the schema: splitAll</para>
         /// </summary>
-        public BooleanValue SplitAll { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SplitAll
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Insert Delete</para>
         /// <para>Represents the following attribute in the schema: rowColShift</para>
         /// </summary>
-        public BooleanValue RowColumnShift { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RowColumnShift
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Clear All</para>
         /// <para>Represents the following attribute in the schema: clearAll</para>
         /// </summary>
-        public BooleanValue ClearAll { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ClearAll
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Clear Formats</para>
         /// <para>Represents the following attribute in the schema: clearFormats</para>
         /// </summary>
-        public BooleanValue ClearFormats { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ClearFormats
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Clear Contents</para>
         /// <para>Represents the following attribute in the schema: clearContents</para>
         /// </summary>
-        public BooleanValue ClearContents { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ClearContents
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Clear Comments</para>
         /// <para>Represents the following attribute in the schema: clearComments</para>
         /// </summary>
-        public BooleanValue ClearComments { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ClearComments
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Formula Assignment</para>
         /// <para>Represents the following attribute in the schema: assign</para>
         /// </summary>
-        public BooleanValue Assign { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Assign
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Coercion</para>
         /// <para>Represents the following attribute in the schema: coerce</para>
         /// </summary>
-        public BooleanValue Coerce { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Coerce
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Adjust Metadata</para>
         /// <para>Represents the following attribute in the schema: adjust</para>
         /// </summary>
-        public BooleanValue Adjust { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Adjust
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cell Metadata</para>
         /// <para>Represents the following attribute in the schema: cellMeta</para>
         /// </summary>
-        public BooleanValue CellMeta { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MetadataType>();
+        public BooleanValue CellMeta
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23541,8 +27246,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MetadataBlock>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataRecord), 1, 0)
@@ -23574,14 +27277,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Metadata Record Type Index</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public UInt32Value TypeIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value TypeIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metadata Record Value Index</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MetadataRecord>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23654,8 +27364,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public FutureMetadataBlock(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FutureMetadataBlock>();
 
         /// <summary>
         /// <para>Future Feature Storage Area.</para>
@@ -23738,14 +27446,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Connection Name Index</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        public UInt32Value NameIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NameIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cube Function Tag</para>
         /// <para>Represents the following attribute in the schema: f</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxFunctionValues> CubeFunction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxFunctionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Mdx>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxFunctionValues> CubeFunction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxFunctionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23885,62 +27600,101 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Member Index Count</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public UInt32Value MemberIndexCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MemberIndexCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Server Formatting Culture Currency</para>
         /// <para>Represents the following attribute in the schema: ct</para>
         /// </summary>
-        public StringValue CultureCurrency { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CultureCurrency
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Server Formatting String Index</para>
         /// <para>Represents the following attribute in the schema: si</para>
         /// </summary>
-        public UInt32Value FormattingStringIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormattingStringIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Server Formatting Built-In Number Format Index</para>
         /// <para>Represents the following attribute in the schema: fi</para>
         /// </summary>
-        public UInt32Value FormatIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Server Formatting Background Color</para>
         /// <para>Represents the following attribute in the schema: bc</para>
         /// </summary>
-        public HexBinaryValue BackgroundColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue BackgroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Server Formatting Foreground Color</para>
         /// <para>Represents the following attribute in the schema: fc</para>
         /// </summary>
-        public HexBinaryValue ForegroundColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue ForegroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Server Formatting Italic Font</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public BooleanValue Italic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Italic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Server Formatting Underline Font</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public BooleanValue Underline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Underline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Server Formatting Strikethrough Font</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        public BooleanValue Strikethrough { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Strikethrough
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Server Formatting Bold Font</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public BooleanValue Bold { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MdxTuple>();
+        public BooleanValue Bold
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24035,20 +27789,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Set Definition Index</para>
         /// <para>Represents the following attribute in the schema: ns</para>
         /// </summary>
-        public UInt32Value SetDefinitionIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SetDefinitionIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sort By Member Index Count</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public UInt32Value MemberIndexCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MemberIndexCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Set Sort Order</para>
         /// <para>Represents the following attribute in the schema: o</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxSetOrderValues> SortingOrder { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxSetOrderValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MdxSet>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxSetOrderValues> SortingOrder
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxSetOrderValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24101,14 +27866,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Member Unique Name Index</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        public UInt32Value NameIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NameIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Property Name Index</para>
         /// <para>Represents the following attribute in the schema: np</para>
         /// </summary>
-        public UInt32Value PropertyNameIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MdxMemberProp>();
+        public UInt32Value PropertyNameIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24157,20 +27929,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Member Unique Name Index</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        public UInt32Value NameIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NameIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>KPI Index</para>
         /// <para>Represents the following attribute in the schema: np</para>
         /// </summary>
-        public UInt32Value KpiIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value KpiIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>KPI Property</para>
         /// <para>Represents the following attribute in the schema: p</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxKPIPropertyValues> KpiProperty { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxKPIPropertyValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MdxKpi>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxKPIPropertyValues> KpiProperty
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxKPIPropertyValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24223,14 +28006,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Index Value</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>String is a Set</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        public BooleanValue IsASet { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NameIndex>();
+        public BooleanValue IsASet
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24307,20 +28097,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table Id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public StringValue CellReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CellReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Connection ID</para>
         /// <para>Represents the following attribute in the schema: connectionId</para>
         /// </summary>
-        public UInt32Value ConnectionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SingleXmlCell>();
+        public UInt32Value ConnectionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24439,14 +28240,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table Field Id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unique Table Name</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<XmlCellProperties>();
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24559,20 +28367,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>XML Map Id</para>
         /// <para>Represents the following attribute in the schema: mapId</para>
         /// </summary>
-        public UInt32Value MapId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MapId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>XPath</para>
         /// <para>Represents the following attribute in the schema: xpath</para>
         /// </summary>
-        public StringValue XPath { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue XPath
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>XML Data Type</para>
         /// <para>Represents the following attribute in the schema: xmlDataType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues> XmlDataType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<XmlProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues> XmlDataType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24676,8 +28495,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pattern Type</para>
         /// <para>Represents the following attribute in the schema: patternType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PatternValues> PatternType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PatternValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PatternFill>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PatternValues> PatternType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PatternValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24775,38 +28597,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Gradient Fill Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GradientValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.GradientValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GradientValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.GradientValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Linear Gradient Degree</para>
         /// <para>Represents the following attribute in the schema: degree</para>
         /// </summary>
-        public DoubleValue Degree { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Degree
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Left Convergence</para>
         /// <para>Represents the following attribute in the schema: left</para>
         /// </summary>
-        public DoubleValue Left { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Left
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right Convergence</para>
         /// <para>Represents the following attribute in the schema: right</para>
         /// </summary>
-        public DoubleValue Right { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Right
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Gradient Convergence</para>
         /// <para>Represents the following attribute in the schema: top</para>
         /// </summary>
-        public DoubleValue Top { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Top
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Convergence</para>
         /// <para>Represents the following attribute in the schema: bottom</para>
         /// </summary>
-        public DoubleValue Bottom { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GradientFill>();
+        public DoubleValue Bottom
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24892,8 +28737,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Gradient Stop Position</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        public DoubleValue Position { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GradientStop>();
+        public DoubleValue Position
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -24955,14 +28803,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Number Format Id</para>
         /// <para>Represents the following attribute in the schema: numFmtId</para>
         /// </summary>
-        public UInt32Value NumberFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NumberFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number Format Code</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        public StringValue FormatCode { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingFormat>();
+        public StringValue FormatCode
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -25008,62 +28863,101 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Horizontal Alignment</para>
         /// <para>Represents the following attribute in the schema: horizontal</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.HorizontalAlignmentValues> Horizontal { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.HorizontalAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.HorizontalAlignmentValues> Horizontal
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.HorizontalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Alignment</para>
         /// <para>Represents the following attribute in the schema: vertical</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentValues> Vertical { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentValues> Vertical
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Rotation</para>
         /// <para>Represents the following attribute in the schema: textRotation</para>
         /// </summary>
-        public UInt32Value TextRotation { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value TextRotation
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Wrap Text</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
-        public BooleanValue WrapText { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue WrapText
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Indent</para>
         /// <para>Represents the following attribute in the schema: indent</para>
         /// </summary>
-        public UInt32Value Indent { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Indent
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Indent</para>
         /// <para>Represents the following attribute in the schema: relativeIndent</para>
         /// </summary>
-        public Int32Value RelativeIndent { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value RelativeIndent
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Justify Last Line</para>
         /// <para>Represents the following attribute in the schema: justifyLastLine</para>
         /// </summary>
-        public BooleanValue JustifyLastLine { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue JustifyLastLine
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shrink To Fit</para>
         /// <para>Represents the following attribute in the schema: shrinkToFit</para>
         /// </summary>
-        public BooleanValue ShrinkToFit { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShrinkToFit
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reading Order</para>
         /// <para>Represents the following attribute in the schema: readingOrder</para>
         /// </summary>
-        public UInt32Value ReadingOrder { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ReadingOrder
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mergeCell</para>
         /// <para>Represents the following attribute in the schema: mergeCell</para>
         /// </summary>
-        public StringValue MergeCell { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Alignment>();
+        public StringValue MergeCell
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -25113,14 +29007,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Cell Locked</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        public BooleanValue Locked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Locked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden Cell</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Protection>();
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -25208,8 +29109,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Font(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Font>();
 
         /// <summary>
         /// <para>Bold.</para>
@@ -25480,8 +29379,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Fill>();
-
         /// <summary>
         /// <para>Pattern.</para>
         /// <para>Represents the following element tag in the schema: x:patternFill.</para>
@@ -25587,20 +29484,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Diagonal Up</para>
         /// <para>Represents the following attribute in the schema: diagonalUp</para>
         /// </summary>
-        public BooleanValue DiagonalUp { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DiagonalUp
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagonal Down</para>
         /// <para>Represents the following attribute in the schema: diagonalDown</para>
         /// </summary>
-        public BooleanValue DiagonalDown { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DiagonalDown
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Outline</para>
         /// <para>Represents the following attribute in the schema: outline</para>
         /// </summary>
-        public BooleanValue Outline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Border>();
+        public BooleanValue Outline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -25794,8 +29702,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IndexedColors>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RgbColor), 1, 64)
@@ -25853,8 +29759,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public MruColors(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MruColors>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25918,26 +29822,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table Style Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pivot Style</para>
         /// <para>Represents the following attribute in the schema: pivot</para>
         /// </summary>
-        public BooleanValue Pivot { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Pivot
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table</para>
         /// <para>Represents the following attribute in the schema: table</para>
         /// </summary>
-        public BooleanValue Table { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Table
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Style Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyle>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -25989,8 +29908,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Alpha Red Green Blue</para>
         /// <para>Represents the following attribute in the schema: rgb</para>
         /// </summary>
-        public HexBinaryValue Rgb { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RgbColor>();
+        public HexBinaryValue Rgb
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26057,38 +29979,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>User Defined Cell Style</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Id</para>
         /// <para>Represents the following attribute in the schema: xfId</para>
         /// </summary>
-        public UInt32Value FormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Built-In Style Id</para>
         /// <para>Represents the following attribute in the schema: builtinId</para>
         /// </summary>
-        public UInt32Value BuiltinId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value BuiltinId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Outline Style</para>
         /// <para>Represents the following attribute in the schema: iLevel</para>
         /// </summary>
-        public UInt32Value OutlineLevel { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value OutlineLevel
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden Style</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Built In</para>
         /// <para>Represents the following attribute in the schema: customBuiltin</para>
         /// </summary>
-        public BooleanValue CustomBuiltin { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellStyle>();
+        public BooleanValue CustomBuiltin
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26194,80 +30139,131 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Number Format Id</para>
         /// <para>Represents the following attribute in the schema: numFmtId</para>
         /// </summary>
-        public UInt32Value NumberFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NumberFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Font Id</para>
         /// <para>Represents the following attribute in the schema: fontId</para>
         /// </summary>
-        public UInt32Value FontId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FontId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Id</para>
         /// <para>Represents the following attribute in the schema: fillId</para>
         /// </summary>
-        public UInt32Value FillId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FillId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Id</para>
         /// <para>Represents the following attribute in the schema: borderId</para>
         /// </summary>
-        public UInt32Value BorderId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value BorderId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Id</para>
         /// <para>Represents the following attribute in the schema: xfId</para>
         /// </summary>
-        public UInt32Value FormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Quote Prefix</para>
         /// <para>Represents the following attribute in the schema: quotePrefix</para>
         /// </summary>
-        public BooleanValue QuotePrefix { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue QuotePrefix
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pivot Button</para>
         /// <para>Represents the following attribute in the schema: pivotButton</para>
         /// </summary>
-        public BooleanValue PivotButton { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PivotButton
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Number Format</para>
         /// <para>Represents the following attribute in the schema: applyNumberFormat</para>
         /// </summary>
-        public BooleanValue ApplyNumberFormat { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyNumberFormat
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Font</para>
         /// <para>Represents the following attribute in the schema: applyFont</para>
         /// </summary>
-        public BooleanValue ApplyFont { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyFont
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Fill</para>
         /// <para>Represents the following attribute in the schema: applyFill</para>
         /// </summary>
-        public BooleanValue ApplyFill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyFill
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Border</para>
         /// <para>Represents the following attribute in the schema: applyBorder</para>
         /// </summary>
-        public BooleanValue ApplyBorder { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyBorder
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Alignment</para>
         /// <para>Represents the following attribute in the schema: applyAlignment</para>
         /// </summary>
-        public BooleanValue ApplyAlignment { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ApplyAlignment
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Apply Protection</para>
         /// <para>Represents the following attribute in the schema: applyProtection</para>
         /// </summary>
-        public BooleanValue ApplyProtection { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellFormat>();
+        public BooleanValue ApplyProtection
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26370,8 +30366,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>String Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontName>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26414,8 +30413,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontFamilyNumbering>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26452,8 +30454,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontCharSet>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26490,20 +30495,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table Style Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableStyleValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableStyleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableStyleValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Band Size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public UInt32Value Size { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Size
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Formatting Id</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        public UInt32Value FormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleElement>();
+        public UInt32Value FormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26575,8 +30591,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetNames>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetName), 1, 65534)
@@ -26634,8 +30648,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public ExternalDefinedNames(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalDefinedNames>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -26695,8 +30707,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetDataSet>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData), 1, 0)
@@ -26728,20 +30738,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Defined Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Refers To</para>
         /// <para>Represents the following attribute in the schema: refersTo</para>
         /// </summary>
-        public StringValue RefersTo { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue RefersTo
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalDefinedName>();
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26816,14 +30837,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Last Refresh Resulted in Error</para>
         /// <para>Represents the following attribute in the schema: refreshError</para>
         /// </summary>
-        public BooleanValue RefreshError { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalSheetData>();
+        public BooleanValue RefreshError
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26904,8 +30932,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Row</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public UInt32Value RowIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalRow>();
+        public UInt32Value RowIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26985,20 +31016,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public StringValue CellReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CellReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Type</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> DataType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> DataType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value Metadata</para>
         /// <para>Represents the following attribute in the schema: vm</para>
         /// </summary>
-        public UInt32Value ValueMetaIndex { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalCell>();
+        public UInt32Value ValueMetaIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27090,8 +31132,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DdeItems>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItem), 0, 0)
@@ -27154,26 +31194,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DDE Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLE</para>
         /// <para>Represents the following attribute in the schema: ole</para>
         /// </summary>
-        public BooleanValue UseOle { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UseOle
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Advise</para>
         /// <para>Represents the following attribute in the schema: advise</para>
         /// </summary>
-        public BooleanValue Advise { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Advise
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data is an Image</para>
         /// <para>Represents the following attribute in the schema: preferPic</para>
         /// </summary>
-        public BooleanValue PreferPicture { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DdeItem>();
+        public BooleanValue PreferPicture
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27267,14 +31322,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        public UInt32Value Rows { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Rows
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Columns</para>
         /// <para>Represents the following attribute in the schema: cols</para>
         /// </summary>
-        public UInt32Value Columns { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Values>();
+        public UInt32Value Columns
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27353,8 +31415,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DDE Value Type</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DdeValues> ValueType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DdeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Value>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DdeValues> ValueType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DdeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27436,8 +31501,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleItems>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItem), 1, 1),
@@ -27508,8 +31571,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalBook>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27624,14 +31690,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Service name</para>
         /// <para>Represents the following attribute in the schema: ddeService</para>
         /// </summary>
-        public StringValue DdeService { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DdeService
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Topic for DDE server</para>
         /// <para>Represents the following attribute in the schema: ddeTopic</para>
         /// </summary>
-        public StringValue DdeTopic { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DdeLink>();
+        public StringValue DdeTopic
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27732,14 +31805,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLE Link ProgID</para>
         /// <para>Represents the following attribute in the schema: progId</para>
         /// </summary>
-        public StringValue ProgId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleLink>();
+        public StringValue ProgId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27805,8 +31885,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Name Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetName>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27853,8 +31936,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Xstring>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Xstring>(deep);
@@ -27917,74 +31998,121 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table Field Id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unique Name</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Column name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Totals Row Function</para>
         /// <para>Represents the following attribute in the schema: totalsRowFunction</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFunctionValues> TotalsRowFunction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFunctionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFunctionValues> TotalsRowFunction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFunctionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Totals Row Label</para>
         /// <para>Represents the following attribute in the schema: totalsRowLabel</para>
         /// </summary>
-        public StringValue TotalsRowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TotalsRowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Query Table Field Id</para>
         /// <para>Represents the following attribute in the schema: queryTableFieldId</para>
         /// </summary>
-        public UInt32Value QueryTableFieldId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value QueryTableFieldId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Header Row Cell Format Id</para>
         /// <para>Represents the following attribute in the schema: headerRowDxfId</para>
         /// </summary>
-        public UInt32Value HeaderRowDifferentialFormattingId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value HeaderRowDifferentialFormattingId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data and Insert Row Format Id</para>
         /// <para>Represents the following attribute in the schema: dataDxfId</para>
         /// </summary>
-        public UInt32Value DataFormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DataFormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Totals Row Format Id</para>
         /// <para>Represents the following attribute in the schema: totalsRowDxfId</para>
         /// </summary>
-        public UInt32Value TotalsRowDifferentialFormattingId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value TotalsRowDifferentialFormattingId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Header Row Cell Style</para>
         /// <para>Represents the following attribute in the schema: headerRowCellStyle</para>
         /// </summary>
-        public StringValue HeaderRowCellStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue HeaderRowCellStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Area Style Name</para>
         /// <para>Represents the following attribute in the schema: dataCellStyle</para>
         /// </summary>
-        public StringValue DataCellStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DataCellStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Totals Row Style Name</para>
         /// <para>Represents the following attribute in the schema: totalsRowCellStyle</para>
         /// </summary>
-        public StringValue TotalsRowCellStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableColumn>();
+        public StringValue TotalsRowCellStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28124,8 +32252,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculatedColumnFormula>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedColumnFormula>(deep);
     }
@@ -28158,8 +32284,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TotalsRowFormula>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalsRowFormula>(deep);
@@ -28196,7 +32320,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Array</para>
         /// <para>Represents the following attribute in the schema: array</para>
         /// </summary>
-        public BooleanValue Array { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Array
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>space</para>
@@ -28205,7 +32333,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28267,26 +32399,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>XML Map Id</para>
         /// <para>Represents the following attribute in the schema: mapId</para>
         /// </summary>
-        public UInt32Value MapId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MapId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>XPath</para>
         /// <para>Represents the following attribute in the schema: xpath</para>
         /// </summary>
-        public StringValue XPath { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue XPath
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Denormalized</para>
         /// <para>Represents the following attribute in the schema: denormalized</para>
         /// </summary>
-        public BooleanValue Denormalized { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Denormalized
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>XML Data Type</para>
         /// <para>Represents the following attribute in the schema: xmlDataType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues> XmlDataType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<XmlColumnProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues> XmlDataType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28390,8 +32537,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileDependencyValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileDependencyValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VolatileType>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileDependencyValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileDependencyValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28465,8 +32615,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>First String</para>
         /// <para>Represents the following attribute in the schema: first</para>
         /// </summary>
-        public StringValue First { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Main>();
+        public StringValue First
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28550,8 +32703,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Type</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileValues> ValueType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Topic>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileValues> ValueType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28606,14 +32762,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public StringValue CellReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CellReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Id</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopicReferences>();
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28659,7 +32822,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotCache Id</para>
         /// <para>Represents the following attribute in the schema: cacheId</para>
         /// </summary>
-        public UInt32Value CacheId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value CacheId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship Id</para>
@@ -28668,8 +32835,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotCache>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28716,38 +32886,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Div Id</para>
         /// <para>Represents the following attribute in the schema: divId</para>
         /// </summary>
-        public StringValue DivId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DivId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Source Object</para>
         /// <para>Represents the following attribute in the schema: sourceObject</para>
         /// </summary>
-        public StringValue SourceObject { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SourceObject
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Destination File</para>
         /// <para>Represents the following attribute in the schema: destinationFile</para>
         /// </summary>
-        public StringValue DestinationFile { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DestinationFile
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Republish</para>
         /// <para>Represents the following attribute in the schema: autoRepublish</para>
         /// </summary>
-        public BooleanValue AutoRepublish { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebPublishObject>();
+        public BooleanValue AutoRepublish
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28807,8 +33000,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalReference>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28875,146 +33071,241 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Custom View Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom View GUID</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        public StringValue Guid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Guid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Update</para>
         /// <para>Represents the following attribute in the schema: autoUpdate</para>
         /// </summary>
-        public BooleanValue AutoUpdate { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoUpdate
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Merge Interval</para>
         /// <para>Represents the following attribute in the schema: mergeInterval</para>
         /// </summary>
-        public UInt32Value MergeInterval { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MergeInterval
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Changes Saved Win</para>
         /// <para>Represents the following attribute in the schema: changesSavedWin</para>
         /// </summary>
-        public BooleanValue ChangesSavedWin { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ChangesSavedWin
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Only Synch</para>
         /// <para>Represents the following attribute in the schema: onlySync</para>
         /// </summary>
-        public BooleanValue OnlySync { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue OnlySync
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Personal View</para>
         /// <para>Represents the following attribute in the schema: personalView</para>
         /// </summary>
-        public BooleanValue PersonalView { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PersonalView
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Print Settings</para>
         /// <para>Represents the following attribute in the schema: includePrintSettings</para>
         /// </summary>
-        public BooleanValue IncludePrintSettings { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IncludePrintSettings
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Hidden Rows and Columns</para>
         /// <para>Represents the following attribute in the schema: includeHiddenRowCol</para>
         /// </summary>
-        public BooleanValue IncludeHiddenRowColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IncludeHiddenRowColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximized</para>
         /// <para>Represents the following attribute in the schema: maximized</para>
         /// </summary>
-        public BooleanValue Maximized { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Maximized
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimized</para>
         /// <para>Represents the following attribute in the schema: minimized</para>
         /// </summary>
-        public BooleanValue Minimized { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Minimized
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Horizontal Scroll</para>
         /// <para>Represents the following attribute in the schema: showHorizontalScroll</para>
         /// </summary>
-        public BooleanValue ShowHorizontalScroll { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowHorizontalScroll
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Vertical Scroll</para>
         /// <para>Represents the following attribute in the schema: showVerticalScroll</para>
         /// </summary>
-        public BooleanValue ShowVerticalScroll { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowVerticalScroll
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Sheet Tabs</para>
         /// <para>Represents the following attribute in the schema: showSheetTabs</para>
         /// </summary>
-        public BooleanValue ShowSheetTabs { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowSheetTabs
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Left Corner (X Coordinate)</para>
         /// <para>Represents the following attribute in the schema: xWindow</para>
         /// </summary>
-        public Int32Value XWindow { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value XWindow
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Left Corner (Y Coordinate)</para>
         /// <para>Represents the following attribute in the schema: yWindow</para>
         /// </summary>
-        public Int32Value YWindow { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value YWindow
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Window Width</para>
         /// <para>Represents the following attribute in the schema: windowWidth</para>
         /// </summary>
-        public UInt32Value WindowWidth { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value WindowWidth
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Window Height</para>
         /// <para>Represents the following attribute in the schema: windowHeight</para>
         /// </summary>
-        public UInt32Value WindowHeight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value WindowHeight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Tab Ratio</para>
         /// <para>Represents the following attribute in the schema: tabRatio</para>
         /// </summary>
-        public UInt32Value TabRatio { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value TabRatio
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Active Sheet in Book View</para>
         /// <para>Represents the following attribute in the schema: activeSheetId</para>
         /// </summary>
-        public UInt32Value ActiveSheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ActiveSheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Formula Bar</para>
         /// <para>Represents the following attribute in the schema: showFormulaBar</para>
         /// </summary>
-        public BooleanValue ShowFormulaBar { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowFormulaBar
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Status Bar</para>
         /// <para>Represents the following attribute in the schema: showStatusbar</para>
         /// </summary>
-        public BooleanValue ShowStatusbar { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowStatusbar
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Comments</para>
         /// <para>Represents the following attribute in the schema: showComments</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CommentsValues> ShowComments { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CommentsValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CommentsValues> ShowComments
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CommentsValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Objects</para>
         /// <para>Represents the following attribute in the schema: showObjects</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues> ShowObjects { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomWorkbookView>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues> ShowObjects
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29110,19 +33401,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Tab Id</para>
         /// <para>Represents the following attribute in the schema: sheetId</para>
         /// </summary>
-        public UInt32Value SheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Visible State</para>
         /// <para>Represents the following attribute in the schema: state</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues> State { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues> State
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship Id</para>
@@ -29131,8 +33434,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Sheet>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29220,80 +33526,131 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Visibility</para>
         /// <para>Represents the following attribute in the schema: visibility</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VisibilityValues> Visibility { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VisibilityValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VisibilityValues> Visibility
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VisibilityValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimized</para>
         /// <para>Represents the following attribute in the schema: minimized</para>
         /// </summary>
-        public BooleanValue Minimized { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Minimized
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Horizontal Scroll</para>
         /// <para>Represents the following attribute in the schema: showHorizontalScroll</para>
         /// </summary>
-        public BooleanValue ShowHorizontalScroll { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowHorizontalScroll
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Vertical Scroll</para>
         /// <para>Represents the following attribute in the schema: showVerticalScroll</para>
         /// </summary>
-        public BooleanValue ShowVerticalScroll { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowVerticalScroll
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Sheet Tabs</para>
         /// <para>Represents the following attribute in the schema: showSheetTabs</para>
         /// </summary>
-        public BooleanValue ShowSheetTabs { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowSheetTabs
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Upper Left Corner (X Coordinate)</para>
         /// <para>Represents the following attribute in the schema: xWindow</para>
         /// </summary>
-        public Int32Value XWindow { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value XWindow
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Upper Left Corner (Y Coordinate)</para>
         /// <para>Represents the following attribute in the schema: yWindow</para>
         /// </summary>
-        public Int32Value YWindow { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value YWindow
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Window Width</para>
         /// <para>Represents the following attribute in the schema: windowWidth</para>
         /// </summary>
-        public UInt32Value WindowWidth { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value WindowWidth
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Window Height</para>
         /// <para>Represents the following attribute in the schema: windowHeight</para>
         /// </summary>
-        public UInt32Value WindowHeight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value WindowHeight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Tab Ratio</para>
         /// <para>Represents the following attribute in the schema: tabRatio</para>
         /// </summary>
-        public UInt32Value TabRatio { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value TabRatio
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>First Sheet</para>
         /// <para>Represents the following attribute in the schema: firstSheet</para>
         /// </summary>
-        public UInt32Value FirstSheet { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FirstSheet
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Active Sheet Index</para>
         /// <para>Represents the following attribute in the schema: activeTab</para>
         /// </summary>
-        public UInt32Value ActiveTab { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ActiveTab
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>AutoFilter Date Grouping</para>
         /// <para>Represents the following attribute in the schema: autoFilterDateGrouping</para>
         /// </summary>
-        public BooleanValue AutoFilterDateGrouping { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorkbookView>();
+        public BooleanValue AutoFilterDateGrouping
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29380,92 +33737,151 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Defined Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Comment</para>
         /// <para>Represents the following attribute in the schema: comment</para>
         /// </summary>
-        public StringValue Comment { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Comment
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Menu Text</para>
         /// <para>Represents the following attribute in the schema: customMenu</para>
         /// </summary>
-        public StringValue CustomMenu { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CustomMenu
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Help</para>
         /// <para>Represents the following attribute in the schema: help</para>
         /// </summary>
-        public StringValue Help { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Help
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Status Bar</para>
         /// <para>Represents the following attribute in the schema: statusBar</para>
         /// </summary>
-        public StringValue StatusBar { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue StatusBar
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Local Name Sheet Id</para>
         /// <para>Represents the following attribute in the schema: localSheetId</para>
         /// </summary>
-        public UInt32Value LocalSheetId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value LocalSheetId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden Name</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Function</para>
         /// <para>Represents the following attribute in the schema: function</para>
         /// </summary>
-        public BooleanValue Function { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Function
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Procedure</para>
         /// <para>Represents the following attribute in the schema: vbProcedure</para>
         /// </summary>
-        public BooleanValue VbProcedure { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue VbProcedure
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>External Function</para>
         /// <para>Represents the following attribute in the schema: xlm</para>
         /// </summary>
-        public BooleanValue Xlm { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Xlm
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Function Group Id</para>
         /// <para>Represents the following attribute in the schema: functionGroupId</para>
         /// </summary>
-        public UInt32Value FunctionGroupId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FunctionGroupId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shortcut Key</para>
         /// <para>Represents the following attribute in the schema: shortcutKey</para>
         /// </summary>
-        public StringValue ShortcutKey { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ShortcutKey
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Publish To Server</para>
         /// <para>Represents the following attribute in the schema: publishToServer</para>
         /// </summary>
-        public BooleanValue PublishToServer { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PublishToServer
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Workbook Parameter (Server)</para>
         /// <para>Represents the following attribute in the schema: workbookParameter</para>
         /// </summary>
-        public BooleanValue WorkbookParameter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefinedName>();
+        public BooleanValue WorkbookParameter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29523,8 +33939,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FunctionGroup>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29597,8 +34016,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29676,20 +34098,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>moveWithCells</para>
         /// <para>Represents the following attribute in the schema: moveWithCells</para>
         /// </summary>
-        public BooleanValue MoveWithCells { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MoveWithCells
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeWithCells</para>
         /// <para>Represents the following attribute in the schema: sizeWithCells</para>
         /// </summary>
-        public BooleanValue SizeWithCells { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SizeWithCells
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>z-order</para>
         /// <para>Represents the following attribute in the schema: z-order</para>
         /// </summary>
-        public UInt32Value ZOrder { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ObjectAnchor>();
+        public UInt32Value ZOrder
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29787,8 +34220,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FromMarker>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
@@ -29851,8 +34282,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public ToMarker(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ToMarker>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -30023,8 +34452,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormattingRuleExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30100,8 +34532,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotHierarchyExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30177,8 +34612,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFieldExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30254,8 +34692,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheSourceExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30331,8 +34772,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Column Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableColumns>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30372,32 +34816,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Style Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show First Column</para>
         /// <para>Represents the following attribute in the schema: showFirstColumn</para>
         /// </summary>
-        public BooleanValue ShowFirstColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowFirstColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Last Column</para>
         /// <para>Represents the following attribute in the schema: showLastColumn</para>
         /// </summary>
-        public BooleanValue ShowLastColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLastColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Row Stripes</para>
         /// <para>Represents the following attribute in the schema: showRowStripes</para>
         /// </summary>
-        public BooleanValue ShowRowStripes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowRowStripes
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Column Stripes</para>
         /// <para>Represents the following attribute in the schema: showColumnStripes</para>
         /// </summary>
-        public BooleanValue ShowColumnStripes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleInfo>();
+        public BooleanValue ShowColumnStripes
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30467,8 +34930,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtension), 0, 0)
@@ -30500,26 +34961,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLE Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Icon</para>
         /// <para>Represents the following attribute in the schema: icon</para>
         /// </summary>
-        public BooleanValue Icon { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Icon
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Advise</para>
         /// <para>Represents the following attribute in the schema: advise</para>
         /// </summary>
-        public BooleanValue Advise { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Advise
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Object is an Image</para>
         /// <para>Represents the following attribute in the schema: preferPic</para>
         /// </summary>
-        public BooleanValue PreferPicture { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleItem>();
+        public BooleanValue PreferPicture
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30591,8 +35067,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartBorder>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -30649,8 +35123,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public EndBorder(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndBorder>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -30709,8 +35181,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftBorder>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -30767,8 +35237,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public RightBorder(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightBorder>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -30827,8 +35295,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopBorder>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -30885,8 +35351,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public BottomBorder(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomBorder>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -30945,8 +35409,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DiagonalBorder>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -31004,8 +35466,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalBorder>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
@@ -31062,8 +35522,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public HorizontalBorder(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HorizontalBorder>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -31125,7 +35583,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Line Style</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues> Style { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues> Style
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31199,85 +35661,141 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>locked</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        public BooleanValue Locked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Locked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>defaultSize</para>
         /// <para>Represents the following attribute in the schema: defaultSize</para>
         /// </summary>
-        public BooleanValue DefaultSize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DefaultSize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>print</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        public BooleanValue Print { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Print
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>disabled</para>
         /// <para>Represents the following attribute in the schema: disabled</para>
         /// </summary>
-        public BooleanValue Disabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Disabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>recalcAlways</para>
         /// <para>Represents the following attribute in the schema: recalcAlways</para>
         /// </summary>
-        public BooleanValue RecalcAlways { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RecalcAlways
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>uiObject</para>
         /// <para>Represents the following attribute in the schema: uiObject</para>
         /// </summary>
-        public BooleanValue UiObject { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UiObject
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoFill</para>
         /// <para>Represents the following attribute in the schema: autoFill</para>
         /// </summary>
-        public BooleanValue AutoFill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoFill
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoLine</para>
         /// <para>Represents the following attribute in the schema: autoLine</para>
         /// </summary>
-        public BooleanValue AutoLine { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoLine
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoPict</para>
         /// <para>Represents the following attribute in the schema: autoPict</para>
         /// </summary>
-        public BooleanValue AutoPict { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoPict
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>macro</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        public StringValue Macro { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Macro
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>altText</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
-        public StringValue AltText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AltText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>linkedCell</para>
         /// <para>Represents the following attribute in the schema: linkedCell</para>
         /// </summary>
-        public StringValue LinkedCell { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue LinkedCell
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>listFillRange</para>
         /// <para>Represents the following attribute in the schema: listFillRange</para>
         /// </summary>
-        public StringValue ListFillRange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ListFillRange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cf</para>
         /// <para>Represents the following attribute in the schema: cf</para>
         /// </summary>
-        public StringValue Cf { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Cf
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
@@ -31286,8 +35804,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ControlProperties>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31385,67 +35906,111 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>locked</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        public BooleanValue Locked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Locked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>defaultSize</para>
         /// <para>Represents the following attribute in the schema: defaultSize</para>
         /// </summary>
-        public BooleanValue DefaultSize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DefaultSize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>print</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        public BooleanValue Print { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Print
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>disabled</para>
         /// <para>Represents the following attribute in the schema: disabled</para>
         /// </summary>
-        public BooleanValue Disabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Disabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>uiObject</para>
         /// <para>Represents the following attribute in the schema: uiObject</para>
         /// </summary>
-        public BooleanValue UiObject { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UiObject
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoFill</para>
         /// <para>Represents the following attribute in the schema: autoFill</para>
         /// </summary>
-        public BooleanValue AutoFill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoFill
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoLine</para>
         /// <para>Represents the following attribute in the schema: autoLine</para>
         /// </summary>
-        public BooleanValue AutoLine { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoLine
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoPict</para>
         /// <para>Represents the following attribute in the schema: autoPict</para>
         /// </summary>
-        public BooleanValue AutoPict { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoPict
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>macro</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        public StringValue Macro { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Macro
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>altText</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
-        public StringValue AltText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AltText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dde</para>
         /// <para>Represents the following attribute in the schema: dde</para>
         /// </summary>
-        public BooleanValue Dde { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Dde
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
@@ -31454,8 +36019,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbeddedObjectProperties>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31550,14 +36118,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Published</para>
         /// <para>Represents the following attribute in the schema: published</para>
         /// </summary>
-        public BooleanValue Published { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Published
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Code Name</para>
         /// <para>Represents the following attribute in the schema: codeName</para>
         /// </summary>
-        public StringValue CodeName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSheetProperties>();
+        public StringValue CodeName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31647,8 +36222,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSheetViews>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetView), 1, 0),
@@ -31681,44 +36254,71 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Password</para>
         /// <para>Represents the following attribute in the schema: password</para>
         /// </summary>
-        public HexBinaryValue Password { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Password
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Name</para>
         /// <para>Represents the following attribute in the schema: algorithmName</para>
         /// </summary>
-        public StringValue AlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Password Hash Value</para>
         /// <para>Represents the following attribute in the schema: hashValue</para>
         /// </summary>
-        public Base64BinaryValue HashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue HashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Salt Value for Password Verifier</para>
         /// <para>Represents the following attribute in the schema: saltValue</para>
         /// </summary>
-        public Base64BinaryValue SaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue SaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Iterations to Run Hashing Algorithm</para>
         /// <para>Represents the following attribute in the schema: spinCount</para>
         /// </summary>
-        public UInt32Value SpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contents</para>
         /// <para>Represents the following attribute in the schema: content</para>
         /// </summary>
-        public BooleanValue Content { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Content
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Objects Locked</para>
         /// <para>Represents the following attribute in the schema: objects</para>
         /// </summary>
-        public BooleanValue Objects { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSheetProtection>();
+        public BooleanValue Objects
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31787,8 +36387,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomChartsheetViews>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView), 0, 0)
@@ -31823,8 +36421,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Drawing>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31862,8 +36463,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegacyDrawing>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipExistConstraint(0 /*r:id*/)
         };
@@ -31890,8 +36489,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegacyDrawingHeaderFooter>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyDrawingHeaderFooter>(deep);
     }
@@ -31917,7 +36514,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31953,116 +36554,191 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lho</para>
         /// <para>Represents the following attribute in the schema: lho</para>
         /// </summary>
-        public UInt32Value Lho { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Lho
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lhe</para>
         /// <para>Represents the following attribute in the schema: lhe</para>
         /// </summary>
-        public UInt32Value Lhe { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Lhe
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lhf</para>
         /// <para>Represents the following attribute in the schema: lhf</para>
         /// </summary>
-        public UInt32Value Lhf { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Lhf
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cho</para>
         /// <para>Represents the following attribute in the schema: cho</para>
         /// </summary>
-        public UInt32Value Cho { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Cho
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>che</para>
         /// <para>Represents the following attribute in the schema: che</para>
         /// </summary>
-        public UInt32Value Che { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Che
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>chf</para>
         /// <para>Represents the following attribute in the schema: chf</para>
         /// </summary>
-        public UInt32Value Chf { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Chf
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rho</para>
         /// <para>Represents the following attribute in the schema: rho</para>
         /// </summary>
-        public UInt32Value Rho { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Rho
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rhe</para>
         /// <para>Represents the following attribute in the schema: rhe</para>
         /// </summary>
-        public UInt32Value Rhe { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Rhe
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rhf</para>
         /// <para>Represents the following attribute in the schema: rhf</para>
         /// </summary>
-        public UInt32Value Rhf { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Rhf
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lfo</para>
         /// <para>Represents the following attribute in the schema: lfo</para>
         /// </summary>
-        public UInt32Value Lfo { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Lfo
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lfe</para>
         /// <para>Represents the following attribute in the schema: lfe</para>
         /// </summary>
-        public UInt32Value Lfe { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Lfe
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lff</para>
         /// <para>Represents the following attribute in the schema: lff</para>
         /// </summary>
-        public UInt32Value Lff { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Lff
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cfo</para>
         /// <para>Represents the following attribute in the schema: cfo</para>
         /// </summary>
-        public UInt32Value Cfo { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Cfo
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cfe</para>
         /// <para>Represents the following attribute in the schema: cfe</para>
         /// </summary>
-        public UInt32Value Cfe { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Cfe
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cff</para>
         /// <para>Represents the following attribute in the schema: cff</para>
         /// </summary>
-        public UInt32Value Cff { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Cff
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rfo</para>
         /// <para>Represents the following attribute in the schema: rfo</para>
         /// </summary>
-        public UInt32Value Rfo { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Rfo
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rfe</para>
         /// <para>Represents the following attribute in the schema: rfe</para>
         /// </summary>
-        public UInt32Value Rfe { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Rfe
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rff</para>
         /// <para>Represents the following attribute in the schema: rff</para>
         /// </summary>
-        public UInt32Value Rff { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DrawingHeaderFooter>();
+        public UInt32Value Rff
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -32119,8 +36795,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Picture>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -32187,8 +36866,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Web Publishing Items Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebPublishItems>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -32257,8 +36939,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorScale>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 3),
@@ -32324,20 +37004,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Minimum Length</para>
         /// <para>Represents the following attribute in the schema: minLength</para>
         /// </summary>
-        public UInt32Value MinLength { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MinLength
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum Length</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        public UInt32Value MaxLength { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MaxLength
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Values</para>
         /// <para>Represents the following attribute in the schema: showValue</para>
         /// </summary>
-        public BooleanValue ShowValue { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataBar>();
+        public BooleanValue ShowValue
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -32418,26 +37109,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Icon Set</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues> IconSetValue { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues> IconSetValue
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Value</para>
         /// <para>Represents the following attribute in the schema: showValue</para>
         /// </summary>
-        public BooleanValue ShowValue { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowValue
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Percent</para>
         /// <para>Represents the following attribute in the schema: percent</para>
         /// </summary>
-        public BooleanValue Percent { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Percent
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reverse Icons</para>
         /// <para>Represents the following attribute in the schema: reverse</para>
         /// </summary>
-        public BooleanValue Reverse { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IconSet>();
+        public BooleanValue Reverse
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -32507,8 +37213,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormattingRuleExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension), 0, 0)
@@ -32571,8 +37275,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Data Consolidation Reference Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataReferences>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -32647,56 +37354,91 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Synch Horizontal</para>
         /// <para>Represents the following attribute in the schema: syncHorizontal</para>
         /// </summary>
-        public BooleanValue SyncHorizontal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SyncHorizontal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Synch Vertical</para>
         /// <para>Represents the following attribute in the schema: syncVertical</para>
         /// </summary>
-        public BooleanValue SyncVertical { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SyncVertical
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Synch Reference</para>
         /// <para>Represents the following attribute in the schema: syncRef</para>
         /// </summary>
-        public StringValue SyncReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SyncReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Transition Formula Evaluation</para>
         /// <para>Represents the following attribute in the schema: transitionEvaluation</para>
         /// </summary>
-        public BooleanValue TransitionEvaluation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TransitionEvaluation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Transition Formula Entry</para>
         /// <para>Represents the following attribute in the schema: transitionEntry</para>
         /// </summary>
-        public BooleanValue TransitionEntry { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TransitionEntry
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Published</para>
         /// <para>Represents the following attribute in the schema: published</para>
         /// </summary>
-        public BooleanValue Published { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Published
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Code Name</para>
         /// <para>Represents the following attribute in the schema: codeName</para>
         /// </summary>
-        public StringValue CodeName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CodeName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Filter Mode</para>
         /// <para>Represents the following attribute in the schema: filterMode</para>
         /// </summary>
-        public BooleanValue FilterMode { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FilterMode
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Enable Conditional Formatting Calculations</para>
         /// <para>Represents the following attribute in the schema: enableFormatConditionsCalculation</para>
         /// </summary>
-        public BooleanValue EnableFormatConditionsCalculation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetProperties>();
+        public BooleanValue EnableFormatConditionsCalculation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -32820,8 +37562,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetViews>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetView), 1, 0),
@@ -32854,55 +37594,91 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Base Column Width</para>
         /// <para>Represents the following attribute in the schema: baseColWidth</para>
         /// </summary>
-        public UInt32Value BaseColumnWidth { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value BaseColumnWidth
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Column Width</para>
         /// <para>Represents the following attribute in the schema: defaultColWidth</para>
         /// </summary>
-        public DoubleValue DefaultColumnWidth { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue DefaultColumnWidth
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Row Height</para>
         /// <para>Represents the following attribute in the schema: defaultRowHeight</para>
         /// </summary>
-        public DoubleValue DefaultRowHeight { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue DefaultRowHeight
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Height</para>
         /// <para>Represents the following attribute in the schema: customHeight</para>
         /// </summary>
-        public BooleanValue CustomHeight { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CustomHeight
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden By Default</para>
         /// <para>Represents the following attribute in the schema: zeroHeight</para>
         /// </summary>
-        public BooleanValue ZeroHeight { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ZeroHeight
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Thick Top Border</para>
         /// <para>Represents the following attribute in the schema: thickTop</para>
         /// </summary>
-        public BooleanValue ThickTop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ThickTop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Thick Bottom Border</para>
         /// <para>Represents the following attribute in the schema: thickBottom</para>
         /// </summary>
-        public BooleanValue ThickBottom { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ThickBottom
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum Outline Row</para>
         /// <para>Represents the following attribute in the schema: outlineLevelRow</para>
         /// </summary>
-        public ByteValue OutlineLevelRow { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue OutlineLevelRow
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Column Outline Level</para>
         /// <para>Represents the following attribute in the schema: outlineLevelCol</para>
         /// </summary>
-        public ByteValue OutlineLevelColumn { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue OutlineLevelColumn
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dyDescent, this property is only available in Office2010, Office2013, Office2016</para>
@@ -32911,8 +37687,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x14ac=http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac
         /// </remark>
-        public DoubleValue DyDescent { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetFormatProperties>();
+        public DoubleValue DyDescent
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -32969,128 +37748,211 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Password</para>
         /// <para>Represents the following attribute in the schema: password</para>
         /// </summary>
-        public HexBinaryValue Password { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Password
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Name</para>
         /// <para>Represents the following attribute in the schema: algorithmName</para>
         /// </summary>
-        public StringValue AlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Password Hash Value</para>
         /// <para>Represents the following attribute in the schema: hashValue</para>
         /// </summary>
-        public Base64BinaryValue HashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue HashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Salt Value for Password Verifier</para>
         /// <para>Represents the following attribute in the schema: saltValue</para>
         /// </summary>
-        public Base64BinaryValue SaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue SaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Iterations to Run Hashing Algorithm</para>
         /// <para>Represents the following attribute in the schema: spinCount</para>
         /// </summary>
-        public UInt32Value SpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Locked</para>
         /// <para>Represents the following attribute in the schema: sheet</para>
         /// </summary>
-        public BooleanValue Sheet { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Sheet
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Objects Locked</para>
         /// <para>Represents the following attribute in the schema: objects</para>
         /// </summary>
-        public BooleanValue Objects { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Objects
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Scenarios Locked</para>
         /// <para>Represents the following attribute in the schema: scenarios</para>
         /// </summary>
-        public BooleanValue Scenarios { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Scenarios
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Cells Locked</para>
         /// <para>Represents the following attribute in the schema: formatCells</para>
         /// </summary>
-        public BooleanValue FormatCells { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FormatCells
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Columns Locked</para>
         /// <para>Represents the following attribute in the schema: formatColumns</para>
         /// </summary>
-        public BooleanValue FormatColumns { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FormatColumns
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Rows Locked</para>
         /// <para>Represents the following attribute in the schema: formatRows</para>
         /// </summary>
-        public BooleanValue FormatRows { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FormatRows
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Insert Columns Locked</para>
         /// <para>Represents the following attribute in the schema: insertColumns</para>
         /// </summary>
-        public BooleanValue InsertColumns { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InsertColumns
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Insert Rows Locked</para>
         /// <para>Represents the following attribute in the schema: insertRows</para>
         /// </summary>
-        public BooleanValue InsertRows { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InsertRows
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Insert Hyperlinks Locked</para>
         /// <para>Represents the following attribute in the schema: insertHyperlinks</para>
         /// </summary>
-        public BooleanValue InsertHyperlinks { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InsertHyperlinks
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Delete Columns Locked</para>
         /// <para>Represents the following attribute in the schema: deleteColumns</para>
         /// </summary>
-        public BooleanValue DeleteColumns { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DeleteColumns
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Delete Rows Locked</para>
         /// <para>Represents the following attribute in the schema: deleteRows</para>
         /// </summary>
-        public BooleanValue DeleteRows { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DeleteRows
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Select Locked Cells Locked</para>
         /// <para>Represents the following attribute in the schema: selectLockedCells</para>
         /// </summary>
-        public BooleanValue SelectLockedCells { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SelectLockedCells
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sort Locked</para>
         /// <para>Represents the following attribute in the schema: sort</para>
         /// </summary>
-        public BooleanValue Sort { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Sort
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>AutoFilter Locked</para>
         /// <para>Represents the following attribute in the schema: autoFilter</para>
         /// </summary>
-        public BooleanValue AutoFilter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoFilter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pivot Tables Locked</para>
         /// <para>Represents the following attribute in the schema: pivotTables</para>
         /// </summary>
-        public BooleanValue PivotTables { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PivotTables
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Select Unlocked Cells Locked</para>
         /// <para>Represents the following attribute in the schema: selectUnlockedCells</para>
         /// </summary>
-        public BooleanValue SelectUnlockedCells { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetProtection>();
+        public BooleanValue SelectUnlockedCells
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -33173,8 +38035,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomSheetViews>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetView), 1, 0)
@@ -33232,8 +38092,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public OleObjects(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleObjects>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -33293,8 +38151,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Controls>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Control), 1, 65535)
@@ -33326,8 +38182,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetDimension>();
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -33390,8 +38249,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Columns>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Column), 1, 0)
@@ -33449,8 +38306,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public SheetData(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetData>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -33514,32 +38369,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Function Index</para>
         /// <para>Represents the following attribute in the schema: function</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues> Function { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues> Function
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Use Left Column Labels</para>
         /// <para>Represents the following attribute in the schema: leftLabels</para>
         /// </summary>
-        public BooleanValue LeftLabels { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LeftLabels
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>startLabels, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: startLabels</para>
         /// </summary>
-        public BooleanValue StartLabels { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue StartLabels
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Labels In Top Row</para>
         /// <para>Represents the following attribute in the schema: topLabels</para>
         /// </summary>
-        public BooleanValue TopLabels { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TopLabels
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Link</para>
         /// <para>Represents the following attribute in the schema: link</para>
         /// </summary>
-        public BooleanValue Link { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataConsolidate>();
+        public BooleanValue Link
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -33632,14 +38506,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotTable Conditional Formatting</para>
         /// <para>Represents the following attribute in the schema: pivot</para>
         /// </summary>
-        public BooleanValue Pivot { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Pivot
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sequence of References</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        public ListValue<StringValue> SequenceOfReferences { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormatting>();
+        public ListValue<StringValue> SequenceOfReferences
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -33714,8 +38595,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperty), 1, 0)
@@ -33778,8 +38657,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLAP Member Properties Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MemberProperties>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -33850,14 +38732,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Item Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hierarchy Level</para>
         /// <para>Represents the following attribute in the schema: level</para>
         /// </summary>
-        public UInt32Value Level { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Members>();
+        public UInt32Value Level
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -33925,8 +38814,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotHierarchyExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension), 0, 0)
@@ -33989,8 +38876,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Items>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34056,8 +38946,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public AutoSortScope(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoSortScope>();
 
         /// <summary>
         /// <para>Auto Sort Scope.</para>
@@ -34130,8 +39018,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFieldExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension), 0, 0)
@@ -34163,19 +39049,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Named Range</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sheet Name</para>
         /// <para>Represents the following attribute in the schema: sheet</para>
         /// </summary>
-        public StringValue Sheet { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Sheet
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship Id</para>
@@ -34184,8 +39082,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorksheetSource>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34262,8 +39163,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Auto Page</para>
         /// <para>Represents the following attribute in the schema: autoPage</para>
         /// </summary>
-        public BooleanValue AutoPage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Consolidation>();
+        public BooleanValue AutoPage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34357,8 +39261,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheSourceExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension), 0, 0)
@@ -34421,92 +39323,151 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>locked</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        public BooleanValue Locked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Locked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>defaultSize</para>
         /// <para>Represents the following attribute in the schema: defaultSize</para>
         /// </summary>
-        public BooleanValue DefaultSize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DefaultSize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>print</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        public BooleanValue Print { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Print
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>disabled</para>
         /// <para>Represents the following attribute in the schema: disabled</para>
         /// </summary>
-        public BooleanValue Disabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Disabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>uiObject</para>
         /// <para>Represents the following attribute in the schema: uiObject</para>
         /// </summary>
-        public BooleanValue UiObject { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UiObject
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoFill</para>
         /// <para>Represents the following attribute in the schema: autoFill</para>
         /// </summary>
-        public BooleanValue AutoFill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoFill
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoLine</para>
         /// <para>Represents the following attribute in the schema: autoLine</para>
         /// </summary>
-        public BooleanValue AutoLine { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoLine
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>altText</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
-        public StringValue AltText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AltText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>textHAlign</para>
         /// <para>Represents the following attribute in the schema: textHAlign</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextHorizontalAlignmentValues> TextHAlign { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextHorizontalAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextHorizontalAlignmentValues> TextHAlign
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextHorizontalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>textVAlign</para>
         /// <para>Represents the following attribute in the schema: textVAlign</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextVerticalAlignmentValues> TextVAlign { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextVerticalAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextVerticalAlignmentValues> TextVAlign
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextVerticalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lockText</para>
         /// <para>Represents the following attribute in the schema: lockText</para>
         /// </summary>
-        public BooleanValue LockText { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LockText
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>justLastX</para>
         /// <para>Represents the following attribute in the schema: justLastX</para>
         /// </summary>
-        public BooleanValue JustLastX { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue JustLastX
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoScale</para>
         /// <para>Represents the following attribute in the schema: autoScale</para>
         /// </summary>
-        public BooleanValue AutoScale { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoScale
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rowHidden</para>
         /// <para>Represents the following attribute in the schema: rowHidden</para>
         /// </summary>
-        public BooleanValue RowHidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RowHidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>colHidden</para>
         /// <para>Represents the following attribute in the schema: colHidden</para>
         /// </summary>
-        public BooleanValue ColHidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentProperties>();
+        public BooleanValue ColHidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34573,44 +39534,71 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Descending</para>
         /// <para>Represents the following attribute in the schema: descending</para>
         /// </summary>
-        public BooleanValue Descending { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Descending
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sort By</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues> SortBy { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues> SortBy
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom List</para>
         /// <para>Represents the following attribute in the schema: customList</para>
         /// </summary>
-        public StringValue CustomList { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CustomList
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format Id</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        public UInt32Value FormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Icon Set</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues> IconSet { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues> IconSet
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Icon Id</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        public UInt32Value IconId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SortCondition>();
+        public UInt32Value IconId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34652,8 +39640,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Filter Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Filter>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34689,44 +39680,71 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Year</para>
         /// <para>Represents the following attribute in the schema: year</para>
         /// </summary>
-        public UInt16Value Year { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value Year
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Month</para>
         /// <para>Represents the following attribute in the schema: month</para>
         /// </summary>
-        public UInt16Value Month { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value Month
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Day</para>
         /// <para>Represents the following attribute in the schema: day</para>
         /// </summary>
-        public UInt16Value Day { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value Day
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hour</para>
         /// <para>Represents the following attribute in the schema: hour</para>
         /// </summary>
-        public UInt16Value Hour { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value Hour
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minute</para>
         /// <para>Represents the following attribute in the schema: minute</para>
         /// </summary>
-        public UInt16Value Minute { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value Minute
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Second</para>
         /// <para>Represents the following attribute in the schema: second</para>
         /// </summary>
-        public UInt16Value Second { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value Second
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Date Time Grouping</para>
         /// <para>Represents the following attribute in the schema: dateTimeGrouping</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues> DateTimeGrouping { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DateGroupItem>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues> DateTimeGrouping
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34817,14 +39835,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Filter by Blank</para>
         /// <para>Represents the following attribute in the schema: blank</para>
         /// </summary>
-        public BooleanValue Blank { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Blank
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calendar Type</para>
         /// <para>Represents the following attribute in the schema: calendarType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalendarValues> CalendarType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalendarValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Filters>();
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalendarValues> CalendarType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalendarValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34867,26 +39892,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Top</para>
         /// <para>Represents the following attribute in the schema: top</para>
         /// </summary>
-        public BooleanValue Top { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Top
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Filter by Percent</para>
         /// <para>Represents the following attribute in the schema: percent</para>
         /// </summary>
-        public BooleanValue Percent { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Percent
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top or Bottom Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Filter Value</para>
         /// <para>Represents the following attribute in the schema: filterVal</para>
         /// </summary>
-        public DoubleValue FilterValue { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Top10>();
+        public DoubleValue FilterValue
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34956,8 +39996,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>And</para>
         /// <para>Represents the following attribute in the schema: and</para>
         /// </summary>
-        public BooleanValue And { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomFilters>();
+        public BooleanValue And
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34997,32 +40040,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Dynamic filter type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Max Value</para>
         /// <para>Represents the following attribute in the schema: maxVal</para>
         /// </summary>
-        public DoubleValue MaxVal { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue MaxVal
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>valIso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: valIso</para>
         /// </summary>
-        public DateTimeValue ValIso { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue ValIso
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>maxValIso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: maxValIso</para>
         /// </summary>
-        public DateTimeValue MaxValIso { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DynamicFilter>();
+        public DateTimeValue MaxValIso
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35068,14 +40130,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Differential Format Record Id</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        public UInt32Value FormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Filter By Cell Color</para>
         /// <para>Represents the following attribute in the schema: cellColor</para>
         /// </summary>
-        public BooleanValue CellColor { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorFilter>();
+        public BooleanValue CellColor
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35118,14 +40187,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Icon Set</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues> IconSet { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues> IconSet
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Icon Id</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        public UInt32Value IconId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IconFilter>();
+        public UInt32Value IconId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35197,8 +40273,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerCacheDefinitionExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35278,8 +40357,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFilterExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35356,8 +40438,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QueryTableExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35402,26 +40487,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Connection String</para>
         /// <para>Represents the following attribute in the schema: connection</para>
         /// </summary>
-        public StringValue Connection { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Connection
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Command Text</para>
         /// <para>Represents the following attribute in the schema: command</para>
         /// </summary>
-        public StringValue Command { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Command
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Command Text</para>
         /// <para>Represents the following attribute in the schema: serverCommand</para>
         /// </summary>
-        public StringValue ServerCommand { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ServerCommand
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLE DB Command Type</para>
         /// <para>Represents the following attribute in the schema: commandType</para>
         /// </summary>
-        public UInt32Value CommandType { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DatabaseProperties>();
+        public UInt32Value CommandType
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35467,56 +40567,91 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Local Cube</para>
         /// <para>Represents the following attribute in the schema: local</para>
         /// </summary>
-        public BooleanValue Local { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Local
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Local Cube Connection</para>
         /// <para>Represents the following attribute in the schema: localConnection</para>
         /// </summary>
-        public StringValue LocalConnection { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue LocalConnection
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Local Refresh</para>
         /// <para>Represents the following attribute in the schema: localRefresh</para>
         /// </summary>
-        public BooleanValue LocalRefresh { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LocalRefresh
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Send Locale to OLAP</para>
         /// <para>Represents the following attribute in the schema: sendLocale</para>
         /// </summary>
-        public BooleanValue SendLocale { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SendLocale
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drill Through Count</para>
         /// <para>Represents the following attribute in the schema: rowDrillCount</para>
         /// </summary>
-        public UInt32Value RowDrillCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RowDrillCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLAP Fill Formatting</para>
         /// <para>Represents the following attribute in the schema: serverFill</para>
         /// </summary>
-        public BooleanValue ServerFill { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ServerFill
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLAP Number Format</para>
         /// <para>Represents the following attribute in the schema: serverNumberFormat</para>
         /// </summary>
-        public BooleanValue ServerNumberFormat { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ServerNumberFormat
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLAP Server Font</para>
         /// <para>Represents the following attribute in the schema: serverFont</para>
         /// </summary>
-        public BooleanValue ServerFont { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ServerFont
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLAP Font Formatting</para>
         /// <para>Represents the following attribute in the schema: serverFontColor</para>
         /// </summary>
-        public BooleanValue ServerFontColor { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OlapProperties>();
+        public BooleanValue ServerFontColor
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35594,80 +40729,131 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>XML Source</para>
         /// <para>Represents the following attribute in the schema: xml</para>
         /// </summary>
-        public BooleanValue XmlSource { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue XmlSource
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Import XML Source Data</para>
         /// <para>Represents the following attribute in the schema: sourceData</para>
         /// </summary>
-        public BooleanValue SourceData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SourceData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Parse PRE</para>
         /// <para>Represents the following attribute in the schema: parsePre</para>
         /// </summary>
-        public BooleanValue ParsePreTag { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ParsePreTag
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Consecutive Delimiters</para>
         /// <para>Represents the following attribute in the schema: consecutive</para>
         /// </summary>
-        public BooleanValue Consecutive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Consecutive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Use First Row</para>
         /// <para>Represents the following attribute in the schema: firstRow</para>
         /// </summary>
-        public BooleanValue FirstRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FirstRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Created in Excel 97</para>
         /// <para>Represents the following attribute in the schema: xl97</para>
         /// </summary>
-        public BooleanValue CreatedInExcel97 { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CreatedInExcel97
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Dates as Text</para>
         /// <para>Represents the following attribute in the schema: textDates</para>
         /// </summary>
-        public BooleanValue TextDates { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TextDates
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Refreshed in Excel 2000</para>
         /// <para>Represents the following attribute in the schema: xl2000</para>
         /// </summary>
-        public BooleanValue RefreshedInExcel2000 { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RefreshedInExcel2000
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>URL</para>
         /// <para>Represents the following attribute in the schema: url</para>
         /// </summary>
-        public StringValue Url { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Url
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Web Post</para>
         /// <para>Represents the following attribute in the schema: post</para>
         /// </summary>
-        public StringValue Post { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Post
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>HTML Tables Only</para>
         /// <para>Represents the following attribute in the schema: htmlTables</para>
         /// </summary>
-        public BooleanValue HtmlTables { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HtmlTables
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>HTML Formatting Handling</para>
         /// <para>Represents the following attribute in the schema: htmlFormat</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.HtmlFormattingValues> HtmlFormat { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.HtmlFormattingValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.HtmlFormattingValues> HtmlFormat
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.HtmlFormattingValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Edit Query URL</para>
         /// <para>Represents the following attribute in the schema: editPage</para>
         /// </summary>
-        public StringValue EditPage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebQueryProperties>();
+        public StringValue EditPage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35769,98 +40955,161 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>prompt</para>
         /// <para>Represents the following attribute in the schema: prompt</para>
         /// </summary>
-        public BooleanValue Prompt { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Prompt
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fileType</para>
         /// <para>Represents the following attribute in the schema: fileType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues> FileType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues> FileType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>codePage</para>
         /// <para>Represents the following attribute in the schema: codePage</para>
         /// </summary>
-        public UInt32Value CodePage { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value CodePage
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>characterSet</para>
         /// <para>Represents the following attribute in the schema: characterSet</para>
         /// </summary>
-        public StringValue TextCharacterSet { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TextCharacterSet
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstRow</para>
         /// <para>Represents the following attribute in the schema: firstRow</para>
         /// </summary>
-        public UInt32Value FirstRow { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FirstRow
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sourceFile</para>
         /// <para>Represents the following attribute in the schema: sourceFile</para>
         /// </summary>
-        public StringValue SourceFile { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SourceFile
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>delimited</para>
         /// <para>Represents the following attribute in the schema: delimited</para>
         /// </summary>
-        public BooleanValue Delimited { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Delimited
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>decimal</para>
         /// <para>Represents the following attribute in the schema: decimal</para>
         /// </summary>
-        public StringValue Decimal { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Decimal
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>thousands</para>
         /// <para>Represents the following attribute in the schema: thousands</para>
         /// </summary>
-        public StringValue Thousands { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Thousands
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tab</para>
         /// <para>Represents the following attribute in the schema: tab</para>
         /// </summary>
-        public BooleanValue TabAsDelimiter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TabAsDelimiter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>space</para>
         /// <para>Represents the following attribute in the schema: space</para>
         /// </summary>
-        public BooleanValue Space { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Space
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>comma</para>
         /// <para>Represents the following attribute in the schema: comma</para>
         /// </summary>
-        public BooleanValue Comma { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Comma
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>semicolon</para>
         /// <para>Represents the following attribute in the schema: semicolon</para>
         /// </summary>
-        public BooleanValue Semicolon { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Semicolon
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>consecutive</para>
         /// <para>Represents the following attribute in the schema: consecutive</para>
         /// </summary>
-        public BooleanValue Consecutive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Consecutive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>qualifier</para>
         /// <para>Represents the following attribute in the schema: qualifier</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues> Qualifier { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues> Qualifier
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>delimiter</para>
         /// <para>Represents the following attribute in the schema: delimiter</para>
         /// </summary>
-        public StringValue Delimiter { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextProperties>();
+        public StringValue Delimiter
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35969,8 +41218,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Parameter Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Parameters>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36037,8 +41289,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectionExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension), 0, 0)
@@ -36103,8 +41353,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectionExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36181,8 +41434,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Count of Fields</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextFields>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36257,14 +41513,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SourceValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SourceValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SourceValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SourceValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>connectionId</para>
         /// <para>Represents the following attribute in the schema: connectionId</para>
         /// </summary>
-        public UInt32Value ConnectionId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheSource>();
+        public UInt32Value ConnectionId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36387,8 +41650,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheFields>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36459,8 +41725,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Hierarchy Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheHierarchies>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36531,8 +41800,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>KPI Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Kpis>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36606,8 +41878,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public TupleCache(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TupleCache>();
 
         /// <summary>
         /// <para>Entries.</para>
@@ -36740,8 +42010,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Calculated Item Formula Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculatedItems>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36812,8 +42085,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Calculated Members Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculatedMembers>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36884,8 +42160,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLAP Dimensions Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Dimensions>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36956,8 +42235,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Measure Group Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MeasureGroups>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37028,8 +42310,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Measure Group Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Maps>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37095,8 +42380,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public PivotCacheDefinitionExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotCacheDefinitionExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -37166,8 +42449,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotCacheDefinitionExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37256,86 +42542,141 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Contains Semi Mixed Data Types</para>
         /// <para>Represents the following attribute in the schema: containsSemiMixedTypes</para>
         /// </summary>
-        public BooleanValue ContainsSemiMixedTypes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ContainsSemiMixedTypes
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contains Non Date</para>
         /// <para>Represents the following attribute in the schema: containsNonDate</para>
         /// </summary>
-        public BooleanValue ContainsNonDate { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ContainsNonDate
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contains Date</para>
         /// <para>Represents the following attribute in the schema: containsDate</para>
         /// </summary>
-        public BooleanValue ContainsDate { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ContainsDate
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contains String</para>
         /// <para>Represents the following attribute in the schema: containsString</para>
         /// </summary>
-        public BooleanValue ContainsString { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ContainsString
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contains Blank</para>
         /// <para>Represents the following attribute in the schema: containsBlank</para>
         /// </summary>
-        public BooleanValue ContainsBlank { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ContainsBlank
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contains Mixed Data Types</para>
         /// <para>Represents the following attribute in the schema: containsMixedTypes</para>
         /// </summary>
-        public BooleanValue ContainsMixedTypes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ContainsMixedTypes
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contains Numbers</para>
         /// <para>Represents the following attribute in the schema: containsNumber</para>
         /// </summary>
-        public BooleanValue ContainsNumber { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ContainsNumber
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contains Integer</para>
         /// <para>Represents the following attribute in the schema: containsInteger</para>
         /// </summary>
-        public BooleanValue ContainsInteger { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ContainsInteger
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Numeric Value</para>
         /// <para>Represents the following attribute in the schema: minValue</para>
         /// </summary>
-        public DoubleValue MinValue { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue MinValue
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum Numeric Value</para>
         /// <para>Represents the following attribute in the schema: maxValue</para>
         /// </summary>
-        public DoubleValue MaxValue { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue MaxValue
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Date Time</para>
         /// <para>Represents the following attribute in the schema: minDate</para>
         /// </summary>
-        public DateTimeValue MinDate { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue MinDate
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum Date Time Value</para>
         /// <para>Represents the following attribute in the schema: maxDate</para>
         /// </summary>
-        public DateTimeValue MaxDate { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue MaxDate
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shared Items Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Long Text</para>
         /// <para>Represents the following attribute in the schema: longText</para>
         /// </summary>
-        public BooleanValue LongText { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharedItems>();
+        public BooleanValue LongText
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37436,14 +42777,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Parent</para>
         /// <para>Represents the following attribute in the schema: par</para>
         /// </summary>
-        public UInt32Value ParentId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ParentId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Base</para>
         /// <para>Represents the following attribute in the schema: base</para>
         /// </summary>
-        public UInt32Value Base { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldGroup>();
+        public UInt32Value Base
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37516,8 +42864,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheFieldExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension), 0, 0)
@@ -37582,8 +42928,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheFieldExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37660,8 +43009,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldsUsage>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37732,8 +43084,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Grouping Level Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupLevels>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37800,8 +43155,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheHierarchyExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension), 0, 0)
@@ -37866,8 +43219,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheHierarchyExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37940,8 +43296,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculatedMemberExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension), 0, 0)
@@ -38006,8 +43360,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculatedMemberExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38053,38 +43410,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>First Header Row</para>
         /// <para>Represents the following attribute in the schema: firstHeaderRow</para>
         /// </summary>
-        public UInt32Value FirstHeaderRow { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FirstHeaderRow
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>PivotTable Data First Row</para>
         /// <para>Represents the following attribute in the schema: firstDataRow</para>
         /// </summary>
-        public UInt32Value FirstDataRow { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FirstDataRow
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>First Data Column</para>
         /// <para>Represents the following attribute in the schema: firstDataCol</para>
         /// </summary>
-        public UInt32Value FirstDataColumn { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FirstDataColumn
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rows Per Page Count</para>
         /// <para>Represents the following attribute in the schema: rowPageCount</para>
         /// </summary>
-        public UInt32Value RowPageCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RowPageCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Columns Per Page</para>
         /// <para>Represents the following attribute in the schema: colPageCount</para>
         /// </summary>
-        public UInt32Value ColumnsPerPage { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Location>();
+        public UInt32Value ColumnsPerPage
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38165,8 +43545,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFields>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38237,8 +43620,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Repeated Items Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowFields>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38309,8 +43695,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Items in a Row Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowItems>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38381,8 +43770,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Repeated Items Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnFields>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38453,8 +43845,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Column Item Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnItems>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38525,8 +43920,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Item Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageFields>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38597,8 +43995,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Data Items Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataFields>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38669,8 +44070,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Formats Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formats>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38741,8 +44145,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Conditional Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormats>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38813,8 +44220,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartFormats>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38885,8 +44295,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLAP Hierarchy Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotHierarchies>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38926,38 +44339,61 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table Style Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Row Header Formatting</para>
         /// <para>Represents the following attribute in the schema: showRowHeaders</para>
         /// </summary>
-        public BooleanValue ShowRowHeaders { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowRowHeaders
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Table Style Column Header Formatting</para>
         /// <para>Represents the following attribute in the schema: showColHeaders</para>
         /// </summary>
-        public BooleanValue ShowColumnHeaders { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowColumnHeaders
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Row Stripes</para>
         /// <para>Represents the following attribute in the schema: showRowStripes</para>
         /// </summary>
-        public BooleanValue ShowRowStripes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowRowStripes
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Column Stripes</para>
         /// <para>Represents the following attribute in the schema: showColStripes</para>
         /// </summary>
-        public BooleanValue ShowColumnStripes { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowColumnStripes
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Last Column</para>
         /// <para>Represents the following attribute in the schema: showLastColumn</para>
         /// </summary>
-        public BooleanValue ShowLastColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotTableStyle>();
+        public BooleanValue ShowLastColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39032,8 +44468,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pivot Filter Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFilters>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39104,8 +44543,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Item Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowHierarchiesUsage>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39176,8 +44618,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Items Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnHierarchiesUsage>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39243,8 +44688,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public PivotTableDefinitionExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotTableDefinitionExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -39312,8 +44755,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotTableDefinitionExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39387,8 +44833,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataFieldExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension), 0, 0)
@@ -39453,8 +44897,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataFieldExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39527,8 +44974,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFilterExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension), 0, 0)
@@ -39597,44 +45042,71 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Preserve Sort and Filter Layout</para>
         /// <para>Represents the following attribute in the schema: preserveSortFilterLayout</para>
         /// </summary>
-        public BooleanValue PreserveSortFilterLayout { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PreserveSortFilterLayout
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Next Field Id Wrapped</para>
         /// <para>Represents the following attribute in the schema: fieldIdWrapped</para>
         /// </summary>
-        public BooleanValue FieldIdWrapped { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FieldIdWrapped
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Headers In Last Refresh</para>
         /// <para>Represents the following attribute in the schema: headersInLastRefresh</para>
         /// </summary>
-        public BooleanValue HeadersInLastRefresh { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HeadersInLastRefresh
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Refresh Version</para>
         /// <para>Represents the following attribute in the schema: minimumVersion</para>
         /// </summary>
-        public ByteValue MinimumVersion { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue MinimumVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Next field id</para>
         /// <para>Represents the following attribute in the schema: nextId</para>
         /// </summary>
-        public UInt32Value NextId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NextId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Columns Left</para>
         /// <para>Represents the following attribute in the schema: unboundColumnsLeft</para>
         /// </summary>
-        public UInt32Value UnboundColumnsLeft { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value UnboundColumnsLeft
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Columns Right</para>
         /// <para>Represents the following attribute in the schema: unboundColumnsRight</para>
         /// </summary>
-        public UInt32Value UnboundColumnsRight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QueryTableRefresh>();
+        public UInt32Value UnboundColumnsRight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39771,8 +45243,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QueryTableExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension), 0, 0)
@@ -39804,8 +45274,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Full Calculation On Load</para>
         /// <para>Represents the following attribute in the schema: fullCalcOnLoad</para>
         /// </summary>
-        public BooleanValue FullCalculationOnLoad { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SheetCalculationProperties>();
+        public BooleanValue FullCalculationOnLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39864,8 +45337,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public ProtectedRanges(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ProtectedRanges>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -39929,20 +45400,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Current Scenario</para>
         /// <para>Represents the following attribute in the schema: current</para>
         /// </summary>
-        public UInt32Value Current { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Current
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Last Shown Scenario</para>
         /// <para>Represents the following attribute in the schema: show</para>
         /// </summary>
-        public UInt32Value Show { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Show
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sequence of References</para>
         /// <para>Represents the following attribute in the schema: sqref</para>
         /// </summary>
-        public ListValue<StringValue> SequenceOfReferences { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Scenarios>();
+        public ListValue<StringValue> SequenceOfReferences
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40015,8 +45497,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MergeCells>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40087,26 +45572,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Disable Prompts</para>
         /// <para>Represents the following attribute in the schema: disablePrompts</para>
         /// </summary>
-        public BooleanValue DisablePrompts { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DisablePrompts
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Left Corner (X Coodrinate)</para>
         /// <para>Represents the following attribute in the schema: xWindow</para>
         /// </summary>
-        public UInt32Value XWindow { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value XWindow
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Left Corner (Y Coordinate)</para>
         /// <para>Represents the following attribute in the schema: yWindow</para>
         /// </summary>
-        public UInt32Value YWindow { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value YWindow
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Validation Item Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataValidations>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40184,8 +45684,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hyperlinks>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Hyperlink), 1, 0)
@@ -40243,8 +45741,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public CellWatches(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellWatches>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -40305,8 +45801,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public IgnoredErrors(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IgnoredErrors>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -40371,8 +45865,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableParts>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40438,8 +45935,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public WorksheetExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorksheetExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -40517,8 +46012,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorksheetExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40601,8 +46099,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Number Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingFormats>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40673,7 +46174,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Font Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>knownFonts, this property is only available in Office2010, Office2013, Office2016</para>
@@ -40682,8 +46187,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x14ac=http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac
         /// </remark>
-        public BooleanValue KnownFonts { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Fonts>();
+        public BooleanValue KnownFonts
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40758,8 +46266,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Fill Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Fills>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40830,8 +46341,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Border Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Borders>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40902,8 +46416,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Style Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellStyleFormats>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40974,8 +46491,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellFormats>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41046,8 +46566,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Style Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellStyles>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41118,8 +46641,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DifferentialFormats>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41190,20 +46716,31 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table Style Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Table Style</para>
         /// <para>Represents the following attribute in the schema: defaultTableStyle</para>
         /// </summary>
-        public StringValue DefaultTableStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DefaultTableStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Pivot Style</para>
         /// <para>Represents the following attribute in the schema: defaultPivotStyle</para>
         /// </summary>
-        public StringValue DefaultPivotStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyles>();
+        public StringValue DefaultPivotStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41279,8 +46816,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Colors(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Colors>();
 
         /// <summary>
         /// <para>Color Indexes.</para>
@@ -41367,8 +46902,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StylesheetExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension), 0, 0)
@@ -41437,8 +46970,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StylesheetExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41486,32 +47022,51 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Application Name</para>
         /// <para>Represents the following attribute in the schema: appName</para>
         /// </summary>
-        public StringValue ApplicationName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ApplicationName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Last Edited Version</para>
         /// <para>Represents the following attribute in the schema: lastEdited</para>
         /// </summary>
-        public StringValue LastEdited { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue LastEdited
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Lowest Edited Version</para>
         /// <para>Represents the following attribute in the schema: lowestEdited</para>
         /// </summary>
-        public StringValue LowestEdited { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue LowestEdited
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Build Version</para>
         /// <para>Represents the following attribute in the schema: rupBuild</para>
         /// </summary>
-        public StringValue BuildVersion { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue BuildVersion
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Code Name</para>
         /// <para>Represents the following attribute in the schema: codeName</para>
         /// </summary>
-        public StringValue CodeName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FileVersion>();
+        public StringValue CodeName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41560,44 +47115,71 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Read Only Recommended</para>
         /// <para>Represents the following attribute in the schema: readOnlyRecommended</para>
         /// </summary>
-        public BooleanValue ReadOnlyRecommended { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ReadOnlyRecommended
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User Name</para>
         /// <para>Represents the following attribute in the schema: userName</para>
         /// </summary>
-        public StringValue UserName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UserName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Write Reservation Password</para>
         /// <para>Represents the following attribute in the schema: reservationPassword</para>
         /// </summary>
-        public HexBinaryValue ReservationPassword { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue ReservationPassword
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Password hash algorithm</para>
         /// <para>Represents the following attribute in the schema: algorithmName</para>
         /// </summary>
-        public StringValue AlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Password hash</para>
         /// <para>Represents the following attribute in the schema: hashValue</para>
         /// </summary>
-        public Base64BinaryValue HashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue HashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Salt for password hash</para>
         /// <para>Represents the following attribute in the schema: saltValue</para>
         /// </summary>
-        public Base64BinaryValue SaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue SaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Spin count for password hash</para>
         /// <para>Represents the following attribute in the schema: spinCount</para>
         /// </summary>
-        public UInt32Value SpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FileSharing>();
+        public UInt32Value SpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41645,116 +47227,191 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Date 1904</para>
         /// <para>Represents the following attribute in the schema: date1904</para>
         /// </summary>
-        public BooleanValue Date1904 { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Date1904
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dateCompatibility, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dateCompatibility</para>
         /// </summary>
-        public BooleanValue DateCompatibility { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DateCompatibility
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Objects</para>
         /// <para>Represents the following attribute in the schema: showObjects</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues> ShowObjects { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues> ShowObjects
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Border Unselected Table</para>
         /// <para>Represents the following attribute in the schema: showBorderUnselectedTables</para>
         /// </summary>
-        public BooleanValue ShowBorderUnselectedTables { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowBorderUnselectedTables
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Filter Privacy</para>
         /// <para>Represents the following attribute in the schema: filterPrivacy</para>
         /// </summary>
-        public BooleanValue FilterPrivacy { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FilterPrivacy
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Prompted Solutions</para>
         /// <para>Represents the following attribute in the schema: promptedSolutions</para>
         /// </summary>
-        public BooleanValue PromptedSolutions { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PromptedSolutions
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Ink Annotations</para>
         /// <para>Represents the following attribute in the schema: showInkAnnotation</para>
         /// </summary>
-        public BooleanValue ShowInkAnnotation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowInkAnnotation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Create Backup File</para>
         /// <para>Represents the following attribute in the schema: backupFile</para>
         /// </summary>
-        public BooleanValue BackupFile { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BackupFile
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Save External Link Values</para>
         /// <para>Represents the following attribute in the schema: saveExternalLinkValues</para>
         /// </summary>
-        public BooleanValue SaveExternalLinkValues { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SaveExternalLinkValues
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Update Links Behavior</para>
         /// <para>Represents the following attribute in the schema: updateLinks</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues> UpdateLinks { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues> UpdateLinks
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Code Name</para>
         /// <para>Represents the following attribute in the schema: codeName</para>
         /// </summary>
-        public StringValue CodeName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CodeName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Pivot Field List</para>
         /// <para>Represents the following attribute in the schema: hidePivotFieldList</para>
         /// </summary>
-        public BooleanValue HidePivotFieldList { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HidePivotFieldList
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Pivot Chart Filter</para>
         /// <para>Represents the following attribute in the schema: showPivotChartFilter</para>
         /// </summary>
-        public BooleanValue ShowPivotChartFilter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowPivotChartFilter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Refresh Query</para>
         /// <para>Represents the following attribute in the schema: allowRefreshQuery</para>
         /// </summary>
-        public BooleanValue AllowRefreshQuery { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AllowRefreshQuery
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Publish Items</para>
         /// <para>Represents the following attribute in the schema: publishItems</para>
         /// </summary>
-        public BooleanValue PublishItems { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue PublishItems
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Check Compatibility On Save</para>
         /// <para>Represents the following attribute in the schema: checkCompatibility</para>
         /// </summary>
-        public BooleanValue CheckCompatibility { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CheckCompatibility
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Auto Compress Pictures</para>
         /// <para>Represents the following attribute in the schema: autoCompressPictures</para>
         /// </summary>
-        public BooleanValue AutoCompressPictures { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoCompressPictures
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Refresh all Connections on Open</para>
         /// <para>Represents the following attribute in the schema: refreshAllConnections</para>
         /// </summary>
-        public BooleanValue RefreshAllConnections { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RefreshAllConnections
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Theme Version</para>
         /// <para>Represents the following attribute in the schema: defaultThemeVersion</para>
         /// </summary>
-        public UInt32Value DefaultThemeVersion { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorkbookProperties>();
+        public UInt32Value DefaultThemeVersion
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41808,80 +47465,131 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Workbook Password</para>
         /// <para>Represents the following attribute in the schema: workbookPassword</para>
         /// </summary>
-        public HexBinaryValue WorkbookPassword { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue WorkbookPassword
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revisions Password</para>
         /// <para>Represents the following attribute in the schema: revisionsPassword</para>
         /// </summary>
-        public HexBinaryValue RevisionsPassword { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RevisionsPassword
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Lock Structure</para>
         /// <para>Represents the following attribute in the schema: lockStructure</para>
         /// </summary>
-        public BooleanValue LockStructure { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LockStructure
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Lock Windows</para>
         /// <para>Represents the following attribute in the schema: lockWindows</para>
         /// </summary>
-        public BooleanValue LockWindows { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LockWindows
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Lock Revisions</para>
         /// <para>Represents the following attribute in the schema: lockRevision</para>
         /// </summary>
-        public BooleanValue LockRevision { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LockRevision
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Name</para>
         /// <para>Represents the following attribute in the schema: revisionsAlgorithmName</para>
         /// </summary>
-        public StringValue RevisionsAlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue RevisionsAlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Password Hash Value</para>
         /// <para>Represents the following attribute in the schema: revisionsHashValue</para>
         /// </summary>
-        public Base64BinaryValue RevisionsHashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue RevisionsHashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Salt Value for Password Verifier</para>
         /// <para>Represents the following attribute in the schema: revisionsSaltValue</para>
         /// </summary>
-        public Base64BinaryValue RevisionsSaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue RevisionsSaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Iterations to Run Hashing Algorithm</para>
         /// <para>Represents the following attribute in the schema: revisionsSpinCount</para>
         /// </summary>
-        public UInt32Value RevisionsSpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RevisionsSpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Name</para>
         /// <para>Represents the following attribute in the schema: workbookAlgorithmName</para>
         /// </summary>
-        public StringValue WorkbookAlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue WorkbookAlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Password Hash Value</para>
         /// <para>Represents the following attribute in the schema: workbookHashValue</para>
         /// </summary>
-        public Base64BinaryValue WorkbookHashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue WorkbookHashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Salt Value for Password Verifier</para>
         /// <para>Represents the following attribute in the schema: workbookSaltValue</para>
         /// </summary>
-        public Base64BinaryValue WorkbookSaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue WorkbookSaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Iterations to Run Hashing Algorithm</para>
         /// <para>Represents the following attribute in the schema: workbookSpinCount</para>
         /// </summary>
-        public UInt32Value WorkbookSpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorkbookProtection>();
+        public UInt32Value WorkbookSpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41959,8 +47667,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookViews>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), 1, 0)
@@ -42018,8 +47724,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public Sheets(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Sheets>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -42083,8 +47787,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Built-in Function Group Count</para>
         /// <para>Represents the following attribute in the schema: builtInGroupCount</para>
         /// </summary>
-        public UInt32Value BuiltInGroupCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FunctionGroups>();
+        public UInt32Value BuiltInGroupCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -42157,8 +47864,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalReferences>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalReference), 1, 65534)
@@ -42217,8 +47922,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefinedNames>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DefinedName), 0, 0)
@@ -42250,80 +47953,131 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Calculation Id</para>
         /// <para>Represents the following attribute in the schema: calcId</para>
         /// </summary>
-        public UInt32Value CalculationId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value CalculationId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculation Mode</para>
         /// <para>Represents the following attribute in the schema: calcMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues> CalculationMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues> CalculationMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Full Calculation On Load</para>
         /// <para>Represents the following attribute in the schema: fullCalcOnLoad</para>
         /// </summary>
-        public BooleanValue FullCalculationOnLoad { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FullCalculationOnLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference Mode</para>
         /// <para>Represents the following attribute in the schema: refMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues> ReferenceMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues> ReferenceMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculation Iteration</para>
         /// <para>Represents the following attribute in the schema: iterate</para>
         /// </summary>
-        public BooleanValue Iterate { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Iterate
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Iteration Count</para>
         /// <para>Represents the following attribute in the schema: iterateCount</para>
         /// </summary>
-        public UInt32Value IterateCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value IterateCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Iterative Calculation Delta</para>
         /// <para>Represents the following attribute in the schema: iterateDelta</para>
         /// </summary>
-        public DoubleValue IterateDelta { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue IterateDelta
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Full Precision Calculation</para>
         /// <para>Represents the following attribute in the schema: fullPrecision</para>
         /// </summary>
-        public BooleanValue FullPrecision { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FullPrecision
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calc Completed</para>
         /// <para>Represents the following attribute in the schema: calcCompleted</para>
         /// </summary>
-        public BooleanValue CalculationCompleted { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CalculationCompleted
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Calculate On Save</para>
         /// <para>Represents the following attribute in the schema: calcOnSave</para>
         /// </summary>
-        public BooleanValue CalculationOnSave { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CalculationOnSave
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Concurrent Calculations</para>
         /// <para>Represents the following attribute in the schema: concurrentCalc</para>
         /// </summary>
-        public BooleanValue ConcurrentCalculation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ConcurrentCalculation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Concurrent Thread Manual Count</para>
         /// <para>Represents the following attribute in the schema: concurrentManualCount</para>
         /// </summary>
-        public UInt32Value ConcurrentManualCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ConcurrentManualCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Full Calculation</para>
         /// <para>Represents the following attribute in the schema: forceFullCalc</para>
         /// </summary>
-        public BooleanValue ForceFullCalculation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculationProperties>();
+        public BooleanValue ForceFullCalculation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -42368,8 +48122,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleSize>();
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -42432,8 +48189,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomWorkbookViews>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView), 1, 0)
@@ -42492,8 +48247,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotCaches>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
@@ -42525,56 +48278,91 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>css</para>
         /// <para>Represents the following attribute in the schema: css</para>
         /// </summary>
-        public BooleanValue UseCss { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UseCss
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>thicket</para>
         /// <para>Represents the following attribute in the schema: thicket</para>
         /// </summary>
-        public BooleanValue Thicket { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Thicket
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>longFileNames</para>
         /// <para>Represents the following attribute in the schema: longFileNames</para>
         /// </summary>
-        public BooleanValue LongFileNames { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LongFileNames
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>vml</para>
         /// <para>Represents the following attribute in the schema: vml</para>
         /// </summary>
-        public BooleanValue UseVml { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UseVml
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allowPng</para>
         /// <para>Represents the following attribute in the schema: allowPng</para>
         /// </summary>
-        public BooleanValue AllowPng { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AllowPng
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>targetScreenSize</para>
         /// <para>Represents the following attribute in the schema: targetScreenSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues> TargetScreenSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues> TargetScreenSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dpi</para>
         /// <para>Represents the following attribute in the schema: dpi</para>
         /// </summary>
-        public UInt32Value Dpi { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Dpi
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>codePage</para>
         /// <para>Represents the following attribute in the schema: codePage</para>
         /// </summary>
-        public UInt32Value CodePage { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value CodePage
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>characterSet</para>
         /// <para>Represents the following attribute in the schema: characterSet</para>
         /// </summary>
-        public StringValue CharacterSet { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebPublishing>();
+        public StringValue CharacterSet
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -42615,26 +48403,41 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Auto Recover</para>
         /// <para>Represents the following attribute in the schema: autoRecover</para>
         /// </summary>
-        public BooleanValue AutoRecover { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoRecover
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Crash Save</para>
         /// <para>Represents the following attribute in the schema: crashSave</para>
         /// </summary>
-        public BooleanValue CrashSave { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CrashSave
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Extract Load</para>
         /// <para>Represents the following attribute in the schema: dataExtractLoad</para>
         /// </summary>
-        public BooleanValue DataExtractLoad { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DataExtractLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Repair Load</para>
         /// <para>Represents the following attribute in the schema: repairLoad</para>
         /// </summary>
-        public BooleanValue RepairLoad { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FileRecoveryProperties>();
+        public BooleanValue RepairLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -42701,8 +48504,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebPublishObjects>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -42768,8 +48574,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public WorkbookExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorkbookExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -42853,8 +48657,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorkbookExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

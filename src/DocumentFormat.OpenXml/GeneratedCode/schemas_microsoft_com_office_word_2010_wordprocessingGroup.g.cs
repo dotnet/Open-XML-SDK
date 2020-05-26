@@ -70,8 +70,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WordprocessingGroup>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
@@ -147,8 +145,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         public GroupShape(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupShape>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -328,32 +324,51 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingProperties>();
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -473,8 +488,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGraphicFrameProperties>();
-
         /// <summary>
         /// <para>Graphic Frame Locks.</para>
         /// <para>Represents the following element tag in the schema: a:graphicFrameLocks.</para>
@@ -566,20 +579,31 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        public BooleanValue HorizontalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HorizontalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        public BooleanValue VerticalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Transform2D>();
+        public BooleanValue VerticalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -675,8 +699,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -742,8 +764,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         public NonVisualGroupDrawingShapeProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGroupDrawingShapeProperties>();
 
         /// <summary>
         /// <para>GroupShapeLocks.</para>
@@ -854,8 +874,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -967,8 +990,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         public GraphicFrame(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GraphicFrame>();
 
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>

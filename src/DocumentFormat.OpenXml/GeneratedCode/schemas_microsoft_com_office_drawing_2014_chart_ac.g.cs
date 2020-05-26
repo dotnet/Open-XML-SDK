@@ -64,8 +64,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLvlStrData>();
-
         /// <summary>
         /// <para>PointCount.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>

@@ -34,14 +34,21 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>resource</para>
         /// <para>Represents the following attribute in the schema: resource</para>
         /// </summary>
-        public StringValue Resource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Resource
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>composite</para>
         /// <para>Represents the following attribute in the schema: composite</para>
         /// </summary>
-        public BooleanValue Composite { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DerivedFrom>();
+        public BooleanValue Composite
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -103,8 +110,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Info>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -180,13 +190,21 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>initial</para>
         /// <para>Represents the following attribute in the schema: initial</para>
         /// </summary>
-        public IntegerValue Initial { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Initial
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>final</para>
         /// <para>Represents the following attribute in the schema: final</para>
         /// </summary>
-        public ListValue<DecimalValue> Final { get => GetAttribute<ListValue<DecimalValue>>(); set => SetAttribute(value); }
+        public ListValue<DecimalValue> Final
+        {
+            get => GetAttribute<ListValue<DecimalValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time-ref-uri</para>
@@ -195,7 +213,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue TimeReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TimeReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time-ref-anchor-point</para>
@@ -204,8 +226,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Lattice>();
+        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -264,8 +289,6 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Literal>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Literal>(deep);
@@ -330,7 +353,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tokens</para>
@@ -339,7 +366,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Tokens { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tokens
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>process</para>
@@ -348,7 +379,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Process { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Process
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lang</para>
@@ -357,7 +392,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>signal</para>
@@ -366,7 +405,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Signal { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Signal
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>signal-size</para>
@@ -375,7 +418,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue SignalSize { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue SignalSize
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>media-type</para>
@@ -384,7 +431,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue MediaType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MediaType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>confidence</para>
@@ -393,7 +444,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Confidence { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Confidence
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>source</para>
@@ -402,7 +457,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Source { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>start</para>
@@ -411,7 +470,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public UInt64Value Start { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
+        public UInt64Value Start
+        {
+            get => GetAttribute<UInt64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>end</para>
@@ -420,7 +483,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public UInt64Value End { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
+        public UInt64Value End
+        {
+            get => GetAttribute<UInt64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time-ref-uri</para>
@@ -429,7 +496,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue TimeReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TimeReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time-ref-anchor-point</para>
@@ -438,7 +509,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>offset-to-start</para>
@@ -447,7 +522,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue OffsetToStart { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue OffsetToStart
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>duration</para>
@@ -456,7 +535,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue Duration { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Duration
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>medium</para>
@@ -465,7 +548,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(); set => SetAttribute(value); }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mode</para>
@@ -474,7 +561,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<StringValue> Mode { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> Mode
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>function</para>
@@ -483,7 +574,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Function { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Function
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>verbal</para>
@@ -492,7 +587,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public BooleanValue Verbal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Verbal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cost</para>
@@ -501,7 +600,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Cost { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Cost
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>grammar-ref</para>
@@ -510,7 +613,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue GrammarRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GrammarRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endpoint-info-ref</para>
@@ -519,7 +626,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue EndpointInfoRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue EndpointInfoRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>model-ref</para>
@@ -528,7 +639,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue ModelRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ModelRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dialog-turn</para>
@@ -537,7 +652,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue DialogTurn { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DialogTurn
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>no-input</para>
@@ -546,7 +665,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public BooleanValue NoInput { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoInput
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>uninterpreted</para>
@@ -555,8 +678,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public BooleanValue Uninterpreted { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Interpretation>();
+        public BooleanValue Uninterpreted
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -686,13 +812,21 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>disjunction-type</para>
         /// <para>Represents the following attribute in the schema: disjunction-type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues> DisjunctionType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues> DisjunctionType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tokens</para>
@@ -701,7 +835,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Tokens { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tokens
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>process</para>
@@ -710,7 +848,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Process { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Process
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lang</para>
@@ -719,7 +861,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>signal</para>
@@ -728,7 +874,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Signal { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Signal
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>signal-size</para>
@@ -737,7 +887,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue SignalSize { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue SignalSize
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>media-type</para>
@@ -746,7 +900,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue MediaType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MediaType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>confidence</para>
@@ -755,7 +913,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Confidence { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Confidence
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>source</para>
@@ -764,7 +926,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Source { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>start</para>
@@ -773,7 +939,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public UInt64Value Start { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
+        public UInt64Value Start
+        {
+            get => GetAttribute<UInt64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>end</para>
@@ -782,7 +952,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public UInt64Value End { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
+        public UInt64Value End
+        {
+            get => GetAttribute<UInt64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time-ref-uri</para>
@@ -791,7 +965,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue TimeReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TimeReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time-ref-anchor-point</para>
@@ -800,7 +978,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>offset-to-start</para>
@@ -809,7 +991,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue OffsetToStart { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue OffsetToStart
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>duration</para>
@@ -818,7 +1004,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue Duration { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Duration
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>medium</para>
@@ -827,7 +1017,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(); set => SetAttribute(value); }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mode</para>
@@ -836,7 +1030,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<StringValue> Mode { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> Mode
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>function</para>
@@ -845,7 +1043,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Function { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Function
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>verbal</para>
@@ -854,7 +1056,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public BooleanValue Verbal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Verbal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cost</para>
@@ -863,7 +1069,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Cost { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Cost
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>grammar-ref</para>
@@ -872,7 +1082,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue GrammarRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GrammarRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endpoint-info-ref</para>
@@ -881,7 +1095,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue EndpointInfoRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue EndpointInfoRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>model-ref</para>
@@ -890,7 +1108,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue ModelRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ModelRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dialog-turn</para>
@@ -899,8 +1121,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue DialogTurn { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OneOf>();
+        public StringValue DialogTurn
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1031,7 +1256,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tokens</para>
@@ -1040,7 +1269,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Tokens { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tokens
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>process</para>
@@ -1049,7 +1282,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Process { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Process
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lang</para>
@@ -1058,7 +1295,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>signal</para>
@@ -1067,7 +1308,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Signal { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Signal
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>signal-size</para>
@@ -1076,7 +1321,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue SignalSize { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue SignalSize
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>media-type</para>
@@ -1085,7 +1334,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue MediaType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MediaType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>confidence</para>
@@ -1094,7 +1347,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Confidence { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Confidence
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>source</para>
@@ -1103,7 +1360,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Source { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>start</para>
@@ -1112,7 +1373,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public UInt64Value Start { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
+        public UInt64Value Start
+        {
+            get => GetAttribute<UInt64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>end</para>
@@ -1121,7 +1386,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public UInt64Value End { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
+        public UInt64Value End
+        {
+            get => GetAttribute<UInt64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time-ref-uri</para>
@@ -1130,7 +1399,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue TimeReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TimeReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time-ref-anchor-point</para>
@@ -1139,7 +1412,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>offset-to-start</para>
@@ -1148,7 +1425,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue OffsetToStart { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue OffsetToStart
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>duration</para>
@@ -1157,7 +1438,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue Duration { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Duration
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>medium</para>
@@ -1166,7 +1451,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(); set => SetAttribute(value); }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mode</para>
@@ -1175,7 +1464,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<StringValue> Mode { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> Mode
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>function</para>
@@ -1184,7 +1477,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Function { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Function
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>verbal</para>
@@ -1193,7 +1490,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public BooleanValue Verbal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Verbal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cost</para>
@@ -1202,7 +1503,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Cost { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Cost
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>grammar-ref</para>
@@ -1211,7 +1516,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue GrammarRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GrammarRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endpoint-info-ref</para>
@@ -1220,7 +1529,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue EndpointInfoRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue EndpointInfoRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>model-ref</para>
@@ -1229,7 +1542,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue ModelRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ModelRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dialog-turn</para>
@@ -1238,8 +1555,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue DialogTurn { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Group>();
+        public StringValue DialogTurn
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1362,7 +1682,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tokens</para>
@@ -1371,7 +1695,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Tokens { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tokens
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>process</para>
@@ -1380,7 +1708,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Process { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Process
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lang</para>
@@ -1389,7 +1721,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>signal</para>
@@ -1398,7 +1734,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Signal { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Signal
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>signal-size</para>
@@ -1407,7 +1747,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue SignalSize { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue SignalSize
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>media-type</para>
@@ -1416,7 +1760,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue MediaType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MediaType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>confidence</para>
@@ -1425,7 +1773,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Confidence { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Confidence
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>source</para>
@@ -1434,7 +1786,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Source { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>start</para>
@@ -1443,7 +1799,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public UInt64Value Start { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
+        public UInt64Value Start
+        {
+            get => GetAttribute<UInt64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>end</para>
@@ -1452,7 +1812,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public UInt64Value End { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
+        public UInt64Value End
+        {
+            get => GetAttribute<UInt64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time-ref-uri</para>
@@ -1461,7 +1825,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue TimeReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TimeReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time-ref-anchor-point</para>
@@ -1470,7 +1838,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>offset-to-start</para>
@@ -1479,7 +1851,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue OffsetToStart { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue OffsetToStart
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>duration</para>
@@ -1488,7 +1864,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue Duration { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Duration
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>medium</para>
@@ -1497,7 +1877,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(); set => SetAttribute(value); }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mode</para>
@@ -1506,7 +1890,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<StringValue> Mode { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> Mode
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>function</para>
@@ -1515,7 +1903,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Function { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Function
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>verbal</para>
@@ -1524,7 +1916,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public BooleanValue Verbal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Verbal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cost</para>
@@ -1533,7 +1929,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Cost { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Cost
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>grammar-ref</para>
@@ -1542,7 +1942,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue GrammarRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GrammarRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endpoint-info-ref</para>
@@ -1551,7 +1955,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue EndpointInfoRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue EndpointInfoRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>model-ref</para>
@@ -1560,7 +1968,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue ModelRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ModelRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dialog-turn</para>
@@ -1569,8 +1981,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue DialogTurn { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Sequence>();
+        public StringValue DialogTurn
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1675,8 +2090,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>ref</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupInfo>();
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1752,8 +2170,6 @@ namespace DocumentFormat.OpenXml.EMMA
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Derivation>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
@@ -1788,14 +2204,21 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ref</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Grammar>();
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1861,14 +2284,21 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ref</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Model>();
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1947,8 +2377,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndPointInfo>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2016,7 +2449,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endpoint-role</para>
@@ -2025,7 +2462,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues> EndpointRole { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues> EndpointRole
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endpoint-address</para>
@@ -2034,7 +2475,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue EndPointAddress { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue EndPointAddress
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>message-id</para>
@@ -2043,7 +2488,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue MessageId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MessageId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>port-num</para>
@@ -2052,7 +2501,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue PortNumber { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue PortNumber
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>port-type</para>
@@ -2061,7 +2514,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue PortType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue PortType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endpoint-pair-ref</para>
@@ -2070,7 +2527,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue EndpointPairRef { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue EndpointPairRef
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>service-name</para>
@@ -2079,7 +2540,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue ServiceName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ServiceName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>media-type</para>
@@ -2088,7 +2553,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue MediaType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MediaType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>medium</para>
@@ -2097,7 +2566,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(); set => SetAttribute(value); }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mode</para>
@@ -2106,8 +2579,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<StringValue> Mode { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndPoint>();
+        public ListValue<StringValue> Mode
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2192,7 +2668,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>node-number</para>
         /// <para>Represents the following attribute in the schema: node-number</para>
         /// </summary>
-        public IntegerValue NodeNumber { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue NodeNumber
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>confidence</para>
@@ -2201,7 +2681,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Confidence { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Confidence
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cost</para>
@@ -2210,8 +2694,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Cost { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Node>();
+        public DecimalValue Cost
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2294,13 +2781,21 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>from</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
-        public IntegerValue From { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue From
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>to</para>
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
-        public IntegerValue To { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue To
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>start</para>
@@ -2309,7 +2804,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public UInt64Value Start { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
+        public UInt64Value Start
+        {
+            get => GetAttribute<UInt64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>end</para>
@@ -2318,7 +2817,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public UInt64Value End { get => GetAttribute<UInt64Value>(); set => SetAttribute(value); }
+        public UInt64Value End
+        {
+            get => GetAttribute<UInt64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>offset-to-start</para>
@@ -2327,7 +2830,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue OffsetToStart { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue OffsetToStart
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>duration</para>
@@ -2336,7 +2843,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public IntegerValue Duration { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Duration
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>confidence</para>
@@ -2345,7 +2856,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Confidence { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Confidence
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cost</para>
@@ -2354,7 +2869,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public DecimalValue Cost { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue Cost
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lang</para>
@@ -2363,7 +2882,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>medium</para>
@@ -2372,7 +2895,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(); set => SetAttribute(value); }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mode</para>
@@ -2381,7 +2908,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public ListValue<StringValue> Mode { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> Mode
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>source</para>
@@ -2390,8 +2921,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <remark>
         /// xmlns:emma=http://www.w3.org/2003/04/emma
         /// </remark>
-        public StringValue Source { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Arc>();
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2503,8 +3037,11 @@ namespace DocumentFormat.OpenXml.EMMA
         /// <para>version</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-        public StringValue Version { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Emma>();
+        public StringValue Version
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

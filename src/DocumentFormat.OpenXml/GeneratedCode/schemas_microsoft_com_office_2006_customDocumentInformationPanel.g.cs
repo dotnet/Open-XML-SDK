@@ -63,8 +63,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomPropertyEditors>();
-
         /// <summary>
         /// <para>ShowOnOpen.</para>
         /// <para>Represents the following element tag in the schema: cdip:showOnOpen.</para>
@@ -134,8 +132,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PropertyEditorNamespace>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PropertyEditorNamespace>(deep);
     }
@@ -170,8 +166,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultPropertyEditorNamespace>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultPropertyEditorNamespace>(deep);
     }
@@ -204,8 +198,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<XsnFileLocation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnFileLocation>(deep);
@@ -240,8 +232,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             return new BooleanValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowOnOpen>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowOnOpen>(deep);
@@ -295,8 +285,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         public CustomPropertyEditor(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomPropertyEditor>();
 
         /// <summary>
         /// <para>PropertyEditorNamespace.</para>

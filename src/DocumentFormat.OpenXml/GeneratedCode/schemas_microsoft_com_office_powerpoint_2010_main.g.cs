@@ -67,8 +67,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualContentPartProperties>();
-
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: p14:cNvPr.</para>
@@ -174,20 +172,31 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        public BooleanValue HorizontalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HorizontalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        public BooleanValue VerticalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Transform2D>();
+        public BooleanValue VerticalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -287,8 +296,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Modify</para>
         /// <para>Represents the following attribute in the schema: mod</para>
         /// </summary>
-        public BooleanValue Modify { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionListModify>();
+        public BooleanValue Modify
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -374,7 +386,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Embed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Embed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Linked Picture Reference</para>
@@ -383,8 +399,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Link { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Media>();
+        public StringValue Link
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -483,8 +502,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VortexTransition>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VortexTransition>(deep);
     }
@@ -504,8 +521,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public PanTransition() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PanTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PanTransition>(deep);
@@ -529,7 +544,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -558,8 +577,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SwitchTransition>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SwitchTransition>(deep);
     }
@@ -579,8 +596,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public FlipTransition() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FlipTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FlipTransition>(deep);
@@ -602,8 +617,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FerrisTransition>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FerrisTransition>(deep);
     }
@@ -624,8 +637,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GalleryTransition>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GalleryTransition>(deep);
     }
@@ -645,8 +656,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public ConveyorTransition() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConveyorTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConveyorTransition>(deep);
@@ -670,7 +679,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -703,8 +716,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public StringValue Direction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RippleTransition>();
+        public StringValue Direction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -740,8 +756,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HoneycombTransition>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HoneycombTransition>(deep);
     }
@@ -761,8 +775,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public FlashTransition() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FlashTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FlashTransition>(deep);
@@ -803,20 +815,31 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>isContent, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isContent</para>
         /// </summary>
-        public BooleanValue IsContent { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsContent
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>isInverted, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isInverted</para>
         /// </summary>
-        public BooleanValue IsInverted { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrismTransition>();
+        public BooleanValue IsInverted
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -850,8 +873,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoorsTransition>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoorsTransition>(deep);
     }
@@ -871,8 +892,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public WindowTransition() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WindowTransition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WindowTransition>(deep);
@@ -896,7 +915,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Transition Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -929,14 +952,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pattern, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pattern</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues> Pattern { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GlitterTransition>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues> Pattern
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -976,8 +1006,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WarpTransition>();
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1013,14 +1046,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hasBounce, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: hasBounce</para>
         /// </summary>
-        public BooleanValue HasBounce { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FlythroughTransition>();
+        public BooleanValue HasBounce
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1057,14 +1097,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>pattern, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pattern</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues> Pattern { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues> Pattern
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShredTransition>();
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1104,14 +1151,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>thruBlk, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: thruBlk</para>
         /// </summary>
-        public BooleanValue ThroughBlack { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ThroughBlack
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevealTransition>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1148,8 +1202,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Spokes</para>
         /// <para>Represents the following attribute in the schema: spokes</para>
         /// </summary>
-        public UInt32Value Spokes { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WheelReverseTransition>();
+        public UInt32Value Spokes
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1182,14 +1239,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        public UInt32Value ShapeId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ShapeId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bmkName, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bmkName</para>
         /// </summary>
-        public StringValue BookmarkName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookmarkTarget>();
+        public StringValue BookmarkName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1256,8 +1320,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld), 1, 0, version: FileFormatVersions.Office2010)
@@ -1316,8 +1378,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Section), 1, 0, version: FileFormatVersions.Office2010)
@@ -1349,8 +1409,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>showStatus, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showStatus</para>
         /// </summary>
-        public BooleanValue ShowStatus { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BrowseMode>();
+        public BooleanValue ShowStatus
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1419,8 +1482,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public LaserColor(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LaserColor>();
 
         /// <summary>
         /// <para>RGB Color Model - Percentage Variant.</para>
@@ -1542,8 +1603,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultImageDpi>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1579,8 +1643,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DiscardImageEditData>();
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1616,8 +1683,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowMediaControls>();
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1680,8 +1750,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LaserTraceList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList), 0, 0, version: FileFormatVersions.Office2010)
@@ -1709,8 +1777,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CreationId>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CreationId>(deep);
     }
@@ -1730,8 +1796,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public ModificationId() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ModificationId>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModificationId>(deep);
@@ -1755,7 +1819,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1826,8 +1894,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public ShowEventRecordList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowEventRecordList>();
 
         /// <summary>
         /// <para>TriggerEventRecord.</para>
@@ -1995,32 +2061,51 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingProperties>();
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2144,8 +2229,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        public BooleanValue IsComment { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualInkContentPartProperties>();
+        public BooleanValue IsComment
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2257,14 +2345,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Is a Photo Album</para>
         /// <para>Represents the following attribute in the schema: isPhoto</para>
         /// </summary>
-        public BooleanValue IsPhoto { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsPhoto
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Is User Drawn</para>
         /// <para>Represents the following attribute in the schema: userDrawn</para>
         /// </summary>
-        public BooleanValue UserDrawn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplicationNonVisualDrawingProperties>();
+        public BooleanValue UserDrawn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2331,14 +2426,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        public StringValue Time { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MediaBookmark>();
+        public StringValue Time
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2379,14 +2481,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>st, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        public StringValue Start { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Start
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>end, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        public StringValue End { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MediaTrim>();
+        public StringValue End
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2420,14 +2529,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>in, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: in</para>
         /// </summary>
-        public StringValue InDuration { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InDuration
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>out, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: out</para>
         /// </summary>
-        public StringValue OutDuration { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MediaFade>();
+        public StringValue OutDuration
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2488,8 +2604,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MediaBookmarkList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark), 0, 0, version: FileFormatVersions.Office2010)
@@ -2547,8 +2661,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public ExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2618,20 +2730,31 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>slideIdLst, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: slideIdLst</para>
         /// </summary>
-        public ListValue<UInt32Value> SlideIdList { get => GetAttribute<ListValue<UInt32Value>>(); set => SetAttribute(value); }
+        public ListValue<UInt32Value> SlideIdList
+        {
+            get => GetAttribute<ListValue<UInt32Value>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionOld>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2692,8 +2815,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionSlideIdListEntry>();
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2756,8 +2882,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public SectionSlideIdList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionSlideIdList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2823,14 +2947,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Section>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2901,20 +3032,31 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>t, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public StringValue Time { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Time
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>x, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public Int64Value XCoordinate { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value XCoordinate
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>y, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        public Int64Value YCoordinate { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TracePoint>();
+        public Int64Value YCoordinate
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2987,8 +3129,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TracePointList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint), 0, 0, version: FileFormatVersions.Office2010)
@@ -3020,20 +3160,31 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>type, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>time, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        public StringValue Time { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Time
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>objId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
-        public UInt32Value ObjectId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TriggerEventRecord>();
+        public UInt32Value ObjectId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3074,8 +3225,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlayEventRecord>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlayEventRecord>(deep);
     }
@@ -3095,8 +3244,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public StopEventRecord() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StopEventRecord>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StopEventRecord>(deep);
@@ -3118,8 +3265,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PauseEventRecord>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PauseEventRecord>(deep);
     }
@@ -3139,8 +3284,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         public ResumeEventRecord() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ResumeEventRecord>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResumeEventRecord>(deep);
@@ -3164,13 +3307,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>time, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        public StringValue Time { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Time
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>objId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
-        public UInt32Value ObjectId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ObjectId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3207,20 +3358,31 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>time, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        public StringValue Time { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Time
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>objId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
-        public UInt32Value ObjectId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ObjectId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>seek, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: seek</para>
         /// </summary>
-        public StringValue Seek { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeekEventRecord>();
+        public StringValue Seek
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3264,14 +3426,21 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>time, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        public StringValue Time { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Time
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>objId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
-        public UInt32Value ObjectId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NullEventRecord>();
+        public UInt32Value ObjectId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

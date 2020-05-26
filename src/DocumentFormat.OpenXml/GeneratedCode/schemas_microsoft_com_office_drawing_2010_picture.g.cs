@@ -66,8 +66,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeStyle>();
-
         /// <summary>
         /// <para>LineReference.</para>
         /// <para>Represents the following element tag in the schema: a:lnRef.</para>
@@ -180,8 +178,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

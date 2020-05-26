@@ -41,8 +41,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Key>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Key>(deep);
     }
@@ -75,8 +73,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Value>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Value>(deep);
@@ -130,8 +126,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         public RoamingProperty(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RoamingProperty>();
 
         /// <summary>
         /// <para>Key.</para>

@@ -33,158 +33,261 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ControlCloneRegular>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -308,182 +411,301 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ButtonRegular>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -629,146 +851,241 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CheckBox>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -923,296 +1240,491 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InvalidateContentOnDrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columns, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
-        public IntegerValue Columns { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Columns
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rows, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        public IntegerValue Rows { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Rows
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
-        public IntegerValue ItemWidth { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ItemWidth
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemHeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
-        public IntegerValue ItemHeight { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ItemHeight
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
-        public StringValue GetItemWidth { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemWidth
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemHeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
-        public StringValue GetItemHeight { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemHeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        public BooleanValue ShowItemLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showInRibbon, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showInRibbon</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        public StringValue GetSelectedItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemIndex
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GalleryRegular>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1430,188 +1942,311 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ToggleButtonRegular>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1755,56 +2390,91 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        public StringValue GetTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuSeparator>();
+        public StringValue GetTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1907,98 +2577,161 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitButtonRegular>();
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2147,182 +2880,301 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuRegular>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2492,188 +3344,311 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getContent, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
-        public StringValue GetContent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetContent
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InvalidateContentOnDrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DynamicMenuRegular>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2850,98 +3825,161 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitButtonWithTitle>();
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3090,182 +4128,301 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        public StringValue GetTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuWithTitle>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3435,44 +4592,71 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuSeparatorNoTitle>();
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3532,182 +4716,301 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ControlClone>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3850,122 +5153,201 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LabelControl>();
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4068,194 +5450,321 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Button>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4406,200 +5915,331 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ToggleButton>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4748,188 +6388,311 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>maxLength, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        public IntegerValue MaxLength { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue MaxLength
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        public StringValue GetText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        public StringValue OnChange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnChange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EditBox>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5104,236 +6867,391 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InvalidateContentOnDrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>maxLength, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        public IntegerValue MaxLength { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue MaxLength
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        public StringValue GetText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        public StringValue OnChange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnChange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ComboBox>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5546,236 +7464,391 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        public StringValue GetSelectedItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemIndex
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        public BooleanValue ShowItemLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropDownRegular>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5989,308 +8062,511 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InvalidateContentOnDrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columns, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
-        public IntegerValue Columns { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Columns
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rows, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        public IntegerValue Rows { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Rows
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
-        public IntegerValue ItemWidth { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ItemWidth
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemHeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
-        public IntegerValue ItemHeight { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ItemHeight
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
-        public StringValue GetItemWidth { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemWidth
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemHeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
-        public StringValue GetItemHeight { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemHeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        public BooleanValue ShowItemLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showInRibbon, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showInRibbon</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        public StringValue GetSelectedItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemIndex
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Gallery>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6563,194 +8839,321 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Menu>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6928,200 +9331,331 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getContent, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
-        public StringValue GetContent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetContent
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InvalidateContentOnDrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DynamicMenu>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7303,110 +9837,181 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitButton>();
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7573,62 +10178,101 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>boxStyle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: boxStyle</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues> BoxStyle { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Box>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues> BoxStyle
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7762,56 +10406,91 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ButtonGroup>();
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7893,110 +10572,181 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
-        public BooleanValue IsDefinitive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsDefinitive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageMenuButton>();
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8091,92 +10841,151 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageMenuCheckBox>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8293,98 +11102,161 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageSubMenu>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8487,110 +11359,181 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageMenuToggleButton>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8688,134 +11631,221 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>style, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values> Style { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values> Style
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
-        public BooleanValue IsDefinitive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsDefinitive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageGroupButton>();
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8920,122 +11950,201 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageCheckBox>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9138,104 +12247,171 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        public StringValue GetText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        public StringValue OnChange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnChange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>maxLength, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        public IntegerValue MaxLength { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue MaxLength
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageEditBox>();
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9354,140 +12530,231 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemIndex
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageDropDown>();
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9637,110 +12904,181 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemIndex
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadioGroup>();
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9870,116 +13208,191 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        public StringValue GetText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        public StringValue OnChange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnChange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageComboBox>();
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10082,140 +13495,231 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>target, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        public StringValue Target { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getTarget, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getTarget</para>
         /// </summary>
-        public StringValue GetTarget { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hyperlink>();
+        public StringValue GetTarget
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10327,74 +13831,121 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>noWrap, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: noWrap</para>
         /// </summary>
-        public BooleanValue NoWrap { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageLabelControl>();
+        public BooleanValue NoWrap
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10510,38 +14061,61 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupBox>();
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10668,38 +14242,61 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>align, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: align</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Align { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Align
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>layoutChildren, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: layoutChildren</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues> LayoutChildren { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LayoutContainer>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues> LayoutChildren
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10769,74 +14366,121 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>altText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
-        public StringValue AltText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AltText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getAltText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getAltText</para>
         /// </summary>
-        public StringValue GetAltText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ImageControl>();
+        public StringValue GetAltText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10945,110 +14589,181 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>style, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues> Style { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues> Style
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getStyle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getStyle</para>
         /// </summary>
-        public StringValue GetStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>helperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
-        public StringValue HelperText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue HelperText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getHelperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
-        public StringValue GetHelperText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetHelperText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageGroup>();
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11186,104 +14901,171 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>helperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
-        public StringValue HelperText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue HelperText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getHelperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
-        public StringValue GetHelperText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetHelperText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allowedTaskSizes, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: allowedTaskSizes</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TaskGroup>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11428,20 +15210,31 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        public StringValue GetTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuRoot>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11549,14 +15342,21 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onLoad, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onLoad</para>
         /// </summary>
-        public StringValue OnLoad { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnLoad
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>loadImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: loadImage</para>
         /// </summary>
-        public StringValue LoadImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomUI>();
+        public StringValue LoadImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11689,38 +15489,61 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Item>();
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11776,170 +15599,281 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VisibleButton>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12074,176 +16008,291 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VisibleToggleButton>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12382,56 +16431,91 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Separator>();
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12522,8 +16606,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         public DialogBoxLauncher(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DialogBoxLauncher>();
 
         /// <summary>
         /// <para>ButtonRegular.</para>
@@ -12630,140 +16712,231 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoScale, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: autoScale</para>
         /// </summary>
-        public BooleanValue AutoScale { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoScale
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>centerVertically, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: centerVertically</para>
         /// </summary>
-        public BooleanValue CenterVertically { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Group>();
+        public BooleanValue CenterVertically
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12912,182 +17085,301 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ControlCloneQat>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13258,8 +17550,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharedControlsQatItems>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 0, 1000)
@@ -13323,8 +17613,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         public DocumentControlsQatItems(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentControlsQatItems>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -13443,86 +17731,141 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tab>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13648,20 +17991,31 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabSet>();
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13710,26 +18064,41 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Command>();
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13802,8 +18171,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         public QuickAccessToolbar(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QuickAccessToolbar>();
 
         /// <summary>
         /// <para>SharedControlsQatItems.</para>
@@ -13890,8 +18257,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tabs>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tab), 1, 100, version: FileFormatVersions.Office2010)
@@ -13949,8 +18314,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         public ContextualTabs(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextualTabs>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -14030,8 +18393,11 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextMenu>();
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14087,8 +18453,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ItemBackstageItem>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ItemBackstageItem>(deep);
     }
@@ -14108,8 +18472,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         public RadioButtonBackstageItem() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadioButtonBackstageItem>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadioButtonBackstageItem>(deep);
@@ -14133,19 +18495,31 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14186,122 +18560,201 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
-        public BooleanValue IsDefinitive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsDefinitive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageRegularButton>();
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14435,110 +18888,181 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstagePrimaryMenu>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14686,38 +19210,61 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageMenuGroup>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14818,8 +19365,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrimaryItem>();
-
         /// <summary>
         /// <para>BackstageRegularButton.</para>
         /// <para>Represents the following element tag in the schema: mso14:button.</para>
@@ -14914,8 +19459,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopItemsGroupControls>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
         {
             new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
@@ -14998,8 +19541,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         public BottomItemsGroupControls(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomItemsGroupControls>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
         {
@@ -15145,74 +19686,121 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TaskGroupCategory>();
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15296,140 +19884,231 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
-        public BooleanValue IsDefinitive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsDefinitive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TaskGroupTask>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15575,74 +20254,121 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TaskFormGroupCategory>();
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15757,128 +20483,211 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TaskFormGroupTask>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16026,80 +20835,131 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>helperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
-        public StringValue HelperText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue HelperText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getHelperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
-        public StringValue GetHelperText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetHelperText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allowedTaskSizes, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: allowedTaskSizes</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TaskFormGroup>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16212,8 +21072,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageGroups>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 0, 1)
@@ -16288,8 +21146,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SimpleGroups>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
         {
             new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
@@ -16361,140 +21217,231 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        public StringValue GetTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columnWidthPercent, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: columnWidthPercent</para>
         /// </summary>
-        public IntegerValue ColumnWidthPercent { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ColumnWidthPercent
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstColumnMinWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: firstColumnMinWidth</para>
         /// </summary>
-        public IntegerValue FirstColumnMinWidth { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue FirstColumnMinWidth
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstColumnMaxWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: firstColumnMaxWidth</para>
         /// </summary>
-        public IntegerValue FirstColumnMaxWidth { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue FirstColumnMaxWidth
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>secondColumnMinWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: secondColumnMinWidth</para>
         /// </summary>
-        public IntegerValue SecondColumnMinWidth { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue SecondColumnMinWidth
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>secondColumnMaxWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: secondColumnMaxWidth</para>
         /// </summary>
-        public IntegerValue SecondColumnMaxWidth { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageTab>();
+        public IntegerValue SecondColumnMaxWidth
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16646,128 +21593,211 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQulifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQulifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue QualifiedId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue QualifiedId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
-        public BooleanValue IsDefinitive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsDefinitive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackstageFastCommandButton>();
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16901,8 +21931,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Commands>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Command), 1, 5000, version: FileFormatVersions.Office2010)
@@ -16969,8 +21997,11 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>startFromScratch, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: startFromScratch</para>
         /// </summary>
-        public BooleanValue StartFromScratch { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Ribbon>();
+        public BooleanValue StartFromScratch
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17084,14 +22115,21 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>onShow, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onShow</para>
         /// </summary>
-        public StringValue OnShow { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnShow
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onHide, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onHide</para>
         /// </summary>
-        public StringValue OnHide { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Backstage>();
+        public StringValue OnHide
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17168,8 +22206,6 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         public ContextMenus(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextMenus>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

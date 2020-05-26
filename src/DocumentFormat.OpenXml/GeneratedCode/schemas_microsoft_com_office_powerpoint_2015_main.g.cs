@@ -34,8 +34,11 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DesignElement>();
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

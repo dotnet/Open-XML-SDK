@@ -59,8 +59,6 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LongProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.LongProperties.LongProperty), 0, 0)
@@ -105,8 +103,11 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LongProperty>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

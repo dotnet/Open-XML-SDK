@@ -60,7 +60,11 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ct=http://schemas.microsoft.com/office/2006/metadata/contentType
         /// </remark>
-        public StringValue UnderScore { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UnderScore
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>_</para>
@@ -69,7 +73,11 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue ReservedAttributeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ReservedAttributeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contentTypeName</para>
@@ -78,7 +86,11 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue ContentTypeName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ContentTypeName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contentTypeID</para>
@@ -87,7 +99,11 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue ContentTypeID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ContentTypeID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contentTypeVersion</para>
@@ -96,7 +112,11 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public Int32Value ContentTypeVersion { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ContentTypeVersion
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contentTypeDescription</para>
@@ -105,7 +125,11 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue ContentTypeDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ContentTypeDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contentTypeScope</para>
@@ -114,7 +138,11 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue ContentTypeScope { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ContentTypeScope
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>versionID</para>
@@ -123,8 +151,11 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue VersionID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContentTypeSchema>();
+        public StringValue VersionID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

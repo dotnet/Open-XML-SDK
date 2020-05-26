@@ -36,8 +36,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellInsertion>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -63,8 +61,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CellDeletion() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellDeletion>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -92,8 +88,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlInsRangeStart>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -119,8 +113,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlDelRangeStart() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlDelRangeStart>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, false, null)
@@ -148,8 +140,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlMoveFromRangeStart>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -175,8 +165,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlMoveToRangeStart() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlMoveToRangeStart>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -204,8 +192,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Inserted>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -231,8 +217,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Deleted() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Deleted>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -260,8 +244,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveFrom>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveFrom>(deep);
     }
@@ -281,8 +263,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveTo() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveTo>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveTo>(deep);
@@ -309,7 +289,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -318,7 +302,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -327,7 +315,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -374,7 +366,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMerge { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMerge
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>vMergeOrig</para>
@@ -383,7 +379,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMergeOriginal { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMergeOriginal
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>author</para>
@@ -392,7 +392,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -401,7 +405,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -410,8 +418,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CellMerge>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -469,7 +480,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>colFirst</para>
@@ -478,7 +493,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value ColumnFirst { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ColumnFirst
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>colLast</para>
@@ -487,7 +506,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value ColumnLast { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ColumnLast
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>displacedByCustomXml</para>
@@ -496,7 +519,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -505,8 +532,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookmarkStart>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -557,8 +587,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookmarkEnd>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null)
         };
@@ -584,8 +612,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CommentRangeStart() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentRangeStart>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null),
@@ -614,8 +640,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentRangeEnd>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null),
             new ReferenceExistConstraint(1 /*w:id*/, "WordprocessingCommentsPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), "DocumentFormat.OpenXml.Wordprocessing.Comment", 3 /*w:id*/)
@@ -643,8 +667,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveFromRangeEnd>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null)
         };
@@ -670,8 +692,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveToRangeEnd() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveToRangeEnd>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null)
@@ -704,7 +724,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -713,7 +737,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -748,8 +776,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveFromRangeStart>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(6 /*w:id*/, true, null)
         };
@@ -775,8 +801,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveToRangeStart() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveToRangeStart>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(6 /*w:id*/, false, null)
@@ -809,7 +833,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -818,7 +846,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
@@ -827,7 +859,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>colFirst</para>
@@ -836,7 +872,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value ColumnFirst { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ColumnFirst
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>colLast</para>
@@ -845,7 +885,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value ColumnLast { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ColumnLast
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>displacedByCustomXml</para>
@@ -854,7 +898,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -863,7 +911,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -913,8 +965,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlInsRangeEnd>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null)
         };
@@ -940,8 +990,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlDelRangeEnd() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlDelRangeEnd>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, false, null)
@@ -969,8 +1017,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlMoveFromRangeEnd>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null)
         };
@@ -997,8 +1043,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlMoveToRangeEnd>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlMoveToRangeEnd>(deep);
     }
@@ -1018,8 +1062,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CommentReference() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null),
@@ -1053,7 +1095,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1087,8 +1133,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphStyleId>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*w:val*/, 0, 253) { Application = ApplicationType.Word }
         };
@@ -1115,8 +1159,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DateFormat>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DateFormat>(deep);
     }
@@ -1136,8 +1178,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocPartGallery() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartGallery>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartGallery>(deep);
@@ -1159,8 +1199,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartCategory>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartCategory>(deep);
     }
@@ -1180,8 +1218,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocPartReference() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartReference>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartReference>(deep);
@@ -1203,8 +1239,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlPlaceholder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlPlaceholder>(deep);
     }
@@ -1224,8 +1258,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCaption() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCaption>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCaption>(deep);
@@ -1247,8 +1279,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableDescription>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableDescription>(deep);
     }
@@ -1268,8 +1298,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Name() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Name>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*w:val*/, @"[^,]*") { Application = ApplicationType.Word }
@@ -1297,8 +1325,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MappedName>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MappedName>(deep);
     }
@@ -1318,8 +1344,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UdlConnectionString() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UdlConnectionString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UdlConnectionString>(deep);
@@ -1341,8 +1365,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataSourceTableName>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataSourceTableName>(deep);
     }
@@ -1362,8 +1384,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ConnectString() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectString>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectString>(deep);
@@ -1385,8 +1405,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Query>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Query>(deep);
     }
@@ -1406,8 +1424,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AddressFieldName() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AddressFieldName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AddressFieldName>(deep);
@@ -1429,8 +1445,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailSubject>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MailSubject>(deep);
     }
@@ -1450,8 +1464,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FrameSize() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FrameSize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FrameSize>(deep);
@@ -1473,8 +1485,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleId>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleId>(deep);
     }
@@ -1494,8 +1504,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Description() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Description>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Description>(deep);
@@ -1517,8 +1525,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtAlias>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtAlias>(deep);
     }
@@ -1538,8 +1544,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Tag() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tag>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tag>(deep);
@@ -1561,8 +1565,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AttachedSchema>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AttachedSchema>(deep);
     }
@@ -1582,8 +1584,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DecimalSymbol() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DecimalSymbol>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*w:val*/, @".{1}")
@@ -1611,8 +1611,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListSeparator>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*w:val*/, @".{1}")
         };
@@ -1639,8 +1637,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebPageEncoding>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPageEncoding>(deep);
     }
@@ -1660,8 +1656,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AltName() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AltName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AltName>(deep);
@@ -1688,7 +1682,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1717,8 +1715,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<KeepNext>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<KeepNext>(deep);
     }
@@ -1738,8 +1734,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public KeepLines() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<KeepLines>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<KeepLines>(deep);
@@ -1761,8 +1755,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageBreakBefore>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageBreakBefore>(deep);
     }
@@ -1782,8 +1774,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public WidowControl() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WidowControl>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidowControl>(deep);
@@ -1805,8 +1795,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressLineNumbers>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressLineNumbers>(deep);
     }
@@ -1826,8 +1814,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SuppressAutoHyphens() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressAutoHyphens>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressAutoHyphens>(deep);
@@ -1849,8 +1835,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Kinsoku>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Kinsoku>(deep);
     }
@@ -1870,8 +1854,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public WordWrap() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WordWrap>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordWrap>(deep);
@@ -1893,8 +1875,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OverflowPunctuation>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OverflowPunctuation>(deep);
     }
@@ -1914,8 +1894,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TopLinePunctuation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopLinePunctuation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopLinePunctuation>(deep);
@@ -1937,8 +1915,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoSpaceDE>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSpaceDE>(deep);
     }
@@ -1958,8 +1934,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AutoSpaceDN() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoSpaceDN>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSpaceDN>(deep);
@@ -1981,8 +1955,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BiDi>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BiDi>(deep);
     }
@@ -2002,8 +1974,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AdjustRightIndent() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AdjustRightIndent>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AdjustRightIndent>(deep);
@@ -2025,8 +1995,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SnapToGrid>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SnapToGrid>(deep);
     }
@@ -2046,8 +2014,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ContextualSpacing() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextualSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextualSpacing>(deep);
@@ -2069,8 +2035,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MirrorIndents>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MirrorIndents>(deep);
     }
@@ -2090,8 +2054,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SuppressOverlap() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressOverlap>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressOverlap>(deep);
@@ -2113,8 +2075,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bold>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bold>(deep);
     }
@@ -2134,8 +2094,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BoldComplexScript() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BoldComplexScript>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BoldComplexScript>(deep);
@@ -2157,8 +2115,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Italic>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Italic>(deep);
     }
@@ -2178,8 +2134,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ItalicComplexScript() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ItalicComplexScript>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ItalicComplexScript>(deep);
@@ -2201,8 +2155,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Caps>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Caps>(deep);
     }
@@ -2222,8 +2174,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SmallCaps() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SmallCaps>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SmallCaps>(deep);
@@ -2245,8 +2195,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Strike>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Strike>(deep);
     }
@@ -2266,8 +2214,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoubleStrike() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoubleStrike>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoubleStrike>(deep);
@@ -2289,8 +2235,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Outline>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Outline>(deep);
     }
@@ -2310,8 +2254,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Shadow() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shadow>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shadow>(deep);
@@ -2333,8 +2275,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Emboss>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Emboss>(deep);
     }
@@ -2354,8 +2294,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Imprint() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Imprint>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Imprint>(deep);
@@ -2377,8 +2315,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoProof>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoProof>(deep);
     }
@@ -2398,8 +2334,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Vanish() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Vanish>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Vanish>(deep);
@@ -2421,8 +2355,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebHidden>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebHidden>(deep);
     }
@@ -2442,8 +2374,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RightToLeftText() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightToLeftText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightToLeftText>(deep);
@@ -2465,8 +2395,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ComplexScript>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ComplexScript>(deep);
     }
@@ -2486,8 +2414,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SpecVanish() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpecVanish>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpecVanish>(deep);
@@ -2509,8 +2435,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeMath>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeMath>(deep);
     }
@@ -2530,8 +2454,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Hidden() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hidden>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hidden>(deep);
@@ -2553,8 +2475,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormProtection>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormProtection>(deep);
     }
@@ -2574,8 +2494,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NoEndnote() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoEndnote>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoEndnote>(deep);
@@ -2597,8 +2515,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TitlePage>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TitlePage>(deep);
     }
@@ -2618,8 +2534,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public GutterOnRight() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GutterOnRight>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GutterOnRight>(deep);
@@ -2641,8 +2555,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Enabled>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Enabled>(deep);
     }
@@ -2662,8 +2574,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CalculateOnExit() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculateOnExit>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculateOnExit>(deep);
@@ -2685,8 +2595,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutomaticallySizeFormField>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutomaticallySizeFormField>(deep);
     }
@@ -2706,8 +2614,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DefaultCheckBoxFormFieldState() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultCheckBoxFormFieldState>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultCheckBoxFormFieldState>(deep);
@@ -2729,8 +2635,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Checked>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Checked>(deep);
     }
@@ -2750,8 +2654,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MatchSource() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MatchSource>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatchSource>(deep);
@@ -2773,8 +2675,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Dirty>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Dirty>(deep);
     }
@@ -2794,8 +2694,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocPartUnique() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartUnique>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartUnique>(deep);
@@ -2817,8 +2715,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Active>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Active>(deep);
     }
@@ -2838,8 +2734,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DynamicAddress() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DynamicAddress>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DynamicAddress>(deep);
@@ -2861,8 +2755,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstRowHeader>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstRowHeader>(deep);
     }
@@ -2882,8 +2774,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LinkToQuery() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinkToQuery>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkToQuery>(deep);
@@ -2905,8 +2795,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotSuppressBlankLines>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSuppressBlankLines>(deep);
     }
@@ -2926,8 +2814,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MailAsAttachment() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailAsAttachment>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MailAsAttachment>(deep);
@@ -2949,8 +2835,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ViewMergedData>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ViewMergedData>(deep);
     }
@@ -2970,8 +2854,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public IsLegalNumberingStyle() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IsLegalNumberingStyle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IsLegalNumberingStyle>(deep);
@@ -2993,8 +2875,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BlockQuote>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlockQuote>(deep);
     }
@@ -3014,8 +2894,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BodyDiv() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BodyDiv>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BodyDiv>(deep);
@@ -3037,8 +2915,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseSingleBorderForContiguousCells>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseSingleBorderForContiguousCells>(deep);
     }
@@ -3058,8 +2934,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public WordPerfectJustification() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WordPerfectJustification>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordPerfectJustification>(deep);
@@ -3081,8 +2955,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoTabHangIndent>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoTabHangIndent>(deep);
     }
@@ -3102,8 +2974,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NoLeading() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoLeading>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoLeading>(deep);
@@ -3125,8 +2995,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpaceForUnderline>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpaceForUnderline>(deep);
     }
@@ -3146,8 +3014,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NoColumnBalance() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoColumnBalance>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoColumnBalance>(deep);
@@ -3169,8 +3035,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BalanceSingleByteDoubleByteWidth>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BalanceSingleByteDoubleByteWidth>(deep);
     }
@@ -3190,8 +3054,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NoExtraLineSpacing() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoExtraLineSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoExtraLineSpacing>(deep);
@@ -3213,8 +3075,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotLeaveBackslashAlone>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotLeaveBackslashAlone>(deep);
     }
@@ -3234,8 +3094,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UnderlineTrailingSpaces() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnderlineTrailingSpaces>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnderlineTrailingSpaces>(deep);
@@ -3257,8 +3115,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotExpandShiftReturn>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotExpandShiftReturn>(deep);
     }
@@ -3278,8 +3134,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SpacingInWholePoints() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpacingInWholePoints>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpacingInWholePoints>(deep);
@@ -3301,8 +3155,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineWrapLikeWord6>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineWrapLikeWord6>(deep);
     }
@@ -3322,8 +3174,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PrintBodyTextBeforeHeader() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintBodyTextBeforeHeader>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintBodyTextBeforeHeader>(deep);
@@ -3345,8 +3195,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintColorBlackWhite>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintColorBlackWhite>(deep);
     }
@@ -3366,8 +3214,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public WordPerfectSpaceWidth() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WordPerfectSpaceWidth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordPerfectSpaceWidth>(deep);
@@ -3389,8 +3235,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowBreaksInFrames>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowBreaksInFrames>(deep);
     }
@@ -3410,8 +3254,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SubFontBySize() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SubFontBySize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubFontBySize>(deep);
@@ -3433,8 +3275,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressBottomSpacing>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressBottomSpacing>(deep);
     }
@@ -3454,8 +3294,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SuppressTopSpacing() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressTopSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressTopSpacing>(deep);
@@ -3477,8 +3315,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressSpacingAtTopOfPage>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressSpacingAtTopOfPage>(deep);
     }
@@ -3498,8 +3334,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SuppressTopSpacingWordPerfect() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressTopSpacingWordPerfect>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressTopSpacingWordPerfect>(deep);
@@ -3521,8 +3355,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SuppressSpacingBeforeAfterPageBreak>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressSpacingBeforeAfterPageBreak>(deep);
     }
@@ -3542,8 +3374,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SwapBordersFacingPages() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SwapBordersFacingPages>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SwapBordersFacingPages>(deep);
@@ -3565,8 +3395,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConvertMailMergeEscape>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConvertMailMergeEscape>(deep);
     }
@@ -3586,8 +3414,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TruncateFontHeightsLikeWordPerfect() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TruncateFontHeightsLikeWordPerfect>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TruncateFontHeightsLikeWordPerfect>(deep);
@@ -3609,8 +3435,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MacWordSmallCaps>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MacWordSmallCaps>(deep);
     }
@@ -3630,8 +3454,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UsePrinterMetrics() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UsePrinterMetrics>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UsePrinterMetrics>(deep);
@@ -3653,8 +3475,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotSuppressParagraphBorders>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSuppressParagraphBorders>(deep);
     }
@@ -3674,8 +3494,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public WrapTrailSpaces() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WrapTrailSpaces>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WrapTrailSpaces>(deep);
@@ -3697,8 +3515,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteLayoutLikeWord8>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnoteLayoutLikeWord8>(deep);
     }
@@ -3718,8 +3534,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ShapeLayoutLikeWord8() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeLayoutLikeWord8>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeLayoutLikeWord8>(deep);
@@ -3741,8 +3555,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlignTablesRowByRow>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlignTablesRowByRow>(deep);
     }
@@ -3762,8 +3574,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ForgetLastTabAlignment() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ForgetLastTabAlignment>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForgetLastTabAlignment>(deep);
@@ -3785,8 +3595,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AdjustLineHeightInTable>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AdjustLineHeightInTable>(deep);
     }
@@ -3806,8 +3614,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AutoSpaceLikeWord95() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoSpaceLikeWord95>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSpaceLikeWord95>(deep);
@@ -3829,8 +3635,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoSpaceRaiseLower>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoSpaceRaiseLower>(deep);
     }
@@ -3850,8 +3654,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotUseHTMLParagraphAutoSpacing() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotUseHTMLParagraphAutoSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseHTMLParagraphAutoSpacing>(deep);
@@ -3873,8 +3675,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LayoutRawTableWidth>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutRawTableWidth>(deep);
     }
@@ -3894,8 +3694,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LayoutTableRowsApart() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LayoutTableRowsApart>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutTableRowsApart>(deep);
@@ -3917,8 +3715,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseWord97LineBreakRules>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseWord97LineBreakRules>(deep);
     }
@@ -3938,8 +3734,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotBreakWrappedTables() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotBreakWrappedTables>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotBreakWrappedTables>(deep);
@@ -3961,8 +3755,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotSnapToGridInCell>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSnapToGridInCell>(deep);
     }
@@ -3982,8 +3774,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SelectFieldWithFirstOrLastChar() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SelectFieldWithFirstOrLastChar>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectFieldWithFirstOrLastChar>(deep);
@@ -4005,8 +3795,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplyBreakingRules>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyBreakingRules>(deep);
     }
@@ -4026,8 +3814,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotWrapTextWithPunctuation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotWrapTextWithPunctuation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotWrapTextWithPunctuation>(deep);
@@ -4049,8 +3835,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotUseEastAsianBreakRules>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseEastAsianBreakRules>(deep);
     }
@@ -4070,8 +3854,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UseWord2002TableStyleRules() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseWord2002TableStyleRules>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseWord2002TableStyleRules>(deep);
@@ -4093,8 +3875,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GrowAutofit>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GrowAutofit>(deep);
     }
@@ -4114,8 +3894,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UseFarEastLayout() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseFarEastLayout>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseFarEastLayout>(deep);
@@ -4137,8 +3915,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseNormalStyleForList>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseNormalStyleForList>(deep);
     }
@@ -4158,8 +3934,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotUseIndentAsNumberingTabStop() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotUseIndentAsNumberingTabStop>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseIndentAsNumberingTabStop>(deep);
@@ -4181,8 +3955,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseAltKinsokuLineBreakRules>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseAltKinsokuLineBreakRules>(deep);
     }
@@ -4202,8 +3974,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AllowSpaceOfSameStyleInTable() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AllowSpaceOfSameStyleInTable>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllowSpaceOfSameStyleInTable>(deep);
@@ -4225,8 +3995,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotSuppressIndentation>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSuppressIndentation>(deep);
     }
@@ -4246,8 +4014,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotAutofitConstrainedTables() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotAutofitConstrainedTables>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotAutofitConstrainedTables>(deep);
@@ -4269,8 +4035,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutofitToFirstFixedWidthCell>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutofitToFirstFixedWidthCell>(deep);
     }
@@ -4290,8 +4054,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UnderlineTabInNumberingList() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnderlineTabInNumberingList>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnderlineTabInNumberingList>(deep);
@@ -4313,8 +4075,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayHangulFixedWidth>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayHangulFixedWidth>(deep);
     }
@@ -4334,8 +4094,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SplitPageBreakAndParagraphMark() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitPageBreakAndParagraphMark>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitPageBreakAndParagraphMark>(deep);
@@ -4357,8 +4115,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotVerticallyAlignCellWithShape>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotVerticallyAlignCellWithShape>(deep);
     }
@@ -4378,8 +4134,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotBreakConstrainedForcedTable() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotBreakConstrainedForcedTable>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotBreakConstrainedForcedTable>(deep);
@@ -4401,8 +4155,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotVerticallyAlignInTextBox>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotVerticallyAlignInTextBox>(deep);
     }
@@ -4422,8 +4174,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UseAnsiKerningPairs() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseAnsiKerningPairs>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseAnsiKerningPairs>(deep);
@@ -4445,8 +4195,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CachedColumnBalance>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedColumnBalance>(deep);
     }
@@ -4466,8 +4214,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ShowingPlaceholder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowingPlaceholder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowingPlaceholder>(deep);
@@ -4489,8 +4235,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TemporarySdt>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemporarySdt>(deep);
     }
@@ -4510,8 +4254,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RemovePersonalInformation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RemovePersonalInformation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RemovePersonalInformation>(deep);
@@ -4533,8 +4275,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RemoveDateAndTime>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RemoveDateAndTime>(deep);
     }
@@ -4554,8 +4294,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotDisplayPageBoundaries() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotDisplayPageBoundaries>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotDisplayPageBoundaries>(deep);
@@ -4577,8 +4315,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayBackgroundShape>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayBackgroundShape>(deep);
     }
@@ -4598,8 +4334,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PrintPostScriptOverText() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintPostScriptOverText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintPostScriptOverText>(deep);
@@ -4621,8 +4355,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintFractionalCharacterWidth>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintFractionalCharacterWidth>(deep);
     }
@@ -4642,8 +4374,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PrintFormsData() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintFormsData>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintFormsData>(deep);
@@ -4665,8 +4395,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedTrueTypeFonts>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbedTrueTypeFonts>(deep);
     }
@@ -4686,8 +4414,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public EmbedSystemFonts() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedSystemFonts>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbedSystemFonts>(deep);
@@ -4709,8 +4435,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaveSubsetFonts>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveSubsetFonts>(deep);
     }
@@ -4730,8 +4454,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SaveFormsData() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaveFormsData>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveFormsData>(deep);
@@ -4753,8 +4475,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MirrorMargins>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MirrorMargins>(deep);
     }
@@ -4774,8 +4494,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AlignBorderAndEdges() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlignBorderAndEdges>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlignBorderAndEdges>(deep);
@@ -4797,8 +4515,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BordersDoNotSurroundHeader>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BordersDoNotSurroundHeader>(deep);
     }
@@ -4818,8 +4534,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BordersDoNotSurroundFooter() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BordersDoNotSurroundFooter>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BordersDoNotSurroundFooter>(deep);
@@ -4841,8 +4555,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GutterAtTop>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GutterAtTop>(deep);
     }
@@ -4862,8 +4574,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public HideSpellingErrors() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideSpellingErrors>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideSpellingErrors>(deep);
@@ -4885,8 +4595,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideGrammaticalErrors>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideGrammaticalErrors>(deep);
     }
@@ -4906,8 +4614,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FormsDesign() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormsDesign>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormsDesign>(deep);
@@ -4929,8 +4635,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinkStyles>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkStyles>(deep);
     }
@@ -4950,8 +4654,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TrackRevisions() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TrackRevisions>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrackRevisions>(deep);
@@ -4973,8 +4675,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotTrackMoves>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotTrackMoves>(deep);
     }
@@ -4994,8 +4694,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotTrackFormatting() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotTrackFormatting>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotTrackFormatting>(deep);
@@ -5017,8 +4715,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoFormatOverride>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoFormatOverride>(deep);
     }
@@ -5038,8 +4734,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StyleLockThemesPart() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleLockThemesPart>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLockThemesPart>(deep);
@@ -5061,8 +4755,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleLockStylesPart>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLockStylesPart>(deep);
     }
@@ -5082,8 +4774,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AutoHyphenation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoHyphenation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoHyphenation>(deep);
@@ -5105,8 +4795,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotHyphenateCaps>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotHyphenateCaps>(deep);
     }
@@ -5126,8 +4814,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ShowEnvelope() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowEnvelope>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowEnvelope>(deep);
@@ -5149,8 +4835,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EvenAndOddHeaders>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenAndOddHeaders>(deep);
     }
@@ -5170,8 +4854,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BookFoldReversePrinting() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookFoldReversePrinting>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookFoldReversePrinting>(deep);
@@ -5193,8 +4875,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookFoldPrinting>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookFoldPrinting>(deep);
     }
@@ -5214,8 +4894,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotUseMarginsForDrawingGridOrigin() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotUseMarginsForDrawingGridOrigin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseMarginsForDrawingGridOrigin>(deep);
@@ -5237,8 +4915,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotShadeFormData>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotShadeFormData>(deep);
     }
@@ -5258,8 +4934,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NoPunctuationKerning() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoPunctuationKerning>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoPunctuationKerning>(deep);
@@ -5281,8 +4955,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintTwoOnOne>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintTwoOnOne>(deep);
     }
@@ -5302,8 +4974,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StrictFirstAndLastChars() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrictFirstAndLastChars>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrictFirstAndLastChars>(deep);
@@ -5325,8 +4995,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SavePreviewPicture>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SavePreviewPicture>(deep);
     }
@@ -5346,8 +5014,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotValidateAgainstSchema() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotValidateAgainstSchema>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotValidateAgainstSchema>(deep);
@@ -5369,8 +5035,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaveInvalidXml>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveInvalidXml>(deep);
     }
@@ -5390,8 +5054,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public IgnoreMixedContent() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IgnoreMixedContent>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IgnoreMixedContent>(deep);
@@ -5413,8 +5075,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlwaysShowPlaceholderText>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlwaysShowPlaceholderText>(deep);
     }
@@ -5434,8 +5094,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotDemarcateInvalidXml() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotDemarcateInvalidXml>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotDemarcateInvalidXml>(deep);
@@ -5457,8 +5115,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaveXmlDataOnly>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveXmlDataOnly>(deep);
     }
@@ -5478,8 +5134,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UseXsltWhenSaving() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseXsltWhenSaving>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseXsltWhenSaving>(deep);
@@ -5501,8 +5155,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowXmlTags>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowXmlTags>(deep);
     }
@@ -5522,8 +5174,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AlwaysMergeEmptyNamespace() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlwaysMergeEmptyNamespace>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlwaysMergeEmptyNamespace>(deep);
@@ -5545,8 +5195,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UpdateFieldsOnOpen>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UpdateFieldsOnOpen>(deep);
     }
@@ -5566,8 +5214,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UICompatibleWith97To2003() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UICompatibleWith97To2003>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UICompatibleWith97To2003>(deep);
@@ -5589,8 +5235,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotIncludeSubdocsInStats>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotIncludeSubdocsInStats>(deep);
     }
@@ -5610,8 +5254,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotAutoCompressPictures() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotAutoCompressPictures>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotAutoCompressPictures>(deep);
@@ -5633,8 +5275,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OptimizeForBrowser>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OptimizeForBrowser>(deep);
     }
@@ -5654,8 +5294,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RelyOnVML() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RelyOnVML>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelyOnVML>(deep);
@@ -5677,8 +5315,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AllowPNG>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllowPNG>(deep);
     }
@@ -5698,8 +5334,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotRelyOnCSS() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotRelyOnCSS>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotRelyOnCSS>(deep);
@@ -5721,8 +5355,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotSaveAsSingleFile>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSaveAsSingleFile>(deep);
     }
@@ -5742,8 +5374,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DoNotOrganizeInFolder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotOrganizeInFolder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotOrganizeInFolder>(deep);
@@ -5765,8 +5395,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotUseLongFileNames>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseLongFileNames>(deep);
     }
@@ -5786,8 +5414,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NotTrueType() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NotTrueType>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotTrueType>(deep);
@@ -5814,7 +5440,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Val { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Val
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5847,7 +5477,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues> DropCap { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues> DropCap
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Drop Cap Vertical Height in Lines</para>
@@ -5856,7 +5490,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Lines { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Lines
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Frame Width</para>
@@ -5865,7 +5503,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Width { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Width
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Frame Height</para>
@@ -5874,7 +5516,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Height { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Height
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Frame Padding</para>
@@ -5883,7 +5529,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue VerticalSpace { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue VerticalSpace
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Frame Padding</para>
@@ -5892,7 +5542,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue HorizontalSpace { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue HorizontalSpace
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Wrapping Around Frame</para>
@@ -5901,7 +5555,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues> Wrap { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues> Wrap
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Frame Horizontal Positioning Base</para>
@@ -5910,7 +5568,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalPosition { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalPosition
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Frame Vertical Positioning Base</para>
@@ -5919,7 +5581,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalPosition { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalPosition
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Absolute Horizontal Position</para>
@@ -5928,7 +5594,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue X { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue X
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Horizontal Position</para>
@@ -5937,7 +5607,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> XAlign { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> XAlign
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Absolute Vertical Position</para>
@@ -5946,7 +5620,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Y { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Y
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Vertical Position</para>
@@ -5955,7 +5633,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> YAlign { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> YAlign
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Frame Height Type</para>
@@ -5964,7 +5646,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Lock Frame Anchor to Paragraph</para>
@@ -5973,8 +5659,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue AnchorLock { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FrameProperties>();
+        public OnOffValue AnchorLock
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6100,8 +5789,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingProperties>();
-
         /// <summary>
         /// <para>Numbering Level Reference.</para>
         /// <para>Represents the following element tag in the schema: w:ilvl.</para>
@@ -6225,8 +5912,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphBorders>();
-
         /// <summary>
         /// <para>Paragraph Border Above Identical Paragraphs.</para>
         /// <para>Represents the following element tag in the schema: w:top.</para>
@@ -6344,7 +6029,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shading Pattern Color</para>
@@ -6353,7 +6042,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Color { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Color
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shading Pattern Theme Color</para>
@@ -6362,7 +6055,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shading Pattern Theme Color Tint</para>
@@ -6371,7 +6068,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ThemeTint
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shading Pattern Theme Color Shade</para>
@@ -6380,7 +6081,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ThemeShade
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shading Background Color</para>
@@ -6389,7 +6094,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Fill { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Fill
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shading Background Theme Color</para>
@@ -6398,7 +6107,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeFill { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeFill
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shading Background Theme Color Tint</para>
@@ -6407,7 +6120,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeFillTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ThemeFillTint
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shading Background Theme Color Shade</para>
@@ -6416,8 +6133,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeFillShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shading>();
+        public StringValue ThemeFillShade
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6514,8 +6234,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tabs>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TabStop), 1, 0)
@@ -6550,7 +6268,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Before { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Before
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Spacing Above Paragraph IN Line Units</para>
@@ -6559,7 +6281,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value BeforeLines { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value BeforeLines
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Automatically Determine Spacing Above Paragraph</para>
@@ -6568,7 +6294,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue BeforeAutoSpacing { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue BeforeAutoSpacing
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Spacing Below Paragraph</para>
@@ -6577,7 +6307,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue After { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue After
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Spacing Below Paragraph in Line Units</para>
@@ -6586,7 +6320,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value AfterLines { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value AfterLines
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Automatically Determine Spacing Below Paragraph</para>
@@ -6595,7 +6333,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue AfterAutoSpacing { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue AfterAutoSpacing
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Spacing Between Lines in Paragraph</para>
@@ -6604,7 +6346,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Line { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Line
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Type of Spacing Between Lines</para>
@@ -6613,8 +6359,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues> LineRule { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpacingBetweenLines>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues> LineRule
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6681,7 +6430,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Left { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Left
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>start, this property is only available in Office2010, Office2013, Office2016</para>
@@ -6690,7 +6443,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Start { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Start
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Left Indentation in Character Units</para>
@@ -6699,7 +6456,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value LeftChars { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value LeftChars
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>startChars, this property is only available in Office2010, Office2013, Office2016</para>
@@ -6708,7 +6469,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value StartCharacters { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value StartCharacters
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right Indentation</para>
@@ -6717,7 +6482,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Right { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Right
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>end, this property is only available in Office2010, Office2013, Office2016</para>
@@ -6726,7 +6495,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue End { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue End
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right Indentation in Character Units</para>
@@ -6735,7 +6508,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value RightChars { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value RightChars
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endChars, this property is only available in Office2010, Office2013, Office2016</para>
@@ -6744,7 +6521,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value EndCharacters { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value EndCharacters
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Indentation Removed from First Line</para>
@@ -6753,7 +6534,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Hanging { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Hanging
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Indentation Removed From First Line in Character Units</para>
@@ -6762,7 +6547,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value HangingChars { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HangingChars
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Additional First Line Indentation</para>
@@ -6771,7 +6560,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue FirstLine { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FirstLine
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Additional First Line Indentation in Character Units</para>
@@ -6780,8 +6573,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value FirstLineChars { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Indentation>();
+        public Int32Value FirstLineChars
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6884,8 +6680,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Justification>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6924,8 +6723,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextDirection>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6964,8 +6766,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextAlignment>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7004,8 +6809,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBoxTightWrap>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7037,8 +6845,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OutlineLevel>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*w:val*/, true, 0, true, 9, true)
         };
@@ -7065,8 +6871,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridSpan>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridSpan>(deep);
     }
@@ -7086,8 +6890,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public GridBefore() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridBefore>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridBefore>(deep);
@@ -7109,8 +6911,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridAfter>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridAfter>(deep);
     }
@@ -7130,8 +6930,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DropDownListSelection() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropDownListSelection>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropDownListSelection>(deep);
@@ -7153,8 +6951,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ActiveRecord>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ActiveRecord>(deep);
     }
@@ -7174,8 +6970,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CheckErrors() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CheckErrors>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckErrors>(deep);
@@ -7197,8 +6991,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelRestart>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelRestart>(deep);
     }
@@ -7218,8 +7010,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LevelPictureBulletId() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelPictureBulletId>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelPictureBulletId>(deep);
@@ -7241,8 +7031,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartOverrideNumberingValue>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartOverrideNumberingValue>(deep);
     }
@@ -7262,8 +7050,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NumberingIdMacAtCleanup() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingIdMacAtCleanup>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingIdMacAtCleanup>(deep);
@@ -7285,8 +7071,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtId>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtId>(deep);
     }
@@ -7306,8 +7090,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PixelsPerInch() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PixelsPerInch>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PixelsPerInch>(deep);
@@ -7334,7 +7116,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7401,7 +7187,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -7410,7 +7200,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -7419,8 +7213,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphPropertiesChange>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7492,8 +7289,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderReference>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(1 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"),
             new RelationshipExistConstraint(1 /*r:id*/)
@@ -7520,8 +7315,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FooterReference() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FooterReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(1 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"),
@@ -7555,7 +7348,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship to Part</para>
@@ -7564,7 +7361,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7604,7 +7405,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Restart Location For Text Wrapping Break</para>
@@ -7613,8 +7418,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues> Clear { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Break>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues> Clear
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7657,8 +7465,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Text>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
     }
@@ -7691,8 +7497,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DeletedText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedText>(deep);
@@ -7727,8 +7531,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldCode>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldCode>(deep);
     }
@@ -7761,8 +7563,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DeletedFieldCode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedFieldCode>(deep);
@@ -7802,7 +7602,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7828,8 +7632,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoBreakHyphen>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoBreakHyphen>(deep);
     }
@@ -7849,8 +7651,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SoftHyphen() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SoftHyphen>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SoftHyphen>(deep);
@@ -7872,8 +7672,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DayShort>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayShort>(deep);
     }
@@ -7893,8 +7691,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MonthShort() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MonthShort>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthShort>(deep);
@@ -7916,8 +7712,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<YearShort>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearShort>(deep);
     }
@@ -7937,8 +7731,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DayLong() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DayLong>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayLong>(deep);
@@ -7960,8 +7752,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MonthLong>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthLong>(deep);
     }
@@ -7981,8 +7771,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public YearLong() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<YearLong>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearLong>(deep);
@@ -8004,8 +7792,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AnnotationReferenceMark>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnnotationReferenceMark>(deep);
     }
@@ -8025,8 +7811,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FootnoteReferenceMark() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteReferenceMark>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnoteReferenceMark>(deep);
@@ -8048,8 +7832,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnoteReferenceMark>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndnoteReferenceMark>(deep);
     }
@@ -8069,8 +7851,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SeparatorMark() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeparatorMark>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeparatorMark>(deep);
@@ -8092,8 +7872,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContinuationSeparatorMark>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContinuationSeparatorMark>(deep);
     }
@@ -8113,8 +7891,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PageNumber() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageNumber>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageNumber>(deep);
@@ -8136,8 +7912,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CarriageReturn>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CarriageReturn>(deep);
     }
@@ -8157,8 +7931,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TabChar() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabChar>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabChar>(deep);
@@ -8180,8 +7952,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LastRenderedPageBreak>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LastRenderedPageBreak>(deep);
     }
@@ -8201,8 +7971,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentEquation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentEquation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentEquation>(deep);
@@ -8224,8 +7992,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentPicture>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentPicture>(deep);
     }
@@ -8245,8 +8011,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentRichText() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentRichText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentRichText>(deep);
@@ -8268,8 +8032,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentCitation>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentCitation>(deep);
     }
@@ -8289,8 +8051,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentGroup() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentGroup>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentGroup>(deep);
@@ -8312,8 +8072,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentBibliography>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentBibliography>(deep);
     }
@@ -8333,8 +8091,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ForceUpgrade() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ForceUpgrade>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForceUpgrade>(deep);
@@ -8378,7 +8134,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Font { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Font
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Symbol Character Code</para>
@@ -8387,8 +8147,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue Char { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SymbolChar>();
+        public HexBinaryValue Char
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8492,7 +8255,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue DxaOriginal { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DxaOriginal
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dyaOrig</para>
@@ -8501,7 +8268,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue DyaOriginal { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DyaOriginal
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>anchorId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -8510,8 +8281,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public HexBinaryValue AnchorId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbeddedObject>();
+        public HexBinaryValue AnchorId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8647,8 +8421,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public HexBinaryValue AnchorId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Picture>();
+        public HexBinaryValue AnchorId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8755,7 +8532,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues> FieldCharType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues> FieldCharType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Should Not Be Recalculated</para>
@@ -8764,7 +8545,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue FieldLock { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue FieldLock
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Result Invalidated</para>
@@ -8773,8 +8558,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Dirty { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldChar>();
+        public OnOffValue Dirty
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8891,8 +8679,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Ruby>();
-
         /// <summary>
         /// <para>Phonetic Guide Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rubyPr.</para>
@@ -8961,8 +8747,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteReference>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new ReferenceExistConstraint(1 /*w:id*/, "FootnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), "DocumentFormat.OpenXml.Wordprocessing.Footnote", 1 /*w:id*/)
         };
@@ -8989,8 +8773,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnoteReference>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndnoteReference>(deep);
     }
@@ -9016,7 +8798,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue CustomMarkFollows { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue CustomMarkFollows
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Footnote/Endnote ID Reference</para>
@@ -9025,7 +8811,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public IntegerValue Id { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Id
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9089,8 +8879,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Drawing>();
-
         /// <summary>
         /// <para>Drawing Element Anchor.</para>
         /// <para>Represents the following element tag in the schema: wp:anchor.</para>
@@ -9152,7 +8940,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Positional Tab Base</para>
@@ -9161,7 +8953,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues> RelativeTo { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues> RelativeTo
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Tab Leader Character</para>
@@ -9170,8 +8966,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues> Leader { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PositionalTab>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues> Leader
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9211,8 +9010,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunStyle>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunStyle>(deep);
     }
@@ -9232,8 +9029,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableStyle() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyle>(deep);
@@ -9255,8 +9050,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphStyleIdInLevel>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ParagraphStyleIdInLevel>(deep);
     }
@@ -9276,8 +9069,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AbstractNumDefinitionName() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AbstractNumDefinitionName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbstractNumDefinitionName>(deep);
@@ -9299,8 +9090,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleLink>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLink>(deep);
     }
@@ -9320,8 +9109,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public NumberingStyleLink() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingStyleLink>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingStyleLink>(deep);
@@ -9343,8 +9130,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Aliases>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Aliases>(deep);
     }
@@ -9364,8 +9149,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BasedOn() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BasedOn>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BasedOn>(deep);
@@ -9387,8 +9170,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NextParagraphStyle>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NextParagraphStyle>(deep);
     }
@@ -9408,8 +9189,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LinkedStyle() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinkedStyle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkedStyle>(deep);
@@ -9431,8 +9210,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ClickAndTypeStyle>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClickAndTypeStyle>(deep);
     }
@@ -9452,8 +9229,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DefaultTableStyle() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultTableStyle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTableStyle>(deep);
@@ -9480,7 +9255,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9517,7 +9296,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues> Hint { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues> Hint
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ASCII Font</para>
@@ -9526,7 +9309,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Ascii { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Ascii
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>High ANSI Font</para>
@@ -9535,7 +9322,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue HighAnsi { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue HighAnsi
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>East Asian Font</para>
@@ -9544,7 +9335,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue EastAsia { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue EastAsia
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Complex Script Font</para>
@@ -9553,7 +9348,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ComplexScript { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ComplexScript
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ASCII Theme Font</para>
@@ -9562,7 +9361,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> AsciiTheme { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> AsciiTheme
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>High ANSI Theme Font</para>
@@ -9571,7 +9374,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> HighAnsiTheme { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> HighAnsiTheme
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>East Asian Theme Font</para>
@@ -9580,7 +9387,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> EastAsiaTheme { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> EastAsiaTheme
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Complex Script Theme Font</para>
@@ -9589,8 +9400,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> ComplexScriptTheme { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunFonts>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> ComplexScriptTheme
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9646,7 +9460,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Run Content Theme Color</para>
@@ -9655,7 +9473,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Run Content Theme Color Tint</para>
@@ -9664,7 +9486,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ThemeTint
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Run Content Theme Color Shade</para>
@@ -9673,8 +9499,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Color>();
+        public StringValue ThemeShade
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9727,8 +9556,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Spacing>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9768,8 +9600,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public IntegerValue Val { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CharacterScale>();
+        public IntegerValue Val
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9808,8 +9643,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Kern>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9849,8 +9687,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Position>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9888,8 +9729,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontSize>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontSize>(deep);
     }
@@ -9909,8 +9748,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FontSizeComplexScript() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontSizeComplexScript>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontSizeComplexScript>(deep);
@@ -9932,8 +9769,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormFieldSize>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormFieldSize>(deep);
     }
@@ -9954,8 +9789,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PhoneticGuideTextFontSize>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhoneticGuideTextFontSize>(deep);
     }
@@ -9975,8 +9808,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PhoneticGuideBaseTextSize() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PhoneticGuideBaseTextSize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhoneticGuideBaseTextSize>(deep);
@@ -10003,7 +9834,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10045,8 +9880,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Highlight>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10085,7 +9923,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Underline Color</para>
@@ -10094,7 +9936,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Color { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Color
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Underline Theme Color</para>
@@ -10103,7 +9949,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Underline Theme Color Tint</para>
@@ -10112,7 +9962,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ThemeTint
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Underline Theme Color Shade</para>
@@ -10121,8 +9975,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Underline>();
+        public StringValue ThemeShade
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10175,8 +10032,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextEffect>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10208,8 +10068,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Border>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Border>(deep);
     }
@@ -10229,8 +10087,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TopBorder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopBorder>(deep);
@@ -10252,8 +10108,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftBorder>(deep);
     }
@@ -10273,8 +10127,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BottomBorder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomBorder>(deep);
@@ -10296,8 +10148,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightBorder>(deep);
     }
@@ -10317,8 +10167,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BetweenBorder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BetweenBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BetweenBorder>(deep);
@@ -10340,8 +10188,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarBorder>(deep);
     }
@@ -10361,8 +10207,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StartBorder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartBorder>(deep);
@@ -10384,8 +10228,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndBorder>(deep);
     }
@@ -10405,8 +10247,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public InsideHorizontalBorder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InsideHorizontalBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsideHorizontalBorder>(deep);
@@ -10428,8 +10268,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InsideVerticalBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsideVerticalBorder>(deep);
     }
@@ -10450,8 +10288,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopLeftToBottomRightCellBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopLeftToBottomRightCellBorder>(deep);
     }
@@ -10471,8 +10307,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TopRightToBottomLeftCellBorder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopRightToBottomLeftCellBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopRightToBottomLeftCellBorder>(deep);
@@ -10499,7 +10333,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Color</para>
@@ -10508,7 +10346,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Color { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Color
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Theme Color</para>
@@ -10517,7 +10359,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Theme Color Tint</para>
@@ -10526,7 +10372,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ThemeTint
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Theme Color Shade</para>
@@ -10535,7 +10385,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ThemeShade
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Width</para>
@@ -10544,7 +10398,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Size { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Size
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Spacing Measurement</para>
@@ -10553,7 +10411,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Space { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Space
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Shadow</para>
@@ -10562,7 +10424,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Shadow { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Shadow
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Create Frame Effect</para>
@@ -10571,7 +10437,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Frame { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Frame
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10631,7 +10501,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fit Text Run ID</para>
@@ -10640,8 +10514,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Id { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FitText>();
+        public Int32Value Id
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10682,8 +10559,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalTextAlignment>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10722,8 +10602,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Emphasis>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10755,8 +10638,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Languages>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Languages>(deep);
     }
@@ -10776,8 +10657,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ThemeFontLanguages() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeFontLanguages>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThemeFontLanguages>(deep);
@@ -10804,7 +10683,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>East Asian Language</para>
@@ -10813,7 +10696,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue EastAsia { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue EastAsia
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Complex Script Language</para>
@@ -10822,7 +10709,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Bidi { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Bidi
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10866,7 +10757,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Id { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Id
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Two Lines in One</para>
@@ -10875,7 +10770,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Combine { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Combine
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Display Brackets Around Two Lines in One</para>
@@ -10884,7 +10783,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues> CombineBrackets { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues> CombineBrackets
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal in Vertical (Rotate Text)</para>
@@ -10893,7 +10796,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Vertical { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Vertical
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Compress Rotated Text to Line Height</para>
@@ -10902,8 +10809,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue VerticalCompress { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EastAsianLayout>();
+        public OnOffValue VerticalCompress
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10974,7 +10884,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -10983,7 +10897,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -10992,8 +10910,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunPropertiesChange>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11195,8 +11116,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RunProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunProperties>();
 
         /// <summary>
         /// <para>RunStyle.</para>
@@ -12044,7 +11963,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -12053,7 +11976,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -12062,8 +11989,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InsertedMathControl>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12173,7 +12103,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -12182,7 +12116,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -12191,8 +12129,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DeletedMathControl>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12289,8 +12230,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveFromMathControl>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 0, 1)
@@ -12372,8 +12311,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveToMathControl(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveToMathControl>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -12465,7 +12402,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -12474,7 +12415,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -12483,7 +12428,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12667,8 +12616,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlRuby(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlRuby>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -12972,7 +12919,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Instruction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Instruction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fldLock</para>
@@ -12981,7 +12932,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue FieldLock { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue FieldLock
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dirty</para>
@@ -12990,8 +12945,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Dirty { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SimpleFieldRuby>();
+        public OnOffValue Dirty
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13318,7 +13276,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue TargetFrame { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TargetFrame
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tooltip</para>
@@ -13327,7 +13289,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Tooltip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tooltip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>docLocation</para>
@@ -13336,7 +13302,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue DocLocation { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DocLocation
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>history</para>
@@ -13345,7 +13315,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue History { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue History
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>anchor</para>
@@ -13354,7 +13328,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Anchor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Anchor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
@@ -13363,8 +13341,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyperlinkRuby>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13644,7 +13625,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidRunProperties { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidRunProperties
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Identifier for Run Deletion</para>
@@ -13653,7 +13638,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidRunDeletion { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidRunDeletion
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Identifier for Run</para>
@@ -13662,8 +13651,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidRunAddition { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Run>();
+        public HexBinaryValue RsidRunAddition
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13842,8 +13834,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtRunRuby>();
-
         /// <summary>
         /// <para>SdtContentRunRuby.</para>
         /// <para>Represents the following element tag in the schema: w:sdtContent.</para>
@@ -13931,8 +13921,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ProofError>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13971,7 +13964,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues> EditorGroup { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues> EditorGroup
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ed</para>
@@ -13980,7 +13977,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Ed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Ed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>colFirst</para>
@@ -13989,7 +13990,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value ColumnFirst { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ColumnFirst
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>colLast</para>
@@ -13998,7 +14003,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value ColumnLast { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ColumnLast
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation ID</para>
@@ -14007,7 +14016,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Id { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Id
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Displaced By Custom XML Markup</para>
@@ -14016,8 +14029,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PermStart>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14073,7 +14089,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Id { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Id
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Displaced By Custom XML Markup</para>
@@ -14082,8 +14102,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PermEnd>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14206,8 +14229,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public InsertedRun(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InsertedRun>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -14463,8 +14484,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DeletedRun>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -14719,8 +14738,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveFromRun>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
         };
@@ -14974,8 +14991,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MoveToRun(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveToRun>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(2 /*w:id*/, true, null)
@@ -15292,7 +15307,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -15301,7 +15320,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -15310,7 +15333,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15357,8 +15384,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContentPart>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15464,8 +15494,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtRun(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtRun>();
 
         /// <summary>
         /// <para>Inline-Level Structured Document Tag Content.</para>
@@ -15645,8 +15673,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlBlock(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlBlock>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -15831,8 +15857,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtBlock(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtBlock>();
 
         /// <summary>
         /// <para>Block-Level Structured Document Tag Content.</para>
@@ -16072,7 +16096,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidParagraphMarkRevision { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidParagraphMarkRevision
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Identifier for Paragraph</para>
@@ -16081,7 +16109,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidParagraphAddition { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidParagraphAddition
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Identifier for Paragraph Deletion</para>
@@ -16090,7 +16122,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidParagraphDeletion { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidParagraphDeletion
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Identifier for Paragraph Properties</para>
@@ -16099,7 +16135,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidParagraphProperties { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidParagraphProperties
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Revision Identifier for Runs</para>
@@ -16108,7 +16148,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidRunAdditionDefault { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidRunAdditionDefault
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>paraId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -16117,7 +16161,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public HexBinaryValue ParagraphId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue ParagraphId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>textId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -16126,7 +16174,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public HexBinaryValue TextId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue TextId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>noSpellErr, this property is only available in Office2010, Office2013, Office2016</para>
@@ -16135,8 +16187,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public OnOffValue NoSpellError { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Paragraph>();
+        public OnOffValue NoSpellError
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16474,8 +16529,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Table>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -16723,7 +16776,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidTableRowMarkRevision { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidTableRowMarkRevision
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Identifier for Table Row</para>
@@ -16732,7 +16789,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidTableRowAddition { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidTableRowAddition
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Identifier for Table Row Deletion</para>
@@ -16741,7 +16802,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidTableRowDeletion { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidTableRowDeletion
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Identifier for Table Row Properties</para>
@@ -16750,7 +16815,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidTableRowProperties { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidTableRowProperties
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>paraId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -16759,7 +16828,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public HexBinaryValue ParagraphId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue ParagraphId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>textId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -16768,8 +16841,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public HexBinaryValue TextId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableRow>();
+        public HexBinaryValue TextId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17036,8 +17112,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlRow>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -17214,8 +17288,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtRow(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtRow>();
 
         /// <summary>
         /// <para>Row-Level Structured Document Tag Content.</para>
@@ -17397,8 +17469,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCell(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCell>();
 
         /// <summary>
         /// <para>Table Cell Properties.</para>
@@ -17638,8 +17708,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlCell>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
@@ -17816,8 +17884,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtCell(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtCell>();
 
         /// <summary>
         /// <para>Cell-Level Structured Document Tag Content.</para>
@@ -18049,8 +18115,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CustomXmlRun(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlRun>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18387,7 +18451,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Instruction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Instruction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Should Not Be Recalculated</para>
@@ -18396,7 +18464,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue FieldLock { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue FieldLock
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Result Invalidated</para>
@@ -18405,8 +18477,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Dirty { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SimpleField>();
+        public OnOffValue Dirty
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18766,7 +18841,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue TargetFrame { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TargetFrame
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Associated String</para>
@@ -18775,7 +18854,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Tooltip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tooltip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Location in Target Document</para>
@@ -18784,7 +18867,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue DocLocation { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DocLocation
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Add To Viewed Hyperlinks</para>
@@ -18793,7 +18880,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue History { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue History
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Anchor</para>
@@ -18802,7 +18893,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Anchor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Anchor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
@@ -18811,8 +18906,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hyperlink>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19173,8 +19271,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BidirectionalOverride>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19512,8 +19613,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BidirectionalEmbedding>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19695,8 +19799,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SubDocumentReference>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/subDocument")
         };
@@ -19722,8 +19824,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PrinterSettingsReference() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrinterSettingsReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings")
@@ -19751,8 +19851,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SourceReference>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource")
         };
@@ -19778,8 +19876,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RecipientDataReference() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RecipientDataReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData")
@@ -19807,8 +19903,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataSourceReference>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/mailMergeSource")
         };
@@ -19835,8 +19929,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderSource>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeaderSource>(deep);
     }
@@ -19856,8 +19948,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SourceFileReference() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SourceFileReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/frame")
@@ -19885,8 +19975,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MovieReference>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MovieReference>(deep);
     }
@@ -19906,8 +19994,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AttachedTemplate() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AttachedTemplate>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(0 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate"),
@@ -19941,7 +20027,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19977,7 +20067,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstRow, this property is only available in Office2010, Office2013, Office2016</para>
@@ -19986,7 +20080,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue FirstRow { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue FirstRow
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lastRow, this property is only available in Office2010, Office2013, Office2016</para>
@@ -19995,7 +20093,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue LastRow { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue LastRow
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20004,7 +20106,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue FirstColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue FirstColumn
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lastColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20013,7 +20119,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue LastColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue LastColumn
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>oddVBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20022,7 +20132,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue OddVerticalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue OddVerticalBand
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>evenVBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20031,7 +20145,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue EvenVerticalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue EvenVerticalBand
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>oddHBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20040,7 +20158,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue OddHorizontalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue OddHorizontalBand
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>evenHBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20049,7 +20171,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue EvenHorizontalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue EvenHorizontalBand
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstRowFirstColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20058,7 +20184,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue FirstRowFirstColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue FirstRowFirstColumn
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstRowLastColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20067,7 +20197,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue FirstRowLastColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue FirstRowLastColumn
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lastRowFirstColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20076,7 +20210,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue LastRowFirstColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue LastRowFirstColumn
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lastRowLastColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -20085,8 +20223,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue LastRowLastColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormatStyle>();
+        public OnOffValue LastRowLastColumn
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20169,8 +20310,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellWidth>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellWidth>(deep);
     }
@@ -20190,8 +20329,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public WidthBeforeTableRow() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WidthBeforeTableRow>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidthBeforeTableRow>(deep);
@@ -20213,8 +20350,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WidthAfterTableRow>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidthAfterTableRow>(deep);
     }
@@ -20234,8 +20369,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellSpacing() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellSpacing>(deep);
@@ -20257,8 +20390,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableWidth>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableWidth>(deep);
     }
@@ -20278,8 +20409,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TopMargin() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopMargin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopMargin>(deep);
@@ -20301,8 +20430,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartMargin>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartMargin>(deep);
     }
@@ -20322,8 +20449,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BottomMargin() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomMargin>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeCannotOmitConstraint(1 /*w:type*/) { Application = ApplicationType.Word },
@@ -20352,8 +20477,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndMargin>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndMargin>(deep);
     }
@@ -20374,8 +20497,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftMargin>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMargin>(deep);
     }
@@ -20395,8 +20516,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RightMargin() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightMargin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightMargin>(deep);
@@ -20423,7 +20542,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Width { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Width
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Width Type</para>
@@ -20432,7 +20555,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20479,8 +20606,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HorizontalMerge>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20516,8 +20646,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalMerge>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20594,8 +20727,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellBorders(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellBorders>();
 
         /// <summary>
         /// <para>Table Cell Top Border.</para>
@@ -20763,8 +20894,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoWrap>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoWrap>(deep);
     }
@@ -20784,8 +20913,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellFitText() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellFitText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellFitText>(deep);
@@ -20807,8 +20934,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HideMark>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideMark>(deep);
     }
@@ -20828,8 +20953,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public CantSplit() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CantSplit>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CantSplit>(deep);
@@ -20851,8 +20974,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableHeader>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableHeader>(deep);
     }
@@ -20872,8 +20993,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BiDiVisual() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BiDiVisual>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BiDiVisual>(deep);
@@ -20895,8 +21014,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoResizeAllowed>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoResizeAllowed>(deep);
     }
@@ -20916,8 +21033,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public LinkedToFile() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinkedToFile>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkedToFile>(deep);
@@ -20939,8 +21054,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoBorder>(deep);
     }
@@ -20960,8 +21073,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FlatBorders() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FlatBorders>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FlatBorders>(deep);
@@ -20983,8 +21094,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoRedefine>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoRedefine>(deep);
     }
@@ -21004,8 +21113,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StyleHidden() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleHidden>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleHidden>(deep);
@@ -21027,8 +21134,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SemiHidden>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SemiHidden>(deep);
     }
@@ -21048,8 +21153,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public UnhideWhenUsed() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnhideWhenUsed>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnhideWhenUsed>(deep);
@@ -21071,8 +21174,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrimaryStyle>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrimaryStyle>(deep);
     }
@@ -21092,8 +21193,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Locked() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Locked>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Locked>(deep);
@@ -21115,8 +21214,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Personal>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Personal>(deep);
     }
@@ -21137,8 +21234,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PersonalCompose>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PersonalCompose>(deep);
     }
@@ -21158,8 +21253,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PersonalReply() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PersonalReply>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PersonalReply>(deep);
@@ -21186,7 +21279,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21252,8 +21349,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellMargin(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellMargin>();
 
         /// <summary>
         /// <para>Table Cell Top Margin Exception.</para>
@@ -21372,8 +21467,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellVerticalAlignment>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21412,8 +21510,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DivId>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21463,7 +21564,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Row Height Type</para>
@@ -21472,8 +21577,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableRowHeight>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21513,8 +21621,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableJustification>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21553,7 +21664,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value LeftFromText { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        public Int16Value LeftFromText
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>(Distance From Right of Table to Text</para>
@@ -21562,7 +21677,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value RightFromText { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        public Int16Value RightFromText
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Top of Table to Text</para>
@@ -21571,7 +21690,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value TopFromText { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        public Int16Value TopFromText
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Bottom of Table to Text</para>
@@ -21580,7 +21703,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value BottomFromText { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        public Int16Value BottomFromText
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Vertical Anchor</para>
@@ -21589,7 +21716,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalAnchor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalAnchor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Horizontal Anchor</para>
@@ -21598,7 +21729,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalAnchor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalAnchor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Horizontal Alignment From Anchor</para>
@@ -21607,7 +21742,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> TablePositionXAlignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> TablePositionXAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Absolute Horizontal Distance From Anchor</para>
@@ -21616,7 +21755,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value TablePositionX { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value TablePositionX
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Vertical Alignment from Anchor</para>
@@ -21625,7 +21768,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> TablePositionYAlignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> TablePositionYAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Absolute Vertical Distance From Anchor</para>
@@ -21634,8 +21781,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value TablePositionY { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TablePositionProperties>();
+        public Int32Value TablePositionY
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21698,8 +21848,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableOverlap>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21731,8 +21884,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleRowBandSize>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleRowBandSize>(deep);
     }
@@ -21752,8 +21903,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableStyleColumnBandSize() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleColumnBandSize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleColumnBandSize>(deep);
@@ -21780,7 +21929,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21817,7 +21970,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Width { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Width
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type</para>
@@ -21826,8 +21983,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableIndentation>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21901,8 +22061,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableBorders(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableBorders>();
 
         /// <summary>
         /// <para>Table Top Border.</para>
@@ -22049,8 +22207,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableLayout>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22119,8 +22280,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellMarginDefault(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellMarginDefault>();
 
         /// <summary>
         /// <para>Table Cell Top Margin Default.</para>
@@ -22239,8 +22398,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingStart>();
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22279,8 +22441,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingRestart>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22350,8 +22515,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AltChunk>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22414,7 +22582,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstRow, this property is only available in Office2010, Office2013, Office2016</para>
@@ -22423,7 +22595,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue FirstRow { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue FirstRow
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lastRow, this property is only available in Office2010, Office2013, Office2016</para>
@@ -22432,7 +22608,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue LastRow { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue LastRow
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -22441,7 +22621,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue FirstColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue FirstColumn
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lastColumn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -22450,7 +22634,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue LastColumn { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue LastColumn
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>noHBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -22459,7 +22647,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue NoHorizontalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue NoHorizontalBand
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>noVBand, this property is only available in Office2010, Office2013, Office2016</para>
@@ -22468,8 +22660,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue NoVerticalBand { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableLook>();
+        public OnOffValue NoVerticalBand
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22561,8 +22756,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FootnoteProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteProperties>();
 
         /// <summary>
         /// <para>Footnote Placement.</para>
@@ -22689,8 +22882,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnoteProperties>();
-
         /// <summary>
         /// <para>Endnote Placement.</para>
         /// <para>Represents the following element tag in the schema: w:pos.</para>
@@ -22786,8 +22977,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22826,7 +23020,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Width { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Width
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Page Height</para>
@@ -22835,7 +23033,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Height { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Height
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Page Orientation</para>
@@ -22844,7 +23046,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues> Orient { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues> Orient
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Printer Paper Code</para>
@@ -22853,8 +23059,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt16Value Code { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageSize>();
+        public UInt16Value Code
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22899,7 +23108,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Top { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Top
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right Margin Spacing</para>
@@ -22908,7 +23121,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Right { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Right
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Page Bottom Spacing</para>
@@ -22917,7 +23134,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Bottom { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Bottom
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Left Margin Spacing</para>
@@ -22926,7 +23147,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Left { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Left
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Spacing to Top of Header</para>
@@ -22935,7 +23160,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Header { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Header
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Spacing to Bottom of Footer</para>
@@ -22944,7 +23173,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Footer { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Footer
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Page Gutter Spacing</para>
@@ -22953,8 +23186,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Gutter { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageMargin>();
+        public UInt32Value Gutter
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23017,7 +23253,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt16Value First { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value First
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Non-First Page Printer Tray Code</para>
@@ -23026,8 +23266,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt16Value Other { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PaperSource>();
+        public UInt16Value Other
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23101,7 +23344,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues> ZOrder { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues> ZOrder
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pages to Display Page Borders</para>
@@ -23110,7 +23357,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues> Display { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues> Display
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Page Border Positioning</para>
@@ -23119,8 +23370,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues> OffsetFrom { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageBorders>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues> OffsetFrom
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23220,7 +23474,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value CountBy { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        public Int16Value CountBy
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Numbering Starting Value</para>
@@ -23229,7 +23487,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value Start { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        public Int16Value Start
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance Between Text and Line Numbering</para>
@@ -23238,7 +23500,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Distance { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Distance
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Numbering Restart Setting</para>
@@ -23247,8 +23513,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues> Restart { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineNumberType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues> Restart
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23301,7 +23570,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Format { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Format
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Starting Page Number</para>
@@ -23310,7 +23583,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Start { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Start
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Chapter Heading Style</para>
@@ -23319,7 +23596,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public ByteValue ChapterStyle { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue ChapterStyle
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Chapter Separator Character</para>
@@ -23328,8 +23609,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> ChapterSeparator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageNumberType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> ChapterSeparator
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23402,7 +23686,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue EqualWidth { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue EqualWidth
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Spacing Between Equal Width Columns</para>
@@ -23411,7 +23699,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Space { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Space
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number of Equal Width Columns</para>
@@ -23420,7 +23712,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value ColumnCount { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        public Int16Value ColumnCount
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Draw Line Between Columns</para>
@@ -23429,8 +23725,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Separator { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Columns>();
+        public OnOffValue Separator
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23487,8 +23786,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalTextAlignmentOnPage>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23527,7 +23829,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Document Grid Line Pitch</para>
@@ -23536,7 +23842,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value LinePitch { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value LinePitch
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Document Grid Character Pitch</para>
@@ -23545,8 +23855,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value CharacterSpace { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocGrid>();
+        public Int32Value CharacterSpace
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23607,8 +23920,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Recipients(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Recipients>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -23735,8 +24046,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TextBoxContent(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBoxContent>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
         {
@@ -23893,8 +24202,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Comments>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Comment), 0, 0)
@@ -23984,8 +24291,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Footnotes>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), 0, 1)
@@ -24074,8 +24379,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Endnotes(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Endnotes>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
         {
@@ -24233,8 +24536,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Header(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Header>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
         {
@@ -24489,8 +24790,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Footer(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Footer>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
         {
@@ -24996,8 +25295,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Settings>();
-
         /// <summary>
         /// <para>Write Protection.</para>
         /// <para>Represents the following element tag in the schema: w:writeProtection.</para>
@@ -25484,8 +25781,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebSettings>();
-
         /// <summary>
         /// <para>Frameset.</para>
         /// <para>Represents the following element tag in the schema: w:frameset.</para>
@@ -25742,8 +26037,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Fonts>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Font), 0, 0)
@@ -25838,8 +26131,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Numbering(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Numbering>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25937,8 +26228,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Styles>();
-
         /// <summary>
         /// <para>Document Default Paragraph and Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:docDefaults.</para>
@@ -26034,8 +26323,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance> Conformance { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Document>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance> Conformance
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26167,8 +26459,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public GlossaryDocument(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GlossaryDocument>();
 
         /// <summary>
         /// <para>Document Background.</para>
@@ -26307,8 +26597,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PreviousTablePropertyExceptions(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousTablePropertyExceptions>();
 
         /// <summary>
         /// <para>Preferred Table Width Exception.</para>
@@ -26522,8 +26810,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PreviousTableCellProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousTableCellProperties>();
 
         /// <summary>
         /// <para>ConditionalFormatStyle.</para>
@@ -26837,8 +27123,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousTableRowProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -26947,8 +27231,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PreviousTableProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousTableProperties>();
 
         /// <summary>
         /// <para>TableStyle.</para>
@@ -27298,7 +27580,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidRPr { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidRPr
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Section Deletion Revision ID</para>
@@ -27307,7 +27593,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidDel { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidDel
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Section Addition Revision ID</para>
@@ -27316,7 +27606,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidR { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidR
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Section Properties Revision ID</para>
@@ -27325,8 +27619,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidSect { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousSectionProperties>();
+        public HexBinaryValue RsidSect
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27756,8 +28053,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ParagraphPropertiesExtended(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphPropertiesExtended>();
 
         /// <summary>
         /// <para>ParagraphStyleId.</para>
@@ -28394,8 +28689,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousRunProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -28669,8 +28962,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousParagraphMarkRunProperties>();
-
         /// <summary>
         /// <para>Inserted Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:ins.</para>
@@ -28885,8 +29176,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingLevelReference>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28919,8 +29213,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingId>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingId>(deep);
     }
@@ -28941,8 +29233,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartNumberingValue>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartNumberingValue>(deep);
     }
@@ -28962,8 +29252,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public AbstractNumId() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AbstractNumId>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbstractNumId>(deep);
@@ -28990,7 +29278,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29027,7 +29319,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Original { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Original
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>author</para>
@@ -29036,7 +29332,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -29045,7 +29345,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -29054,8 +29358,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingChange>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29113,7 +29420,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Tab Leader Character</para>
@@ -29122,7 +29433,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues> Leader { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues> Leader
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Tab Stop Position</para>
@@ -29131,8 +29446,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Position { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabStop>();
+        public Int32Value Position
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29314,8 +29632,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ParagraphMarkRunProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphMarkRunProperties>();
 
         /// <summary>
         /// <para>Inserted Paragraph.</para>
@@ -29607,7 +29923,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidRPr { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidRPr
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Section Deletion Revision ID</para>
@@ -29616,7 +29936,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidDel { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidDel
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Section Addition Revision ID</para>
@@ -29625,7 +29949,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidR { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue RsidR
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Section Properties Revision ID</para>
@@ -29634,8 +29962,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue RsidSect { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionProperties>();
+        public HexBinaryValue RsidSect
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29733,8 +30064,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new Base64BinaryValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldData>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldData>(deep);
     }
@@ -29804,8 +30133,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormFieldData>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FormFieldName), 1, 1),
@@ -29852,8 +30179,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormFieldName>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29885,8 +30215,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EntryMacro>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EntryMacro>(deep);
     }
@@ -29906,8 +30234,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ExitMacro() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExitMacro>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExitMacro>(deep);
@@ -29934,7 +30260,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29971,7 +30301,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Help Text Value</para>
@@ -29980,8 +30314,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HelpText>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30021,7 +30358,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Status Text Value</para>
@@ -30030,8 +30371,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StatusText>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30102,8 +30446,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CheckBox>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -30171,8 +30513,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DropDownListFormField(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropDownListFormField>();
 
         /// <summary>
         /// <para>Drop-Down List Selection.</para>
@@ -30266,8 +30606,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextInput>();
-
         /// <summary>
         /// <para>Text Box Form Field Type.</para>
         /// <para>Represents the following element tag in the schema: w:type.</para>
@@ -30357,8 +30695,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultDropDownListItemIndex>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30391,8 +30732,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListEntryFormField>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListEntryFormField>(deep);
     }
@@ -30413,8 +30752,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultTextBoxFormFieldString>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTextBoxFormFieldString>(deep);
     }
@@ -30434,8 +30771,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FrameName() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FrameName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FrameName>(deep);
@@ -30462,7 +30797,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30499,8 +30838,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBoxFormFieldType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30539,8 +30881,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value Val { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MaxLength>();
+        public Int16Value Val
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30580,8 +30925,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Format>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30621,7 +30969,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Width { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Width
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Space Before Following Column</para>
@@ -30630,8 +30982,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Space { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Column>();
+        public StringValue Space
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30715,7 +31070,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -30724,7 +31083,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -30733,8 +31096,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionPropertiesChange>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30844,7 +31210,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -30853,7 +31223,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -30862,8 +31236,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphMarkRunPropertiesChange>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30966,8 +31343,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AltChunkProperties>();
-
         /// <summary>
         /// <para>Keep Source Formatting on Import.</para>
         /// <para>Represents the following element tag in the schema: w:matchSrc.</para>
@@ -31015,8 +31390,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RubyAlign>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31055,8 +31433,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value Val { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PhoneticGuideRaise>();
+        public Int16Value Val
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31095,8 +31476,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LanguageId>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31169,8 +31553,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RubyProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RubyProperties>();
 
         /// <summary>
         /// <para>Phonetic Guide Text Alignment.</para>
@@ -31367,8 +31749,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RubyContent(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RubyContent>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -31601,8 +31981,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RubyBase(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RubyBase>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -31915,8 +32293,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtDateMappingType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31952,8 +32333,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Calendar>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -31989,7 +32373,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue DisplayText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DisplayText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>List Entry Value</para>
@@ -31998,8 +32386,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Value { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListItem>();
+        public StringValue Value
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -32118,8 +32509,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1),
@@ -32212,8 +32601,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtEndCharProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtEndCharProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -32338,8 +32725,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentBlock(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentBlock>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -32594,8 +32979,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentRun(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentRun>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
@@ -32923,8 +33306,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentRunRuby>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -33166,8 +33547,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentCell>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -33361,8 +33740,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentRow>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -33494,8 +33871,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlProperties>();
-
         /// <summary>
         /// <para>Custom XML Element Placeholder Text.</para>
         /// <para>Represents the following element tag in the schema: w:placeholder.</para>
@@ -33544,7 +33919,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
@@ -33553,7 +33932,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>val</para>
@@ -33562,8 +33945,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlAttribute>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -33608,8 +33994,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Width { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridColumn>();
+        public StringValue Width
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -33684,8 +34073,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableGridChange>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -33790,7 +34182,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -33799,7 +34195,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -33808,8 +34208,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellPropertiesChange>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -33943,8 +34346,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellProperties>();
 
         /// <summary>
         /// <para>ConditionalFormatStyle.</para>
@@ -34250,7 +34651,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -34259,7 +34664,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -34268,8 +34677,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TablePropertiesChange>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34379,7 +34791,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -34388,7 +34804,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -34397,8 +34817,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TablePropertyExceptionsChange>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34530,8 +34953,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableProperties>();
 
         /// <summary>
         /// <para>TableStyle.</para>
@@ -34858,8 +35279,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableGrid>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -34901,8 +35320,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnotePosition>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34941,7 +35363,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>format, this property is only available in Office2010, Office2013, Office2016</para>
@@ -34950,8 +35376,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Format { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingFormat>();
+        public StringValue Format
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -34994,8 +35423,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnotePosition>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35027,8 +35459,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteSpecialReference>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null),
             new ReferenceExistConstraint(0 /*w:id*/, "/MainDocumentPart/FootnotesPart", typeof(DocumentFormat.OpenXml.Wordprocessing.Footnote), "DocumentFormat.OpenXml.Wordprocessing.Footnote", 1 /*w:id*/)
@@ -35055,8 +35485,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public EndnoteSpecialReference() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnoteSpecialReference>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*w:id*/, true, null),
@@ -35090,7 +35518,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public IntegerValue Id { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Id
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35120,8 +35552,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnIndex>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnIndex>(deep);
     }
@@ -35141,8 +35571,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ColumnDelimiter() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnDelimiter>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnDelimiter>(deep);
@@ -35169,7 +35597,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35205,8 +35637,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Base64BinaryValue Val { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UniqueTag>();
+        public Base64BinaryValue Val
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35272,8 +35707,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RecipientData(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RecipientData>();
 
         /// <summary>
         /// <para>Record Is Included in Mail Merge.</para>
@@ -35350,8 +35783,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailMergeFieldType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35390,8 +35826,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailMergeSource>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35463,8 +35902,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FieldMapData(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldMapData>();
 
         /// <summary>
         /// <para>Merge Field Mapping.</para>
@@ -35583,8 +36020,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MainDocumentType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35623,8 +36063,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35663,8 +36106,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Destination>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35740,8 +36186,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DataSourceObject(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataSourceObject>();
 
         /// <summary>
         /// <para>UDL Connection String.</para>
@@ -35862,7 +36306,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Document Variable Value</para>
@@ -35871,8 +36319,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentVariable>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -35910,8 +36361,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RsidRoot>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RsidRoot>(deep);
     }
@@ -35931,8 +36380,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Rsid() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Rsid>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rsid>(deep);
@@ -35954,8 +36401,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Nsid>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Nsid>(deep);
     }
@@ -35975,8 +36420,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TemplateCode() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TemplateCode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemplateCode>(deep);
@@ -36003,7 +36446,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -36129,8 +36576,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RunPropertiesBaseStyle(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunPropertiesBaseStyle>();
 
         /// <summary>
         /// <para>RunFonts.</para>
@@ -36747,8 +37192,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphPropertiesBaseStyle>();
-
         /// <summary>
         /// <para>KeepNext.</para>
         /// <para>Represents the following element tag in the schema: w:keepNext.</para>
@@ -37232,8 +37675,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunPropertiesDefault>();
-
         /// <summary>
         /// <para>Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
@@ -37305,8 +37746,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphPropertiesDefault>();
-
         /// <summary>
         /// <para>Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: w:pPr.</para>
@@ -37347,8 +37786,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MarginWidth>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MarginWidth>(deep);
     }
@@ -37368,8 +37805,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MarginHeight() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MarginHeight>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MarginHeight>(deep);
@@ -37396,7 +37831,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37432,8 +37871,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScrollbarVisibility>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37465,8 +37907,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Width>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Width>(deep);
     }
@@ -37486,8 +37926,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public HyphenationZone() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyphenationZone>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyphenationZone>(deep);
@@ -37509,8 +37947,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DrawingGridHorizontalSpacing>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridHorizontalSpacing>(deep);
     }
@@ -37530,8 +37966,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DrawingGridVerticalSpacing() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DrawingGridVerticalSpacing>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridVerticalSpacing>(deep);
@@ -37553,8 +37987,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DrawingGridHorizontalOrigin>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridHorizontalOrigin>(deep);
     }
@@ -37574,8 +38006,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DrawingGridVerticalOrigin() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DrawingGridVerticalOrigin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridVerticalOrigin>(deep);
@@ -37602,7 +38032,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37673,8 +38107,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FramesetSplitbar(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FramesetSplitbar>();
 
         /// <summary>
         /// <para>Frameset Splitter Width.</para>
@@ -37765,8 +38197,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FrameLayout>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -37836,8 +38271,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Frameset(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Frameset>();
 
         /// <summary>
         /// <para>Nested Frameset Size.</para>
@@ -37959,8 +38392,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Frame(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Frame>();
 
         /// <summary>
         /// <para>Frame Size.</para>
@@ -38107,8 +38538,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelSuffix>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38147,7 +38581,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Level Text Is Null Character</para>
@@ -38156,8 +38594,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Null { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelText>();
+        public OnOffValue Null
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38194,7 +38635,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Legacy { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Legacy
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Legacy Spacing</para>
@@ -38203,7 +38648,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue LegacySpace { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue LegacySpace
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Legacy Indent</para>
@@ -38212,8 +38661,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue LegacyIndent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegacyNumbering>();
+        public StringValue LegacyIndent
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38267,8 +38719,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelJustification>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -38390,8 +38845,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public PreviousParagraphProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousParagraphProperties>();
 
         /// <summary>
         /// <para>ParagraphStyleId.</para>
@@ -38966,8 +39419,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingSymbolRunProperties>();
-
         /// <summary>
         /// <para>RunFonts.</para>
         /// <para>Represents the following element tag in the schema: w:rFonts.</para>
@@ -39529,8 +39980,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLevelType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39622,7 +40076,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value LevelIndex { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value LevelIndex
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Template Code</para>
@@ -39631,7 +40089,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue TemplateCode { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue TemplateCode
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Tentative Numbering</para>
@@ -39640,8 +40102,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Tentative { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level>();
+        public OnOffValue Tentative
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39892,8 +40357,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value LevelIndex { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LevelOverride>();
+        public Int32Value LevelIndex
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -39999,8 +40467,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value NumberingPictureBulletId { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingPictureBullet>();
+        public Int32Value NumberingPictureBulletId
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40125,8 +40596,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value AbstractNumberId { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AbstractNum>();
+        public Int32Value AbstractNumberId
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40296,8 +40770,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value NumberID { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingInstance>();
+        public Int32Value NumberID
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -40446,8 +40923,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StyleParagraphProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleParagraphProperties>();
 
         /// <summary>
         /// <para>KeepNext.</para>
@@ -40968,8 +41443,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleConditionalFormattingTableProperties>();
-
         /// <summary>
         /// <para>TableJustification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
@@ -41131,8 +41604,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleConditionalFormattingTableRowProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -41208,8 +41679,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableStyleConditionalFormattingTableCellProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleConditionalFormattingTableCellProperties>();
 
         /// <summary>
         /// <para>TableCellBorders.</para>
@@ -41332,8 +41801,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleName>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41373,8 +41845,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UIPriority>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -41505,8 +41980,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public StyleRunProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleRunProperties>();
 
         /// <summary>
         /// <para>RunFonts.</para>
@@ -42105,8 +42578,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleTableProperties>();
-
         /// <summary>
         /// <para>TableStyleRowBandSize.</para>
         /// <para>Represents the following element tag in the schema: w:tblStyleRowBandSize.</para>
@@ -42300,8 +42771,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleTableCellProperties>();
-
         /// <summary>
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
@@ -42442,8 +42911,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -42558,7 +43030,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Latent Style Locking Setting</para>
@@ -42567,7 +43043,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Locked { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Locked
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Override default sorting order</para>
@@ -42576,7 +43056,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value UiPriority { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value UiPriority
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Semi hidden text override</para>
@@ -42585,7 +43069,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue SemiHidden { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue SemiHidden
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unhide when used</para>
@@ -42594,7 +43082,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue UnhideWhenUsed { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue UnhideWhenUsed
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Latent Style Primary Style Setting</para>
@@ -42603,8 +43095,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue PrimaryStyle { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LatentStyleExceptionInfo>();
+        public OnOffValue PrimaryStyle
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -42676,8 +43171,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocDefaults(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocDefaults>();
 
         /// <summary>
         /// <para>Default Run Properties.</para>
@@ -42771,7 +43264,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue DefaultLockedState { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue DefaultLockedState
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default User Interface Priority Setting</para>
@@ -42780,7 +43277,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value DefaultUiPriority { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value DefaultUiPriority
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Semi-Hidden Setting</para>
@@ -42789,7 +43290,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue DefaultSemiHidden { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue DefaultSemiHidden
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Hidden Until Used Setting</para>
@@ -42798,7 +43303,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue DefaultUnhideWhenUsed { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue DefaultUnhideWhenUsed
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Primary Style Setting</para>
@@ -42807,7 +43316,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue DefaultPrimaryStyle { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue DefaultPrimaryStyle
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Latent Style Count</para>
@@ -42816,8 +43329,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Count { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LatentStyles>();
+        public Int32Value Count
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -42941,7 +43457,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Style ID</para>
@@ -42950,7 +43470,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue StyleId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue StyleId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Style</para>
@@ -42959,7 +43483,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Default { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Default
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User-Defined Style</para>
@@ -42968,8 +43496,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue CustomStyle { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Style>();
+        public OnOffValue CustomStyle
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -43369,8 +43900,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Font>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -43562,8 +44096,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftMarginDiv>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMarginDiv>(deep);
     }
@@ -43583,8 +44115,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public RightMarginDiv() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightMarginDiv>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightMarginDiv>(deep);
@@ -43606,8 +44136,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopMarginDiv>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopMarginDiv>(deep);
     }
@@ -43627,8 +44155,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BottomMarginDiv() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomMarginDiv>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomMarginDiv>(deep);
@@ -43655,7 +44181,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -43726,8 +44256,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DivBorder(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DivBorder>();
 
         /// <summary>
         /// <para>Top Border for HTML div.</para>
@@ -43841,8 +44369,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DivsChild>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Div), 1, 1)
@@ -43899,8 +44425,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Divs(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Divs>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
         {
@@ -44027,8 +44551,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Div>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -44236,7 +44763,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Initials { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Initials
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>author</para>
@@ -44245,7 +44776,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -44254,7 +44789,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -44263,8 +44802,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Comment>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -44449,8 +44991,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Footnote(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Footnote>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null)
@@ -44648,8 +45188,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Endnote(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Endnote>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(1 /*w:id*/, true, null)
@@ -44888,7 +45426,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Footnote/Endnote ID</para>
@@ -44897,7 +45439,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public IntegerValue Id { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Id
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -44935,8 +45481,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Behavior>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -44975,8 +45524,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -45015,8 +45567,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Gallery>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -45055,7 +45610,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Caption Used for Automatic Captioning</para>
@@ -45064,8 +45623,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoCaption>();
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -45116,7 +45678,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Automatic Caption Placement</para>
@@ -45125,7 +45691,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues> Position { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues> Position
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Chapter Number in Field for Caption</para>
@@ -45134,7 +45704,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue ChapterNumber { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue ChapterNumber
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Style for Chapter Headings</para>
@@ -45143,7 +45717,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Heading { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Heading
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Do Not Include Name In Caption</para>
@@ -45152,7 +45730,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue NoLabel { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue NoLabel
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Caption Numbering Format</para>
@@ -45161,7 +45743,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> NumberFormat { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> NumberFormat
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Chapter Number/Item Index Separator</para>
@@ -45170,8 +45756,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> Separator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Caption>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> Separator
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -45241,8 +45830,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoCaptions>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AutoCaption), 1, 0)
@@ -45308,7 +45895,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Color { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Color
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>themeColor</para>
@@ -45317,7 +45908,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>themeTint</para>
@@ -45326,7 +45921,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ThemeTint
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>themeShade</para>
@@ -45335,8 +45934,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentBackground>();
+        public StringValue ThemeShade
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -45432,8 +46034,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocParts>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPart), 0, 0, version: FileFormatVersions.Office2007),
@@ -45469,7 +46069,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Built-In Entry</para>
@@ -45478,8 +46082,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Decorated { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartName>();
+        public OnOffValue Decorated
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -45544,8 +46151,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Category(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Category>();
 
         /// <summary>
         /// <para>Category Associated With Entry.</para>
@@ -45639,8 +46244,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue All { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartTypes>();
+        public OnOffValue All
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -45707,8 +46315,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Behaviors>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Behavior), 1, 0)
@@ -45743,8 +46349,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartId>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -45824,8 +46433,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocPartProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartProperties>();
 
         /// <summary>
         /// <para>Entry Name.</para>
@@ -46015,8 +46622,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DocPartBody(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPartBody>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -46210,8 +46815,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Body(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Body>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -46490,8 +47093,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocPart>();
-
         /// <summary>
         /// <para>Glossary Document Entry Properties.</para>
         /// <para>Represents the following element tag in the schema: w:docPartPr.</para>
@@ -46553,7 +47154,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues> Name { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues> Name
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>uri</para>
@@ -46562,7 +47167,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>val</para>
@@ -46571,8 +47180,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CompatibilitySetting>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -46618,8 +47230,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellLeftMargin>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellLeftMargin>(deep);
     }
@@ -46639,8 +47249,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TableCellRightMargin() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellRightMargin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellRightMargin>(deep);
@@ -46667,7 +47275,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value Width { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        public Int16Value Width
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type</para>
@@ -46676,7 +47288,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -46758,8 +47374,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public TablePropertyExceptions(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TablePropertyExceptions>();
 
         /// <summary>
         /// <para>Preferred Table Width Exception.</para>
@@ -46996,8 +47610,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableRowProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -47103,7 +47715,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -47112,7 +47728,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -47121,8 +47741,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableRowPropertiesChange>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -47294,8 +47917,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ParagraphProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphProperties>();
 
         /// <summary>
         /// <para>ParagraphStyleId.</para>
@@ -47864,7 +48485,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Associated VML Data Reference</para>
@@ -47873,7 +48498,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Control Properties Relationship Reference</para>
@@ -47882,8 +48511,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Control>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -47955,8 +48587,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PreviousTableGrid>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.GridColumn), 0, 0)
@@ -47991,7 +48621,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
@@ -48000,7 +48634,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>progId</para>
@@ -48009,7 +48647,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ProgId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ProgId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>shapeId</para>
@@ -48018,7 +48660,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fieldCodes</para>
@@ -48027,8 +48673,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue FieldCodes { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ObjectEmbed>();
+        public StringValue FieldCodes
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -48071,7 +48720,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode> UpdateMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode> UpdateMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lockedField</para>
@@ -48080,7 +48733,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue LockedField { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue LockedField
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>drawAspect</para>
@@ -48089,7 +48746,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
@@ -48098,7 +48759,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>progId</para>
@@ -48107,7 +48772,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ProgId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ProgId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>shapeId</para>
@@ -48116,7 +48785,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fieldCodes</para>
@@ -48125,8 +48798,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue FieldCodes { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ObjectLink>();
+        public StringValue FieldCodes
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -48174,8 +48850,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Lock>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -48235,8 +48914,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtPlaceholder>();
-
         /// <summary>
         /// <para>Document Part Reference.</para>
         /// <para>Represents the following element tag in the schema: w:docPart.</para>
@@ -48284,7 +48961,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue PrefixMappings { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue PrefixMappings
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>XPath</para>
@@ -48293,7 +48974,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue XPath { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue XPath
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom XML Data Storage ID</para>
@@ -48302,8 +48987,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue StoreItemId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataBinding>();
+        public StringValue StoreItemId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -48378,8 +49066,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue LastValue { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentComboBox>();
+        public StringValue LastValue
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -48459,8 +49150,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue FullDate { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentDate>();
+        public DateTimeValue FullDate
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -48583,8 +49277,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentDocPartObject>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartGallery), 0, 1),
@@ -48645,8 +49337,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public SdtContentDocPartList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentDocPartList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -48804,8 +49494,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue LastValue { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentDropDownList>();
+        public StringValue LastValue
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -48848,8 +49541,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue MultiLine { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentText>();
+        public OnOffValue MultiLine
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -48885,7 +49581,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Recommended { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Recommended
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Provider Type</para>
@@ -48894,7 +49594,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Class</para>
@@ -48903,7 +49607,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Type</para>
@@ -48912,7 +49620,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Hashing Algorithm</para>
@@ -48921,7 +49633,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value CryptographicAlgorithmSid { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value CryptographicAlgorithmSid
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Iterations to Run Hashing Algorithm</para>
@@ -48930,7 +49646,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value CryptographicSpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value CryptographicSpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Provider</para>
@@ -48939,7 +49659,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue CryptographicProvider { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CryptographicProvider
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Extensibility</para>
@@ -48948,7 +49672,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue AlgorithmIdExtensibility { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue AlgorithmIdExtensibility
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Algorithm Extensibility Source</para>
@@ -48957,7 +49685,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue AlgorithmIdExtensibilitySource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlgorithmIdExtensibilitySource
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Provider Type Extensibility</para>
@@ -48966,7 +49698,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue CryptographicProviderTypeExtensibility { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue CryptographicProviderTypeExtensibility
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Provider Type Extensibility Source</para>
@@ -48975,7 +49711,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue CryptographicProviderTypeExtSource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CryptographicProviderTypeExtSource
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Password Hash</para>
@@ -48984,7 +49724,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Base64BinaryValue Hash { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue Hash
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Salt for Password Verifier</para>
@@ -48993,7 +49737,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Base64BinaryValue Salt { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue Salt
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>algorithmName, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49002,7 +49750,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue AlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hashValue, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49011,7 +49763,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Base64BinaryValue HashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue HashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>saltValue, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49020,7 +49776,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Base64BinaryValue SaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue SaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>spinCount, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49029,8 +49789,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value SpinCount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WriteProtection>();
+        public Int32Value SpinCount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -49103,8 +49866,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<View>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -49143,7 +49909,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Zoom Percentage</para>
@@ -49152,8 +49922,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Percent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Zoom>();
+        public StringValue Percent
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -49203,7 +49976,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Grammatical Engine ID</para>
@@ -49212,7 +49989,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt16Value VendorID { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value VendorID
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Grammatical Check Engine Version</para>
@@ -49221,7 +50002,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value DllVersion { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value DllVersion
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Natural Language Grammar Check</para>
@@ -49230,7 +50015,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue NaturalLanguageGrammarCheck { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue NaturalLanguageGrammarCheck
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Check Stylistic Rules With Grammar</para>
@@ -49239,7 +50028,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue CheckStyle { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue CheckStyle
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Application Name</para>
@@ -49248,8 +50041,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ApplicationName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ActiveWritingStyle>();
+        public StringValue ApplicationName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -49307,7 +50103,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Spelling { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Spelling
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Grammatical Checking State</para>
@@ -49316,8 +50116,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Grammar { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ProofState>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Grammar
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -49354,7 +50157,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49363,7 +50170,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue AllStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue AllStyles
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>customStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49372,7 +50183,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue CustomStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue CustomStyles
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>latentStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49381,7 +50196,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue LatentStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue LatentStyles
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>stylesInUse, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49390,7 +50209,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue StylesInUse { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue StylesInUse
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>headingStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49399,7 +50222,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue HeadingStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue HeadingStyles
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>numberingStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49408,7 +50235,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue NumberingStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue NumberingStyles
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tableStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49417,7 +50248,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue TableStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue TableStyles
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>directFormattingOnRuns, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49426,7 +50261,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue DirectFormattingOnRuns { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue DirectFormattingOnRuns
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>directFormattingOnParagraphs, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49435,7 +50274,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue DirectFormattingOnParagraphs { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue DirectFormattingOnParagraphs
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>directFormattingOnNumbering, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49444,7 +50287,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue DirectFormattingOnNumbering { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue DirectFormattingOnNumbering
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>directFormattingOnTables, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49453,7 +50300,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue DirectFormattingOnTables { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue DirectFormattingOnTables
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>clearFormatting, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49462,7 +50313,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue ClearFormatting { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue ClearFormatting
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>top3HeadingStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49471,7 +50326,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Top3HeadingStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Top3HeadingStyles
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visibleStyles, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49480,7 +50339,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue VisibleStyles { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue VisibleStyles
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alternateStyleNames, this property is only available in Office2010, Office2013, Office2016</para>
@@ -49489,8 +50352,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue AlternateStyleNames { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StylePaneFormatFilter>();
+        public OnOffValue AlternateStyleNames
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -49595,8 +50461,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StylePaneSortMethods>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -49637,8 +50506,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentType>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -49730,8 +50602,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public MailMerge(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MailMerge>();
 
         /// <summary>
         /// <para>Source Document Type.</para>
@@ -49990,7 +50860,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Markup { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Markup
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Display Comments</para>
@@ -49999,7 +50873,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Comments { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Comments
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Display Content Revisions</para>
@@ -50008,7 +50886,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue DisplayRevision { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue DisplayRevision
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Display Formatting Revisions</para>
@@ -50017,7 +50899,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Formatting { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Formatting
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Display Ink Annotations</para>
@@ -50026,8 +50912,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue InkAnnotations { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RevisionView>();
+        public OnOffValue InkAnnotations
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -50067,7 +50956,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues> Edit { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues> Edit
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Only Allow Formatting With Unlocked Styles</para>
@@ -50076,7 +50969,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Formatting { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Formatting
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Enforce Document Protection Settings</para>
@@ -50085,7 +50982,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Enforcement { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Enforcement
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Provider Type</para>
@@ -50094,7 +50995,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Class</para>
@@ -50103,7 +51008,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Type</para>
@@ -50112,7 +51021,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Hashing Algorithm</para>
@@ -50121,7 +51034,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value CryptographicAlgorithmSid { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value CryptographicAlgorithmSid
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Iterations to Run Hashing Algorithm</para>
@@ -50130,7 +51047,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value CryptographicSpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value CryptographicSpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Provider</para>
@@ -50139,7 +51060,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue CryptographicProvider { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CryptographicProvider
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Algorithm Extensibility</para>
@@ -50148,7 +51073,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue AlgorithmIdExtensibility { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue AlgorithmIdExtensibility
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Algorithm Extensibility Source</para>
@@ -50157,7 +51086,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue AlgorithmIdExtensibilitySource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlgorithmIdExtensibilitySource
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cryptographic Provider Type Extensibility</para>
@@ -50166,7 +51099,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue CryptographicProviderTypeExtensibility { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue CryptographicProviderTypeExtensibility
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Provider Type Extensibility Source</para>
@@ -50175,7 +51112,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue CryptographicProviderTypeExtSource { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CryptographicProviderTypeExtSource
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Password Hash</para>
@@ -50184,7 +51125,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Base64BinaryValue Hash { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue Hash
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Salt for Password Verifier</para>
@@ -50193,7 +51138,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Base64BinaryValue Salt { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue Salt
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>algorithmName, this property is only available in Office2010, Office2013, Office2016</para>
@@ -50202,7 +51151,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue AlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hashValue, this property is only available in Office2010, Office2013, Office2016</para>
@@ -50211,7 +51164,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Base64BinaryValue HashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue HashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>saltValue, this property is only available in Office2010, Office2013, Office2016</para>
@@ -50220,7 +51177,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Base64BinaryValue SaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue SaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>spinCount, this property is only available in Office2010, Office2013, Office2016</para>
@@ -50229,8 +51190,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value SpinCount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentProtection>();
+        public Int32Value SpinCount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -50304,8 +51268,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultTabStop>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTabStop>(deep);
     }
@@ -50325,8 +51287,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public BookFoldPrintingSheets() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BookFoldPrintingSheets>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookFoldPrintingSheets>(deep);
@@ -50353,7 +51313,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int16Value Val { get => GetAttribute<Int16Value>(); set => SetAttribute(value); }
+        public Int16Value Val
+        {
+            get => GetAttribute<Int16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -50390,8 +51354,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConsecutiveHyphenLimit>();
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -50430,8 +51397,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SummaryLength>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -50464,8 +51434,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayHorizontalDrawingGrid>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayHorizontalDrawingGrid>(deep);
     }
@@ -50485,8 +51453,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public DisplayVerticalDrawingGrid() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayVerticalDrawingGrid>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayVerticalDrawingGrid>(deep);
@@ -50513,7 +51479,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -50550,8 +51520,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CharacterSpacingControl>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -50590,7 +51563,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>val</para>
@@ -50599,8 +51576,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoLineBreaksAfterKinsoku>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -50645,7 +51625,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>val</para>
@@ -50654,8 +51638,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoLineBreaksBeforeKinsoku>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -50700,7 +51687,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Local Identifier for XSL Transform</para>
@@ -50709,8 +51700,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue SolutionId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaveThroughXslt>();
+        public StringValue SolutionId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -50777,8 +51771,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderShapeDefaults>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeDefaults), 1, 1),
@@ -50837,8 +51829,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public ShapeDefaults(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeDefaults>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
@@ -50954,8 +51944,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public FootnoteDocumentWideProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteDocumentWideProperties>();
 
         /// <summary>
         /// <para>Footnote Placement.</para>
@@ -51090,8 +52078,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public EndnoteDocumentWideProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndnoteDocumentWideProperties>();
 
         /// <summary>
         /// <para>Endnote Placement.</para>
@@ -51348,8 +52334,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public Compatibility(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Compatibility>();
 
         /// <summary>
         /// <para>Use Simplified Rules For Table Border Conflicts.</para>
@@ -52319,8 +53303,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentVariables>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocumentVariable), 0, 0)
@@ -52381,8 +53363,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Rsids>();
-
         /// <summary>
         /// <para>Original Document Revision Save ID.</para>
         /// <para>Represents the following element tag in the schema: w:rsidRoot.</para>
@@ -52431,7 +53411,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text 1 Theme Color Mapping</para>
@@ -52440,7 +53424,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Background 2 Theme Color Mapping</para>
@@ -52449,7 +53437,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text 2 Theme Color Mapping</para>
@@ -52458,7 +53450,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 1 Theme Color Mapping</para>
@@ -52467,7 +53463,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 2 Theme Color Mapping</para>
@@ -52476,7 +53476,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent3 Theme Color Mapping</para>
@@ -52485,7 +53489,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent3 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent3
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent4 Theme Color Mapping</para>
@@ -52494,7 +53502,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent4 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent4
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent5 Theme Color Mapping</para>
@@ -52503,7 +53515,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent5 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent5
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent6 Theme Color Mapping</para>
@@ -52512,7 +53528,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent6 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent6
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Theme Color Mapping</para>
@@ -52521,7 +53541,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Hyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Hyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Followed Hyperlink Theme Color Mapping</para>
@@ -52530,8 +53554,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> FollowedHyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorSchemeMapping>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> FollowedHyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -52604,8 +53631,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Captions>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Caption), 1, 0),
@@ -52641,7 +53666,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue UseActualPages { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue UseActualPages
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Virtual Page Width</para>
@@ -52650,7 +53679,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Width { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Width
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Virtual Page Height</para>
@@ -52659,7 +53692,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public UInt32Value Height { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Height
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Font Size Scaling</para>
@@ -52668,8 +53705,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue FontSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ReadModeInkLockDown>();
+        public StringValue FontSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -52728,8 +53768,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TargetScreenSize>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -52808,8 +53851,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PictureBulletBase>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -52858,8 +53899,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Panose1Number>();
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -52899,7 +53943,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>characterSet</para>
@@ -52908,8 +53956,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet> StrictCharacterSet { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontCharSet>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet> StrictCharacterSet
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -52949,8 +54000,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontFamily>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -52989,8 +54043,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pitch>();
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -53029,7 +54086,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue UnicodeSignature0 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue UnicodeSignature0
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Second 32 Bits of Unicode Subset Bitfield</para>
@@ -53038,7 +54099,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue UnicodeSignature1 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue UnicodeSignature1
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Third 32 Bits of Unicode Subset Bitfield</para>
@@ -53047,7 +54112,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue UnicodeSignature2 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue UnicodeSignature2
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fourth 32 Bits of Unicode Subset Bitfield</para>
@@ -53056,7 +54125,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue UnicodeSignature3 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue UnicodeSignature3
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Lower 32 Bits of Code Page Bit Field</para>
@@ -53065,7 +54138,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue CodePageSignature0 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue CodePageSignature0
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Upper 32 Bits of Code Page Bit Field</para>
@@ -53074,8 +54151,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public HexBinaryValue CodePageSignature1 { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontSignature>();
+        public HexBinaryValue CodePageSignature1
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -53140,8 +54220,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedRegularFont>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font"),
             new RelationshipExistConstraint(2 /*r:id*/)
@@ -53169,8 +54247,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedBoldFont>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font")
         };
@@ -53197,8 +54273,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedItalicFont>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font")
         };
@@ -53224,8 +54298,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public EmbedBoldItalicFont() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EmbedBoldItalicFont>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(2 /*r:id*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font")
@@ -53258,7 +54330,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue FontKey { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FontKey
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>subsetted</para>
@@ -53267,7 +54343,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Subsetted { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Subsetted
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship to Part</para>
@@ -53276,7 +54356,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

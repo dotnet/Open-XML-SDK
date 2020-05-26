@@ -36,7 +36,11 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         /// <remark>
         /// xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
         /// </remark>
-        public StringValue Font { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Font
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>char, this property is only available in Office2016</para>
@@ -45,8 +49,11 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         /// <remark>
         /// xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
         /// </remark>
-        public HexBinaryValue Char { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SymEx>();
+        public HexBinaryValue Char
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

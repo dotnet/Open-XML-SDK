@@ -78,8 +78,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WordprocessingCanvas>();
-
         /// <summary>
         /// <para>BackgroundFormatting.</para>
         /// <para>Represents the following element tag in the schema: wpc:bg.</para>
@@ -188,8 +186,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundFormatting>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -270,8 +266,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         public WholeFormatting(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WholeFormatting>();
 
         /// <summary>
         /// <para>Outline.</para>
@@ -359,8 +353,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         public GraphicFrameType(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GraphicFrameType>();
 
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
@@ -488,8 +480,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

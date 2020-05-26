@@ -62,8 +62,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormattings>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting), 1, 0, version: FileFormatVersions.Office2010)
@@ -126,26 +124,41 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>disablePrompts, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: disablePrompts</para>
         /// </summary>
-        public BooleanValue DisablePrompts { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DisablePrompts
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>xWindow, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: xWindow</para>
         /// </summary>
-        public UInt32Value XWindow { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value XWindow
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>yWindow, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: yWindow</para>
         /// </summary>
-        public UInt32Value YWindow { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value YWindow
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>count, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataValidations>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -222,8 +235,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SparklineGroups>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup), 1, 0, version: FileFormatVersions.Office2010)
@@ -282,8 +293,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerRef), 1, 0, version: FileFormatVersions.Office2010)
@@ -341,8 +350,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public ProtectedRanges(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ProtectedRanges>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -404,8 +411,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IgnoredErrors>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IgnoredError), 0, 0, version: FileFormatVersions.Office2010),
@@ -465,8 +470,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefinedNames>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedName), 1, 0, version: FileFormatVersions.Office2010)
@@ -524,8 +527,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public PivotCaches(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotCaches>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -585,8 +586,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerCaches>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache), 1, 0, version: FileFormatVersions.Office2010)
@@ -618,20 +617,31 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>defaultImageDpi, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: defaultImageDpi</para>
         /// </summary>
-        public UInt32Value DefaultImageDpi { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DefaultImageDpi
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>discardImageEditData, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: discardImageEditData</para>
         /// </summary>
-        public BooleanValue DiscardImageEditData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DiscardImageEditData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>accuracyVersion, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: accuracyVersion</para>
         /// </summary>
-        public UInt32Value AccuracyVersion { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorkbookProperties>();
+        public UInt32Value AccuracyVersion
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -703,32 +713,51 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>displayFolder, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: displayFolder</para>
         /// </summary>
-        public StringValue DisplayFolder { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DisplayFolder
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>flattenHierarchies, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: flattenHierarchies</para>
         /// </summary>
-        public BooleanValue FlattenHierarchies { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FlattenHierarchies
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dynamicSet, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dynamicSet</para>
         /// </summary>
-        public BooleanValue DynamicSet { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DynamicSet
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hierarchizeDistinct, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: hierarchizeDistinct</para>
         /// </summary>
-        public BooleanValue HierarchizeDistinct { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HierarchizeDistinct
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mdxLong, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: mdxLong</para>
         /// </summary>
-        public StringValue MdxLong { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculatedMember>();
+        public StringValue MdxLong
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -823,26 +852,41 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>flattenHierarchies, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: flattenHierarchies</para>
         /// </summary>
-        public BooleanValue FlattenHierarchies { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FlattenHierarchies
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>measuresSet, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: measuresSet</para>
         /// </summary>
-        public BooleanValue MeasuresSet { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MeasuresSet
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hierarchizeDistinct, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: hierarchizeDistinct</para>
         /// </summary>
-        public BooleanValue HierarchizeDistinct { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HierarchizeDistinct
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ignore, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: ignore</para>
         /// </summary>
-        public BooleanValue Ignore { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheHierarchy>();
+        public BooleanValue Ignore
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -906,20 +950,31 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>pivotShowAs, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pivotShowAs</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotShowAsValues> PivotShowAs { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotShowAsValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotShowAsValues> PivotShowAs
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotShowAsValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sourceField, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sourceField</para>
         /// </summary>
-        public UInt32Value SourceField { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SourceField
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>uniqueName, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataField>();
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -961,14 +1016,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>fillDownLabels, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: fillDownLabels</para>
         /// </summary>
-        public BooleanValue FillDownLabels { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FillDownLabels
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ignore, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: ignore</para>
         /// </summary>
-        public BooleanValue Ignore { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotField>();
+        public BooleanValue Ignore
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1037,62 +1099,101 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>fillDownLabelsDefault, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: fillDownLabelsDefault</para>
         /// </summary>
-        public BooleanValue FillDownLabelsDefault { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FillDownLabelsDefault
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visualTotalsForSets, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visualTotalsForSets</para>
         /// </summary>
-        public BooleanValue VisualTotalsForSets { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue VisualTotalsForSets
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>calculatedMembersInFilters, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: calculatedMembersInFilters</para>
         /// </summary>
-        public BooleanValue CalculatedMembersInFilters { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CalculatedMembersInFilters
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>altText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
-        public StringValue AltText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AltText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>altTextSummary, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: altTextSummary</para>
         /// </summary>
-        public StringValue AltTextSummary { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AltTextSummary
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enableEdit, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enableEdit</para>
         /// </summary>
-        public BooleanValue EnableEdit { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EnableEdit
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoApply, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: autoApply</para>
         /// </summary>
-        public BooleanValue AutoApply { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AutoApply
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allocationMethod, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: allocationMethod</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues> AllocationMethod { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues> AllocationMethod
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>weightExpression, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: weightExpression</para>
         /// </summary>
-        public StringValue WeightExpression { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue WeightExpression
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hideValuesRow, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: hideValuesRow</para>
         /// </summary>
-        public BooleanValue HideValuesRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotTableDefinition>();
+        public BooleanValue HideValuesRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1190,32 +1291,51 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>slicerData, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: slicerData</para>
         /// </summary>
-        public BooleanValue SlicerData { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SlicerData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pivotCacheId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pivotCacheId</para>
         /// </summary>
-        public UInt32Value PivotCacheId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PivotCacheId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supportSubqueryNonVisual, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supportSubqueryNonVisual</para>
         /// </summary>
-        public BooleanValue SupportSubqueryNonVisual { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SupportSubqueryNonVisual
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supportSubqueryCalcMem, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supportSubqueryCalcMem</para>
         /// </summary>
-        public BooleanValue SupportSubqueryCalcMem { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SupportSubqueryCalcMem
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supportAddCalcMems, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supportAddCalcMems</para>
         /// </summary>
-        public BooleanValue SupportAddCalcMems { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotCacheDefinition>();
+        public BooleanValue SupportAddCalcMems
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1283,14 +1403,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>culture, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: culture</para>
         /// </summary>
-        public StringValue Culture { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Culture
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>embeddedDataId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: embeddedDataId</para>
         /// </summary>
-        public StringValue EmbeddedDataId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Connection>();
+        public StringValue EmbeddedDataId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1351,14 +1478,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>altText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
-        public StringValue AltText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AltText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>altTextSummary, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: altTextSummary</para>
         /// </summary>
-        public StringValue AltTextSummary { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Table>();
+        public StringValue AltTextSummary
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1430,8 +1564,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>defaultSlicerStyle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: defaultSlicerStyle</para>
         /// </summary>
-        public StringValue DefaultSlicerStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerStyles>();
+        public StringValue DefaultSlicerStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1511,8 +1648,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DifferentialFormats>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1583,26 +1723,41 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>icon, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: icon</para>
         /// </summary>
-        public BooleanValue Icon { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Icon
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>advise, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: advise</para>
         /// </summary>
-        public BooleanValue Advise { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Advise
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>preferPic, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: preferPic</para>
         /// </summary>
-        public BooleanValue PreferPicture { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleItem>();
+        public BooleanValue PreferPicture
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1661,8 +1816,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ignore, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: ignore</para>
         /// </summary>
-        public BooleanValue Ignore { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotHierarchy>();
+        public BooleanValue Ignore
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1695,8 +1853,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ignore, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: ignore</para>
         /// </summary>
-        public BooleanValue Ignore { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CacheField>();
+        public BooleanValue Ignore
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1739,8 +1900,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Id>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Id>(deep);
     }
@@ -1765,14 +1924,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>iconSet, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSet { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSet
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>iconId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        public UInt32Value IconId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IconFilter>();
+        public UInt32Value IconId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1812,8 +1978,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Filter>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1877,8 +2046,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>and, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: and</para>
         /// </summary>
-        public BooleanValue And { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomFilters>();
+        public BooleanValue And
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1918,44 +2090,71 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>descending, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: descending</para>
         /// </summary>
-        public BooleanValue Descending { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Descending
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sortBy, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues> SortBy { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues> SortBy
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ref, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>customList, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: customList</para>
         /// </summary>
-        public StringValue CustomList { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CustomList
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dxfId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        public UInt32Value FormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value FormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>iconSet, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSet { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSet
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>iconId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        public UInt32Value IconId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SortCondition>();
+        public UInt32Value IconId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2005,8 +2204,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SourceConnection>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2073,8 +2275,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DatastoreItem>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2200,188 +2405,311 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>objectType, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: objectType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ObjectTypeValues> ObjectType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ObjectTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ObjectTypeValues> ObjectType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ObjectTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>checked, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: checked</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.CheckedValues> Checked { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.CheckedValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.CheckedValues> Checked
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.CheckedValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>colored, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: colored</para>
         /// </summary>
-        public BooleanValue Colored { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Colored
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dropLines, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dropLines</para>
         /// </summary>
-        public UInt32Value DropLines { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DropLines
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dropStyle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dropStyle</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DropStyleValues> DropStyle { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DropStyleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DropStyleValues> DropStyle
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DropStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dx, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dx</para>
         /// </summary>
-        public UInt32Value ScrollBarWidth { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ScrollBarWidth
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstButton, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: firstButton</para>
         /// </summary>
-        public BooleanValue FirstButton { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FirstButton
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fmlaGroup, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: fmlaGroup</para>
         /// </summary>
-        public StringValue FmlaGroup { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FmlaGroup
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fmlaLink, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: fmlaLink</para>
         /// </summary>
-        public StringValue FmlaLink { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FmlaLink
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fmlaRange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: fmlaRange</para>
         /// </summary>
-        public StringValue FmlaRange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FmlaRange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fmlaTxbx, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: fmlaTxbx</para>
         /// </summary>
-        public StringValue FmlaTextbox { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FmlaTextbox
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>horiz, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: horiz</para>
         /// </summary>
-        public BooleanValue Horizontal { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Horizontal
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>inc, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: inc</para>
         /// </summary>
-        public UInt32Value Incremental { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Incremental
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>justLastX, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: justLastX</para>
         /// </summary>
-        public BooleanValue JustLastX { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue JustLastX
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lockText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: lockText</para>
         /// </summary>
-        public BooleanValue LockText { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LockText
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>max, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        public UInt32Value Max { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Max
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>min, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        public UInt32Value Min { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Min
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>multiSel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: multiSel</para>
         /// </summary>
-        public StringValue MultipleSelection { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MultipleSelection
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>noThreeD, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: noThreeD</para>
         /// </summary>
-        public BooleanValue NoThreeD { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoThreeD
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>noThreeD2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: noThreeD2</para>
         /// </summary>
-        public BooleanValue NoThreeD2 { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoThreeD2
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>page, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: page</para>
         /// </summary>
-        public UInt32Value Page { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Page
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sel</para>
         /// </summary>
-        public UInt32Value Selected { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Selected
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>seltype, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: seltype</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SelectionTypeValues> SelectionType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SelectionTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SelectionTypeValues> SelectionType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SelectionTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>textHAlign, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: textHAlign</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextHorizontalAlignmentValues> TextHorizontalAlign { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextHorizontalAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextHorizontalAlignmentValues> TextHorizontalAlign
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextHorizontalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>textVAlign, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: textVAlign</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextVerticalAlignmentValues> TextVerticalAlign { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextVerticalAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextVerticalAlignmentValues> TextVerticalAlign
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextVerticalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>widthMin, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: widthMin</para>
         /// </summary>
-        public UInt32Value MinimumWidth { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MinimumWidth
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>editVal, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: editVal</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.EditValidationValues> EditVal { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.EditValidationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.EditValidationValues> EditVal
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.EditValidationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>multiLine, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: multiLine</para>
         /// </summary>
-        public BooleanValue MultipleLines { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue MultipleLines
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>verticalBar, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: verticalBar</para>
         /// </summary>
-        public BooleanValue VerticalBar { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue VerticalBar
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>passwordEdit, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: passwordEdit</para>
         /// </summary>
-        public BooleanValue PasswordEdit { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormControlProperties>();
+        public BooleanValue PasswordEdit
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2561,8 +2889,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Slicers>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Slicer), 1, 0, version: FileFormatVersions.Office2010)
@@ -2660,14 +2986,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sourceName, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sourceName</para>
         /// </summary>
-        public StringValue SourceName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerCacheDefinition>();
+        public StringValue SourceName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2821,8 +3154,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>pivot, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pivot</para>
         /// </summary>
-        public BooleanValue Pivot { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormatting>();
+        public BooleanValue Pivot
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2905,86 +3241,141 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>type, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>priority, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: priority</para>
         /// </summary>
-        public Int32Value Priority { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Priority
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>stopIfTrue, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: stopIfTrue</para>
         /// </summary>
-        public BooleanValue StopIfTrue { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue StopIfTrue
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>aboveAverage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: aboveAverage</para>
         /// </summary>
-        public BooleanValue AboveAverage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AboveAverage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>percent, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: percent</para>
         /// </summary>
-        public BooleanValue Percent { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Percent
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bottom, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bottom</para>
         /// </summary>
-        public BooleanValue Bottom { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Bottom
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>operator, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues> Operator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues> Operator
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>text, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: text</para>
         /// </summary>
-        public StringValue Text { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Text
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>timePeriod, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: timePeriod</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues> TimePeriod { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues> TimePeriod
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rank, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rank</para>
         /// </summary>
-        public UInt32Value Rank { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Rank
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>stdDev, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: stdDev</para>
         /// </summary>
-        public Int32Value StandardDeviation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value StandardDeviation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>equalAverage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: equalAverage</para>
         /// </summary>
-        public BooleanValue EqualAverage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EqualAverage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>activePresent, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: activePresent</para>
         /// </summary>
-        public BooleanValue ActivePresent { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ActivePresent
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormattingRule>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3086,8 +3477,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -3160,74 +3549,121 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>type, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>errorStyle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: errorStyle</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imeMode, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imeMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>operator, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allowBlank, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: allowBlank</para>
         /// </summary>
-        public BooleanValue AllowBlank { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AllowBlank
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showDropDown, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showDropDown</para>
         /// </summary>
-        public BooleanValue ShowDropDown { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowDropDown
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showInputMessage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showInputMessage</para>
         /// </summary>
-        public BooleanValue ShowInputMessage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowInputMessage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showErrorMessage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showErrorMessage</para>
         /// </summary>
-        public BooleanValue ShowErrorMessage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowErrorMessage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>errorTitle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: errorTitle</para>
         /// </summary>
-        public StringValue ErrorTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ErrorTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>error, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: error</para>
         /// </summary>
-        public StringValue Error { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Error
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>promptTitle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: promptTitle</para>
         /// </summary>
-        public StringValue PromptTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue PromptTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>prompt, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: prompt</para>
         /// </summary>
-        public StringValue Prompt { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataValidation>();
+        public StringValue Prompt
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3353,8 +3789,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataValidationForumla1>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 1, 1)
@@ -3411,8 +3845,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public DataValidationForumla2(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataValidationForumla2>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3553,104 +3985,171 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>manualMax, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: manualMax</para>
         /// </summary>
-        public DoubleValue ManualMax { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue ManualMax
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>manualMin, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: manualMin</para>
         /// </summary>
-        public DoubleValue ManualMin { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue ManualMin
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lineWeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: lineWeight</para>
         /// </summary>
-        public DoubleValue LineWeight { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue LineWeight
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dateAxis, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dateAxis</para>
         /// </summary>
-        public BooleanValue DateAxis { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DateAxis
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>displayEmptyCellsAs, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: displayEmptyCellsAs</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues> DisplayEmptyCellsAs { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues> DisplayEmptyCellsAs
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>markers, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: markers</para>
         /// </summary>
-        public BooleanValue Markers { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Markers
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>high, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: high</para>
         /// </summary>
-        public BooleanValue High { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue High
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>low, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: low</para>
         /// </summary>
-        public BooleanValue Low { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Low
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>first, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: first</para>
         /// </summary>
-        public BooleanValue First { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue First
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>last, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: last</para>
         /// </summary>
-        public BooleanValue Last { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Last
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>negative, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: negative</para>
         /// </summary>
-        public BooleanValue Negative { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Negative
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>displayXAxis, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: displayXAxis</para>
         /// </summary>
-        public BooleanValue DisplayXAxis { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DisplayXAxis
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>displayHidden, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: displayHidden</para>
         /// </summary>
-        public BooleanValue DisplayHidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DisplayHidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>minAxisType, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: minAxisType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MinAxisType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MinAxisType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>maxAxisType, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: maxAxisType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MaxAxisType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MaxAxisType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rightToLeft, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rightToLeft</para>
         /// </summary>
-        public BooleanValue RightToLeft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SparklineGroup>();
+        public BooleanValue RightToLeft
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3848,8 +4347,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesColor>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
@@ -3875,8 +4372,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public NegativeColor() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NegativeColor>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
@@ -3904,8 +4399,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisColor>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
@@ -3931,8 +4424,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public MarkersColor() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MarkersColor>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
@@ -3960,8 +4451,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstMarkerColor>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
@@ -3987,8 +4476,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public LastMarkerColor() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LastMarkerColor>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
@@ -4016,8 +4503,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HighMarkerColor>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
         };
@@ -4044,8 +4529,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LowMarkerColor>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LowMarkerColor>(deep);
     }
@@ -4065,8 +4548,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public Color() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Color>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Color>(deep);
@@ -4088,8 +4569,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillColor>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillColor>(deep);
     }
@@ -4109,8 +4588,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public BorderColor() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BorderColor>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BorderColor>(deep);
@@ -4132,8 +4609,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NegativeFillColor>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NegativeFillColor>(deep);
     }
@@ -4154,8 +4629,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NegativeBorderColor>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NegativeBorderColor>(deep);
     }
@@ -4175,8 +4648,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public BarAxisColor() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarAxisColor>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarAxisColor>(deep);
@@ -4200,31 +4671,51 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Automatic</para>
         /// <para>Represents the following attribute in the schema: auto</para>
         /// </summary>
-        public BooleanValue Auto { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Auto
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: indexed</para>
         /// </summary>
-        public UInt32Value Indexed { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Indexed
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alpha Red Green Blue Color Value</para>
         /// <para>Represents the following attribute in the schema: rgb</para>
         /// </summary>
-        public HexBinaryValue Rgb { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Rgb
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Theme Color</para>
         /// <para>Represents the following attribute in the schema: theme</para>
         /// </summary>
-        public UInt32Value Theme { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Theme
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Tint</para>
         /// <para>Represents the following attribute in the schema: tint</para>
         /// </summary>
-        public DoubleValue Tint { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Tint
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4288,8 +4779,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Sparklines>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Sparkline), 1, 0, version: FileFormatVersions.Office2010)
@@ -4349,8 +4838,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public Sparkline(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Sparkline>();
 
         /// <summary>
         /// <para>Formula.</para>
@@ -4413,8 +4900,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerRef>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4459,8 +4949,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerCache>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4533,8 +5026,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefinedName>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4627,8 +5123,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArgumentDescriptions>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4681,8 +5180,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>index, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: index</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArgumentDescription>();
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4757,14 +5259,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>rowCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rowCount</para>
         /// </summary>
-        public UInt32Value RowCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RowCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columnCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: columnCount</para>
         /// </summary>
-        public UInt32Value ColumnCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TupleSet>();
+        public UInt32Value ColumnCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4859,8 +5368,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TupleSetHeaders>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader), 1, 0, version: FileFormatVersions.Office2010)
@@ -4919,8 +5426,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TupleSetRows>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow), 1, 0, version: FileFormatVersions.Office2010)
@@ -4952,14 +5457,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>uniqueName, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hierarchyName, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: hierarchyName</para>
         /// </summary>
-        public StringValue HierarchyName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TupleSetHeader>();
+        public StringValue HierarchyName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5027,8 +5539,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TupleSetRow>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem), 1, 0, version: FileFormatVersions.Office2010)
@@ -5060,14 +5570,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>u, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>d, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: d</para>
         /// </summary>
-        public StringValue DisplayName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TupleSetRowItem>();
+        public StringValue DisplayName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5108,8 +5625,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>hierarchy, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: hierarchy</para>
         /// </summary>
-        public Int32Value Hierarchy { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SetLevel>();
+        public Int32Value Hierarchy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5182,8 +5702,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SetLevels>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5251,8 +5774,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public ColorScale(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorScale>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5327,56 +5848,91 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>minLength, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: minLength</para>
         /// </summary>
-        public UInt32Value MinLength { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MinLength
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>maxLength, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        public UInt32Value MaxLength { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value MaxLength
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showValue, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showValue</para>
         /// </summary>
-        public BooleanValue ShowValue { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowValue
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>border, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: border</para>
         /// </summary>
-        public BooleanValue Border { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Border
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>gradient, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: gradient</para>
         /// </summary>
-        public BooleanValue Gradient { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Gradient
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>direction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: direction</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarDirectionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarDirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>negativeBarColorSameAsPositive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: negativeBarColorSameAsPositive</para>
         /// </summary>
-        public BooleanValue NegativeBarColorSameAsPositive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NegativeBarColorSameAsPositive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>negativeBarBorderColorSameAsPositive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: negativeBarBorderColorSameAsPositive</para>
         /// </summary>
-        public BooleanValue NegativeBarBorderColorSameAsPositive { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NegativeBarBorderColorSameAsPositive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>axisPosition, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: axisPosition</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues> AxisPosition { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataBar>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues> AxisPosition
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5469,32 +6025,51 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>iconSet, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSetTypes { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSetTypes
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showValue, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showValue</para>
         /// </summary>
-        public BooleanValue ShowValue { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowValue
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>percent, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: percent</para>
         /// </summary>
-        public BooleanValue Percent { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Percent
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>reverse, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: reverse</para>
         /// </summary>
-        public BooleanValue Reverse { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Reverse
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>custom, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: custom</para>
         /// </summary>
-        public BooleanValue Custom { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IconSet>();
+        public BooleanValue Custom
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5577,8 +6152,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public DifferentialType(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DifferentialType>();
 
         /// <summary>
         /// <para>Font Properties.</para>
@@ -5741,14 +6314,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>type, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>gte, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: gte</para>
         /// </summary>
-        public BooleanValue GreaterThanOrEqual { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormattingValueObject>();
+        public BooleanValue GreaterThanOrEqual
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5819,14 +6399,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>iconSet, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSet { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSet
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>iconId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
-        public UInt32Value IconId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormattingIcon>();
+        public UInt32Value IconId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5893,8 +6480,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotEdits>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotEdit), 1, 0, version: FileFormatVersions.Office2010)
@@ -5952,8 +6537,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public PivotChanges(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotChanges>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6017,8 +6600,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormats>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6089,8 +6675,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Calculated Members Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculatedMembers>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6162,8 +6751,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public PivotEdit(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotEdit>();
 
         /// <summary>
         /// <para>PivotUserEdit.</para>
@@ -6280,8 +6867,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotUserEdit>();
-
         /// <summary>
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: xne:f.</para>
@@ -6367,8 +6952,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TupleItems>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Xstring), 1, 0, version: FileFormatVersions.Office2010)
@@ -6433,74 +7016,121 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Field Index</para>
         /// <para>Represents the following attribute in the schema: field</para>
         /// </summary>
-        public Int32Value Field { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Field
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rule Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Only</para>
         /// <para>Represents the following attribute in the schema: dataOnly</para>
         /// </summary>
-        public BooleanValue DataOnly { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DataOnly
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Labels Only</para>
         /// <para>Represents the following attribute in the schema: labelOnly</para>
         /// </summary>
-        public BooleanValue LabelOnly { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LabelOnly
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Row Grand Total</para>
         /// <para>Represents the following attribute in the schema: grandRow</para>
         /// </summary>
-        public BooleanValue GrandRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue GrandRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Column Grand Total</para>
         /// <para>Represents the following attribute in the schema: grandCol</para>
         /// </summary>
-        public BooleanValue GrandColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue GrandColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cache Index</para>
         /// <para>Represents the following attribute in the schema: cacheIndex</para>
         /// </summary>
-        public BooleanValue CacheIndex { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CacheIndex
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Outline</para>
         /// <para>Represents the following attribute in the schema: outline</para>
         /// </summary>
-        public BooleanValue Outline { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Outline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Offset Reference</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-        public StringValue Offset { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Offset
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Collapsed Levels Are Subtotals</para>
         /// <para>Represents the following attribute in the schema: collapsedLevelsAreSubtotals</para>
         /// </summary>
-        public BooleanValue CollapsedLevelsAreSubtotals { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CollapsedLevelsAreSubtotals
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Position</para>
         /// <para>Represents the following attribute in the schema: fieldPosition</para>
         /// </summary>
-        public UInt32Value FieldPosition { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotArea>();
+        public UInt32Value FieldPosition
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6613,14 +7243,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>allocationMethod, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: allocationMethod</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues> AllocationMethod { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues> AllocationMethod
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>weightExpression, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: weightExpression</para>
         /// </summary>
-        public StringValue WeightExpression { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotChange>();
+        public StringValue WeightExpression
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6721,8 +7358,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>valueType, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: valueType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues> ValueType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotEditValue>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues> ValueType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6772,8 +7412,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Xstring>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Xstring>(deep);
@@ -6825,8 +7463,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public SlicerStyleElements(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerStyleElements>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6890,14 +7526,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        public UInt32Value Rows { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Rows
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Columns</para>
         /// <para>Represents the following attribute in the schema: cols</para>
         /// </summary>
-        public UInt32Value Columns { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DdeValues>();
+        public UInt32Value Columns
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6971,26 +7614,41 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>scope, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scope</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues> Scope { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues> Scope
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>priority, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: priority</para>
         /// </summary>
-        public UInt32Value Priority { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Priority
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConditionalFormat>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7103,8 +7761,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Pivot Area Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotAreas>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7175,8 +7836,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerStyle>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7240,14 +7904,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>type, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dxfId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        public UInt32Value FormatId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerStyleElement>();
+        public UInt32Value FormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7322,56 +7993,91 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>evalError, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: evalError</para>
         /// </summary>
-        public BooleanValue EvalError { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EvalError
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>twoDigitTextYear, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: twoDigitTextYear</para>
         /// </summary>
-        public BooleanValue TwoDigitTextYear { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue TwoDigitTextYear
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>numberStoredAsText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: numberStoredAsText</para>
         /// </summary>
-        public BooleanValue NumberStoredAsText { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NumberStoredAsText
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>formula, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: formula</para>
         /// </summary>
-        public BooleanValue Formula { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Formula
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>formulaRange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: formulaRange</para>
         /// </summary>
-        public BooleanValue FormulaRange { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FormulaRange
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>unlockedFormula, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: unlockedFormula</para>
         /// </summary>
-        public BooleanValue UnlockedFormula { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UnlockedFormula
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>emptyCellReference, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: emptyCellReference</para>
         /// </summary>
-        public BooleanValue EmptyCellReference { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EmptyCellReference
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>listDataValidation, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: listDataValidation</para>
         /// </summary>
-        public BooleanValue ListDataValidation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ListDataValidation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>calculatedColumn, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: calculatedColumn</para>
         /// </summary>
-        public BooleanValue CalculatedColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<IgnoredError>();
+        public BooleanValue CalculatedColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7463,44 +8169,71 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>password, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: password</para>
         /// </summary>
-        public HexBinaryValue Password { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Password
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>algorithmName, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: algorithmName</para>
         /// </summary>
-        public StringValue AlgorithmName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hashValue, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: hashValue</para>
         /// </summary>
-        public Base64BinaryValue HashValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue HashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>saltValue, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: saltValue</para>
         /// </summary>
-        public Base64BinaryValue SaltValue { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue SaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>spinCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spinCount</para>
         /// </summary>
-        public UInt32Value SpinCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>securityDescriptor, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: securityDescriptor</para>
         /// </summary>
-        public StringValue SecurityDescriptor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ProtectedRange>();
+        public StringValue SecurityDescriptor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7573,14 +8306,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>operator, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues> Operator { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues> Operator
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomFilter>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7614,8 +8354,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListItem>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7680,8 +8423,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListItems>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ListItem), 0, 0, version: FileFormatVersions.Office2010),
@@ -7745,62 +8486,101 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cache, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cache</para>
         /// </summary>
-        public StringValue Cache { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Cache
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>caption, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        public StringValue Caption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>startItem, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: startItem</para>
         /// </summary>
-        public UInt32Value StartItem { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value StartItem
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columnCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: columnCount</para>
         /// </summary>
-        public UInt32Value ColumnCount { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value ColumnCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showCaption, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showCaption</para>
         /// </summary>
-        public BooleanValue ShowCaption { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowCaption
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>level, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: level</para>
         /// </summary>
-        public UInt32Value Level { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Level
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>style, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        public StringValue Style { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lockedPosition, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: lockedPosition</para>
         /// </summary>
-        public BooleanValue LockedPosition { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LockedPosition
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rowHeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rowHeight</para>
         /// </summary>
-        public UInt32Value RowHeight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Slicer>();
+        public UInt32Value RowHeight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7915,8 +8695,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>pivotCacheId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pivotCacheId</para>
         /// </summary>
-        public UInt32Value PivotCacheId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OlapSlicerCache>();
+        public UInt32Value PivotCacheId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8033,32 +8816,51 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>pivotCacheId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pivotCacheId</para>
         /// </summary>
-        public UInt32Value PivotCacheId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PivotCacheId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sortOrder, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sortOrder</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues> SortOrder { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues> SortOrder
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>customListSort, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: customListSort</para>
         /// </summary>
-        public BooleanValue CustomListSort { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue CustomListSort
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showMissing, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showMissing</para>
         /// </summary>
-        public BooleanValue ShowMissing { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowMissing
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>crossFilter, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: crossFilter</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues> CrossFilter { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabularSlicerCache>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues> CrossFilter
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8132,14 +8934,21 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>tabId, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tabId</para>
         /// </summary>
-        public UInt32Value TabId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value TabId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerCachePivotTable>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8185,8 +8994,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>n, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OlapSlicerCacheItemParent>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8253,20 +9065,31 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>n, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>c, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
-        public StringValue DisplayName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DisplayName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>nd, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: nd</para>
         /// </summary>
-        public BooleanValue NonDisplay { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OlapSlicerCacheItem>();
+        public BooleanValue NonDisplay
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8342,8 +9165,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>startItem, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: startItem</para>
         /// </summary>
-        public UInt32Value StartItem { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OlapSlicerCacheRange>();
+        public UInt32Value StartItem
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8419,8 +9245,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OlapSlicerCacheRanges>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange), 0, 0, version: FileFormatVersions.Office2010)
@@ -8483,32 +9307,51 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>uniqueName, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        public StringValue UniqueName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sourceCaption, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sourceCaption</para>
         /// </summary>
-        public StringValue SourceCaption { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SourceCaption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>count, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sortOrder, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sortOrder</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues> SortOrder { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues> SortOrder
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>crossFilter, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: crossFilter</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues> CrossFilter { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OlapSlicerCacheLevelData>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues> CrossFilter
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8608,8 +9451,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OlapSlicerCacheLevelsData>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8680,8 +9526,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OlapSlicerCacheSelections>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8752,8 +9601,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>n, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OlapSlicerCacheSelection>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8827,8 +9679,11 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>count, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabularSlicerCacheItems>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8868,20 +9723,31 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>x, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public UInt32Value Atom { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Atom
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>s, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
-        public BooleanValue IsSelected { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsSelected
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>nd, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: nd</para>
         /// </summary>
-        public BooleanValue NonDisplay { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabularSlicerCacheItem>();
+        public BooleanValue NonDisplay
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8952,8 +9818,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerCachePivotTables>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable), 1, 0, version: FileFormatVersions.Office2010)
@@ -9013,8 +9877,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public SlicerCacheData(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerCacheData>();
 
         /// <summary>
         /// <para>OlapSlicerCache.</para>
@@ -9100,8 +9962,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public SlicerCacheDefinitionExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SlicerCacheDefinitionExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

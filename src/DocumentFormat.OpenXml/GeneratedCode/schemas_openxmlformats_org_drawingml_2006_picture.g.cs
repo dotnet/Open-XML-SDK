@@ -70,8 +70,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Picture>();
-
         /// <summary>
         /// <para>Non-Visual Picture Properties.</para>
         /// <para>Represents the following element tag in the schema: pic:nvPicPr.</para>
@@ -207,32 +205,51 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingProperties>();
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -362,8 +379,11 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <para>preferRelativeResize</para>
         /// <para>Represents the following attribute in the schema: preferRelativeResize</para>
         /// </summary>
-        public BooleanValue PreferRelativeResize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualPictureDrawingProperties>();
+        public BooleanValue PreferRelativeResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -458,8 +478,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         public NonVisualPictureProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualPictureProperties>();
 
         /// <summary>
         /// <para>Non-Visual Drawing Properties.</para>
@@ -556,14 +574,21 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <para>DPI Setting</para>
         /// <para>Represents the following attribute in the schema: dpi</para>
         /// </summary>
-        public UInt32Value Dpi { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Dpi
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
-        public BooleanValue RotateWithShape { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BlipFill>();
+        public BooleanValue RotateWithShape
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -698,8 +723,11 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

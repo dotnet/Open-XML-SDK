@@ -70,8 +70,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AudioFromCD>();
-
         /// <summary>
         /// <para>Audio Start Time.</para>
         /// <para>Represents the following element tag in the schema: a:st.</para>
@@ -140,8 +138,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WaveAudioFile>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WaveAudioFile>(deep);
     }
@@ -161,8 +157,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public HyperlinkSound() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyperlinkSound>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkSound>(deep);
@@ -189,19 +183,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Embed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Embed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sound Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Recognized Built-In Sound</para>
         /// <para>Represents the following attribute in the schema: builtIn</para>
         /// </summary>
-        public BooleanValue BuiltIn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BuiltIn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -270,8 +276,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Link { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AudioFromFile>();
+        public StringValue Link
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -361,8 +370,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Link { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VideoFromFile>();
+        public StringValue Link
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -452,8 +464,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Link { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QuickTimeFromFile>();
+        public StringValue Link
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -505,8 +520,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tint>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tint>(deep);
     }
@@ -527,8 +540,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shade>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shade>(deep);
     }
@@ -548,8 +559,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Alpha() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Alpha>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Alpha>(deep);
@@ -573,7 +582,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -603,8 +616,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Complement>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Complement>(deep);
     }
@@ -625,8 +636,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Inverse>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Inverse>(deep);
     }
@@ -646,8 +655,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Gray() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Gray>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Gray>(deep);
@@ -673,8 +680,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlphaOffset>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -707,8 +717,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlphaModulation>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlphaModulation>(deep);
     }
@@ -728,8 +736,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public HueModulation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HueModulation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HueModulation>(deep);
@@ -753,7 +759,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -787,8 +797,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hue>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -825,8 +838,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HueOffset>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -858,8 +874,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Saturation>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Saturation>(deep);
     }
@@ -879,8 +893,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public SaturationOffset() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaturationOffset>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaturationOffset>(deep);
@@ -902,8 +914,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaturationModulation>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaturationModulation>(deep);
     }
@@ -923,8 +933,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Luminance() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Luminance>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 100000, true)
@@ -952,8 +960,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LuminanceOffset>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LuminanceOffset>(deep);
     }
@@ -973,8 +979,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public LuminanceModulation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LuminanceModulation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LuminanceModulation>(deep);
@@ -996,8 +1000,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Red>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Red>(deep);
     }
@@ -1017,8 +1019,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public RedOffset() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RedOffset>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RedOffset>(deep);
@@ -1040,8 +1040,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RedModulation>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RedModulation>(deep);
     }
@@ -1061,8 +1059,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Green() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Green>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Green>(deep);
@@ -1084,8 +1080,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GreenOffset>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GreenOffset>(deep);
     }
@@ -1105,8 +1099,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public GreenModulation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GreenModulation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GreenModulation>(deep);
@@ -1128,8 +1120,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Blue>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Blue>(deep);
     }
@@ -1150,8 +1140,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BlueOffset>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlueOffset>(deep);
     }
@@ -1171,8 +1159,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public BlueModulation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BlueModulation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlueModulation>(deep);
@@ -1196,7 +1182,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1225,8 +1215,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Gamma>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Gamma>(deep);
     }
@@ -1246,8 +1234,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public InverseGamma() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InverseGamma>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InverseGamma>(deep);
@@ -1297,8 +1283,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Extension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1426,20 +1415,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Red</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public Int32Value RedPortion { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value RedPortion
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Green</para>
         /// <para>Represents the following attribute in the schema: g</para>
         /// </summary>
-        public Int32Value GreenPortion { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value GreenPortion
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Blue</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public Int32Value BluePortion { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RgbColorModelPercentage>();
+        public Int32Value BluePortion
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1608,7 +1608,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>legacySpreadsheetColorIndex, this property is only available in Office2010, Office2013, Office2016</para>
@@ -1617,8 +1621,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:a14=http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public Int32Value LegacySpreadsheetColorIndex { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RgbColorModelHex>();
+        public Int32Value LegacySpreadsheetColorIndex
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1785,20 +1792,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Hue</para>
         /// <para>Represents the following attribute in the schema: hue</para>
         /// </summary>
-        public Int32Value HueValue { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HueValue
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Saturation</para>
         /// <para>Represents the following attribute in the schema: sat</para>
         /// </summary>
-        public Int32Value SatValue { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value SatValue
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Luminance</para>
         /// <para>Represents the following attribute in the schema: lum</para>
         /// </summary>
-        public Int32Value LumValue { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HslColor>();
+        public Int32Value LumValue
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1968,14 +1986,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.SystemColorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.SystemColorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.SystemColorValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.SystemColorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Last Color</para>
         /// <para>Represents the following attribute in the schema: lastClr</para>
         /// </summary>
-        public HexBinaryValue LastColor { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SystemColor>();
+        public HexBinaryValue LastColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2141,8 +2166,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.SchemeColorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.SchemeColorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SchemeColor>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.SchemeColorValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.SchemeColorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2304,8 +2332,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetColorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetColorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresetColor>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetColorValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetColorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2421,26 +2452,41 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Shape Depth</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
-        public Int64Value Z { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Z
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Height</para>
         /// <para>Represents the following attribute in the schema: extrusionH</para>
         /// </summary>
-        public Int64Value ExtrusionHeight { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value ExtrusionHeight
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contour Width</para>
         /// <para>Represents the following attribute in the schema: contourW</para>
         /// </summary>
-        public Int64Value ContourWidth { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value ContourWidth
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Preset Material Type</para>
         /// <para>Represents the following attribute in the schema: prstMaterial</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shape3DType>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2564,8 +2610,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Z Coordinate</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
-        public Int64Value Z { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FlatText>();
+        public Int64Value Z
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2601,14 +2650,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Angle</para>
         /// <para>Represents the following attribute in the schema: ang</para>
         /// </summary>
-        public Int32Value Angle { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Angle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Scaled</para>
         /// <para>Represents the following attribute in the schema: scaled</para>
         /// </summary>
-        public BooleanValue Scaled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinearGradientFill>();
+        public BooleanValue Scaled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2676,8 +2732,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Gradient Fill Path</para>
         /// <para>Represents the following attribute in the schema: path</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PathShadeValues> Path { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PathShadeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PathGradientFill>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PathShadeValues> Path
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PathShadeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2733,38 +2792,61 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Horizontal Offset</para>
         /// <para>Represents the following attribute in the schema: tx</para>
         /// </summary>
-        public Int64Value HorizontalOffset { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value HorizontalOffset
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Offset</para>
         /// <para>Represents the following attribute in the schema: ty</para>
         /// </summary>
-        public Int64Value VerticalOffset { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value VerticalOffset
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Ratio</para>
         /// <para>Represents the following attribute in the schema: sx</para>
         /// </summary>
-        public Int32Value HorizontalRatio { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalRatio
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Ratio</para>
         /// <para>Represents the following attribute in the schema: sy</para>
         /// </summary>
-        public Int32Value VerticalRatio { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalRatio
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Tile Flipping</para>
         /// <para>Represents the following attribute in the schema: flip</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TileFlipValues> Flip { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TileFlipValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TileFlipValues> Flip
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TileFlipValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tile>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2841,8 +2923,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Stretch>();
-
         /// <summary>
         /// <para>Fill Rectangle.</para>
         /// <para>Represents the following element tag in the schema: a:fillRect.</para>
@@ -2882,8 +2962,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public NoFill() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoFill>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoFill>(deep);
@@ -2945,8 +3023,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public SolidFill(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SolidFill>();
 
         /// <summary>
         /// <para>RGB Color Model - Percentage Variant.</para>
@@ -3105,14 +3181,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Tile Flip</para>
         /// <para>Represents the following attribute in the schema: flip</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TileFlipValues> Flip { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TileFlipValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TileFlipValues> Flip
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TileFlipValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
-        public BooleanValue RotateWithShape { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GradientFill>();
+        public BooleanValue RotateWithShape
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3215,14 +3298,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>DPI Setting</para>
         /// <para>Represents the following attribute in the schema: dpi</para>
         /// </summary>
-        public UInt32Value Dpi { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Dpi
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
-        public BooleanValue RotateWithShape { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BlipFill>();
+        public BooleanValue RotateWithShape
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3331,8 +3421,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Preset Pattern</para>
         /// <para>Represents the following attribute in the schema: prst</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetPatternValues> Preset { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetPatternValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PatternFill>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetPatternValues> Preset
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetPatternValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3397,8 +3490,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public GroupFill() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupFill>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupFill>(deep);
@@ -3478,8 +3569,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public EffectContainer(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EffectContainer>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -3598,8 +3687,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public EffectDag(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EffectDag>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
         {
@@ -3751,13 +3838,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Effect Container Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.EffectContainerValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.EffectContainerValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.EffectContainerValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.EffectContainerValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3794,8 +3889,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Effect>();
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3831,8 +3929,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Threshold</para>
         /// <para>Represents the following attribute in the schema: thresh</para>
         /// </summary>
-        public Int32Value Threshold { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlphaBiLevel>();
+        public Int32Value Threshold
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3865,8 +3966,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlphaCeiling>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlphaCeiling>(deep);
     }
@@ -3886,8 +3985,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public AlphaFloor() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlphaFloor>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlphaFloor>(deep);
@@ -3949,8 +4046,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public AlphaInverse(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlphaInverse>();
 
         /// <summary>
         /// <para>RGB Color Model - Percentage Variant.</para>
@@ -4099,8 +4194,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlphaModulationEffect>();
-
         /// <summary>
         /// <para>EffectContainer.</para>
         /// <para>Represents the following element tag in the schema: a:cont.</para>
@@ -4145,8 +4238,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Amount</para>
         /// <para>Represents the following attribute in the schema: amt</para>
         /// </summary>
-        public Int32Value Amount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlphaModulationFixed>();
+        public Int32Value Amount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4182,8 +4278,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Radius</para>
         /// <para>Represents the following attribute in the schema: rad</para>
         /// </summary>
-        public Int64Value Radius { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlphaOutset>();
+        public Int64Value Radius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4219,8 +4318,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Alpha</para>
         /// <para>Represents the following attribute in the schema: a</para>
         /// </summary>
-        public Int32Value Alpha { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlphaReplace>();
+        public Int32Value Alpha
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4257,8 +4359,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Threshold</para>
         /// <para>Represents the following attribute in the schema: thresh</para>
         /// </summary>
-        public Int32Value Threshold { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BiLevel>();
+        public Int32Value Threshold
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4326,8 +4431,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Blend Mode</para>
         /// <para>Represents the following attribute in the schema: blend</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlendModeValues> BlendMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlendModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Blend>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlendModeValues> BlendMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlendModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4384,14 +4492,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Radius</para>
         /// <para>Represents the following attribute in the schema: rad</para>
         /// </summary>
-        public Int64Value Radius { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Radius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Grow Bounds</para>
         /// <para>Represents the following attribute in the schema: grow</para>
         /// </summary>
-        public BooleanValue Grow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Blur>();
+        public BooleanValue Grow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4461,8 +4576,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Consider Alpha Values</para>
         /// <para>Represents the following attribute in the schema: useA</para>
         /// </summary>
-        public BooleanValue UseAlpha { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorChange>();
+        public BooleanValue UseAlpha
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4565,8 +4683,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ColorReplacement(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorReplacement>();
 
         /// <summary>
         /// <para>RGB Color Model - Percentage Variant.</para>
@@ -4725,8 +4841,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Duotone>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 2, 2)
@@ -4805,8 +4919,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Fill(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Fill>();
 
         /// <summary>
         /// <para>NoFill.</para>
@@ -4969,8 +5081,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Blend</para>
         /// <para>Represents the following attribute in the schema: blend</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlendModeValues> Blend { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlendModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillOverlay>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlendModeValues> Blend
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlendModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5144,8 +5259,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Radius</para>
         /// <para>Represents the following attribute in the schema: rad</para>
         /// </summary>
-        public Int64Value Radius { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Glow>();
+        public Int64Value Radius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5273,8 +5391,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Grayscale>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Grayscale>(deep);
     }
@@ -5299,20 +5415,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Hue</para>
         /// <para>Represents the following attribute in the schema: hue</para>
         /// </summary>
-        public Int32Value Hue { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Hue
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Saturation</para>
         /// <para>Represents the following attribute in the schema: sat</para>
         /// </summary>
-        public Int32Value Saturation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Saturation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Luminance</para>
         /// <para>Represents the following attribute in the schema: lum</para>
         /// </summary>
-        public Int32Value Luminance { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hsl>();
+        public Int32Value Luminance
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5397,20 +5524,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Blur Radius</para>
         /// <para>Represents the following attribute in the schema: blurRad</para>
         /// </summary>
-        public Int64Value BlurRadius { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value BlurRadius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance</para>
         /// <para>Represents the following attribute in the schema: dist</para>
         /// </summary>
-        public Int64Value Distance { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Distance
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public Int32Value Direction { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InnerShadow>();
+        public Int32Value Direction
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5550,14 +5688,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Brightness</para>
         /// <para>Represents the following attribute in the schema: bright</para>
         /// </summary>
-        public Int32Value Brightness { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Brightness
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contrast</para>
         /// <para>Represents the following attribute in the schema: contrast</para>
         /// </summary>
-        public Int32Value Contrast { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LuminanceEffect>();
+        public Int32Value Contrast
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5638,56 +5783,91 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Blur Radius</para>
         /// <para>Represents the following attribute in the schema: blurRad</para>
         /// </summary>
-        public Int64Value BlurRadius { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value BlurRadius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Offset Distance</para>
         /// <para>Represents the following attribute in the schema: dist</para>
         /// </summary>
-        public Int64Value Distance { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Distance
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public Int32Value Direction { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Direction
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Scaling Factor</para>
         /// <para>Represents the following attribute in the schema: sx</para>
         /// </summary>
-        public Int32Value HorizontalRatio { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalRatio
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Scaling Factor</para>
         /// <para>Represents the following attribute in the schema: sy</para>
         /// </summary>
-        public Int32Value VerticalRatio { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalRatio
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Skew</para>
         /// <para>Represents the following attribute in the schema: kx</para>
         /// </summary>
-        public Int32Value HorizontalSkew { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalSkew
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Skew</para>
         /// <para>Represents the following attribute in the schema: ky</para>
         /// </summary>
-        public Int32Value VerticalSkew { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalSkew
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
-        public BooleanValue RotateWithShape { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OuterShadow>();
+        public BooleanValue RotateWithShape
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5883,20 +6063,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Preset Shadow</para>
         /// <para>Represents the following attribute in the schema: prst</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetShadowValues> Preset { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetShadowValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetShadowValues> Preset
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetShadowValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance</para>
         /// <para>Represents the following attribute in the schema: dist</para>
         /// </summary>
-        public Int64Value Distance { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Distance
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public Int32Value Direction { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresetShadow>();
+        public Int32Value Direction
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6037,86 +6228,141 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Blur Radius</para>
         /// <para>Represents the following attribute in the schema: blurRad</para>
         /// </summary>
-        public Int64Value BlurRadius { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value BlurRadius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Start Opacity</para>
         /// <para>Represents the following attribute in the schema: stA</para>
         /// </summary>
-        public Int32Value StartOpacity { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value StartOpacity
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Start Position</para>
         /// <para>Represents the following attribute in the schema: stPos</para>
         /// </summary>
-        public Int32Value StartPosition { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value StartPosition
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>End Alpha</para>
         /// <para>Represents the following attribute in the schema: endA</para>
         /// </summary>
-        public Int32Value EndAlpha { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value EndAlpha
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>End Position</para>
         /// <para>Represents the following attribute in the schema: endPos</para>
         /// </summary>
-        public Int32Value EndPosition { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value EndPosition
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance</para>
         /// <para>Represents the following attribute in the schema: dist</para>
         /// </summary>
-        public Int64Value Distance { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Distance
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public Int32Value Direction { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Direction
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fade Direction</para>
         /// <para>Represents the following attribute in the schema: fadeDir</para>
         /// </summary>
-        public Int32Value FadeDirection { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FadeDirection
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Ratio</para>
         /// <para>Represents the following attribute in the schema: sx</para>
         /// </summary>
-        public Int32Value HorizontalRatio { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalRatio
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Ratio</para>
         /// <para>Represents the following attribute in the schema: sy</para>
         /// </summary>
-        public Int32Value VerticalRatio { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalRatio
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Skew</para>
         /// <para>Represents the following attribute in the schema: kx</para>
         /// </summary>
-        public Int32Value HorizontalSkew { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalSkew
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Skew</para>
         /// <para>Represents the following attribute in the schema: ky</para>
         /// </summary>
-        public Int32Value VerticalSkew { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalSkew
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
-        public BooleanValue RotateWithShape { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Reflection>();
+        public BooleanValue RotateWithShape
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6195,14 +6441,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Offset X</para>
         /// <para>Represents the following attribute in the schema: tx</para>
         /// </summary>
-        public Int32Value OffsetX { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value OffsetX
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Offset Y</para>
         /// <para>Represents the following attribute in the schema: ty</para>
         /// </summary>
-        public Int32Value OffsetY { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RelativeOffset>();
+        public Int32Value OffsetY
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6236,8 +6489,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Radius</para>
         /// <para>Represents the following attribute in the schema: rad</para>
         /// </summary>
-        public Int64Value Radius { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SoftEdge>();
+        public Int64Value Radius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6274,14 +6530,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Hue</para>
         /// <para>Represents the following attribute in the schema: hue</para>
         /// </summary>
-        public Int32Value Hue { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Hue
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Amount</para>
         /// <para>Represents the following attribute in the schema: amt</para>
         /// </summary>
-        public Int32Value Amount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TintEffect>();
+        public Int32Value Amount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6321,38 +6584,61 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Horizontal Ratio</para>
         /// <para>Represents the following attribute in the schema: sx</para>
         /// </summary>
-        public Int32Value HorizontalRatio { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalRatio
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Ratio</para>
         /// <para>Represents the following attribute in the schema: sy</para>
         /// </summary>
-        public Int32Value VerticalRatio { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalRatio
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Skew</para>
         /// <para>Represents the following attribute in the schema: kx</para>
         /// </summary>
-        public Int32Value HorizontalSkew { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalSkew
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Skew</para>
         /// <para>Represents the following attribute in the schema: ky</para>
         /// </summary>
-        public Int32Value VerticalSkew { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalSkew
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Shift</para>
         /// <para>Represents the following attribute in the schema: tx</para>
         /// </summary>
-        public Int64Value HorizontalShift { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value HorizontalShift
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Shift</para>
         /// <para>Represents the following attribute in the schema: ty</para>
         /// </summary>
-        public Int64Value VerticalShift { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TransformEffect>();
+        public Int64Value VerticalShift
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6442,8 +6728,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public EffectList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EffectList>();
 
         /// <summary>
         /// <para>Blur Effect.</para>
@@ -6624,8 +6908,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomGeometry>();
-
         /// <summary>
         /// <para>Adjust Value List.</para>
         /// <para>Represents the following element tag in the schema: a:avLst.</para>
@@ -6771,8 +7053,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Preset Shape</para>
         /// <para>Represents the following attribute in the schema: prst</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues> Preset { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresetGeometry>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues> Preset
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6860,8 +7145,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Preset Warp Shape</para>
         /// <para>Represents the following attribute in the schema: prst</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextShapeValues> Preset { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextShapeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresetTextWrap>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextShapeValues> Preset
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextShapeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6914,8 +7202,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Round>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Round>(deep);
     }
@@ -6935,8 +7221,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public LineJoinBevel() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineJoinBevel>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineJoinBevel>(deep);
@@ -6962,8 +7246,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Miter Join Limit</para>
         /// <para>Represents the following attribute in the schema: lim</para>
         /// </summary>
-        public Int32Value Limit { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Miter>();
+        public Int32Value Limit
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6999,8 +7286,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetLineDashValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetLineDashValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresetDash>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetLineDashValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetLineDashValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7062,8 +7352,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public CustomDash(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomDash>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7132,8 +7420,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public FillProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillProperties>();
 
         /// <summary>
         /// <para>NoFill.</para>
@@ -7286,8 +7572,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillReference>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -7361,8 +7645,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EffectReference>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -7435,8 +7717,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public LineReference(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineReference>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7519,7 +7799,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Style Matrix Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7659,8 +7943,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EffectPropertiesType>();
-
         /// <summary>
         /// <para>Effect Container.</para>
         /// <para>Represents the following element tag in the schema: a:effectLst.</para>
@@ -7755,8 +8037,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Fonts>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 1, 1),
@@ -7822,8 +8102,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorFont>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 1, 1),
@@ -7888,8 +8166,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public MinorFont(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorFont>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8060,8 +8336,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Identifier</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues> Index { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontReference>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues> Index
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8190,8 +8469,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoAutoFit>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoAutoFit>(deep);
     }
@@ -8216,14 +8493,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Font Scale</para>
         /// <para>Represents the following attribute in the schema: fontScale</para>
         /// </summary>
-        public Int32Value FontScale { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FontScale
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Space Reduction</para>
         /// <para>Represents the following attribute in the schema: lnSpcReduction</para>
         /// </summary>
-        public Int32Value LineSpaceReduction { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NormalAutoFit>();
+        public Int32Value LineSpaceReduction
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8259,8 +8543,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeAutoFit>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeAutoFit>(deep);
     }
@@ -8280,8 +8562,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public BulletColorText() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BulletColorText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BulletColorText>(deep);
@@ -8337,8 +8617,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public BulletColor(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BulletColor>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8413,8 +8691,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtrusionColor>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -8487,8 +8763,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ContourColor(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContourColor>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8563,8 +8837,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorFrom>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -8637,8 +8909,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ColorTo(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorTo>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8713,8 +8983,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ForegroundColor>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -8788,8 +9056,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundColor>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -8862,8 +9128,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Highlight(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Highlight>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9037,8 +9301,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BulletSizeText>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BulletSizeText>(deep);
     }
@@ -9063,8 +9325,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BulletSizePercentage>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9101,8 +9366,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BulletSizePoints>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9135,8 +9403,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BulletFontText>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BulletFontText>(deep);
     }
@@ -9156,8 +9422,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public BulletFont() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BulletFont>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BulletFont>(deep);
@@ -9179,8 +9443,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LatinFont>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LatinFont>(deep);
     }
@@ -9200,8 +9462,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public EastAsianFont() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EastAsianFont>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EastAsianFont>(deep);
@@ -9223,8 +9483,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ComplexScriptFont>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ComplexScriptFont>(deep);
     }
@@ -9244,8 +9502,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public SymbolFont() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SymbolFont>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SymbolFont>(deep);
@@ -9269,25 +9525,41 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Text Typeface</para>
         /// <para>Represents the following attribute in the schema: typeface</para>
         /// </summary>
-        public StringValue Typeface { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Typeface
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Panose Setting</para>
         /// <para>Represents the following attribute in the schema: panose</para>
         /// </summary>
-        public HexBinaryValue Panose { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Panose
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Similar Font Family</para>
         /// <para>Represents the following attribute in the schema: pitchFamily</para>
         /// </summary>
-        public SByteValue PitchFamily { get => GetAttribute<SByteValue>(); set => SetAttribute(value); }
+        public SByteValue PitchFamily
+        {
+            get => GetAttribute<SByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Similar Character Set</para>
         /// <para>Represents the following attribute in the schema: charset</para>
         /// </summary>
-        public SByteValue CharacterSet { get => GetAttribute<SByteValue>(); set => SetAttribute(value); }
+        public SByteValue CharacterSet
+        {
+            get => GetAttribute<SByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9319,8 +9591,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoBullet>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoBullet>(deep);
     }
@@ -9345,14 +9615,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Bullet Autonumbering Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAutoNumberSchemeValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAutoNumberSchemeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAutoNumberSchemeValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAutoNumberSchemeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Start Numbering At</para>
         /// <para>Represents the following attribute in the schema: startAt</para>
         /// </summary>
-        public Int32Value StartAt { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoNumberedBullet>();
+        public Int32Value StartAt
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9393,8 +9670,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Bullet Character</para>
         /// <para>Represents the following attribute in the schema: char</para>
         /// </summary>
-        public StringValue Char { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CharacterBullet>();
+        public StringValue Char
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9457,8 +9737,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PictureBullet>();
-
         /// <summary>
         /// <para>Blip.</para>
         /// <para>Represents the following element tag in the schema: a:blip.</para>
@@ -9498,8 +9776,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public UnderlineFollowsText() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnderlineFollowsText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnderlineFollowsText>(deep);
@@ -9561,8 +9837,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Underline(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Underline>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9661,8 +9935,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Outline>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -9759,8 +10031,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public LeftBorderLineProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftBorderLineProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9859,8 +10129,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightBorderLineProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -9957,8 +10225,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public TopBorderLineProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopBorderLineProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -10057,8 +10323,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomBorderLineProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -10156,8 +10420,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopLeftToBottomRightBorderLineProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -10254,8 +10516,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public BottomLeftToTopRightBorderLineProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomLeftToTopRightBorderLineProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -10368,25 +10628,41 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Line Width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        public Int32Value Width { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Width
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Ending Cap Type</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Compound Line Type</para>
         /// <para>Represents the following attribute in the schema: cmpd</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10426,8 +10702,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public UnderlineFillText() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnderlineFillText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnderlineFillText>(deep);
@@ -10489,8 +10763,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public UnderlineFill(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnderlineFill>();
 
         /// <summary>
         /// <para>NoFill.</para>
@@ -10638,8 +10910,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Run>();
-
         /// <summary>
         /// <para>Text Character Properties.</para>
         /// <para>Represents the following element tag in the schema: a:rPr.</para>
@@ -10725,8 +10995,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Break>();
-
         /// <summary>
         /// <para>Text Run Properties.</para>
         /// <para>Represents the following element tag in the schema: a:rPr.</para>
@@ -10806,14 +11074,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Field ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public StringValue Type { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Field>();
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10925,8 +11200,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Graphic(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Graphic>();
 
         /// <summary>
         /// <para>Graphic Object Data.</para>
@@ -11040,7 +11313,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Embed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Embed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Linked Picture Reference</para>
@@ -11049,14 +11326,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Link { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Link
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cstate</para>
         /// <para>Represents the following attribute in the schema: cstate</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Blip>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11167,7 +11451,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2013, Office2016</para>
@@ -11176,8 +11464,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:thm15=http://schemas.microsoft.com/office/thememl/2012/main
         /// </remark>
-        public StringValue ThemeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Theme>();
+        public StringValue ThemeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11353,8 +11644,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeOverride>();
-
         /// <summary>
         /// <para>Color Scheme.</para>
         /// <para>Represents the following element tag in the schema: a:clrScheme.</para>
@@ -11454,8 +11743,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeManager>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThemeManager>(deep);
     }
@@ -11475,8 +11762,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public MasterColorMapping() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MasterColorMapping>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MasterColorMapping>(deep);
@@ -11547,8 +11832,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Table(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Table>();
 
         /// <summary>
         /// <para>Table Properties.</para>
@@ -11640,8 +11923,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Default</para>
         /// <para>Represents the following attribute in the schema: def</para>
         /// </summary>
-        public StringValue Default { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleList>();
+        public StringValue Default
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11743,8 +12029,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -11778,8 +12062,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartTime>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartTime>(deep);
     }
@@ -11799,8 +12081,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public EndTime() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndTime>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndTime>(deep);
@@ -11824,13 +12104,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Track</para>
         /// <para>Represents the following attribute in the schema: track</para>
         /// </summary>
-        public ByteValue Track { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
+        public ByteValue Track
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Time</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        public UInt32Value Time { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Time
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -11905,8 +12193,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomColor>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12035,14 +12326,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Script</para>
         /// <para>Represents the following attribute in the schema: script</para>
         /// </summary>
-        public StringValue Script { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Script
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Typeface</para>
         /// <para>Represents the following attribute in the schema: typeface</para>
         /// </summary>
-        public StringValue Typeface { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SupplementalFont>();
+        public StringValue Typeface
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12114,8 +12412,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Scene3DType(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Scene3DType>();
 
         /// <summary>
         /// <para>Camera.</para>
@@ -12236,8 +12532,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EffectStyle>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -12315,8 +12609,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillStyleList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 3, 0)
@@ -12386,8 +12678,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineStyleList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 3, 0)
@@ -12445,8 +12735,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public EffectStyleList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EffectStyleList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -12515,8 +12803,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public BackgroundFillStyleList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundFillStyleList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -12615,8 +12901,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorScheme>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12875,8 +13164,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FontScheme>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -12997,8 +13289,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormatScheme>();
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13123,8 +13418,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Dark1Color>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
@@ -13189,8 +13482,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Light1Color(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Light1Color>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13257,8 +13548,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Dark2Color>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
@@ -13323,8 +13612,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Light2Color(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Light2Color>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13391,8 +13678,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Accent1Color>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
@@ -13457,8 +13742,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Accent2Color(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Accent2Color>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13525,8 +13808,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Accent3Color>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
@@ -13591,8 +13872,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Accent4Color(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Accent4Color>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13659,8 +13938,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Accent5Color>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
@@ -13725,8 +14002,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Accent6Color(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Accent6Color>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13793,8 +14068,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Hyperlink>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
@@ -13859,8 +14132,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public FollowedHyperlinkColor(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FollowedHyperlinkColor>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14012,8 +14283,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScaleX>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScaleX>(deep);
     }
@@ -14033,8 +14302,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ScaleY() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScaleY>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScaleY>(deep);
@@ -14058,13 +14325,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Numerator</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
-        public Int32Value Numerator { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Numerator
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Denominator</para>
         /// <para>Represents the following attribute in the schema: d</para>
         /// </summary>
-        public Int32Value Denominator { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Denominator
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14097,8 +14372,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Offset>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Offset>(deep);
     }
@@ -14118,8 +14391,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ChildOffset() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChildOffset>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChildOffset>(deep);
@@ -14143,13 +14414,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public Int64Value X { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value X
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        public Int64Value Y { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Y
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14184,8 +14463,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Extents>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Extents>(deep);
     }
@@ -14205,8 +14482,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ChildExtents() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChildExtents>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChildExtents>(deep);
@@ -14230,13 +14505,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        public Int64Value Cx { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Cx
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        public Int64Value Cy { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Cy
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14306,68 +14589,111 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Disallow Shape Grouping</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        public BooleanValue NoGrouping { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoGrouping
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Selection</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        public BooleanValue NoSelection { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoSelection
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Rotation</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        public BooleanValue NoRotation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoRotation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Aspect Ratio Change</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        public BooleanValue NoChangeAspect { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeAspect
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Movement</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        public BooleanValue NoMove { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoMove
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Resize</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        public BooleanValue NoResize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Point Editing</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        public BooleanValue NoEditPoints { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoEditPoints
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Showing Adjust Handles</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        public BooleanValue NoAdjustHandles { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoAdjustHandles
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Arrowhead Changes</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        public BooleanValue NoChangeArrowheads { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeArrowheads
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Type Change</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        public BooleanValue NoChangeShapeType { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeShapeType
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Text Editing</para>
         /// <para>Represents the following attribute in the schema: noTextEdit</para>
         /// </summary>
-        public BooleanValue NoTextEdit { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeLocks>();
+        public BooleanValue NoTextEdit
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14461,62 +14787,101 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Disallow Shape Grouping</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        public BooleanValue NoGrouping { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoGrouping
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Selection</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        public BooleanValue NoSelection { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoSelection
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Rotation</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        public BooleanValue NoRotation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoRotation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Aspect Ratio Change</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        public BooleanValue NoChangeAspect { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeAspect
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Movement</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        public BooleanValue NoMove { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoMove
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Resize</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        public BooleanValue NoResize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Point Editing</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        public BooleanValue NoEditPoints { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoEditPoints
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Showing Adjust Handles</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        public BooleanValue NoAdjustHandles { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoAdjustHandles
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Arrowhead Changes</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        public BooleanValue NoChangeArrowheads { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeArrowheads
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Type Change</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        public BooleanValue NoChangeShapeType { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectionShapeLocks>();
+        public BooleanValue NoChangeShapeType
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14574,8 +14939,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartConnection>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartConnection>(deep);
     }
@@ -14595,8 +14958,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public EndConnection() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndConnection>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndConnection>(deep);
@@ -14620,13 +14981,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14694,38 +15063,61 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Disallow Shape Grouping</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        public BooleanValue NoGrouping { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoGrouping
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Selection of Child Shapes</para>
         /// <para>Represents the following attribute in the schema: noDrilldown</para>
         /// </summary>
-        public BooleanValue NoDrilldown { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoDrilldown
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Selection</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        public BooleanValue NoSelection { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoSelection
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Aspect Ratio Change</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        public BooleanValue NoChangeAspect { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeAspect
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Movement</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        public BooleanValue NoMove { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoMove
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Resize</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        public BooleanValue NoResize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GraphicFrameLocks>();
+        public BooleanValue NoResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15300,8 +15692,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Uniform Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GraphicData>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15345,14 +15740,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Animation Build Step</para>
         /// <para>Represents the following attribute in the schema: bldStep</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.DiagramBuildStepValues> BuildStep { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.DiagramBuildStepValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Diagram>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.DiagramBuildStepValues> BuildStep
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.DiagramBuildStepValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15392,20 +15794,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Series Index</para>
         /// <para>Represents the following attribute in the schema: seriesIdx</para>
         /// </summary>
-        public Int32Value SeriesIndex { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value SeriesIndex
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Category Index</para>
         /// <para>Represents the following attribute in the schema: categoryIdx</para>
         /// </summary>
-        public Int32Value CategoryIndex { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value CategoryIndex
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Animation Build Step</para>
         /// <para>Represents the following attribute in the schema: bldStep</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ChartBuildStepValues> BuildStep { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ChartBuildStepValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Chart>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ChartBuildStepValues> BuildStep
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ChartBuildStepValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15444,14 +15857,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Build</para>
         /// <para>Represents the following attribute in the schema: bld</para>
         /// </summary>
-        public StringValue Build { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Build
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reverse Animation</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        public BooleanValue ReverseAnimation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuildDiagram>();
+        public BooleanValue ReverseAnimation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15492,14 +15912,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Build</para>
         /// <para>Represents the following attribute in the schema: bld</para>
         /// </summary>
-        public StringValue Build { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Build
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Animate Background</para>
         /// <para>Represents the following attribute in the schema: animBg</para>
         /// </summary>
-        public BooleanValue AnimateBackground { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuildChart>();
+        public BooleanValue AnimateBackground
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15571,8 +15998,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextBody>();
-
         /// <summary>
         /// <para>Body Properties.</para>
         /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
@@ -15627,8 +16052,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public UseShapeRectangle() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UseShapeRectangle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseShapeRectangle>(deep);
@@ -15687,20 +16110,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        public BooleanValue HorizontalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HorizontalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        public BooleanValue VerticalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Transform2D>();
+        public BooleanValue VerticalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15804,32 +16238,51 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingProperties>();
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15953,8 +16406,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
-        public BooleanValue TextBox { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualShapeDrawingProperties>();
+        public BooleanValue TextBox
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16049,8 +16505,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public NonVisualShapeProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualShapeProperties>();
 
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
@@ -16169,8 +16623,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16291,8 +16748,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextShape>();
-
         /// <summary>
         /// <para>Shape Text Body.</para>
         /// <para>Represents the following element tag in the schema: a:txBody.</para>
@@ -16375,8 +16830,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ShapeStyle(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeStyle>();
 
         /// <summary>
         /// <para>LineReference.</para>
@@ -16497,8 +16950,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualConnectorShapeDrawingProperties>();
-
         /// <summary>
         /// <para>Connection Shape Locks.</para>
         /// <para>Represents the following element tag in the schema: a:cxnSpLocks.</para>
@@ -16614,8 +17065,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualConnectionShapeProperties>();
-
         /// <summary>
         /// <para>Non-Visual Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: a:cNvPr.</para>
@@ -16707,8 +17156,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>preferRelativeResize</para>
         /// <para>Represents the following attribute in the schema: preferRelativeResize</para>
         /// </summary>
-        public BooleanValue PreferRelativeResize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualPictureDrawingProperties>();
+        public BooleanValue PreferRelativeResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16804,8 +17256,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualPictureProperties>();
-
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: a:cNvPr.</para>
@@ -16892,8 +17342,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public NonVisualGraphicFrameDrawingProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGraphicFrameDrawingProperties>();
 
         /// <summary>
         /// <para>Graphic Frame Locks.</para>
@@ -16982,8 +17430,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGraphicFrameProperties>();
-
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: a:cNvPr.</para>
@@ -17071,8 +17517,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGroupShapeDrawingProperties>();
-
         /// <summary>
         /// <para>GroupShapeLocks.</para>
         /// <para>Represents the following element tag in the schema: a:grpSpLocks.</para>
@@ -17131,20 +17575,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Latitude</para>
         /// <para>Represents the following attribute in the schema: lat</para>
         /// </summary>
-        public Int32Value Latitude { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Latitude
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Longitude</para>
         /// <para>Represents the following attribute in the schema: lon</para>
         /// </summary>
-        public Int32Value Longitude { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Longitude
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revolution</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        public Int32Value Revolution { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Rotation>();
+        public Int32Value Revolution
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17222,20 +17677,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Preset Camera Type</para>
         /// <para>Represents the following attribute in the schema: prst</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetCameraValues> Preset { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetCameraValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetCameraValues> Preset
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetCameraValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Field of View</para>
         /// <para>Represents the following attribute in the schema: fov</para>
         /// </summary>
-        public Int32Value FieldOfView { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FieldOfView
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Zoom</para>
         /// <para>Represents the following attribute in the schema: zoom</para>
         /// </summary>
-        public Int32Value Zoom { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Camera>();
+        public Int32Value Zoom
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17331,14 +17797,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Rig Preset</para>
         /// <para>Represents the following attribute in the schema: rig</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LightRigValues> Rig { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LightRigValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LightRigValues> Rig
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LightRigValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LightRigDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LightRigDirectionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LightRig>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LightRigDirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LightRigDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17433,8 +17906,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Backdrop>();
-
         /// <summary>
         /// <para>Anchor Point.</para>
         /// <para>Represents the following element tag in the schema: a:anchor.</para>
@@ -17521,20 +17992,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>X-Coordinate in 3D</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public Int64Value X { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value X
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Y-Coordinate in 3D</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        public Int64Value Y { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Y
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Z-Coordinate in 3D</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
-        public Int64Value Z { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Anchor>();
+        public Int64Value Z
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17577,8 +18059,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Normal>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Normal>(deep);
     }
@@ -17598,8 +18078,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public UpVector() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UpVector>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UpVector>(deep);
@@ -17623,19 +18101,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Distance along X-axis in 3D</para>
         /// <para>Represents the following attribute in the schema: dx</para>
         /// </summary>
-        public Int64Value Dx { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Dx
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance along Y-axis in 3D</para>
         /// <para>Represents the following attribute in the schema: dy</para>
         /// </summary>
-        public Int64Value Dy { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Dy
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance along Z-axis in 3D</para>
         /// <para>Represents the following attribute in the schema: dz</para>
         /// </summary>
-        public Int64Value Dz { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Dz
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17675,8 +18165,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BevelTop>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BevelTop>(deep);
     }
@@ -17697,8 +18185,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BevelBottom>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BevelBottom>(deep);
     }
@@ -17718,8 +18204,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Bevel() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bevel>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bevel>(deep);
@@ -17743,19 +18227,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        public Int64Value Width { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Width
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Height</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
-        public Int64Value Height { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Height
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Preset Bevel</para>
         /// <para>Represents the following attribute in the schema: prst</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BevelPresetValues> Preset { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BevelPresetValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BevelPresetValues> Preset
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BevelPresetValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17792,8 +18288,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillToRectangle>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillToRectangle>(deep);
     }
@@ -17813,8 +18307,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public TileRectangle() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TileRectangle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TileRectangle>(deep);
@@ -17836,8 +18328,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillRectangle>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillRectangle>(deep);
     }
@@ -17857,8 +18347,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public SourceRectangle() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SourceRectangle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SourceRectangle>(deep);
@@ -17882,25 +18370,41 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Left Offset</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        public Int32Value Left { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Left
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Offset</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public Int32Value Top { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Top
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right Offset</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public Int32Value Right { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Right
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Offset</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public Int32Value Bottom { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Bottom
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17974,8 +18478,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Position</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        public Int32Value Position { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GradientStop>();
+        public Int32Value Position
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18135,8 +18642,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GradientStopList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientStop), 2, 0)
@@ -18168,14 +18673,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Shape Guide Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Guide Formula</para>
         /// <para>Represents the following attribute in the schema: fmla</para>
         /// </summary>
-        public StringValue Formula { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeGuide>();
+        public StringValue Formula
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18212,8 +18724,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Position>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Position>(deep);
     }
@@ -18233,8 +18743,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Point() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Point>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Point>(deep);
@@ -18258,13 +18766,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>X-Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public StringValue X { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue X
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Y-Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        public StringValue Y { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Y
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18342,38 +18858,61 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Horizontal Adjustment Guide</para>
         /// <para>Represents the following attribute in the schema: gdRefX</para>
         /// </summary>
-        public StringValue XAdjustmentGuide { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue XAdjustmentGuide
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Horizontal Adjustment</para>
         /// <para>Represents the following attribute in the schema: minX</para>
         /// </summary>
-        public StringValue MinX { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MinX
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum Horizontal Adjustment</para>
         /// <para>Represents the following attribute in the schema: maxX</para>
         /// </summary>
-        public StringValue MaxX { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MaxX
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Adjustment Guide</para>
         /// <para>Represents the following attribute in the schema: gdRefY</para>
         /// </summary>
-        public StringValue YAdjustmentGuide { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue YAdjustmentGuide
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Vertical Adjustment</para>
         /// <para>Represents the following attribute in the schema: minY</para>
         /// </summary>
-        public StringValue MinY { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MinY
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum Vertical Adjustment</para>
         /// <para>Represents the following attribute in the schema: maxY</para>
         /// </summary>
-        public StringValue MaxY { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AdjustHandleXY>();
+        public StringValue MaxY
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18496,38 +19035,61 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Radial Adjustment Guide</para>
         /// <para>Represents the following attribute in the schema: gdRefR</para>
         /// </summary>
-        public StringValue RadialAdjustmentGuide { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue RadialAdjustmentGuide
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Radial Adjustment</para>
         /// <para>Represents the following attribute in the schema: minR</para>
         /// </summary>
-        public StringValue MinRadial { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MinRadial
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum Radial Adjustment</para>
         /// <para>Represents the following attribute in the schema: maxR</para>
         /// </summary>
-        public StringValue MaxRadial { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MaxRadial
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Angle Adjustment Guide</para>
         /// <para>Represents the following attribute in the schema: gdRefAng</para>
         /// </summary>
-        public StringValue AngleAdjustmentGuide { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AngleAdjustmentGuide
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Angle Adjustment</para>
         /// <para>Represents the following attribute in the schema: minAng</para>
         /// </summary>
-        public StringValue MinAngle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MinAngle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Maximum Angle Adjustment</para>
         /// <para>Represents the following attribute in the schema: maxAng</para>
         /// </summary>
-        public StringValue MaxAngle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AdjustHandlePolar>();
+        public StringValue MaxAngle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18650,8 +19212,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Connection Site Angle</para>
         /// <para>Represents the following attribute in the schema: ang</para>
         /// </summary>
-        public StringValue Angle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectionSite>();
+        public StringValue Angle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18708,8 +19273,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CloseShapePath>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CloseShapePath>(deep);
     }
@@ -18760,8 +19323,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public MoveTo(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveTo>();
 
         /// <summary>
         /// <para>Move end point.</para>
@@ -18834,8 +19395,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineTo>();
-
         /// <summary>
         /// <para>Line end point.</para>
         /// <para>Represents the following element tag in the schema: a:pt.</para>
@@ -18880,26 +19439,41 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Shape Arc Width Radius</para>
         /// <para>Represents the following attribute in the schema: wR</para>
         /// </summary>
-        public StringValue WidthRadius { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue WidthRadius
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Arc Height Radius</para>
         /// <para>Represents the following attribute in the schema: hR</para>
         /// </summary>
-        public StringValue HeightRadius { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue HeightRadius
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Arc Start Angle</para>
         /// <para>Represents the following attribute in the schema: stAng</para>
         /// </summary>
-        public StringValue StartAngle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue StartAngle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Arc Swing Angle</para>
         /// <para>Represents the following attribute in the schema: swAng</para>
         /// </summary>
-        public StringValue SwingAngle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ArcTo>();
+        public StringValue SwingAngle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18994,8 +19568,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QuadraticBezierCurveTo>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Point), 2, 2)
@@ -19053,8 +19625,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public CubicBezierCurveTo(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CubicBezierCurveTo>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19128,32 +19698,51 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Path Width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        public Int64Value Width { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Width
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Path Height</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
-        public Int64Value Height { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Height
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Path Fill</para>
         /// <para>Represents the following attribute in the schema: fill</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PathFillModeValues> Fill { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PathFillModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PathFillModeValues> Fill
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PathFillModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Path Stroke</para>
         /// <para>Represents the following attribute in the schema: stroke</para>
         /// </summary>
-        public BooleanValue Stroke { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Stroke
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>3D Extrusion Allowed</para>
         /// <para>Represents the following attribute in the schema: extrusionOk</para>
         /// </summary>
-        public BooleanValue ExtrusionOk { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Path>();
+        public BooleanValue ExtrusionOk
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19237,8 +19826,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AdjustValueList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeGuide), 0, 0)
@@ -19295,8 +19882,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ShapeGuideList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeGuideList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19404,8 +19989,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AdjustHandleList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AdjustHandleXY), 1, 1),
@@ -19465,8 +20048,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectionSiteList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionSite), 0, 0)
@@ -19498,26 +20079,41 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Left</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        public StringValue Left { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Left
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public StringValue Top { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Top
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public StringValue Right { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Right
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Position</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public StringValue Bottom { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Rectangle>();
+        public StringValue Bottom
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19612,8 +20208,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PathList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Path), 0, 0)
@@ -19645,14 +20239,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Dash Length</para>
         /// <para>Represents the following attribute in the schema: d</para>
         /// </summary>
-        public Int32Value DashLength { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value DashLength
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Space Length</para>
         /// <para>Represents the following attribute in the schema: sp</para>
         /// </summary>
-        public Int32Value SpaceLength { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DashStop>();
+        public Int32Value SpaceLength
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19697,8 +20298,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeadEnd>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeadEnd>(deep);
     }
@@ -19718,8 +20317,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public TailEnd() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TailEnd>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TailEnd>(deep);
@@ -19743,19 +20340,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Line Head/End Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Width of Head/End</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndWidthValues> Width { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndWidthValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndWidthValues> Width
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndWidthValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Length of Head/End</para>
         /// <para>Represents the following attribute in the schema: len</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndLengthValues> Length { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndLengthValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndLengthValues> Length
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndLengthValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19833,20 +20442,31 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        public BooleanValue HorizontalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HorizontalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        public BooleanValue VerticalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TransformGroup>();
+        public BooleanValue VerticalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19988,116 +20608,191 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Paragraph Spacing</para>
         /// <para>Represents the following attribute in the schema: spcFirstLastPara</para>
         /// </summary>
-        public BooleanValue UseParagraphSpacing { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UseParagraphSpacing
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Vertical Overflow</para>
         /// <para>Represents the following attribute in the schema: vertOverflow</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Horizontal Overflow</para>
         /// <para>Represents the following attribute in the schema: horzOverflow</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Text</para>
         /// <para>Represents the following attribute in the schema: vert</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Wrapping Type</para>
         /// <para>Represents the following attribute in the schema: wrap</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Left Inset</para>
         /// <para>Represents the following attribute in the schema: lIns</para>
         /// </summary>
-        public Int32Value LeftInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value LeftInset
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Inset</para>
         /// <para>Represents the following attribute in the schema: tIns</para>
         /// </summary>
-        public Int32Value TopInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value TopInset
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right Inset</para>
         /// <para>Represents the following attribute in the schema: rIns</para>
         /// </summary>
-        public Int32Value RightInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value RightInset
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Inset</para>
         /// <para>Represents the following attribute in the schema: bIns</para>
         /// </summary>
-        public Int32Value BottomInset { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value BottomInset
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number of Columns</para>
         /// <para>Represents the following attribute in the schema: numCol</para>
         /// </summary>
-        public Int32Value ColumnCount { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ColumnCount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Space Between Columns</para>
         /// <para>Represents the following attribute in the schema: spcCol</para>
         /// </summary>
-        public Int32Value ColumnSpacing { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ColumnSpacing
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Columns Right-To-Left</para>
         /// <para>Represents the following attribute in the schema: rtlCol</para>
         /// </summary>
-        public BooleanValue RightToLeftColumns { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RightToLeftColumns
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>From WordArt</para>
         /// <para>Represents the following attribute in the schema: fromWordArt</para>
         /// </summary>
-        public BooleanValue FromWordArt { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FromWordArt
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Anchor</para>
         /// <para>Represents the following attribute in the schema: anchor</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Anchor Center</para>
         /// <para>Represents the following attribute in the schema: anchorCtr</para>
         /// </summary>
-        public BooleanValue AnchorCenter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AnchorCenter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Anti-Alias</para>
         /// <para>Represents the following attribute in the schema: forceAA</para>
         /// </summary>
-        public BooleanValue ForceAntiAlias { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ForceAntiAlias
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Upright</para>
         /// <para>Represents the following attribute in the schema: upright</para>
         /// </summary>
-        public BooleanValue UpRight { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UpRight
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Compatible Line Spacing</para>
         /// <para>Represents the following attribute in the schema: compatLnSpc</para>
         /// </summary>
-        public BooleanValue CompatibleLineSpacing { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BodyProperties>();
+        public BooleanValue CompatibleLineSpacing
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20254,8 +20949,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ListStyle(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListStyle>();
 
         /// <summary>
         /// <para>Default Paragraph Style.</para>
@@ -20471,8 +21164,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeDefault>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeProperties), 1, 1),
@@ -20538,8 +21229,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineDefault>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeProperties), 1, 1),
@@ -20604,8 +21293,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public TextDefault(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextDefault>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -20787,8 +21474,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OverrideColorMapping>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
@@ -20845,8 +21530,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ColorMap(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorMap>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -20908,73 +21591,121 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Background 1</para>
         /// <para>Represents the following attribute in the schema: bg1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text 1</para>
         /// <para>Represents the following attribute in the schema: tx1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Background 2</para>
         /// <para>Represents the following attribute in the schema: bg2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text 2</para>
         /// <para>Represents the following attribute in the schema: tx2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 1</para>
         /// <para>Represents the following attribute in the schema: accent1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 2</para>
         /// <para>Represents the following attribute in the schema: accent2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 3</para>
         /// <para>Represents the following attribute in the schema: accent3</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 4</para>
         /// <para>Represents the following attribute in the schema: accent4</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 5</para>
         /// <para>Represents the following attribute in the schema: accent5</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 6</para>
         /// <para>Represents the following attribute in the schema: accent6</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink</para>
         /// <para>Represents the following attribute in the schema: hlink</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Followed Hyperlink</para>
         /// <para>Represents the following attribute in the schema: folHlink</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21105,8 +21836,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtraColorScheme>();
-
         /// <summary>
         /// <para>ColorScheme.</para>
         /// <para>Represents the following element tag in the schema: a:clrScheme.</para>
@@ -21197,8 +21926,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ThemeElements(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ThemeElements>();
 
         /// <summary>
         /// <para>ColorScheme.</para>
@@ -21321,8 +22048,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Preset Material</para>
         /// <para>Represents the following attribute in the schema: prstMaterial</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Cell3DProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21463,50 +22193,81 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Left Margin</para>
         /// <para>Represents the following attribute in the schema: marL</para>
         /// </summary>
-        public Int32Value LeftMargin { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value LeftMargin
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right Margin</para>
         /// <para>Represents the following attribute in the schema: marR</para>
         /// </summary>
-        public Int32Value RightMargin { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value RightMargin
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top Margin</para>
         /// <para>Represents the following attribute in the schema: marT</para>
         /// </summary>
-        public Int32Value TopMargin { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value TopMargin
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Margin</para>
         /// <para>Represents the following attribute in the schema: marB</para>
         /// </summary>
-        public Int32Value BottomMargin { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value BottomMargin
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Direction</para>
         /// <para>Represents the following attribute in the schema: vert</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Anchor</para>
         /// <para>Represents the following attribute in the schema: anchor</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Anchor Center</para>
         /// <para>Represents the following attribute in the schema: anchorCtr</para>
         /// </summary>
-        public BooleanValue AnchorCenter { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AnchorCenter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Overflow</para>
         /// <para>Represents the following attribute in the schema: horzOverflow</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21707,26 +22468,41 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Row Span</para>
         /// <para>Represents the following attribute in the schema: rowSpan</para>
         /// </summary>
-        public Int32Value RowSpan { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value RowSpan
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Grid Span</para>
         /// <para>Represents the following attribute in the schema: gridSpan</para>
         /// </summary>
-        public Int32Value GridSpan { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value GridSpan
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Merge</para>
         /// <para>Represents the following attribute in the schema: hMerge</para>
         /// </summary>
-        public BooleanValue HorizontalMerge { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HorizontalMerge
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Merge</para>
         /// <para>Represents the following attribute in the schema: vMerge</para>
         /// </summary>
-        public BooleanValue VerticalMerge { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCell>();
+        public BooleanValue VerticalMerge
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21857,8 +22633,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyle>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:styleId*/, true, null)
         };
@@ -21949,8 +22723,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public TableStyleEntry(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleEntry>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:styleId*/, true, null)
@@ -22060,13 +22832,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Style ID</para>
         /// <para>Represents the following attribute in the schema: styleId</para>
         /// </summary>
-        public StringValue StyleId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue StyleId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: styleName</para>
         /// </summary>
-        public StringValue StyleName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue StyleName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22309,8 +23089,6 @@ namespace DocumentFormat.OpenXml.Drawing
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableStyleId>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleId>(deep);
     }
@@ -22366,8 +23144,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        public Int64Value Width { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GridColumn>();
+        public Int64Value Width
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22475,44 +23256,71 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Right-to-Left</para>
         /// <para>Represents the following attribute in the schema: rtl</para>
         /// </summary>
-        public BooleanValue RightToLeft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RightToLeft
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>First Row</para>
         /// <para>Represents the following attribute in the schema: firstRow</para>
         /// </summary>
-        public BooleanValue FirstRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FirstRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>First Column</para>
         /// <para>Represents the following attribute in the schema: firstCol</para>
         /// </summary>
-        public BooleanValue FirstColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue FirstColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Last Row</para>
         /// <para>Represents the following attribute in the schema: lastRow</para>
         /// </summary>
-        public BooleanValue LastRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LastRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Last Column</para>
         /// <para>Represents the following attribute in the schema: lastCol</para>
         /// </summary>
-        public BooleanValue LastColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LastColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Banded Rows</para>
         /// <para>Represents the following attribute in the schema: bandRow</para>
         /// </summary>
-        public BooleanValue BandRow { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BandRow
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Banded Columns</para>
         /// <para>Represents the following attribute in the schema: bandCol</para>
         /// </summary>
-        public BooleanValue BandColumn { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableProperties>();
+        public BooleanValue BandColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22610,8 +23418,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableGrid>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GridColumn), 1, 1000)
@@ -22676,8 +23482,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Height</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
-        public Int64Value Height { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableRow>();
+        public Int64Value Height
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -22749,8 +23558,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftBorder>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
@@ -22809,8 +23616,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public RightBorder(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightBorder>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -22871,8 +23676,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopBorder>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
@@ -22931,8 +23734,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public BottomBorder(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomBorder>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -22993,8 +23794,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InsideHorizontalBorder>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
@@ -23053,8 +23852,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public InsideVerticalBorder(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InsideVerticalBorder>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -23115,8 +23912,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopLeftToBottomRightBorder>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
@@ -23175,8 +23970,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public TopRightToBottomLeftBorder(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopRightToBottomLeftBorder>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -23326,8 +24119,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public TableCellBorders(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellBorders>();
 
         /// <summary>
         /// <para>Left Border.</para>
@@ -23532,14 +24323,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Bold</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BooleanStyleValues> Bold { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BooleanStyleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BooleanStyleValues> Bold
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BooleanStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Italic</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BooleanStyleValues> Italic { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BooleanStyleValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellTextStyle>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BooleanStyleValues> Italic
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BooleanStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -23639,8 +24437,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableCellStyle>();
-
         /// <summary>
         /// <para>Table Cell Borders.</para>
         /// <para>Represents the following element tag in the schema: a:tcBdr.</para>
@@ -23727,8 +24523,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TableBackground>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -23802,8 +24596,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WholeTable>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
@@ -23862,8 +24654,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Band1Horizontal(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Band1Horizontal>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -23924,8 +24714,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Band2Horizontal>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
@@ -23984,8 +24772,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Band1Vertical(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Band1Vertical>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24046,8 +24832,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Band2Vertical>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
@@ -24106,8 +24890,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public LastColumn(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LastColumn>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24168,8 +24950,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstColumn>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
@@ -24228,8 +25008,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public LastRow(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LastRow>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24290,8 +25068,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SoutheastCell>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
@@ -24350,8 +25126,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public SouthwestCell(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SouthwestCell>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24412,8 +25186,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstRow>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
@@ -24473,8 +25245,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NortheastCell>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
@@ -24533,8 +25303,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public NorthwestCell(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NorthwestCell>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24684,8 +25452,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ParagraphProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
@@ -24798,8 +25564,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public DefaultParagraphProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultParagraphProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -24914,8 +25678,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level1ParagraphProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
@@ -25028,8 +25790,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Level2ParagraphProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level2ParagraphProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25144,8 +25904,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level3ParagraphProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
@@ -25258,8 +26016,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Level4ParagraphProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level4ParagraphProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25374,8 +26130,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level5ParagraphProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
@@ -25488,8 +26242,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Level6ParagraphProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level6ParagraphProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25604,8 +26356,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level7ParagraphProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
@@ -25719,8 +26469,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level8ParagraphProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
@@ -25833,8 +26581,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Level9ParagraphProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level9ParagraphProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -25968,67 +26714,111 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Left Margin</para>
         /// <para>Represents the following attribute in the schema: marL</para>
         /// </summary>
-        public Int32Value LeftMargin { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value LeftMargin
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right Margin</para>
         /// <para>Represents the following attribute in the schema: marR</para>
         /// </summary>
-        public Int32Value RightMargin { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value RightMargin
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Level</para>
         /// <para>Represents the following attribute in the schema: lvl</para>
         /// </summary>
-        public Int32Value Level { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Level
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Indent</para>
         /// <para>Represents the following attribute in the schema: indent</para>
         /// </summary>
-        public Int32Value Indent { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Indent
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAlignmentTypeValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAlignmentTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAlignmentTypeValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAlignmentTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Tab Size</para>
         /// <para>Represents the following attribute in the schema: defTabSz</para>
         /// </summary>
-        public Int32Value DefaultTabSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value DefaultTabSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right To Left</para>
         /// <para>Represents the following attribute in the schema: rtl</para>
         /// </summary>
-        public BooleanValue RightToLeft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue RightToLeft
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>East Asian Line Break</para>
         /// <para>Represents the following attribute in the schema: eaLnBrk</para>
         /// </summary>
-        public BooleanValue EastAsianLineBreak { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EastAsianLineBreak
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Font Alignment</para>
         /// <para>Represents the following attribute in the schema: fontAlgn</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextFontAlignmentValues> FontAlignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextFontAlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextFontAlignmentValues> FontAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextFontAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Latin Line Break</para>
         /// <para>Represents the following attribute in the schema: latinLnBrk</para>
         /// </summary>
-        public BooleanValue LatinLineBreak { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LatinLineBreak
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hanging Punctuation</para>
         /// <para>Represents the following attribute in the schema: hangingPunct</para>
         /// </summary>
-        public BooleanValue Height { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Height
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26172,8 +26962,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EndParagraphRunProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
@@ -26297,8 +27085,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
@@ -26421,8 +27207,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public DefaultRunProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultRunProperties>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -26571,115 +27355,191 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>kumimoji</para>
         /// <para>Represents the following attribute in the schema: kumimoji</para>
         /// </summary>
-        public BooleanValue Kumimoji { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Kumimoji
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lang</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        public StringValue Language { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>altLang</para>
         /// <para>Represents the following attribute in the schema: altLang</para>
         /// </summary>
-        public StringValue AlternativeLanguage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlternativeLanguage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sz</para>
         /// <para>Represents the following attribute in the schema: sz</para>
         /// </summary>
-        public Int32Value FontSize { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FontSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>b</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public BooleanValue Bold { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Bold
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>i</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public BooleanValue Italic { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Italic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>u</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues> Underline { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues> Underline
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>strike</para>
         /// <para>Represents the following attribute in the schema: strike</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues> Strike { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues> Strike
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>kern</para>
         /// <para>Represents the following attribute in the schema: kern</para>
         /// </summary>
-        public Int32Value Kerning { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Kerning
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cap</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues> Capital { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues> Capital
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>spc</para>
         /// <para>Represents the following attribute in the schema: spc</para>
         /// </summary>
-        public Int32Value Spacing { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Spacing
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>normalizeH</para>
         /// <para>Represents the following attribute in the schema: normalizeH</para>
         /// </summary>
-        public BooleanValue NormalizeHeight { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NormalizeHeight
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>baseline</para>
         /// <para>Represents the following attribute in the schema: baseline</para>
         /// </summary>
-        public Int32Value Baseline { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Baseline
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>noProof</para>
         /// <para>Represents the following attribute in the schema: noProof</para>
         /// </summary>
-        public BooleanValue NoProof { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoProof
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dirty</para>
         /// <para>Represents the following attribute in the schema: dirty</para>
         /// </summary>
-        public BooleanValue Dirty { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Dirty
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>err</para>
         /// <para>Represents the following attribute in the schema: err</para>
         /// </summary>
-        public BooleanValue SpellingError { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SpellingError
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>smtClean</para>
         /// <para>Represents the following attribute in the schema: smtClean</para>
         /// </summary>
-        public BooleanValue SmtClean { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SmtClean
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>smtId</para>
         /// <para>Represents the following attribute in the schema: smtId</para>
         /// </summary>
-        public UInt32Value SmtId { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value SmtId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bmk</para>
         /// <para>Represents the following attribute in the schema: bmk</para>
         /// </summary>
-        public StringValue Bookmark { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Bookmark
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26795,8 +27655,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Paragraph>();
-
         /// <summary>
         /// <para>Text Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: a:pPr.</para>
@@ -26852,14 +27710,21 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Tab Position</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
-        public Int32Value Position { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Position
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Tab Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextTabAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextTabAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabStop>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextTabAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextTabAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26896,8 +27761,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpacingPercent>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26934,8 +27802,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpacingPoints>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -26999,8 +27870,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineSpacing>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpacingPercent), 1, 1),
@@ -27060,8 +27929,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpaceBefore>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpacingPercent), 1, 1),
@@ -27120,8 +27987,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public SpaceAfter(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SpaceAfter>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -27256,8 +28121,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TabStopList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStop), 0, 32)
@@ -27297,8 +28160,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Text>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
@@ -27365,8 +28226,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapePropertiesExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27447,8 +28311,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GvmlGroupShapeExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27520,8 +28387,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapePropertiesExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtension), 0, 0)
@@ -27581,8 +28446,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public NonVisualGroupShapeProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGroupShapeProperties>();
 
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
@@ -27693,8 +28556,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VisualGroupShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -27806,8 +28672,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Shape(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shape>();
 
         /// <summary>
         /// <para>Non-Visual Properties for a Shape.</para>
@@ -27942,8 +28806,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectionShape>();
-
         /// <summary>
         /// <para>Non-Visual Properties for a Connection Shape.</para>
         /// <para>Represents the following element tag in the schema: a:nvCxnSpPr.</para>
@@ -28064,8 +28926,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public Picture(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Picture>();
 
         /// <summary>
         /// <para>Non-Visual Properties for a Picture.</para>
@@ -28200,8 +29060,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GraphicFrame>();
-
         /// <summary>
         /// <para>Non-Visual Properties for a Graphic Frame.</para>
         /// <para>Represents the following element tag in the schema: a:nvGraphicFramePr.</para>
@@ -28333,8 +29191,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupShape>();
-
         /// <summary>
         /// <para>Non-Visual Properties for a Group Shape.</para>
         /// <para>Represents the following element tag in the schema: a:nvGrpSpPr.</para>
@@ -28431,8 +29287,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GvmlGroupShapeExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtension), 0, 0)
@@ -28495,8 +29349,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGroupDrawingShapePropsExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28572,8 +29429,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeStyleSheetExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28649,8 +29509,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectorLockingExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -28722,8 +29585,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyperlinkOnClick>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeCannotOmitConstraint(0 /*r:id*/),
             new RelationshipExistConstraint(0 /*r:id*/)
@@ -28790,8 +29651,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyperlinkOnHover>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeCannotOmitConstraint(0 /*r:id*/)
         };
@@ -28856,8 +29715,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public HyperlinkOnMouseOver(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HyperlinkOnMouseOver>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeCannotOmitConstraint(0 /*r:id*/),
@@ -28932,49 +29789,81 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Invalid URL</para>
         /// <para>Represents the following attribute in the schema: invalidUrl</para>
         /// </summary>
-        public StringValue InvalidUrl { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InvalidUrl
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Action Setting</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
-        public StringValue Action { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Action
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Target Frame</para>
         /// <para>Represents the following attribute in the schema: tgtFrame</para>
         /// </summary>
-        public StringValue TargetFrame { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TargetFrame
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Tooltip</para>
         /// <para>Represents the following attribute in the schema: tooltip</para>
         /// </summary>
-        public StringValue Tooltip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tooltip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Add Hyperlink to Page History</para>
         /// <para>Represents the following attribute in the schema: history</para>
         /// </summary>
-        public BooleanValue History { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue History
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Highlight Click</para>
         /// <para>Represents the following attribute in the schema: highlightClick</para>
         /// </summary>
-        public BooleanValue HighlightClick { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HighlightClick
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>End Sounds</para>
         /// <para>Represents the following attribute in the schema: endSnd</para>
         /// </summary>
-        public BooleanValue EndSound { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue EndSound
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29064,8 +29953,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingPropertiesExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtension), 0, 0)
@@ -29130,8 +30017,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingPropertiesExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29208,68 +30098,111 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Disallow Shape Grouping</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        public BooleanValue NoGrouping { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoGrouping
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Selection</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        public BooleanValue NoSelection { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoSelection
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Rotation</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        public BooleanValue NoRotation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoRotation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Aspect Ratio Change</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        public BooleanValue NoChangeAspect { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeAspect
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Movement</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        public BooleanValue NoMove { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoMove
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Resize</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        public BooleanValue NoResize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Point Editing</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        public BooleanValue NoEditPoints { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoEditPoints
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Showing Adjust Handles</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        public BooleanValue NoAdjustHandles { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoAdjustHandles
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Arrowhead Changes</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        public BooleanValue NoChangeArrowheads { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeArrowheads
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Type Change</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        public BooleanValue NoChangeShapeType { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeShapeType
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Crop Changes</para>
         /// <para>Represents the following attribute in the schema: noCrop</para>
         /// </summary>
-        public BooleanValue NoCrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PictureLocks>();
+        public BooleanValue NoCrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29359,8 +30292,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualPicturePropertiesExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtension), 0, 0)
@@ -29427,8 +30358,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualPicturePropertiesExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29506,44 +30440,71 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>Disallow Shape Grouping</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        public BooleanValue NoGrouping { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoGrouping
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Ungrouping</para>
         /// <para>Represents the following attribute in the schema: noUngrp</para>
         /// </summary>
-        public BooleanValue NoUngrouping { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoUngrouping
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Selection</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        public BooleanValue NoSelection { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoSelection
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Rotation</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        public BooleanValue NoRotation { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoRotation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Aspect Ratio Change</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        public BooleanValue NoChangeAspect { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoChangeAspect
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Moving Shape</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        public BooleanValue NoMove { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue NoMove
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Resizing</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        public BooleanValue NoResize { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GroupShapeLocks>();
+        public BooleanValue NoResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29629,8 +30590,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGroupDrawingShapePropsExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtension), 0, 0)
@@ -29688,8 +30647,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public BlipExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BlipExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -29757,8 +30714,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BlipExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -29837,8 +30797,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ObjectDefaults(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ObjectDefaults>();
 
         /// <summary>
         /// <para>Shape Default.</para>
@@ -29953,8 +30911,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtraColorSchemeList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtraColorScheme), 0, 0)
@@ -30012,8 +30968,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public CustomColorList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomColorList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -30073,8 +31027,6 @@ namespace DocumentFormat.OpenXml.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeStyleSheetExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.OfficeStyleSheetExtension), 0, 0)
@@ -30106,8 +31058,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightToLeft>();
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30166,8 +31121,6 @@ namespace DocumentFormat.OpenXml.Drawing
         public ConnectorLockingExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectorLockingExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -30233,8 +31186,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataModelExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -30311,8 +31267,11 @@ namespace DocumentFormat.OpenXml.Drawing
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PtExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

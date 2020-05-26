@@ -60,8 +60,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ModelTimeGroupings>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping), 1, 0, version: FileFormatVersions.Office2016)
@@ -124,20 +122,31 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>tableName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: tableName</para>
         /// </summary>
-        public StringValue TableName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue TableName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columnName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnName</para>
         /// </summary>
-        public StringValue ColumnName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ColumnName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columnId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnId</para>
         /// </summary>
-        public StringValue ColumnId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ModelTimeGrouping>();
+        public StringValue ColumnId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -188,26 +197,41 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>columnName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnName</para>
         /// </summary>
-        public StringValue ColumnName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ColumnName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columnId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnId</para>
         /// </summary>
-        public StringValue ColumnId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ColumnId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contentType, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: contentType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType> ContentType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType> ContentType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>isSelected, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: isSelected</para>
         /// </summary>
-        public BooleanValue IsSelected { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CalculatedTimeColumn>();
+        public BooleanValue IsSelected
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

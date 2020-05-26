@@ -31,8 +31,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WrapNone>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WrapNone>(deep);
     }
@@ -88,32 +86,51 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text (Top)</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        public UInt32Value DistanceFromTop { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromTop
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        public UInt32Value DistanceFromBottom { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromBottom
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        public UInt32Value DistanceFromLeft { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromLeft
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        public UInt32Value DistanceFromRight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WrapSquare>();
+        public UInt32Value DistanceFromRight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -205,20 +222,31 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Test on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        public UInt32Value DistanceFromLeft { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromLeft
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        public UInt32Value DistanceFromRight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WrapTight>();
+        public UInt32Value DistanceFromRight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -308,20 +336,31 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        public UInt32Value DistanceFromLeft { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromLeft
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        public UInt32Value DistanceFromRight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WrapThrough>();
+        public UInt32Value DistanceFromRight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -411,14 +450,21 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        public UInt32Value DistanceFromTop { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromTop
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        public UInt32Value DistanceFromBottom { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WrapTopBottom>();
+        public UInt32Value DistanceFromBottom
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -511,25 +557,41 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        public UInt32Value DistanceFromTop { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromTop
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        public UInt32Value DistanceFromBottom { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromBottom
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        public UInt32Value DistanceFromLeft { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromLeft
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        public UInt32Value DistanceFromRight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromRight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>anchorId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -538,7 +600,11 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public HexBinaryValue AnchorId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue AnchorId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>editId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -547,8 +613,11 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public HexBinaryValue EditId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Inline>();
+        public HexBinaryValue EditId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -729,67 +798,111 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        public UInt32Value DistanceFromTop { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromTop
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        public UInt32Value DistanceFromBottom { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromBottom
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        public UInt32Value DistanceFromLeft { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromLeft
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        public UInt32Value DistanceFromRight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value DistanceFromRight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Page Positioning</para>
         /// <para>Represents the following attribute in the schema: simplePos</para>
         /// </summary>
-        public BooleanValue SimplePos { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SimplePos
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Z-Ordering Position</para>
         /// <para>Represents the following attribute in the schema: relativeHeight</para>
         /// </summary>
-        public UInt32Value RelativeHeight { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value RelativeHeight
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Display Behind Document Text</para>
         /// <para>Represents the following attribute in the schema: behindDoc</para>
         /// </summary>
-        public BooleanValue BehindDoc { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BehindDoc
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Lock Anchor</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        public BooleanValue Locked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Locked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Layout In Table Cell</para>
         /// <para>Represents the following attribute in the schema: layoutInCell</para>
         /// </summary>
-        public BooleanValue LayoutInCell { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue LayoutInCell
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Objects to Overlap</para>
         /// <para>Represents the following attribute in the schema: allowOverlap</para>
         /// </summary>
-        public BooleanValue AllowOverlap { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AllowOverlap
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>editId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -798,7 +911,11 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public HexBinaryValue EditId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue EditId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>anchorId, this property is only available in Office2010, Office2013, Office2016</para>
@@ -807,8 +924,11 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public HexBinaryValue AnchorId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Anchor>();
+        public HexBinaryValue AnchorId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -967,8 +1087,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StartPoint>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartPoint>(deep);
     }
@@ -989,8 +1107,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineTo>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineTo>(deep);
     }
@@ -1010,8 +1126,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         public SimplePosition() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SimplePosition>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SimplePosition>(deep);
@@ -1035,13 +1149,21 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public Int64Value X { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value X
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        public Int64Value Y { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Y
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1080,26 +1202,41 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Additional Extent on Left Edge</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        public Int64Value LeftEdge { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value LeftEdge
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Additional Extent on Top Edge</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public Int64Value TopEdge { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value TopEdge
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Additional Extent on Right Edge</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public Int64Value RightEdge { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value RightEdge
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Additional Extent on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public Int64Value BottomEdge { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EffectExtent>();
+        public Int64Value BottomEdge
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1184,8 +1321,11 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Wrapping Points Modified</para>
         /// <para>Represents the following attribute in the schema: edited</para>
         /// </summary>
-        public BooleanValue Edited { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WrapPolygon>();
+        public BooleanValue Edited
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1274,8 +1414,11 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Horizontal Position Relative Base</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues> RelativeFrom { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HorizontalPosition>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues> RelativeFrom
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1398,8 +1541,11 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Vertical Position Relative Base</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues> RelativeFrom { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalPosition>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues> RelativeFrom
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1487,14 +1633,21 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        public Int64Value Cx { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Cx
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        public Int64Value Cy { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Extent>();
+        public Int64Value Cy
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1571,32 +1724,51 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocProperties>();
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1722,8 +1894,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGraphicFrameDrawingProperties>();
-
         /// <summary>
         /// <para>Graphic Frame Locks.</para>
         /// <para>Represents the following element tag in the schema: a:graphicFrameLocks.</para>
@@ -1793,8 +1963,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
             return new EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalAlignment>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalAlignment>(deep);
     }
@@ -1828,8 +1996,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             return new Int32Value { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PositionOffset>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PositionOffset>(deep);
@@ -1865,8 +2031,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             return new EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HorizontalAlignment>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalAlignment>(deep);

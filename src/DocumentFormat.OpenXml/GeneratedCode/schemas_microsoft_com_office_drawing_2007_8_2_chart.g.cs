@@ -70,8 +70,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotOptions>();
-
         /// <summary>
         /// <para>DropZoneFilter.</para>
         /// <para>Represents the following element tag in the schema: c14:dropZoneFilter.</para>
@@ -201,8 +199,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SketchOptions>();
-
         /// <summary>
         /// <para>InSketchMode.</para>
         /// <para>Represents the following element tag in the schema: c14:inSketchMode.</para>
@@ -288,8 +284,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InvertSolidFillFormat>();
-
         /// <summary>
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c14:spPr.</para>
@@ -334,8 +328,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Style>();
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -431,8 +428,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -516,8 +516,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropZoneFilter>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneFilter>(deep);
     }
@@ -537,8 +535,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         public DropZoneCategories() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropZoneCategories>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneCategories>(deep);
@@ -560,8 +556,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropZoneData>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneData>(deep);
     }
@@ -581,8 +575,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         public DropZoneSeries() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropZoneSeries>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneSeries>(deep);
@@ -604,8 +596,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropZonesVisible>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZonesVisible>(deep);
     }
@@ -625,8 +615,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         public InSketchMode() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InSketchMode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InSketchMode>(deep);
@@ -650,7 +638,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -680,8 +672,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowSketchButton>();
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

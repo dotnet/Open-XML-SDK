@@ -28,8 +28,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopBorder>(deep);
     }
@@ -49,8 +47,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         public LeftBorder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftBorder>(deep);
@@ -72,8 +68,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightBorder>(deep);
     }
@@ -93,8 +87,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         public BottomBorder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomBorder>(deep);
@@ -118,19 +110,31 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Border Style</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Width</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        public IntegerValue Width { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Width
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border shadow</para>
         /// <para>Represents the following attribute in the schema: shadow</para>
         /// </summary>
-        public TrueFalseValue Shadow { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue Shadow
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -165,26 +169,41 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Wrapping type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Wrapping side</para>
         /// <para>Represents the following attribute in the schema: side</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Positioning Base</para>
         /// <para>Represents the following attribute in the schema: anchorx</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Positioning Base</para>
         /// <para>Represents the following attribute in the schema: anchory</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextWrap>();
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -215,8 +234,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         public AnchorLock() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AnchorLock>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnchorLock>(deep);

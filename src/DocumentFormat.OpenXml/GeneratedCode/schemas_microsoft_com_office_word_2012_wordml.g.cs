@@ -37,7 +37,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Run Content Theme Color</para>
@@ -46,7 +50,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Run Content Theme Color Tint</para>
@@ -55,7 +63,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeTint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ThemeTint
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Run Content Theme Color Shade</para>
@@ -64,8 +76,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeShade { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Color>();
+        public StringValue ThemeShade
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -118,7 +133,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue PrefixMappings { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue PrefixMappings
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>XPath</para>
@@ -127,7 +146,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue XPath { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue XPath
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom XML Data Storage ID</para>
@@ -136,8 +159,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue StoreItemId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataBinding>();
+        public StringValue StoreItemId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -181,8 +207,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Appearance>();
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -244,8 +273,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         public CommentsEx(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentsEx>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -335,8 +362,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         public People(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<People>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -429,8 +454,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtRepeatedSection>();
-
         /// <summary>
         /// <para>SectionTitle.</para>
         /// <para>Represents the following element tag in the schema: w15:sectionTitle.</para>
@@ -485,8 +508,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtRepeatedSectionItem>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtRepeatedSectionItem>(deep);
     }
@@ -506,8 +527,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         public ChartTrackingRefBased() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartTrackingRefBased>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartTrackingRefBased>(deep);
@@ -529,8 +548,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultCollapsed>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultCollapsed>(deep);
     }
@@ -550,8 +567,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         public WebExtensionLinked() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionLinked>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionLinked>(deep);
@@ -573,8 +588,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionCreated>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionCreated>(deep);
     }
@@ -594,8 +607,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         public DoNotAllowInsertDeleteSection() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoNotAllowInsertDeleteSection>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotAllowInsertDeleteSection>(deep);
@@ -622,7 +633,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Val { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
+        public OnOffValue Val
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -655,8 +670,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PersistentDocumentId>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -696,8 +714,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FootnoteColumns>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -736,7 +757,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public HexBinaryValue ParaId { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue ParaId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>paraIdParent, this property is only available in Office2013, Office2016</para>
@@ -745,7 +770,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public HexBinaryValue ParaIdParent { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue ParaIdParent
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>done, this property is only available in Office2013, Office2016</para>
@@ -754,8 +783,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public OnOffValue Done { get => GetAttribute<OnOffValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentEx>();
+        public OnOffValue Done
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -843,7 +875,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contact, this property is only available in Office2013, Office2016</para>
@@ -852,8 +888,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public StringValue Contact { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Person>();
+        public StringValue Contact
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -918,7 +957,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public StringValue ProviderId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ProviderId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>userId, this property is only available in Office2013, Office2016</para>
@@ -927,8 +970,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public StringValue UserId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresenceInfo>();
+        public StringValue UserId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -980,8 +1026,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SectionTitle>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

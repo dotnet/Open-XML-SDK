@@ -42,8 +42,6 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<List>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<List>(deep);
     }

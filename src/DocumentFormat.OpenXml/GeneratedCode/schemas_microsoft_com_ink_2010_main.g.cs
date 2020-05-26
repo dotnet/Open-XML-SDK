@@ -67,128 +67,211 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public StringValue Type { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rotatedBoundingBox</para>
         /// <para>Represents the following attribute in the schema: rotatedBoundingBox</para>
         /// </summary>
-        public ListValue<StringValue> RotatedBoundingBox { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> RotatedBoundingBox
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alignmentLevel</para>
         /// <para>Represents the following attribute in the schema: alignmentLevel</para>
         /// </summary>
-        public Int32Value AlignmentLevel { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value AlignmentLevel
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contentType</para>
         /// <para>Represents the following attribute in the schema: contentType</para>
         /// </summary>
-        public Int32Value ContentType { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value ContentType
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ascender</para>
         /// <para>Represents the following attribute in the schema: ascender</para>
         /// </summary>
-        public StringValue Ascender { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Ascender
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descender</para>
         /// <para>Represents the following attribute in the schema: descender</para>
         /// </summary>
-        public StringValue Descender { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Descender
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>baseline</para>
         /// <para>Represents the following attribute in the schema: baseline</para>
         /// </summary>
-        public StringValue Baseline { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Baseline
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>midline</para>
         /// <para>Represents the following attribute in the schema: midline</para>
         /// </summary>
-        public StringValue Midline { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Midline
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>customRecognizerId</para>
         /// <para>Represents the following attribute in the schema: customRecognizerId</para>
         /// </summary>
-        public StringValue CustomRecognizerId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue CustomRecognizerId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mathML</para>
         /// <para>Represents the following attribute in the schema: mathML</para>
         /// </summary>
-        public StringValue MathML { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MathML
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mathStruct</para>
         /// <para>Represents the following attribute in the schema: mathStruct</para>
         /// </summary>
-        public StringValue MathStruct { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MathStruct
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mathSymbol</para>
         /// <para>Represents the following attribute in the schema: mathSymbol</para>
         /// </summary>
-        public StringValue MathSymbol { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue MathSymbol
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>beginModifierType</para>
         /// <para>Represents the following attribute in the schema: beginModifierType</para>
         /// </summary>
-        public StringValue BeginModifierType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue BeginModifierType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endModifierType</para>
         /// <para>Represents the following attribute in the schema: endModifierType</para>
         /// </summary>
-        public StringValue EndModifierType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue EndModifierType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rotationAngle</para>
         /// <para>Represents the following attribute in the schema: rotationAngle</para>
         /// </summary>
-        public Int32Value RotationAngle { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value RotationAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hotPoints</para>
         /// <para>Represents the following attribute in the schema: hotPoints</para>
         /// </summary>
-        public ListValue<StringValue> HotPoints { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
+        public ListValue<StringValue> HotPoints
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>centroid</para>
         /// <para>Represents the following attribute in the schema: centroid</para>
         /// </summary>
-        public StringValue Centroid { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Centroid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>semanticType</para>
         /// <para>Represents the following attribute in the schema: semanticType</para>
         /// </summary>
-        public StringValue SemanticType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SemanticType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>shapeName</para>
         /// <para>Represents the following attribute in the schema: shapeName</para>
         /// </summary>
-        public StringValue ShapeName { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ShapeName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>shapeGeometry</para>
         /// <para>Represents the following attribute in the schema: shapeGeometry</para>
         /// </summary>
-        public ListValue<StringValue> ShapeGeometry { get => GetAttribute<ListValue<StringValue>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextNode>();
+        public ListValue<StringValue> ShapeGeometry
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -324,8 +407,11 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public StringValue Type { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextNodeProperty>();
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -357,8 +443,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SourceLink>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SourceLink>(deep);
     }
@@ -378,8 +462,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         public DestinationLink() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DestinationLink>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DestinationLink>(deep);
@@ -403,13 +485,21 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>direction</para>
         /// <para>Represents the following attribute in the schema: direction</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues> Direction { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ref</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Reference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

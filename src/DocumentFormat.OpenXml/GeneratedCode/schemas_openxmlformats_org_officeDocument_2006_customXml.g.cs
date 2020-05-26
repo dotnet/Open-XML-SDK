@@ -66,8 +66,11 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        public StringValue ItemId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataStoreItem>();
+        public StringValue ItemId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -158,8 +161,11 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SchemaReference>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -221,8 +227,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         public SchemaReferences(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SchemaReferences>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

@@ -28,8 +28,6 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InkAnnotationFlag>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InkAnnotationFlag>(deep);
     }
@@ -54,8 +52,11 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         /// <para>Text Reference</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextData>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

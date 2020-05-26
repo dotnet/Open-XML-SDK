@@ -78,8 +78,6 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LockedCanvas>();
-
         /// <summary>
         /// <para>Non-Visual Properties for a Group Shape.</para>
         /// <para>Represents the following element tag in the schema: a:nvGrpSpPr.</para>

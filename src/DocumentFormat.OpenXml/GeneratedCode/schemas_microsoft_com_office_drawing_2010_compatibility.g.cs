@@ -33,8 +33,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CompatibilityShape>();
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

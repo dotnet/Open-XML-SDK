@@ -93,8 +93,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -182,8 +185,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsignedIntegerType>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -215,8 +221,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InvertIfNegativeBoolean>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InvertIfNegativeBoolean>(deep);
     }
@@ -236,8 +240,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         public Bubble3DBoolean() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bubble3DBoolean>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bubble3DBoolean>(deep);
@@ -261,7 +263,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -323,8 +329,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         public Marker(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Marker>();
 
         /// <summary>
         /// <para>Symbol.</para>
@@ -469,8 +473,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DLbl>();
-
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -572,8 +574,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryFilterExceptions>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterException), 1, 0, version: FileFormatVersions.Office2016)
@@ -631,8 +631,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         public PivotOptions16(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotOptions16>();
 
         /// <summary>
         /// <para>BooleanFalse.</para>
@@ -705,8 +703,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartDataPointUniqueIDMap>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMapEntry), 0, 0, version: FileFormatVersions.Office2016)
@@ -734,8 +730,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UniqueIdChartUniqueID>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UniqueIdChartUniqueID>(deep);
     }
@@ -755,8 +749,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         public UniqueID() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UniqueID>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UniqueID>(deep);
@@ -780,7 +772,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -851,8 +847,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         public CategoryFilterException(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryFilterException>();
 
         /// <summary>
         /// <para>UniqueIdChartUniqueID.</para>
@@ -1015,8 +1009,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberDataType>();
-
         /// <summary>
         /// <para>Format Code.</para>
         /// <para>Represents the following element tag in the schema: c:formatCode.</para>
@@ -1104,8 +1096,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumFilteredLiteralCache>();
-
         /// <summary>
         /// <para>NumberDataType.</para>
         /// <para>Represents the following element tag in the schema: c16:numCache.</para>
@@ -1181,8 +1171,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringDataType>();
-
         /// <summary>
         /// <para>PointCount.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>
@@ -1255,8 +1243,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         public StrFilteredLiteralCache(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrFilteredLiteralCache>();
 
         /// <summary>
         /// <para>StringDataType.</para>
@@ -1333,8 +1319,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLvlStrData>();
-
         /// <summary>
         /// <para>PointCount.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>
@@ -1408,8 +1392,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLvlStrFilteredLiteralCache>();
-
         /// <summary>
         /// <para>MultiLvlStrData.</para>
         /// <para>Represents the following element tag in the schema: c16:multiLvlStrCache.</para>
@@ -1454,8 +1436,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LiteralDataChart>();
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1491,8 +1476,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BooleanFalse>();
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1534,8 +1522,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
             return new UInt32Value { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<XsdunsignedInt>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsdunsignedInt>(deep);
@@ -1589,8 +1575,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         public ChartDataPointUniqueIDMapEntry(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartDataPointUniqueIDMapEntry>();
 
         /// <summary>
         /// <para>XsdunsignedInt.</para>

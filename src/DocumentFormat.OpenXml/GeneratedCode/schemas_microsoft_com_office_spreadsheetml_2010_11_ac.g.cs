@@ -34,8 +34,11 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
         /// <para>url, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: url</para>
         /// </summary>
-        public StringValue Url { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AbsolutePath>();
+        public StringValue Url
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

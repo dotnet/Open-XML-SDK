@@ -33,8 +33,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>id, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CreationId>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -70,8 +73,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>pred, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: pred</para>
         /// </summary>
-        public StringValue Pred { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PredecessorDrawingElementReference>();
+        public StringValue Pred
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -107,14 +113,21 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>st, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        public StringValue St { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue St
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>end, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        public StringValue End { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConnectableReferences>();
+        public StringValue End
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -150,8 +163,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowIdIdentifier>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowIdIdentifier>(deep);
     }
@@ -171,8 +182,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         public ColIdIdentifier() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColIdIdentifier>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColIdIdentifier>(deep);
@@ -196,7 +205,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

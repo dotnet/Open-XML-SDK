@@ -88,43 +88,71 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape ID Optional Storage</para>
         /// <para>Represents the following attribute in the schema: spidmax</para>
         /// </summary>
-        public IntegerValue MaxShapeId { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue MaxShapeId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>style</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        public StringValue Style { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: fill</para>
         /// </summary>
-        public TrueFalseValue BeFilled { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue BeFilled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        public StringValue FillColor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroke</para>
         /// </summary>
-        public TrueFalseValue IsStroke { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue IsStroke
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        public StringValue StrokeColor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -133,7 +161,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public TrueFalseValue AllowInCell { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allowoverlap</para>
@@ -142,7 +174,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public TrueFalseValue AllowOverlap { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insetmode</para>
@@ -151,8 +187,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeDefaults>();
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -392,8 +431,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeLayout>();
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -477,43 +519,71 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Signature Line Flag</para>
         /// <para>Represents the following attribute in the schema: issignatureline</para>
         /// </summary>
-        public TrueFalseValue IsSignatureLine { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue IsSignatureLine
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unique ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Signature Provider ID</para>
         /// <para>Represents the following attribute in the schema: provid</para>
         /// </summary>
-        public StringValue ProviderId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ProviderId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Use Signing Instructions Flag</para>
         /// <para>Represents the following attribute in the schema: signinginstructionsset</para>
         /// </summary>
-        public TrueFalseValue SigningInstructionsSet { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue SigningInstructionsSet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>User-specified Comments Flag</para>
         /// <para>Represents the following attribute in the schema: allowcomments</para>
         /// </summary>
-        public TrueFalseValue AllowComments { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue AllowComments
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Show Signed Date Flag</para>
         /// <para>Represents the following attribute in the schema: showsigndate</para>
         /// </summary>
-        public TrueFalseValue ShowSignDate { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue ShowSignDate
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Suggested Signer Line 1</para>
@@ -522,7 +592,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public StringValue SuggestedSigner { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SuggestedSigner
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Suggested Signer Line 2</para>
@@ -531,7 +605,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public StringValue SuggestedSigner2 { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SuggestedSigner2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Suggested Signer E-mail Address</para>
@@ -540,26 +618,41 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public StringValue SuggestedSignerEmail { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SuggestedSignerEmail
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Instructions for Signing</para>
         /// <para>Represents the following attribute in the schema: signinginstructions</para>
         /// </summary>
-        public StringValue SigningInstructions { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SigningInstructions
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Additional Signature Information</para>
         /// <para>Represents the following attribute in the schema: addlxml</para>
         /// </summary>
-        public StringValue AdditionalXml { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AdditionalXml
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Signature Provider Download URL</para>
         /// <para>Represents the following attribute in the schema: sigprovurl</para>
         /// </summary>
-        public StringValue SignatureProviderUrl { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SignatureLine>();
+        public StringValue SignatureProviderUrl
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -616,14 +709,21 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Ink Data</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public Base64BinaryValue InkData { get => GetAttribute<Base64BinaryValue>(); set => SetAttribute(value); }
+        public Base64BinaryValue InkData
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Flag</para>
         /// <para>Represents the following attribute in the schema: annotation</para>
         /// </summary>
-        public TrueFalseValue AnnotationFlag { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Ink>();
+        public TrueFalseValue AnnotationFlag
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -691,62 +791,101 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Style Options</para>
         /// <para>Represents the following attribute in the schema: dgmstyle</para>
         /// </summary>
-        public IntegerValue Style { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Style
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Automatic Format</para>
         /// <para>Represents the following attribute in the schema: autoformat</para>
         /// </summary>
-        public TrueFalseValue AutoFormat { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue AutoFormat
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Reverse Direction</para>
         /// <para>Represents the following attribute in the schema: reverse</para>
         /// </summary>
-        public TrueFalseValue Reverse { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue Reverse
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Automatic Layout</para>
         /// <para>Represents the following attribute in the schema: autolayout</para>
         /// </summary>
-        public TrueFalseValue AutoLayout { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue AutoLayout
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Layout X Scale</para>
         /// <para>Represents the following attribute in the schema: dgmscalex</para>
         /// </summary>
-        public IntegerValue ScaleX { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ScaleX
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Layout Y Scale</para>
         /// <para>Represents the following attribute in the schema: dgmscaley</para>
         /// </summary>
-        public IntegerValue ScaleY { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ScaleY
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Font Size</para>
         /// <para>Represents the following attribute in the schema: dgmfontsize</para>
         /// </summary>
-        public IntegerValue FontSize { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue FontSize
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Layout Extents</para>
         /// <para>Represents the following attribute in the schema: constrainbounds</para>
         /// </summary>
-        public StringValue ConstrainBounds { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ConstrainBounds
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Base Font Size</para>
         /// <para>Represents the following attribute in the schema: dgmbasetextscale</para>
         /// </summary>
-        public IntegerValue BaseTextScale { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Diagram>();
+        public IntegerValue BaseTextScale
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -811,38 +950,61 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Skew ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Skew Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        public TrueFalseValue On { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue On
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Skew Offset</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-        public StringValue Offset { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Offset
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Skew Origin</para>
         /// <para>Represents the following attribute in the schema: origin</para>
         /// </summary>
-        public StringValue Origin { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Origin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Skew Perspective Matrix</para>
         /// <para>Represents the following attribute in the schema: matrix</para>
         /// </summary>
-        public StringValue Matrix { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Skew>();
+        public StringValue Matrix
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -883,188 +1045,311 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        public TrueFalseValue On { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue On
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Render Mode</para>
         /// <para>Represents the following attribute in the schema: render</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues> Render { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues> Render
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Viewpoint Origin</para>
         /// <para>Represents the following attribute in the schema: viewpointorigin</para>
         /// </summary>
-        public StringValue ViewpointOrigin { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ViewpointOrigin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Viewpoint</para>
         /// <para>Represents the following attribute in the schema: viewpoint</para>
         /// </summary>
-        public StringValue Viewpoint { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Viewpoint
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Skew Angle</para>
         /// <para>Represents the following attribute in the schema: skewangle</para>
         /// </summary>
-        public SingleValue SkewAngle { get => GetAttribute<SingleValue>(); set => SetAttribute(value); }
+        public SingleValue SkewAngle
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Skew</para>
         /// <para>Represents the following attribute in the schema: skewamt</para>
         /// </summary>
-        public StringValue SkewAmount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SkewAmount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Forward Extrusion</para>
         /// <para>Represents the following attribute in the schema: foredepth</para>
         /// </summary>
-        public StringValue ForceDepth { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ForceDepth
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Backward Extrusion Depth</para>
         /// <para>Represents the following attribute in the schema: backdepth</para>
         /// </summary>
-        public StringValue BackDepth { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue BackDepth
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotation Axis</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        public StringValue Orientation { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Orientation
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotation Around Axis</para>
         /// <para>Represents the following attribute in the schema: orientationangle</para>
         /// </summary>
-        public SingleValue OrientationAngle { get => GetAttribute<SingleValue>(); set => SetAttribute(value); }
+        public SingleValue OrientationAngle
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotation Toggle</para>
         /// <para>Represents the following attribute in the schema: lockrotationcenter</para>
         /// </summary>
-        public TrueFalseValue LockRotationCenter { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue LockRotationCenter
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Center of Rotation Toggle</para>
         /// <para>Represents the following attribute in the schema: autorotationcenter</para>
         /// </summary>
-        public TrueFalseValue AutoRotationCenter { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue AutoRotationCenter
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotation Center</para>
         /// <para>Represents the following attribute in the schema: rotationcenter</para>
         /// </summary>
-        public StringValue RotationCenter { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue RotationCenter
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>X-Y Rotation Angle</para>
         /// <para>Represents the following attribute in the schema: rotationangle</para>
         /// </summary>
-        public StringValue RotationAngle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue RotationAngle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Color</para>
         /// <para>Represents the following attribute in the schema: color</para>
         /// </summary>
-        public StringValue Color { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Color
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shininess</para>
         /// <para>Represents the following attribute in the schema: shininess</para>
         /// </summary>
-        public SingleValue Shininess { get => GetAttribute<SingleValue>(); set => SetAttribute(value); }
+        public SingleValue Shininess
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Specularity</para>
         /// <para>Represents the following attribute in the schema: specularity</para>
         /// </summary>
-        public StringValue Specularity { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Specularity
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diffuse Reflection</para>
         /// <para>Represents the following attribute in the schema: diffusity</para>
         /// </summary>
-        public StringValue Diffusity { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Diffusity
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Metallic Surface Toggle</para>
         /// <para>Represents the following attribute in the schema: metal</para>
         /// </summary>
-        public TrueFalseValue Metal { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue Metal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Simulated Bevel</para>
         /// <para>Represents the following attribute in the schema: edge</para>
         /// </summary>
-        public StringValue Edge { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Edge
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Faceting Quality</para>
         /// <para>Represents the following attribute in the schema: facet</para>
         /// </summary>
-        public StringValue Facet { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Facet
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Face Lighting Toggle</para>
         /// <para>Represents the following attribute in the schema: lightface</para>
         /// </summary>
-        public TrueFalseValue LightFace { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue LightFace
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Brightness</para>
         /// <para>Represents the following attribute in the schema: brightness</para>
         /// </summary>
-        public StringValue Brightness { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Brightness
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Primary Light Position</para>
         /// <para>Represents the following attribute in the schema: lightposition</para>
         /// </summary>
-        public StringValue LightPosition { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue LightPosition
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Primary Light Intensity</para>
         /// <para>Represents the following attribute in the schema: lightlevel</para>
         /// </summary>
-        public StringValue LightLevel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue LightLevel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Primary Light Harshness Toggle</para>
         /// <para>Represents the following attribute in the schema: lightharsh</para>
         /// </summary>
-        public TrueFalseValue LightHarsh { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue LightHarsh
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Secondary Light Position</para>
         /// <para>Represents the following attribute in the schema: lightposition2</para>
         /// </summary>
-        public StringValue LightPosition2 { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue LightPosition2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Secondary Light Intensity</para>
         /// <para>Represents the following attribute in the schema: lightlevel2</para>
         /// </summary>
-        public StringValue LightLevel2 { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue LightLevel2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Secondary Light Harshness Toggle</para>
         /// <para>Represents the following attribute in the schema: lightharsh2</para>
         /// </summary>
-        public TrueFalseValue LightHarsh2 { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Extrusion>();
+        public TrueFalseValue LightHarsh2
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1139,86 +1424,141 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        public TrueFalseValue On { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue On
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public StringValue Type { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout gap</para>
         /// <para>Represents the following attribute in the schema: gap</para>
         /// </summary>
-        public StringValue Gap { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Gap
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout angle</para>
         /// <para>Represents the following attribute in the schema: angle</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues> Angle { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues> Angle
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout automatic drop toggle</para>
         /// <para>Represents the following attribute in the schema: dropauto</para>
         /// </summary>
-        public TrueFalseValue DropAuto { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue DropAuto
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout drop position</para>
         /// <para>Represents the following attribute in the schema: drop</para>
         /// </summary>
-        public StringValue Drop { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Drop
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout drop distance</para>
         /// <para>Represents the following attribute in the schema: distance</para>
         /// </summary>
-        public StringValue Distance { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Distance
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout length toggle</para>
         /// <para>Represents the following attribute in the schema: lengthspecified</para>
         /// </summary>
-        public TrueFalseValue LengthSpecified { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue LengthSpecified
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout length</para>
         /// <para>Represents the following attribute in the schema: length</para>
         /// </summary>
-        public StringValue Length { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Length
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout accent bar toggle</para>
         /// <para>Represents the following attribute in the schema: accentbar</para>
         /// </summary>
-        public TrueFalseValue AccentBar { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue AccentBar
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout text border toggle</para>
         /// <para>Represents the following attribute in the schema: textborder</para>
         /// </summary>
-        public TrueFalseValue TextBorder { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue TextBorder
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout flip x</para>
         /// <para>Represents the following attribute in the schema: minusx</para>
         /// </summary>
-        public TrueFalseValue MinusX { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue MinusX
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Callout flip y</para>
         /// <para>Represents the following attribute in the schema: minusy</para>
         /// </summary>
-        public TrueFalseValue MinusY { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Callout>();
+        public TrueFalseValue MinusY
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1273,74 +1613,121 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Position Lock</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        public TrueFalseValue Position { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue Position
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Selection Lock</para>
         /// <para>Represents the following attribute in the schema: selection</para>
         /// </summary>
-        public TrueFalseValue Selection { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue Selection
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Grouping Lock</para>
         /// <para>Represents the following attribute in the schema: grouping</para>
         /// </summary>
-        public TrueFalseValue Grouping { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue Grouping
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Ungrouping Lock</para>
         /// <para>Represents the following attribute in the schema: ungrouping</para>
         /// </summary>
-        public TrueFalseValue Ungrouping { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue Ungrouping
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotation Lock</para>
         /// <para>Represents the following attribute in the schema: rotation</para>
         /// </summary>
-        public TrueFalseValue Rotation { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue Rotation
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Cropping Lock</para>
         /// <para>Represents the following attribute in the schema: cropping</para>
         /// </summary>
-        public TrueFalseValue Cropping { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue Cropping
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertices Lock</para>
         /// <para>Represents the following attribute in the schema: verticies</para>
         /// </summary>
-        public TrueFalseValue Verticies { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue Verticies
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Handles Lock</para>
         /// <para>Represents the following attribute in the schema: adjusthandles</para>
         /// </summary>
-        public TrueFalseValue AdjustHandles { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue AdjustHandles
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Lock</para>
         /// <para>Represents the following attribute in the schema: text</para>
         /// </summary>
-        public TrueFalseValue TextLock { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue TextLock
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Aspect Ratio Lock</para>
         /// <para>Represents the following attribute in the schema: aspectratio</para>
         /// </summary>
-        public TrueFalseValue AspectRatio { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue AspectRatio
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>AutoShape Type Lock</para>
         /// <para>Represents the following attribute in the schema: shapetype</para>
         /// </summary>
-        public TrueFalseValue ShapeType { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Lock>();
+        public TrueFalseValue ShapeType
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1419,31 +1806,51 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>OLE Object Type</para>
         /// <para>Represents the following attribute in the schema: Type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLE Object Application</para>
         /// <para>Represents the following attribute in the schema: ProgID</para>
         /// </summary>
-        public StringValue ProgId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ProgId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLE Object Shape</para>
         /// <para>Represents the following attribute in the schema: ShapeID</para>
         /// </summary>
-        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLE Object Representation</para>
         /// <para>Represents the following attribute in the schema: DrawAspect</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues> DrawAspect { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues> DrawAspect
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLE Object Unique ID</para>
         /// <para>Represents the following attribute in the schema: ObjectID</para>
         /// </summary>
-        public StringValue ObjectId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ObjectId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship</para>
@@ -1452,14 +1859,21 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>OLE Update Mode</para>
         /// <para>Represents the following attribute in the schema: UpdateMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues> UpdateMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OleObject>();
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues> UpdateMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1556,8 +1970,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Complex>();
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1586,8 +2003,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftStroke>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftStroke>(deep);
     }
@@ -1607,8 +2022,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         public TopStroke() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopStroke>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopStroke>(deep);
@@ -1630,8 +2043,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightStroke>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightStroke>(deep);
     }
@@ -1651,8 +2062,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         public BottomStroke() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BottomStroke>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(2 /*:weight*/, true, 0, true, 20116800, true),
@@ -1680,8 +2089,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         public ColumnStroke() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnStroke>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(10 /*:dashstyle*/, true, new string[] { "solid", "shortdash", "shortdot", "shortdashdot", "shortdashdotdot", "dot", "dash", "longdash", "longdashdotdot", "dashdot" })
@@ -1714,139 +2121,231 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        public TrueFalseValue On { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue On
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: weight</para>
         /// </summary>
-        public StringValue Weight { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Weight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Color</para>
         /// <para>Represents the following attribute in the schema: color</para>
         /// </summary>
-        public StringValue Color { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Color
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Alternate Pattern Color</para>
         /// <para>Represents the following attribute in the schema: color2</para>
         /// </summary>
-        public StringValue Color2 { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Color2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Opacity</para>
         /// <para>Represents the following attribute in the schema: opacity</para>
         /// </summary>
-        public StringValue Opacity { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Opacity
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Line Style</para>
         /// <para>Represents the following attribute in the schema: linestyle</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues> LineStyle { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues> LineStyle
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Miter Joint Limit</para>
         /// <para>Represents the following attribute in the schema: miterlimit</para>
         /// </summary>
-        public DecimalValue MiterLimit { get => GetAttribute<DecimalValue>(); set => SetAttribute(value); }
+        public DecimalValue MiterLimit
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Join Style)</para>
         /// <para>Represents the following attribute in the schema: joinstyle</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues> JoinStyle { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues> JoinStyle
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Cap</para>
         /// <para>Represents the following attribute in the schema: endcap</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues> EndCap { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues> EndCap
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Dash Pattern</para>
         /// <para>Represents the following attribute in the schema: dashstyle</para>
         /// </summary>
-        public StringValue DashStyle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DashStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        public TrueFalseValue InsetPen { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Image Style</para>
         /// <para>Represents the following attribute in the schema: filltype</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues> FillType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues> FillType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Image Location</para>
         /// <para>Represents the following attribute in the schema: src</para>
         /// </summary>
-        public StringValue Source { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Image Aspect Ratio</para>
         /// <para>Represents the following attribute in the schema: imageaspect</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> ImageAspect { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> ImageAspect
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Image Size</para>
         /// <para>Represents the following attribute in the schema: imagesize</para>
         /// </summary>
-        public StringValue ImageSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stoke Image Alignment</para>
         /// <para>Represents the following attribute in the schema: imagealignshape</para>
         /// </summary>
-        public TrueFalseValue ImageAlignShape { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue ImageAlignShape
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Start Arrowhead</para>
         /// <para>Represents the following attribute in the schema: startarrow</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> StartArrow { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> StartArrow
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Start Arrowhead Width</para>
         /// <para>Represents the following attribute in the schema: startarrowwidth</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> StartArrowWidth { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> StartArrowWidth
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Start Arrowhead Length</para>
         /// <para>Represents the following attribute in the schema: startarrowlength</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> StartArrowLength { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> StartArrowLength
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Arrowhead</para>
         /// <para>Represents the following attribute in the schema: endarrow</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> EndArrow { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> EndArrow
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Arrowhead Width</para>
         /// <para>Represents the following attribute in the schema: endarrowwidth</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> EndArrowWidth { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> EndArrowWidth
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Arrowhead Length</para>
         /// <para>Represents the following attribute in the schema: endarrowlength</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> EndArrowLength { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> EndArrowLength
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Original Image Reference</para>
@@ -1855,7 +2354,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public StringValue Href { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Image Reference</para>
@@ -1864,7 +2367,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public StringValue AlternateImageReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AlternateImageReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Title</para>
@@ -1873,7 +2380,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -1882,7 +2393,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public TrueFalseValue ForceDash { get => GetAttribute<TrueFalseValue>(); set => SetAttribute(value); }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1941,8 +2456,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public StringValue Value { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ClipPath>();
+        public StringValue Value
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1981,14 +2499,21 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillExtendedProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2025,14 +2550,21 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape IDs</para>
         /// <para>Represents the following attribute in the schema: data</para>
         /// </summary>
-        public StringValue Data { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeIdMap>();
+        public StringValue Data
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2100,8 +2632,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RegroupTable>();
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2175,8 +2710,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Rules>();
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2216,14 +2754,21 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>New Group ID</para>
         /// <para>Represents the following attribute in the schema: new</para>
         /// </summary>
-        public Int32Value New { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value New
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Group ID</para>
         /// <para>Represents the following attribute in the schema: old</para>
         /// </summary>
-        public Int32Value Old { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Entry>();
+        public Int32Value Old
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2288,26 +2833,41 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rule ID</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rule Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues> Type { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alignment Rule Type</para>
         /// <para>Represents the following attribute in the schema: how</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues> How { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues> How
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rule Shape Reference</para>
         /// <para>Represents the following attribute in the schema: idref</para>
         /// </summary>
-        public StringValue ShapeReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Rule>();
+        public StringValue ShapeReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2390,8 +2950,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RelationTable>();
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2434,26 +2997,41 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Relationship Source Shape</para>
         /// <para>Represents the following attribute in the schema: idsrc</para>
         /// </summary>
-        public StringValue SourceId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SourceId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Relationship Destination Shape</para>
         /// <para>Represents the following attribute in the schema: iddest</para>
         /// </summary>
-        public StringValue DestinationId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue DestinationId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Relationship Center Shape</para>
         /// <para>Represents the following attribute in the schema: idcntr</para>
         /// </summary>
-        public StringValue CenterShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Relation>();
+        public StringValue CenterShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2508,8 +3086,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
             return new EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinkType>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkType>(deep);
     }
@@ -2544,8 +3120,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
             return new TrueFalseBlankValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LockedField>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LockedField>(deep);
     }
@@ -2579,8 +3153,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FieldCodes>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldCodes>(deep);
     }
@@ -2605,26 +3177,41 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Start Point Connection Flag</para>
         /// <para>Represents the following attribute in the schema: start</para>
         /// </summary>
-        public TrueFalseBlankValue Start { get => GetAttribute<TrueFalseBlankValue>(); set => SetAttribute(value); }
+        public TrueFalseBlankValue Start
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>End Point Connection Flag</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        public TrueFalseBlankValue End { get => GetAttribute<TrueFalseBlankValue>(); set => SetAttribute(value); }
+        public TrueFalseBlankValue End
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Proxy Shape Reference</para>
         /// <para>Represents the following attribute in the schema: idref</para>
         /// </summary>
-        public StringValue ShapeReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ShapeReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Connection Location</para>
         /// <para>Represents the following attribute in the schema: connectloc</para>
         /// </summary>
-        public Int32Value ConnectionLocation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Proxy>();
+        public Int32Value ConnectionLocation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2670,14 +3257,21 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Recent colors</para>
         /// <para>Represents the following attribute in the schema: colors</para>
         /// </summary>
-        public StringValue Colors { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorMostRecentlyUsed>();
+        public StringValue Colors
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2714,32 +3308,51 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:v=urn:schemas-microsoft-com:vml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default stroke color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        public StringValue StrokeColor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default fill color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        public StringValue FillColor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default shadow color</para>
         /// <para>Represents the following attribute in the schema: shadowcolor</para>
         /// </summary>
-        public StringValue ShadowColor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ShadowColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default extrusion color</para>
         /// <para>Represents the following attribute in the schema: extrusioncolor</para>
         /// </summary>
-        public StringValue ExtrusionColor { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorMenu>();
+        public StringValue ExtrusionColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

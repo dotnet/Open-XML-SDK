@@ -33,26 +33,41 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>bwMode, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Mode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Mode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bwPure, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bwPure</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Pure { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Pure
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bwNormal, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bwNormal</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Normal { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Normal
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>targetScreenSize, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: targetScreenSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize> TargetScreenSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackgroundProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize> TargetScreenSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -100,8 +115,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>isLegacyGroup, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isLegacyGroup</para>
         /// </summary>
-        public BooleanValue IsLegacyGroup { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualGroupProperties>();
+        public BooleanValue IsLegacyGroup
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -134,20 +152,31 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>objectId, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: objectId</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>isActiveX, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isActiveX</para>
         /// </summary>
-        public BooleanValue IsActiveX { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsActiveX
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>linkType, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: linkType</para>
         /// </summary>
-        public StringValue LinkType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ObjectProperties>();
+        public StringValue LinkType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -182,74 +211,121 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         /// <para>isSignatureLine, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isSignatureLine</para>
         /// </summary>
-        public BooleanValue IsSignatureLine { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue IsSignatureLine
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>provId, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: provId</para>
         /// </summary>
-        public StringValue ProviderId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ProviderId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>signingInstructionsSet, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: signingInstructionsSet</para>
         /// </summary>
-        public BooleanValue SigningInstructionsSet { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue SigningInstructionsSet
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allowComments, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: allowComments</para>
         /// </summary>
-        public BooleanValue AllowComments { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AllowComments
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showSignDate, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showSignDate</para>
         /// </summary>
-        public BooleanValue ShowSignDate { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowSignDate
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>suggestedSigner, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: suggestedSigner</para>
         /// </summary>
-        public StringValue SuggestedSigner { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SuggestedSigner
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>suggestedSigner2, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: suggestedSigner2</para>
         /// </summary>
-        public StringValue SuggestedSigner2 { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SuggestedSigner2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>suggestedSignerEmail, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: suggestedSignerEmail</para>
         /// </summary>
-        public StringValue SuggestedSignerEmail { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SuggestedSignerEmail
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>signingInstructions, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: signingInstructions</para>
         /// </summary>
-        public StringValue SigningInstructions { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SigningInstructions
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>addlXml, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: addlXml</para>
         /// </summary>
-        public StringValue AdditionalXml { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue AdditionalXml
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sigProvUrl, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sigProvUrl</para>
         /// </summary>
-        public StringValue SignatureProviderUrl { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SignatureLine>();
+        public StringValue SignatureProviderUrl
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

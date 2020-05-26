@@ -112,8 +112,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Macrosheet>();
-
         /// <summary>
         /// <para>Sheet Properties.</para>
         /// <para>Represents the following element tag in the schema: x:sheetPr.</para>
@@ -283,8 +281,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WorksheetSortMap>();
-
         /// <summary>
         /// <para>Row Sort Map.</para>
         /// <para>Represents the following element tag in the schema: xne:rowSortMap.</para>
@@ -384,8 +380,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
             return new ListValue<StringValue> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ReferenceSequence>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReferenceSequence>(deep);
     }
@@ -418,8 +412,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formula>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
@@ -476,14 +468,21 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Ref { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Ref
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowSortMap>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -561,14 +560,21 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        public StringValue Ref { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Ref
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        public UInt32Value Count { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnSortMap>();
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -611,8 +617,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowSortMapItem>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSortMapItem>(deep);
     }
@@ -632,8 +636,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         public ColumnSortMapItem() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnSortMapItem>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnSortMapItem>(deep);
@@ -657,13 +659,21 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>New Value</para>
         /// <para>Represents the following attribute in the schema: newVal</para>
         /// </summary>
-        public UInt32Value NewVal { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value NewVal
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Value</para>
         /// <para>Represents the following attribute in the schema: oldVal</para>
         /// </summary>
-        public UInt32Value OldVal { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value OldVal
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

@@ -196,8 +196,11 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         /// <para>Object type</para>
         /// <para>Represents the following attribute in the schema: ObjectType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ClientData>();
+        public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -323,8 +326,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MoveWithCells>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveWithCells>(deep);
     }
@@ -358,8 +359,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ResizeWithCells>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResizeWithCells>(deep);
@@ -395,8 +394,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Locked>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Locked>(deep);
     }
@@ -430,8 +427,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultSize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultSize>(deep);
@@ -467,8 +462,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintObject>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintObject>(deep);
     }
@@ -502,8 +495,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Disabled>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disabled>(deep);
@@ -539,8 +530,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoFill>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoFill>(deep);
     }
@@ -574,8 +563,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoLine>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoLine>(deep);
@@ -611,8 +598,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoSizePicture>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSizePicture>(deep);
     }
@@ -646,8 +631,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LockText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LockText>(deep);
@@ -683,8 +666,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<JustifyLastLine>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<JustifyLastLine>(deep);
     }
@@ -718,8 +699,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SecretEdit>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SecretEdit>(deep);
@@ -755,8 +734,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultButton>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultButton>(deep);
     }
@@ -790,8 +767,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HelpButton>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HelpButton>(deep);
@@ -827,8 +802,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CancelButton>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CancelButton>(deep);
     }
@@ -862,8 +835,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DismissButton>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DismissButton>(deep);
@@ -899,8 +870,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Visible>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Visible>(deep);
     }
@@ -934,8 +903,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RowHidden>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowHidden>(deep);
@@ -971,8 +938,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColumnHidden>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnHidden>(deep);
     }
@@ -1006,8 +971,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLine>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiLine>(deep);
@@ -1043,8 +1006,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalScrollBar>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalScrollBar>(deep);
     }
@@ -1078,8 +1039,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValidIds>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ValidIds>(deep);
@@ -1115,8 +1074,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Disable3DForListBoxAndDropDown>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disable3DForListBoxAndDropDown>(deep);
     }
@@ -1150,8 +1107,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Colored>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Colored>(deep);
@@ -1187,8 +1142,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Disable3D>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disable3D>(deep);
     }
@@ -1222,8 +1175,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstButton>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstButton>(deep);
@@ -1259,8 +1210,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HorizontalScrollBar>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalScrollBar>(deep);
     }
@@ -1294,8 +1243,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MapOcxControl>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MapOcxControl>(deep);
@@ -1331,8 +1278,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CameraObject>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CameraObject>(deep);
     }
@@ -1366,8 +1311,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RecalculateAlways>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecalculateAlways>(deep);
@@ -1403,8 +1346,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoScaleFont>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoScaleFont>(deep);
     }
@@ -1438,8 +1379,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DdeObject>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeObject>(deep);
@@ -1475,8 +1414,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UIObject>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UIObject>(deep);
     }
@@ -1509,8 +1446,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Anchor>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Anchor>(deep);
@@ -1545,8 +1480,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HorizontalTextAlignment>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalTextAlignment>(deep);
     }
@@ -1579,8 +1512,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalTextAlignment>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalTextAlignment>(deep);
@@ -1615,8 +1546,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormulaRange>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaRange>(deep);
     }
@@ -1649,8 +1578,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SelectionType>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionType>(deep);
@@ -1685,8 +1612,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiSelections>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiSelections>(deep);
     }
@@ -1719,8 +1644,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListBoxCallbackType>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListBoxCallbackType>(deep);
@@ -1755,8 +1678,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ListItem>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListItem>(deep);
     }
@@ -1789,8 +1710,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropStyle>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropStyle>(deep);
@@ -1825,8 +1744,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormulaLink>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaLink>(deep);
     }
@@ -1859,8 +1776,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormulaPicture>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaPicture>(deep);
@@ -1895,8 +1810,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormulaGroup>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaGroup>(deep);
     }
@@ -1929,8 +1842,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScriptText>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptText>(deep);
@@ -1965,8 +1876,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScriptExtended>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptExtended>(deep);
     }
@@ -1999,8 +1908,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormulaTextBox>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaTextBox>(deep);
@@ -2036,8 +1943,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormulaMacro>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaMacro>(deep);
     }
@@ -2071,8 +1976,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new ByteValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AcceleratorPrimary>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AcceleratorPrimary>(deep);
@@ -2108,8 +2011,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new ByteValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AcceleratorSecondary>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AcceleratorSecondary>(deep);
     }
@@ -2143,8 +2044,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new IntegerValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentRowTarget>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentRowTarget>(deep);
@@ -2180,8 +2079,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CommentColumnTarget>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentColumnTarget>(deep);
     }
@@ -2215,8 +2112,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new IntegerValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InputValidationType>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InputValidationType>(deep);
@@ -2252,8 +2147,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinDropDownWidth>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinDropDownWidth>(deep);
     }
@@ -2287,8 +2180,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new IntegerValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SelectionEntry>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionEntry>(deep);
@@ -2324,8 +2215,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropLines>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropLines>(deep);
     }
@@ -2359,8 +2248,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new IntegerValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Checked>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Checked>(deep);
@@ -2396,8 +2283,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScrollBarPosition>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarPosition>(deep);
     }
@@ -2431,8 +2316,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new IntegerValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScrollBarMin>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarMin>(deep);
@@ -2468,8 +2351,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScrollBarMax>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarMax>(deep);
     }
@@ -2503,8 +2384,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new IntegerValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScrollBarIncrement>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarIncrement>(deep);
@@ -2540,8 +2419,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScrollBarPageIncrement>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarPageIncrement>(deep);
     }
@@ -2575,8 +2452,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new IntegerValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScrollBarWidth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarWidth>(deep);
@@ -2612,8 +2487,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues> { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ClipboardFormat>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClipboardFormat>(deep);
     }
@@ -2648,8 +2521,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             return new IntegerValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScriptLanguage>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptLanguage>(deep);
     }
@@ -2683,8 +2554,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             return new IntegerValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScriptLocation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptLocation>(deep);

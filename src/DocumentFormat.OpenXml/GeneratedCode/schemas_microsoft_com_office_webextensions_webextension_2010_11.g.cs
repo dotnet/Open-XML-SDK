@@ -75,14 +75,21 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>frozen, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: frozen</para>
         /// </summary>
-        public BooleanValue Frozen { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtension>();
+        public BooleanValue Frozen
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -249,8 +256,11 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionReference>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -286,14 +296,21 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>value, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public StringValue Value { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionProperty>();
+        public StringValue Value
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -359,8 +376,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -430,20 +445,31 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public StringValue Type { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>appref, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: appref</para>
         /// </summary>
-        public StringValue AppReference { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionBinding>();
+        public StringValue AppReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -538,26 +564,41 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>version, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-        public StringValue Version { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Version
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>store, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: store</para>
         /// </summary>
-        public StringValue Store { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Store
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>storeType, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: storeType</para>
         /// </summary>
-        public StringValue StoreType { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionStoreReference>();
+        public StringValue StoreType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -652,8 +693,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionReferenceList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference), 0, 0, version: FileFormatVersions.Office2013)
@@ -712,8 +751,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionPropertyBag>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty), 0, 0, version: FileFormatVersions.Office2013)
@@ -771,8 +808,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         public WebExtensionBindingList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WebExtensionBindingList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -873,7 +908,11 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Embed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Embed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Linked Picture Reference</para>
@@ -882,14 +921,21 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Link { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Link
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cstate</para>
         /// <para>Represents the following attribute in the schema: cstate</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Snapshot>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

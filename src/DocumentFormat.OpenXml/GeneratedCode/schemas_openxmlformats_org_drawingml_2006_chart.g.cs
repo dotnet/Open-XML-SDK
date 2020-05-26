@@ -37,14 +37,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Format Code</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        public StringValue FormatCode { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue FormatCode
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Linked to Source</para>
         /// <para>Represents the following attribute in the schema: sourceLinked</para>
         /// </summary>
-        public BooleanValue SourceLinked { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingFormat>();
+        public BooleanValue SourceLinked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -138,8 +145,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -251,8 +261,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextProperties>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
@@ -313,8 +321,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public RichText(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RichText>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -425,8 +431,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Data Label Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabelPosition>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -458,8 +467,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowLegendKey>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowLegendKey>(deep);
     }
@@ -479,8 +486,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowValue() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowValue>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowValue>(deep);
@@ -502,8 +507,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowCategoryName>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowCategoryName>(deep);
     }
@@ -523,8 +526,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowSeriesName() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowSeriesName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowSeriesName>(deep);
@@ -546,8 +547,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowPercent>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowPercent>(deep);
     }
@@ -567,8 +566,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowBubbleSize() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowBubbleSize>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowBubbleSize>(deep);
@@ -590,8 +587,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowLeaderLines>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowLeaderLines>(deep);
     }
@@ -611,8 +606,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public VaryColors() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VaryColors>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VaryColors>(deep);
@@ -634,8 +627,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Wireframe>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Wireframe>(deep);
     }
@@ -655,8 +646,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Delete() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Delete>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Delete>(deep);
@@ -678,8 +667,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Overlay>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Overlay>(deep);
     }
@@ -699,8 +686,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public RightAngleAxes() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RightAngleAxes>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightAngleAxes>(deep);
@@ -722,8 +707,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowHorizontalBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowHorizontalBorder>(deep);
     }
@@ -743,8 +726,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowVerticalBorder() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowVerticalBorder>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowVerticalBorder>(deep);
@@ -766,8 +747,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowOutlineBorder>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowOutlineBorder>(deep);
     }
@@ -787,8 +766,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowKeys() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowKeys>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowKeys>(deep);
@@ -810,8 +787,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<InvertIfNegative>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InvertIfNegative>(deep);
     }
@@ -831,8 +806,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Bubble3D() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bubble3D>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bubble3D>(deep);
@@ -854,8 +827,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayRSquaredValue>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayRSquaredValue>(deep);
     }
@@ -875,8 +846,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DisplayEquation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayEquation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayEquation>(deep);
@@ -898,8 +867,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoEndCap>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoEndCap>(deep);
     }
@@ -919,8 +886,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ApplyToFront() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplyToFront>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyToFront>(deep);
@@ -942,8 +907,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplyToSides>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyToSides>(deep);
     }
@@ -963,8 +926,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ApplyToEnd() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ApplyToEnd>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyToEnd>(deep);
@@ -986,8 +947,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoTitleDeleted>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoTitleDeleted>(deep);
     }
@@ -1007,8 +966,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PlotVisibleOnly() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlotVisibleOnly>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlotVisibleOnly>(deep);
@@ -1030,8 +987,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowDataLabelsOverMaximum>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowDataLabelsOverMaximum>(deep);
     }
@@ -1051,8 +1006,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ChartObject() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartObject>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartObject>(deep);
@@ -1074,8 +1027,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Data>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Data>(deep);
     }
@@ -1095,8 +1046,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Formatting() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formatting>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formatting>(deep);
@@ -1118,8 +1067,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Selection>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Selection>(deep);
     }
@@ -1139,8 +1086,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public UserInterface() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UserInterface>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UserInterface>(deep);
@@ -1162,8 +1107,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoUpdate>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoUpdate>(deep);
     }
@@ -1183,8 +1126,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Smooth() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Smooth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Smooth>(deep);
@@ -1206,8 +1147,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowMarker>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowMarker>(deep);
     }
@@ -1227,8 +1166,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ShowNegativeBubbles() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShowNegativeBubbles>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowNegativeBubbles>(deep);
@@ -1250,8 +1187,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AutoLabeled>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoLabeled>(deep);
     }
@@ -1271,8 +1206,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public NoMultiLevelLabels() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoMultiLevelLabels>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoMultiLevelLabels>(deep);
@@ -1294,8 +1227,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Date1904>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Date1904>(deep);
     }
@@ -1315,8 +1246,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public RoundedCorners() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RoundedCorners>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RoundedCorners>(deep);
@@ -1340,7 +1269,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public BooleanValue Val { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1379,8 +1312,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Separator>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Separator>(deep);
     }
@@ -1414,8 +1345,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TrendlineName>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrendlineName>(deep);
     }
@@ -1448,8 +1377,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Formula>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
@@ -1503,8 +1430,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Layout(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Layout>();
 
         /// <summary>
         /// <para>Manual Layout.</para>
@@ -1594,8 +1519,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ChartText(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartText>();
 
         /// <summary>
         /// <para>String Reference.</para>
@@ -1698,8 +1621,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeaderLines>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1756,8 +1677,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DropLines(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropLines>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1816,8 +1735,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorGridlines>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1874,8 +1791,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MinorGridlines(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorGridlines>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1934,8 +1849,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesLines>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1992,8 +1905,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public HighLowLines(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HighLowLines>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2081,8 +1992,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Index>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
         };
@@ -2108,8 +2017,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Order() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Order>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
@@ -2137,8 +2044,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisId>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
         };
@@ -2164,8 +2069,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public CrossingAxis() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CrossingAxis>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
@@ -2193,8 +2096,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PointCount>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
         };
@@ -2220,8 +2121,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public SecondPiePoint() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SecondPiePoint>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
@@ -2249,8 +2148,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Explosion>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
         };
@@ -2276,8 +2173,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public FormatId() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormatId>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
@@ -2307,7 +2202,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2368,8 +2267,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public SeriesText(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesText>();
 
         /// <summary>
         /// <para>StringReference.</para>
@@ -2432,8 +2329,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Grouping Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Grouping>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2518,8 +2418,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public LineChartSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -2706,8 +2604,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabels>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabel), 0, 0),
@@ -2769,8 +2665,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarDirection>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2806,8 +2705,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Grouping Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarGrouping>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2892,8 +2794,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BarChartSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -3072,8 +2972,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaChartSeries>();
-
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -3233,8 +3131,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PieChartSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -3403,8 +3299,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public SurfaceChartSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -3595,8 +3489,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BandFormats>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BandFormat), 0, 0)
@@ -3662,8 +3554,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Scaling(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Scaling>();
 
         /// <summary>
         /// <para>Logarithmic Base.</para>
@@ -3765,8 +3655,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AxisPosition>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3838,8 +3731,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Title(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Title>();
 
         /// <summary>
         /// <para>Chart Text.</para>
@@ -3951,8 +3842,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorTickMark>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorTickMark>(deep);
     }
@@ -3972,8 +3861,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MinorTickMark() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorTickMark>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorTickMark>(deep);
@@ -3997,7 +3884,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Mark Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4027,8 +3918,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Label Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TickLabelPosition>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4061,8 +3955,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Crosses Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Crosses>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4094,8 +3991,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CrossesAt>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
         };
@@ -4122,8 +4017,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Left>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Left>(deep);
     }
@@ -4143,8 +4036,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Top() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Top>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Top>(deep);
@@ -4166,8 +4057,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Width>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Width>(deep);
     }
@@ -4188,8 +4077,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Height>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Height>(deep);
     }
@@ -4209,8 +4096,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Forward() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Forward>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" }),
@@ -4239,8 +4124,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Backward>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, double.PositiveInfinity, true)
         };
@@ -4267,8 +4150,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Intercept>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Intercept>(deep);
     }
@@ -4289,8 +4170,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorBarValue>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorBarValue>(deep);
     }
@@ -4310,8 +4189,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public SplitPosition() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitPosition>();
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
@@ -4339,8 +4216,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomDisplayUnit>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
         };
@@ -4367,8 +4242,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MaxAxisValue>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MaxAxisValue>(deep);
     }
@@ -4388,8 +4261,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MinAxisValue() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinAxisValue>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinAxisValue>(deep);
@@ -4413,7 +4284,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Floating Point Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4500,8 +4375,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ChartSpace(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSpace>();
 
         /// <summary>
         /// <para>Date1904.</para>
@@ -4650,8 +4523,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UserShapes>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 0)
@@ -4717,8 +4588,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartReference>();
-
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipExistConstraint(0 /*r:id*/)
         };
@@ -4745,8 +4614,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegacyDrawingHeaderFooter>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyDrawingHeaderFooter>(deep);
     }
@@ -4766,8 +4633,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public UserShapesReference() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UserShapesReference>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UserShapesReference>(deep);
@@ -4794,7 +4659,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4851,8 +4720,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Uniform Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Extension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4904,8 +4776,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumericValue>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumericValue>(deep);
     }
@@ -4938,8 +4808,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FormatCode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormatCode>(deep);
@@ -4974,8 +4842,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OddHeader>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddHeader>(deep);
     }
@@ -5008,8 +4874,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OddFooter>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddFooter>(deep);
@@ -5044,8 +4908,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EvenHeader>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenHeader>(deep);
     }
@@ -5078,8 +4940,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EvenFooter>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenFooter>(deep);
@@ -5114,8 +4974,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstHeader>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstHeader>(deep);
     }
@@ -5149,8 +5007,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstFooter>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstFooter>(deep);
     }
@@ -5183,8 +5039,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             return new StringValue { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotTableName>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableName>(deep);
@@ -5241,14 +5095,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number Format</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        public StringValue FormatCode { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumericPoint>();
+        public StringValue FormatCode
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5338,8 +5199,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Extension), 0, 0)
@@ -5401,8 +5260,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public NumberReference(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberReference>();
 
         /// <summary>
         /// <para>Formula.</para>
@@ -5505,8 +5362,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberLiteral>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
@@ -5569,8 +5424,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public NumberingCache(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingCache>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -5711,8 +5564,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Level>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0)
@@ -5774,8 +5625,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MultiLevelStringReference(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLevelStringReference>();
 
         /// <summary>
         /// <para>Formula.</para>
@@ -5880,8 +5729,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringReference>();
-
         /// <summary>
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: c:f.</para>
@@ -5982,8 +5829,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringLiteral>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
@@ -6044,8 +5889,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public StringCache(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringCache>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -6143,8 +5986,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Target Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LayoutTarget>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6173,8 +6019,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LeftMode>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMode>(deep);
     }
@@ -6194,8 +6038,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public TopMode() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TopMode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopMode>(deep);
@@ -6217,8 +6059,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WidthMode>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidthMode>(deep);
     }
@@ -6238,8 +6078,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public HeightMode() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeightMode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeightMode>(deep);
@@ -6263,7 +6101,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Mode Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6337,8 +6179,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ManualLayout(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ManualLayout>();
 
         /// <summary>
         /// <para>Layout Target.</para>
@@ -6510,8 +6350,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>X Rotation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public SByteValue Val { get => GetAttribute<SByteValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RotateX>();
+        public SByteValue Val
+        {
+            get => GetAttribute<SByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6547,8 +6390,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Height Percent Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeightPercent>();
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6584,8 +6430,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Y Rotation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RotateY>();
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6621,8 +6470,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Depth Percent Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DepthPercent>();
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6658,8 +6510,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Perspective Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Perspective>();
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6695,8 +6550,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Symbol>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6732,8 +6590,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Size>();
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6801,8 +6662,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Marker(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Marker>();
 
         /// <summary>
         /// <para>Symbol.</para>
@@ -6925,8 +6784,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PictureOptions>();
-
         /// <summary>
         /// <para>Apply To Front.</para>
         /// <para>Represents the following element tag in the schema: c:applyToFront.</para>
@@ -7027,8 +6884,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Trendline Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TrendlineType>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7061,8 +6921,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PolynomialOrder>();
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7099,8 +6962,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Period Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Period>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7173,8 +7039,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public TrendlineLabel(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TrendlineLabel>();
 
         /// <summary>
         /// <para>Layout.</para>
@@ -7290,8 +7154,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorDirection>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7327,8 +7194,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorBarType>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7364,8 +7234,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorBarValueType>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7427,8 +7300,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Plus(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Plus>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7492,8 +7363,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Minus>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -7555,8 +7424,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Values(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Values>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7620,8 +7487,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<YValues>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -7683,8 +7548,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BubbleSize(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleSize>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -7791,8 +7654,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GapWidth>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GapWidth>(deep);
     }
@@ -7812,8 +7673,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public GapDepth() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GapDepth>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GapDepth>(deep);
@@ -7837,7 +7696,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Gap Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7896,8 +7759,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UpBars>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -7954,8 +7815,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DownBars(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DownBars>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -8047,8 +7906,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Pie of Pie or Bar of Pie Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfPieType>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8084,8 +7946,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Split Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitType>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8148,8 +8013,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomSplit>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint), 0, 0)
@@ -8181,8 +8044,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Second Pie Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SecondPieSize>();
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8247,8 +8113,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BandFormat>();
-
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -8307,8 +8171,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Format Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PictureFormat>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8344,8 +8211,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Stack Unit</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PictureStackUnit>();
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8382,8 +8252,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Built In Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BuiltInUnit>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8448,8 +8321,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DisplayUnitsLabel(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayUnitsLabel>();
 
         /// <summary>
         /// <para>Layout.</para>
@@ -8537,8 +8408,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Logarithmic Base Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LogBase>();
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8575,8 +8449,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Orientation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Orientation>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8643,8 +8520,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PivotFormat(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFormat>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -8746,8 +8621,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Legend Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegendPosition>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8812,8 +8690,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public LegendEntry(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegendEntry>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -8898,8 +8774,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotFormats>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotFormat), 0, 0)
@@ -8969,8 +8843,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public View3D(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<View3D>();
 
         /// <summary>
         /// <para>X Rotation.</para>
@@ -9129,8 +9001,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Floor>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
@@ -9194,8 +9064,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SideWall>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
@@ -9258,8 +9126,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BackWall(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BackWall>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9472,8 +9338,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PlotArea>();
-
         /// <summary>
         /// <para>Layout.</para>
         /// <para>Represents the following element tag in the schema: c:layout.</para>
@@ -9586,8 +9450,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Legend>();
-
         /// <summary>
         /// <para>Legend Position.</para>
         /// <para>Represents the following element tag in the schema: c:legendPos.</para>
@@ -9638,8 +9500,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Display Blanks As Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayBlanksAs>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9713,20 +9578,31 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Align With Margins</para>
         /// <para>Represents the following attribute in the schema: alignWithMargins</para>
         /// </summary>
-        public BooleanValue AlignWithMargins { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue AlignWithMargins
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Different Odd Even</para>
         /// <para>Represents the following attribute in the schema: differentOddEven</para>
         /// </summary>
-        public BooleanValue DifferentOddEven { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue DifferentOddEven
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Different First</para>
         /// <para>Represents the following attribute in the schema: differentFirst</para>
         /// </summary>
-        public BooleanValue DifferentFirst { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HeaderFooter>();
+        public BooleanValue DifferentFirst
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9851,38 +9727,61 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Left</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        public DoubleValue Left { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Left
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public DoubleValue Right { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Right
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public DoubleValue Top { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Top
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public DoubleValue Bottom { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Bottom
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Header</para>
         /// <para>Represents the following attribute in the schema: header</para>
         /// </summary>
-        public DoubleValue Header { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Header
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Footer</para>
         /// <para>Represents the following attribute in the schema: footer</para>
         /// </summary>
-        public DoubleValue Footer { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageMargins>();
+        public DoubleValue Footer
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9949,56 +9848,91 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Page Size</para>
         /// <para>Represents the following attribute in the schema: paperSize</para>
         /// </summary>
-        public UInt32Value PaperSize { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value PaperSize
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>First Page Number</para>
         /// <para>Represents the following attribute in the schema: firstPageNumber</para>
         /// </summary>
-        public Int32Value FirstPageNumber { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FirstPageNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues> Orientation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues> Orientation
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black and White</para>
         /// <para>Represents the following attribute in the schema: blackAndWhite</para>
         /// </summary>
-        public BooleanValue BlackAndWhite { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue BlackAndWhite
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Draft</para>
         /// <para>Represents the following attribute in the schema: draft</para>
         /// </summary>
-        public BooleanValue Draft { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Draft
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Use First Page Number</para>
         /// <para>Represents the following attribute in the schema: useFirstPageNumber</para>
         /// </summary>
-        public BooleanValue UseFirstPageNumber { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue UseFirstPageNumber
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal DPI</para>
         /// <para>Represents the following attribute in the schema: horizontalDpi</para>
         /// </summary>
-        public Int32Value HorizontalDpi { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalDpi
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical DPI</para>
         /// <para>Represents the following attribute in the schema: verticalDpi</para>
         /// </summary>
-        public Int32Value VerticalDpi { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalDpi
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Copies</para>
         /// <para>Represents the following attribute in the schema: copies</para>
         /// </summary>
-        public UInt32Value Copies { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PageSetup>();
+        public UInt32Value Copies
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10105,8 +10039,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ShapeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10251,8 +10188,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataLabel>();
-
         /// <summary>
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
@@ -10366,8 +10301,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaChart>();
-
         /// <summary>
         /// <para>Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
@@ -10477,8 +10410,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Area3DChart(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Area3DChart>();
 
         /// <summary>
         /// <para>Grouping.</para>
@@ -10597,8 +10528,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineChart>();
-
         /// <summary>
         /// <para>Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
@@ -10713,8 +10642,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Line3DChart>();
-
         /// <summary>
         /// <para>Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
@@ -10824,8 +10751,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StockChart>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries), 3, 4),
@@ -10899,8 +10824,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public RadarChart(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarChart>();
 
         /// <summary>
         /// <para>RadarStyle.</para>
@@ -11001,8 +10924,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterChart>();
-
         /// <summary>
         /// <para>ScatterStyle.</para>
         /// <para>Represents the following element tag in the schema: c:scatterStyle.</para>
@@ -11100,8 +11021,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieChart>();
-
         /// <summary>
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
@@ -11188,8 +11107,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Pie3DChart(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pie3DChart>();
 
         /// <summary>
         /// <para>VaryColors.</para>
@@ -11280,8 +11197,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DoughnutChart(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DoughnutChart>();
 
         /// <summary>
         /// <para>VaryColors.</para>
@@ -11382,8 +11297,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BarChart(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarChart>();
 
         /// <summary>
         /// <para>Bar Direction.</para>
@@ -11514,8 +11427,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Bar3DChart(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bar3DChart>();
 
         /// <summary>
         /// <para>Bar Direction.</para>
@@ -11649,8 +11560,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfPieChart>();
-
         /// <summary>
         /// <para>Pie of Pie or Bar of Pie Type.</para>
         /// <para>Represents the following element tag in the schema: c:ofPieType.</para>
@@ -11759,8 +11668,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceChart>();
-
         /// <summary>
         /// <para>Wireframe.</para>
         /// <para>Represents the following element tag in the schema: c:wireframe.</para>
@@ -11851,8 +11758,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Surface3DChart(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Surface3DChart>();
 
         /// <summary>
         /// <para>Wireframe.</para>
@@ -11958,8 +11863,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BubbleChart(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleChart>();
 
         /// <summary>
         /// <para>VaryColors.</para>
@@ -12079,8 +11982,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ValueAxis(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValueAxis>();
 
         /// <summary>
         /// <para>Axis ID.</para>
@@ -12394,8 +12295,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public CategoryAxis(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryAxis>();
 
         /// <summary>
         /// <para>Axis ID.</para>
@@ -12714,8 +12613,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DateAxis>();
-
         /// <summary>
         /// <para>Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:axId.</para>
@@ -13024,8 +12921,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SeriesAxis>();
-
         /// <summary>
         /// <para>Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:axId.</para>
@@ -13305,8 +13200,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataTable>();
-
         /// <summary>
         /// <para>Show Horizontal Border.</para>
         /// <para>Represents the following element tag in the schema: c:showHorzBorder.</para>
@@ -13435,8 +13328,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>First Slice Angle Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FirstSliceAngle>();
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13472,8 +13368,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Hole Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HoleSize>();
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13541,8 +13440,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Index { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StringPoint>();
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13604,8 +13506,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Thickness>();
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13672,8 +13577,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StockChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13749,8 +13657,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13826,8 +13737,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pie3DChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13907,8 +13821,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumRefExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -13986,8 +13903,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrDataExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14067,8 +13987,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrRefExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14150,8 +14073,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLvlStrRefExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14237,8 +14163,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DLblExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14330,8 +14259,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DLblsExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14419,8 +14351,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineSerExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14505,8 +14440,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterSerExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14591,8 +14529,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarSerExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14677,8 +14618,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaSerExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14763,8 +14707,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieSerExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14847,8 +14794,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceSerExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -14926,8 +14876,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15003,8 +14956,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Line3DChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15080,8 +15036,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15157,8 +15116,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15234,8 +15196,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15311,8 +15276,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bar3DChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15388,8 +15356,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15465,8 +15436,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Area3DChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15542,8 +15516,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15619,8 +15596,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15696,8 +15676,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Surface3DChartExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15773,8 +15756,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CatAxExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15850,8 +15836,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DateAxExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -15927,8 +15916,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SerAxExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16004,8 +15996,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValAxExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -16082,8 +16077,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public UpDownBars(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UpDownBars>();
 
         /// <summary>
         /// <para>Gap Width.</para>
@@ -16198,8 +16191,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StockChartExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension), 0, 0)
@@ -16257,8 +16248,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PieChartExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieChartExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -16318,8 +16307,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Pie3DChartExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension), 0, 0)
@@ -16377,8 +16364,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public NumRefExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumRefExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -16438,8 +16423,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrDataExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension), 0, 0)
@@ -16497,8 +16480,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public StrRefExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StrRefExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -16561,8 +16542,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MultiLevelStringCache(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLevelStringCache>();
 
         /// <summary>
         /// <para>PointCount.</para>
@@ -16637,8 +16616,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MultiLvlStrRefExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension), 0, 0)
@@ -16697,8 +16674,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DLblExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtension), 0, 0)
@@ -16756,8 +16731,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DLblsExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DLblsExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -16830,8 +16803,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DataPoint(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DataPoint>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -17023,8 +16994,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Trendline(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Trendline>();
 
         /// <summary>
         /// <para>Trendline Name.</para>
@@ -17267,8 +17236,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ErrorBars>();
-
         /// <summary>
         /// <para>Error Bar Direction.</para>
         /// <para>Represents the following element tag in the schema: c:errDir.</para>
@@ -17455,8 +17422,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CategoryAxisData>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -17524,8 +17489,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public XValues(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<XValues>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -17711,8 +17674,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineSerExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension), 0, 0)
@@ -17770,8 +17731,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ScatterSerExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterSerExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -17831,8 +17790,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarSerExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension), 0, 0)
@@ -17864,8 +17821,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Shape Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shape>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -17924,8 +17884,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BarSerExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarSerExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -17997,8 +17955,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarSerExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18074,8 +18035,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaSerExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension), 0, 0)
@@ -18134,8 +18093,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PieSerExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension), 0, 0)
@@ -18193,8 +18150,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BubbleSerExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleSerExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18264,8 +18219,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleSerExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18340,8 +18298,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceSerExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension), 0, 0)
@@ -18399,8 +18355,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public LineChartExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineChartExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -18460,8 +18414,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Line3DChartExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension), 0, 0)
@@ -18493,8 +18445,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Scatter Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterStyle>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18577,8 +18532,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public ScatterChartSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -18721,8 +18674,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ScatterChartExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension), 0, 0)
@@ -18754,8 +18705,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Radar Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarStyle>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -18837,8 +18791,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public RadarChartSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -18992,8 +18944,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RadarChartExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension), 0, 0)
@@ -19025,8 +18975,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Overlap Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public SByteValue Val { get => GetAttribute<SByteValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Overlap>();
+        public SByteValue Val
+        {
+            get => GetAttribute<SByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19089,8 +19042,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BarChartExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension), 0, 0)
@@ -19148,8 +19099,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Bar3DChartExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Bar3DChartExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19209,8 +19158,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AreaChartExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension), 0, 0)
@@ -19268,8 +19215,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Area3DChartExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Area3DChartExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19356,8 +19301,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public BubbleChartSeries(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleChartSeries>();
 
         /// <summary>
         /// <para>Index.</para>
@@ -19488,8 +19431,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bubble Scale Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleScale>();
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19525,8 +19471,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Size Represents Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SizeRepresents>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19586,8 +19535,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BubbleChartExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension), 0, 0)
@@ -19645,8 +19592,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public SurfaceChartExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SurfaceChartExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -19706,8 +19651,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Surface3DChartExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension), 0, 0)
@@ -19739,8 +19682,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Label Alignment Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LabelAlignment>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19776,8 +19722,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Label Offset Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt16Value Val { get => GetAttribute<UInt16Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LabelOffset>();
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19809,8 +19758,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TickLabelSkip>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TickLabelSkip>(deep);
     }
@@ -19830,8 +19777,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public TickMarkSkip() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TickMarkSkip>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TickMarkSkip>(deep);
@@ -19855,7 +19800,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Skip Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -19916,8 +19865,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CatAxExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension), 0, 0)
@@ -19945,8 +19892,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BaseTimeUnit>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BaseTimeUnit>(deep);
     }
@@ -19967,8 +19912,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorTimeUnit>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorTimeUnit>(deep);
     }
@@ -19988,8 +19931,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MinorTimeUnit() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorTimeUnit>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorTimeUnit>(deep);
@@ -20013,7 +19954,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Time Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20039,8 +19984,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MajorUnit>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorUnit>(deep);
     }
@@ -20060,8 +20003,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public MinorUnit() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MinorUnit>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorUnit>(deep);
@@ -20085,7 +20026,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public DoubleValue Val { get => GetAttribute<DoubleValue>(); set => SetAttribute(value); }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20146,8 +20091,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DateAxExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension), 0, 0)
@@ -20206,8 +20149,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SerAxExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension), 0, 0)
@@ -20239,8 +20180,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Cross Between Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CrossBetween>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20309,8 +20253,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DisplayUnits>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -20375,8 +20317,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ValAxExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension), 0, 0)
@@ -20408,8 +20348,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Language Code</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EditingLanguage>();
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20445,8 +20388,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Style Type</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public ByteValue Val { get => GetAttribute<ByteValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Style>();
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20513,74 +20459,121 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Background 1</para>
         /// <para>Represents the following attribute in the schema: bg1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text 1</para>
         /// <para>Represents the following attribute in the schema: tx1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Background 2</para>
         /// <para>Represents the following attribute in the schema: bg2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text 2</para>
         /// <para>Represents the following attribute in the schema: tx2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 1</para>
         /// <para>Represents the following attribute in the schema: accent1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 2</para>
         /// <para>Represents the following attribute in the schema: accent2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 3</para>
         /// <para>Represents the following attribute in the schema: accent3</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 4</para>
         /// <para>Represents the following attribute in the schema: accent4</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 5</para>
         /// <para>Represents the following attribute in the schema: accent5</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 6</para>
         /// <para>Represents the following attribute in the schema: accent6</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6 { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink</para>
         /// <para>Represents the following attribute in the schema: hlink</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Followed Hyperlink</para>
         /// <para>Represents the following attribute in the schema: folHlink</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ColorMapOverride>();
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -20723,8 +20716,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PivotSource>();
-
         /// <summary>
         /// <para>Pivot Name.</para>
         /// <para>Represents the following element tag in the schema: c:name.</para>
@@ -20831,8 +20822,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Protection(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Protection>();
 
         /// <summary>
         /// <para>Chart Object.</para>
@@ -20984,8 +20973,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public Chart(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Chart>();
 
         /// <summary>
         /// <para>Title.</para>
@@ -21233,8 +21220,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExternalData>();
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -21328,8 +21318,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public PrintSettings(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PrintSettings>();
 
         /// <summary>
         /// <para>Header and Footer.</para>
@@ -21444,8 +21432,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSpaceExtensionList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension), 0, 0)
@@ -21512,8 +21498,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue Uri { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ChartSpaceExtension>();
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

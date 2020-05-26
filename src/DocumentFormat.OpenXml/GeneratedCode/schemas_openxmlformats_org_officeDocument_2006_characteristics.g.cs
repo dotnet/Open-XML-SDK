@@ -59,8 +59,6 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AdditionalCharacteristicsInfo>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic), 0, 0)
@@ -92,26 +90,41 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Name of Characteristic</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship of Value to Name</para>
         /// <para>Represents the following attribute in the schema: relation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Characteristic Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Characteristic Grammar</para>
         /// <para>Represents the following attribute in the schema: vocabulary</para>
         /// </summary>
-        public StringValue Vocabulary { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Characteristic>();
+        public StringValue Vocabulary
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

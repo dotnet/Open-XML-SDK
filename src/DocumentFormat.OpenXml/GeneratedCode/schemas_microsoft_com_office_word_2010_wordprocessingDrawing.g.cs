@@ -43,8 +43,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             return new Int32Value { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PercentagePositionHeightOffset>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionHeightOffset>(deep);
     }
@@ -78,8 +76,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         {
             return new Int32Value { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PercentagePositionVerticalOffset>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionVerticalOffset>(deep);
@@ -136,8 +132,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>relativeFrom, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RelativeWidth>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -225,8 +224,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>relativeFrom, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RelativeHeight>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -293,8 +295,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             return new Int32Value { InnerText = text };
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PercentageWidth>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageWidth>(deep);
     }
@@ -328,8 +328,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         {
             return new Int32Value { InnerText = text };
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PercentageHeight>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageHeight>(deep);

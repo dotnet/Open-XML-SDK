@@ -34,8 +34,11 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
         /// <para>Shape ID</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        public StringValue ShapeId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LegacyDrawing>();
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {

@@ -117,8 +117,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunConflictInsertion>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 0, 0)
@@ -366,8 +364,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public RunConflictDeletion(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RunConflictDeletion>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -678,7 +674,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -687,7 +687,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -696,7 +700,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -736,8 +744,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConflictInsertion>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConflictInsertion>(deep);
     }
@@ -757,8 +763,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public ConflictDeletion() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConflictDeletion>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConflictDeletion>(deep);
@@ -780,8 +784,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlConflictInsertionRangeStart>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlConflictInsertionRangeStart>(deep);
     }
@@ -801,8 +803,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public CustomXmlConflictDeletionRangeStart() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlConflictDeletionRangeStart>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlConflictDeletionRangeStart>(deep);
@@ -829,7 +829,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Author { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -838,7 +842,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DateTimeValue Date { get => GetAttribute<DateTimeValue>(); set => SetAttribute(value); }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -847,7 +855,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -887,8 +899,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tint>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tint>(deep);
     }
@@ -909,8 +919,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shade>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shade>(deep);
     }
@@ -930,8 +938,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public Alpha() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Alpha>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Alpha>(deep);
@@ -958,7 +964,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -996,8 +1006,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<HueModulation>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1031,8 +1044,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Saturation>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Saturation>(deep);
     }
@@ -1052,8 +1063,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public SaturationOffset() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaturationOffset>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaturationOffset>(deep);
@@ -1075,8 +1084,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SaturationModulation>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaturationModulation>(deep);
     }
@@ -1096,8 +1103,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public Luminance() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Luminance>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Luminance>(deep);
@@ -1119,8 +1124,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LuminanceOffset>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LuminanceOffset>(deep);
     }
@@ -1140,8 +1143,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public LuminanceModulation() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LuminanceModulation>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LuminanceModulation>(deep);
@@ -1168,7 +1169,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1254,8 +1259,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RgbColorModelHex>();
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1367,8 +1375,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SchemeColor>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1430,7 +1441,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Angle { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Angle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>scaled, this property is only available in Office2010, Office2013, Office2016</para>
@@ -1439,8 +1454,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Scaled { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LinearShadeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Scaled
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1515,8 +1533,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues> Path { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PathShadeProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues> Path
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1568,8 +1589,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NoFillEmpty>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoFillEmpty>(deep);
     }
@@ -1589,8 +1608,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public RoundEmpty() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RoundEmpty>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RoundEmpty>(deep);
@@ -1612,8 +1629,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BevelEmpty>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BevelEmpty>(deep);
     }
@@ -1633,8 +1648,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public EntityPickerEmpty() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EntityPickerEmpty>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EntityPickerEmpty>(deep);
@@ -1703,8 +1716,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public SolidColorFillProperties(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SolidColorFillProperties>();
 
         /// <summary>
         /// <para>RgbColorModelHex.</para>
@@ -1801,8 +1812,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GradientFillProperties>();
-
         /// <summary>
         /// <para>GradientStopList.</para>
         /// <para>Represents the following element tag in the schema: w14:gsLst.</para>
@@ -1858,8 +1867,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<PresetLineDashProperties>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1898,8 +1910,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Limit { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LineJoinMiterProperties>();
+        public Int32Value Limit
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1972,8 +1987,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int64Value GlowRadius { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Glow>();
+        public Int64Value GlowRadius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2086,7 +2104,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int64Value BlurRadius { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value BlurRadius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dist, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2095,7 +2117,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int64Value DistanceFromText { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value DistanceFromText
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2104,7 +2130,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value DirectionAngle { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value DirectionAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sx, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2113,7 +2143,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value HorizontalScalingFactor { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalScalingFactor
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sy, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2122,7 +2156,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value VerticalScalingFactor { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalScalingFactor
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>kx, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2131,7 +2169,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value HorizontalSkewAngle { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalSkewAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ky, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2140,7 +2182,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value VerticalSkewAngle { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalSkewAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>algn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2149,8 +2195,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Shadow>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2262,7 +2311,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int64Value BlurRadius { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value BlurRadius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>stA, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2271,7 +2324,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value StartingOpacity { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value StartingOpacity
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>stPos, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2280,7 +2337,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value StartPosition { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value StartPosition
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endA, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2289,7 +2350,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value EndingOpacity { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value EndingOpacity
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endPos, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2298,7 +2363,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value EndPosition { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value EndPosition
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dist, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2307,7 +2376,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int64Value DistanceFromText { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value DistanceFromText
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2316,7 +2389,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value DirectionAngle { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value DirectionAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fadeDir, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2325,7 +2402,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value FadeDirection { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value FadeDirection
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sx, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2334,7 +2415,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value HorizontalScalingFactor { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalScalingFactor
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sy, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2343,7 +2428,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value VerticalScalingFactor { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalScalingFactor
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>kx, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2352,7 +2441,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value HorizontalSkewAngle { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value HorizontalSkewAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ky, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2361,7 +2454,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value VerticalSkewAngle { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value VerticalSkewAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>algn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2370,8 +2467,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Reflection>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2511,7 +2611,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value LineWidth { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value LineWidth
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cap, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2520,7 +2624,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues> CapType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues> CapType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cmpd, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2529,7 +2637,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues> Compound { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues> Compound
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>algn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2538,8 +2650,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues> Alignment { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextOutlineEffect>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2650,8 +2765,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillTextEffect>();
-
         /// <summary>
         /// <para>NoFillEmpty.</para>
         /// <para>Represents the following element tag in the schema: w14:noFill.</para>
@@ -2759,8 +2872,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Scene3D>();
-
         /// <summary>
         /// <para>Camera.</para>
         /// <para>Represents the following element tag in the schema: w14:camera.</para>
@@ -2859,7 +2970,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int64Value ExtrusionHeight { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value ExtrusionHeight
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contourW, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2868,7 +2983,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int64Value ContourWidth { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value ContourWidth
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>prstMaterial, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2877,8 +2996,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues> PresetMaterialType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Properties3D>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues> PresetMaterialType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2990,8 +3112,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Ligatures>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3031,8 +3156,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberingFormat>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3072,8 +3200,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NumberSpacing>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3137,8 +3268,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StylisticSets>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.StyleSet), 0, 0, version: FileFormatVersions.Office2010)
@@ -3166,8 +3295,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextualAlternatives>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextualAlternatives>(deep);
     }
@@ -3187,8 +3314,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public ConflictMode() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ConflictMode>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConflictMode>(deep);
@@ -3210,8 +3335,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DiscardImageEditingData>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiscardImageEditingData>(deep);
     }
@@ -3231,8 +3354,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public Checked() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Checked>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Checked>(deep);
@@ -3259,7 +3380,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3330,7 +3455,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3339,8 +3468,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue RelationshipId { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContentPart>();
+        public StringValue RelationshipId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3432,8 +3564,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentId>();
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3473,8 +3608,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlConflictInsertionRangeEnd>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlConflictInsertionRangeEnd>(deep);
     }
@@ -3494,8 +3627,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public CustomXmlConflictDeletionRangeEnd() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomXmlConflictDeletionRangeEnd>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlConflictDeletionRangeEnd>(deep);
@@ -3522,7 +3653,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3563,8 +3698,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Val { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DefaultImageDpi>();
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3631,8 +3769,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public SdtContentCheckBox(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SdtContentCheckBox>();
 
         /// <summary>
         /// <para>Checked.</para>
@@ -3742,8 +3878,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value StopPosition { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GradientStop>();
+        public Int32Value StopPosition
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3824,7 +3963,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Left { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Left
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>t, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3833,7 +3976,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Top { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Top
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>r, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3842,7 +3989,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Right { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Right
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>b, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3851,8 +4002,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Bottom { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<FillToRectangle>();
+        public Int32Value Bottom
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3927,8 +4081,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<GradientStopList>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.GradientStop), 2, 10, version: FileFormatVersions.Office2010)
@@ -3963,7 +4115,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Lattitude { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Lattitude
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lon, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3972,7 +4128,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Longitude { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Longitude
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rev, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3981,8 +4141,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int32Value Revolution { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SphereCoordinates>();
+        public Int32Value Revolution
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4035,8 +4198,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues> PresetCameraType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Camera>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues> PresetCameraType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4108,7 +4274,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues> LightRigType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues> LightRigType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
@@ -4117,8 +4287,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues> LightDirectionType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<LightRig>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues> LightDirectionType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4178,8 +4351,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BevelTop>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BevelTop>(deep);
     }
@@ -4199,8 +4370,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public BevelBottom() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<BevelBottom>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BevelBottom>(deep);
@@ -4227,7 +4396,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int64Value Width { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Width
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>h, this property is only available in Office2010, Office2013, Office2016</para>
@@ -4236,7 +4409,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Int64Value Height { get => GetAttribute<Int64Value>(); set => SetAttribute(value); }
+        public Int64Value Height
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>prst, this property is only available in Office2010, Office2013, Office2016</para>
@@ -4245,7 +4422,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues> PresetProfileType { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues> PresetProfileType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4316,8 +4497,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ExtrusionColor>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
@@ -4382,8 +4561,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public ContourColor(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContourColor>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4500,7 +4677,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
@@ -4509,8 +4690,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<StyleSet>();
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4553,8 +4737,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CheckedState>();
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckedState>(deep);
     }
@@ -4574,8 +4756,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public UncheckedState() : base()
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UncheckedState>();
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UncheckedState>(deep);
@@ -4602,7 +4782,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public StringValue Font { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Font
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
@@ -4611,7 +4795,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public HexBinaryValue Val { get => GetAttribute<HexBinaryValue>(); set => SetAttribute(value); }
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4684,32 +4872,51 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id { get => GetAttribute<UInt32Value>(); set => SetAttribute(value); }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualDrawingProperties>();
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4833,8 +5040,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        public BooleanValue IsComment { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<NonVisualInkContentPartProperties>();
+        public BooleanValue IsComment
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4930,8 +5140,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<WordNonVisualContentPartShapeProperties>();
-
         /// <summary>
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: w14:cNvPr.</para>
@@ -5023,20 +5231,31 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        public Int32Value Rotation { get => GetAttribute<Int32Value>(); set => SetAttribute(value); }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        public BooleanValue HorizontalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue HorizontalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        public BooleanValue VerticalFlip { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Transform2D>();
+        public BooleanValue VerticalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5131,8 +5350,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeArtExtensionList>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

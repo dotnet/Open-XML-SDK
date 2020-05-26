@@ -32,158 +32,261 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedControlClone>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -307,182 +410,301 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedButton>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -622,146 +844,241 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CheckBox>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -916,290 +1233,481 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InvalidateContentOnDrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columns</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
-        public IntegerValue Columns { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Columns
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        public IntegerValue Rows { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Rows
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemWidth</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
-        public IntegerValue ItemWidth { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ItemWidth
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemHeight</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
-        public IntegerValue ItemHeight { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ItemHeight
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemWidth</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
-        public StringValue GetItemWidth { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemWidth
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemHeight</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
-        public StringValue GetItemHeight { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemHeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        public BooleanValue ShowItemLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        public StringValue GetSelectedItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemIndex
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedGallery>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1416,188 +1924,311 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedToggleButton>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1741,50 +2372,81 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        public StringValue GetTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuSeparator>();
+        public StringValue GetTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -1883,98 +2545,161 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedSplitButton>();
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2123,182 +2848,301 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedMenu>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2468,188 +3312,311 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getContent</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
-        public StringValue GetContent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetContent
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InvalidateContentOnDrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<UnsizedDynamicMenu>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -2826,98 +3793,161 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitButtonWithTitle>();
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3066,182 +4096,301 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        public StringValue GetTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuWithTitle>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3411,182 +4560,301 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ControlClone>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3723,122 +4991,201 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<TextLabel>();
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -3941,194 +5288,321 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Button>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4273,200 +5747,331 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ToggleButton>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4615,188 +6220,311 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>maxLength</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        public IntegerValue MaxLength { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue MaxLength
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getText</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        public StringValue GetText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onChange</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        public StringValue OnChange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnChange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<EditBox>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -4971,236 +6699,391 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InvalidateContentOnDrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>maxLength</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
-        public IntegerValue MaxLength { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue MaxLength
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getText</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
-        public StringValue GetText { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onChange</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
-        public StringValue OnChange { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnChange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ComboBox>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5413,236 +7296,391 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        public StringValue GetSelectedItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemIndex
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        public BooleanValue ShowItemLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DropDown>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -5856,302 +7894,501 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InvalidateContentOnDrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columns</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
-        public IntegerValue Columns { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Columns
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
-        public IntegerValue Rows { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue Rows
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemWidth</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
-        public IntegerValue ItemWidth { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ItemWidth
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemHeight</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
-        public IntegerValue ItemHeight { get => GetAttribute<IntegerValue>(); set => SetAttribute(value); }
+        public IntegerValue ItemHeight
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemWidth</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
-        public StringValue GetItemWidth { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemWidth
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemHeight</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
-        public StringValue GetItemHeight { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemHeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
-        public BooleanValue ShowItemLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
-        public BooleanValue ShowItemImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowItemImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
-        public StringValue GetItemCount { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemCount
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
-        public StringValue GetItemLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
-        public StringValue GetItemScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
-        public StringValue GetItemSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
-        public StringValue GetItemImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
-        public StringValue GetItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
-        public StringValue SizeString { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue SizeString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
-        public StringValue GetSelectedItemID { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
-        public StringValue GetSelectedItemIndex { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSelectedItemIndex
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Gallery>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6423,194 +8660,321 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Menu>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -6788,200 +9152,331 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getContent</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
-        public StringValue GetContent { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetContent
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
-        public BooleanValue InvalidateContentOnDrop { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue InvalidateContentOnDrop
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DynamicMenu>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7163,110 +9658,181 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SplitButton>();
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7433,56 +9999,91 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>boxStyle</para>
         /// <para>Represents the following attribute in the schema: boxStyle</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues> BoxStyle { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Box>();
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues> BoxStyle
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7610,50 +10211,81 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ButtonGroup>();
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7777,20 +10409,31 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
-        public StringValue GetTitle { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetTitle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<MenuRoot>();
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7894,14 +10537,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onLoad</para>
         /// <para>Represents the following attribute in the schema: onLoad</para>
         /// </summary>
-        public StringValue OnLoad { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnLoad
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>loadImage</para>
         /// <para>Represents the following attribute in the schema: loadImage</para>
         /// </summary>
-        public StringValue LoadImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<CustomUI>();
+        public StringValue LoadImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -7975,38 +10625,61 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Item>();
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8062,170 +10735,281 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VisibleButton>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8360,176 +11144,291 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
-        public StringValue GetPressed { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetPressed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VisibleToggleButton>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8668,50 +11567,81 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<VerticalSeparator>();
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -8798,8 +11728,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         public DialogBoxLauncher(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DialogBoxLauncher>();
 
         /// <summary>
         /// <para>UnsizedButton.</para>
@@ -8906,128 +11834,211 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Group>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9174,182 +12185,301 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
-        public StringValue GetDescription { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetDescription
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(); set => SetAttribute(value); }
+        public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
-        public StringValue GetSize { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
-        public StringValue Image { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Image
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
-        public StringValue ImageMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue ImageMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
-        public StringValue GetImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
-        public StringValue Screentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Screentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
-        public StringValue GetScreentip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetScreentip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
-        public StringValue Supertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Supertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
-        public StringValue GetSupertip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetSupertip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
-        public BooleanValue ShowLabel { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
-        public StringValue GetShowLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetShowLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
-        public BooleanValue ShowImage { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue ShowImage
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
-        public StringValue GetShowImage { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QuickAccessToolbarControlClone>();
+        public StringValue GetShowImage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9514,8 +12644,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<SharedQatControls>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 0, 1000)
@@ -9579,8 +12707,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         public DocumentSpecificQuickAccessToolbarControls(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<DocumentSpecificQuickAccessToolbarControls>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -9699,86 +12825,141 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
-        public StringValue IdQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
-        public StringValue Tag { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Tag
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
-        public StringValue Label { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Label
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
-        public StringValue GetLabel { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
-        public StringValue InsertAfterMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
-        public StringValue InsertBeforeMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
-        public StringValue InsertAfterQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertAfterQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
-        public StringValue InsertBeforeQ { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue InsertBeforeQ
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
-        public StringValue Keytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue Keytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
-        public StringValue GetKeytip { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tab>();
+        public StringValue GetKeytip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9904,20 +13085,31 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public BooleanValue Visible { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
-        public StringValue GetVisible { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextualTabSet>();
+        public StringValue GetVisible
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -9966,26 +13158,41 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
-        public StringValue OnAction { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue OnAction
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
-        public BooleanValue Enabled { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
+        public BooleanValue Enabled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
-        public StringValue GetEnabled { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
+        public StringValue GetEnabled
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
-        public StringValue IdMso { get => GetAttribute<StringValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RepurposedCommand>();
+        public StringValue IdMso
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
@@ -10073,8 +13280,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<OfficeMenu>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 0, 1000)
@@ -10157,8 +13362,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         public QuickAccessToolbar(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<QuickAccessToolbar>();
 
         /// <summary>
         /// <para>SharedQatControls.</para>
@@ -10245,8 +13448,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Tabs>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tab), 1, 100)
@@ -10305,8 +13506,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
         }
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<ContextualTabSets>();
-
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet), 1, 100)
@@ -10364,8 +13563,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         public RepurposedCommands(string outerXml) : base(outerXml)
         {
         }
-
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<RepurposedCommands>();
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -10435,8 +13632,11 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <para>startFromScratch</para>
         /// <para>Represents the following attribute in the schema: startFromScratch</para>
         /// </summary>
-        public BooleanValue StartFromScratch { get => GetAttribute<BooleanValue>(); set => SetAttribute(value); }
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<Ribbon>();
+        public BooleanValue StartFromScratch
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
