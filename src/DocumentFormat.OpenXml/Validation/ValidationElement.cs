@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         public OpenXmlSimpleType Value { get; internal set; }
 
-        public ElementProperty<OpenXmlSimpleType> Property { get; internal set; }
+        public AttributeMetadata Property { get; internal set; }
 
         public bool IsAttribute { get; internal set; }
 

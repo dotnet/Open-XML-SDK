@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public string PropertyName { get; }
 
-        ElementProperty<OpenXmlSimpleType> IAttributeMetadataBuilder.Build()
+        AttributeMetadata IAttributeMetadataBuilder.Build()
         {
             AddValidator(_defaultValidator);
 
@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         }
 
         [DebuggerDisplay("{PropertyName,nq}")]
-        private class AttributeInfo : ElementProperty<OpenXmlSimpleType>
+        private class AttributeInfo : AttributeMetadata
         {
             public AttributeInfo(byte ns, string name, string propertyName, IOpenXmlSimpleTypeValidator[] validators)
             {

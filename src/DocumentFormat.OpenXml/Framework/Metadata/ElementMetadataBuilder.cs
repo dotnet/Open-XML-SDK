@@ -17,9 +17,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             return builder;
         }
 
-        public ElementProperty<OpenXmlSimpleType>[] Build()
+        public AttributeMetadata[] Build()
         {
-            var final = new List<ElementProperty<OpenXmlSimpleType>>();
+            var final = new List<AttributeMetadata>();
 
             foreach (var list in _list)
             {

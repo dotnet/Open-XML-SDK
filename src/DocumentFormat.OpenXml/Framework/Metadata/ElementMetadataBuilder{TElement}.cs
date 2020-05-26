@@ -17,14 +17,14 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             return new ElementMetadataBuilder<TElement>();
         }
 
-        public ElementProperty<OpenXmlSimpleType>[] Build()
+        public AttributeMetadata[] Build()
         {
             if (_attributes is null)
             {
-                return Array.Empty<ElementProperty<OpenXmlSimpleType>>();
+                return Array.Empty<AttributeMetadata>();
             }
 
-            var result = new ElementProperty<OpenXmlSimpleType>[_attributes.Count];
+            var result = new AttributeMetadata[_attributes.Count];
 
             for (int i = 0; i < result.Length; i++)
             {

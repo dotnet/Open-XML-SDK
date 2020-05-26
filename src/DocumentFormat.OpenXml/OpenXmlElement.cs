@@ -201,8 +201,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal ElementPropertyCollection RawElements => new ElementPropertyCollection(this, ElementData.RawElements);
-
         /// <summary>
         /// Gets the namespace ID of the current element.
         /// </summary>

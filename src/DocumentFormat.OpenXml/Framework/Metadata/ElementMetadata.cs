@@ -10,10 +10,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal readonly struct ElementMetadata
     {
-        private static readonly ConcurrentDictionary<Type, ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>> _lookup = new ConcurrentDictionary<Type, ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>>(new[]
+        private static readonly ConcurrentDictionary<Type, ReadOnlyArray<AttributeMetadata>> _lookup = new ConcurrentDictionary<Type, ReadOnlyArray<AttributeMetadata>>(new[]
         {
-            new KeyValuePair<Type, ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>>(typeof(OpenXmlUnknownElement), null),
-            new KeyValuePair<Type, ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>>(typeof(OpenXmlMiscNode), null),
+            new KeyValuePair<Type, ReadOnlyArray<AttributeMetadata>>(typeof(OpenXmlUnknownElement), null),
+            new KeyValuePair<Type, ReadOnlyArray<AttributeMetadata>>(typeof(OpenXmlMiscNode), null),
         });
 
         public static ElementMetadata Empty => new ElementMetadata(null);
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         private class CreatorHelper<T> : IElementMetadataBuilder
             where T : OpenXmlElement, new()
         {
-            public ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> Create()
+            public ReadOnlyArray<AttributeMetadata> Create()
             {
                 var element = new T();
 
@@ -63,10 +63,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         private interface IElementMetadataBuilder
         {
-            ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> Create();
+            ReadOnlyArray<AttributeMetadata> Create();
         }
 
-        public ElementMetadata(ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> tags)
+        public ElementMetadata(ReadOnlyArray<AttributeMetadata> tags)
         {
             Attributes = new AttributeCollection(tags);
         }
@@ -77,9 +77,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     internal readonly struct AttributeCollection : IEnumerable<AttributeCollection.AttributeEntry>
     {
         private readonly OpenXmlSimpleType[] _data;
-        private readonly ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> _attributes;
+        private readonly ReadOnlyArray<AttributeMetadata> _attributes;
 
-        public AttributeCollection(ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> tags)
+        public AttributeCollection(ReadOnlyArray<AttributeMetadata> tags)
         {
             _attributes = tags;
 
@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public bool IsNil => _index == -1;
 
-            public ref readonly ElementProperty<OpenXmlSimpleType> Property => ref _collection._attributes[_index];
+            public ref readonly AttributeMetadata Property => ref _collection._attributes[_index];
 
             public OpenXmlSimpleType Value => _collection._data[_index];
 

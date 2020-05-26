@@ -22,11 +22,6 @@ namespace DocumentFormat.OpenXml.Framework
             _validators = Build(type.GetTypeInfo().GetCustomAttributes(true), null);
         }
 
-        public ValidatorCollection(PropertyInfo property)
-        {
-            _validators = Build(property.GetCustomAttributes(true), property.PropertyType);
-        }
-
         public ReadOnlyArray<IOpenXmlSimpleTypeValidator>.Enumerator GetEnumerator() => _validators.GetEnumerator();
 
         IEnumerator<IOpenXmlSimpleTypeValidator> IEnumerable<IOpenXmlSimpleTypeValidator>.GetEnumerator() => GetEnumerator();

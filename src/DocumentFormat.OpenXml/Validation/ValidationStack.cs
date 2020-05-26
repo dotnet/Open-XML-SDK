@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Validation
             return _popDisposable;
         }
 
-        public IDisposable Push(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> property, bool isAttribute)
+        public IDisposable Push(OpenXmlSimpleType value, AttributeMetadata property, bool isAttribute)
         {
             var current = Current;
             var element = GetOrCreateElement();

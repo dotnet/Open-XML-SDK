@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        private static void ValidateValue(ValidationContext validationContext, ValidatorCollection validators, OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> state, bool isAttribute)
+        private static void ValidateValue(ValidationContext validationContext, ValidatorCollection validators, OpenXmlSimpleType value, AttributeMetadata state, bool isAttribute)
         {
             var errors = validationContext.Errors.Count;
 
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         [DebuggerDisplay("{PropertyName,nq}")]
-        private class LeafAccessor : ElementProperty<OpenXmlSimpleType>
+        private class LeafAccessor : AttributeMetadata
         {
             private readonly OpenXmlLeafTextElement _element;
 

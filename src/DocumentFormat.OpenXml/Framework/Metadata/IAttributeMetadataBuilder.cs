@@ -5,6 +5,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal interface IAttributeMetadataBuilder
     {
-        ElementProperty<OpenXmlSimpleType> Build();
+        AttributeMetadata Build();
     }
 }
