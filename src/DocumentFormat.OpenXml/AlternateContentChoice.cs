@@ -110,8 +110,6 @@ namespace DocumentFormat.OpenXml
         /// </param>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlternateContentChoice>(deep);
 
-        internal override ElementMetadata RawAttributes { get; } = ElementMetadata.Create<AlternateContentChoice>();
-
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);

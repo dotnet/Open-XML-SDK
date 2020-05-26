@@ -2,18 +2,50 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal readonly struct ElementMetadata
     {
+        private static readonly ConcurrentDictionary<Type, ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>> _lookup = new ConcurrentDictionary<Type, ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>>(new[]
+        {
+            new KeyValuePair<Type, ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>>(typeof(OpenXmlUnknownElement), null),
+            new KeyValuePair<Type, ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>>(typeof(OpenXmlMiscNode), null),
+        });
+
         private readonly OpenXmlSimpleType[] _data;
 
         public static ElementMetadata Empty => new ElementMetadata(null);
 
+        public bool IsEmpty => _data is null;
+
+        public static ElementMetadata Create(Type type)
+        {
+            var data = _lookup.GetOrAdd(type, t =>
+            {
+                var helper = typeof(CreatorHelper<>).MakeGenericType(t);
+                var builder = (IElementMetadataBuilder)Activator.CreateInstance(helper);
+
+                return builder.Create();
+            });
+
+            return new ElementMetadata(data);
+        }
+
         public static ElementMetadata Create<TElement>()
             where TElement : OpenXmlElement, new()
-            => new ElementMetadata(CreatorHelper<TElement>.Instance);
+        {
+            var data = _lookup.GetOrAdd(typeof(TElement), t =>
+            {
+                var builder = new CreatorHelper<TElement>();
+
+                return builder.Create();
+            });
+
+            return new ElementMetadata(data);
+        }
 
         public ElementMetadata(ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> tags)
         {
@@ -113,12 +145,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             public bool HasValue => Value != null;
         }
 
-        private static class CreatorHelper<T>
+        private class CreatorHelper<T> : IElementMetadataBuilder
             where T : OpenXmlElement, new()
         {
-            public static ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> Instance { get; } = InternalCreate();
-
-            private static ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> InternalCreate()
+            public ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> Create()
             {
                 var element = new T();
 
@@ -128,6 +158,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 return builder.Build();
             }
+        }
+
+        private interface IElementMetadataBuilder
+        {
+            ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> Create();
         }
     }
 }

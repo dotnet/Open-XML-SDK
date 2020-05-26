@@ -169,11 +169,24 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        private ElementMetadata _metadata;
+
         /// <summary>
         /// Gets an array of fixed attributes (attributes that are defined in the schema) without forcing any parsing of the element.
         /// If parsing is required, please use <see cref="Attributes"/>
         /// </summary>
-        internal virtual ElementMetadata RawAttributes => ElementMetadata.Empty;
+        internal ElementMetadata RawAttributes
+        {
+            get
+            {
+                if (_metadata.IsEmpty)
+                {
+                    _metadata = ElementMetadata.Create(GetType());
+                }
+
+                return _metadata;
+            }
+        }
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
