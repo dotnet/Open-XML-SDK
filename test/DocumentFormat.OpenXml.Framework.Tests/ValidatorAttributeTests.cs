@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var attributes = ElementMetadata.Create<NoValidatorsElement>();
             var attribute = Assert.Single(attributes.Attributes);
 
-            var single = Assert.Single(attribute.Validators);
+            var single = Assert.Single(attribute.Property.Validators);
 
             Assert.IsType<StringValidatorAttribute>(single);
         }
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var attribute = Assert.Single(attributes.Attributes);
 
             Assert.Collection(
-                attribute.Validators,
+                attribute.Property.Validators,
                 t => Assert.IsType<RequiredValidatorAttribute>(t),
                 t => Assert.IsType<StringValidatorAttribute>(t));
         }
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var attribute = Assert.Single(attributes.Attributes);
 
             Assert.Collection(
-                attribute.Validators,
+                attribute.Property.Validators,
                 t =>
                 {
                     var union = Assert.IsType<UnionValidator>(t);

@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Tests
                 yield break;
             }
 
-            foreach (var attribute in e.Metadata)
+            foreach (var attribute in e.Metadata.Attributes)
             {
                 yield return new OpenXmlAttribute(attribute);
             }

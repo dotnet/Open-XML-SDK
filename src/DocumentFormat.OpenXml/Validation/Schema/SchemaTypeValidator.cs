@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             ValidationErrorInfo errorInfo;
 
-            foreach (var attribute in element.Metadata)
+            foreach (var attribute in element.Metadata.Attributes)
             {
                 ValidateValue(validationContext, attribute.Property.Validators, attribute.Value, attribute.Property, true);
             }

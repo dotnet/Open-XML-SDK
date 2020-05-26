@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             var element = context.Stack.Current.Element;
 
-            if (element.Metadata[_attribute].HasValue)
+            if (element.Metadata.Attributes[_attribute].HasValue)
             {
                 return null;
             }
