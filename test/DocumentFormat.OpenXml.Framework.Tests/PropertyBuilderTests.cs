@@ -16,12 +16,13 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         public void Sanity()
         {
             var builder = new ElementMetadataBuilder();
-            var data = builder.AddElement<SomeElement>()
+            builder.AddElement<SomeElement>()
                 .AddAttribute(0, "s", a => a.Str, a =>
                 {
-                })
-                .Build();
-            var element = new Metadata.ElementState(new ElementMetadata(data));
+                });
+            var data = builder.Build();
+
+            var element = new Metadata.ElementState(data);
 
             ref var str = ref element.Attributes.GetProperty(nameof(SomeElement.Str));
 
@@ -42,14 +43,14 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         public void IsRequired()
         {
             var builder = new ElementMetadataBuilder();
-            var data = builder.AddElement<SomeElement>()
+            builder.AddElement<SomeElement>()
                 .AddAttribute(0, "s", a => a.Str, a =>
                 {
                     a.AddValidator(new RequiredValidatorAttribute());
-                })
-                .Build();
+                });
+            var data = builder.Build();
 
-            var elementData = Assert.Single(data);
+            var elementData = Assert.Single(data.Attributes);
 
             Assert.Collection(
                 elementData.Validators,

@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 element.ConfigureMetadata(builder);
 
-                return new ElementMetadata(builder.Build());
+                return builder.Build();
             }
         }
     }

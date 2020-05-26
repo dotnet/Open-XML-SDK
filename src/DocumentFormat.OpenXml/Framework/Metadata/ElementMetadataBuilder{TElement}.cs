@@ -7,50 +7,26 @@ using System.Linq.Expressions;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    internal class ElementMetadataBuilder<TElement> : IMetadataBuilder<AttributeMetadata[]>
+    internal class ElementMetadataBuilder<TElement> : ValidatorBuilder
         where TElement : OpenXmlElement
     {
-        private List<IMetadataBuilder<AttributeMetadata>> _attributes;
-        private FileFormatVersions _version = FileFormatVersions.Office2007;
+        private readonly ElementMetadataBuilder _builder;
 
-        public ElementMetadataBuilder<TElement> SetVersion(FileFormatVersions version)
+        public ElementMetadataBuilder(ElementMetadataBuilder builder)
         {
-            _version = version;
-            return this;
-        }
-
-        public AttributeMetadata[] Build()
-        {
-            if (_attributes is null)
-            {
-                return Array.Empty<AttributeMetadata>();
-            }
-
-            var result = new AttributeMetadata[_attributes.Count];
-
-            for (int i = 0; i < result.Length; i++)
-            {
-                result[i] = _attributes[i].Build();
-            }
-
-            return result;
+            _builder = builder;
         }
 
         public ElementMetadataBuilder<TElement> AddAttribute<TSimpleType>(byte nsId, string localName, Expression<Func<TElement, TSimpleType>> expression, Action<AttributeMetadataBuilder<TSimpleType>> action = null)
             where TSimpleType : OpenXmlSimpleType, new()
         {
-            if (_attributes is null)
-            {
-                _attributes = new List<IMetadataBuilder<AttributeMetadata>>();
-            }
-
             if (expression.Body is MemberExpression member)
             {
                 var builder = new AttributeMetadataBuilder<TSimpleType>(nsId, localName, member.Member.Name);
 
                 action?.Invoke(builder);
 
-                _attributes.Add(builder);
+                _builder.Add(builder);
 
                 return this;
             }

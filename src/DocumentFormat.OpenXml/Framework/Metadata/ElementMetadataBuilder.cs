@@ -7,26 +7,39 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal class ElementMetadataBuilder
     {
-        private readonly List<IMetadataBuilder<AttributeMetadata[]>> _list = new List<IMetadataBuilder<AttributeMetadata[]>>();
+        private List<IMetadataBuilder<AttributeMetadata>> _attributes;
 
         public ElementMetadataBuilder<TElement> AddElement<TElement>()
             where TElement : OpenXmlElement
         {
-            var builder = new ElementMetadataBuilder<TElement>();
-            _list.Add(builder);
-            return builder;
+            return new ElementMetadataBuilder<TElement>(this);
         }
 
-        public AttributeMetadata[] Build()
+        public void Add(IMetadataBuilder<AttributeMetadata> builder)
         {
-            var final = new List<AttributeMetadata>();
-
-            foreach (var list in _list)
+            if (_attributes is null)
             {
-                final.AddRange(list.Build());
+                _attributes = new List<IMetadataBuilder<AttributeMetadata>>();
             }
 
-            return final.ToArray();
+            _attributes.Add(builder);
+        }
+
+        public ElementMetadata Build()
+        {
+            if (_attributes is null)
+            {
+                return new ElementMetadata(null);
+            }
+
+            var attributes = new AttributeMetadata[_attributes.Count];
+
+            for (int i = 0; i < attributes.Length; i++)
+            {
+                attributes[i] = _attributes[i].Build();
+            }
+
+            return new ElementMetadata(attributes);
         }
     }
 }

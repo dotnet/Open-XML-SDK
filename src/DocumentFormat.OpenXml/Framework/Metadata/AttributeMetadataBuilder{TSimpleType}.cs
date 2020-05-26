@@ -1,56 +1,30 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    internal class AttributeMetadataBuilder<TSimpleType> : IMetadataBuilder<AttributeMetadata>
+    internal class AttributeMetadataBuilder<TSimpleType> : ValidatorBuilder, IMetadataBuilder<AttributeMetadata>
         where TSimpleType : OpenXmlSimpleType, new()
     {
         private static IOpenXmlSimpleTypeValidator _defaultValidator = GetDefaultValidator();
-
-        private readonly List<IOpenXmlSimpleTypeValidator> _validators;
 
         public AttributeMetadataBuilder(byte nsId, string name, string propertyName)
         {
             Namespace = nsId;
             Name = name;
             PropertyName = propertyName;
-            _validators = new List<IOpenXmlSimpleTypeValidator>();
         }
 
-        public AttributeMetadataBuilder<TSimpleType> AddUnion(Action<AttributeMetadataBuilder<TSimpleType>> action, FileFormatVersions version = FileFormatVersions.Office2007)
+        public void AddUnion(Action<AttributeMetadataBuilder<TSimpleType>> action)
         {
             var union = new AttributeMetadataBuilder<TSimpleType>(Namespace, Name, PropertyName);
 
             action(union);
 
-            return AddValidator(new UnionValidator(union._validators, 0), version);
-        }
-
-        public AttributeMetadataBuilder<TSimpleType> AddValidator(IOpenXmlSimpleTypeValidator validator, FileFormatVersions version = FileFormatVersions.Office2007)
-        {
-            if (validator is RequiredValidatorAttribute)
-            {
-                _validators.Insert(0, validator);
-            }
-            else
-            {
-                _validators.Add(validator);
-            }
-
-            return this;
-        }
-
-        public AttributeMetadataBuilder<TSimpleType> InsertValidator(int index, IOpenXmlSimpleTypeValidator validator, FileFormatVersions version = FileFormatVersions.Office2007)
-        {
-            _validators.Insert(index, validator);
-
-            return this;
+            AddValidator(new UnionValidator(union._validators, 0));
         }
 
         public byte Namespace { get; }
