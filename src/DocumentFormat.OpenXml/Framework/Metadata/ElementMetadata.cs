@@ -7,12 +7,12 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    internal readonly struct ElementMetadata
+    internal class ElementMetadata
     {
         private static readonly ConcurrentDictionary<Type, ElementMetadata> _lookup = new ConcurrentDictionary<Type, ElementMetadata>(new[]
         {
-            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlUnknownElement), default),
-            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), default),
+            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlUnknownElement), new ElementMetadata()),
+            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), new ElementMetadata()),
         });
 
         private readonly ElementLookup _children;
@@ -24,6 +24,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             Availability = version;
             Schema = schema;
             _children = lookup;
+        }
+
+        private ElementMetadata()
+        {
         }
 
         public ReadOnlyArray<AttributeMetadata> Attributes { get; }
