@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
-            var attribute = element.Attributes[_attribute];
+            var attribute = element.Metadata[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
             if (!attribute.HasValue)

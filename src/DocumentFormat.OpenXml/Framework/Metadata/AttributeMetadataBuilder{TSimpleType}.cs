@@ -111,9 +111,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public override OpenXmlSimpleType CreateNew() => new TSimpleType();
 
-            public override OpenXmlSimpleType GetValue(OpenXmlElement element) => element.Attributes.GetProperty(PropertyName);
+            public override OpenXmlSimpleType GetValue(OpenXmlElement element) => element.Metadata.GetProperty(PropertyName);
 
-            public override void SetValue(OpenXmlElement element, OpenXmlSimpleType value) => element.Attributes.GetProperty(PropertyName) = value;
+            public override void SetValue(OpenXmlElement element, OpenXmlSimpleType value) => element.Metadata.GetProperty(PropertyName) = value;
         }
     }
 }

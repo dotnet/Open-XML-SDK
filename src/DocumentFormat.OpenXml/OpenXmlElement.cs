@@ -173,9 +173,9 @@ namespace DocumentFormat.OpenXml
 
         /// <summary>
         /// Gets an array of fixed attributes (attributes that are defined in the schema) without forcing any parsing of the element.
-        /// If parsing is required, please use <see cref="Attributes"/>
+        /// If parsing is required, please use <see cref="Metadata"/>
         /// </summary>
-        internal ElementMetadata RawAttributes
+        internal ElementMetadata RawMetadata
         {
             get
             {
@@ -190,14 +190,14 @@ namespace DocumentFormat.OpenXml
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
-        /// use <see cref="RawAttributes"/>.
+        /// use <see cref="RawMetadata"/>.
         /// </summary>
-        internal ElementMetadata Attributes
+        internal ElementMetadata Metadata
         {
             get
             {
                 MakeSureParsed();
-                return RawAttributes;
+                return RawMetadata;
             }
         }
 
@@ -214,11 +214,11 @@ namespace DocumentFormat.OpenXml
 
         private protected void SetAttribute<TSimpleType>(TSimpleType value, [CallerMemberName] string propertyName = null)
             where TSimpleType : OpenXmlSimpleType
-            => Attributes.GetProperty(propertyName) = value;
+            => Metadata.GetProperty(propertyName) = value;
 
         private protected TSimpleType GetAttribute<TSimpleType>([CallerMemberName] string propertyName = null)
             where TSimpleType : OpenXmlSimpleType
-            => Attributes.GetProperty(propertyName) as TSimpleType;
+            => Metadata.GetProperty(propertyName) as TSimpleType;
 
         #endregion
 
@@ -263,7 +263,7 @@ namespace DocumentFormat.OpenXml
                     return true;
                 }
 
-                foreach (var value in Attributes)
+                foreach (var value in Metadata)
                 {
                     if (value.HasValue)
                     {
@@ -451,7 +451,7 @@ namespace DocumentFormat.OpenXml
                     NamespaceDeclField = null;
                     ExtendedAttributesField = null;
 
-                    foreach (var attribute in RawAttributes)
+                    foreach (var attribute in RawMetadata)
                     {
                         attribute.SetValue(null);
                     }
@@ -504,7 +504,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (namespaceUri != null)
                 {
-                    foreach (var attribute in Attributes)
+                    foreach (var attribute in Metadata)
                     {
                         if (attribute.HasValue &&
                             attribute.Property.Name == localName &&
@@ -544,7 +544,7 @@ namespace DocumentFormat.OpenXml
             {
                 var attributes = new List<OpenXmlAttribute>();
 
-                foreach (var attribute in Attributes)
+                foreach (var attribute in Metadata)
                 {
                     if (attribute.HasValue)
                     {
@@ -653,7 +653,7 @@ namespace DocumentFormat.OpenXml
             if (HasAttributes)
             {
                 // get attribute namespace ID
-                var attribute = RawAttributes[namespaceUri, localName];
+                var attribute = RawMetadata[namespaceUri, localName];
                 if (!attribute.IsNil)
                 {
                     attribute.SetValue(null);
@@ -711,7 +711,7 @@ namespace DocumentFormat.OpenXml
             MakeSureParsed();
 
             // clear known attributes defined in schema
-            foreach (var attribute in RawAttributes)
+            foreach (var attribute in RawMetadata)
             {
                 attribute.SetValue(null);
             }
@@ -1445,7 +1445,7 @@ namespace DocumentFormat.OpenXml
 
             if (XmlParsed && HasAttributes)
             {
-                foreach (var attribute in Attributes)
+                foreach (var attribute in Metadata)
                 {
                     if (attribute.HasValue)
                     {
@@ -1498,14 +1498,14 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the attribute is a known attribute.</returns>
         private bool TrySetFixedAttribute(string namespaceUri, string localName, string value, bool strictRelationshipFound)
         {
-            if (RawAttributes.Any())
+            if (RawMetadata.Any())
             {
                 if (strictRelationshipFound)
                 {
                     return StrictTranslateAttribute(namespaceUri, localName, value);
                 }
 
-                var attribute = RawAttributes[namespaceUri, localName];
+                var attribute = RawMetadata[namespaceUri, localName];
 
                 if (!attribute.IsNil)
                 {
@@ -1889,14 +1889,14 @@ namespace DocumentFormat.OpenXml
                 }
 
                 // Copy Attributes.
-                Debug.Assert(container.RawAttributes.Length == container.RawAttributes.Length);
-                for (var i = 0; i < container.Attributes.Length; i++)
+                Debug.Assert(container.RawMetadata.Length == container.RawMetadata.Length);
+                for (var i = 0; i < container.Metadata.Length; i++)
                 {
-                    var attribute = container.Attributes[i];
+                    var attribute = container.Metadata[i];
 
                     if (attribute.HasValue)
                     {
-                        RawAttributes[i].SetValue((OpenXmlSimpleType)attribute.Value.Clone());
+                        RawMetadata[i].SetValue((OpenXmlSimpleType)attribute.Value.Clone());
                     }
                 }
 
@@ -2738,7 +2738,7 @@ namespace DocumentFormat.OpenXml
                 return;
             }
 
-            foreach (var attribute in RawAttributes)
+            foreach (var attribute in RawMetadata)
             {
                 if (attribute.HasValue)
                 {

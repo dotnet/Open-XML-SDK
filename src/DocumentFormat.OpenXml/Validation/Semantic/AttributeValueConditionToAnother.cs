@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
-            var attribute = element.Attributes[_attribute];
+            var attribute = element.Metadata[_attribute];
 
             if (!attribute.HasValue)
             {
@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            var conditionAttribute = element.Attributes[_conditionAttribute];
+            var conditionAttribute = element.Metadata[_conditionAttribute];
 
             if (!conditionAttribute.HasValue)
             {
