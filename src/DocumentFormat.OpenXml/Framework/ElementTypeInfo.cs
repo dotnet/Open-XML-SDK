@@ -8,6 +8,10 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal sealed class ElementTypeInfo
     {
+        public ElementTypeInfo()
+        {
+        }
+
         public ElementTypeInfo(Type type)
         {
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -22,17 +26,17 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static ElementTypeInfo Create(Type type) => new ElementTypeInfo(type);
 
-        public string RelationshipType { get; }
+        public string RelationshipType { get; set; }
 
-        public ValidatorCollection Validators { get; }
+        public ValidatorCollection Validators { get; set; }
 
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
-        public string PartClassName { get; }
+        public string PartClassName { get; set; }
 
-        public string PartContentType { get; }
+        public string PartContentType { get; set; }
 
-        public SchemaAttrAttribute Schema { get; }
+        public SchemaAttrAttribute Schema { get; set; }
 
-        public FileFormatVersions Availability { get; }
+        public FileFormatVersions Availability { get; set; }
     }
 }

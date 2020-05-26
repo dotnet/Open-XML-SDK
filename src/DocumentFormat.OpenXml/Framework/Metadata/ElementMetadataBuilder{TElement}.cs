@@ -7,14 +7,16 @@ using System.Linq.Expressions;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    internal class ElementMetadataBuilder<TElement> : IElementMetadataBuilder
+    internal class ElementMetadataBuilder<TElement> : IMetadataBuilder<AttributeMetadata[]>
         where TElement : OpenXmlElement
     {
-        private List<IAttributeMetadataBuilder> _attributes;
+        private List<IMetadataBuilder<AttributeMetadata>> _attributes;
+        private FileFormatVersions _version = FileFormatVersions.Office2007;
 
-        public static ElementMetadataBuilder<TElement> Create()
+        public ElementMetadataBuilder<TElement> SetVersion(FileFormatVersions version)
         {
-            return new ElementMetadataBuilder<TElement>();
+            _version = version;
+            return this;
         }
 
         public AttributeMetadata[] Build()
@@ -39,7 +41,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         {
             if (_attributes is null)
             {
-                _attributes = new List<IAttributeMetadataBuilder>(4);
+                _attributes = new List<IMetadataBuilder<AttributeMetadata>>();
             }
 
             if (expression.Body is MemberExpression member)

@@ -3,8 +3,8 @@
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    internal interface IAttributeMetadataBuilder
+    internal interface IMetadataBuilder<T>
     {
-        AttributeMetadata Build();
+        T Build();
     }
 }

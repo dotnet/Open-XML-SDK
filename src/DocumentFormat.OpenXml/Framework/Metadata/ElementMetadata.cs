@@ -24,9 +24,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             var data = _lookup.GetOrAdd(type, t =>
             {
                 var helper = typeof(BuilderProvider<>).MakeGenericType(t);
-                var builder = (IBuilderProvider)Activator.CreateInstance(helper);
+                var builder = (IMetadataBuilder<ReadOnlyArray<AttributeMetadata>>)Activator.CreateInstance(helper);
 
-                return builder.Create();
+                return builder.Build();
             });
 
             return new ElementMetadata(data);
@@ -39,16 +39,16 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 var builder = new BuilderProvider<TElement>();
 
-                return builder.Create();
+                return builder.Build();
             });
 
             return new ElementMetadata(data);
         }
 
-        private class BuilderProvider<T> : IBuilderProvider
+        private class BuilderProvider<T> : IMetadataBuilder<ReadOnlyArray<AttributeMetadata>>
             where T : OpenXmlElement, new()
         {
-            public ReadOnlyArray<AttributeMetadata> Create()
+            public ReadOnlyArray<AttributeMetadata> Build()
             {
                 var element = new T();
 
@@ -58,11 +58,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 return builder.Build();
             }
-        }
-
-        private interface IBuilderProvider
-        {
-            ReadOnlyArray<AttributeMetadata> Create();
         }
 
         public ElementMetadata(ReadOnlyArray<AttributeMetadata> tags)

@@ -7,7 +7,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal class ElementMetadataBuilder
     {
-        private readonly List<IElementMetadataBuilder> _list = new List<IElementMetadataBuilder>();
+        private readonly List<IMetadataBuilder<AttributeMetadata[]>> _list = new List<IMetadataBuilder<AttributeMetadata[]>>();
 
         public ElementMetadataBuilder<TElement> AddElement<TElement>()
             where TElement : OpenXmlElement

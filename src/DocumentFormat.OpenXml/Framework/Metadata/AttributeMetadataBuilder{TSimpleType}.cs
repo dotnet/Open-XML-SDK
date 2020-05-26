@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    internal class AttributeMetadataBuilder<TSimpleType> : IAttributeMetadataBuilder
+    internal class AttributeMetadataBuilder<TSimpleType> : IMetadataBuilder<AttributeMetadata>
         where TSimpleType : OpenXmlSimpleType, new()
     {
         private static IOpenXmlSimpleTypeValidator _defaultValidator = GetDefaultValidator();
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public string PropertyName { get; }
 
-        AttributeMetadata IAttributeMetadataBuilder.Build()
+        AttributeMetadata IMetadataBuilder<AttributeMetadata>.Build()
         {
             AddValidator(_defaultValidator);
 
