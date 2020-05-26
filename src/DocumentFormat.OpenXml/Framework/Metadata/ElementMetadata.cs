@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public ElementMetadata(ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> tags)
         {
-            Raw = tags;
+            Attributes = tags;
 
             if (tags.Length == 0)
             {
@@ -61,15 +61,15 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             }
         }
 
-        public ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> Raw { get; }
+        public ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> Attributes { get; }
 
         public bool Any() => Length > 0;
 
         public ref OpenXmlSimpleType GetProperty(string propertyName)
         {
-            for (var i = 0; i < Raw.Length; i++)
+            for (var i = 0; i < Attributes.Length; i++)
             {
-                var property = Raw[i];
+                var property = Attributes[i];
 
                 if (property.PropertyName.Equals(propertyName, StringComparison.Ordinal))
                 {
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public PropertyEntry this[string namespaceUri, string tagName] => this[GetIndex(namespaceUri, tagName)];
 
-        public int Length => Raw.Length;
+        public int Length => Attributes.Length;
 
         public Enumerator GetEnumerator() => new Enumerator(this);
 
@@ -92,9 +92,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         {
             if (!string.IsNullOrEmpty(tagName) && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
             {
-                for (var i = 0; i < Raw.Length; i++)
+                for (var i = 0; i < Attributes.Length; i++)
                 {
-                    var tag = Raw[i];
+                    var tag = Attributes[i];
 
                     if (tag.Name.Equals(tagName, StringComparison.Ordinal) && tag.NamespaceId == nsId)
                     {
@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public bool IsNil => _index == -1;
 
-            public ref readonly ElementProperty<OpenXmlSimpleType> Property => ref _collection.Raw[_index];
+            public ref readonly ElementProperty<OpenXmlSimpleType> Property => ref _collection.Attributes[_index];
 
             public OpenXmlSimpleType Value => _collection._data[_index];
 

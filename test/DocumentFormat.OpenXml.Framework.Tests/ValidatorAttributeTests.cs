@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         public void NoValidators()
         {
             var attributes = ElementMetadata.Create<NoValidatorsElement>();
-            var attribute = Assert.Single(attributes.Raw);
+            var attribute = Assert.Single(attributes.Attributes);
 
             var single = Assert.Single(attribute.Validators);
 
@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         public void RequiredValidation()
         {
             var attributes = ElementMetadata.Create<RequiredValidator>();
-            var attribute = Assert.Single(attributes.Raw);
+            var attribute = Assert.Single(attributes.Attributes);
 
             Assert.Collection(
                 attribute.Validators,
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         public void JustUnion()
         {
             var attributes = ElementMetadata.Create<JustUnionValidator>();
-            var attribute = Assert.Single(attributes.Raw);
+            var attribute = Assert.Single(attributes.Attributes);
 
             Assert.Collection(
                 attribute.Validators,
