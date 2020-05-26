@@ -769,7 +769,7 @@ namespace DocumentFormat.OpenXml
             }
 
             if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)
-                && PackageCache.Cache.ParseElementData(typeof(OpenXmlPartRootElement)).Children.Create(nsId, name) is OpenXmlElement element)
+                && ElementLookup.Parts.Create(nsId, name) is OpenXmlElement element)
             {
                 return element;
             }

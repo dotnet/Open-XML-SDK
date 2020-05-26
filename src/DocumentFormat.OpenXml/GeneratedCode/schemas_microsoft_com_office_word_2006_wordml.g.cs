@@ -27,10 +27,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>AllocatedCommands &lt;wne:acds></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(KeyMapCustomizations))]
-    [ChildElementInfo(typeof(MismatchedKeyMapCustomization))]
-    [ChildElementInfo(typeof(Toolbars))]
-    [ChildElementInfo(typeof(AllocatedCommands))]
     public partial class TemplateCommandGroup : OpenXmlPartRootElement
     {
         /// <summary>
@@ -69,6 +65,10 @@ namespace DocumentFormat.OpenXml.Office.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "tcg");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<KeyMapCustomizations>();
+            builder.AddChild<MismatchedKeyMapCustomization>();
+            builder.AddChild<Toolbars>();
+            builder.AddChild<AllocatedCommands>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -127,7 +127,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>Mcd &lt;wne:mcd></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Mcd))]
     public partial class Mcds : OpenXmlCompositeElement
     {
         /// <summary>
@@ -166,6 +165,7 @@ namespace DocumentFormat.OpenXml.Office.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "mcds");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Mcd>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -191,8 +191,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>Mcds &lt;wne:mcds></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocEvents))]
-    [ChildElementInfo(typeof(Mcds))]
     public partial class VbaSuppData : OpenXmlPartRootElement
     {
         /// <summary>
@@ -231,6 +229,8 @@ namespace DocumentFormat.OpenXml.Office.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "vbaSuppData");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocEvents>();
+            builder.AddChild<Mcds>();
         }
 
         /// <summary>
@@ -313,7 +313,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>SingleDataSourceRecord &lt;wne:recipientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SingleDataSourceRecord))]
     public partial class MailMergeRecipients : OpenXmlPartRootElement
     {
         /// <summary>
@@ -352,6 +351,7 @@ namespace DocumentFormat.OpenXml.Office.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "recipients");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SingleDataSourceRecord>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -668,11 +668,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>CharacterInsertion &lt;wne:wch></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FixedCommandKeyboardCustomization))]
-    [ChildElementInfo(typeof(MacroKeyboardCustomization))]
-    [ChildElementInfo(typeof(AllocatedCommandKeyboardCustomization))]
-    [ChildElementInfo(typeof(WllMacroKeyboardCustomization))]
-    [ChildElementInfo(typeof(CharacterInsertion))]
     public partial class KeyMapEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -776,6 +771,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymap");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FixedCommandKeyboardCustomization>();
+            builder.AddChild<MacroKeyboardCustomization>();
+            builder.AddChild<AllocatedCommandKeyboardCustomization>();
+            builder.AddChild<WllMacroKeyboardCustomization>();
+            builder.AddChild<CharacterInsertion>();
             builder.AddElement<KeyMapEntry>()
 .AddAttribute(33, "chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
 {
@@ -1588,19 +1588,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
     ///   <item><description>EventDocBuildingBlockAfterInsertXsdString &lt;wne:eventDocBuildingBlockAfterInsert></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EventDocNewXsdString))]
-    [ChildElementInfo(typeof(EventDocOpenXsdString))]
-    [ChildElementInfo(typeof(EventDocCloseXsdString))]
-    [ChildElementInfo(typeof(EventDocSyncXsdString))]
-    [ChildElementInfo(typeof(EventDocXmlAfterInsertXsdString))]
-    [ChildElementInfo(typeof(EventDocXmlBeforeDeleteXsdString))]
-    [ChildElementInfo(typeof(EventDocContentControlAfterInsertXsdString))]
-    [ChildElementInfo(typeof(EventDocContentControlBeforeDeleteXsdString))]
-    [ChildElementInfo(typeof(EventDocContentControlOnExistXsdString))]
-    [ChildElementInfo(typeof(EventDocContentControlOnEnterXsdString))]
-    [ChildElementInfo(typeof(EventDocStoreUpdateXsdString))]
-    [ChildElementInfo(typeof(EventDocContentControlUpdateXsdString))]
-    [ChildElementInfo(typeof(EventDocBuildingBlockAfterInsertXsdString))]
     public partial class DocEvents : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1639,6 +1626,19 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "docEvents");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EventDocNewXsdString>();
+            builder.AddChild<EventDocOpenXsdString>();
+            builder.AddChild<EventDocCloseXsdString>();
+            builder.AddChild<EventDocSyncXsdString>();
+            builder.AddChild<EventDocXmlAfterInsertXsdString>();
+            builder.AddChild<EventDocXmlBeforeDeleteXsdString>();
+            builder.AddChild<EventDocContentControlAfterInsertXsdString>();
+            builder.AddChild<EventDocContentControlBeforeDeleteXsdString>();
+            builder.AddChild<EventDocContentControlOnExistXsdString>();
+            builder.AddChild<EventDocContentControlOnEnterXsdString>();
+            builder.AddChild<EventDocStoreUpdateXsdString>();
+            builder.AddChild<EventDocContentControlUpdateXsdString>();
+            builder.AddChild<EventDocBuildingBlockAfterInsertXsdString>();
         }
 
         /// <summary>
@@ -1844,7 +1844,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
     ///   <item><description>AllocatedCommandManifestEntry &lt;wne:acdEntry></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AllocatedCommandManifestEntry))]
     public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1883,6 +1882,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acdManifest");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AllocatedCommandManifestEntry>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2074,7 +2074,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>KeyMapEntry &lt;wne:keymap></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(KeyMapEntry))]
     public abstract partial class KeymapsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2111,6 +2110,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<KeyMapEntry>();
         }
     }
 
@@ -2126,8 +2126,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ToolbarData &lt;wne:toolbarData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AllocatedCommandManifest))]
-    [ChildElementInfo(typeof(ToolbarData))]
     public partial class Toolbars : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2166,6 +2164,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "toolbars");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AllocatedCommandManifest>();
+            builder.AddChild<ToolbarData>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2191,7 +2191,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>AllocatedCommand &lt;wne:acd></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AllocatedCommand))]
     public partial class AllocatedCommands : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2230,6 +2229,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acds");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AllocatedCommand>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2338,8 +2338,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>RecordHashCode &lt;wne:hash></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RecordIncluded))]
-    [ChildElementInfo(typeof(RecordHashCode))]
     public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2378,6 +2376,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "recipientData");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RecordIncluded>();
+            builder.AddChild<RecordHashCode>();
         }
 
         /// <summary>

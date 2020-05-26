@@ -50,33 +50,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description>DocumentSecurity &lt;ap:DocSecurity></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Template))]
-    [ChildElementInfo(typeof(Manager))]
-    [ChildElementInfo(typeof(Company))]
-    [ChildElementInfo(typeof(Pages))]
-    [ChildElementInfo(typeof(Words))]
-    [ChildElementInfo(typeof(Characters))]
-    [ChildElementInfo(typeof(PresentationFormat))]
-    [ChildElementInfo(typeof(Lines))]
-    [ChildElementInfo(typeof(Paragraphs))]
-    [ChildElementInfo(typeof(Slides))]
-    [ChildElementInfo(typeof(Notes))]
-    [ChildElementInfo(typeof(TotalTime))]
-    [ChildElementInfo(typeof(HiddenSlides))]
-    [ChildElementInfo(typeof(MultimediaClips))]
-    [ChildElementInfo(typeof(ScaleCrop))]
-    [ChildElementInfo(typeof(HeadingPairs))]
-    [ChildElementInfo(typeof(TitlesOfParts))]
-    [ChildElementInfo(typeof(LinksUpToDate))]
-    [ChildElementInfo(typeof(CharactersWithSpaces))]
-    [ChildElementInfo(typeof(SharedDocument))]
-    [ChildElementInfo(typeof(HyperlinkBase))]
-    [ChildElementInfo(typeof(HyperlinkList))]
-    [ChildElementInfo(typeof(HyperlinksChanged))]
-    [ChildElementInfo(typeof(DigitalSignature))]
-    [ChildElementInfo(typeof(Application))]
-    [ChildElementInfo(typeof(ApplicationVersion))]
-    [ChildElementInfo(typeof(DocumentSecurity))]
     public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -115,6 +88,33 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "Properties");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Template>();
+            builder.AddChild<Manager>();
+            builder.AddChild<Company>();
+            builder.AddChild<Pages>();
+            builder.AddChild<Words>();
+            builder.AddChild<Characters>();
+            builder.AddChild<PresentationFormat>();
+            builder.AddChild<Lines>();
+            builder.AddChild<Paragraphs>();
+            builder.AddChild<Slides>();
+            builder.AddChild<Notes>();
+            builder.AddChild<TotalTime>();
+            builder.AddChild<HiddenSlides>();
+            builder.AddChild<MultimediaClips>();
+            builder.AddChild<ScaleCrop>();
+            builder.AddChild<HeadingPairs>();
+            builder.AddChild<TitlesOfParts>();
+            builder.AddChild<LinksUpToDate>();
+            builder.AddChild<CharactersWithSpaces>();
+            builder.AddChild<SharedDocument>();
+            builder.AddChild<HyperlinkBase>();
+            builder.AddChild<HyperlinkList>();
+            builder.AddChild<HyperlinksChanged>();
+            builder.AddChild<DigitalSignature>();
+            builder.AddChild<Application>();
+            builder.AddChild<ApplicationVersion>();
+            builder.AddChild<DocumentSecurity>();
         }
 
         /// <summary>
@@ -1561,7 +1561,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector))]
     public abstract partial class VectorVariantType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1598,6 +1597,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
         }
 
         /// <summary>
@@ -1625,7 +1625,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector))]
     public partial class TitlesOfParts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1664,6 +1663,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "TitlesOfParts");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
         }
 
         /// <summary>
@@ -1701,7 +1701,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTBlob &lt;vt:blob></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTBlob))]
     public partial class DigitalSignature : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1740,6 +1739,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "DigSig");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
         }
 
         /// <summary>

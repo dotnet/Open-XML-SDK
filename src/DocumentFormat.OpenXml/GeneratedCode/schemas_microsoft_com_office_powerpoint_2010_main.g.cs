@@ -29,9 +29,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description>ApplicationNonVisualDrawingProperties &lt;p14:nvPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NonVisualInkContentPartProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties), FileFormatVersions.Office2010)]
     public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -70,6 +67,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "nvContentPartPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualInkContentPartProperties>();
+            builder.AddChild<ApplicationNonVisualDrawingProperties>();
         }
 
         /// <summary>
@@ -136,8 +136,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -206,6 +204,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "xfrm");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "flipH", a => a.HorizontalFlip)
@@ -261,7 +261,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description>DocumentFormat.OpenXml.Presentation.Extension &lt;p:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
     public partial class ExtensionListModify : OpenXmlCompositeElement
     {
         /// <summary>
@@ -310,6 +309,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "extLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.AddElement<ExtensionListModify>()
 .AddAttribute(0, "mod", a => a.Modify);
         }
@@ -345,10 +345,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description>ExtensionList &lt;p14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MediaTrim), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MediaFade), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MediaBookmarkList), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class Media : OpenXmlCompositeElement
     {
         /// <summary>
@@ -413,6 +409,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "media");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<MediaTrim>();
+            builder.AddChild<MediaFade>();
+            builder.AddChild<MediaBookmarkList>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Media>()
 .AddAttribute(19, "embed", a => a.Embed)
 .AddAttribute(19, "link", a => a.Link);
@@ -1349,7 +1349,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SectionOld &lt;p14:section></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SectionOld), FileFormatVersions.Office2010)]
     public partial class SectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1388,6 +1387,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sectionPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SectionOld>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1412,7 +1412,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Section &lt;p14:section></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Section), FileFormatVersions.Office2010)]
     public partial class SectionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1451,6 +1450,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sectionLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Section>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1517,12 +1517,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
     public partial class LaserColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1561,6 +1555,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "laserClr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
         }
 
         /// <summary>
@@ -1794,7 +1794,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TracePointList &lt;p14:tracePtLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TracePointList), FileFormatVersions.Office2010)]
     public partial class LaserTraceList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1833,6 +1832,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "laserTraceLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TracePointList>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1948,13 +1948,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NullEventRecord &lt;p14:nullEvt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TriggerEventRecord), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(PlayEventRecord), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(StopEventRecord), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(PauseEventRecord), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ResumeEventRecord), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SeekEventRecord), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NullEventRecord), FileFormatVersions.Office2010)]
     public partial class ShowEventRecordList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1993,6 +1986,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "showEvtLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TriggerEventRecord>();
+            builder.AddChild<PlayEventRecord>();
+            builder.AddChild<StopEventRecord>();
+            builder.AddChild<PauseEventRecord>();
+            builder.AddChild<ResumeEventRecord>();
+            builder.AddChild<SeekEventRecord>();
+            builder.AddChild<NullEventRecord>();
         }
 
         /// <summary>
@@ -2119,9 +2119,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2210,6 +2207,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "cNvPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2288,8 +2288,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList &lt;a14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
     public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2338,6 +2336,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "cNvContentPartPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             builder.AddElement<NonVisualInkContentPartProperties>()
 .AddAttribute(0, "isComment", a => a.IsComment);
         }
@@ -2398,14 +2398,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList &lt;p:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.AudioFromFile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.VideoFromFile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList))]
     public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2464,6 +2456,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "nvPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromCD>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.WaveAudioFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.VideoFromFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.QuickTimeFromFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
 .AddAttribute(0, "isPhoto", a => a.IsPhoto)
 .AddAttribute(0, "userDrawn", a => a.UserDrawn);
@@ -2668,7 +2668,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>MediaBookmark &lt;p14:bmk></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MediaBookmark), FileFormatVersions.Office2010)]
     public partial class MediaBookmarkList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2707,6 +2706,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "bmkLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<MediaBookmark>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2731,7 +2731,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Presentation.Extension &lt;p:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2770,6 +2769,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "extLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2800,7 +2800,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;p14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class SectionOld : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2869,6 +2868,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "section");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<SectionOld>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "slideIdLst", a => a.SlideIdList, aBuilder =>
@@ -2957,7 +2957,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (214748364
     ///   <item><description>SectionSlideIdListEntry &lt;p14:sldId></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SectionSlideIdListEntry), FileFormatVersions.Office2010)]
     public partial class SectionSlideIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2996,6 +2995,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (214748364
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sldIdLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SectionSlideIdListEntry>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3021,8 +3021,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (214748364
     ///   <item><description>ExtensionList &lt;p14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SectionSlideIdList), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class Section : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3081,6 +3079,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (214748364
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "section");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SectionSlideIdList>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Section>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -3208,7 +3208,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>TracePoint &lt;p14:tracePt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TracePoint), FileFormatVersions.Office2010)]
     public partial class TracePointList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3247,6 +3246,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "tracePtLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TracePoint>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

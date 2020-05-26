@@ -9,6 +9,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     internal class ElementMetadataBuilder : ValidatorBuilder
     {
         private List<IMetadataBuilder<AttributeMetadata>> _attributes;
+        private HashSet<IMetadataBuilder<ElementLookup.ElementChild>> _children;
         private byte _nsId;
         private string _localName;
 
@@ -27,6 +28,17 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             _localName = localName;
         }
 
+        public void AddChild<T>()
+            where T : OpenXmlElement, new()
+        {
+            if (_children is null)
+            {
+                _children = new HashSet<IMetadataBuilder<ElementLookup.ElementChild>>();
+            }
+
+            _children.Add(new KnownChild<T>());
+        }
+
         public FileFormatVersions Availability { get; set; } = FileFormatVersions.Office2007;
 
         public void Add(IMetadataBuilder<AttributeMetadata> builder)
@@ -42,8 +54,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         public ElementMetadata Build()
         {
             var schema = _localName is null ? null : new SchemaAttrAttribute(_nsId, _localName);
+            var lookup = _children is null ? ElementLookup.Empty : new ElementLookup(_children);
 
-            return new ElementMetadata(BuildAttributes(), new ValidatorCollection(ToArray()), Availability, schema);
+            return new ElementMetadata(BuildAttributes(), new ValidatorCollection(ToArray()), Availability, schema, lookup);
         }
 
         private AttributeMetadata[] BuildAttributes()
@@ -61,6 +74,22 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             }
 
             return attributes;
+        }
+
+        private class KnownChild<T> : IMetadataBuilder<ElementLookup.ElementChild>
+            where T : OpenXmlElement, new()
+        {
+            public ElementLookup.ElementChild Build() => new ElementChild2(ElementMetadata.Create<T>());
+
+            private class ElementChild2 : ElementLookup.ElementChild
+            {
+                public ElementChild2(ElementMetadata metadata)
+                    : base(typeof(T), metadata.Schema.NamespaceId, metadata.Schema.Tag)
+                {
+                }
+
+                public override OpenXmlElement Create() => new T();
+            }
         }
     }
 }

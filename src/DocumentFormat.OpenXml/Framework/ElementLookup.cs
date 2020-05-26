@@ -1,8 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -15,22 +17,57 @@ namespace DocumentFormat.OpenXml.Framework
     /// </summary>
     internal class ElementLookup
     {
-        private static readonly ElementLookup Empty = new ElementLookup(null);
+        public static ElementLookup Parts { get; } = CreatePartLookup(typeof(OpenXmlPartRootElement), PackageCache.Cache.GetFactory<OpenXmlElement>);
 
-        private readonly List<ElementChild> _lookup;
+        public static readonly ElementLookup Empty = new ElementLookup(Array.Empty<ElementChild>());
 
-        private ElementLookup(List<ElementChild> lookup)
+        private ElementChild[] _data;
+        private IEnumerable<IMetadataBuilder<ElementChild>> _providers;
+
+        public ElementLookup(IEnumerable<ElementChild> lookup)
         {
-            _lookup = lookup;
+            var array = lookup.ToArray();
+
+            Array.Sort(array, ElementChildNameComparer.Instance);
+
+            _data = array;
         }
 
-        public int Count => _lookup?.Count ?? 0;
+        public ElementLookup(IEnumerable<IMetadataBuilder<ElementChild>> providers)
+        {
+            _providers = providers;
+        }
 
-        public IEnumerable<ElementChild> Elements => _lookup ?? Enumerable.Empty<ElementChild>();
+        private ElementChild[] Lookup
+        {
+            get
+            {
+                if (_data is null)
+                {
+                    lock (Empty)
+                    {
+                        if (_data is null)
+                        {
+                            var data = _providers.Select(b => b.Build()).ToArray();
+
+                            Array.Sort(data, ElementChildNameComparer.Instance);
+
+                            _data = data;
+                        }
+                    }
+                }
+
+                return _data;
+            }
+        }
+
+        public int Count => Lookup.Length;
+
+        public IEnumerable<ElementChild> Elements => Lookup;
 
         public bool Contains(byte id, string name)
         {
-            foreach (var child in _lookup)
+            foreach (var child in Lookup)
             {
                 if (child.NamespaceId == id && object.Equals(child.Name, name))
                 {
@@ -43,35 +80,35 @@ namespace DocumentFormat.OpenXml.Framework
 
         public OpenXmlElement Create(byte id, string name)
         {
-            if (_lookup == null)
+            if (Lookup.Length == 0)
             {
                 return null;
             }
 
             // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so using a sorted
             // list to store them with a binary search improves overall performance.
-            var idx = _lookup.BinarySearch(new ElementChild(id, name), ElementChildNameComparer.Instance);
+            var idx = Array.BinarySearch(Lookup, new ElementChild(null, id, name), ElementChildNameComparer.Instance);
 
             if (idx < 0)
             {
                 return null;
             }
 
-            return _lookup[idx].Create();
+            return Lookup[idx].Create();
         }
 
-        public static ElementLookup CreateLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)
+        private static ElementLookup CreatePartLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)
         {
             List<ElementChild> lookup = null;
 
-            foreach (var child in GetChildTypes(type))
+            foreach (var child in GetAllRootElements(type))
             {
                 if (lookup == null)
                 {
                     lookup = new List<ElementChild>();
                 }
 
-                var key = new ElementChild(child, activatorFactory(child));
+                var key = new ActivatorElementChild(child, activatorFactory(child));
 
                 lookup.Add(key);
             }
@@ -81,27 +118,7 @@ namespace DocumentFormat.OpenXml.Framework
                 return Empty;
             }
 
-            lookup.Sort(ElementChildNameComparer.Instance);
-
             return new ElementLookup(lookup);
-        }
-
-        /// <summary>
-        /// Gets the elements that can be created for a given type. If <paramref name="type"/> is <see cref="OpenXmlPartRootElement"/> this will return
-        /// all the root elements contained in the assembly.
-        /// </summary>
-        /// <param name="type">The type to return child types.</param>
-        /// <returns>A collection of types that the supplied type can create.</returns>
-        private static IEnumerable<Type> GetChildTypes(Type type)
-        {
-            if (typeof(OpenXmlPartRootElement) == type)
-            {
-                return GetAllRootElements(type);
-            }
-            else
-            {
-                return GetElementChildTypes(type);
-            }
         }
 
         private static IEnumerable<Type> GetAllRootElements(Type type)
@@ -113,24 +130,6 @@ namespace DocumentFormat.OpenXml.Framework
                 if (!elementType.GetTypeInfo().IsAbstract && type.GetTypeInfo().IsAssignableFrom(elementType.GetTypeInfo()))
                 {
                     yield return elementType;
-                }
-            }
-        }
-
-        private static IEnumerable<Type> GetElementChildTypes(Type type)
-        {
-            // We need to include inherited attributes as some of the elements are abstract bases that other
-            // elements build on top of.
-            foreach (var attribute in type.GetTypeInfo().GetCustomAttributes(inherit: true))
-            {
-                if (attribute is ChildElementInfoAttribute child)
-                {
-                    if (!typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(child.ElementType.GetTypeInfo()))
-                    {
-                        throw new InvalidOperationException($"{child} must derive from OpenXmlElement");
-                    }
-
-                    yield return child.ElementType;
                 }
             }
         }
@@ -157,14 +156,45 @@ namespace DocumentFormat.OpenXml.Framework
         }
 
         [DebuggerDisplay("{Namespace}:{Name}")]
-        public readonly struct ElementChild
+        public class ElementChild
+        {
+            public ElementChild(Type type, byte nsId, string name)
+            {
+                Type = type;
+                NamespaceId = nsId;
+                Name = name;
+            }
+
+            public Type Type { get; }
+
+            public byte NamespaceId { get; }
+
+            public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
+
+            public string Name { get; }
+
+            public virtual OpenXmlElement Create() => throw new NotImplementedException();
+        }
+
+        private class ActivatorElementChild : ElementChild
         {
             private readonly Func<OpenXmlElement> _activator;
 
-            public ElementChild(Type child, Func<OpenXmlElement> activator)
+            public ActivatorElementChild(Type child, Func<OpenXmlElement> activator)
+                : this(child, GetSchema(child, activator))
             {
                 _activator = activator;
+            }
 
+            private ActivatorElementChild(Type child, SchemaAttrAttribute schema)
+                : base(child, schema.NamespaceId, schema.Tag)
+            {
+            }
+
+            public override OpenXmlElement Create() => _activator();
+
+            private static SchemaAttrAttribute GetSchema(Type child, Func<OpenXmlElement> activator)
+            {
                 var schema = child.GetTypeInfo().GetCustomAttribute<SchemaAttrAttribute>();
 
                 if (schema is null)
@@ -179,29 +209,8 @@ namespace DocumentFormat.OpenXml.Framework
                     }
                 }
 
-                Type = child;
-                NamespaceId = schema.NamespaceId;
-                Name = schema.Tag;
+                return schema;
             }
-
-            public ElementChild(byte ns, string name)
-            {
-                _activator = null;
-
-                Type = null;
-                NamespaceId = ns;
-                Name = name;
-            }
-
-            public Type Type { get; }
-
-            public byte NamespaceId { get; }
-
-            public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
-
-            public string Name { get; }
-
-            public OpenXmlElement Create() => _activator();
         }
     }
 }

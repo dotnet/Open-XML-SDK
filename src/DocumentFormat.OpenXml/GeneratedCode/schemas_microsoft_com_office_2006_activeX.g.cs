@@ -23,7 +23,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     ///   <item><description>ActiveXObjectProperty &lt;ax:ocxPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ActiveXObjectProperty))]
     public partial class ActiveXControlData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -114,6 +113,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
             base.ConfigureMetadata(builder);
             builder.SetSchema(35, "ocx");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ActiveXObjectProperty>();
             builder.AddElement<ActiveXControlData>()
 .AddAttribute(35, "classid", a => a.ActiveXControlClassId, aBuilder =>
 {
@@ -150,8 +150,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SharedComPicture &lt;ax:picture></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SharedComFont))]
-    [ChildElementInfo(typeof(SharedComPicture))]
     public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -216,6 +214,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(35, "ocxPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SharedComFont>();
+            builder.AddChild<SharedComPicture>();
             builder.AddElement<ActiveXObjectProperty>()
 .AddAttribute(35, "name", a => a.Name, aBuilder =>
 {
@@ -276,7 +276,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ActiveXObjectProperty &lt;ax:ocxPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ActiveXObjectProperty))]
     public partial class SharedComFont : OpenXmlCompositeElement
     {
         /// <summary>
@@ -341,6 +340,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(35, "font");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ActiveXObjectProperty>();
             builder.AddElement<SharedComFont>()
 .AddAttribute(35, "persistence", a => a.Persistence)
 .AddAttribute(19, "id", a => a.Id);

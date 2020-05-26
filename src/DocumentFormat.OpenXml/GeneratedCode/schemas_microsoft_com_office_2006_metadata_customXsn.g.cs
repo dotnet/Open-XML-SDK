@@ -26,10 +26,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     ///   <item><description>Scope &lt;ntns:xsnScope></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(XsnLocation))]
-    [ChildElementInfo(typeof(CachedView))]
-    [ChildElementInfo(typeof(OpenByDefault))]
-    [ChildElementInfo(typeof(Scope))]
     public partial class CustomXsn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -68,6 +64,10 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "customXsn");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<XsnLocation>();
+            builder.AddChild<CachedView>();
+            builder.AddChild<OpenByDefault>();
+            builder.AddChild<Scope>();
         }
 
         /// <summary>

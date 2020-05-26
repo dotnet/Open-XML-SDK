@@ -27,9 +27,6 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatId))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
     public partial class PivotSource : OpenXmlCompositeElement
     {
         /// <summary>
@@ -68,6 +65,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "pivotSource");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FormatId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
         }
 
         /// <summary>
@@ -198,21 +198,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -261,6 +246,21 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "spPr");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -336,8 +336,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ManualLayout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
     public partial class Layout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -376,6 +374,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "layout");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
         }
 
         /// <summary>
@@ -427,7 +427,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>SequenceOfReferences &lt;c15:sqref></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
     public partial class FullReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -466,6 +465,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "fullRef");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<SequenceOfReferences>();
         }
 
         /// <summary>
@@ -503,7 +503,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>SequenceOfReferences &lt;c15:sqref></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
     public partial class LevelReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -542,6 +541,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "levelRef");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<SequenceOfReferences>();
         }
 
         /// <summary>
@@ -579,7 +579,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>SequenceOfReferences &lt;c15:sqref></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
     public partial class FormulaReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -618,6 +617,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "formulaRef");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<SequenceOfReferences>();
         }
 
         /// <summary>
@@ -655,7 +655,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ChartText &lt;c15:tx></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartText), FileFormatVersions.Office2013)]
     public partial class FilteredSeriesTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -694,6 +693,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredSeriesTitle");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<ChartText>();
         }
 
         /// <summary>
@@ -731,7 +731,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>AxisDataSourceType &lt;c15:cat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AxisDataSourceType), FileFormatVersions.Office2013)]
     public partial class FilteredCategoryTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -770,6 +769,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredCategoryTitle");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<AxisDataSourceType>();
         }
 
         /// <summary>
@@ -807,7 +807,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>AreaChartSeries &lt;c15:ser></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AreaChartSeries), FileFormatVersions.Office2013)]
     public partial class FilteredAreaSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -846,6 +845,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredAreaSeries");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<AreaChartSeries>();
         }
 
         /// <summary>
@@ -883,7 +883,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>BarChartSeries &lt;c15:ser></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BarChartSeries), FileFormatVersions.Office2013)]
     public partial class FilteredBarSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -922,6 +921,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredBarSeries");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<BarChartSeries>();
         }
 
         /// <summary>
@@ -959,7 +959,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>BubbleChartSeries &lt;c15:ser></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BubbleChartSeries), FileFormatVersions.Office2013)]
     public partial class FilteredBubbleSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -998,6 +997,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredBubbleSeries");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<BubbleChartSeries>();
         }
 
         /// <summary>
@@ -1035,7 +1035,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>LineChartSeries &lt;c15:ser></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LineChartSeries), FileFormatVersions.Office2013)]
     public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1074,6 +1073,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredLineSeries");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<LineChartSeries>();
         }
 
         /// <summary>
@@ -1111,7 +1111,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PieChartSeries &lt;c15:ser></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PieChartSeries), FileFormatVersions.Office2013)]
     public partial class FilteredPieSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1150,6 +1149,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredPieSeries");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<PieChartSeries>();
         }
 
         /// <summary>
@@ -1187,7 +1187,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>RadarChartSeries &lt;c15:ser></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RadarChartSeries), FileFormatVersions.Office2013)]
     public partial class FilteredRadarSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1226,6 +1225,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredRadarSeries");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<RadarChartSeries>();
         }
 
         /// <summary>
@@ -1263,7 +1263,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ScatterChartSeries &lt;c15:ser></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ScatterChartSeries), FileFormatVersions.Office2013)]
     public partial class FilteredScatterSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1302,6 +1301,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredScatterSeries");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<ScatterChartSeries>();
         }
 
         /// <summary>
@@ -1339,7 +1339,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>SurfaceChartSeries &lt;c15:ser></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SurfaceChartSeries), FileFormatVersions.Office2013)]
     public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1378,6 +1377,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredSurfaceSeries");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<SurfaceChartSeries>();
         }
 
         /// <summary>
@@ -1416,8 +1416,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DataLabelsRangeChache &lt;c15:dlblRangeCache></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DataLabelsRangeChache), FileFormatVersions.Office2013)]
     public partial class DataLabelsRange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1456,6 +1454,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "datalabelsRange");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<Formula>();
+            builder.AddChild<DataLabelsRangeChache>();
         }
 
         /// <summary>
@@ -1507,7 +1507,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>CategoryFilterException &lt;c15:categoryFilterException></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CategoryFilterException), FileFormatVersions.Office2013)]
     public partial class CategoryFilterExceptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1546,6 +1545,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "categoryFilterExceptions");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<CategoryFilterException>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1570,7 +1570,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DataLabelFieldTableEntry &lt;c15:dlblFTEntry></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DataLabelFieldTableEntry), FileFormatVersions.Office2013)]
     public partial class DataLabelFieldTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1609,6 +1608,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "dlblFieldTable");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DataLabelFieldTableEntry>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1817,9 +1817,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.StringLiteral &lt;c:strLit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.RichText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral))]
     public partial class ChartText : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1858,6 +1855,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "tx");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RichText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
         }
 
         /// <summary>
@@ -1926,7 +1926,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
     public partial class LeaderLines : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1965,6 +1964,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "leaderLines");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
         }
 
         /// <summary>
@@ -2120,11 +2120,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.StringLiteral &lt;c:strLit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral))]
     public partial class AxisDataSourceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2163,6 +2158,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "cat");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
         }
 
         /// <summary>
@@ -2272,20 +2272,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Shape))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList))]
     public partial class BarChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2324,6 +2310,20 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList>();
         }
 
         /// <summary>
@@ -2458,20 +2458,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList))]
     public partial class LineChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2510,6 +2496,20 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList>();
         }
 
         /// <summary>
@@ -2643,19 +2643,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.XValues))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.YValues))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList))]
     public partial class ScatterChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2694,6 +2681,19 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.XValues>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.YValues>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList>();
         }
 
         /// <summary>
@@ -2812,18 +2812,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList))]
     public partial class AreaChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2862,6 +2850,18 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList>();
         }
 
         /// <summary>
@@ -2978,17 +2978,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Explosion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList))]
     public partial class PieChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3027,6 +3016,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList>();
         }
 
         /// <summary>
@@ -3159,21 +3159,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.XValues))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.YValues))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSize))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList))]
     public partial class BubbleChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3212,6 +3197,21 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.XValues>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.YValues>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList>();
         }
 
         /// <summary>
@@ -3344,17 +3344,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList))]
     public partial class RadarChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3393,6 +3382,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList>();
         }
 
         /// <summary>
@@ -3519,15 +3519,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList))]
     public partial class SurfaceChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3566,6 +3557,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>();
         }
 
         /// <summary>
@@ -3855,9 +3855,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList))]
     public abstract partial class StringDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3894,6 +3891,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList>();
         }
 
         /// <summary>
@@ -3964,10 +3964,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Symbol))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
     public partial class Marker : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4006,6 +4002,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "marker");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Size>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
         }
 
         /// <summary>
@@ -4100,22 +4100,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList))]
     public partial class DataLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4154,6 +4138,22 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "dLbl");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowPercent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Separator>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList>();
         }
 
         /// <summary>
@@ -4227,13 +4227,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DataLabel &lt;c15:dLbl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(Explosion), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(InvertIfNegativeBoolean), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(Bubble3D), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(Marker), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DataLabel), FileFormatVersions.Office2013)]
     public partial class CategoryFilterException : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4272,6 +4265,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "categoryFilterException");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<SequenceOfReferences>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<Explosion>();
+            builder.AddChild<InvertIfNegativeBoolean>();
+            builder.AddChild<Bubble3D>();
+            builder.AddChild<Marker>();
+            builder.AddChild<DataLabel>();
         }
 
         /// <summary>
@@ -4395,9 +4395,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DataLabelFieldTableCache &lt;c15:dlblFieldTableCache></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TextFieldGuid), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DataLabelFieldTableCache), FileFormatVersions.Office2013)]
     public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4436,6 +4433,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "dlblFTEntry");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<TextFieldGuid>();
+            builder.AddChild<Formula>();
+            builder.AddChild<DataLabelFieldTableCache>();
         }
 
         /// <summary>

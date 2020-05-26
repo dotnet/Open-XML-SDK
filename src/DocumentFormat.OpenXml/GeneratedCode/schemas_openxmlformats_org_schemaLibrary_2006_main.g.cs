@@ -24,7 +24,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     ///   <item><description>Schema &lt;sl:schema></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Schema))]
     public partial class SchemaLibrary : OpenXmlCompositeElement
     {
         /// <summary>
@@ -63,6 +62,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
             base.ConfigureMetadata(builder);
             builder.SetSchema(25, "schemaLibrary");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Schema>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

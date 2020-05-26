@@ -32,9 +32,6 @@ namespace DocumentFormat.OpenXml.Drawing
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StartTime))]
-    [ChildElementInfo(typeof(EndTime))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class AudioFromCD : OpenXmlCompositeElement
     {
         /// <summary>
@@ -73,6 +70,9 @@ namespace DocumentFormat.OpenXml.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "audioCd");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StartTime>();
+            builder.AddChild<EndTime>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -248,7 +248,6 @@ namespace DocumentFormat.OpenXml.Drawing
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class AudioFromFile : OpenXmlCompositeElement
     {
         /// <summary>
@@ -300,6 +299,7 @@ namespace DocumentFormat.OpenXml.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "audioFile");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<AudioFromFile>()
 .AddAttribute(19, "link", a => a.Link, aBuilder =>
 {
@@ -342,7 +342,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class VideoFromFile : OpenXmlCompositeElement
     {
         /// <summary>
@@ -394,6 +393,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "videoFile");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<VideoFromFile>()
 .AddAttribute(19, "link", a => a.Link, aBuilder =>
 {
@@ -436,7 +436,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class QuickTimeFromFile : OpenXmlCompositeElement
     {
         /// <summary>
@@ -488,6 +487,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "quickTimeFile");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<QuickTimeFromFile>()
 .AddAttribute(19, "link", a => a.Link, aBuilder =>
 {
@@ -1488,34 +1488,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>InverseGamma &lt;a:invGamma></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tint))]
-    [ChildElementInfo(typeof(Shade))]
-    [ChildElementInfo(typeof(Complement))]
-    [ChildElementInfo(typeof(Inverse))]
-    [ChildElementInfo(typeof(Gray))]
-    [ChildElementInfo(typeof(Alpha))]
-    [ChildElementInfo(typeof(AlphaOffset))]
-    [ChildElementInfo(typeof(AlphaModulation))]
-    [ChildElementInfo(typeof(Hue))]
-    [ChildElementInfo(typeof(HueOffset))]
-    [ChildElementInfo(typeof(HueModulation))]
-    [ChildElementInfo(typeof(Saturation))]
-    [ChildElementInfo(typeof(SaturationOffset))]
-    [ChildElementInfo(typeof(SaturationModulation))]
-    [ChildElementInfo(typeof(Luminance))]
-    [ChildElementInfo(typeof(LuminanceOffset))]
-    [ChildElementInfo(typeof(LuminanceModulation))]
-    [ChildElementInfo(typeof(Red))]
-    [ChildElementInfo(typeof(RedOffset))]
-    [ChildElementInfo(typeof(RedModulation))]
-    [ChildElementInfo(typeof(Green))]
-    [ChildElementInfo(typeof(GreenOffset))]
-    [ChildElementInfo(typeof(GreenModulation))]
-    [ChildElementInfo(typeof(Blue))]
-    [ChildElementInfo(typeof(BlueOffset))]
-    [ChildElementInfo(typeof(BlueModulation))]
-    [ChildElementInfo(typeof(Gamma))]
-    [ChildElementInfo(typeof(InverseGamma))]
     public partial class RgbColorModelPercentage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1584,6 +1556,34 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "scrgbClr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Tint>();
+            builder.AddChild<Shade>();
+            builder.AddChild<Complement>();
+            builder.AddChild<Inverse>();
+            builder.AddChild<Gray>();
+            builder.AddChild<Alpha>();
+            builder.AddChild<AlphaOffset>();
+            builder.AddChild<AlphaModulation>();
+            builder.AddChild<Hue>();
+            builder.AddChild<HueOffset>();
+            builder.AddChild<HueModulation>();
+            builder.AddChild<Saturation>();
+            builder.AddChild<SaturationOffset>();
+            builder.AddChild<SaturationModulation>();
+            builder.AddChild<Luminance>();
+            builder.AddChild<LuminanceOffset>();
+            builder.AddChild<LuminanceModulation>();
+            builder.AddChild<Red>();
+            builder.AddChild<RedOffset>();
+            builder.AddChild<RedModulation>();
+            builder.AddChild<Green>();
+            builder.AddChild<GreenOffset>();
+            builder.AddChild<GreenModulation>();
+            builder.AddChild<Blue>();
+            builder.AddChild<BlueOffset>();
+            builder.AddChild<BlueModulation>();
+            builder.AddChild<Gamma>();
+            builder.AddChild<InverseGamma>();
             builder.AddElement<RgbColorModelPercentage>()
 .AddAttribute(0, "r", a => a.RedPortion, aBuilder =>
 {
@@ -1681,34 +1681,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>InverseGamma &lt;a:invGamma></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tint))]
-    [ChildElementInfo(typeof(Shade))]
-    [ChildElementInfo(typeof(Complement))]
-    [ChildElementInfo(typeof(Inverse))]
-    [ChildElementInfo(typeof(Gray))]
-    [ChildElementInfo(typeof(Alpha))]
-    [ChildElementInfo(typeof(AlphaOffset))]
-    [ChildElementInfo(typeof(AlphaModulation))]
-    [ChildElementInfo(typeof(Hue))]
-    [ChildElementInfo(typeof(HueOffset))]
-    [ChildElementInfo(typeof(HueModulation))]
-    [ChildElementInfo(typeof(Saturation))]
-    [ChildElementInfo(typeof(SaturationOffset))]
-    [ChildElementInfo(typeof(SaturationModulation))]
-    [ChildElementInfo(typeof(Luminance))]
-    [ChildElementInfo(typeof(LuminanceOffset))]
-    [ChildElementInfo(typeof(LuminanceModulation))]
-    [ChildElementInfo(typeof(Red))]
-    [ChildElementInfo(typeof(RedOffset))]
-    [ChildElementInfo(typeof(RedModulation))]
-    [ChildElementInfo(typeof(Green))]
-    [ChildElementInfo(typeof(GreenOffset))]
-    [ChildElementInfo(typeof(GreenModulation))]
-    [ChildElementInfo(typeof(Blue))]
-    [ChildElementInfo(typeof(BlueOffset))]
-    [ChildElementInfo(typeof(BlueModulation))]
-    [ChildElementInfo(typeof(Gamma))]
-    [ChildElementInfo(typeof(InverseGamma))]
     public partial class RgbColorModelHex : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1770,6 +1742,34 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "srgbClr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Tint>();
+            builder.AddChild<Shade>();
+            builder.AddChild<Complement>();
+            builder.AddChild<Inverse>();
+            builder.AddChild<Gray>();
+            builder.AddChild<Alpha>();
+            builder.AddChild<AlphaOffset>();
+            builder.AddChild<AlphaModulation>();
+            builder.AddChild<Hue>();
+            builder.AddChild<HueOffset>();
+            builder.AddChild<HueModulation>();
+            builder.AddChild<Saturation>();
+            builder.AddChild<SaturationOffset>();
+            builder.AddChild<SaturationModulation>();
+            builder.AddChild<Luminance>();
+            builder.AddChild<LuminanceOffset>();
+            builder.AddChild<LuminanceModulation>();
+            builder.AddChild<Red>();
+            builder.AddChild<RedOffset>();
+            builder.AddChild<RedModulation>();
+            builder.AddChild<Green>();
+            builder.AddChild<GreenOffset>();
+            builder.AddChild<GreenModulation>();
+            builder.AddChild<Blue>();
+            builder.AddChild<BlueOffset>();
+            builder.AddChild<BlueModulation>();
+            builder.AddChild<Gamma>();
+            builder.AddChild<InverseGamma>();
             builder.AddElement<RgbColorModelHex>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -1865,34 +1865,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>InverseGamma &lt;a:invGamma></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tint))]
-    [ChildElementInfo(typeof(Shade))]
-    [ChildElementInfo(typeof(Complement))]
-    [ChildElementInfo(typeof(Inverse))]
-    [ChildElementInfo(typeof(Gray))]
-    [ChildElementInfo(typeof(Alpha))]
-    [ChildElementInfo(typeof(AlphaOffset))]
-    [ChildElementInfo(typeof(AlphaModulation))]
-    [ChildElementInfo(typeof(Hue))]
-    [ChildElementInfo(typeof(HueOffset))]
-    [ChildElementInfo(typeof(HueModulation))]
-    [ChildElementInfo(typeof(Saturation))]
-    [ChildElementInfo(typeof(SaturationOffset))]
-    [ChildElementInfo(typeof(SaturationModulation))]
-    [ChildElementInfo(typeof(Luminance))]
-    [ChildElementInfo(typeof(LuminanceOffset))]
-    [ChildElementInfo(typeof(LuminanceModulation))]
-    [ChildElementInfo(typeof(Red))]
-    [ChildElementInfo(typeof(RedOffset))]
-    [ChildElementInfo(typeof(RedModulation))]
-    [ChildElementInfo(typeof(Green))]
-    [ChildElementInfo(typeof(GreenOffset))]
-    [ChildElementInfo(typeof(GreenModulation))]
-    [ChildElementInfo(typeof(Blue))]
-    [ChildElementInfo(typeof(BlueOffset))]
-    [ChildElementInfo(typeof(BlueModulation))]
-    [ChildElementInfo(typeof(Gamma))]
-    [ChildElementInfo(typeof(InverseGamma))]
     public partial class HslColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1961,6 +1933,34 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "hslClr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Tint>();
+            builder.AddChild<Shade>();
+            builder.AddChild<Complement>();
+            builder.AddChild<Inverse>();
+            builder.AddChild<Gray>();
+            builder.AddChild<Alpha>();
+            builder.AddChild<AlphaOffset>();
+            builder.AddChild<AlphaModulation>();
+            builder.AddChild<Hue>();
+            builder.AddChild<HueOffset>();
+            builder.AddChild<HueModulation>();
+            builder.AddChild<Saturation>();
+            builder.AddChild<SaturationOffset>();
+            builder.AddChild<SaturationModulation>();
+            builder.AddChild<Luminance>();
+            builder.AddChild<LuminanceOffset>();
+            builder.AddChild<LuminanceModulation>();
+            builder.AddChild<Red>();
+            builder.AddChild<RedOffset>();
+            builder.AddChild<RedModulation>();
+            builder.AddChild<Green>();
+            builder.AddChild<GreenOffset>();
+            builder.AddChild<GreenModulation>();
+            builder.AddChild<Blue>();
+            builder.AddChild<BlueOffset>();
+            builder.AddChild<BlueModulation>();
+            builder.AddChild<Gamma>();
+            builder.AddChild<InverseGamma>();
             builder.AddElement<HslColor>()
 .AddAttribute(0, "hue", a => a.HueValue, aBuilder =>
 {
@@ -2059,34 +2059,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>InverseGamma &lt;a:invGamma></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tint))]
-    [ChildElementInfo(typeof(Shade))]
-    [ChildElementInfo(typeof(Complement))]
-    [ChildElementInfo(typeof(Inverse))]
-    [ChildElementInfo(typeof(Gray))]
-    [ChildElementInfo(typeof(Alpha))]
-    [ChildElementInfo(typeof(AlphaOffset))]
-    [ChildElementInfo(typeof(AlphaModulation))]
-    [ChildElementInfo(typeof(Hue))]
-    [ChildElementInfo(typeof(HueOffset))]
-    [ChildElementInfo(typeof(HueModulation))]
-    [ChildElementInfo(typeof(Saturation))]
-    [ChildElementInfo(typeof(SaturationOffset))]
-    [ChildElementInfo(typeof(SaturationModulation))]
-    [ChildElementInfo(typeof(Luminance))]
-    [ChildElementInfo(typeof(LuminanceOffset))]
-    [ChildElementInfo(typeof(LuminanceModulation))]
-    [ChildElementInfo(typeof(Red))]
-    [ChildElementInfo(typeof(RedOffset))]
-    [ChildElementInfo(typeof(RedModulation))]
-    [ChildElementInfo(typeof(Green))]
-    [ChildElementInfo(typeof(GreenOffset))]
-    [ChildElementInfo(typeof(GreenModulation))]
-    [ChildElementInfo(typeof(Blue))]
-    [ChildElementInfo(typeof(BlueOffset))]
-    [ChildElementInfo(typeof(BlueModulation))]
-    [ChildElementInfo(typeof(Gamma))]
-    [ChildElementInfo(typeof(InverseGamma))]
     public partial class SystemColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2145,6 +2117,34 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "sysClr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Tint>();
+            builder.AddChild<Shade>();
+            builder.AddChild<Complement>();
+            builder.AddChild<Inverse>();
+            builder.AddChild<Gray>();
+            builder.AddChild<Alpha>();
+            builder.AddChild<AlphaOffset>();
+            builder.AddChild<AlphaModulation>();
+            builder.AddChild<Hue>();
+            builder.AddChild<HueOffset>();
+            builder.AddChild<HueModulation>();
+            builder.AddChild<Saturation>();
+            builder.AddChild<SaturationOffset>();
+            builder.AddChild<SaturationModulation>();
+            builder.AddChild<Luminance>();
+            builder.AddChild<LuminanceOffset>();
+            builder.AddChild<LuminanceModulation>();
+            builder.AddChild<Red>();
+            builder.AddChild<RedOffset>();
+            builder.AddChild<RedModulation>();
+            builder.AddChild<Green>();
+            builder.AddChild<GreenOffset>();
+            builder.AddChild<GreenModulation>();
+            builder.AddChild<Blue>();
+            builder.AddChild<BlueOffset>();
+            builder.AddChild<BlueModulation>();
+            builder.AddChild<Gamma>();
+            builder.AddChild<InverseGamma>();
             builder.AddElement<SystemColor>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -2239,34 +2239,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (3L) });
     ///   <item><description>InverseGamma &lt;a:invGamma></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tint))]
-    [ChildElementInfo(typeof(Shade))]
-    [ChildElementInfo(typeof(Complement))]
-    [ChildElementInfo(typeof(Inverse))]
-    [ChildElementInfo(typeof(Gray))]
-    [ChildElementInfo(typeof(Alpha))]
-    [ChildElementInfo(typeof(AlphaOffset))]
-    [ChildElementInfo(typeof(AlphaModulation))]
-    [ChildElementInfo(typeof(Hue))]
-    [ChildElementInfo(typeof(HueOffset))]
-    [ChildElementInfo(typeof(HueModulation))]
-    [ChildElementInfo(typeof(Saturation))]
-    [ChildElementInfo(typeof(SaturationOffset))]
-    [ChildElementInfo(typeof(SaturationModulation))]
-    [ChildElementInfo(typeof(Luminance))]
-    [ChildElementInfo(typeof(LuminanceOffset))]
-    [ChildElementInfo(typeof(LuminanceModulation))]
-    [ChildElementInfo(typeof(Red))]
-    [ChildElementInfo(typeof(RedOffset))]
-    [ChildElementInfo(typeof(RedModulation))]
-    [ChildElementInfo(typeof(Green))]
-    [ChildElementInfo(typeof(GreenOffset))]
-    [ChildElementInfo(typeof(GreenModulation))]
-    [ChildElementInfo(typeof(Blue))]
-    [ChildElementInfo(typeof(BlueOffset))]
-    [ChildElementInfo(typeof(BlueModulation))]
-    [ChildElementInfo(typeof(Gamma))]
-    [ChildElementInfo(typeof(InverseGamma))]
     public partial class SchemeColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2315,6 +2287,34 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (3L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "schemeClr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Tint>();
+            builder.AddChild<Shade>();
+            builder.AddChild<Complement>();
+            builder.AddChild<Inverse>();
+            builder.AddChild<Gray>();
+            builder.AddChild<Alpha>();
+            builder.AddChild<AlphaOffset>();
+            builder.AddChild<AlphaModulation>();
+            builder.AddChild<Hue>();
+            builder.AddChild<HueOffset>();
+            builder.AddChild<HueModulation>();
+            builder.AddChild<Saturation>();
+            builder.AddChild<SaturationOffset>();
+            builder.AddChild<SaturationModulation>();
+            builder.AddChild<Luminance>();
+            builder.AddChild<LuminanceOffset>();
+            builder.AddChild<LuminanceModulation>();
+            builder.AddChild<Red>();
+            builder.AddChild<RedOffset>();
+            builder.AddChild<RedModulation>();
+            builder.AddChild<Green>();
+            builder.AddChild<GreenOffset>();
+            builder.AddChild<GreenModulation>();
+            builder.AddChild<Blue>();
+            builder.AddChild<BlueOffset>();
+            builder.AddChild<BlueModulation>();
+            builder.AddChild<Gamma>();
+            builder.AddChild<InverseGamma>();
             builder.AddElement<SchemeColor>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -2405,34 +2405,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>InverseGamma &lt;a:invGamma></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tint))]
-    [ChildElementInfo(typeof(Shade))]
-    [ChildElementInfo(typeof(Complement))]
-    [ChildElementInfo(typeof(Inverse))]
-    [ChildElementInfo(typeof(Gray))]
-    [ChildElementInfo(typeof(Alpha))]
-    [ChildElementInfo(typeof(AlphaOffset))]
-    [ChildElementInfo(typeof(AlphaModulation))]
-    [ChildElementInfo(typeof(Hue))]
-    [ChildElementInfo(typeof(HueOffset))]
-    [ChildElementInfo(typeof(HueModulation))]
-    [ChildElementInfo(typeof(Saturation))]
-    [ChildElementInfo(typeof(SaturationOffset))]
-    [ChildElementInfo(typeof(SaturationModulation))]
-    [ChildElementInfo(typeof(Luminance))]
-    [ChildElementInfo(typeof(LuminanceOffset))]
-    [ChildElementInfo(typeof(LuminanceModulation))]
-    [ChildElementInfo(typeof(Red))]
-    [ChildElementInfo(typeof(RedOffset))]
-    [ChildElementInfo(typeof(RedModulation))]
-    [ChildElementInfo(typeof(Green))]
-    [ChildElementInfo(typeof(GreenOffset))]
-    [ChildElementInfo(typeof(GreenModulation))]
-    [ChildElementInfo(typeof(Blue))]
-    [ChildElementInfo(typeof(BlueOffset))]
-    [ChildElementInfo(typeof(BlueModulation))]
-    [ChildElementInfo(typeof(Gamma))]
-    [ChildElementInfo(typeof(InverseGamma))]
     public partial class PresetColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2481,6 +2453,34 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "prstClr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Tint>();
+            builder.AddChild<Shade>();
+            builder.AddChild<Complement>();
+            builder.AddChild<Inverse>();
+            builder.AddChild<Gray>();
+            builder.AddChild<Alpha>();
+            builder.AddChild<AlphaOffset>();
+            builder.AddChild<AlphaModulation>();
+            builder.AddChild<Hue>();
+            builder.AddChild<HueOffset>();
+            builder.AddChild<HueModulation>();
+            builder.AddChild<Saturation>();
+            builder.AddChild<SaturationOffset>();
+            builder.AddChild<SaturationModulation>();
+            builder.AddChild<Luminance>();
+            builder.AddChild<LuminanceOffset>();
+            builder.AddChild<LuminanceModulation>();
+            builder.AddChild<Red>();
+            builder.AddChild<RedOffset>();
+            builder.AddChild<RedModulation>();
+            builder.AddChild<Green>();
+            builder.AddChild<GreenOffset>();
+            builder.AddChild<GreenModulation>();
+            builder.AddChild<Blue>();
+            builder.AddChild<BlueOffset>();
+            builder.AddChild<BlueModulation>();
+            builder.AddChild<Gamma>();
+            builder.AddChild<InverseGamma>();
             builder.AddElement<PresetColor>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -2548,11 +2548,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BevelTop))]
-    [ChildElementInfo(typeof(BevelBottom))]
-    [ChildElementInfo(typeof(ExtrusionColor))]
-    [ChildElementInfo(typeof(ContourColor))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Shape3DType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2631,6 +2626,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "sp3d");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BevelTop>();
+            builder.AddChild<BevelBottom>();
+            builder.AddChild<ExtrusionColor>();
+            builder.AddChild<ContourColor>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Shape3DType>()
 .AddAttribute(0, "z", a => a.Z, aBuilder =>
 {
@@ -2832,7 +2832,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L
     ///   <item><description>FillToRectangle &lt;a:fillToRect></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FillToRectangle))]
     public partial class PathGradientFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2881,6 +2880,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "path");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FillToRectangle>();
             builder.AddElement<PathGradientFill>()
 .AddAttribute(0, "path", a => a.Path, aBuilder =>
 {
@@ -3027,7 +3027,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>FillRectangle &lt;a:fillRect></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FillRectangle))]
     public partial class Stretch : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3066,6 +3065,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "stretch");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FillRectangle>();
         }
 
         /// <summary>
@@ -3133,12 +3133,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class SolidFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3177,6 +3171,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "solidFill");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
         }
 
         /// <summary>
@@ -3293,10 +3293,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>TileRectangle &lt;a:tileRect></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GradientStopList))]
-    [ChildElementInfo(typeof(LinearGradientFill))]
-    [ChildElementInfo(typeof(PathGradientFill))]
-    [ChildElementInfo(typeof(TileRectangle))]
     public partial class GradientFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3355,6 +3351,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "gradFill");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<GradientStopList>();
+            builder.AddChild<LinearGradientFill>();
+            builder.AddChild<PathGradientFill>();
+            builder.AddChild<TileRectangle>();
             builder.AddElement<GradientFill>()
 .AddAttribute(0, "flip", a => a.Flip, aBuilder =>
 {
@@ -3410,10 +3410,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Stretch &lt;a:stretch></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Blip))]
-    [ChildElementInfo(typeof(SourceRectangle))]
-    [ChildElementInfo(typeof(Tile))]
-    [ChildElementInfo(typeof(Stretch))]
     public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3472,6 +3468,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "blipFill");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Blip>();
+            builder.AddChild<SourceRectangle>();
+            builder.AddChild<Tile>();
+            builder.AddChild<Stretch>();
             builder.AddElement<BlipFill>()
 .AddAttribute(0, "dpi", a => a.Dpi)
 .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
@@ -3535,8 +3535,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>BackgroundColor &lt;a:bgClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ForegroundColor))]
-    [ChildElementInfo(typeof(BackgroundColor))]
     public partial class PatternFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3585,6 +3583,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "pattFill");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ForegroundColor>();
+            builder.AddChild<BackgroundColor>();
             builder.AddElement<PatternFill>()
 .AddAttribute(0, "prst", a => a.Preset, aBuilder =>
 {
@@ -3941,36 +3941,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>TransformEffect &lt;a:xfrm></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EffectContainer))]
-    [ChildElementInfo(typeof(Effect))]
-    [ChildElementInfo(typeof(AlphaBiLevel))]
-    [ChildElementInfo(typeof(AlphaCeiling))]
-    [ChildElementInfo(typeof(AlphaFloor))]
-    [ChildElementInfo(typeof(AlphaInverse))]
-    [ChildElementInfo(typeof(AlphaModulationEffect))]
-    [ChildElementInfo(typeof(AlphaModulationFixed))]
-    [ChildElementInfo(typeof(AlphaOutset))]
-    [ChildElementInfo(typeof(AlphaReplace))]
-    [ChildElementInfo(typeof(BiLevel))]
-    [ChildElementInfo(typeof(Blend))]
-    [ChildElementInfo(typeof(Blur))]
-    [ChildElementInfo(typeof(ColorChange))]
-    [ChildElementInfo(typeof(ColorReplacement))]
-    [ChildElementInfo(typeof(Duotone))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(FillOverlay))]
-    [ChildElementInfo(typeof(Glow))]
-    [ChildElementInfo(typeof(Grayscale))]
-    [ChildElementInfo(typeof(Hsl))]
-    [ChildElementInfo(typeof(InnerShadow))]
-    [ChildElementInfo(typeof(LuminanceEffect))]
-    [ChildElementInfo(typeof(OuterShadow))]
-    [ChildElementInfo(typeof(PresetShadow))]
-    [ChildElementInfo(typeof(Reflection))]
-    [ChildElementInfo(typeof(RelativeOffset))]
-    [ChildElementInfo(typeof(SoftEdge))]
-    [ChildElementInfo(typeof(TintEffect))]
-    [ChildElementInfo(typeof(TransformEffect))]
     public abstract partial class EffectContainerType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4027,15 +3997,45 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<EffectContainer>();
+            builder.AddChild<Effect>();
+            builder.AddChild<AlphaBiLevel>();
+            builder.AddChild<AlphaCeiling>();
+            builder.AddChild<AlphaFloor>();
+            builder.AddChild<AlphaInverse>();
+            builder.AddChild<AlphaModulationEffect>();
+            builder.AddChild<AlphaModulationFixed>();
+            builder.AddChild<AlphaOutset>();
+            builder.AddChild<AlphaReplace>();
+            builder.AddChild<BiLevel>();
+            builder.AddChild<Blend>();
+            builder.AddChild<Blur>();
+            builder.AddChild<ColorChange>();
+            builder.AddChild<ColorReplacement>();
+            builder.AddChild<Duotone>();
+            builder.AddChild<Fill>();
+            builder.AddChild<FillOverlay>();
+            builder.AddChild<Glow>();
+            builder.AddChild<Grayscale>();
+            builder.AddChild<Hsl>();
+            builder.AddChild<InnerShadow>();
+            builder.AddChild<LuminanceEffect>();
+            builder.AddChild<OuterShadow>();
+            builder.AddChild<PresetShadow>();
+            builder.AddChild<Reflection>();
+            builder.AddChild<RelativeOffset>();
+            builder.AddChild<SoftEdge>();
+            builder.AddChild<TintEffect>();
+            builder.AddChild<TransformEffect>();
             builder.AddElement<EffectContainerType>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "name", a => a.Name, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
     }
 
@@ -4186,12 +4186,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class AlphaInverse : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4230,6 +4224,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "alphaInv");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
         }
 
         /// <summary>
@@ -4343,7 +4343,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>EffectContainer &lt;a:cont></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EffectContainer))]
     public partial class AlphaModulationEffect : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4382,6 +4381,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "alphaMod");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EffectContainer>();
         }
 
         /// <summary>
@@ -4581,7 +4581,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>EffectContainer &lt;a:cont></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EffectContainer))]
     public partial class Blend : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4630,6 +4629,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "blend");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EffectContainer>();
             builder.AddElement<Blend>()
 .AddAttribute(0, "blend", a => a.BlendMode, aBuilder =>
 {
@@ -4725,8 +4725,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>ColorTo &lt;a:clrTo></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorFrom))]
-    [ChildElementInfo(typeof(ColorTo))]
     public partial class ColorChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4775,6 +4773,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "clrChange");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ColorFrom>();
+            builder.AddChild<ColorTo>();
             builder.AddElement<ColorChange>()
 .AddAttribute(0, "useA", a => a.UseAlpha);
         }
@@ -4833,12 +4833,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class ColorReplacement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4877,6 +4871,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "clrRepl");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
         }
 
         /// <summary>
@@ -4995,12 +4995,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class Duotone : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5039,6 +5033,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "duotone");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5079,12 +5079,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>GroupFill &lt;a:grpFill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
     public partial class Fill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5123,6 +5117,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "fill");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
         }
 
         /// <summary>
@@ -5241,12 +5241,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>GroupFill &lt;a:grpFill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
     public partial class FillOverlay : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5295,6 +5289,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "fillOverlay");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
             builder.AddElement<FillOverlay>()
 .AddAttribute(0, "blend", a => a.Blend, aBuilder =>
 {
@@ -5419,12 +5419,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class Glow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5473,6 +5467,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "glow");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
             builder.AddElement<Glow>()
 .AddAttribute(0, "rad", a => a.Radius, aBuilder =>
 {
@@ -5689,12 +5689,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L)
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class InnerShadow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5763,6 +5757,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L)
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "innerShdw");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
             builder.AddElement<InnerShadow>()
 .AddAttribute(0, "blurRad", a => a.BlurRadius, aBuilder =>
 {
@@ -5948,12 +5948,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L)
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class OuterShadow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6082,6 +6076,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L)
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "outerShdw");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
             builder.AddElement<OuterShadow>()
 .AddAttribute(0, "blurRad", a => a.BlurRadius, aBuilder =>
 {
@@ -6228,12 +6228,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class PresetShadow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6302,6 +6296,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "prstShdw");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
             builder.AddElement<PresetShadow>()
 .AddAttribute(0, "prst", a => a.Preset, aBuilder =>
 {
@@ -6896,14 +6896,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>SoftEdge &lt;a:softEdge></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Blur))]
-    [ChildElementInfo(typeof(FillOverlay))]
-    [ChildElementInfo(typeof(Glow))]
-    [ChildElementInfo(typeof(InnerShadow))]
-    [ChildElementInfo(typeof(OuterShadow))]
-    [ChildElementInfo(typeof(PresetShadow))]
-    [ChildElementInfo(typeof(Reflection))]
-    [ChildElementInfo(typeof(SoftEdge))]
     public partial class EffectList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6942,6 +6934,14 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "effectLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Blur>();
+            builder.AddChild<FillOverlay>();
+            builder.AddChild<Glow>();
+            builder.AddChild<InnerShadow>();
+            builder.AddChild<OuterShadow>();
+            builder.AddChild<PresetShadow>();
+            builder.AddChild<Reflection>();
+            builder.AddChild<SoftEdge>();
         }
 
         /// <summary>
@@ -7082,12 +7082,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>PathList &lt;a:pathLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AdjustValueList))]
-    [ChildElementInfo(typeof(ShapeGuideList))]
-    [ChildElementInfo(typeof(AdjustHandleList))]
-    [ChildElementInfo(typeof(ConnectionSiteList))]
-    [ChildElementInfo(typeof(Rectangle))]
-    [ChildElementInfo(typeof(PathList))]
     public partial class CustomGeometry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7126,6 +7120,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "custGeom");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AdjustValueList>();
+            builder.AddChild<ShapeGuideList>();
+            builder.AddChild<AdjustHandleList>();
+            builder.AddChild<ConnectionSiteList>();
+            builder.AddChild<Rectangle>();
+            builder.AddChild<PathList>();
         }
 
         /// <summary>
@@ -7233,7 +7233,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>AdjustValueList &lt;a:avLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AdjustValueList))]
     public partial class PresetGeometry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7282,6 +7281,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "prstGeom");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AdjustValueList>();
             builder.AddElement<PresetGeometry>()
 .AddAttribute(0, "prst", a => a.Preset, aBuilder =>
 {
@@ -7325,7 +7325,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>AdjustValueList &lt;a:avLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AdjustValueList))]
     public partial class PresetTextWrap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7374,6 +7373,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "prstTxWarp");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AdjustValueList>();
             builder.AddElement<PresetTextWrap>()
 .AddAttribute(0, "prst", a => a.Preset, aBuilder =>
 {
@@ -7547,7 +7547,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DashStop &lt;a:ds></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DashStop))]
     public partial class CustomDash : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7586,6 +7585,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "custDash");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DashStop>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7615,12 +7615,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>GroupFill &lt;a:grpFill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
     public partial class FillProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7659,6 +7653,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "fill");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
         }
 
         /// <summary>
@@ -8011,12 +8011,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8063,11 +8057,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
             builder.AddElement<StyleMatrixReferenceType>()
-                           .AddAttribute(0, "idx", a => a.Index, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -8161,8 +8161,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>EffectDag &lt;a:effectDag></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EffectList))]
-    [ChildElementInfo(typeof(EffectDag))]
     public partial class EffectPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8201,6 +8199,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "effect");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EffectList>();
+            builder.AddChild<EffectDag>();
         }
 
         /// <summary>
@@ -8472,11 +8472,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LatinFont))]
-    [ChildElementInfo(typeof(EastAsianFont))]
-    [ChildElementInfo(typeof(ComplexScriptFont))]
-    [ChildElementInfo(typeof(SupplementalFont))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class FontCollectionType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8513,6 +8508,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<LatinFont>();
+            builder.AddChild<EastAsianFont>();
+            builder.AddChild<ComplexScriptFont>();
+            builder.AddChild<SupplementalFont>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -8571,12 +8571,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class FontReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8625,6 +8619,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "fontRef");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
             builder.AddElement<FontReference>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
@@ -9502,12 +9502,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public abstract partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9544,6 +9538,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
         }
 
         /// <summary>
@@ -10081,7 +10081,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Blip &lt;a:blip></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Blip))]
     public partial class PictureBullet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10120,6 +10119,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "buBlip");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Blip>();
         }
 
         /// <summary>
@@ -11009,18 +11009,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(PresetDash))]
-    [ChildElementInfo(typeof(CustomDash))]
-    [ChildElementInfo(typeof(Round))]
-    [ChildElementInfo(typeof(LineJoinBevel))]
-    [ChildElementInfo(typeof(Miter))]
-    [ChildElementInfo(typeof(HeadEnd))]
-    [ChildElementInfo(typeof(TailEnd))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class LinePropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11097,23 +11085,35 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<PresetDash>();
+            builder.AddChild<CustomDash>();
+            builder.AddChild<Round>();
+            builder.AddChild<LineJoinBevel>();
+            builder.AddChild<Miter>();
+            builder.AddChild<HeadEnd>();
+            builder.AddChild<TailEnd>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<LinePropertiesType>()
-                           .AddAttribute(0, "w", a => a.Width, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (20116800L) });
-                           })
-                           .AddAttribute(0, "cap", a => a.CapType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "cmpd", a => a.CompoundLineType, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "algn", a => a.Alignment, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "w", a => a.Width, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (20116800L) });
+})
+.AddAttribute(0, "cap", a => a.CapType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "cmpd", a => a.CompoundLineType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "algn", a => a.Alignment, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
     }
 
@@ -11158,12 +11158,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>GroupFill &lt;a:grpFill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
     public partial class UnderlineFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11202,6 +11196,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "uFill");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
         }
 
         /// <summary>
@@ -11313,8 +11313,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Text &lt;a:t></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunProperties))]
-    [ChildElementInfo(typeof(Text))]
     public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11353,6 +11351,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "r");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunProperties>();
+            builder.AddChild<Text>();
         }
 
         /// <summary>
@@ -11404,7 +11404,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>RunProperties &lt;a:rPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunProperties))]
     public partial class Break : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11443,6 +11442,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "br");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunProperties>();
         }
 
         /// <summary>
@@ -11482,9 +11482,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Text &lt;a:t></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunProperties))]
-    [ChildElementInfo(typeof(ParagraphProperties))]
-    [ChildElementInfo(typeof(Text))]
     public partial class Field : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11543,6 +11540,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "fld");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunProperties>();
+            builder.AddChild<ParagraphProperties>();
+            builder.AddChild<Text>();
             builder.AddElement<Field>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -11615,7 +11615,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>GraphicData &lt;a:graphicData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GraphicData))]
     public partial class Graphic : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11654,6 +11653,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "graphic");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<GraphicData>();
         }
 
         /// <summary>
@@ -11708,24 +11708,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>BlipExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AlphaBiLevel))]
-    [ChildElementInfo(typeof(AlphaCeiling))]
-    [ChildElementInfo(typeof(AlphaFloor))]
-    [ChildElementInfo(typeof(AlphaInverse))]
-    [ChildElementInfo(typeof(AlphaModulationEffect))]
-    [ChildElementInfo(typeof(AlphaModulationFixed))]
-    [ChildElementInfo(typeof(AlphaReplace))]
-    [ChildElementInfo(typeof(BiLevel))]
-    [ChildElementInfo(typeof(Blur))]
-    [ChildElementInfo(typeof(ColorChange))]
-    [ChildElementInfo(typeof(ColorReplacement))]
-    [ChildElementInfo(typeof(Duotone))]
-    [ChildElementInfo(typeof(FillOverlay))]
-    [ChildElementInfo(typeof(Grayscale))]
-    [ChildElementInfo(typeof(Hsl))]
-    [ChildElementInfo(typeof(LuminanceEffect))]
-    [ChildElementInfo(typeof(TintEffect))]
-    [ChildElementInfo(typeof(BlipExtensionList))]
     public partial class Blip : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11800,6 +11782,24 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "blip");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AlphaBiLevel>();
+            builder.AddChild<AlphaCeiling>();
+            builder.AddChild<AlphaFloor>();
+            builder.AddChild<AlphaInverse>();
+            builder.AddChild<AlphaModulationEffect>();
+            builder.AddChild<AlphaModulationFixed>();
+            builder.AddChild<AlphaReplace>();
+            builder.AddChild<BiLevel>();
+            builder.AddChild<Blur>();
+            builder.AddChild<ColorChange>();
+            builder.AddChild<ColorReplacement>();
+            builder.AddChild<Duotone>();
+            builder.AddChild<FillOverlay>();
+            builder.AddChild<Grayscale>();
+            builder.AddChild<Hsl>();
+            builder.AddChild<LuminanceEffect>();
+            builder.AddChild<TintEffect>();
+            builder.AddChild<BlipExtensionList>();
             builder.AddElement<Blip>()
 .AddAttribute(19, "embed", a => a.Embed)
 .AddAttribute(19, "link", a => a.Link)
@@ -11862,11 +11862,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>OfficeStyleSheetExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ThemeElements))]
-    [ChildElementInfo(typeof(ObjectDefaults))]
-    [ChildElementInfo(typeof(ExtraColorSchemeList))]
-    [ChildElementInfo(typeof(CustomColorList))]
-    [ChildElementInfo(typeof(OfficeStyleSheetExtensionList))]
     public partial class Theme : OpenXmlPartRootElement
     {
         /// <summary>
@@ -11928,6 +11923,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "theme");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ThemeElements>();
+            builder.AddChild<ObjectDefaults>();
+            builder.AddChild<ExtraColorSchemeList>();
+            builder.AddChild<CustomColorList>();
+            builder.AddChild<OfficeStyleSheetExtensionList>();
             builder.AddElement<Theme>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(73, "id", a => a.ThemeId, aBuilder =>
@@ -12061,9 +12061,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8
     ///   <item><description>FormatScheme &lt;a:fmtScheme></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorScheme))]
-    [ChildElementInfo(typeof(FontScheme))]
-    [ChildElementInfo(typeof(FormatScheme))]
     public partial class ThemeOverride : OpenXmlPartRootElement
     {
         /// <summary>
@@ -12102,6 +12099,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "themeOverride");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ColorScheme>();
+            builder.AddChild<FontScheme>();
+            builder.AddChild<FormatScheme>();
         }
 
         /// <summary>
@@ -12270,9 +12270,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8
     ///   <item><description>TableRow &lt;a:tr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableProperties))]
-    [ChildElementInfo(typeof(TableGrid))]
-    [ChildElementInfo(typeof(TableRow))]
     public partial class Table : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12311,6 +12308,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tbl");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableProperties>();
+            builder.AddChild<TableGrid>();
+            builder.AddChild<TableRow>();
         }
 
         /// <summary>
@@ -12363,7 +12363,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8
     ///   <item><description>TableStyleEntry &lt;a:tblStyle></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableStyleEntry))]
     public partial class TableStyleList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -12412,6 +12411,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tblStyleLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableStyleEntry>();
             builder.AddElement<TableStyleList>()
 .AddAttribute(0, "def", a => a.Default, aBuilder =>
 {
@@ -12473,7 +12473,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Extension))]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12512,6 +12511,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -12643,12 +12643,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class CustomColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12697,6 +12691,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "custClr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
             builder.AddElement<CustomColor>()
 .AddAttribute(0, "name", a => a.Name);
         }
@@ -12869,10 +12869,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Camera))]
-    [ChildElementInfo(typeof(LightRig))]
-    [ChildElementInfo(typeof(Backdrop))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Scene3DType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12911,6 +12907,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "scene3d");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Camera>();
+            builder.AddChild<LightRig>();
+            builder.AddChild<Backdrop>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -12993,10 +12993,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Shape3DType &lt;a:sp3d></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EffectList))]
-    [ChildElementInfo(typeof(EffectDag))]
-    [ChildElementInfo(typeof(Scene3DType))]
-    [ChildElementInfo(typeof(Shape3DType))]
     public partial class EffectStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13035,6 +13031,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "effectStyle");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EffectList>();
+            builder.AddChild<EffectDag>();
+            builder.AddChild<Scene3DType>();
+            builder.AddChild<Shape3DType>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13073,12 +13073,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>GroupFill &lt;a:grpFill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
     public partial class FillStyleList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13117,6 +13111,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "fillStyleLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13152,7 +13152,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Outline &lt;a:ln></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Outline))]
     public partial class LineStyleList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13191,6 +13190,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "lnStyleLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Outline>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13215,7 +13215,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>EffectStyle &lt;a:effectStyle></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EffectStyle))]
     public partial class EffectStyleList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13254,6 +13253,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "effectStyleLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EffectStyle>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13283,12 +13283,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>GroupFill &lt;a:grpFill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
     public partial class BackgroundFillStyleList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13327,6 +13321,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "bgFillStyleLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13374,19 +13374,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Dark1Color))]
-    [ChildElementInfo(typeof(Light1Color))]
-    [ChildElementInfo(typeof(Dark2Color))]
-    [ChildElementInfo(typeof(Light2Color))]
-    [ChildElementInfo(typeof(Accent1Color))]
-    [ChildElementInfo(typeof(Accent2Color))]
-    [ChildElementInfo(typeof(Accent3Color))]
-    [ChildElementInfo(typeof(Accent4Color))]
-    [ChildElementInfo(typeof(Accent5Color))]
-    [ChildElementInfo(typeof(Accent6Color))]
-    [ChildElementInfo(typeof(Hyperlink))]
-    [ChildElementInfo(typeof(FollowedHyperlinkColor))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ColorScheme : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13435,6 +13422,19 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "clrScheme");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Dark1Color>();
+            builder.AddChild<Light1Color>();
+            builder.AddChild<Dark2Color>();
+            builder.AddChild<Light2Color>();
+            builder.AddChild<Accent1Color>();
+            builder.AddChild<Accent2Color>();
+            builder.AddChild<Accent3Color>();
+            builder.AddChild<Accent4Color>();
+            builder.AddChild<Accent5Color>();
+            builder.AddChild<Accent6Color>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<FollowedHyperlinkColor>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ColorScheme>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -13647,9 +13647,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MajorFont))]
-    [ChildElementInfo(typeof(MinorFont))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class FontScheme : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13698,6 +13695,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "fontScheme");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<MajorFont>();
+            builder.AddChild<MinorFont>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<FontScheme>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -13771,10 +13771,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>BackgroundFillStyleList &lt;a:bgFillStyleLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FillStyleList))]
-    [ChildElementInfo(typeof(LineStyleList))]
-    [ChildElementInfo(typeof(EffectStyleList))]
-    [ChildElementInfo(typeof(BackgroundFillStyleList))]
     public partial class FormatScheme : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13823,6 +13819,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "fmtScheme");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FillStyleList>();
+            builder.AddChild<LineStyleList>();
+            builder.AddChild<EffectStyleList>();
+            builder.AddChild<BackgroundFillStyleList>();
             builder.AddElement<FormatScheme>()
 .AddAttribute(0, "name", a => a.Name);
         }
@@ -14748,11 +14748,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public abstract partial class Color2Type : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14789,6 +14784,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<PresetColor>();
         }
 
         /// <summary>
@@ -15169,7 +15169,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ShapeLocks : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15318,6 +15317,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "spLocks");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ShapeLocks>()
 .AddAttribute(0, "noGrp", a => a.NoGrouping)
 .AddAttribute(0, "noSelect", a => a.NoSelection)
@@ -15367,7 +15367,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ConnectorLockingExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConnectorLockingExtensionList))]
     public partial class ConnectionShapeLocks : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15506,6 +15505,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cxnSpLocks");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ConnectorLockingExtensionList>();
             builder.AddElement<ConnectionShapeLocks>()
 .AddAttribute(0, "noGrp", a => a.NoGrouping)
 .AddAttribute(0, "noSelect", a => a.NoSelection)
@@ -15653,7 +15653,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class GraphicFrameLocks : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15752,6 +15751,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "graphicFrameLocks");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<GraphicFrameLocks>()
 .AddAttribute(0, "noGrp", a => a.NoGrouping)
 .AddAttribute(0, "noDrilldown", a => a.NoDrilldown)
@@ -16039,250 +16039,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.TimeSlicer &lt;tsle:timeslicer></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Graphic))]
-    [ChildElementInfo(typeof(Blip))]
-    [ChildElementInfo(typeof(Theme))]
-    [ChildElementInfo(typeof(ThemeOverride))]
-    [ChildElementInfo(typeof(ThemeManager))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(TableStyleList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Theme.ThemeFamily), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.NonVisualGroupProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.CameraTool), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.IsCanvas), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ShadowObscured), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.HiddenFillProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.HiddenLineProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.HiddenEffectsProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.HiddenScene3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.HiddenShape3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.TextMath), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Diagram.NonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Diagram.RecolorImages), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Drawing.Drawing))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Drawing.DataModelExtensionBlock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinition))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeaderList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModelRoot))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinition))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeaderList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.RelationshipIds))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinition))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeaderList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartSpace))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.UserShapes))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LegacyCompatibility.LegacyDrawing))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Pictures.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.WorksheetDrawing))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.CommentList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.OleObject))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Presentation))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.PresentationProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Slide))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.SlideLayout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.SlideMaster))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.HandoutMaster))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.NotesMaster))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.NotesSlide))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.SlideSyncProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.TagList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.ViewProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Media), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.HoneycombTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DoorsTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WindowTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.GalleryTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ConveyorTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlythroughTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlashTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.RevealTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.SchemaLibrary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Recipients))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Comments))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Footnotes))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Endnotes))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Header))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Footer))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Settings))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.WebSettings))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Fonts))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Numbering))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Styles))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Document))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.Color), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.DataBinding), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.Appearance), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.CommentsEx), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.People), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.DefaultCollapsed), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DocumentId), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictMode), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shape))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shapetype))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Group))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Background))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Fill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Formulas))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Path))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.TextBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shadow))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Stroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.TextPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Arc))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Curve))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.ImageFile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Line))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Oval))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.PolyLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Rectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.RoundRectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeDefaults))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeLayout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Diagram))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.OleObject))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Complex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.TopStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.RightStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WordprocessingCanvas), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Slicer.Slicer), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartStyle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.TimeSlicer), FileFormatVersions.Office2013)]
     public partial class GraphicData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16331,6 +16087,250 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "graphicData");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Graphic>();
+            builder.AddChild<Blip>();
+            builder.AddChild<Theme>();
+            builder.AddChild<ThemeOverride>();
+            builder.AddChild<ThemeManager>();
+            builder.AddChild<Table>();
+            builder.AddChild<TableStyleList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.ThemeFamily>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.NonVisualGroupProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CameraTool>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.IsCanvas>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ShadowObscured>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.HiddenFillProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.HiddenLineProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.HiddenEffectsProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.HiddenScene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.HiddenShape3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.TextMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Diagram.NonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Diagram.RecolorImages>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.DataModelExtensionBlock>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeaderList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.DataModelRoot>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeaderList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.RelationshipIds>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeaderList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartSpace>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UserShapes>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LegacyCompatibility.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.WorksheetDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentAuthorList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.OleObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Presentation>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.PresentationProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Slide>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideLayout>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMaster>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.HandoutMaster>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMaster>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesSlide>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideSyncProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.TagList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ViewProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.Media>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.HoneycombTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DoorsTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WindowTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.GalleryTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ConveyorTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FlythroughTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FlashTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.RevealTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList>();
+            builder.AddChild<DocumentFormat.OpenXml.CustomXmlSchemaReferences.SchemaLibrary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Recipients>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Comments>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Footnotes>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Endnotes>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Header>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Footer>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Settings>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WebSettings>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Fonts>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Numbering>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Styles>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Document>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.DataBinding>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Appearance>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.CommentsEx>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.People>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.DefaultCollapsed>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DocumentId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictMode>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shapetype>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Background>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Arc>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Curve>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Line>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Oval>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.PolyLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Rectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.RoundRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ShapeDefaults>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ShapeLayout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Ink>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Diagram>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.OleObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Complex>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.BottomStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WordprocessingCanvas>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Slicer.Slicer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.TimeSlicer>();
             builder.AddElement<GraphicData>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16590,9 +16590,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BodyProperties))]
-    [ChildElementInfo(typeof(ListStyle))]
-    [ChildElementInfo(typeof(Paragraph))]
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16631,6 +16628,9 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "txBody");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BodyProperties>();
+            builder.AddChild<ListStyle>();
+            builder.AddChild<Paragraph>();
         }
 
         /// <summary>
@@ -16709,8 +16709,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>Extents &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Offset))]
-    [ChildElementInfo(typeof(Extents))]
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16779,6 +16777,8 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "xfrm");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Offset>();
+            builder.AddChild<Extents>();
             builder.AddElement<Transform2D>()
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "flipH", a => a.HorizontalFlip)
@@ -16836,9 +16836,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(HyperlinkOnClick))]
-    [ChildElementInfo(typeof(HyperlinkOnHover))]
-    [ChildElementInfo(typeof(NonVisualDrawingPropertiesExtensionList))]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16927,6 +16924,9 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cNvPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<HyperlinkOnClick>();
+            builder.AddChild<HyperlinkOnHover>();
+            builder.AddChild<NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -17005,8 +17005,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeLocks))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17055,6 +17053,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cNvSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ShapeLocks>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<NonVisualShapeDrawingProperties>()
 .AddAttribute(0, "txBox", a => a.TextBox);
         }
@@ -17109,8 +17109,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NonVisualShapeDrawingProperties &lt;a:cNvSpPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualShapeDrawingProperties))]
     public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17149,6 +17147,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "nvSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualShapeDrawingProperties>();
         }
 
         /// <summary>
@@ -17214,21 +17214,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Transform2D))]
-    [ChildElementInfo(typeof(CustomGeometry))]
-    [ChildElementInfo(typeof(PresetGeometry))]
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(EffectList))]
-    [ChildElementInfo(typeof(EffectDag))]
-    [ChildElementInfo(typeof(Scene3DType))]
-    [ChildElementInfo(typeof(Shape3DType))]
-    [ChildElementInfo(typeof(ShapePropertiesExtensionList))]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17277,6 +17262,21 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "spPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Transform2D>();
+            builder.AddChild<CustomGeometry>();
+            builder.AddChild<PresetGeometry>();
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
+            builder.AddChild<Outline>();
+            builder.AddChild<EffectList>();
+            builder.AddChild<EffectDag>();
+            builder.AddChild<Scene3DType>();
+            builder.AddChild<Shape3DType>();
+            builder.AddChild<ShapePropertiesExtensionList>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -17354,10 +17354,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TextBody))]
-    [ChildElementInfo(typeof(UseShapeRectangle))]
-    [ChildElementInfo(typeof(Transform2D))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class TextShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17396,6 +17392,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "txSp");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TextBody>();
+            builder.AddChild<UseShapeRectangle>();
+            builder.AddChild<Transform2D>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -17442,10 +17442,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>FontReference &lt;a:fontRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LineReference))]
-    [ChildElementInfo(typeof(FillReference))]
-    [ChildElementInfo(typeof(EffectReference))]
-    [ChildElementInfo(typeof(FontReference))]
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17484,6 +17480,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "style");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LineReference>();
+            builder.AddChild<FillReference>();
+            builder.AddChild<EffectReference>();
+            builder.AddChild<FontReference>();
         }
 
         /// <summary>
@@ -17566,10 +17566,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConnectionShapeLocks))]
-    [ChildElementInfo(typeof(StartConnection))]
-    [ChildElementInfo(typeof(EndConnection))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17608,6 +17604,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cNvCxnSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ConnectionShapeLocks>();
+            builder.AddChild<StartConnection>();
+            builder.AddChild<EndConnection>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -17688,8 +17688,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualConnectorShapeDrawingProperties &lt;a:cNvCxnSpPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualConnectorShapeDrawingProperties))]
     public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17728,6 +17726,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "nvCxnSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualConnectorShapeDrawingProperties>();
         }
 
         /// <summary>
@@ -17780,8 +17780,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualPicturePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PictureLocks))]
-    [ChildElementInfo(typeof(NonVisualPicturePropertiesExtensionList))]
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17830,6 +17828,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cNvPicPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PictureLocks>();
+            builder.AddChild<NonVisualPicturePropertiesExtensionList>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
 .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
         }
@@ -17884,8 +17884,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualPictureDrawingProperties &lt;a:cNvPicPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualPictureDrawingProperties))]
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17924,6 +17922,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "nvPicPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualPictureDrawingProperties>();
         }
 
         /// <summary>
@@ -17976,8 +17976,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GraphicFrameLocks))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18016,6 +18014,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cNvGraphicFramePr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<GraphicFrameLocks>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -18068,8 +18068,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualGraphicFrameDrawingProperties &lt;a:cNvGraphicFramePr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18108,6 +18106,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "nvGraphicFramePr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualGraphicFrameDrawingProperties>();
         }
 
         /// <summary>
@@ -18160,8 +18160,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualGroupDrawingShapePropsExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GroupShapeLocks))]
-    [ChildElementInfo(typeof(NonVisualGroupDrawingShapePropsExtensionList))]
     public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18200,6 +18198,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cNvGrpSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<GroupShapeLocks>();
+            builder.AddChild<NonVisualGroupDrawingShapePropsExtensionList>();
         }
 
         /// <summary>
@@ -18322,7 +18322,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L
     ///   <item><description>Rotation &lt;a:rot></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Rotation))]
     public partial class Camera : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18391,6 +18390,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "camera");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Rotation>();
             builder.AddElement<Camera>()
 .AddAttribute(0, "prst", a => a.Preset, aBuilder =>
 {
@@ -18442,7 +18442,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
     ///   <item><description>Rotation &lt;a:rot></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Rotation))]
     public partial class LightRig : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18501,6 +18500,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "lightRig");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Rotation>();
             builder.AddElement<LightRig>()
 .AddAttribute(0, "rig", a => a.Rig, aBuilder =>
 {
@@ -18552,10 +18552,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Anchor))]
-    [ChildElementInfo(typeof(Normal))]
-    [ChildElementInfo(typeof(UpVector))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Backdrop : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18594,6 +18590,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "backdrop");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Anchor>();
+            builder.AddChild<Normal>();
+            builder.AddChild<UpVector>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -19168,12 +19168,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
     public partial class GradientStop : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19222,6 +19216,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "gs");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
             builder.AddElement<GradientStop>()
 .AddAttribute(0, "pos", a => a.Position, aBuilder =>
 {
@@ -19341,7 +19341,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>GradientStop &lt;a:gs></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GradientStop))]
     public partial class GradientStopList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19380,6 +19379,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "gsLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<GradientStop>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19568,7 +19568,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Position &lt;a:pos></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Position))]
     public partial class AdjustHandleXY : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19667,6 +19666,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ahXY");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Position>();
             builder.AddElement<AdjustHandleXY>()
 .AddAttribute(0, "gdRefX", a => a.XAdjustmentGuide, aBuilder =>
 {
@@ -19745,7 +19745,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>Position &lt;a:pos></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Position))]
     public partial class AdjustHandlePolar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19844,6 +19843,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ahPolar");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Position>();
             builder.AddElement<AdjustHandlePolar>()
 .AddAttribute(0, "gdRefR", a => a.RadialAdjustmentGuide, aBuilder =>
 {
@@ -19922,7 +19922,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>Position &lt;a:pos></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Position))]
     public partial class ConnectionSite : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19971,6 +19970,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cxn");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Position>();
             builder.AddElement<ConnectionSite>()
 .AddAttribute(0, "ang", a => a.Angle, aBuilder =>
 {
@@ -20043,7 +20043,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>Point &lt;a:pt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Point))]
     public partial class MoveTo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20082,6 +20081,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "moveTo");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Point>();
         }
 
         /// <summary>
@@ -20119,7 +20119,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>Point &lt;a:pt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Point))]
     public partial class LineTo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20158,6 +20157,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "lnTo");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Point>();
         }
 
         /// <summary>
@@ -20297,7 +20297,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>Point &lt;a:pt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Point))]
     public partial class QuadraticBezierCurveTo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20336,6 +20335,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "quadBezTo");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Point>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20360,7 +20360,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>Point &lt;a:pt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Point))]
     public partial class CubicBezierCurveTo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20399,6 +20398,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cubicBezTo");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Point>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20428,12 +20428,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>CubicBezierCurveTo &lt;a:cubicBezTo></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CloseShapePath))]
-    [ChildElementInfo(typeof(MoveTo))]
-    [ChildElementInfo(typeof(LineTo))]
-    [ChildElementInfo(typeof(ArcTo))]
-    [ChildElementInfo(typeof(QuadraticBezierCurveTo))]
-    [ChildElementInfo(typeof(CubicBezierCurveTo))]
     public partial class Path : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20522,6 +20516,12 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "path");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CloseShapePath>();
+            builder.AddChild<MoveTo>();
+            builder.AddChild<LineTo>();
+            builder.AddChild<ArcTo>();
+            builder.AddChild<QuadraticBezierCurveTo>();
+            builder.AddChild<CubicBezierCurveTo>();
             builder.AddElement<Path>()
 .AddAttribute(0, "w", a => a.Width, aBuilder =>
 {
@@ -20690,7 +20690,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ShapeGuide &lt;a:gd></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeGuide))]
     public abstract partial class GeometryGuideListType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20727,6 +20726,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<ShapeGuide>();
         }
     }
 
@@ -20742,8 +20742,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>AdjustHandlePolar &lt;a:ahPolar></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AdjustHandleXY))]
-    [ChildElementInfo(typeof(AdjustHandlePolar))]
     public partial class AdjustHandleList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20782,6 +20780,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ahLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AdjustHandleXY>();
+            builder.AddChild<AdjustHandlePolar>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
@@ -20807,7 +20807,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ConnectionSite &lt;a:cxn></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConnectionSite))]
     public partial class ConnectionSiteList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20846,6 +20845,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cxnLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ConnectionSite>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20972,7 +20972,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>Path &lt;a:path></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
     public partial class PathList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21011,6 +21010,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "pathLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -21214,10 +21214,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
     ///   <item><description>ChildExtents &lt;a:chExt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Offset))]
-    [ChildElementInfo(typeof(Extents))]
-    [ChildElementInfo(typeof(ChildOffset))]
-    [ChildElementInfo(typeof(ChildExtents))]
     public partial class TransformGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21286,6 +21282,10 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "xfrm");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Offset>();
+            builder.AddChild<Extents>();
+            builder.AddChild<ChildOffset>();
+            builder.AddChild<ChildExtents>();
             builder.AddElement<TransformGroup>()
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "flipH", a => a.HorizontalFlip)
@@ -21376,14 +21376,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PresetTextWrap))]
-    [ChildElementInfo(typeof(NoAutoFit))]
-    [ChildElementInfo(typeof(NormalAutoFit))]
-    [ChildElementInfo(typeof(ShapeAutoFit))]
-    [ChildElementInfo(typeof(Scene3DType))]
-    [ChildElementInfo(typeof(Shape3DType))]
-    [ChildElementInfo(typeof(FlatText))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class BodyProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21612,6 +21604,14 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "bodyPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PresetTextWrap>();
+            builder.AddChild<NoAutoFit>();
+            builder.AddChild<NormalAutoFit>();
+            builder.AddChild<ShapeAutoFit>();
+            builder.AddChild<Scene3DType>();
+            builder.AddChild<Shape3DType>();
+            builder.AddChild<FlatText>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<BodyProperties>()
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "spcFirstLastPara", a => a.UseParagraphSpacing)
@@ -21719,17 +21719,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DefaultParagraphProperties))]
-    [ChildElementInfo(typeof(Level1ParagraphProperties))]
-    [ChildElementInfo(typeof(Level2ParagraphProperties))]
-    [ChildElementInfo(typeof(Level3ParagraphProperties))]
-    [ChildElementInfo(typeof(Level4ParagraphProperties))]
-    [ChildElementInfo(typeof(Level5ParagraphProperties))]
-    [ChildElementInfo(typeof(Level6ParagraphProperties))]
-    [ChildElementInfo(typeof(Level7ParagraphProperties))]
-    [ChildElementInfo(typeof(Level8ParagraphProperties))]
-    [ChildElementInfo(typeof(Level9ParagraphProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ListStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21768,6 +21757,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "lstStyle");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DefaultParagraphProperties>();
+            builder.AddChild<Level1ParagraphProperties>();
+            builder.AddChild<Level2ParagraphProperties>();
+            builder.AddChild<Level3ParagraphProperties>();
+            builder.AddChild<Level4ParagraphProperties>();
+            builder.AddChild<Level5ParagraphProperties>();
+            builder.AddChild<Level6ParagraphProperties>();
+            builder.AddChild<Level7ParagraphProperties>();
+            builder.AddChild<Level8ParagraphProperties>();
+            builder.AddChild<Level9ParagraphProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -22159,11 +22159,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(BodyProperties))]
-    [ChildElementInfo(typeof(ListStyle))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22200,6 +22195,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<BodyProperties>();
+            builder.AddChild<ListStyle>();
+            builder.AddChild<ShapeStyle>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -22403,7 +22403,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class ColorMappingType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22560,67 +22559,68 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ColorMappingType>()
-                           .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
 
         /// <summary>
@@ -22649,8 +22649,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ColorMap &lt;a:clrMap></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorScheme))]
-    [ChildElementInfo(typeof(ColorMap))]
     public partial class ExtraColorScheme : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22689,6 +22687,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extraClrScheme");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ColorScheme>();
+            builder.AddChild<ColorMap>();
         }
 
         /// <summary>
@@ -22743,10 +22743,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorScheme))]
-    [ChildElementInfo(typeof(FontScheme))]
-    [ChildElementInfo(typeof(FormatScheme))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ThemeElements : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22785,6 +22781,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "themeElements");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ColorScheme>();
+            builder.AddChild<FontScheme>();
+            builder.AddChild<FormatScheme>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -22866,9 +22866,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Bevel))]
-    [ChildElementInfo(typeof(LightRig))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Cell3DProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22917,6 +22914,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cell3D");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Bevel>();
+            builder.AddChild<LightRig>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Cell3DProperties>()
 .AddAttribute(0, "prstMaterial", a => a.PresetMaterial, aBuilder =>
 {
@@ -23000,20 +23000,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LeftBorderLineProperties))]
-    [ChildElementInfo(typeof(RightBorderLineProperties))]
-    [ChildElementInfo(typeof(TopBorderLineProperties))]
-    [ChildElementInfo(typeof(BottomBorderLineProperties))]
-    [ChildElementInfo(typeof(TopLeftToBottomRightBorderLineProperties))]
-    [ChildElementInfo(typeof(BottomLeftToTopRightBorderLineProperties))]
-    [ChildElementInfo(typeof(Cell3DProperties))]
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class TableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23132,6 +23118,20 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tcPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LeftBorderLineProperties>();
+            builder.AddChild<RightBorderLineProperties>();
+            builder.AddChild<TopBorderLineProperties>();
+            builder.AddChild<BottomBorderLineProperties>();
+            builder.AddChild<TopLeftToBottomRightBorderLineProperties>();
+            builder.AddChild<BottomLeftToTopRightBorderLineProperties>();
+            builder.AddChild<Cell3DProperties>();
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<TableCellProperties>()
 .AddAttribute(0, "marL", a => a.LeftMargin)
 .AddAttribute(0, "marR", a => a.RightMargin)
@@ -23286,9 +23286,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TextBody))]
-    [ChildElementInfo(typeof(TableCellProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class TableCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23367,6 +23364,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tc");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TextBody>();
+            builder.AddChild<TableCellProperties>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<TableCell>()
 .AddAttribute(0, "rowSpan", a => a.RowSpan)
 .AddAttribute(0, "gridSpan", a => a.GridSpan)
@@ -23650,21 +23650,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableBackground))]
-    [ChildElementInfo(typeof(WholeTable))]
-    [ChildElementInfo(typeof(Band1Horizontal))]
-    [ChildElementInfo(typeof(Band2Horizontal))]
-    [ChildElementInfo(typeof(Band1Vertical))]
-    [ChildElementInfo(typeof(Band2Vertical))]
-    [ChildElementInfo(typeof(LastColumn))]
-    [ChildElementInfo(typeof(FirstColumn))]
-    [ChildElementInfo(typeof(LastRow))]
-    [ChildElementInfo(typeof(SoutheastCell))]
-    [ChildElementInfo(typeof(SouthwestCell))]
-    [ChildElementInfo(typeof(FirstRow))]
-    [ChildElementInfo(typeof(NortheastCell))]
-    [ChildElementInfo(typeof(NorthwestCell))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class TableStyleType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23721,16 +23706,31 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<TableBackground>();
+            builder.AddChild<WholeTable>();
+            builder.AddChild<Band1Horizontal>();
+            builder.AddChild<Band2Horizontal>();
+            builder.AddChild<Band1Vertical>();
+            builder.AddChild<Band2Vertical>();
+            builder.AddChild<LastColumn>();
+            builder.AddChild<FirstColumn>();
+            builder.AddChild<LastRow>();
+            builder.AddChild<SoutheastCell>();
+            builder.AddChild<SouthwestCell>();
+            builder.AddChild<FirstRow>();
+            builder.AddChild<NortheastCell>();
+            builder.AddChild<NorthwestCell>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<TableStyleType>()
-                           .AddAttribute(0, "styleId", a => a.StyleId, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                           })
-                           .AddAttribute(0, "styleName", a => a.StyleName, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                           });
+.AddAttribute(0, "styleId", a => a.StyleId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "styleName", a => a.StyleName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
         }
 
         /// <summary>
@@ -23979,7 +23979,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class GridColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24028,6 +24027,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "gridCol");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<GridColumn>()
 .AddAttribute(0, "w", a => a.Width, aBuilder =>
 {
@@ -24081,17 +24081,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
-    [ChildElementInfo(typeof(EffectList))]
-    [ChildElementInfo(typeof(EffectDag))]
-    [ChildElementInfo(typeof(TableStyle))]
-    [ChildElementInfo(typeof(TableStyleId))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class TableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24200,6 +24189,17 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tblPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
+            builder.AddChild<EffectList>();
+            builder.AddChild<EffectDag>();
+            builder.AddChild<TableStyle>();
+            builder.AddChild<TableStyleId>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<TableProperties>()
 .AddAttribute(0, "rtl", a => a.RightToLeft)
 .AddAttribute(0, "firstRow", a => a.FirstRow)
@@ -24257,7 +24257,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>GridColumn &lt;a:gridCol></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GridColumn))]
     public partial class TableGrid : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24296,6 +24295,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tblGrid");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<GridColumn>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -24321,8 +24321,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableCell))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class TableRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24371,6 +24369,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableCell>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<TableRow>()
 .AddAttribute(0, "h", a => a.Height, aBuilder =>
 {
@@ -24915,8 +24915,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>LineReference &lt;a:lnRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(LineReference))]
     public abstract partial class ThemeableLineStyleType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24953,6 +24951,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<Outline>();
+            builder.AddChild<LineReference>();
         }
 
         /// <summary>
@@ -25001,15 +25001,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LeftBorder))]
-    [ChildElementInfo(typeof(RightBorder))]
-    [ChildElementInfo(typeof(TopBorder))]
-    [ChildElementInfo(typeof(BottomBorder))]
-    [ChildElementInfo(typeof(InsideHorizontalBorder))]
-    [ChildElementInfo(typeof(InsideVerticalBorder))]
-    [ChildElementInfo(typeof(TopLeftToBottomRightBorder))]
-    [ChildElementInfo(typeof(TopRightToBottomLeftBorder))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class TableCellBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25048,6 +25039,15 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tcBdr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LeftBorder>();
+            builder.AddChild<RightBorder>();
+            builder.AddChild<TopBorder>();
+            builder.AddChild<BottomBorder>();
+            builder.AddChild<InsideHorizontalBorder>();
+            builder.AddChild<InsideVerticalBorder>();
+            builder.AddChild<TopLeftToBottomRightBorder>();
+            builder.AddChild<TopRightToBottomLeftBorder>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -25205,15 +25205,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Fonts))]
-    [ChildElementInfo(typeof(FontReference))]
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class TableCellTextStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25272,6 +25263,15 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tcTxStyle");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Fonts>();
+            builder.AddChild<FontReference>();
+            builder.AddChild<RgbColorModelPercentage>();
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<HslColor>();
+            builder.AddChild<SystemColor>();
+            builder.AddChild<SchemeColor>();
+            builder.AddChild<PresetColor>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<TableCellTextStyle>()
 .AddAttribute(0, "b", a => a.Bold, aBuilder =>
 {
@@ -25328,10 +25328,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Cell3DProperties &lt;a:cell3D></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableCellBorders))]
-    [ChildElementInfo(typeof(FillProperties))]
-    [ChildElementInfo(typeof(FillReference))]
-    [ChildElementInfo(typeof(Cell3DProperties))]
     public partial class TableCellStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25370,6 +25366,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tcStyle");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableCellBorders>();
+            builder.AddChild<FillProperties>();
+            builder.AddChild<FillReference>();
+            builder.AddChild<Cell3DProperties>();
         }
 
         /// <summary>
@@ -25419,10 +25419,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>EffectReference &lt;a:effectRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FillProperties))]
-    [ChildElementInfo(typeof(FillReference))]
-    [ChildElementInfo(typeof(EffectPropertiesType))]
-    [ChildElementInfo(typeof(EffectReference))]
     public partial class TableBackground : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25461,6 +25457,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tblBg");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FillProperties>();
+            builder.AddChild<FillReference>();
+            builder.AddChild<EffectPropertiesType>();
+            builder.AddChild<EffectReference>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -26333,8 +26333,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>TableCellStyle &lt;a:tcStyle></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
     public abstract partial class TablePartStyleType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26371,6 +26369,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<TableCellTextStyle>();
+            builder.AddChild<TableCellStyle>();
         }
 
         /// <summary>
@@ -27725,23 +27725,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class TextParagraphPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27888,36 +27871,53 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<LineSpacing>();
+            builder.AddChild<SpaceBefore>();
+            builder.AddChild<SpaceAfter>();
+            builder.AddChild<BulletColorText>();
+            builder.AddChild<BulletColor>();
+            builder.AddChild<BulletSizeText>();
+            builder.AddChild<BulletSizePercentage>();
+            builder.AddChild<BulletSizePoints>();
+            builder.AddChild<BulletFontText>();
+            builder.AddChild<BulletFont>();
+            builder.AddChild<NoBullet>();
+            builder.AddChild<AutoNumberedBullet>();
+            builder.AddChild<CharacterBullet>();
+            builder.AddChild<PictureBullet>();
+            builder.AddChild<TabStopList>();
+            builder.AddChild<DefaultRunProperties>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<TextParagraphPropertiesType>()
-                           .AddAttribute(0, "marL", a => a.LeftMargin, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (51206400L) });
-                           })
-                           .AddAttribute(0, "marR", a => a.RightMargin, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (51206400L) });
-                           })
-                           .AddAttribute(0, "lvl", a => a.Level, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (8L) });
-                           })
-                           .AddAttribute(0, "indent", a => a.Indent, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-51206400L), MaxInclusive = (51206400L) });
-                           })
-                           .AddAttribute(0, "algn", a => a.Alignment, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "defTabSz", a => a.DefaultTabSize)
-                           .AddAttribute(0, "rtl", a => a.RightToLeft)
-                           .AddAttribute(0, "eaLnBrk", a => a.EastAsianLineBreak)
-                           .AddAttribute(0, "fontAlgn", a => a.FontAlignment, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "latinLnBrk", a => a.LatinLineBreak)
-                           .AddAttribute(0, "hangingPunct", a => a.Height);
+.AddAttribute(0, "marL", a => a.LeftMargin, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (51206400L) });
+})
+.AddAttribute(0, "marR", a => a.RightMargin, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (51206400L) });
+})
+.AddAttribute(0, "lvl", a => a.Level, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (8L) });
+})
+.AddAttribute(0, "indent", a => a.Indent, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-51206400L), MaxInclusive = (51206400L) });
+})
+.AddAttribute(0, "algn", a => a.Alignment, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "defTabSz", a => a.DefaultTabSize)
+.AddAttribute(0, "rtl", a => a.RightToLeft)
+.AddAttribute(0, "eaLnBrk", a => a.EastAsianLineBreak)
+.AddAttribute(0, "fontAlgn", a => a.FontAlignment, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "latinLnBrk", a => a.LatinLineBreak)
+.AddAttribute(0, "hangingPunct", a => a.Height);
         }
 
         /// <summary>
@@ -28376,28 +28376,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
-    [ChildElementInfo(typeof(EffectList))]
-    [ChildElementInfo(typeof(EffectDag))]
-    [ChildElementInfo(typeof(Highlight))]
-    [ChildElementInfo(typeof(UnderlineFollowsText))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(UnderlineFillText))]
-    [ChildElementInfo(typeof(UnderlineFill))]
-    [ChildElementInfo(typeof(LatinFont))]
-    [ChildElementInfo(typeof(EastAsianFont))]
-    [ChildElementInfo(typeof(ComplexScriptFont))]
-    [ChildElementInfo(typeof(SymbolFont))]
-    [ChildElementInfo(typeof(HyperlinkOnClick))]
-    [ChildElementInfo(typeof(HyperlinkOnMouseOver))]
-    [ChildElementInfo(typeof(RightToLeft))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28624,44 +28602,66 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<Outline>();
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
+            builder.AddChild<EffectList>();
+            builder.AddChild<EffectDag>();
+            builder.AddChild<Highlight>();
+            builder.AddChild<UnderlineFollowsText>();
+            builder.AddChild<Underline>();
+            builder.AddChild<UnderlineFillText>();
+            builder.AddChild<UnderlineFill>();
+            builder.AddChild<LatinFont>();
+            builder.AddChild<EastAsianFont>();
+            builder.AddChild<ComplexScriptFont>();
+            builder.AddChild<SymbolFont>();
+            builder.AddChild<HyperlinkOnClick>();
+            builder.AddChild<HyperlinkOnMouseOver>();
+            builder.AddChild<RightToLeft>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<TextCharacterPropertiesType>()
-                           .AddAttribute(0, "kumimoji", a => a.Kumimoji)
-                           .AddAttribute(0, "lang", a => a.Language)
-                           .AddAttribute(0, "altLang", a => a.AlternativeLanguage)
-                           .AddAttribute(0, "sz", a => a.FontSize, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (100L), MaxInclusive = (400000L) });
-                           })
-                           .AddAttribute(0, "b", a => a.Bold)
-                           .AddAttribute(0, "i", a => a.Italic)
-                           .AddAttribute(0, "u", a => a.Underline, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "strike", a => a.Strike, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "kern", a => a.Kerning, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (400000L) });
-                           })
-                           .AddAttribute(0, "cap", a => a.Capital, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "spc", a => a.Spacing, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-400000L), MaxInclusive = (400000L) });
-                           })
-                           .AddAttribute(0, "normalizeH", a => a.NormalizeHeight)
-                           .AddAttribute(0, "baseline", a => a.Baseline)
-                           .AddAttribute(0, "noProof", a => a.NoProof)
-                           .AddAttribute(0, "dirty", a => a.Dirty)
-                           .AddAttribute(0, "err", a => a.SpellingError)
-                           .AddAttribute(0, "smtClean", a => a.SmtClean)
-                           .AddAttribute(0, "smtId", a => a.SmtId)
-                           .AddAttribute(0, "bmk", a => a.Bookmark);
+.AddAttribute(0, "kumimoji", a => a.Kumimoji)
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "altLang", a => a.AlternativeLanguage)
+.AddAttribute(0, "sz", a => a.FontSize, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (100L), MaxInclusive = (400000L) });
+})
+.AddAttribute(0, "b", a => a.Bold)
+.AddAttribute(0, "i", a => a.Italic)
+.AddAttribute(0, "u", a => a.Underline, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "strike", a => a.Strike, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "kern", a => a.Kerning, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (400000L) });
+})
+.AddAttribute(0, "cap", a => a.Capital, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "spc", a => a.Spacing, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-400000L), MaxInclusive = (400000L) });
+})
+.AddAttribute(0, "normalizeH", a => a.NormalizeHeight)
+.AddAttribute(0, "baseline", a => a.Baseline)
+.AddAttribute(0, "noProof", a => a.NoProof)
+.AddAttribute(0, "dirty", a => a.Dirty)
+.AddAttribute(0, "err", a => a.SpellingError)
+.AddAttribute(0, "smtClean", a => a.SmtClean)
+.AddAttribute(0, "smtId", a => a.SmtId)
+.AddAttribute(0, "bmk", a => a.Bookmark);
         }
 
         /// <summary>
@@ -28694,12 +28694,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>EndParagraphRunProperties &lt;a:endParaRPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ParagraphProperties))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(Break))]
-    [ChildElementInfo(typeof(Field))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.TextMath), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(EndParagraphRunProperties))]
     public partial class Paragraph : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28738,6 +28732,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "p");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ParagraphProperties>();
+            builder.AddChild<Run>();
+            builder.AddChild<Break>();
+            builder.AddChild<Field>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.TextMath>();
+            builder.AddChild<EndParagraphRunProperties>();
         }
 
         /// <summary>
@@ -29112,8 +29112,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>SpacingPoints &lt;a:spcPts></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SpacingPercent))]
-    [ChildElementInfo(typeof(SpacingPoints))]
     public abstract partial class TextSpacingType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29150,6 +29148,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<SpacingPercent>();
+            builder.AddChild<SpacingPoints>();
         }
 
         /// <summary>
@@ -29190,7 +29190,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>TabStop &lt;a:tab></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TabStop))]
     public partial class TabStopList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29229,6 +29228,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "tabLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TabStop>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -29296,12 +29296,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.ShadowObscured &lt;a14:shadowObscured></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.HiddenFillProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.HiddenLineProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.HiddenEffectsProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.HiddenScene3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.HiddenShape3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ShadowObscured), FileFormatVersions.Office2010)]
     public partial class ShapePropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29350,6 +29344,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.HiddenFillProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.HiddenLineProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.HiddenEffectsProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.HiddenScene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.HiddenShape3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ShadowObscured>();
             builder.AddElement<ShapePropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -29386,7 +29386,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.IsCanvas &lt;a14:isCanvas></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.IsCanvas), FileFormatVersions.Office2010)]
     public partial class GvmlGroupShapeExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29435,6 +29434,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.IsCanvas>();
             builder.AddElement<GvmlGroupShapeExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -29466,7 +29466,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ShapePropertiesExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapePropertiesExtension))]
     public partial class ShapePropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29505,6 +29504,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ShapePropertiesExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -29530,8 +29530,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualGroupShapeDrawingProperties &lt;a:cNvGrpSpPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualGroupShapeDrawingProperties))]
     public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29570,6 +29568,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "nvGrpSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualGroupShapeDrawingProperties>();
         }
 
         /// <summary>
@@ -29631,17 +29631,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TransformGroup))]
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
-    [ChildElementInfo(typeof(EffectList))]
-    [ChildElementInfo(typeof(EffectDag))]
-    [ChildElementInfo(typeof(Scene3DType))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class VisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29690,6 +29679,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "grpSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TransformGroup>();
+            builder.AddChild<NoFill>();
+            builder.AddChild<SolidFill>();
+            builder.AddChild<GradientFill>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<PatternFill>();
+            builder.AddChild<GroupFill>();
+            builder.AddChild<EffectList>();
+            builder.AddChild<EffectDag>();
+            builder.AddChild<Scene3DType>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<VisualGroupShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -29758,11 +29758,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualShapeProperties))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(TextShape))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29801,6 +29796,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "sp");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualShapeProperties>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TextShape>();
+            builder.AddChild<ShapeStyle>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -29897,10 +29897,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualConnectionShapeProperties))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29939,6 +29935,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "cxnSp");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualConnectionShapeProperties>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ShapeStyle>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -30022,11 +30022,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualPictureProperties))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30065,6 +30060,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "pic");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualPictureProperties>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ShapeStyle>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -30161,10 +30161,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualGraphicFrameProperties))]
-    [ChildElementInfo(typeof(Graphic))]
-    [ChildElementInfo(typeof(Transform2D))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30203,6 +30199,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "graphicFrame");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualGraphicFrameProperties>();
+            builder.AddChild<Graphic>();
+            builder.AddChild<Transform2D>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -30291,16 +30291,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>GvmlGroupShapeExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualGroupShapeProperties))]
-    [ChildElementInfo(typeof(VisualGroupShapeProperties))]
-    [ChildElementInfo(typeof(TextShape))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GvmlGroupShapeExtensionList))]
     public partial class GroupShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30339,6 +30329,16 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "grpSp");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualGroupShapeProperties>();
+            builder.AddChild<VisualGroupShapeProperties>();
+            builder.AddChild<TextShape>();
+            builder.AddChild<Shape>();
+            builder.AddChild<ConnectionShape>();
+            builder.AddChild<Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart>();
+            builder.AddChild<GraphicFrame>();
+            builder.AddChild<GroupShape>();
+            builder.AddChild<GvmlGroupShapeExtensionList>();
         }
 
         /// <summary>
@@ -30401,7 +30401,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>GvmlGroupShapeExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GvmlGroupShapeExtension))]
     public partial class GvmlGroupShapeExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30440,6 +30439,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<GvmlGroupShapeExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -30464,7 +30464,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.NonVisualGroupProperties &lt;a15:nonVisualGroupProps></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.NonVisualGroupProperties), FileFormatVersions.Office2013)]
     public partial class NonVisualGroupDrawingShapePropsExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30513,6 +30512,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.NonVisualGroupProperties>();
             builder.AddElement<NonVisualGroupDrawingShapePropsExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -30544,7 +30544,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Theme.ThemeFamily &lt;thm15:themeFamily></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Theme.ThemeFamily), FileFormatVersions.Office2013)]
     public partial class OfficeStyleSheetExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30593,6 +30592,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.ThemeFamily>();
             builder.AddElement<OfficeStyleSheetExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -30624,7 +30624,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Graphic &lt;a:graphic></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Graphic), FileFormatVersions.Office2010)]
     public partial class ConnectorLockingExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30673,6 +30672,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Graphic>();
             builder.AddElement<ConnectorLockingExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -30917,8 +30917,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(HyperlinkSound))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class HyperlinkType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31038,15 +31036,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<HyperlinkSound>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<HyperlinkType>()
-                           .AddAttribute(19, "id", a => a.Id)
-                           .AddAttribute(0, "invalidUrl", a => a.InvalidUrl)
-                           .AddAttribute(0, "action", a => a.Action)
-                           .AddAttribute(0, "tgtFrame", a => a.TargetFrame)
-                           .AddAttribute(0, "tooltip", a => a.Tooltip)
-                           .AddAttribute(0, "history", a => a.History)
-                           .AddAttribute(0, "highlightClick", a => a.HighlightClick)
-                           .AddAttribute(0, "endSnd", a => a.EndSound);
+.AddAttribute(19, "id", a => a.Id)
+.AddAttribute(0, "invalidUrl", a => a.InvalidUrl)
+.AddAttribute(0, "action", a => a.Action)
+.AddAttribute(0, "tgtFrame", a => a.TargetFrame)
+.AddAttribute(0, "tooltip", a => a.Tooltip)
+.AddAttribute(0, "history", a => a.History)
+.AddAttribute(0, "highlightClick", a => a.HighlightClick)
+.AddAttribute(0, "endSnd", a => a.EndSound);
         }
 
         /// <summary>
@@ -31087,7 +31087,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualDrawingPropertiesExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingPropertiesExtension))]
     public partial class NonVisualDrawingPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31126,6 +31125,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingPropertiesExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -31151,8 +31151,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties &lt;a15:backgroundPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties), FileFormatVersions.Office2010)]
     public partial class NonVisualDrawingPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31201,6 +31199,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties>();
             builder.AddElement<NonVisualDrawingPropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -31233,7 +31233,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class PictureLocks : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31382,6 +31381,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "picLocks");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<PictureLocks>()
 .AddAttribute(0, "noGrp", a => a.NoGrouping)
 .AddAttribute(0, "noSelect", a => a.NoSelection)
@@ -31431,7 +31431,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualPicturePropertiesExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualPicturePropertiesExtension))]
     public partial class NonVisualPicturePropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31470,6 +31469,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualPicturePropertiesExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -31496,9 +31496,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties &lt;a15:objectPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.CameraTool), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties), FileFormatVersions.Office2013)]
     public partial class NonVisualPicturePropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31547,6 +31544,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CameraTool>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties>();
             builder.AddElement<NonVisualPicturePropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -31580,7 +31580,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class GroupShapeLocks : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31689,6 +31688,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "grpSpLocks");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<GroupShapeLocks>()
 .AddAttribute(0, "noGrp", a => a.NoGrouping)
 .AddAttribute(0, "noUngrp", a => a.NoUngrouping)
@@ -31734,7 +31734,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualGroupDrawingShapePropsExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualGroupDrawingShapePropsExtension))]
     public partial class NonVisualGroupDrawingShapePropsExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31773,6 +31772,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualGroupDrawingShapePropsExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -31797,7 +31797,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>BlipExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BlipExtension))]
     public partial class BlipExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31836,6 +31835,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BlipExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -31862,9 +31862,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty &lt;wp15:webVideoPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty), FileFormatVersions.Office2013)]
     public partial class BlipExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31913,6 +31910,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty>();
             builder.AddElement<BlipExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -31949,10 +31949,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeDefault))]
-    [ChildElementInfo(typeof(LineDefault))]
-    [ChildElementInfo(typeof(TextDefault))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ObjectDefaults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31991,6 +31987,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "objectDefaults");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ShapeDefault>();
+            builder.AddChild<LineDefault>();
+            builder.AddChild<TextDefault>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -32070,7 +32070,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtraColorScheme &lt;a:extraClrScheme></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtraColorScheme))]
     public partial class ExtraColorSchemeList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32109,6 +32108,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extraClrSchemeLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtraColorScheme>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -32133,7 +32133,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>CustomColor &lt;a:custClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomColor))]
     public partial class CustomColorList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32172,6 +32171,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "custClrLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomColor>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -32196,7 +32196,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>OfficeStyleSheetExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfficeStyleSheetExtension))]
     public partial class OfficeStyleSheetExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32235,6 +32234,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<OfficeStyleSheetExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -32296,7 +32296,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ConnectorLockingExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConnectorLockingExtension))]
     public partial class ConnectorLockingExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32335,6 +32334,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ConnectorLockingExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -32360,8 +32360,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.Diagram.RecolorImages &lt;dgm14:recolorImg></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Drawing.DataModelExtensionBlock), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Diagram.RecolorImages), FileFormatVersions.Office2010)]
     public partial class DataModelExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32410,6 +32408,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.DataModelExtensionBlock>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Diagram.RecolorImages>();
             builder.AddElement<DataModelExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -32442,7 +32442,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.Diagram.NonVisualDrawingProperties &lt;dgm14:cNvPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Diagram.NonVisualDrawingProperties), FileFormatVersions.Office2010)]
     public partial class PtExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32491,6 +32490,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(10, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Diagram.NonVisualDrawingProperties>();
             builder.AddElement<PtExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {

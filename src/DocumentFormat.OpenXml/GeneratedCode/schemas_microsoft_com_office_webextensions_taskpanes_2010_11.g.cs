@@ -26,7 +26,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description>WebExtensionTaskpane &lt;wetp:taskpane></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WebExtensionTaskpane), FileFormatVersions.Office2013)]
     public partial class Taskpanes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -65,6 +64,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
             base.ConfigureMetadata(builder);
             builder.SetSchema(70, "taskpanes");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<WebExtensionTaskpane>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -169,7 +169,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -208,6 +207,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(70, "extLst");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -239,8 +239,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OfficeArtExtensionList &lt;wetp:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WebExtensionPartReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
     public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     {
         /// <summary>
@@ -329,6 +327,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(70, "taskpane");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<WebExtensionPartReference>();
+            builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<WebExtensionTaskpane>()
 .AddAttribute(0, "dockstate", a => a.DockState, aBuilder =>
 {

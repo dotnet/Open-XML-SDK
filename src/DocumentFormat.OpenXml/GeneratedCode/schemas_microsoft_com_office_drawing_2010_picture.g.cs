@@ -27,10 +27,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
     ///   <item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -69,6 +65,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
             base.ConfigureMetadata(builder);
             builder.SetSchema(50, "style");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
         }
 
         /// <summary>
@@ -148,7 +148,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -187,6 +186,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
             base.ConfigureMetadata(builder);
             builder.SetSchema(50, "extLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

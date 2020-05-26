@@ -33,15 +33,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description>TextBodyProperties &lt;wps:bodyPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NonVisualDrawingShapeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NonVisualConnectorProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ShapeStyle), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TextBoxInfo2), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LinkedTextBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2010)]
     public partial class WordprocessingShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -90,6 +81,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(61, "wsp");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualDrawingShapeProperties>();
+            builder.AddChild<NonVisualConnectorProperties>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ShapeStyle>();
+            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<TextBoxInfo2>();
+            builder.AddChild<LinkedTextBox>();
+            builder.AddChild<TextBodyProperties>();
             builder.AddElement<WordprocessingShape>()
 .AddAttribute(0, "normalEastAsianFlow", a => a.NormalEastAsianFlow);
         }
@@ -143,7 +143,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -182,6 +181,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(61, "extLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -214,9 +214,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -305,6 +302,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(61, "cNvPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -383,8 +383,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -433,6 +431,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(61, "cNvSpPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<NonVisualDrawingShapeProperties>()
 .AddAttribute(0, "txBox", a => a.TextBox);
         }
@@ -489,10 +489,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.StartConnection))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EndConnection))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -531,6 +527,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(61, "cNvCnPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
 
         /// <summary>
@@ -624,21 +624,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -687,6 +672,21 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(61, "spPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -764,10 +764,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -806,6 +802,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(61, "style");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
         }
 
         /// <summary>
@@ -886,8 +886,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>OfficeArtExtensionList &lt;wps:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
     public partial class TextBoxInfo2 : OpenXmlCompositeElement
     {
         /// <summary>
@@ -936,6 +934,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(61, "txbx");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
+            builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<TextBoxInfo2>()
 .AddAttribute(0, "id", a => a.Id);
         }
@@ -989,7 +989,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>OfficeArtExtensionList &lt;wps:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
     public partial class LinkedTextBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1048,6 +1047,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(61, "linkedTxbx");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<LinkedTextBox>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -1101,14 +1101,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoAutoFit))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NormalAutoFit))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapeAutoFit))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FlatText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class TextBodyProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1337,6 +1329,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(61, "bodyPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetTextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoAutoFit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NormalAutoFit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeAutoFit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<TextBodyProperties>()
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "spcFirstLastPara", a => a.UseParagraphSpacing)

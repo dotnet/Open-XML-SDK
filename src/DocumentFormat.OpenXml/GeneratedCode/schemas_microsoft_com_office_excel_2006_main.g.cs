@@ -50,33 +50,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Columns))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProtection))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DataConsolidate))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.RowBreaks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
     public partial class Macrosheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -115,6 +88,33 @@ namespace DocumentFormat.OpenXml.Office.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "macrosheet");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Columns>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetData>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataConsolidate>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
         }
 
         /// <summary>
@@ -249,8 +249,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description>ColumnSortMap &lt;xne:colSortMap></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RowSortMap))]
-    [ChildElementInfo(typeof(ColumnSortMap))]
     public partial class WorksheetSortMap : OpenXmlPartRootElement
     {
         /// <summary>
@@ -289,6 +287,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "worksheetSortMap");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RowSortMap>();
+            builder.AddChild<ColumnSortMap>();
         }
 
         /// <summary>
@@ -448,7 +448,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description>RowSortMapItem &lt;xne:row></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RowSortMapItem))]
     public partial class RowSortMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -507,6 +506,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "rowSortMap");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RowSortMapItem>();
             builder.AddElement<RowSortMap>()
 .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
 {
@@ -540,7 +540,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
     ///   <item><description>ColumnSortMapItem &lt;xne:col></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColumnSortMapItem))]
     public partial class ColumnSortMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -599,6 +598,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "colSortMap");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ColumnSortMapItem>();
             builder.AddElement<ColumnSortMap>()
 .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
 {

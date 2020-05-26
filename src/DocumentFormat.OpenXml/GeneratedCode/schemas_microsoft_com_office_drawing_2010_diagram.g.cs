@@ -26,9 +26,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -117,6 +114,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
             base.ConfigureMetadata(builder);
             builder.SetSchema(58, "cNvPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {

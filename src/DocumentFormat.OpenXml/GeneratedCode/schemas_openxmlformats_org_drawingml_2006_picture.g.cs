@@ -30,11 +30,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList &lt;pic14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualPictureProperties))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList), FileFormatVersions.Office2010)]
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -73,6 +68,11 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
             base.ConfigureMetadata(builder);
             builder.SetSchema(17, "pic");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualPictureProperties>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList>();
         }
 
         /// <summary>
@@ -168,9 +168,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -259,6 +256,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
             base.ConfigureMetadata(builder);
             builder.SetSchema(17, "cNvPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -343,8 +343,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList))]
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -393,6 +391,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(17, "cNvPicPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
 .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
         }
@@ -447,8 +447,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NonVisualPictureDrawingProperties &lt;pic:cNvPicPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualPictureDrawingProperties))]
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -487,6 +485,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(17, "nvPicPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualPictureDrawingProperties>();
         }
 
         /// <summary>
@@ -541,10 +541,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Stretch &lt;a:stretch></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Blip))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Tile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Stretch))]
     public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -603,6 +599,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(17, "blipFill");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
             builder.AddElement<BlipFill>()
 .AddAttribute(0, "dpi", a => a.Dpi)
 .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
@@ -679,21 +679,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -742,6 +727,21 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(17, "spPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {

@@ -28,12 +28,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     ///   <item><description>CompanyEmailAddress &lt;cppr:CompanyEmail></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PublishDate))]
-    [ChildElementInfo(typeof(DocumentAbstract))]
-    [ChildElementInfo(typeof(CompanyAddress))]
-    [ChildElementInfo(typeof(CompanyPhoneNumber))]
-    [ChildElementInfo(typeof(CompanyFaxNumber))]
-    [ChildElementInfo(typeof(CompanyEmailAddress))]
     public partial class CoverPageProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -72,6 +66,12 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CoverPageProperties");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PublishDate>();
+            builder.AddChild<DocumentAbstract>();
+            builder.AddChild<CompanyAddress>();
+            builder.AddChild<CompanyPhoneNumber>();
+            builder.AddChild<CompanyFaxNumber>();
+            builder.AddChild<CompanyEmailAddress>();
         }
 
         /// <summary>

@@ -30,12 +30,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description>OfficeArtExtensionList &lt;we:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WebExtensionStoreReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(WebExtensionReferenceList), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(WebExtensionPropertyBag), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(WebExtensionBindingList), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(Snapshot), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
     public partial class WebExtension : OpenXmlPartRootElement
     {
         /// <summary>
@@ -94,6 +88,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "webextension");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<WebExtensionStoreReference>();
+            builder.AddChild<WebExtensionReferenceList>();
+            builder.AddChild<WebExtensionPropertyBag>();
+            builder.AddChild<WebExtensionBindingList>();
+            builder.AddChild<Snapshot>();
+            builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<WebExtension>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -341,7 +341,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -380,6 +379,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "extLst");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -410,7 +410,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OfficeArtExtensionList &lt;we:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
     public partial class WebExtensionBinding : OpenXmlCompositeElement
     {
         /// <summary>
@@ -479,6 +478,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "binding");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<WebExtensionBinding>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -529,7 +529,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OfficeArtExtensionList &lt;we:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
     public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -608,6 +607,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "reference");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<WebExtensionStoreReference>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -662,7 +662,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>WebExtensionStoreReference &lt;we:reference></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WebExtensionStoreReference), FileFormatVersions.Office2013)]
     public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -701,6 +700,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "alternateReferences");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<WebExtensionStoreReference>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -725,7 +725,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>WebExtensionProperty &lt;we:property></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WebExtensionProperty), FileFormatVersions.Office2013)]
     public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     {
         /// <summary>
@@ -764,6 +763,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "properties");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<WebExtensionProperty>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -788,7 +788,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>WebExtensionBinding &lt;we:binding></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WebExtensionBinding), FileFormatVersions.Office2013)]
     public partial class WebExtensionBindingList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -827,6 +826,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "bindings");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<WebExtensionBinding>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -868,24 +868,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.BlipExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.AlphaBiLevel))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.AlphaCeiling))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.AlphaFloor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.AlphaInverse))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulationEffect))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulationFixed))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.AlphaReplace))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BiLevel))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Blur))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ColorChange))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ColorReplacement))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Duotone))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillOverlay))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Grayscale))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Hsl))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LuminanceEffect))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.TintEffect))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipExtensionList))]
     public partial class Snapshot : OpenXmlCompositeElement
     {
         /// <summary>
@@ -960,6 +942,24 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "snapshot");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaBiLevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaCeiling>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaFloor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaInverse>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulationEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulationFixed>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaReplace>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BiLevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blur>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ColorChange>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ColorReplacement>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Duotone>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillOverlay>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Grayscale>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Hsl>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TintEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipExtensionList>();
             builder.AddElement<Snapshot>()
 .AddAttribute(19, "embed", a => a.Embed)
 .AddAttribute(19, "link", a => a.Link)

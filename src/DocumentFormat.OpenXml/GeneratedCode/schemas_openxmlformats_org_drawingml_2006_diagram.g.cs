@@ -29,11 +29,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorDefinitionTitle))]
-    [ChildElementInfo(typeof(ColorTransformDescription))]
-    [ChildElementInfo(typeof(ColorTransformCategories))]
-    [ChildElementInfo(typeof(ColorTransformStyleLabel))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ColorsDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -92,6 +87,11 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "colorsDef");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ColorDefinitionTitle>();
+            builder.AddChild<ColorTransformDescription>();
+            builder.AddChild<ColorTransformCategories>();
+            builder.AddChild<ColorTransformStyleLabel>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ColorsDefinition>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId)
 .AddAttribute(0, "minVer", a => a.MinVersion);
@@ -163,10 +163,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorDefinitionTitle))]
-    [ChildElementInfo(typeof(ColorTransformDescription))]
-    [ChildElementInfo(typeof(ColorTransformCategories))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -235,6 +231,10 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "colorsDefHdr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ColorDefinitionTitle>();
+            builder.AddChild<ColorTransformDescription>();
+            builder.AddChild<ColorTransformCategories>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ColorsDefinitionHeader>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
 {
@@ -269,7 +269,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ColorsDefinitionHeader &lt;dgm:colorsDefHdr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorsDefinitionHeader))]
     public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -308,6 +307,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "colorsDefHdrLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ColorsDefinitionHeader>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -336,11 +336,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PointList))]
-    [ChildElementInfo(typeof(ConnectionList))]
-    [ChildElementInfo(typeof(Background))]
-    [ChildElementInfo(typeof(Whole))]
-    [ChildElementInfo(typeof(DataModelExtensionList))]
     public partial class DataModelRoot : OpenXmlPartRootElement
     {
         /// <summary>
@@ -379,6 +374,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "dataModel");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PointList>();
+            builder.AddChild<ConnectionList>();
+            builder.AddChild<Background>();
+            builder.AddChild<Whole>();
+            builder.AddChild<DataModelExtensionList>();
         }
 
         /// <summary>
@@ -510,14 +510,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(Description))]
-    [ChildElementInfo(typeof(CategoryList))]
-    [ChildElementInfo(typeof(SampleData))]
-    [ChildElementInfo(typeof(StyleData))]
-    [ChildElementInfo(typeof(ColorData))]
-    [ChildElementInfo(typeof(LayoutNode))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class LayoutDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -586,6 +578,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutDef");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Title>();
+            builder.AddChild<Description>();
+            builder.AddChild<CategoryList>();
+            builder.AddChild<SampleData>();
+            builder.AddChild<StyleData>();
+            builder.AddChild<ColorData>();
+            builder.AddChild<LayoutNode>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<LayoutDefinition>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId)
 .AddAttribute(0, "minVer", a => a.MinVersion)
@@ -655,10 +655,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(Description))]
-    [ChildElementInfo(typeof(CategoryList))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -737,6 +733,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutDefHdr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Title>();
+            builder.AddChild<Description>();
+            builder.AddChild<CategoryList>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<LayoutDefinitionHeader>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
 {
@@ -772,7 +772,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>LayoutDefinitionHeader &lt;dgm:layoutDefHdr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LayoutDefinitionHeader))]
     public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -811,6 +810,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutDefHdrLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LayoutDefinitionHeader>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -944,12 +944,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleDefinitionTitle))]
-    [ChildElementInfo(typeof(StyleLabelDescription))]
-    [ChildElementInfo(typeof(StyleDisplayCategories))]
-    [ChildElementInfo(typeof(Scene3D))]
-    [ChildElementInfo(typeof(StyleLabel))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class StyleDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1008,6 +1002,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleDef");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StyleDefinitionTitle>();
+            builder.AddChild<StyleLabelDescription>();
+            builder.AddChild<StyleDisplayCategories>();
+            builder.AddChild<Scene3D>();
+            builder.AddChild<StyleLabel>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<StyleDefinition>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId)
 .AddAttribute(0, "minVer", a => a.MinVersion);
@@ -1074,10 +1074,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleDefinitionTitle))]
-    [ChildElementInfo(typeof(StyleLabelDescription))]
-    [ChildElementInfo(typeof(StyleDisplayCategories))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1146,6 +1142,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleDefHdr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StyleDefinitionTitle>();
+            builder.AddChild<StyleLabelDescription>();
+            builder.AddChild<StyleDisplayCategories>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<StyleDefinitionHeader>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
 {
@@ -1180,7 +1180,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>StyleDefinitionHeader &lt;dgm:styleDefHdr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleDefinitionHeader))]
     public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1219,6 +1218,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleDefHdrLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StyleDefinitionHeader>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1771,12 +1771,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
     public abstract partial class ColorsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1833,15 +1827,21 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.AddElement<ColorsType>()
-                           .AddAttribute(0, "meth", a => a.Method, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "hueDir", a => a.HueDirection, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-                           });
+.AddAttribute(0, "meth", a => a.Method, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "hueDir", a => a.HueDirection, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
         }
     }
 
@@ -1856,7 +1856,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1895,6 +1894,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2027,7 +2027,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ColorTransformCategory &lt;dgm:cat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorTransformCategory))]
     public partial class ColorTransformCategories : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2066,6 +2065,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "catLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ColorTransformCategory>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 0)
@@ -2096,13 +2096,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FillColorList))]
-    [ChildElementInfo(typeof(LineColorList))]
-    [ChildElementInfo(typeof(EffectColorList))]
-    [ChildElementInfo(typeof(TextLineColorList))]
-    [ChildElementInfo(typeof(TextFillColorList))]
-    [ChildElementInfo(typeof(TextEffectColorList))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2151,6 +2144,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleLbl");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FillColorList>();
+            builder.AddChild<LineColorList>();
+            builder.AddChild<EffectColorList>();
+            builder.AddChild<TextLineColorList>();
+            builder.AddChild<TextFillColorList>();
+            builder.AddChild<TextEffectColorList>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ColorTransformStyleLabel>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -2280,10 +2280,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>PtExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PropertySet))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(TextBody))]
-    [ChildElementInfo(typeof(PtExtensionList))]
     public partial class Point : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2352,6 +2348,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "pt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PropertySet>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TextBody>();
+            builder.AddChild<PtExtensionList>();
             builder.AddElement<Point>()
 .AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
 {
@@ -2453,7 +2453,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2582,6 +2581,7 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "cxn");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Connection>()
 .AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
 {
@@ -2683,7 +2683,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Constraint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2832,6 +2831,7 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "constr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Constraint>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -2903,7 +2903,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Rule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3012,6 +3011,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "rule");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Rule>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -3122,7 +3122,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Adjust &lt;dgm:adj></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Adjust))]
     public partial class AdjustList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3161,6 +3160,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "adjLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Adjust>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3279,8 +3279,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Parameter))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Algorithm : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3339,6 +3337,8 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "alg");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Parameter>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Algorithm>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -3372,8 +3372,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AdjustList))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3485,6 +3483,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "shape");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AdjustList>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Shape>()
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
@@ -3558,7 +3558,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class PresentationOf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3657,6 +3656,7 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "presOf");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<PresentationOf>()
 .AddAttribute(0, "axis", a => a.Axis)
 .AddAttribute(0, "ptType", a => a.PointType)
@@ -3701,7 +3701,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>Constraint &lt;dgm:constr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Constraint))]
     public partial class Constraints : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3740,6 +3739,7 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "constrLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Constraint>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3764,7 +3764,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>Rule &lt;dgm:rule></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Rule))]
     public partial class RuleList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3803,6 +3802,7 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "ruleLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Rule>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3991,15 +3991,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OrganizationChart))]
-    [ChildElementInfo(typeof(MaxNumberOfChildren))]
-    [ChildElementInfo(typeof(PreferredNumberOfChildren))]
-    [ChildElementInfo(typeof(BulletEnabled))]
-    [ChildElementInfo(typeof(Direction))]
-    [ChildElementInfo(typeof(HierarchyBranch))]
-    [ChildElementInfo(typeof(AnimateOneByOne))]
-    [ChildElementInfo(typeof(AnimationLevel))]
-    [ChildElementInfo(typeof(ResizeHandles))]
     public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4036,6 +4027,15 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<OrganizationChart>();
+            builder.AddChild<MaxNumberOfChildren>();
+            builder.AddChild<PreferredNumberOfChildren>();
+            builder.AddChild<BulletEnabled>();
+            builder.AddChild<Direction>();
+            builder.AddChild<HierarchyBranch>();
+            builder.AddChild<AnimateOneByOne>();
+            builder.AddChild<AnimationLevel>();
+            builder.AddChild<ResizeHandles>();
         }
 
         /// <summary>
@@ -4175,15 +4175,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Algorithm))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(PresentationOf))]
-    [ChildElementInfo(typeof(Constraints))]
-    [ChildElementInfo(typeof(RuleList))]
-    [ChildElementInfo(typeof(ForEach))]
-    [ChildElementInfo(typeof(LayoutNode))]
-    [ChildElementInfo(typeof(Choose))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ForEach : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4302,6 +4293,15 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "forEach");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Algorithm>();
+            builder.AddChild<Shape>();
+            builder.AddChild<PresentationOf>();
+            builder.AddChild<Constraints>();
+            builder.AddChild<RuleList>();
+            builder.AddChild<ForEach>();
+            builder.AddChild<LayoutNode>();
+            builder.AddChild<Choose>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ForEach>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "ref", a => a.Reference)
@@ -4358,16 +4358,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Algorithm))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(PresentationOf))]
-    [ChildElementInfo(typeof(Constraints))]
-    [ChildElementInfo(typeof(RuleList))]
-    [ChildElementInfo(typeof(VariableList))]
-    [ChildElementInfo(typeof(ForEach))]
-    [ChildElementInfo(typeof(LayoutNode))]
-    [ChildElementInfo(typeof(Choose))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class LayoutNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4446,6 +4436,16 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutNode");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Algorithm>();
+            builder.AddChild<Shape>();
+            builder.AddChild<PresentationOf>();
+            builder.AddChild<Constraints>();
+            builder.AddChild<RuleList>();
+            builder.AddChild<VariableList>();
+            builder.AddChild<ForEach>();
+            builder.AddChild<LayoutNode>();
+            builder.AddChild<Choose>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<LayoutNode>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "styleLbl", a => a.StyleLabel)
@@ -4494,8 +4494,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DiagramChooseElse &lt;dgm:else></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DiagramChooseIf))]
-    [ChildElementInfo(typeof(DiagramChooseElse))]
     public partial class Choose : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4544,6 +4542,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "choose");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DiagramChooseIf>();
+            builder.AddChild<DiagramChooseElse>();
             builder.AddElement<Choose>()
 .AddAttribute(0, "name", a => a.Name);
         }
@@ -4585,15 +4585,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Algorithm))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(PresentationOf))]
-    [ChildElementInfo(typeof(Constraints))]
-    [ChildElementInfo(typeof(RuleList))]
-    [ChildElementInfo(typeof(ForEach))]
-    [ChildElementInfo(typeof(LayoutNode))]
-    [ChildElementInfo(typeof(Choose))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class DiagramChooseIf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4742,6 +4733,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "if");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Algorithm>();
+            builder.AddChild<Shape>();
+            builder.AddChild<PresentationOf>();
+            builder.AddChild<Constraints>();
+            builder.AddChild<RuleList>();
+            builder.AddChild<ForEach>();
+            builder.AddChild<LayoutNode>();
+            builder.AddChild<Choose>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<DiagramChooseIf>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "axis", a => a.Axis)
@@ -4827,15 +4827,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Algorithm))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(PresentationOf))]
-    [ChildElementInfo(typeof(Constraints))]
-    [ChildElementInfo(typeof(RuleList))]
-    [ChildElementInfo(typeof(ForEach))]
-    [ChildElementInfo(typeof(LayoutNode))]
-    [ChildElementInfo(typeof(Choose))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class DiagramChooseElse : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4884,6 +4875,15 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "else");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Algorithm>();
+            builder.AddChild<Shape>();
+            builder.AddChild<PresentationOf>();
+            builder.AddChild<Constraints>();
+            builder.AddChild<RuleList>();
+            builder.AddChild<ForEach>();
+            builder.AddChild<LayoutNode>();
+            builder.AddChild<Choose>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<DiagramChooseElse>()
 .AddAttribute(0, "name", a => a.Name);
         }
@@ -4928,11 +4928,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
     ///   <item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PointList))]
-    [ChildElementInfo(typeof(ConnectionList))]
-    [ChildElementInfo(typeof(Background))]
-    [ChildElementInfo(typeof(Whole))]
-    [ChildElementInfo(typeof(DataModelExtensionList))]
     public partial class DataModel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4971,6 +4966,11 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "dataModel");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PointList>();
+            builder.AddChild<ConnectionList>();
+            builder.AddChild<Background>();
+            builder.AddChild<Whole>();
+            builder.AddChild<DataModelExtensionList>();
         }
 
         /// <summary>
@@ -5221,7 +5221,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Category &lt;dgm:cat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Category))]
     public partial class CategoryList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5260,6 +5259,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "catLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Category>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5470,7 +5470,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DataModel))]
     public abstract partial class SampleDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5517,8 +5516,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DataModel>();
             builder.AddElement<SampleDataType>()
-                           .AddAttribute(0, "useDef", a => a.UseDefault);
+.AddAttribute(0, "useDef", a => a.UseDefault);
         }
 
         /// <summary>
@@ -5549,10 +5549,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
     public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5591,6 +5587,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "style");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
         }
 
         /// <summary>
@@ -6082,10 +6082,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Camera))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LightRig))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Backdrop))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class Scene3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6124,6 +6120,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "scene3d");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Camera>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LightRig>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Backdrop>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
 
         /// <summary>
@@ -6207,11 +6207,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BevelTop))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BevelBottom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtrusionColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ContourColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class Shape3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6290,6 +6285,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "sp3d");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelTop>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelBottom>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ContourColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<Shape3D>()
 .AddAttribute(0, "z", a => a.Z, aBuilder =>
 {
@@ -6401,8 +6401,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.FlatText &lt;a:flatTx></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FlatText))]
     public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6441,6 +6439,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "txPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
         }
 
         /// <summary>
@@ -6600,7 +6600,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>StyleDisplayCategory &lt;dgm:cat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleDisplayCategory))]
     public partial class StyleDisplayCategories : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6639,6 +6638,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "catLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StyleDisplayCategory>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 0)
@@ -6667,11 +6667,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Scene3D))]
-    [ChildElementInfo(typeof(Shape3D))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(Style))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class StyleLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6720,6 +6715,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleLbl");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Scene3D>();
+            builder.AddChild<Shape3D>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<Style>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<StyleLabel>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -6818,7 +6818,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Point &lt;dgm:pt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Point))]
     public partial class PointList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6857,6 +6856,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "ptLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Point>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6881,7 +6881,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Connection &lt;dgm:cxn></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Connection))]
     public partial class ConnectionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6920,6 +6919,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "cxnLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Connection>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6951,14 +6951,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
     public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6997,6 +6989,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "bg");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7042,9 +7042,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
     public partial class Whole : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7083,6 +7080,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "whole");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
         }
 
         /// <summary>
@@ -7128,7 +7128,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.DataModelExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.DataModelExtension))]
     public partial class DataModelExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7167,6 +7166,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.DataModelExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7192,8 +7192,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Style &lt;dgm:style></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PresentationLayoutVariables))]
-    [ChildElementInfo(typeof(Style))]
     public partial class PropertySet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7512,6 +7510,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "prSet");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PresentationLayoutVariables>();
+            builder.AddChild<Style>();
             builder.AddElement<PropertySet>()
 .AddAttribute(0, "presAssocID", a => a.PresentationElementId, aBuilder =>
 {
@@ -7613,21 +7613,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7676,6 +7661,21 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "spPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -7752,9 +7752,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7793,6 +7790,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "t");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
         }
 
         /// <summary>
@@ -7845,7 +7845,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PtExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PtExtension))]
     public partial class PtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7884,6 +7883,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PtExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

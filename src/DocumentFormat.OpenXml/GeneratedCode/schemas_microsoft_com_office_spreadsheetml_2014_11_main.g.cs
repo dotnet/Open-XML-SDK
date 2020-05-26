@@ -24,7 +24,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description>ModelTimeGrouping &lt;x16:modelTimeGrouping></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ModelTimeGrouping), FileFormatVersions.Office2016)]
     public partial class ModelTimeGroupings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -63,6 +62,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             base.ConfigureMetadata(builder);
             builder.SetSchema(84, "modelTimeGroupings");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<ModelTimeGrouping>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -87,7 +87,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description>CalculatedTimeColumn &lt;x16:calculatedTimeColumn></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CalculatedTimeColumn), FileFormatVersions.Office2016)]
     public partial class ModelTimeGrouping : OpenXmlCompositeElement
     {
         /// <summary>
@@ -156,6 +155,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             base.ConfigureMetadata(builder);
             builder.SetSchema(84, "modelTimeGrouping");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<CalculatedTimeColumn>();
             builder.AddElement<ModelTimeGrouping>()
 .AddAttribute(0, "tableName", a => a.TableName, aBuilder =>
 {

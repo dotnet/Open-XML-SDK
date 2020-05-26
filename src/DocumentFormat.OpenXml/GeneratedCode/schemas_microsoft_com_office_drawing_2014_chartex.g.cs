@@ -31,13 +31,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartData), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Chart), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ColorMappingType), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(PrintSettings), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class ChartSpace : OpenXmlPartRootElement
     {
         /// <summary>
@@ -76,6 +69,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "chartSpace");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<ChartData>();
+            builder.AddChild<Chart>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TxPrTextBody>();
+            builder.AddChild<ColorMappingType>();
+            builder.AddChild<PrintSettings>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -445,8 +445,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NumericLevel &lt;cx:lvl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(NumericLevel), FileFormatVersions.Office2016)]
     public partial class NumericDimension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -495,6 +493,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "numDim");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<Formula>();
+            builder.AddChild<NumericLevel>();
             builder.AddElement<NumericDimension>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -529,8 +529,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>StringLevel &lt;cx:lvl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(StringLevel), FileFormatVersions.Office2016)]
     public partial class StringDimension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -579,6 +577,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "strDim");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<Formula>();
+            builder.AddChild<StringLevel>();
             builder.AddElement<StringDimension>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -612,7 +612,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Extension2 &lt;cx:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Extension2), FileFormatVersions.Office2016)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -651,6 +650,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "extLst");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<Extension2>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -737,9 +737,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumericDimension), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(StringDimension), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class Data : OpenXmlCompositeElement
     {
         /// <summary>
@@ -788,6 +785,9 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "data");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<NumericDimension>();
+            builder.AddChild<StringDimension>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Data>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -823,8 +823,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>VXsdstring &lt;cx:v></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(VXsdstring), FileFormatVersions.Office2016)]
     public partial class TextData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -863,6 +861,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "txData");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<Formula>();
+            builder.AddChild<VXsdstring>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -1025,9 +1025,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
     public abstract partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1064,6 +1061,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
         }
 
         /// <summary>
@@ -1105,8 +1105,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>RichTextBody &lt;cx:rich></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TextData), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(RichTextBody), FileFormatVersions.Office2016)]
     public partial class Text : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1145,6 +1143,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "tx");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<TextData>();
+            builder.AddChild<RichTextBody>();
         }
 
         /// <summary>
@@ -1213,21 +1213,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1276,6 +1261,21 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "spPr");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -1353,10 +1353,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Text), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class AxisUnitsLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1395,6 +1391,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "unitsLabel");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<Text>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TxPrTextBody>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -1619,10 +1619,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Text), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class AxisTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1661,6 +1657,10 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "title");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<Text>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TxPrTextBody>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -1741,8 +1741,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AxisUnitsLabel), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class AxisUnits : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1791,6 +1789,8 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "units");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<AxisUnitsLabel>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<AxisUnits>()
 .AddAttribute(0, "unit", a => a.Unit);
         }
@@ -1973,8 +1973,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public abstract partial class OpenXmlGridlinesElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2011,6 +2009,8 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -2175,7 +2175,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public abstract partial class OpenXmlTickMarksElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2222,8 +2221,9 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<OpenXmlTickMarksElement>()
-                           .AddAttribute(0, "type", a => a.Type);
+.AddAttribute(0, "type", a => a.Type);
         }
 
         /// <summary>
@@ -2251,7 +2251,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class TickLabels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2290,6 +2289,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "tickLabels");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -2564,8 +2564,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>BinCountXsdunsignedInt &lt;cx:binCount></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Xsddouble), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(BinCountXsdunsignedInt), FileFormatVersions.Office2016)]
     public partial class Binning : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2634,6 +2632,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "binning");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<Xsddouble>();
+            builder.AddChild<BinCountXsdunsignedInt>();
             builder.AddElement<Binning>()
 .AddAttribute(0, "intervalClosed", a => a.IntervalClosed)
 .AddAttribute(0, "underflow", a => a.Underflow, aBuilder =>
@@ -2740,7 +2740,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>UnsignedIntegerType &lt;cx:idx></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UnsignedIntegerType), FileFormatVersions.Office2016)]
     public partial class Subtotals : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2779,6 +2778,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "subtotals");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<UnsignedIntegerType>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3171,12 +3171,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumberFormat), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(DataLabelVisibilities), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(SeparatorXsdstring), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class DataLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3235,6 +3229,12 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataLabel");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<NumberFormat>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TxPrTextBody>();
+            builder.AddChild<DataLabelVisibilities>();
+            builder.AddChild<SeparatorXsdstring>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<DataLabel>()
 .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
 {
@@ -3389,8 +3389,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class DataPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3439,6 +3437,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataPt");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<DataPoint>()
 .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
 {
@@ -3502,14 +3502,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumberFormat), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(DataLabelVisibilities), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(SeparatorXsdstring), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(DataLabel), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(DataLabelHidden), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class DataLabels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3558,6 +3550,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataLabels");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<NumberFormat>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TxPrTextBody>();
+            builder.AddChild<DataLabelVisibilities>();
+            builder.AddChild<SeparatorXsdstring>();
+            builder.AddChild<DataLabel>();
+            builder.AddChild<DataLabelHidden>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<DataLabels>()
 .AddAttribute(0, "pos", a => a.Pos);
         }
@@ -3702,13 +3702,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ParentLabelLayout), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(SeriesElementVisibilities), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Aggregation), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Binning), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Statistics), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Subtotals), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class SeriesLayoutProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3747,6 +3740,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "layoutPr");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<ParentLabelLayout>();
+            builder.AddChild<SeriesElementVisibilities>();
+            builder.AddChild<Aggregation>();
+            builder.AddChild<Binning>();
+            builder.AddChild<Statistics>();
+            builder.AddChild<Subtotals>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -3846,8 +3846,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class PlotSurface : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3886,6 +3884,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "plotSurface");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -3944,14 +3944,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Text), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(DataPoint), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(DataLabels), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(DataId), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(SeriesLayoutProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(AxisId), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class Series : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4040,6 +4032,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "series");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<Text>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DataId>();
+            builder.AddChild<SeriesLayoutProperties>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Series>()
 .AddAttribute(0, "layoutId", a => a.LayoutId, aBuilder =>
 {
@@ -4108,9 +4108,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PlotSurface), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Series), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class PlotAreaRegion : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4149,6 +4146,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "plotAreaRegion");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<PlotSurface>();
+            builder.AddChild<Series>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -4200,19 +4200,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CategoryAxisScaling), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ValueAxisScaling), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(AxisTitle), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(AxisUnits), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(MajorGridlinesGridlines), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(MinorGridlinesGridlines), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(MajorTickMarksTickMarks), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(MinorTickMarksTickMarks), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(TickLabels), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(NumberFormat), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class Axis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4271,6 +4258,19 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "axis");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<CategoryAxisScaling>();
+            builder.AddChild<ValueAxisScaling>();
+            builder.AddChild<AxisTitle>();
+            builder.AddChild<AxisUnits>();
+            builder.AddChild<MajorGridlinesGridlines>();
+            builder.AddChild<MinorGridlinesGridlines>();
+            builder.AddChild<MajorTickMarksTickMarks>();
+            builder.AddChild<MinorTickMarksTickMarks>();
+            builder.AddChild<TickLabels>();
+            builder.AddChild<NumberFormat>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TxPrTextBody>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Axis>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -4319,10 +4319,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Text), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class ChartTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4391,6 +4387,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "title");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<Text>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TxPrTextBody>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ChartTitle>()
 .AddAttribute(0, "pos", a => a.Pos)
 .AddAttribute(0, "align", a => a.Align)
@@ -4477,10 +4477,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PlotAreaRegion), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Axis), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class PlotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4519,6 +4515,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "plotArea");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<PlotAreaRegion>();
+            builder.AddChild<Axis>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -4561,9 +4561,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(TxPrTextBody), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class Legend : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4632,6 +4629,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "legend");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TxPrTextBody>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Legend>()
 .AddAttribute(0, "pos", a => a.Pos)
 .AddAttribute(0, "align", a => a.Align)
@@ -4706,12 +4706,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>FirstFooterXsdstring &lt;cx:firstFooter></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OddHeaderXsdstring), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(OddFooterXsdstring), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(EvenHeaderXsdstring), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(EvenFooterXsdstring), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(FirstHeaderXsdstring), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(FirstFooterXsdstring), FileFormatVersions.Office2016)]
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4780,6 +4774,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "headerFooter");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<OddHeaderXsdstring>();
+            builder.AddChild<OddFooterXsdstring>();
+            builder.AddChild<EvenHeaderXsdstring>();
+            builder.AddChild<EvenFooterXsdstring>();
+            builder.AddChild<FirstHeaderXsdstring>();
+            builder.AddChild<FirstFooterXsdstring>();
             builder.AddElement<HeaderFooter>()
 .AddAttribute(0, "alignWithMargins", a => a.AlignWithMargins)
 .AddAttribute(0, "differentOddEven", a => a.DifferentOddEven)
@@ -5128,9 +5128,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExternalData), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Data), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class ChartData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5169,6 +5166,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "chartData");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<ExternalData>();
+            builder.AddChild<Data>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -5211,10 +5211,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;cx:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartTitle), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(PlotArea), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Legend), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
     public partial class Chart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5253,6 +5249,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "chart");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<ChartTitle>();
+            builder.AddChild<PlotArea>();
+            builder.AddChild<Legend>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -5332,7 +5332,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class ColorMappingType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5491,6 +5490,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "clrMapOvr");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<ColorMappingType>()
 .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
 {
@@ -5591,9 +5591,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PageSetup &lt;cx:pageSetup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(HeaderFooter), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(PageMargins), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(PageSetup), FileFormatVersions.Office2016)]
     public partial class PrintSettings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5632,6 +5629,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "printSettings");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<HeaderFooter>();
+            builder.AddChild<PageMargins>();
+            builder.AddChild<PageSetup>();
         }
 
         /// <summary>
@@ -5747,7 +5747,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ChartStringValue &lt;cx:pt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartStringValue), FileFormatVersions.Office2016)]
     public partial class StringLevel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5796,6 +5795,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "lvl");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<ChartStringValue>();
             builder.AddElement<StringLevel>()
 .AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
 {
@@ -5825,7 +5825,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NumericValue &lt;cx:pt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumericValue), FileFormatVersions.Office2016)]
     public partial class NumericLevel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5884,6 +5883,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "lvl");
             builder.Availability = (FileFormatVersions.Office2016);
+            builder.AddChild<NumericValue>();
             builder.AddElement<NumericLevel>()
 .AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
 {

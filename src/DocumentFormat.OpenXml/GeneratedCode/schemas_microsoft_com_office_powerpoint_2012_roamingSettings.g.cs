@@ -100,8 +100,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     ///   <item><description>Value &lt;pRoam:value></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Key), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(Value), FileFormatVersions.Office2013)]
     public partial class RoamingProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -140,6 +138,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
             base.ConfigureMetadata(builder);
             builder.SetSchema(76, "props");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<Key>();
+            builder.AddChild<Value>();
         }
 
         /// <summary>

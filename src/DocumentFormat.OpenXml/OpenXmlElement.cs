@@ -116,7 +116,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         protected OpenXmlElement()
         {
-            ElementData = PackageCache.Cache.ParseElementData(this);
         }
 
         /// <summary>
@@ -138,8 +137,6 @@ namespace DocumentFormat.OpenXml
         }
 
         #region internal properties
-
-        internal OpenXmlElementData ElementData { get; }
 
         /// <summary>
         /// Gets or sets the next element in the linked list.
@@ -1861,7 +1858,7 @@ namespace DocumentFormat.OpenXml
             return newElement;
         }
 
-        internal virtual OpenXmlElement ElementFactory(byte namespaceId, string name) => ElementData.Children.Create(namespaceId, name);
+        internal virtual OpenXmlElement ElementFactory(byte namespaceId, string name) => Metadata.Children.Create(namespaceId, name);
 
         internal virtual T CloneImp<T>(bool deep)
             where T : OpenXmlElement, new()

@@ -30,11 +30,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description>DropZonesVisible &lt;c14:dropZonesVisible></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DropZoneFilter), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DropZoneCategories), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DropZoneData), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DropZoneSeries), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DropZonesVisible), FileFormatVersions.Office2010)]
     public partial class PivotOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -73,6 +68,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "pivotOptions");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DropZoneFilter>();
+            builder.AddChild<DropZoneCategories>();
+            builder.AddChild<DropZoneData>();
+            builder.AddChild<DropZoneSeries>();
+            builder.AddChild<DropZonesVisible>();
         }
 
         /// <summary>
@@ -167,8 +167,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description>ShowSketchButton &lt;c14:showSketchBtn></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(InSketchMode), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ShowSketchButton), FileFormatVersions.Office2010)]
     public partial class SketchOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -207,6 +205,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "sketchOptions");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<InSketchMode>();
+            builder.AddChild<ShowSketchButton>();
         }
 
         /// <summary>
@@ -258,7 +258,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description>ShapeProperties &lt;c14:spPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2010)]
     public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -297,6 +296,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "invertSolidFillFmt");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ShapeProperties>();
         }
 
         /// <summary>
@@ -389,21 +389,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (101L), Ma
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -452,6 +437,21 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (101L), Ma
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "spPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {

@@ -6920,10 +6920,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9
     ///   <item><description>Inserted &lt;w:ins></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumberingLevelReference))]
-    [ChildElementInfo(typeof(NumberingId))]
-    [ChildElementInfo(typeof(NumberingChange))]
-    [ChildElementInfo(typeof(Inserted))]
     public partial class NumberingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6962,6 +6958,10 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "numPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NumberingLevelReference>();
+            builder.AddChild<NumberingId>();
+            builder.AddChild<NumberingChange>();
+            builder.AddChild<Inserted>();
         }
 
         /// <summary>
@@ -7046,12 +7046,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9
     ///   <item><description>BarBorder &lt;w:bar></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TopBorder))]
-    [ChildElementInfo(typeof(LeftBorder))]
-    [ChildElementInfo(typeof(BottomBorder))]
-    [ChildElementInfo(typeof(RightBorder))]
-    [ChildElementInfo(typeof(BetweenBorder))]
-    [ChildElementInfo(typeof(BarBorder))]
     public partial class ParagraphBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7090,6 +7084,12 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pBdr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TopBorder>();
+            builder.AddChild<LeftBorder>();
+            builder.AddChild<BottomBorder>();
+            builder.AddChild<RightBorder>();
+            builder.AddChild<BetweenBorder>();
+            builder.AddChild<BarBorder>();
         }
 
         /// <summary>
@@ -7378,7 +7378,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"
     ///   <item><description>TabStop &lt;w:tab></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TabStop))]
     public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7417,6 +7416,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tabs");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TabStop>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -8394,7 +8394,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ParagraphPropertiesExtended &lt;w:pPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ParagraphPropertiesExtended))]
     public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8472,6 +8471,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pPrChange");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ParagraphPropertiesExtended>();
             builder.AddElement<ParagraphPropertiesChange>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
@@ -9602,22 +9602,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
     ///   <item><description>ObjectLink &lt;w:objectLink></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Group))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.ImageFile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Line))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Oval))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.PolyLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Rectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.RoundRectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shape))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shapetype))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Arc))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Curve))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.OleObject))]
-    [ChildElementInfo(typeof(Drawing))]
-    [ChildElementInfo(typeof(Control))]
-    [ChildElementInfo(typeof(ObjectEmbed))]
-    [ChildElementInfo(typeof(ObjectLink))]
     public partial class EmbeddedObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9695,6 +9679,22 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "object");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Line>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Oval>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.PolyLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Rectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.RoundRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shapetype>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Arc>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Curve>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.OleObject>();
+            builder.AddChild<Drawing>();
+            builder.AddChild<Control>();
+            builder.AddChild<ObjectEmbed>();
+            builder.AddChild<ObjectLink>();
             builder.AddElement<EmbeddedObject>()
 .AddAttribute(23, "dxaOrig", a => a.DxaOriginal)
 .AddAttribute(23, "dyaOrig", a => a.DyaOriginal)
@@ -9770,20 +9770,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>Control &lt;w:control></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Group))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.ImageFile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Line))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Oval))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.PolyLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Rectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.RoundRectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shape))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shapetype))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Arc))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Curve))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.OleObject))]
-    [ChildElementInfo(typeof(MovieReference))]
-    [ChildElementInfo(typeof(Control))]
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9835,6 +9821,20 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pict");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Line>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Oval>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.PolyLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Rectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.RoundRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shapetype>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Arc>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Curve>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.OleObject>();
+            builder.AddChild<MovieReference>();
+            builder.AddChild<Control>();
             builder.AddElement<Picture>()
 .AddAttribute(52, "anchorId", a => a.AnchorId, aBuilder =>
 {
@@ -9892,9 +9892,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>NumberingChange &lt;w:numberingChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FieldData))]
-    [ChildElementInfo(typeof(FormFieldData))]
-    [ChildElementInfo(typeof(NumberingChange))]
     public partial class FieldChar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9972,6 +9969,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "fldChar");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FieldData>();
+            builder.AddChild<FormFieldData>();
+            builder.AddChild<NumberingChange>();
             builder.AddElement<FieldChar>()
 .AddAttribute(23, "fldCharType", a => a.FieldCharType, aBuilder =>
 {
@@ -10046,9 +10046,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>RubyBase &lt;w:rubyBase></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RubyProperties))]
-    [ChildElementInfo(typeof(RubyContent))]
-    [ChildElementInfo(typeof(RubyBase))]
     public partial class Ruby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10087,6 +10084,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "ruby");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RubyProperties>();
+            builder.AddChild<RubyContent>();
+            builder.AddChild<RubyBase>();
         }
 
         /// <summary>
@@ -10262,8 +10262,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline &lt;wp:inline></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline))]
     public partial class Drawing : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10302,6 +10300,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "drawing");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>();
         }
 
         /// <summary>
@@ -12426,7 +12426,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>PreviousRunProperties &lt;w:rPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PreviousRunProperties))]
     public partial class RunPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12504,6 +12503,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rPrChange");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PreviousRunProperties>();
             builder.AddElement<RunPropertiesChange>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
@@ -12616,57 +12616,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>RunPropertiesChange &lt;w:rPrChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunStyle))]
-    [ChildElementInfo(typeof(RunFonts))]
-    [ChildElementInfo(typeof(Bold))]
-    [ChildElementInfo(typeof(BoldComplexScript))]
-    [ChildElementInfo(typeof(Italic))]
-    [ChildElementInfo(typeof(ItalicComplexScript))]
-    [ChildElementInfo(typeof(Caps))]
-    [ChildElementInfo(typeof(SmallCaps))]
-    [ChildElementInfo(typeof(Strike))]
-    [ChildElementInfo(typeof(DoubleStrike))]
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(Emboss))]
-    [ChildElementInfo(typeof(Imprint))]
-    [ChildElementInfo(typeof(NoProof))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(Vanish))]
-    [ChildElementInfo(typeof(WebHidden))]
-    [ChildElementInfo(typeof(Color))]
-    [ChildElementInfo(typeof(Spacing))]
-    [ChildElementInfo(typeof(CharacterScale))]
-    [ChildElementInfo(typeof(Kern))]
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(FontSize))]
-    [ChildElementInfo(typeof(FontSizeComplexScript))]
-    [ChildElementInfo(typeof(Highlight))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(TextEffect))]
-    [ChildElementInfo(typeof(Border))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(FitText))]
-    [ChildElementInfo(typeof(VerticalTextAlignment))]
-    [ChildElementInfo(typeof(RightToLeftText))]
-    [ChildElementInfo(typeof(ComplexScript))]
-    [ChildElementInfo(typeof(Emphasis))]
-    [ChildElementInfo(typeof(Languages))]
-    [ChildElementInfo(typeof(EastAsianLayout))]
-    [ChildElementInfo(typeof(SpecVanish))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Glow), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Shadow), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Reflection), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Scene3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Properties3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Ligatures), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.StylisticSets), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RunPropertiesChange))]
     public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12705,6 +12654,57 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunStyle>();
+            builder.AddChild<RunFonts>();
+            builder.AddChild<Bold>();
+            builder.AddChild<BoldComplexScript>();
+            builder.AddChild<Italic>();
+            builder.AddChild<ItalicComplexScript>();
+            builder.AddChild<Caps>();
+            builder.AddChild<SmallCaps>();
+            builder.AddChild<Strike>();
+            builder.AddChild<DoubleStrike>();
+            builder.AddChild<Outline>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<Emboss>();
+            builder.AddChild<Imprint>();
+            builder.AddChild<NoProof>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<Vanish>();
+            builder.AddChild<WebHidden>();
+            builder.AddChild<Color>();
+            builder.AddChild<Spacing>();
+            builder.AddChild<CharacterScale>();
+            builder.AddChild<Kern>();
+            builder.AddChild<Position>();
+            builder.AddChild<FontSize>();
+            builder.AddChild<FontSizeComplexScript>();
+            builder.AddChild<Highlight>();
+            builder.AddChild<Underline>();
+            builder.AddChild<TextEffect>();
+            builder.AddChild<Border>();
+            builder.AddChild<Shading>();
+            builder.AddChild<FitText>();
+            builder.AddChild<VerticalTextAlignment>();
+            builder.AddChild<RightToLeftText>();
+            builder.AddChild<ComplexScript>();
+            builder.AddChild<Emphasis>();
+            builder.AddChild<Languages>();
+            builder.AddChild<EastAsianLayout>();
+            builder.AddChild<SpecVanish>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
+            builder.AddChild<RunPropertiesChange>();
         }
 
         /// <summary>
@@ -13509,8 +13509,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>DeletedMathControl &lt;w:del></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunProperties))]
-    [ChildElementInfo(typeof(DeletedMathControl))]
     public partial class InsertedMathControl : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13588,6 +13586,8 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "ins");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunProperties>();
+            builder.AddChild<DeletedMathControl>();
             builder.AddElement<InsertedMathControl>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
@@ -13650,7 +13650,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>RunProperties &lt;w:rPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunProperties))]
     public partial class DeletedMathControl : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13728,6 +13727,7 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "del");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunProperties>();
             builder.AddElement<DeletedMathControl>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
@@ -13959,9 +13959,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>DeletedMathControl &lt;w:del></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunProperties))]
-    [ChildElementInfo(typeof(InsertedMathControl))]
-    [ChildElementInfo(typeof(DeletedMathControl))]
     public abstract partial class MathControlMoveType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14037,22 +14034,25 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<RunProperties>();
+            builder.AddChild<InsertedMathControl>();
+            builder.AddChild<DeletedMathControl>();
             builder.AddElement<MathControlMoveType>()
-                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
-                           })
-                           .AddAttribute(23, "date", a => a.Date)
-                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                               });
-                           });
+.AddAttribute(23, "author", a => a.Author, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+})
+.AddAttribute(23, "date", a => a.Date)
+.AddAttribute(23, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+});
         }
     }
 
@@ -14124,64 +14124,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>DocumentFormat.OpenXml.Math.Run &lt;m:r></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlProperties))]
-    [ChildElementInfo(typeof(CustomXmlRuby))]
-    [ChildElementInfo(typeof(SimpleFieldRuby))]
-    [ChildElementInfo(typeof(HyperlinkRuby))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(SdtRunRuby))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     public partial class CustomXmlRuby : CustomXmlElement
     {
         /// <summary>
@@ -14220,6 +14162,64 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXml");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomXmlProperties>();
+            builder.AddChild<CustomXmlRuby>();
+            builder.AddChild<SimpleFieldRuby>();
+            builder.AddChild<HyperlinkRuby>();
+            builder.AddChild<Run>();
+            builder.AddChild<SdtRunRuby>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -14424,64 +14424,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>DocumentFormat.OpenXml.Math.Run &lt;m:r></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FieldData))]
-    [ChildElementInfo(typeof(CustomXmlRuby))]
-    [ChildElementInfo(typeof(SimpleFieldRuby))]
-    [ChildElementInfo(typeof(HyperlinkRuby))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(SdtRunRuby))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     public partial class SimpleFieldRuby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14559,6 +14501,64 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "fldSimple");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FieldData>();
+            builder.AddChild<CustomXmlRuby>();
+            builder.AddChild<SimpleFieldRuby>();
+            builder.AddChild<HyperlinkRuby>();
+            builder.AddChild<Run>();
+            builder.AddChild<SdtRunRuby>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
             builder.AddElement<SimpleFieldRuby>()
 .AddAttribute(23, "instr", a => a.Instruction, aBuilder =>
 {
@@ -14782,63 +14782,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Math.Run &lt;m:r></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlRuby))]
-    [ChildElementInfo(typeof(SimpleFieldRuby))]
-    [ChildElementInfo(typeof(HyperlinkRuby))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(SdtRunRuby))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     public partial class HyperlinkRuby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14955,6 +14898,63 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "hyperlink");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomXmlRuby>();
+            builder.AddChild<SimpleFieldRuby>();
+            builder.AddChild<HyperlinkRuby>();
+            builder.AddChild<Run>();
+            builder.AddChild<SdtRunRuby>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
             builder.AddElement<HyperlinkRuby>()
 .AddAttribute(23, "tgtFrame", a => a.TargetFrame, aBuilder =>
 {
@@ -15155,39 +15155,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
     ///   <item><description>LastRenderedPageBreak &lt;w:lastRenderedPageBreak></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunProperties))]
-    [ChildElementInfo(typeof(Break))]
-    [ChildElementInfo(typeof(Text))]
-    [ChildElementInfo(typeof(DeletedText))]
-    [ChildElementInfo(typeof(FieldCode))]
-    [ChildElementInfo(typeof(DeletedFieldCode))]
-    [ChildElementInfo(typeof(NoBreakHyphen))]
-    [ChildElementInfo(typeof(SoftHyphen))]
-    [ChildElementInfo(typeof(DayShort))]
-    [ChildElementInfo(typeof(MonthShort))]
-    [ChildElementInfo(typeof(YearShort))]
-    [ChildElementInfo(typeof(DayLong))]
-    [ChildElementInfo(typeof(MonthLong))]
-    [ChildElementInfo(typeof(YearLong))]
-    [ChildElementInfo(typeof(AnnotationReferenceMark))]
-    [ChildElementInfo(typeof(FootnoteReferenceMark))]
-    [ChildElementInfo(typeof(EndnoteReferenceMark))]
-    [ChildElementInfo(typeof(SeparatorMark))]
-    [ChildElementInfo(typeof(ContinuationSeparatorMark))]
-    [ChildElementInfo(typeof(SymbolChar))]
-    [ChildElementInfo(typeof(PageNumber))]
-    [ChildElementInfo(typeof(CarriageReturn))]
-    [ChildElementInfo(typeof(TabChar))]
-    [ChildElementInfo(typeof(EmbeddedObject))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(FieldChar))]
-    [ChildElementInfo(typeof(Ruby))]
-    [ChildElementInfo(typeof(FootnoteReference))]
-    [ChildElementInfo(typeof(EndnoteReference))]
-    [ChildElementInfo(typeof(CommentReference))]
-    [ChildElementInfo(typeof(Drawing))]
-    [ChildElementInfo(typeof(PositionalTab))]
-    [ChildElementInfo(typeof(LastRenderedPageBreak))]
     public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15265,6 +15232,39 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "r");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunProperties>();
+            builder.AddChild<Break>();
+            builder.AddChild<Text>();
+            builder.AddChild<DeletedText>();
+            builder.AddChild<FieldCode>();
+            builder.AddChild<DeletedFieldCode>();
+            builder.AddChild<NoBreakHyphen>();
+            builder.AddChild<SoftHyphen>();
+            builder.AddChild<DayShort>();
+            builder.AddChild<MonthShort>();
+            builder.AddChild<YearShort>();
+            builder.AddChild<DayLong>();
+            builder.AddChild<MonthLong>();
+            builder.AddChild<YearLong>();
+            builder.AddChild<AnnotationReferenceMark>();
+            builder.AddChild<FootnoteReferenceMark>();
+            builder.AddChild<EndnoteReferenceMark>();
+            builder.AddChild<SeparatorMark>();
+            builder.AddChild<ContinuationSeparatorMark>();
+            builder.AddChild<SymbolChar>();
+            builder.AddChild<PageNumber>();
+            builder.AddChild<CarriageReturn>();
+            builder.AddChild<TabChar>();
+            builder.AddChild<EmbeddedObject>();
+            builder.AddChild<Picture>();
+            builder.AddChild<FieldChar>();
+            builder.AddChild<Ruby>();
+            builder.AddChild<FootnoteReference>();
+            builder.AddChild<EndnoteReference>();
+            builder.AddChild<CommentReference>();
+            builder.AddChild<Drawing>();
+            builder.AddChild<PositionalTab>();
+            builder.AddChild<LastRenderedPageBreak>();
             builder.AddElement<Run>()
 .AddAttribute(23, "rsidRPr", a => a.RsidRunProperties, aBuilder =>
 {
@@ -15381,29 +15381,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd &lt;w14:customXmlConflictDelRangeEnd></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SdtProperties))]
-    [ChildElementInfo(typeof(SdtEndCharProperties))]
-    [ChildElementInfo(typeof(SdtContentRunRuby))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
     public partial class SdtRunRuby : SdtElement
     {
         /// <summary>
@@ -15442,6 +15419,29 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SdtProperties>();
+            builder.AddChild<SdtEndCharProperties>();
+            builder.AddChild<SdtContentRunRuby>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
         }
 
         /// <summary>
@@ -16841,62 +16841,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>BidirectionalEmbedding &lt;w:dir></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
     public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16972,22 +16916,78 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<SdtRun>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<Run>();
+            builder.AddChild<BidirectionalOverride>();
+            builder.AddChild<BidirectionalEmbedding>();
             builder.AddElement<RunTrackChangeType>()
-                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
-                           })
-                           .AddAttribute(23, "date", a => a.Date)
-                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                               });
-                           });
+.AddAttribute(23, "author", a => a.Author, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+})
+.AddAttribute(23, "date", a => a.Date)
+.AddAttribute(23, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+});
         }
     }
 
@@ -17067,29 +17067,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd &lt;w14:customXmlConflictDelRangeEnd></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SdtProperties))]
-    [ChildElementInfo(typeof(SdtEndCharProperties))]
-    [ChildElementInfo(typeof(SdtContentRun))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
     public partial class SdtRun : SdtElement
     {
         /// <summary>
@@ -17128,6 +17105,29 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SdtProperties>();
+            builder.AddChild<SdtEndCharProperties>();
+            builder.AddChild<SdtContentRun>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
         }
 
         /// <summary>
@@ -17239,41 +17239,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlProperties))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class CustomXmlBlock : CustomXmlElement
     {
         /// <summary>
@@ -17312,6 +17277,41 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXml");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomXmlProperties>();
+            builder.AddChild<CustomXmlBlock>();
+            builder.AddChild<SdtBlock>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<Table>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17440,29 +17440,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd &lt;w14:customXmlConflictDelRangeEnd></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SdtProperties))]
-    [ChildElementInfo(typeof(SdtEndCharProperties))]
-    [ChildElementInfo(typeof(SdtContentBlock))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
     public partial class SdtBlock : SdtElement
     {
         /// <summary>
@@ -17501,6 +17478,29 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SdtProperties>();
+            builder.AddChild<SdtEndCharProperties>();
+            builder.AddChild<SdtContentBlock>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
         }
 
         /// <summary>
@@ -17638,67 +17638,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SubDocumentReference &lt;w:subDoc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ParagraphProperties))]
-    [ChildElementInfo(typeof(CustomXmlRun))]
-    [ChildElementInfo(typeof(SimpleField))]
-    [ChildElementInfo(typeof(Hyperlink))]
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SubDocumentReference))]
     public partial class Paragraph : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17841,6 +17780,67 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "p");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ParagraphProperties>();
+            builder.AddChild<CustomXmlRun>();
+            builder.AddChild<SimpleField>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<SdtRun>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<Run>();
+            builder.AddChild<BidirectionalOverride>();
+            builder.AddChild<BidirectionalEmbedding>();
+            builder.AddChild<SubDocumentReference>();
             builder.AddElement<Paragraph>()
 .AddAttribute(23, "rsidRPr", a => a.RsidParagraphMarkRevision, aBuilder =>
 {
@@ -18104,41 +18104,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TableProperties))]
-    [ChildElementInfo(typeof(TableGrid))]
-    [ChildElementInfo(typeof(TableRow))]
-    [ChildElementInfo(typeof(CustomXmlRow))]
-    [ChildElementInfo(typeof(SdtRow))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class Table : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18177,6 +18142,41 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tbl");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<TableProperties>();
+            builder.AddChild<TableGrid>();
+            builder.AddChild<TableRow>();
+            builder.AddChild<CustomXmlRow>();
+            builder.AddChild<SdtRow>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18349,41 +18349,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TablePropertyExceptions))]
-    [ChildElementInfo(typeof(TableRowProperties))]
-    [ChildElementInfo(typeof(TableCell))]
-    [ChildElementInfo(typeof(CustomXmlCell))]
-    [ChildElementInfo(typeof(SdtCell))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class TableRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18500,6 +18465,41 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TablePropertyExceptions>();
+            builder.AddChild<TableRowProperties>();
+            builder.AddChild<TableCell>();
+            builder.AddChild<CustomXmlCell>();
+            builder.AddChild<SdtCell>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
             builder.AddElement<TableRow>()
 .AddAttribute(23, "rsidRPr", a => a.RsidTableRowMarkRevision, aBuilder =>
 {
@@ -18693,40 +18693,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlProperties))]
-    [ChildElementInfo(typeof(TableRow))]
-    [ChildElementInfo(typeof(CustomXmlRow))]
-    [ChildElementInfo(typeof(SdtRow))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class CustomXmlRow : CustomXmlElement
     {
         /// <summary>
@@ -18765,6 +18731,40 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXml");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomXmlProperties>();
+            builder.AddChild<TableRow>();
+            builder.AddChild<CustomXmlRow>();
+            builder.AddChild<SdtRow>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18886,29 +18886,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd &lt;w14:customXmlConflictDelRangeEnd></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SdtProperties))]
-    [ChildElementInfo(typeof(SdtEndCharProperties))]
-    [ChildElementInfo(typeof(SdtContentRow))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
     public partial class SdtRow : SdtElement
     {
         /// <summary>
@@ -18947,6 +18924,29 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SdtProperties>();
+            builder.AddChild<SdtEndCharProperties>();
+            builder.AddChild<SdtContentRow>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
         }
 
         /// <summary>
@@ -19059,42 +19059,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableCellProperties))]
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class TableCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19133,6 +19097,42 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tc");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableCellProperties>();
+            builder.AddChild<AltChunk>();
+            builder.AddChild<CustomXmlBlock>();
+            builder.AddChild<SdtBlock>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<Table>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         /// <summary>
@@ -19304,40 +19304,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlProperties))]
-    [ChildElementInfo(typeof(TableCell))]
-    [ChildElementInfo(typeof(CustomXmlCell))]
-    [ChildElementInfo(typeof(SdtCell))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class CustomXmlCell : CustomXmlElement
     {
         /// <summary>
@@ -19376,6 +19342,40 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXml");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomXmlProperties>();
+            builder.AddChild<TableCell>();
+            builder.AddChild<CustomXmlCell>();
+            builder.AddChild<SdtCell>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19497,29 +19497,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd &lt;w14:customXmlConflictDelRangeEnd></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SdtProperties))]
-    [ChildElementInfo(typeof(SdtEndCharProperties))]
-    [ChildElementInfo(typeof(SdtContentCell))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
     public partial class SdtCell : SdtElement
     {
         /// <summary>
@@ -19558,6 +19535,29 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SdtProperties>();
+            builder.AddChild<SdtEndCharProperties>();
+            builder.AddChild<SdtContentCell>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
         }
 
         /// <summary>
@@ -19695,67 +19695,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>SubDocumentReference &lt;w:subDoc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlProperties))]
-    [ChildElementInfo(typeof(CustomXmlRun))]
-    [ChildElementInfo(typeof(SimpleField))]
-    [ChildElementInfo(typeof(Hyperlink))]
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SubDocumentReference))]
     public partial class CustomXmlRun : CustomXmlElement
     {
         /// <summary>
@@ -19794,6 +19733,67 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXml");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomXmlProperties>();
+            builder.AddChild<CustomXmlRun>();
+            builder.AddChild<SimpleField>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<SdtRun>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<Run>();
+            builder.AddChild<BidirectionalOverride>();
+            builder.AddChild<BidirectionalEmbedding>();
+            builder.AddChild<SubDocumentReference>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20028,67 +20028,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>SubDocumentReference &lt;w:subDoc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FieldData))]
-    [ChildElementInfo(typeof(CustomXmlRun))]
-    [ChildElementInfo(typeof(SimpleField))]
-    [ChildElementInfo(typeof(Hyperlink))]
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SubDocumentReference))]
     public partial class SimpleField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20166,6 +20105,67 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "fldSimple");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FieldData>();
+            builder.AddChild<CustomXmlRun>();
+            builder.AddChild<SimpleField>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<SdtRun>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<Run>();
+            builder.AddChild<BidirectionalOverride>();
+            builder.AddChild<BidirectionalEmbedding>();
+            builder.AddChild<SubDocumentReference>();
             builder.AddElement<SimpleField>()
 .AddAttribute(23, "instr", a => a.Instruction, aBuilder =>
 {
@@ -20419,66 +20419,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SubDocumentReference &lt;w:subDoc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlRun))]
-    [ChildElementInfo(typeof(SimpleField))]
-    [ChildElementInfo(typeof(Hyperlink))]
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SubDocumentReference))]
     public partial class Hyperlink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20595,6 +20535,66 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "hyperlink");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomXmlRun>();
+            builder.AddChild<SimpleField>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<SdtRun>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<Run>();
+            builder.AddChild<BidirectionalOverride>();
+            builder.AddChild<BidirectionalEmbedding>();
+            builder.AddChild<SubDocumentReference>();
             builder.AddElement<Hyperlink>()
 .AddAttribute(23, "tgtFrame", a => a.TargetFrame, aBuilder =>
 {
@@ -20849,66 +20849,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
     ///   <item><description>SubDocumentReference &lt;w:subDoc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlRun))]
-    [ChildElementInfo(typeof(SimpleField))]
-    [ChildElementInfo(typeof(Hyperlink))]
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SubDocumentReference))]
     public partial class BidirectionalOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20960,6 +20900,66 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "bdo");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<CustomXmlRun>();
+            builder.AddChild<SimpleField>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<SdtRun>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<Run>();
+            builder.AddChild<BidirectionalOverride>();
+            builder.AddChild<BidirectionalEmbedding>();
+            builder.AddChild<SubDocumentReference>();
             builder.AddElement<BidirectionalOverride>()
 .AddAttribute(23, "val", a => a.Val);
         }
@@ -21191,66 +21191,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
     ///   <item><description>SubDocumentReference &lt;w:subDoc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlRun))]
-    [ChildElementInfo(typeof(SimpleField))]
-    [ChildElementInfo(typeof(Hyperlink))]
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SubDocumentReference))]
     public partial class BidirectionalEmbedding : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21302,6 +21242,66 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "dir");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<CustomXmlRun>();
+            builder.AddChild<SimpleField>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<SdtRun>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<Run>();
+            builder.AddChild<BidirectionalOverride>();
+            builder.AddChild<BidirectionalEmbedding>();
+            builder.AddChild<SubDocumentReference>();
             builder.AddElement<BidirectionalEmbedding>()
 .AddAttribute(23, "val", a => a.Val);
         }
@@ -22463,16 +22463,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>TopRightToBottomLeftCellBorder &lt;w:tr2bl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TopBorder))]
-    [ChildElementInfo(typeof(LeftBorder))]
-    [ChildElementInfo(typeof(StartBorder), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BottomBorder))]
-    [ChildElementInfo(typeof(RightBorder))]
-    [ChildElementInfo(typeof(EndBorder), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsideHorizontalBorder))]
-    [ChildElementInfo(typeof(InsideVerticalBorder))]
-    [ChildElementInfo(typeof(TopLeftToBottomRightCellBorder))]
-    [ChildElementInfo(typeof(TopRightToBottomLeftCellBorder))]
     public partial class TableCellBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22511,6 +22501,16 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tcBorders");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TopBorder>();
+            builder.AddChild<LeftBorder>();
+            builder.AddChild<StartBorder>();
+            builder.AddChild<BottomBorder>();
+            builder.AddChild<RightBorder>();
+            builder.AddChild<EndBorder>();
+            builder.AddChild<InsideHorizontalBorder>();
+            builder.AddChild<InsideVerticalBorder>();
+            builder.AddChild<TopLeftToBottomRightCellBorder>();
+            builder.AddChild<TopRightToBottomLeftCellBorder>();
         }
 
         /// <summary>
@@ -23189,12 +23189,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>EndMargin &lt;w:end></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TopMargin))]
-    [ChildElementInfo(typeof(LeftMargin))]
-    [ChildElementInfo(typeof(StartMargin), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BottomMargin))]
-    [ChildElementInfo(typeof(RightMargin))]
-    [ChildElementInfo(typeof(EndMargin), FileFormatVersions.Office2010)]
     public partial class TableCellMargin : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23233,6 +23227,12 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tcMar");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TopMargin>();
+            builder.AddChild<LeftMargin>();
+            builder.AddChild<StartMargin>();
+            builder.AddChild<BottomMargin>();
+            builder.AddChild<RightMargin>();
+            builder.AddChild<EndMargin>();
         }
 
         /// <summary>
@@ -23914,14 +23914,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>InsideVerticalBorder &lt;w:insideV></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TopBorder))]
-    [ChildElementInfo(typeof(LeftBorder))]
-    [ChildElementInfo(typeof(StartBorder), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BottomBorder))]
-    [ChildElementInfo(typeof(RightBorder))]
-    [ChildElementInfo(typeof(EndBorder), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsideHorizontalBorder))]
-    [ChildElementInfo(typeof(InsideVerticalBorder))]
     public partial class TableBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23960,6 +23952,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblBorders");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TopBorder>();
+            builder.AddChild<LeftBorder>();
+            builder.AddChild<StartBorder>();
+            builder.AddChild<BottomBorder>();
+            builder.AddChild<RightBorder>();
+            builder.AddChild<EndBorder>();
+            builder.AddChild<InsideHorizontalBorder>();
+            builder.AddChild<InsideVerticalBorder>();
         }
 
         /// <summary>
@@ -24140,12 +24140,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>EndMargin &lt;w:end></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TopMargin))]
-    [ChildElementInfo(typeof(TableCellLeftMargin))]
-    [ChildElementInfo(typeof(StartMargin), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BottomMargin))]
-    [ChildElementInfo(typeof(TableCellRightMargin))]
-    [ChildElementInfo(typeof(EndMargin), FileFormatVersions.Office2010)]
     public partial class TableCellMarginDefault : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24184,6 +24178,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblCellMar");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TopMargin>();
+            builder.AddChild<TableCellLeftMargin>();
+            builder.AddChild<StartMargin>();
+            builder.AddChild<BottomMargin>();
+            builder.AddChild<TableCellRightMargin>();
+            builder.AddChild<EndMargin>();
         }
 
         /// <summary>
@@ -24377,7 +24377,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>AltChunkProperties &lt;w:altChunkPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AltChunkProperties))]
     public partial class AltChunk : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24429,6 +24428,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "altChunk");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AltChunkProperties>();
             builder.AddElement<AltChunk>()
 .AddAttribute(19, "id", a => a.Id);
         }
@@ -24623,10 +24623,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>NumberingRestart &lt;w:numRestart></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FootnotePosition))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(NumberingStart))]
-    [ChildElementInfo(typeof(NumberingRestart))]
     public partial class FootnoteProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24665,6 +24661,10 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "footnotePr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FootnotePosition>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<NumberingStart>();
+            builder.AddChild<NumberingRestart>();
         }
 
         /// <summary>
@@ -24753,10 +24753,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>NumberingRestart &lt;w:numRestart></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EndnotePosition))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(NumberingStart))]
-    [ChildElementInfo(typeof(NumberingRestart))]
     public partial class EndnoteProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24795,6 +24791,10 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "endnotePr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EndnotePosition>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<NumberingStart>();
+            builder.AddChild<NumberingRestart>();
         }
 
         /// <summary>
@@ -25213,10 +25213,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) }
     ///   <item><description>RightBorder &lt;w:right></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TopBorder))]
-    [ChildElementInfo(typeof(LeftBorder))]
-    [ChildElementInfo(typeof(BottomBorder))]
-    [ChildElementInfo(typeof(RightBorder))]
     public partial class PageBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25294,6 +25290,10 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) }
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pgBorders");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TopBorder>();
+            builder.AddChild<LeftBorder>();
+            builder.AddChild<BottomBorder>();
+            builder.AddChild<RightBorder>();
             builder.AddElement<PageBorders>()
 .AddAttribute(23, "zOrder", a => a.ZOrder)
 .AddAttribute(23, "display", a => a.Display)
@@ -25558,7 +25558,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
     ///   <item><description>Column &lt;w:col></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Column))]
     public partial class Columns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25649,6 +25648,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "cols");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Column>();
             builder.AddElement<Columns>()
 .AddAttribute(23, "equalWidth", a => a.EqualWidth)
 .AddAttribute(23, "space", a => a.Space, aBuilder =>
@@ -25800,7 +25800,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>RecipientData &lt;w:recipientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RecipientData))]
     public partial class Recipients : OpenXmlPartRootElement
     {
         /// <summary>
@@ -25839,6 +25838,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "recipients");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RecipientData>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -25897,41 +25897,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class TextBoxContent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25970,6 +25935,41 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "txbxContent");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AltChunk>();
+            builder.AddChild<CustomXmlBlock>();
+            builder.AddChild<SdtBlock>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<Table>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
@@ -26091,7 +26091,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Comment &lt;w:comment></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Comment))]
     public partial class Comments : OpenXmlPartRootElement
     {
         /// <summary>
@@ -26130,6 +26129,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "comments");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Comment>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -26185,7 +26185,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Footnote &lt;w:footnote></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Footnote))]
     public partial class Footnotes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -26224,6 +26223,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "footnotes");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Footnote>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
@@ -26279,7 +26279,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Endnote &lt;w:endnote></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Endnote))]
     public partial class Endnotes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -26318,6 +26317,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "endnotes");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Endnote>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
@@ -26407,41 +26407,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class Header : OpenXmlPartRootElement
     {
         /// <summary>
@@ -26480,6 +26445,41 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "hdr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AltChunk>();
+            builder.AddChild<CustomXmlBlock>();
+            builder.AddChild<SdtBlock>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<Table>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
@@ -26666,41 +26666,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class Footer : OpenXmlPartRootElement
     {
         /// <summary>
@@ -26739,6 +26704,41 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "ftr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AltChunk>();
+            builder.AddChild<CustomXmlBlock>();
+            builder.AddChild<SdtBlock>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<Table>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 1, 0)
@@ -26925,41 +26925,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public abstract partial class HeaderFooterType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26996,6 +26961,41 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<AltChunk>();
+            builder.AddChild<CustomXmlBlock>();
+            builder.AddChild<SdtBlock>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<Table>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
     }
 
@@ -27112,109 +27112,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId &lt;w15:docId></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WriteProtection))]
-    [ChildElementInfo(typeof(View))]
-    [ChildElementInfo(typeof(Zoom))]
-    [ChildElementInfo(typeof(RemovePersonalInformation))]
-    [ChildElementInfo(typeof(RemoveDateAndTime))]
-    [ChildElementInfo(typeof(DoNotDisplayPageBoundaries))]
-    [ChildElementInfo(typeof(DisplayBackgroundShape))]
-    [ChildElementInfo(typeof(PrintPostScriptOverText))]
-    [ChildElementInfo(typeof(PrintFractionalCharacterWidth))]
-    [ChildElementInfo(typeof(PrintFormsData))]
-    [ChildElementInfo(typeof(EmbedTrueTypeFonts))]
-    [ChildElementInfo(typeof(EmbedSystemFonts))]
-    [ChildElementInfo(typeof(SaveSubsetFonts))]
-    [ChildElementInfo(typeof(SaveFormsData))]
-    [ChildElementInfo(typeof(MirrorMargins))]
-    [ChildElementInfo(typeof(AlignBorderAndEdges))]
-    [ChildElementInfo(typeof(BordersDoNotSurroundHeader))]
-    [ChildElementInfo(typeof(BordersDoNotSurroundFooter))]
-    [ChildElementInfo(typeof(GutterAtTop))]
-    [ChildElementInfo(typeof(HideSpellingErrors))]
-    [ChildElementInfo(typeof(HideGrammaticalErrors))]
-    [ChildElementInfo(typeof(ActiveWritingStyle))]
-    [ChildElementInfo(typeof(ProofState))]
-    [ChildElementInfo(typeof(FormsDesign))]
-    [ChildElementInfo(typeof(AttachedTemplate))]
-    [ChildElementInfo(typeof(LinkStyles))]
-    [ChildElementInfo(typeof(StylePaneFormatFilter))]
-    [ChildElementInfo(typeof(StylePaneSortMethods))]
-    [ChildElementInfo(typeof(DocumentType))]
-    [ChildElementInfo(typeof(MailMerge))]
-    [ChildElementInfo(typeof(RevisionView))]
-    [ChildElementInfo(typeof(TrackRevisions))]
-    [ChildElementInfo(typeof(DoNotTrackMoves))]
-    [ChildElementInfo(typeof(DoNotTrackFormatting))]
-    [ChildElementInfo(typeof(DocumentProtection))]
-    [ChildElementInfo(typeof(AutoFormatOverride))]
-    [ChildElementInfo(typeof(StyleLockThemesPart))]
-    [ChildElementInfo(typeof(StyleLockStylesPart))]
-    [ChildElementInfo(typeof(DefaultTabStop))]
-    [ChildElementInfo(typeof(AutoHyphenation))]
-    [ChildElementInfo(typeof(ConsecutiveHyphenLimit))]
-    [ChildElementInfo(typeof(HyphenationZone))]
-    [ChildElementInfo(typeof(DoNotHyphenateCaps))]
-    [ChildElementInfo(typeof(ShowEnvelope))]
-    [ChildElementInfo(typeof(SummaryLength))]
-    [ChildElementInfo(typeof(ClickAndTypeStyle))]
-    [ChildElementInfo(typeof(DefaultTableStyle))]
-    [ChildElementInfo(typeof(EvenAndOddHeaders))]
-    [ChildElementInfo(typeof(BookFoldReversePrinting))]
-    [ChildElementInfo(typeof(BookFoldPrinting))]
-    [ChildElementInfo(typeof(BookFoldPrintingSheets))]
-    [ChildElementInfo(typeof(DrawingGridHorizontalSpacing))]
-    [ChildElementInfo(typeof(DrawingGridVerticalSpacing))]
-    [ChildElementInfo(typeof(DisplayHorizontalDrawingGrid))]
-    [ChildElementInfo(typeof(DisplayVerticalDrawingGrid))]
-    [ChildElementInfo(typeof(DoNotUseMarginsForDrawingGridOrigin))]
-    [ChildElementInfo(typeof(DrawingGridHorizontalOrigin))]
-    [ChildElementInfo(typeof(DrawingGridVerticalOrigin))]
-    [ChildElementInfo(typeof(DoNotShadeFormData))]
-    [ChildElementInfo(typeof(NoPunctuationKerning))]
-    [ChildElementInfo(typeof(CharacterSpacingControl))]
-    [ChildElementInfo(typeof(PrintTwoOnOne))]
-    [ChildElementInfo(typeof(StrictFirstAndLastChars))]
-    [ChildElementInfo(typeof(NoLineBreaksAfterKinsoku))]
-    [ChildElementInfo(typeof(NoLineBreaksBeforeKinsoku))]
-    [ChildElementInfo(typeof(SavePreviewPicture))]
-    [ChildElementInfo(typeof(DoNotValidateAgainstSchema))]
-    [ChildElementInfo(typeof(SaveInvalidXml))]
-    [ChildElementInfo(typeof(IgnoreMixedContent))]
-    [ChildElementInfo(typeof(AlwaysShowPlaceholderText))]
-    [ChildElementInfo(typeof(DoNotDemarcateInvalidXml))]
-    [ChildElementInfo(typeof(SaveXmlDataOnly))]
-    [ChildElementInfo(typeof(UseXsltWhenSaving))]
-    [ChildElementInfo(typeof(SaveThroughXslt))]
-    [ChildElementInfo(typeof(ShowXmlTags))]
-    [ChildElementInfo(typeof(AlwaysMergeEmptyNamespace))]
-    [ChildElementInfo(typeof(UpdateFieldsOnOpen))]
-    [ChildElementInfo(typeof(HeaderShapeDefaults))]
-    [ChildElementInfo(typeof(FootnoteDocumentWideProperties))]
-    [ChildElementInfo(typeof(EndnoteDocumentWideProperties))]
-    [ChildElementInfo(typeof(Compatibility))]
-    [ChildElementInfo(typeof(DocumentVariables))]
-    [ChildElementInfo(typeof(Rsids))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathProperties))]
-    [ChildElementInfo(typeof(UICompatibleWith97To2003))]
-    [ChildElementInfo(typeof(AttachedSchema))]
-    [ChildElementInfo(typeof(ThemeFontLanguages))]
-    [ChildElementInfo(typeof(ColorSchemeMapping))]
-    [ChildElementInfo(typeof(DoNotIncludeSubdocsInStats))]
-    [ChildElementInfo(typeof(DoNotAutoCompressPictures))]
-    [ChildElementInfo(typeof(ForceUpgrade))]
-    [ChildElementInfo(typeof(Captions))]
-    [ChildElementInfo(typeof(ReadModeInkLockDown))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.SchemaLibrary))]
-    [ChildElementInfo(typeof(ShapeDefaults))]
-    [ChildElementInfo(typeof(DecimalSymbol))]
-    [ChildElementInfo(typeof(ListSeparator))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DocumentId), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictMode), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId), FileFormatVersions.Office2013)]
     public partial class Settings : OpenXmlPartRootElement
     {
         /// <summary>
@@ -27253,6 +27150,109 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "settings");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<WriteProtection>();
+            builder.AddChild<View>();
+            builder.AddChild<Zoom>();
+            builder.AddChild<RemovePersonalInformation>();
+            builder.AddChild<RemoveDateAndTime>();
+            builder.AddChild<DoNotDisplayPageBoundaries>();
+            builder.AddChild<DisplayBackgroundShape>();
+            builder.AddChild<PrintPostScriptOverText>();
+            builder.AddChild<PrintFractionalCharacterWidth>();
+            builder.AddChild<PrintFormsData>();
+            builder.AddChild<EmbedTrueTypeFonts>();
+            builder.AddChild<EmbedSystemFonts>();
+            builder.AddChild<SaveSubsetFonts>();
+            builder.AddChild<SaveFormsData>();
+            builder.AddChild<MirrorMargins>();
+            builder.AddChild<AlignBorderAndEdges>();
+            builder.AddChild<BordersDoNotSurroundHeader>();
+            builder.AddChild<BordersDoNotSurroundFooter>();
+            builder.AddChild<GutterAtTop>();
+            builder.AddChild<HideSpellingErrors>();
+            builder.AddChild<HideGrammaticalErrors>();
+            builder.AddChild<ActiveWritingStyle>();
+            builder.AddChild<ProofState>();
+            builder.AddChild<FormsDesign>();
+            builder.AddChild<AttachedTemplate>();
+            builder.AddChild<LinkStyles>();
+            builder.AddChild<StylePaneFormatFilter>();
+            builder.AddChild<StylePaneSortMethods>();
+            builder.AddChild<DocumentType>();
+            builder.AddChild<MailMerge>();
+            builder.AddChild<RevisionView>();
+            builder.AddChild<TrackRevisions>();
+            builder.AddChild<DoNotTrackMoves>();
+            builder.AddChild<DoNotTrackFormatting>();
+            builder.AddChild<DocumentProtection>();
+            builder.AddChild<AutoFormatOverride>();
+            builder.AddChild<StyleLockThemesPart>();
+            builder.AddChild<StyleLockStylesPart>();
+            builder.AddChild<DefaultTabStop>();
+            builder.AddChild<AutoHyphenation>();
+            builder.AddChild<ConsecutiveHyphenLimit>();
+            builder.AddChild<HyphenationZone>();
+            builder.AddChild<DoNotHyphenateCaps>();
+            builder.AddChild<ShowEnvelope>();
+            builder.AddChild<SummaryLength>();
+            builder.AddChild<ClickAndTypeStyle>();
+            builder.AddChild<DefaultTableStyle>();
+            builder.AddChild<EvenAndOddHeaders>();
+            builder.AddChild<BookFoldReversePrinting>();
+            builder.AddChild<BookFoldPrinting>();
+            builder.AddChild<BookFoldPrintingSheets>();
+            builder.AddChild<DrawingGridHorizontalSpacing>();
+            builder.AddChild<DrawingGridVerticalSpacing>();
+            builder.AddChild<DisplayHorizontalDrawingGrid>();
+            builder.AddChild<DisplayVerticalDrawingGrid>();
+            builder.AddChild<DoNotUseMarginsForDrawingGridOrigin>();
+            builder.AddChild<DrawingGridHorizontalOrigin>();
+            builder.AddChild<DrawingGridVerticalOrigin>();
+            builder.AddChild<DoNotShadeFormData>();
+            builder.AddChild<NoPunctuationKerning>();
+            builder.AddChild<CharacterSpacingControl>();
+            builder.AddChild<PrintTwoOnOne>();
+            builder.AddChild<StrictFirstAndLastChars>();
+            builder.AddChild<NoLineBreaksAfterKinsoku>();
+            builder.AddChild<NoLineBreaksBeforeKinsoku>();
+            builder.AddChild<SavePreviewPicture>();
+            builder.AddChild<DoNotValidateAgainstSchema>();
+            builder.AddChild<SaveInvalidXml>();
+            builder.AddChild<IgnoreMixedContent>();
+            builder.AddChild<AlwaysShowPlaceholderText>();
+            builder.AddChild<DoNotDemarcateInvalidXml>();
+            builder.AddChild<SaveXmlDataOnly>();
+            builder.AddChild<UseXsltWhenSaving>();
+            builder.AddChild<SaveThroughXslt>();
+            builder.AddChild<ShowXmlTags>();
+            builder.AddChild<AlwaysMergeEmptyNamespace>();
+            builder.AddChild<UpdateFieldsOnOpen>();
+            builder.AddChild<HeaderShapeDefaults>();
+            builder.AddChild<FootnoteDocumentWideProperties>();
+            builder.AddChild<EndnoteDocumentWideProperties>();
+            builder.AddChild<Compatibility>();
+            builder.AddChild<DocumentVariables>();
+            builder.AddChild<Rsids>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathProperties>();
+            builder.AddChild<UICompatibleWith97To2003>();
+            builder.AddChild<AttachedSchema>();
+            builder.AddChild<ThemeFontLanguages>();
+            builder.AddChild<ColorSchemeMapping>();
+            builder.AddChild<DoNotIncludeSubdocsInStats>();
+            builder.AddChild<DoNotAutoCompressPictures>();
+            builder.AddChild<ForceUpgrade>();
+            builder.AddChild<Captions>();
+            builder.AddChild<ReadModeInkLockDown>();
+            builder.AddChild<DocumentFormat.OpenXml.CustomXmlSchemaReferences.SchemaLibrary>();
+            builder.AddChild<ShapeDefaults>();
+            builder.AddChild<DecimalSymbol>();
+            builder.AddChild<ListSeparator>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DocumentId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictMode>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId>();
         }
 
         /// <summary>
@@ -27694,18 +27694,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TargetScreenSize &lt;w:targetScreenSz></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Frameset))]
-    [ChildElementInfo(typeof(Divs))]
-    [ChildElementInfo(typeof(WebPageEncoding))]
-    [ChildElementInfo(typeof(OptimizeForBrowser))]
-    [ChildElementInfo(typeof(RelyOnVML))]
-    [ChildElementInfo(typeof(AllowPNG))]
-    [ChildElementInfo(typeof(DoNotRelyOnCSS))]
-    [ChildElementInfo(typeof(DoNotSaveAsSingleFile))]
-    [ChildElementInfo(typeof(DoNotOrganizeInFolder))]
-    [ChildElementInfo(typeof(DoNotUseLongFileNames))]
-    [ChildElementInfo(typeof(PixelsPerInch))]
-    [ChildElementInfo(typeof(TargetScreenSize))]
     public partial class WebSettings : OpenXmlPartRootElement
     {
         /// <summary>
@@ -27744,6 +27732,18 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "webSettings");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Frameset>();
+            builder.AddChild<Divs>();
+            builder.AddChild<WebPageEncoding>();
+            builder.AddChild<OptimizeForBrowser>();
+            builder.AddChild<RelyOnVML>();
+            builder.AddChild<AllowPNG>();
+            builder.AddChild<DoNotRelyOnCSS>();
+            builder.AddChild<DoNotSaveAsSingleFile>();
+            builder.AddChild<DoNotOrganizeInFolder>();
+            builder.AddChild<DoNotUseLongFileNames>();
+            builder.AddChild<PixelsPerInch>();
+            builder.AddChild<TargetScreenSize>();
         }
 
         /// <summary>
@@ -27966,7 +27966,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Font &lt;w:font></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Font))]
     public partial class Fonts : OpenXmlPartRootElement
     {
         /// <summary>
@@ -28005,6 +28004,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "fonts");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Font>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -28063,10 +28063,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NumberingIdMacAtCleanup &lt;w:numIdMacAtCleanup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumberingPictureBullet))]
-    [ChildElementInfo(typeof(AbstractNum))]
-    [ChildElementInfo(typeof(NumberingInstance))]
-    [ChildElementInfo(typeof(NumberingIdMacAtCleanup))]
     public partial class Numbering : OpenXmlPartRootElement
     {
         /// <summary>
@@ -28105,6 +28101,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "numbering");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NumberingPictureBullet>();
+            builder.AddChild<AbstractNum>();
+            builder.AddChild<NumberingInstance>();
+            builder.AddChild<NumberingIdMacAtCleanup>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -28165,9 +28165,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Style &lt;w:style></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocDefaults))]
-    [ChildElementInfo(typeof(LatentStyles))]
-    [ChildElementInfo(typeof(Style))]
     public partial class Styles : OpenXmlPartRootElement
     {
         /// <summary>
@@ -28206,6 +28203,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "styles");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocDefaults>();
+            builder.AddChild<LatentStyles>();
+            builder.AddChild<Style>();
         }
 
         /// <summary>
@@ -28259,8 +28259,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Body &lt;w:body></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentBackground))]
-    [ChildElementInfo(typeof(Body))]
     public partial class Document : OpenXmlPartRootElement
     {
         /// <summary>
@@ -28312,6 +28310,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "document");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentBackground>();
+            builder.AddChild<Body>();
             builder.AddElement<Document>()
 .AddAttribute(23, "conformance", a => a.Conformance);
         }
@@ -28403,8 +28403,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocParts &lt;w:docParts></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentBackground))]
-    [ChildElementInfo(typeof(DocParts))]
     public partial class GlossaryDocument : OpenXmlPartRootElement
     {
         /// <summary>
@@ -28443,6 +28441,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "glossaryDocument");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentBackground>();
+            builder.AddChild<DocParts>();
         }
 
         /// <summary>
@@ -28539,15 +28539,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TableLook &lt;w:tblLook></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableWidth))]
-    [ChildElementInfo(typeof(TableJustification))]
-    [ChildElementInfo(typeof(TableCellSpacing))]
-    [ChildElementInfo(typeof(TableIndentation))]
-    [ChildElementInfo(typeof(TableBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(TableLayout))]
-    [ChildElementInfo(typeof(TableCellMarginDefault))]
-    [ChildElementInfo(typeof(TableLook))]
     public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28586,6 +28577,15 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblPrEx");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableWidth>();
+            builder.AddChild<TableJustification>();
+            builder.AddChild<TableCellSpacing>();
+            builder.AddChild<TableIndentation>();
+            builder.AddChild<TableBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<TableLayout>();
+            builder.AddChild<TableCellMarginDefault>();
+            builder.AddChild<TableLook>();
         }
 
         /// <summary>
@@ -28750,22 +28750,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>CellMerge &lt;w:cellMerge></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConditionalFormatStyle))]
-    [ChildElementInfo(typeof(TableCellWidth))]
-    [ChildElementInfo(typeof(GridSpan))]
-    [ChildElementInfo(typeof(HorizontalMerge))]
-    [ChildElementInfo(typeof(VerticalMerge))]
-    [ChildElementInfo(typeof(TableCellBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(NoWrap))]
-    [ChildElementInfo(typeof(TableCellMargin))]
-    [ChildElementInfo(typeof(TextDirection))]
-    [ChildElementInfo(typeof(TableCellFitText))]
-    [ChildElementInfo(typeof(TableCellVerticalAlignment))]
-    [ChildElementInfo(typeof(HideMark))]
-    [ChildElementInfo(typeof(CellInsertion))]
-    [ChildElementInfo(typeof(CellDeletion))]
-    [ChildElementInfo(typeof(CellMerge))]
     public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28804,6 +28788,22 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tcPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ConditionalFormatStyle>();
+            builder.AddChild<TableCellWidth>();
+            builder.AddChild<GridSpan>();
+            builder.AddChild<HorizontalMerge>();
+            builder.AddChild<VerticalMerge>();
+            builder.AddChild<TableCellBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<NoWrap>();
+            builder.AddChild<TableCellMargin>();
+            builder.AddChild<TextDirection>();
+            builder.AddChild<TableCellFitText>();
+            builder.AddChild<TableCellVerticalAlignment>();
+            builder.AddChild<HideMark>();
+            builder.AddChild<CellInsertion>();
+            builder.AddChild<CellDeletion>();
+            builder.AddChild<CellMerge>();
         }
 
         /// <summary>
@@ -29071,18 +29071,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TableJustification &lt;w:jc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConditionalFormatStyle))]
-    [ChildElementInfo(typeof(DivId))]
-    [ChildElementInfo(typeof(GridBefore))]
-    [ChildElementInfo(typeof(GridAfter))]
-    [ChildElementInfo(typeof(WidthBeforeTableRow))]
-    [ChildElementInfo(typeof(WidthAfterTableRow))]
-    [ChildElementInfo(typeof(TableRowHeight))]
-    [ChildElementInfo(typeof(Hidden))]
-    [ChildElementInfo(typeof(CantSplit))]
-    [ChildElementInfo(typeof(TableHeader))]
-    [ChildElementInfo(typeof(TableCellSpacing))]
-    [ChildElementInfo(typeof(TableJustification))]
     public partial class PreviousTableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29121,6 +29109,18 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "trPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ConditionalFormatStyle>();
+            builder.AddChild<DivId>();
+            builder.AddChild<GridBefore>();
+            builder.AddChild<GridAfter>();
+            builder.AddChild<WidthBeforeTableRow>();
+            builder.AddChild<WidthAfterTableRow>();
+            builder.AddChild<TableRowHeight>();
+            builder.AddChild<Hidden>();
+            builder.AddChild<CantSplit>();
+            builder.AddChild<TableHeader>();
+            builder.AddChild<TableCellSpacing>();
+            builder.AddChild<TableJustification>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -29182,21 +29182,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TableDescription &lt;w:tblDescription></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableStyle))]
-    [ChildElementInfo(typeof(TablePositionProperties))]
-    [ChildElementInfo(typeof(TableOverlap))]
-    [ChildElementInfo(typeof(BiDiVisual))]
-    [ChildElementInfo(typeof(TableWidth))]
-    [ChildElementInfo(typeof(TableJustification))]
-    [ChildElementInfo(typeof(TableCellSpacing))]
-    [ChildElementInfo(typeof(TableIndentation))]
-    [ChildElementInfo(typeof(TableBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(TableLayout))]
-    [ChildElementInfo(typeof(TableCellMarginDefault))]
-    [ChildElementInfo(typeof(TableLook))]
-    [ChildElementInfo(typeof(TableCaption), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TableDescription), FileFormatVersions.Office2010)]
     public partial class PreviousTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29235,6 +29220,21 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableStyle>();
+            builder.AddChild<TablePositionProperties>();
+            builder.AddChild<TableOverlap>();
+            builder.AddChild<BiDiVisual>();
+            builder.AddChild<TableWidth>();
+            builder.AddChild<TableJustification>();
+            builder.AddChild<TableCellSpacing>();
+            builder.AddChild<TableIndentation>();
+            builder.AddChild<TableBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<TableLayout>();
+            builder.AddChild<TableCellMarginDefault>();
+            builder.AddChild<TableLook>();
+            builder.AddChild<TableCaption>();
+            builder.AddChild<TableDescription>();
         }
 
         /// <summary>
@@ -29523,26 +29523,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns &lt;w15:footnoteColumns></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FootnoteProperties))]
-    [ChildElementInfo(typeof(EndnoteProperties))]
-    [ChildElementInfo(typeof(SectionType))]
-    [ChildElementInfo(typeof(PageSize))]
-    [ChildElementInfo(typeof(PageMargin))]
-    [ChildElementInfo(typeof(PaperSource))]
-    [ChildElementInfo(typeof(PageBorders))]
-    [ChildElementInfo(typeof(LineNumberType))]
-    [ChildElementInfo(typeof(PageNumberType))]
-    [ChildElementInfo(typeof(Columns))]
-    [ChildElementInfo(typeof(FormProtection))]
-    [ChildElementInfo(typeof(VerticalTextAlignmentOnPage))]
-    [ChildElementInfo(typeof(NoEndnote))]
-    [ChildElementInfo(typeof(TitlePage))]
-    [ChildElementInfo(typeof(TextDirection))]
-    [ChildElementInfo(typeof(BiDi))]
-    [ChildElementInfo(typeof(GutterOnRight))]
-    [ChildElementInfo(typeof(DocGrid))]
-    [ChildElementInfo(typeof(PrinterSettingsReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns), FileFormatVersions.Office2013)]
     public partial class PreviousSectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29633,6 +29613,26 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sectPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FootnoteProperties>();
+            builder.AddChild<EndnoteProperties>();
+            builder.AddChild<SectionType>();
+            builder.AddChild<PageSize>();
+            builder.AddChild<PageMargin>();
+            builder.AddChild<PaperSource>();
+            builder.AddChild<PageBorders>();
+            builder.AddChild<LineNumberType>();
+            builder.AddChild<PageNumberType>();
+            builder.AddChild<Columns>();
+            builder.AddChild<FormProtection>();
+            builder.AddChild<VerticalTextAlignmentOnPage>();
+            builder.AddChild<NoEndnote>();
+            builder.AddChild<TitlePage>();
+            builder.AddChild<TextDirection>();
+            builder.AddChild<BiDi>();
+            builder.AddChild<GutterOnRight>();
+            builder.AddChild<DocGrid>();
+            builder.AddChild<PrinterSettingsReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
             builder.AddElement<PreviousSectionProperties>()
 .AddAttribute(23, "rsidRPr", a => a.RsidRPr, aBuilder =>
 {
@@ -29991,39 +29991,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>ConditionalFormatStyle &lt;w:cnfStyle></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ParagraphStyleId))]
-    [ChildElementInfo(typeof(KeepNext))]
-    [ChildElementInfo(typeof(KeepLines))]
-    [ChildElementInfo(typeof(PageBreakBefore))]
-    [ChildElementInfo(typeof(FrameProperties))]
-    [ChildElementInfo(typeof(WidowControl))]
-    [ChildElementInfo(typeof(NumberingProperties))]
-    [ChildElementInfo(typeof(SuppressLineNumbers))]
-    [ChildElementInfo(typeof(ParagraphBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(Tabs))]
-    [ChildElementInfo(typeof(SuppressAutoHyphens))]
-    [ChildElementInfo(typeof(Kinsoku))]
-    [ChildElementInfo(typeof(WordWrap))]
-    [ChildElementInfo(typeof(OverflowPunctuation))]
-    [ChildElementInfo(typeof(TopLinePunctuation))]
-    [ChildElementInfo(typeof(AutoSpaceDE))]
-    [ChildElementInfo(typeof(AutoSpaceDN))]
-    [ChildElementInfo(typeof(BiDi))]
-    [ChildElementInfo(typeof(AdjustRightIndent))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(SpacingBetweenLines))]
-    [ChildElementInfo(typeof(Indentation))]
-    [ChildElementInfo(typeof(ContextualSpacing))]
-    [ChildElementInfo(typeof(MirrorIndents))]
-    [ChildElementInfo(typeof(SuppressOverlap))]
-    [ChildElementInfo(typeof(Justification))]
-    [ChildElementInfo(typeof(TextDirection))]
-    [ChildElementInfo(typeof(TextAlignment))]
-    [ChildElementInfo(typeof(TextBoxTightWrap))]
-    [ChildElementInfo(typeof(OutlineLevel))]
-    [ChildElementInfo(typeof(DivId))]
-    [ChildElementInfo(typeof(ConditionalFormatStyle))]
     public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30062,6 +30029,39 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ParagraphStyleId>();
+            builder.AddChild<KeepNext>();
+            builder.AddChild<KeepLines>();
+            builder.AddChild<PageBreakBefore>();
+            builder.AddChild<FrameProperties>();
+            builder.AddChild<WidowControl>();
+            builder.AddChild<NumberingProperties>();
+            builder.AddChild<SuppressLineNumbers>();
+            builder.AddChild<ParagraphBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<Tabs>();
+            builder.AddChild<SuppressAutoHyphens>();
+            builder.AddChild<Kinsoku>();
+            builder.AddChild<WordWrap>();
+            builder.AddChild<OverflowPunctuation>();
+            builder.AddChild<TopLinePunctuation>();
+            builder.AddChild<AutoSpaceDE>();
+            builder.AddChild<AutoSpaceDN>();
+            builder.AddChild<BiDi>();
+            builder.AddChild<AdjustRightIndent>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<SpacingBetweenLines>();
+            builder.AddChild<Indentation>();
+            builder.AddChild<ContextualSpacing>();
+            builder.AddChild<MirrorIndents>();
+            builder.AddChild<SuppressOverlap>();
+            builder.AddChild<Justification>();
+            builder.AddChild<TextDirection>();
+            builder.AddChild<TextAlignment>();
+            builder.AddChild<TextBoxTightWrap>();
+            builder.AddChild<OutlineLevel>();
+            builder.AddChild<DivId>();
+            builder.AddChild<ConditionalFormatStyle>();
         }
 
         /// <summary>
@@ -30614,56 +30614,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives &lt;w14:cntxtAlts></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunStyle))]
-    [ChildElementInfo(typeof(RunFonts))]
-    [ChildElementInfo(typeof(Bold))]
-    [ChildElementInfo(typeof(BoldComplexScript))]
-    [ChildElementInfo(typeof(Italic))]
-    [ChildElementInfo(typeof(ItalicComplexScript))]
-    [ChildElementInfo(typeof(Caps))]
-    [ChildElementInfo(typeof(SmallCaps))]
-    [ChildElementInfo(typeof(Strike))]
-    [ChildElementInfo(typeof(DoubleStrike))]
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(Emboss))]
-    [ChildElementInfo(typeof(Imprint))]
-    [ChildElementInfo(typeof(NoProof))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(Vanish))]
-    [ChildElementInfo(typeof(WebHidden))]
-    [ChildElementInfo(typeof(Color))]
-    [ChildElementInfo(typeof(Spacing))]
-    [ChildElementInfo(typeof(CharacterScale))]
-    [ChildElementInfo(typeof(Kern))]
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(FontSize))]
-    [ChildElementInfo(typeof(FontSizeComplexScript))]
-    [ChildElementInfo(typeof(Highlight))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(TextEffect))]
-    [ChildElementInfo(typeof(Border))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(FitText))]
-    [ChildElementInfo(typeof(VerticalTextAlignment))]
-    [ChildElementInfo(typeof(RightToLeftText))]
-    [ChildElementInfo(typeof(ComplexScript))]
-    [ChildElementInfo(typeof(Emphasis))]
-    [ChildElementInfo(typeof(Languages))]
-    [ChildElementInfo(typeof(EastAsianLayout))]
-    [ChildElementInfo(typeof(SpecVanish))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Glow), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Shadow), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Reflection), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Scene3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Properties3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Ligatures), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.StylisticSets), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives), FileFormatVersions.Office2010)]
     public partial class PreviousRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30702,6 +30652,56 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunStyle>();
+            builder.AddChild<RunFonts>();
+            builder.AddChild<Bold>();
+            builder.AddChild<BoldComplexScript>();
+            builder.AddChild<Italic>();
+            builder.AddChild<ItalicComplexScript>();
+            builder.AddChild<Caps>();
+            builder.AddChild<SmallCaps>();
+            builder.AddChild<Strike>();
+            builder.AddChild<DoubleStrike>();
+            builder.AddChild<Outline>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<Emboss>();
+            builder.AddChild<Imprint>();
+            builder.AddChild<NoProof>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<Vanish>();
+            builder.AddChild<WebHidden>();
+            builder.AddChild<Color>();
+            builder.AddChild<Spacing>();
+            builder.AddChild<CharacterScale>();
+            builder.AddChild<Kern>();
+            builder.AddChild<Position>();
+            builder.AddChild<FontSize>();
+            builder.AddChild<FontSizeComplexScript>();
+            builder.AddChild<Highlight>();
+            builder.AddChild<Underline>();
+            builder.AddChild<TextEffect>();
+            builder.AddChild<Border>();
+            builder.AddChild<Shading>();
+            builder.AddChild<FitText>();
+            builder.AddChild<VerticalTextAlignment>();
+            builder.AddChild<RightToLeftText>();
+            builder.AddChild<ComplexScript>();
+            builder.AddChild<Emphasis>();
+            builder.AddChild<Languages>();
+            builder.AddChild<EastAsianLayout>();
+            builder.AddChild<SpecVanish>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -30885,63 +30885,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>OfficeMath &lt;w:oMath></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Inserted))]
-    [ChildElementInfo(typeof(Deleted))]
-    [ChildElementInfo(typeof(MoveFrom))]
-    [ChildElementInfo(typeof(MoveTo))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RunStyle))]
-    [ChildElementInfo(typeof(RunFonts))]
-    [ChildElementInfo(typeof(Bold))]
-    [ChildElementInfo(typeof(BoldComplexScript))]
-    [ChildElementInfo(typeof(Italic))]
-    [ChildElementInfo(typeof(ItalicComplexScript))]
-    [ChildElementInfo(typeof(Caps))]
-    [ChildElementInfo(typeof(SmallCaps))]
-    [ChildElementInfo(typeof(Strike))]
-    [ChildElementInfo(typeof(DoubleStrike))]
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(Emboss))]
-    [ChildElementInfo(typeof(Imprint))]
-    [ChildElementInfo(typeof(NoProof))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(Vanish))]
-    [ChildElementInfo(typeof(WebHidden))]
-    [ChildElementInfo(typeof(Color))]
-    [ChildElementInfo(typeof(Spacing))]
-    [ChildElementInfo(typeof(CharacterScale))]
-    [ChildElementInfo(typeof(Kern))]
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(FontSize))]
-    [ChildElementInfo(typeof(FontSizeComplexScript))]
-    [ChildElementInfo(typeof(Highlight))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(TextEffect))]
-    [ChildElementInfo(typeof(Border))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(FitText))]
-    [ChildElementInfo(typeof(VerticalTextAlignment))]
-    [ChildElementInfo(typeof(RightToLeftText))]
-    [ChildElementInfo(typeof(ComplexScript))]
-    [ChildElementInfo(typeof(Emphasis))]
-    [ChildElementInfo(typeof(Languages))]
-    [ChildElementInfo(typeof(EastAsianLayout))]
-    [ChildElementInfo(typeof(SpecVanish))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Glow), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Shadow), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Reflection), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Scene3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Properties3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Ligatures), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.StylisticSets), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(OfficeMath))]
     public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30980,6 +30923,63 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Inserted>();
+            builder.AddChild<Deleted>();
+            builder.AddChild<MoveFrom>();
+            builder.AddChild<MoveTo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>();
+            builder.AddChild<RunStyle>();
+            builder.AddChild<RunFonts>();
+            builder.AddChild<Bold>();
+            builder.AddChild<BoldComplexScript>();
+            builder.AddChild<Italic>();
+            builder.AddChild<ItalicComplexScript>();
+            builder.AddChild<Caps>();
+            builder.AddChild<SmallCaps>();
+            builder.AddChild<Strike>();
+            builder.AddChild<DoubleStrike>();
+            builder.AddChild<Outline>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<Emboss>();
+            builder.AddChild<Imprint>();
+            builder.AddChild<NoProof>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<Vanish>();
+            builder.AddChild<WebHidden>();
+            builder.AddChild<Color>();
+            builder.AddChild<Spacing>();
+            builder.AddChild<CharacterScale>();
+            builder.AddChild<Kern>();
+            builder.AddChild<Position>();
+            builder.AddChild<FontSize>();
+            builder.AddChild<FontSizeComplexScript>();
+            builder.AddChild<Highlight>();
+            builder.AddChild<Underline>();
+            builder.AddChild<TextEffect>();
+            builder.AddChild<Border>();
+            builder.AddChild<Shading>();
+            builder.AddChild<FitText>();
+            builder.AddChild<VerticalTextAlignment>();
+            builder.AddChild<RightToLeftText>();
+            builder.AddChild<ComplexScript>();
+            builder.AddChild<Emphasis>();
+            builder.AddChild<Languages>();
+            builder.AddChild<EastAsianLayout>();
+            builder.AddChild<SpecVanish>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
+            builder.AddChild<OfficeMath>();
         }
 
         /// <summary>
@@ -31575,64 +31575,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-31680L),
     ///   <item><description>ParagraphMarkRunPropertiesChange &lt;w:rPrChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Inserted))]
-    [ChildElementInfo(typeof(Deleted))]
-    [ChildElementInfo(typeof(MoveFrom))]
-    [ChildElementInfo(typeof(MoveTo))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RunStyle))]
-    [ChildElementInfo(typeof(RunFonts))]
-    [ChildElementInfo(typeof(Bold))]
-    [ChildElementInfo(typeof(BoldComplexScript))]
-    [ChildElementInfo(typeof(Italic))]
-    [ChildElementInfo(typeof(ItalicComplexScript))]
-    [ChildElementInfo(typeof(Caps))]
-    [ChildElementInfo(typeof(SmallCaps))]
-    [ChildElementInfo(typeof(Strike))]
-    [ChildElementInfo(typeof(DoubleStrike))]
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(Emboss))]
-    [ChildElementInfo(typeof(Imprint))]
-    [ChildElementInfo(typeof(NoProof))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(Vanish))]
-    [ChildElementInfo(typeof(WebHidden))]
-    [ChildElementInfo(typeof(Color))]
-    [ChildElementInfo(typeof(Spacing))]
-    [ChildElementInfo(typeof(CharacterScale))]
-    [ChildElementInfo(typeof(Kern))]
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(FontSize))]
-    [ChildElementInfo(typeof(FontSizeComplexScript))]
-    [ChildElementInfo(typeof(Highlight))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(TextEffect))]
-    [ChildElementInfo(typeof(Border))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(FitText))]
-    [ChildElementInfo(typeof(VerticalTextAlignment))]
-    [ChildElementInfo(typeof(RightToLeftText))]
-    [ChildElementInfo(typeof(ComplexScript))]
-    [ChildElementInfo(typeof(Emphasis))]
-    [ChildElementInfo(typeof(Languages))]
-    [ChildElementInfo(typeof(EastAsianLayout))]
-    [ChildElementInfo(typeof(SpecVanish))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Glow), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Shadow), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Reflection), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Scene3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Properties3D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Ligatures), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.StylisticSets), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(ParagraphMarkRunPropertiesChange))]
     public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31671,6 +31613,64 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-31680L),
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Inserted>();
+            builder.AddChild<Deleted>();
+            builder.AddChild<MoveFrom>();
+            builder.AddChild<MoveTo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>();
+            builder.AddChild<RunStyle>();
+            builder.AddChild<RunFonts>();
+            builder.AddChild<Bold>();
+            builder.AddChild<BoldComplexScript>();
+            builder.AddChild<Italic>();
+            builder.AddChild<ItalicComplexScript>();
+            builder.AddChild<Caps>();
+            builder.AddChild<SmallCaps>();
+            builder.AddChild<Strike>();
+            builder.AddChild<DoubleStrike>();
+            builder.AddChild<Outline>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<Emboss>();
+            builder.AddChild<Imprint>();
+            builder.AddChild<NoProof>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<Vanish>();
+            builder.AddChild<WebHidden>();
+            builder.AddChild<Color>();
+            builder.AddChild<Spacing>();
+            builder.AddChild<CharacterScale>();
+            builder.AddChild<Kern>();
+            builder.AddChild<Position>();
+            builder.AddChild<FontSize>();
+            builder.AddChild<FontSizeComplexScript>();
+            builder.AddChild<Highlight>();
+            builder.AddChild<Underline>();
+            builder.AddChild<TextEffect>();
+            builder.AddChild<Border>();
+            builder.AddChild<Shading>();
+            builder.AddChild<FitText>();
+            builder.AddChild<VerticalTextAlignment>();
+            builder.AddChild<RightToLeftText>();
+            builder.AddChild<ComplexScript>();
+            builder.AddChild<Emphasis>();
+            builder.AddChild<Languages>();
+            builder.AddChild<EastAsianLayout>();
+            builder.AddChild<SpecVanish>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
+            builder.AddChild<OfficeMath>();
+            builder.AddChild<ParagraphMarkRunPropertiesChange>();
         }
 
         /// <summary>
@@ -31898,29 +31898,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-31680L),
     ///   <item><description>SectionPropertiesChange &lt;w:sectPrChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(HeaderReference))]
-    [ChildElementInfo(typeof(FooterReference))]
-    [ChildElementInfo(typeof(FootnoteProperties))]
-    [ChildElementInfo(typeof(EndnoteProperties))]
-    [ChildElementInfo(typeof(SectionType))]
-    [ChildElementInfo(typeof(PageSize))]
-    [ChildElementInfo(typeof(PageMargin))]
-    [ChildElementInfo(typeof(PaperSource))]
-    [ChildElementInfo(typeof(PageBorders))]
-    [ChildElementInfo(typeof(LineNumberType))]
-    [ChildElementInfo(typeof(PageNumberType))]
-    [ChildElementInfo(typeof(Columns))]
-    [ChildElementInfo(typeof(FormProtection))]
-    [ChildElementInfo(typeof(VerticalTextAlignmentOnPage))]
-    [ChildElementInfo(typeof(NoEndnote))]
-    [ChildElementInfo(typeof(TitlePage))]
-    [ChildElementInfo(typeof(TextDirection))]
-    [ChildElementInfo(typeof(BiDi))]
-    [ChildElementInfo(typeof(GutterOnRight))]
-    [ChildElementInfo(typeof(DocGrid))]
-    [ChildElementInfo(typeof(PrinterSettingsReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(SectionPropertiesChange))]
     public partial class SectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32011,6 +31988,29 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-31680L),
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sectPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<HeaderReference>();
+            builder.AddChild<FooterReference>();
+            builder.AddChild<FootnoteProperties>();
+            builder.AddChild<EndnoteProperties>();
+            builder.AddChild<SectionType>();
+            builder.AddChild<PageSize>();
+            builder.AddChild<PageMargin>();
+            builder.AddChild<PaperSource>();
+            builder.AddChild<PageBorders>();
+            builder.AddChild<LineNumberType>();
+            builder.AddChild<PageNumberType>();
+            builder.AddChild<Columns>();
+            builder.AddChild<FormProtection>();
+            builder.AddChild<VerticalTextAlignmentOnPage>();
+            builder.AddChild<NoEndnote>();
+            builder.AddChild<TitlePage>();
+            builder.AddChild<TextDirection>();
+            builder.AddChild<BiDi>();
+            builder.AddChild<GutterOnRight>();
+            builder.AddChild<DocGrid>();
+            builder.AddChild<PrinterSettingsReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
+            builder.AddChild<SectionPropertiesChange>();
             builder.AddElement<SectionProperties>()
 .AddAttribute(23, "rsidRPr", a => a.RsidRPr, aBuilder =>
 {
@@ -32133,16 +32133,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>TextInput &lt;w:textInput></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FormFieldName))]
-    [ChildElementInfo(typeof(Enabled))]
-    [ChildElementInfo(typeof(CalculateOnExit))]
-    [ChildElementInfo(typeof(EntryMacro))]
-    [ChildElementInfo(typeof(ExitMacro))]
-    [ChildElementInfo(typeof(HelpText))]
-    [ChildElementInfo(typeof(StatusText))]
-    [ChildElementInfo(typeof(CheckBox))]
-    [ChildElementInfo(typeof(DropDownListFormField))]
-    [ChildElementInfo(typeof(TextInput))]
     public partial class FormFieldData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32181,6 +32171,16 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "ffData");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FormFieldName>();
+            builder.AddChild<Enabled>();
+            builder.AddChild<CalculateOnExit>();
+            builder.AddChild<EntryMacro>();
+            builder.AddChild<ExitMacro>();
+            builder.AddChild<HelpText>();
+            builder.AddChild<StatusText>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<DropDownListFormField>();
+            builder.AddChild<TextInput>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -32467,10 +32467,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (140L), Initi
     ///   <item><description>Checked &lt;w:checked></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FormFieldSize))]
-    [ChildElementInfo(typeof(AutomaticallySizeFormField))]
-    [ChildElementInfo(typeof(DefaultCheckBoxFormFieldState))]
-    [ChildElementInfo(typeof(Checked))]
     public partial class CheckBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32509,6 +32505,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (140L), Initi
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "checkBox");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FormFieldSize>();
+            builder.AddChild<AutomaticallySizeFormField>();
+            builder.AddChild<DefaultCheckBoxFormFieldState>();
+            builder.AddChild<Checked>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -32541,9 +32541,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (140L), Initi
     ///   <item><description>ListEntryFormField &lt;w:listEntry></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DropDownListSelection))]
-    [ChildElementInfo(typeof(DefaultDropDownListItemIndex))]
-    [ChildElementInfo(typeof(ListEntryFormField))]
     public partial class DropDownListFormField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32582,6 +32579,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (140L), Initi
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "ddList");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DropDownListSelection>();
+            builder.AddChild<DefaultDropDownListItemIndex>();
+            builder.AddChild<ListEntryFormField>();
         }
 
         /// <summary>
@@ -32637,10 +32637,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (140L), Initi
     ///   <item><description>Format &lt;w:format></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TextBoxFormFieldType))]
-    [ChildElementInfo(typeof(DefaultTextBoxFormFieldString))]
-    [ChildElementInfo(typeof(MaxLength))]
-    [ChildElementInfo(typeof(Format))]
     public partial class TextInput : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32679,6 +32675,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (140L), Initi
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "textInput");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TextBoxFormFieldType>();
+            builder.AddChild<DefaultTextBoxFormFieldString>();
+            builder.AddChild<MaxLength>();
+            builder.AddChild<Format>();
         }
 
         /// <summary>
@@ -33117,7 +33117,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+
     ///   <item><description>PreviousSectionProperties &lt;w:sectPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PreviousSectionProperties))]
     public partial class SectionPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33195,6 +33194,7 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sectPrChange");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PreviousSectionProperties>();
             builder.AddElement<SectionPropertiesChange>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
@@ -33257,7 +33257,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>PreviousParagraphMarkRunProperties &lt;w:rPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PreviousParagraphMarkRunProperties))]
     public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33335,6 +33334,7 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rPrChange");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PreviousParagraphMarkRunProperties>();
             builder.AddElement<ParagraphMarkRunPropertiesChange>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
@@ -33397,7 +33397,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>MatchSource &lt;w:matchSrc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MatchSource))]
     public partial class AltChunkProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33436,6 +33435,7 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "altChunkPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<MatchSource>();
         }
 
         /// <summary>
@@ -33608,12 +33608,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
     ///   <item><description>Dirty &lt;w:dirty></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RubyAlign))]
-    [ChildElementInfo(typeof(PhoneticGuideTextFontSize))]
-    [ChildElementInfo(typeof(PhoneticGuideRaise))]
-    [ChildElementInfo(typeof(PhoneticGuideBaseTextSize))]
-    [ChildElementInfo(typeof(LanguageId))]
-    [ChildElementInfo(typeof(Dirty))]
     public partial class RubyProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33652,6 +33646,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rubyPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RubyAlign>();
+            builder.AddChild<PhoneticGuideTextFontSize>();
+            builder.AddChild<PhoneticGuideRaise>();
+            builder.AddChild<PhoneticGuideBaseTextSize>();
+            builder.AddChild<LanguageId>();
+            builder.AddChild<Dirty>();
         }
 
         /// <summary>
@@ -34289,63 +34289,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
     ///   <item><description>DocumentFormat.OpenXml.Math.Run &lt;m:r></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlRuby))]
-    [ChildElementInfo(typeof(SimpleFieldRuby))]
-    [ChildElementInfo(typeof(HyperlinkRuby))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(SdtRunRuby))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     public abstract partial class RubyContentType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34382,6 +34325,63 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<CustomXmlRuby>();
+            builder.AddChild<SimpleFieldRuby>();
+            builder.AddChild<HyperlinkRuby>();
+            builder.AddChild<Run>();
+            builder.AddChild<SdtRunRuby>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
         }
     }
 
@@ -34559,36 +34559,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem &lt;w15:repeatingSectionItem></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunProperties))]
-    [ChildElementInfo(typeof(SdtAlias))]
-    [ChildElementInfo(typeof(Lock))]
-    [ChildElementInfo(typeof(SdtPlaceholder))]
-    [ChildElementInfo(typeof(ShowingPlaceholder))]
-    [ChildElementInfo(typeof(DataBinding))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.DataBinding), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TemporarySdt))]
-    [ChildElementInfo(typeof(SdtId))]
-    [ChildElementInfo(typeof(Tag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.Color), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.Appearance), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(SdtContentEquation))]
-    [ChildElementInfo(typeof(SdtContentComboBox))]
-    [ChildElementInfo(typeof(SdtContentDate))]
-    [ChildElementInfo(typeof(SdtContentDocPartObject))]
-    [ChildElementInfo(typeof(SdtContentDocPartList))]
-    [ChildElementInfo(typeof(SdtContentDropDownList))]
-    [ChildElementInfo(typeof(SdtContentPicture))]
-    [ChildElementInfo(typeof(SdtContentRichText))]
-    [ChildElementInfo(typeof(SdtContentText))]
-    [ChildElementInfo(typeof(SdtContentCitation))]
-    [ChildElementInfo(typeof(SdtContentGroup))]
-    [ChildElementInfo(typeof(SdtContentBibliography))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem), FileFormatVersions.Office2013)]
     public partial class SdtProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34627,6 +34597,36 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdtPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunProperties>();
+            builder.AddChild<SdtAlias>();
+            builder.AddChild<Lock>();
+            builder.AddChild<SdtPlaceholder>();
+            builder.AddChild<ShowingPlaceholder>();
+            builder.AddChild<DataBinding>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.DataBinding>();
+            builder.AddChild<TemporarySdt>();
+            builder.AddChild<SdtId>();
+            builder.AddChild<Tag>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Appearance>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated>();
+            builder.AddChild<SdtContentEquation>();
+            builder.AddChild<SdtContentComboBox>();
+            builder.AddChild<SdtContentDate>();
+            builder.AddChild<SdtContentDocPartObject>();
+            builder.AddChild<SdtContentDocPartList>();
+            builder.AddChild<SdtContentDropDownList>();
+            builder.AddChild<SdtContentPicture>();
+            builder.AddChild<SdtContentRichText>();
+            builder.AddChild<SdtContentText>();
+            builder.AddChild<SdtContentCitation>();
+            builder.AddChild<SdtContentGroup>();
+            builder.AddChild<SdtContentBibliography>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -34686,7 +34686,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
     ///   <item><description>RunProperties &lt;w:rPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunProperties))]
     public partial class SdtEndCharProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34725,6 +34724,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdtEndPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunProperties>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -34782,40 +34782,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class SdtContentBlock : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34854,6 +34820,40 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdtContent");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomXmlBlock>();
+            builder.AddChild<SdtBlock>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<Table>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
@@ -35015,66 +35015,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
     ///   <item><description>SubDocumentReference &lt;w:subDoc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(CustomXmlRun))]
-    [ChildElementInfo(typeof(SimpleField))]
-    [ChildElementInfo(typeof(Hyperlink))]
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SubDocumentReference))]
     public partial class SdtContentRun : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35113,6 +35053,66 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdtContent");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<CustomXmlRun>();
+            builder.AddChild<SimpleField>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<SdtRun>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<Run>();
+            builder.AddChild<BidirectionalOverride>();
+            builder.AddChild<BidirectionalEmbedding>();
+            builder.AddChild<SubDocumentReference>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
@@ -35349,63 +35349,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
     ///   <item><description>DocumentFormat.OpenXml.Math.Run &lt;m:r></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlRuby))]
-    [ChildElementInfo(typeof(SimpleFieldRuby))]
-    [ChildElementInfo(typeof(HyperlinkRuby))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(SdtRunRuby))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
     public partial class SdtContentRunRuby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35444,6 +35387,63 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdtContent");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomXmlRuby>();
+            builder.AddChild<SimpleFieldRuby>();
+            builder.AddChild<HyperlinkRuby>();
+            builder.AddChild<Run>();
+            builder.AddChild<SdtRunRuby>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
@@ -35619,39 +35619,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableCell))]
-    [ChildElementInfo(typeof(CustomXmlCell))]
-    [ChildElementInfo(typeof(SdtCell))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class SdtContentCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35690,6 +35657,39 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdtContent");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableCell>();
+            builder.AddChild<CustomXmlCell>();
+            builder.AddChild<SdtCell>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
@@ -35817,39 +35817,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableRow))]
-    [ChildElementInfo(typeof(CustomXmlRow))]
-    [ChildElementInfo(typeof(SdtRow))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public partial class SdtContentRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35888,6 +35855,39 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "sdtContent");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableRow>();
+            builder.AddChild<CustomXmlRow>();
+            builder.AddChild<SdtRow>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
@@ -35984,8 +35984,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
     ///   <item><description>CustomXmlAttribute &lt;w:attr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomXmlPlaceholder))]
-    [ChildElementInfo(typeof(CustomXmlAttribute))]
     public partial class CustomXmlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36024,6 +36022,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (84L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "customXmlPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomXmlPlaceholder>();
+            builder.AddChild<CustomXmlAttribute>();
         }
 
         /// <summary>
@@ -36185,7 +36185,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+
     ///   <item><description>PreviousTableGrid &lt;w:tblGrid></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PreviousTableGrid))]
     public partial class TableGridChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36237,6 +36236,7 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblGridChange");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PreviousTableGrid>();
             builder.AddElement<TableGridChange>()
 .AddAttribute(23, "id", a => a.Id, aBuilder =>
 {
@@ -36294,7 +36294,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>PreviousTableCellProperties &lt;w:tcPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PreviousTableCellProperties))]
     public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36372,6 +36371,7 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tcPrChange");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PreviousTableCellProperties>();
             builder.AddElement<TableCellPropertiesChange>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
@@ -36450,23 +36450,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>TableCellPropertiesChange &lt;w:tcPrChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConditionalFormatStyle))]
-    [ChildElementInfo(typeof(TableCellWidth))]
-    [ChildElementInfo(typeof(GridSpan))]
-    [ChildElementInfo(typeof(HorizontalMerge))]
-    [ChildElementInfo(typeof(VerticalMerge))]
-    [ChildElementInfo(typeof(TableCellBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(NoWrap))]
-    [ChildElementInfo(typeof(TableCellMargin))]
-    [ChildElementInfo(typeof(TextDirection))]
-    [ChildElementInfo(typeof(TableCellFitText))]
-    [ChildElementInfo(typeof(TableCellVerticalAlignment))]
-    [ChildElementInfo(typeof(HideMark))]
-    [ChildElementInfo(typeof(CellInsertion))]
-    [ChildElementInfo(typeof(CellDeletion))]
-    [ChildElementInfo(typeof(CellMerge))]
-    [ChildElementInfo(typeof(TableCellPropertiesChange))]
     public partial class TableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36505,6 +36488,23 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tcPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ConditionalFormatStyle>();
+            builder.AddChild<TableCellWidth>();
+            builder.AddChild<GridSpan>();
+            builder.AddChild<HorizontalMerge>();
+            builder.AddChild<VerticalMerge>();
+            builder.AddChild<TableCellBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<NoWrap>();
+            builder.AddChild<TableCellMargin>();
+            builder.AddChild<TextDirection>();
+            builder.AddChild<TableCellFitText>();
+            builder.AddChild<TableCellVerticalAlignment>();
+            builder.AddChild<HideMark>();
+            builder.AddChild<CellInsertion>();
+            builder.AddChild<CellDeletion>();
+            builder.AddChild<CellMerge>();
+            builder.AddChild<TableCellPropertiesChange>();
         }
 
         /// <summary>
@@ -36768,7 +36768,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>PreviousTableProperties &lt;w:tblPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PreviousTableProperties))]
     public partial class TablePropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36846,6 +36845,7 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblPrChange");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PreviousTableProperties>();
             builder.AddElement<TablePropertiesChange>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
@@ -36908,7 +36908,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>PreviousTablePropertyExceptions &lt;w:tblPrEx></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PreviousTablePropertyExceptions))]
     public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36986,6 +36985,7 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblPrExChange");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PreviousTablePropertyExceptions>();
             builder.AddElement<TablePropertyExceptionsChange>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
@@ -37063,22 +37063,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>TablePropertiesChange &lt;w:tblPrChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableStyle))]
-    [ChildElementInfo(typeof(TablePositionProperties))]
-    [ChildElementInfo(typeof(TableOverlap))]
-    [ChildElementInfo(typeof(BiDiVisual))]
-    [ChildElementInfo(typeof(TableWidth))]
-    [ChildElementInfo(typeof(TableJustification))]
-    [ChildElementInfo(typeof(TableCellSpacing))]
-    [ChildElementInfo(typeof(TableIndentation))]
-    [ChildElementInfo(typeof(TableBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(TableLayout))]
-    [ChildElementInfo(typeof(TableCellMarginDefault))]
-    [ChildElementInfo(typeof(TableLook))]
-    [ChildElementInfo(typeof(TableCaption), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TableDescription), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TablePropertiesChange))]
     public partial class TableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37117,6 +37101,22 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableStyle>();
+            builder.AddChild<TablePositionProperties>();
+            builder.AddChild<TableOverlap>();
+            builder.AddChild<BiDiVisual>();
+            builder.AddChild<TableWidth>();
+            builder.AddChild<TableJustification>();
+            builder.AddChild<TableCellSpacing>();
+            builder.AddChild<TableIndentation>();
+            builder.AddChild<TableBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<TableLayout>();
+            builder.AddChild<TableCellMarginDefault>();
+            builder.AddChild<TableLook>();
+            builder.AddChild<TableCaption>();
+            builder.AddChild<TableDescription>();
+            builder.AddChild<TablePropertiesChange>();
         }
 
         /// <summary>
@@ -37407,8 +37407,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>TableGridChange &lt;w:tblGridChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GridColumn))]
-    [ChildElementInfo(typeof(TableGridChange))]
     public partial class TableGrid : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37447,6 +37445,8 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblGrid");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<GridColumn>();
+            builder.AddChild<TableGridChange>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -37860,9 +37860,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>UniqueTag &lt;w:uniqueTag></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Active))]
-    [ChildElementInfo(typeof(ColumnIndex))]
-    [ChildElementInfo(typeof(UniqueTag))]
     public partial class RecipientData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37901,6 +37898,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "recipientData");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Active>();
+            builder.AddChild<ColumnIndex>();
+            builder.AddChild<UniqueTag>();
         }
 
         /// <summary>
@@ -38057,12 +38057,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DynamicAddress &lt;w:dynamicAddress></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MailMergeFieldType))]
-    [ChildElementInfo(typeof(Name))]
-    [ChildElementInfo(typeof(MappedName))]
-    [ChildElementInfo(typeof(ColumnIndex))]
-    [ChildElementInfo(typeof(LanguageId))]
-    [ChildElementInfo(typeof(DynamicAddress))]
     public partial class FieldMapData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38101,6 +38095,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "fieldMapData");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<MailMergeFieldType>();
+            builder.AddChild<Name>();
+            builder.AddChild<MappedName>();
+            builder.AddChild<ColumnIndex>();
+            builder.AddChild<LanguageId>();
+            builder.AddChild<DynamicAddress>();
         }
 
         /// <summary>
@@ -38344,14 +38344,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>RecipientDataReference &lt;w:recipientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UdlConnectionString))]
-    [ChildElementInfo(typeof(DataSourceTableName))]
-    [ChildElementInfo(typeof(SourceReference))]
-    [ChildElementInfo(typeof(ColumnDelimiter))]
-    [ChildElementInfo(typeof(MailMergeSource))]
-    [ChildElementInfo(typeof(FirstRowHeader))]
-    [ChildElementInfo(typeof(FieldMapData))]
-    [ChildElementInfo(typeof(RecipientDataReference))]
     public partial class DataSourceObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38390,6 +38382,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "odso");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<UdlConnectionString>();
+            builder.AddChild<DataSourceTableName>();
+            builder.AddChild<SourceReference>();
+            builder.AddChild<ColumnDelimiter>();
+            builder.AddChild<MailMergeSource>();
+            builder.AddChild<FirstRowHeader>();
+            builder.AddChild<FieldMapData>();
+            builder.AddChild<RecipientDataReference>();
         }
 
         /// <summary>
@@ -38733,40 +38733,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
     ///   <item><description>SpecVanish &lt;w:specVanish></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunFonts))]
-    [ChildElementInfo(typeof(Bold))]
-    [ChildElementInfo(typeof(BoldComplexScript))]
-    [ChildElementInfo(typeof(Italic))]
-    [ChildElementInfo(typeof(ItalicComplexScript))]
-    [ChildElementInfo(typeof(Caps))]
-    [ChildElementInfo(typeof(SmallCaps))]
-    [ChildElementInfo(typeof(Strike))]
-    [ChildElementInfo(typeof(DoubleStrike))]
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(Emboss))]
-    [ChildElementInfo(typeof(Imprint))]
-    [ChildElementInfo(typeof(NoProof))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(Vanish))]
-    [ChildElementInfo(typeof(WebHidden))]
-    [ChildElementInfo(typeof(Color))]
-    [ChildElementInfo(typeof(Spacing))]
-    [ChildElementInfo(typeof(CharacterScale))]
-    [ChildElementInfo(typeof(Kern))]
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(FontSize))]
-    [ChildElementInfo(typeof(FontSizeComplexScript))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(TextEffect))]
-    [ChildElementInfo(typeof(Border))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(FitText))]
-    [ChildElementInfo(typeof(VerticalTextAlignment))]
-    [ChildElementInfo(typeof(Emphasis))]
-    [ChildElementInfo(typeof(Languages))]
-    [ChildElementInfo(typeof(EastAsianLayout))]
-    [ChildElementInfo(typeof(SpecVanish))]
     public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38805,6 +38771,40 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunFonts>();
+            builder.AddChild<Bold>();
+            builder.AddChild<BoldComplexScript>();
+            builder.AddChild<Italic>();
+            builder.AddChild<ItalicComplexScript>();
+            builder.AddChild<Caps>();
+            builder.AddChild<SmallCaps>();
+            builder.AddChild<Strike>();
+            builder.AddChild<DoubleStrike>();
+            builder.AddChild<Outline>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<Emboss>();
+            builder.AddChild<Imprint>();
+            builder.AddChild<NoProof>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<Vanish>();
+            builder.AddChild<WebHidden>();
+            builder.AddChild<Color>();
+            builder.AddChild<Spacing>();
+            builder.AddChild<CharacterScale>();
+            builder.AddChild<Kern>();
+            builder.AddChild<Position>();
+            builder.AddChild<FontSize>();
+            builder.AddChild<FontSizeComplexScript>();
+            builder.AddChild<Underline>();
+            builder.AddChild<TextEffect>();
+            builder.AddChild<Border>();
+            builder.AddChild<Shading>();
+            builder.AddChild<FitText>();
+            builder.AddChild<VerticalTextAlignment>();
+            builder.AddChild<Emphasis>();
+            builder.AddChild<Languages>();
+            builder.AddChild<EastAsianLayout>();
+            builder.AddChild<SpecVanish>();
         }
 
         /// <summary>
@@ -39357,36 +39357,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
     ///   <item><description>OutlineLevel &lt;w:outlineLvl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(KeepNext))]
-    [ChildElementInfo(typeof(KeepLines))]
-    [ChildElementInfo(typeof(PageBreakBefore))]
-    [ChildElementInfo(typeof(FrameProperties))]
-    [ChildElementInfo(typeof(WidowControl))]
-    [ChildElementInfo(typeof(NumberingProperties))]
-    [ChildElementInfo(typeof(SuppressLineNumbers))]
-    [ChildElementInfo(typeof(ParagraphBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(Tabs))]
-    [ChildElementInfo(typeof(SuppressAutoHyphens))]
-    [ChildElementInfo(typeof(Kinsoku))]
-    [ChildElementInfo(typeof(WordWrap))]
-    [ChildElementInfo(typeof(OverflowPunctuation))]
-    [ChildElementInfo(typeof(TopLinePunctuation))]
-    [ChildElementInfo(typeof(AutoSpaceDE))]
-    [ChildElementInfo(typeof(AutoSpaceDN))]
-    [ChildElementInfo(typeof(BiDi))]
-    [ChildElementInfo(typeof(AdjustRightIndent))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(SpacingBetweenLines))]
-    [ChildElementInfo(typeof(Indentation))]
-    [ChildElementInfo(typeof(ContextualSpacing))]
-    [ChildElementInfo(typeof(MirrorIndents))]
-    [ChildElementInfo(typeof(SuppressOverlap))]
-    [ChildElementInfo(typeof(Justification))]
-    [ChildElementInfo(typeof(TextDirection))]
-    [ChildElementInfo(typeof(TextAlignment))]
-    [ChildElementInfo(typeof(TextBoxTightWrap))]
-    [ChildElementInfo(typeof(OutlineLevel))]
     public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39425,6 +39395,36 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<KeepNext>();
+            builder.AddChild<KeepLines>();
+            builder.AddChild<PageBreakBefore>();
+            builder.AddChild<FrameProperties>();
+            builder.AddChild<WidowControl>();
+            builder.AddChild<NumberingProperties>();
+            builder.AddChild<SuppressLineNumbers>();
+            builder.AddChild<ParagraphBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<Tabs>();
+            builder.AddChild<SuppressAutoHyphens>();
+            builder.AddChild<Kinsoku>();
+            builder.AddChild<WordWrap>();
+            builder.AddChild<OverflowPunctuation>();
+            builder.AddChild<TopLinePunctuation>();
+            builder.AddChild<AutoSpaceDE>();
+            builder.AddChild<AutoSpaceDN>();
+            builder.AddChild<BiDi>();
+            builder.AddChild<AdjustRightIndent>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<SpacingBetweenLines>();
+            builder.AddChild<Indentation>();
+            builder.AddChild<ContextualSpacing>();
+            builder.AddChild<MirrorIndents>();
+            builder.AddChild<SuppressOverlap>();
+            builder.AddChild<Justification>();
+            builder.AddChild<TextDirection>();
+            builder.AddChild<TextAlignment>();
+            builder.AddChild<TextBoxTightWrap>();
+            builder.AddChild<OutlineLevel>();
         }
 
         /// <summary>
@@ -39874,7 +39874,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
     ///   <item><description>RunPropertiesBaseStyle &lt;w:rPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunPropertiesBaseStyle))]
     public partial class RunPropertiesDefault : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39913,6 +39912,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rPrDefault");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunPropertiesBaseStyle>();
         }
 
         /// <summary>
@@ -39950,7 +39950,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
     ///   <item><description>ParagraphPropertiesBaseStyle &lt;w:pPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ParagraphPropertiesBaseStyle))]
     public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39989,6 +39988,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pPrDefault");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ParagraphPropertiesBaseStyle>();
         }
 
         /// <summary>
@@ -40354,10 +40354,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>FlatBorders &lt;w:flatBorders></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Width))]
-    [ChildElementInfo(typeof(Color))]
-    [ChildElementInfo(typeof(NoBorder))]
-    [ChildElementInfo(typeof(FlatBorders))]
     public partial class FramesetSplitbar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40396,6 +40392,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "framesetSplitbar");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Width>();
+            builder.AddChild<Color>();
+            builder.AddChild<NoBorder>();
+            builder.AddChild<FlatBorders>();
         }
 
         /// <summary>
@@ -40522,11 +40522,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Frame &lt;w:frame></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FrameSize))]
-    [ChildElementInfo(typeof(FramesetSplitbar))]
-    [ChildElementInfo(typeof(FrameLayout))]
-    [ChildElementInfo(typeof(Frameset))]
-    [ChildElementInfo(typeof(Frame))]
     public partial class Frameset : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40565,6 +40560,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "frameset");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FrameSize>();
+            builder.AddChild<FramesetSplitbar>();
+            builder.AddChild<FrameLayout>();
+            builder.AddChild<Frameset>();
+            builder.AddChild<Frame>();
         }
 
         /// <summary>
@@ -40645,14 +40645,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>LinkedToFile &lt;w:linkedToFile></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FrameSize))]
-    [ChildElementInfo(typeof(FrameName))]
-    [ChildElementInfo(typeof(SourceFileReference))]
-    [ChildElementInfo(typeof(MarginWidth))]
-    [ChildElementInfo(typeof(MarginHeight))]
-    [ChildElementInfo(typeof(ScrollbarVisibility))]
-    [ChildElementInfo(typeof(NoResizeAllowed))]
-    [ChildElementInfo(typeof(LinkedToFile))]
     public partial class Frame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40691,6 +40683,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "frame");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FrameSize>();
+            builder.AddChild<FrameName>();
+            builder.AddChild<SourceFileReference>();
+            builder.AddChild<MarginWidth>();
+            builder.AddChild<MarginHeight>();
+            builder.AddChild<ScrollbarVisibility>();
+            builder.AddChild<NoResizeAllowed>();
+            builder.AddChild<LinkedToFile>();
         }
 
         /// <summary>
@@ -41080,37 +41080,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OutlineLevel &lt;w:outlineLvl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ParagraphStyleId))]
-    [ChildElementInfo(typeof(KeepNext))]
-    [ChildElementInfo(typeof(KeepLines))]
-    [ChildElementInfo(typeof(PageBreakBefore))]
-    [ChildElementInfo(typeof(FrameProperties))]
-    [ChildElementInfo(typeof(WidowControl))]
-    [ChildElementInfo(typeof(NumberingProperties))]
-    [ChildElementInfo(typeof(SuppressLineNumbers))]
-    [ChildElementInfo(typeof(ParagraphBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(Tabs))]
-    [ChildElementInfo(typeof(SuppressAutoHyphens))]
-    [ChildElementInfo(typeof(Kinsoku))]
-    [ChildElementInfo(typeof(WordWrap))]
-    [ChildElementInfo(typeof(OverflowPunctuation))]
-    [ChildElementInfo(typeof(TopLinePunctuation))]
-    [ChildElementInfo(typeof(AutoSpaceDE))]
-    [ChildElementInfo(typeof(AutoSpaceDN))]
-    [ChildElementInfo(typeof(BiDi))]
-    [ChildElementInfo(typeof(AdjustRightIndent))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(SpacingBetweenLines))]
-    [ChildElementInfo(typeof(Indentation))]
-    [ChildElementInfo(typeof(ContextualSpacing))]
-    [ChildElementInfo(typeof(MirrorIndents))]
-    [ChildElementInfo(typeof(SuppressOverlap))]
-    [ChildElementInfo(typeof(Justification))]
-    [ChildElementInfo(typeof(TextDirection))]
-    [ChildElementInfo(typeof(TextAlignment))]
-    [ChildElementInfo(typeof(TextBoxTightWrap))]
-    [ChildElementInfo(typeof(OutlineLevel))]
     public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41149,6 +41118,37 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ParagraphStyleId>();
+            builder.AddChild<KeepNext>();
+            builder.AddChild<KeepLines>();
+            builder.AddChild<PageBreakBefore>();
+            builder.AddChild<FrameProperties>();
+            builder.AddChild<WidowControl>();
+            builder.AddChild<NumberingProperties>();
+            builder.AddChild<SuppressLineNumbers>();
+            builder.AddChild<ParagraphBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<Tabs>();
+            builder.AddChild<SuppressAutoHyphens>();
+            builder.AddChild<Kinsoku>();
+            builder.AddChild<WordWrap>();
+            builder.AddChild<OverflowPunctuation>();
+            builder.AddChild<TopLinePunctuation>();
+            builder.AddChild<AutoSpaceDE>();
+            builder.AddChild<AutoSpaceDN>();
+            builder.AddChild<BiDi>();
+            builder.AddChild<AdjustRightIndent>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<SpacingBetweenLines>();
+            builder.AddChild<Indentation>();
+            builder.AddChild<ContextualSpacing>();
+            builder.AddChild<MirrorIndents>();
+            builder.AddChild<SuppressOverlap>();
+            builder.AddChild<Justification>();
+            builder.AddChild<TextDirection>();
+            builder.AddChild<TextAlignment>();
+            builder.AddChild<TextBoxTightWrap>();
+            builder.AddChild<OutlineLevel>();
         }
 
         /// <summary>
@@ -41653,42 +41653,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SpecVanish &lt;w:specVanish></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunFonts))]
-    [ChildElementInfo(typeof(Bold))]
-    [ChildElementInfo(typeof(BoldComplexScript))]
-    [ChildElementInfo(typeof(Italic))]
-    [ChildElementInfo(typeof(ItalicComplexScript))]
-    [ChildElementInfo(typeof(Caps))]
-    [ChildElementInfo(typeof(SmallCaps))]
-    [ChildElementInfo(typeof(Strike))]
-    [ChildElementInfo(typeof(DoubleStrike))]
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(Emboss))]
-    [ChildElementInfo(typeof(Imprint))]
-    [ChildElementInfo(typeof(NoProof))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(Vanish))]
-    [ChildElementInfo(typeof(WebHidden))]
-    [ChildElementInfo(typeof(Color))]
-    [ChildElementInfo(typeof(Spacing))]
-    [ChildElementInfo(typeof(CharacterScale))]
-    [ChildElementInfo(typeof(Kern))]
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(FontSize))]
-    [ChildElementInfo(typeof(FontSizeComplexScript))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(TextEffect))]
-    [ChildElementInfo(typeof(Border))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(FitText))]
-    [ChildElementInfo(typeof(VerticalTextAlignment))]
-    [ChildElementInfo(typeof(RightToLeftText))]
-    [ChildElementInfo(typeof(ComplexScript))]
-    [ChildElementInfo(typeof(Emphasis))]
-    [ChildElementInfo(typeof(Languages))]
-    [ChildElementInfo(typeof(EastAsianLayout))]
-    [ChildElementInfo(typeof(SpecVanish))]
     public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41727,6 +41691,42 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunFonts>();
+            builder.AddChild<Bold>();
+            builder.AddChild<BoldComplexScript>();
+            builder.AddChild<Italic>();
+            builder.AddChild<ItalicComplexScript>();
+            builder.AddChild<Caps>();
+            builder.AddChild<SmallCaps>();
+            builder.AddChild<Strike>();
+            builder.AddChild<DoubleStrike>();
+            builder.AddChild<Outline>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<Emboss>();
+            builder.AddChild<Imprint>();
+            builder.AddChild<NoProof>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<Vanish>();
+            builder.AddChild<WebHidden>();
+            builder.AddChild<Color>();
+            builder.AddChild<Spacing>();
+            builder.AddChild<CharacterScale>();
+            builder.AddChild<Kern>();
+            builder.AddChild<Position>();
+            builder.AddChild<FontSize>();
+            builder.AddChild<FontSizeComplexScript>();
+            builder.AddChild<Underline>();
+            builder.AddChild<TextEffect>();
+            builder.AddChild<Border>();
+            builder.AddChild<Shading>();
+            builder.AddChild<FitText>();
+            builder.AddChild<VerticalTextAlignment>();
+            builder.AddChild<RightToLeftText>();
+            builder.AddChild<ComplexScript>();
+            builder.AddChild<Emphasis>();
+            builder.AddChild<Languages>();
+            builder.AddChild<EastAsianLayout>();
+            builder.AddChild<SpecVanish>();
         }
 
         /// <summary>
@@ -42332,18 +42332,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NumberingSymbolRunProperties &lt;w:rPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StartNumberingValue))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(LevelRestart))]
-    [ChildElementInfo(typeof(ParagraphStyleIdInLevel))]
-    [ChildElementInfo(typeof(IsLegalNumberingStyle))]
-    [ChildElementInfo(typeof(LevelSuffix))]
-    [ChildElementInfo(typeof(LevelText))]
-    [ChildElementInfo(typeof(LevelPictureBulletId))]
-    [ChildElementInfo(typeof(LegacyNumbering))]
-    [ChildElementInfo(typeof(LevelJustification))]
-    [ChildElementInfo(typeof(PreviousParagraphProperties))]
-    [ChildElementInfo(typeof(NumberingSymbolRunProperties))]
     public partial class Level : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42421,6 +42409,18 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "lvl");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StartNumberingValue>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<LevelRestart>();
+            builder.AddChild<ParagraphStyleIdInLevel>();
+            builder.AddChild<IsLegalNumberingStyle>();
+            builder.AddChild<LevelSuffix>();
+            builder.AddChild<LevelText>();
+            builder.AddChild<LevelPictureBulletId>();
+            builder.AddChild<LegacyNumbering>();
+            builder.AddChild<LevelJustification>();
+            builder.AddChild<PreviousParagraphProperties>();
+            builder.AddChild<NumberingSymbolRunProperties>();
             builder.AddElement<Level>()
 .AddAttribute(23, "ilvl", a => a.LevelIndex, aBuilder =>
 {
@@ -42623,8 +42623,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>Level &lt;w:lvl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StartOverrideNumberingValue))]
-    [ChildElementInfo(typeof(Level))]
     public partial class LevelOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42676,6 +42674,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "lvlOverride");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StartOverrideNumberingValue>();
+            builder.AddChild<Level>();
             builder.AddElement<LevelOverride>()
 .AddAttribute(23, "ilvl", a => a.LevelIndex, aBuilder =>
 {
@@ -42733,8 +42733,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Drawing &lt;w:drawing></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PictureBulletBase))]
-    [ChildElementInfo(typeof(Drawing))]
     public partial class NumberingPictureBullet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42786,6 +42784,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "numPicBullet");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PictureBulletBase>();
+            builder.AddChild<Drawing>();
             builder.AddElement<NumberingPictureBullet>()
 .AddAttribute(23, "numPicBulletId", a => a.NumberingPictureBulletId, aBuilder =>
 {
@@ -42857,13 +42857,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Level &lt;w:lvl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Nsid))]
-    [ChildElementInfo(typeof(MultiLevelType))]
-    [ChildElementInfo(typeof(TemplateCode))]
-    [ChildElementInfo(typeof(AbstractNumDefinitionName))]
-    [ChildElementInfo(typeof(StyleLink))]
-    [ChildElementInfo(typeof(NumberingStyleLink))]
-    [ChildElementInfo(typeof(Level))]
     public partial class AbstractNum : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42915,6 +42908,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "abstractNum");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Nsid>();
+            builder.AddChild<MultiLevelType>();
+            builder.AddChild<TemplateCode>();
+            builder.AddChild<AbstractNumDefinitionName>();
+            builder.AddChild<StyleLink>();
+            builder.AddChild<NumberingStyleLink>();
+            builder.AddChild<Level>();
             builder.AddElement<AbstractNum>()
 .AddAttribute(23, "abstractNumId", a => a.AbstractNumberId, aBuilder =>
 {
@@ -43036,8 +43036,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
     ///   <item><description>LevelOverride &lt;w:lvlOverride></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AbstractNumId))]
-    [ChildElementInfo(typeof(LevelOverride))]
     public partial class NumberingInstance : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43089,6 +43087,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "num");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AbstractNumId>();
+            builder.AddChild<LevelOverride>();
             builder.AddElement<NumberingInstance>()
 .AddAttribute(23, "numId", a => a.NumberID, aBuilder =>
 {
@@ -43168,37 +43168,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ParagraphPropertiesChange &lt;w:pPrChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(KeepNext))]
-    [ChildElementInfo(typeof(KeepLines))]
-    [ChildElementInfo(typeof(PageBreakBefore))]
-    [ChildElementInfo(typeof(FrameProperties))]
-    [ChildElementInfo(typeof(WidowControl))]
-    [ChildElementInfo(typeof(NumberingProperties))]
-    [ChildElementInfo(typeof(SuppressLineNumbers))]
-    [ChildElementInfo(typeof(ParagraphBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(Tabs))]
-    [ChildElementInfo(typeof(SuppressAutoHyphens))]
-    [ChildElementInfo(typeof(Kinsoku))]
-    [ChildElementInfo(typeof(WordWrap))]
-    [ChildElementInfo(typeof(OverflowPunctuation))]
-    [ChildElementInfo(typeof(TopLinePunctuation))]
-    [ChildElementInfo(typeof(AutoSpaceDE))]
-    [ChildElementInfo(typeof(AutoSpaceDN))]
-    [ChildElementInfo(typeof(BiDi))]
-    [ChildElementInfo(typeof(AdjustRightIndent))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(SpacingBetweenLines))]
-    [ChildElementInfo(typeof(Indentation))]
-    [ChildElementInfo(typeof(ContextualSpacing))]
-    [ChildElementInfo(typeof(MirrorIndents))]
-    [ChildElementInfo(typeof(SuppressOverlap))]
-    [ChildElementInfo(typeof(Justification))]
-    [ChildElementInfo(typeof(TextDirection))]
-    [ChildElementInfo(typeof(TextAlignment))]
-    [ChildElementInfo(typeof(TextBoxTightWrap))]
-    [ChildElementInfo(typeof(OutlineLevel))]
-    [ChildElementInfo(typeof(ParagraphPropertiesChange))]
     public partial class StyleParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43237,6 +43206,37 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<KeepNext>();
+            builder.AddChild<KeepLines>();
+            builder.AddChild<PageBreakBefore>();
+            builder.AddChild<FrameProperties>();
+            builder.AddChild<WidowControl>();
+            builder.AddChild<NumberingProperties>();
+            builder.AddChild<SuppressLineNumbers>();
+            builder.AddChild<ParagraphBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<Tabs>();
+            builder.AddChild<SuppressAutoHyphens>();
+            builder.AddChild<Kinsoku>();
+            builder.AddChild<WordWrap>();
+            builder.AddChild<OverflowPunctuation>();
+            builder.AddChild<TopLinePunctuation>();
+            builder.AddChild<AutoSpaceDE>();
+            builder.AddChild<AutoSpaceDN>();
+            builder.AddChild<BiDi>();
+            builder.AddChild<AdjustRightIndent>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<SpacingBetweenLines>();
+            builder.AddChild<Indentation>();
+            builder.AddChild<ContextualSpacing>();
+            builder.AddChild<MirrorIndents>();
+            builder.AddChild<SuppressOverlap>();
+            builder.AddChild<Justification>();
+            builder.AddChild<TextDirection>();
+            builder.AddChild<TextAlignment>();
+            builder.AddChild<TextBoxTightWrap>();
+            builder.AddChild<OutlineLevel>();
+            builder.AddChild<ParagraphPropertiesChange>();
         }
 
         /// <summary>
@@ -43717,12 +43717,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TableCellMarginDefault &lt;w:tblCellMar></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableJustification))]
-    [ChildElementInfo(typeof(TableCellSpacing))]
-    [ChildElementInfo(typeof(TableIndentation))]
-    [ChildElementInfo(typeof(TableBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(TableCellMarginDefault))]
     public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43761,6 +43755,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableJustification>();
+            builder.AddChild<TableCellSpacing>();
+            builder.AddChild<TableIndentation>();
+            builder.AddChild<TableBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<TableCellMarginDefault>();
         }
 
         /// <summary>
@@ -43884,11 +43884,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TableJustification &lt;w:jc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Hidden))]
-    [ChildElementInfo(typeof(CantSplit))]
-    [ChildElementInfo(typeof(TableHeader))]
-    [ChildElementInfo(typeof(TableCellSpacing))]
-    [ChildElementInfo(typeof(TableJustification))]
     public partial class TableStyleConditionalFormattingTableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43927,6 +43922,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "trPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Hidden>();
+            builder.AddChild<CantSplit>();
+            builder.AddChild<TableHeader>();
+            builder.AddChild<TableCellSpacing>();
+            builder.AddChild<TableJustification>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -43965,11 +43965,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TableCellVerticalAlignment &lt;w:vAlign></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableCellBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(NoWrap))]
-    [ChildElementInfo(typeof(TableCellMargin))]
-    [ChildElementInfo(typeof(TableCellVerticalAlignment))]
     public partial class TableStyleConditionalFormattingTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44008,6 +44003,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tcPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableCellBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<NoWrap>();
+            builder.AddChild<TableCellMargin>();
+            builder.AddChild<TableCellVerticalAlignment>();
         }
 
         /// <summary>
@@ -44241,41 +44241,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>RunPropertiesChange &lt;w:rPrChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunFonts))]
-    [ChildElementInfo(typeof(Bold))]
-    [ChildElementInfo(typeof(BoldComplexScript))]
-    [ChildElementInfo(typeof(Italic))]
-    [ChildElementInfo(typeof(ItalicComplexScript))]
-    [ChildElementInfo(typeof(Caps))]
-    [ChildElementInfo(typeof(SmallCaps))]
-    [ChildElementInfo(typeof(Strike))]
-    [ChildElementInfo(typeof(DoubleStrike))]
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(Emboss))]
-    [ChildElementInfo(typeof(Imprint))]
-    [ChildElementInfo(typeof(NoProof))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(Vanish))]
-    [ChildElementInfo(typeof(WebHidden))]
-    [ChildElementInfo(typeof(Color))]
-    [ChildElementInfo(typeof(Spacing))]
-    [ChildElementInfo(typeof(CharacterScale))]
-    [ChildElementInfo(typeof(Kern))]
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(FontSize))]
-    [ChildElementInfo(typeof(FontSizeComplexScript))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(TextEffect))]
-    [ChildElementInfo(typeof(Border))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(FitText))]
-    [ChildElementInfo(typeof(VerticalTextAlignment))]
-    [ChildElementInfo(typeof(Emphasis))]
-    [ChildElementInfo(typeof(Languages))]
-    [ChildElementInfo(typeof(EastAsianLayout))]
-    [ChildElementInfo(typeof(SpecVanish))]
-    [ChildElementInfo(typeof(RunPropertiesChange))]
     public partial class StyleRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44314,6 +44279,41 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunFonts>();
+            builder.AddChild<Bold>();
+            builder.AddChild<BoldComplexScript>();
+            builder.AddChild<Italic>();
+            builder.AddChild<ItalicComplexScript>();
+            builder.AddChild<Caps>();
+            builder.AddChild<SmallCaps>();
+            builder.AddChild<Strike>();
+            builder.AddChild<DoubleStrike>();
+            builder.AddChild<Outline>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<Emboss>();
+            builder.AddChild<Imprint>();
+            builder.AddChild<NoProof>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<Vanish>();
+            builder.AddChild<WebHidden>();
+            builder.AddChild<Color>();
+            builder.AddChild<Spacing>();
+            builder.AddChild<CharacterScale>();
+            builder.AddChild<Kern>();
+            builder.AddChild<Position>();
+            builder.AddChild<FontSize>();
+            builder.AddChild<FontSizeComplexScript>();
+            builder.AddChild<Underline>();
+            builder.AddChild<TextEffect>();
+            builder.AddChild<Border>();
+            builder.AddChild<Shading>();
+            builder.AddChild<FitText>();
+            builder.AddChild<VerticalTextAlignment>();
+            builder.AddChild<Emphasis>();
+            builder.AddChild<Languages>();
+            builder.AddChild<EastAsianLayout>();
+            builder.AddChild<SpecVanish>();
+            builder.AddChild<RunPropertiesChange>();
         }
 
         /// <summary>
@@ -44870,14 +44870,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>TableCellMarginDefault &lt;w:tblCellMar></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableStyleRowBandSize))]
-    [ChildElementInfo(typeof(TableStyleColumnBandSize))]
-    [ChildElementInfo(typeof(TableJustification))]
-    [ChildElementInfo(typeof(TableCellSpacing))]
-    [ChildElementInfo(typeof(TableIndentation))]
-    [ChildElementInfo(typeof(TableBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(TableCellMarginDefault))]
     public partial class StyleTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44916,6 +44908,14 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableStyleRowBandSize>();
+            builder.AddChild<TableStyleColumnBandSize>();
+            builder.AddChild<TableJustification>();
+            builder.AddChild<TableCellSpacing>();
+            builder.AddChild<TableIndentation>();
+            builder.AddChild<TableBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<TableCellMarginDefault>();
         }
 
         /// <summary>
@@ -45072,10 +45072,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>TableCellVerticalAlignment &lt;w:vAlign></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(NoWrap))]
-    [ChildElementInfo(typeof(TableCellMargin))]
-    [ChildElementInfo(typeof(TableCellVerticalAlignment))]
     public partial class StyleTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45114,6 +45110,10 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tcPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Shading>();
+            builder.AddChild<NoWrap>();
+            builder.AddChild<TableCellMargin>();
+            builder.AddChild<TableCellVerticalAlignment>();
         }
 
         /// <summary>
@@ -45209,11 +45209,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>TableStyleConditionalFormattingTableCellProperties &lt;w:tcPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleParagraphProperties))]
-    [ChildElementInfo(typeof(RunPropertiesBaseStyle))]
-    [ChildElementInfo(typeof(TableStyleConditionalFormattingTableProperties))]
-    [ChildElementInfo(typeof(TableStyleConditionalFormattingTableRowProperties))]
-    [ChildElementInfo(typeof(TableStyleConditionalFormattingTableCellProperties))]
     public partial class TableStyleProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45265,6 +45260,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblStylePr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StyleParagraphProperties>();
+            builder.AddChild<RunPropertiesBaseStyle>();
+            builder.AddChild<TableStyleConditionalFormattingTableProperties>();
+            builder.AddChild<TableStyleConditionalFormattingTableRowProperties>();
+            builder.AddChild<TableStyleConditionalFormattingTableCellProperties>();
             builder.AddElement<TableStyleProperties>()
 .AddAttribute(23, "type", a => a.Type, aBuilder =>
 {
@@ -45480,8 +45480,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>ParagraphPropertiesDefault &lt;w:pPrDefault></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunPropertiesDefault))]
-    [ChildElementInfo(typeof(ParagraphPropertiesDefault))]
     public partial class DocDefaults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45520,6 +45518,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "docDefaults");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RunPropertiesDefault>();
+            builder.AddChild<ParagraphPropertiesDefault>();
         }
 
         /// <summary>
@@ -45571,7 +45571,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>LatentStyleExceptionInfo &lt;w:lsdException></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LatentStyleExceptionInfo))]
     public partial class LatentStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45688,6 +45687,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "latentStyles");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LatentStyleExceptionInfo>();
             builder.AddElement<LatentStyles>()
 .AddAttribute(23, "defLockedState", a => a.DefaultLockedState)
 .AddAttribute(23, "defUIPriority", a => a.DefaultUiPriority, aBuilder =>
@@ -45743,28 +45743,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>TableStyleProperties &lt;w:tblStylePr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleName))]
-    [ChildElementInfo(typeof(Aliases))]
-    [ChildElementInfo(typeof(BasedOn))]
-    [ChildElementInfo(typeof(NextParagraphStyle))]
-    [ChildElementInfo(typeof(LinkedStyle))]
-    [ChildElementInfo(typeof(AutoRedefine))]
-    [ChildElementInfo(typeof(StyleHidden))]
-    [ChildElementInfo(typeof(UIPriority))]
-    [ChildElementInfo(typeof(SemiHidden))]
-    [ChildElementInfo(typeof(UnhideWhenUsed))]
-    [ChildElementInfo(typeof(PrimaryStyle))]
-    [ChildElementInfo(typeof(Locked))]
-    [ChildElementInfo(typeof(Personal))]
-    [ChildElementInfo(typeof(PersonalCompose))]
-    [ChildElementInfo(typeof(PersonalReply))]
-    [ChildElementInfo(typeof(Rsid))]
-    [ChildElementInfo(typeof(StyleParagraphProperties))]
-    [ChildElementInfo(typeof(StyleRunProperties))]
-    [ChildElementInfo(typeof(StyleTableProperties))]
-    [ChildElementInfo(typeof(TableStyleConditionalFormattingTableRowProperties))]
-    [ChildElementInfo(typeof(StyleTableCellProperties))]
-    [ChildElementInfo(typeof(TableStyleProperties))]
     public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45855,6 +45833,28 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "style");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StyleName>();
+            builder.AddChild<Aliases>();
+            builder.AddChild<BasedOn>();
+            builder.AddChild<NextParagraphStyle>();
+            builder.AddChild<LinkedStyle>();
+            builder.AddChild<AutoRedefine>();
+            builder.AddChild<StyleHidden>();
+            builder.AddChild<UIPriority>();
+            builder.AddChild<SemiHidden>();
+            builder.AddChild<UnhideWhenUsed>();
+            builder.AddChild<PrimaryStyle>();
+            builder.AddChild<Locked>();
+            builder.AddChild<Personal>();
+            builder.AddChild<PersonalCompose>();
+            builder.AddChild<PersonalReply>();
+            builder.AddChild<Rsid>();
+            builder.AddChild<StyleParagraphProperties>();
+            builder.AddChild<StyleRunProperties>();
+            builder.AddChild<StyleTableProperties>();
+            builder.AddChild<TableStyleConditionalFormattingTableRowProperties>();
+            builder.AddChild<StyleTableCellProperties>();
+            builder.AddChild<TableStyleProperties>();
             builder.AddElement<Style>()
 .AddAttribute(23, "type", a => a.Type)
 .AddAttribute(23, "styleId", a => a.StyleId, aBuilder =>
@@ -46197,17 +46197,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (253L) });
     ///   <item><description>EmbedBoldItalicFont &lt;w:embedBoldItalic></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AltName))]
-    [ChildElementInfo(typeof(Panose1Number))]
-    [ChildElementInfo(typeof(FontCharSet))]
-    [ChildElementInfo(typeof(FontFamily))]
-    [ChildElementInfo(typeof(NotTrueType))]
-    [ChildElementInfo(typeof(Pitch))]
-    [ChildElementInfo(typeof(FontSignature))]
-    [ChildElementInfo(typeof(EmbedRegularFont))]
-    [ChildElementInfo(typeof(EmbedBoldFont))]
-    [ChildElementInfo(typeof(EmbedItalicFont))]
-    [ChildElementInfo(typeof(EmbedBoldItalicFont))]
     public partial class Font : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46259,6 +46248,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (253L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "font");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AltName>();
+            builder.AddChild<Panose1Number>();
+            builder.AddChild<FontCharSet>();
+            builder.AddChild<FontFamily>();
+            builder.AddChild<NotTrueType>();
+            builder.AddChild<Pitch>();
+            builder.AddChild<FontSignature>();
+            builder.AddChild<EmbedRegularFont>();
+            builder.AddChild<EmbedBoldFont>();
+            builder.AddChild<EmbedItalicFont>();
+            builder.AddChild<EmbedBoldItalicFont>();
             builder.AddElement<Font>()
 .AddAttribute(23, "name", a => a.Name, aBuilder =>
 {
@@ -46588,10 +46588,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>RightBorder &lt;w:right></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TopBorder))]
-    [ChildElementInfo(typeof(LeftBorder))]
-    [ChildElementInfo(typeof(BottomBorder))]
-    [ChildElementInfo(typeof(RightBorder))]
     public partial class DivBorder : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46630,6 +46626,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "divBdr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TopBorder>();
+            builder.AddChild<LeftBorder>();
+            builder.AddChild<BottomBorder>();
+            builder.AddChild<RightBorder>();
         }
 
         /// <summary>
@@ -46833,7 +46833,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Div &lt;w:div></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Div))]
     public abstract partial class DivsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46870,6 +46869,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<Div>();
         }
     }
 
@@ -46891,14 +46891,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DivsChild &lt;w:divsChild></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BlockQuote))]
-    [ChildElementInfo(typeof(BodyDiv))]
-    [ChildElementInfo(typeof(LeftMarginDiv))]
-    [ChildElementInfo(typeof(RightMarginDiv))]
-    [ChildElementInfo(typeof(TopMarginDiv))]
-    [ChildElementInfo(typeof(BottomMarginDiv))]
-    [ChildElementInfo(typeof(DivBorder))]
-    [ChildElementInfo(typeof(DivsChild))]
     public partial class Div : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46950,6 +46942,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "div");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BlockQuote>();
+            builder.AddChild<BodyDiv>();
+            builder.AddChild<LeftMarginDiv>();
+            builder.AddChild<RightMarginDiv>();
+            builder.AddChild<TopMarginDiv>();
+            builder.AddChild<BottomMarginDiv>();
+            builder.AddChild<DivBorder>();
+            builder.AddChild<DivsChild>();
             builder.AddElement<Div>()
 .AddAttribute(23, "id", a => a.Id, aBuilder =>
 {
@@ -47099,18 +47099,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-1L), Simple
     ///   <item><description>CommentRangeEnd &lt;w:commentRangeEnd></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
     public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47201,6 +47189,18 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-1L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "comment");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AltChunk>();
+            builder.AddChild<CustomXmlBlock>();
+            builder.AddChild<SdtBlock>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<Table>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
             builder.AddElement<Comment>()
 .AddAttribute(23, "initials", a => a.Initials, aBuilder =>
 {
@@ -47751,41 +47751,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
     public abstract partial class FootnoteEndnoteType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47848,13 +47813,48 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<AltChunk>();
+            builder.AddChild<CustomXmlBlock>();
+            builder.AddChild<SdtBlock>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<Table>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
             builder.AddElement<FootnoteEndnoteType>()
-                           .AddAttribute(23, "type", a => a.Type)
-                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
-                           });
+.AddAttribute(23, "type", a => a.Type)
+.AddAttribute(23, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-2147483648L), MaxInclusive = (32767L) });
+});
         }
     }
 
@@ -48194,7 +48194,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
     ///   <item><description>AutoCaption &lt;w:autoCaption></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AutoCaption))]
     public partial class AutoCaptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48233,6 +48232,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "autoCaptions");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AutoCaption>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -48257,7 +48257,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
     ///   <item><description>DocumentFormat.OpenXml.Vml.Background &lt;v:background></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Background))]
     public partial class DocumentBackground : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48348,6 +48347,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "background");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Background>();
             builder.AddElement<DocumentBackground>()
 .AddAttribute(23, "color", a => a.Color, aBuilder =>
 {
@@ -48403,7 +48403,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"
     ///   <item><description>DocPart &lt;w:docPart></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocPart))]
     public partial class DocParts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48442,6 +48441,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "docParts");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocPart>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -48525,8 +48525,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Gallery &lt;w:gallery></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Name))]
-    [ChildElementInfo(typeof(Gallery))]
     public partial class Category : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48565,6 +48563,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "category");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Name>();
+            builder.AddChild<Gallery>();
         }
 
         /// <summary>
@@ -48616,7 +48616,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocPartType &lt;w:type></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocPartType))]
     public partial class DocPartTypes : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48668,6 +48667,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "types");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocPartType>();
             builder.AddElement<DocPartTypes>()
 .AddAttribute(23, "all", a => a.All);
         }
@@ -48694,7 +48694,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Behavior &lt;w:behavior></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Behavior))]
     public partial class Behaviors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48733,6 +48732,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "behaviors");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Behavior>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -48812,13 +48812,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>DocPartId &lt;w:guid></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocPartName))]
-    [ChildElementInfo(typeof(StyleId))]
-    [ChildElementInfo(typeof(Category))]
-    [ChildElementInfo(typeof(DocPartTypes))]
-    [ChildElementInfo(typeof(Behaviors))]
-    [ChildElementInfo(typeof(Description))]
-    [ChildElementInfo(typeof(DocPartId))]
     public partial class DocPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48857,6 +48850,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "docPartPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocPartName>();
+            builder.AddChild<StyleId>();
+            builder.AddChild<Category>();
+            builder.AddChild<DocPartTypes>();
+            builder.AddChild<Behaviors>();
+            builder.AddChild<Description>();
+            builder.AddChild<DocPartId>();
         }
 
         /// <summary>
@@ -49409,42 +49409,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>SectionProperties &lt;w:sectPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SectionProperties))]
     public abstract partial class BodyType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -49481,6 +49445,42 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<AltChunk>();
+            builder.AddChild<CustomXmlBlock>();
+            builder.AddChild<SdtBlock>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<Table>();
+            builder.AddChild<ProofError>();
+            builder.AddChild<PermStart>();
+            builder.AddChild<PermEnd>();
+            builder.AddChild<BookmarkStart>();
+            builder.AddChild<BookmarkEnd>();
+            builder.AddChild<CommentRangeStart>();
+            builder.AddChild<CommentRangeEnd>();
+            builder.AddChild<MoveFromRangeStart>();
+            builder.AddChild<MoveFromRangeEnd>();
+            builder.AddChild<MoveToRangeStart>();
+            builder.AddChild<MoveToRangeEnd>();
+            builder.AddChild<CustomXmlInsRangeStart>();
+            builder.AddChild<CustomXmlInsRangeEnd>();
+            builder.AddChild<CustomXmlDelRangeStart>();
+            builder.AddChild<CustomXmlDelRangeEnd>();
+            builder.AddChild<CustomXmlMoveFromRangeStart>();
+            builder.AddChild<CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<CustomXmlMoveToRangeStart>();
+            builder.AddChild<CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<InsertedRun>();
+            builder.AddChild<DeletedRun>();
+            builder.AddChild<MoveFromRun>();
+            builder.AddChild<MoveToRun>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<SectionProperties>();
         }
     }
 
@@ -49496,8 +49496,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>DocPartBody &lt;w:docPartBody></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocPartProperties))]
-    [ChildElementInfo(typeof(DocPartBody))]
     public partial class DocPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -49536,6 +49534,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "docPart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocPartProperties>();
+            builder.AddChild<DocPartBody>();
         }
 
         /// <summary>
@@ -49785,16 +49785,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TablePropertyExceptionsChange &lt;w:tblPrExChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TableWidth))]
-    [ChildElementInfo(typeof(TableJustification))]
-    [ChildElementInfo(typeof(TableCellSpacing))]
-    [ChildElementInfo(typeof(TableIndentation))]
-    [ChildElementInfo(typeof(TableBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(TableLayout))]
-    [ChildElementInfo(typeof(TableCellMarginDefault))]
-    [ChildElementInfo(typeof(TableLook))]
-    [ChildElementInfo(typeof(TablePropertyExceptionsChange))]
     public partial class TablePropertyExceptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -49833,6 +49823,16 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblPrEx");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TableWidth>();
+            builder.AddChild<TableJustification>();
+            builder.AddChild<TableCellSpacing>();
+            builder.AddChild<TableIndentation>();
+            builder.AddChild<TableBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<TableLayout>();
+            builder.AddChild<TableCellMarginDefault>();
+            builder.AddChild<TableLook>();
+            builder.AddChild<TablePropertyExceptionsChange>();
         }
 
         /// <summary>
@@ -50018,23 +50018,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion &lt;w14:conflictDel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConditionalFormatStyle))]
-    [ChildElementInfo(typeof(DivId))]
-    [ChildElementInfo(typeof(GridBefore))]
-    [ChildElementInfo(typeof(GridAfter))]
-    [ChildElementInfo(typeof(WidthBeforeTableRow))]
-    [ChildElementInfo(typeof(WidthAfterTableRow))]
-    [ChildElementInfo(typeof(TableRowHeight))]
-    [ChildElementInfo(typeof(Hidden))]
-    [ChildElementInfo(typeof(CantSplit))]
-    [ChildElementInfo(typeof(TableHeader))]
-    [ChildElementInfo(typeof(TableCellSpacing))]
-    [ChildElementInfo(typeof(TableJustification))]
-    [ChildElementInfo(typeof(Inserted))]
-    [ChildElementInfo(typeof(Deleted))]
-    [ChildElementInfo(typeof(TableRowPropertiesChange))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion), FileFormatVersions.Office2010)]
     public partial class TableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -50073,6 +50056,23 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "trPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ConditionalFormatStyle>();
+            builder.AddChild<DivId>();
+            builder.AddChild<GridBefore>();
+            builder.AddChild<GridAfter>();
+            builder.AddChild<WidthBeforeTableRow>();
+            builder.AddChild<WidthAfterTableRow>();
+            builder.AddChild<TableRowHeight>();
+            builder.AddChild<Hidden>();
+            builder.AddChild<CantSplit>();
+            builder.AddChild<TableHeader>();
+            builder.AddChild<TableCellSpacing>();
+            builder.AddChild<TableJustification>();
+            builder.AddChild<Inserted>();
+            builder.AddChild<Deleted>();
+            builder.AddChild<TableRowPropertiesChange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -50137,7 +50137,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>PreviousTableRowProperties &lt;w:trPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PreviousTableRowProperties))]
     public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -50215,6 +50214,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "trPrChange");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PreviousTableRowProperties>();
             builder.AddElement<TableRowPropertiesChange>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
@@ -50312,42 +50312,6 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
     ///   <item><description>ParagraphPropertiesChange &lt;w:pPrChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ParagraphStyleId))]
-    [ChildElementInfo(typeof(KeepNext))]
-    [ChildElementInfo(typeof(KeepLines))]
-    [ChildElementInfo(typeof(PageBreakBefore))]
-    [ChildElementInfo(typeof(FrameProperties))]
-    [ChildElementInfo(typeof(WidowControl))]
-    [ChildElementInfo(typeof(NumberingProperties))]
-    [ChildElementInfo(typeof(SuppressLineNumbers))]
-    [ChildElementInfo(typeof(ParagraphBorders))]
-    [ChildElementInfo(typeof(Shading))]
-    [ChildElementInfo(typeof(Tabs))]
-    [ChildElementInfo(typeof(SuppressAutoHyphens))]
-    [ChildElementInfo(typeof(Kinsoku))]
-    [ChildElementInfo(typeof(WordWrap))]
-    [ChildElementInfo(typeof(OverflowPunctuation))]
-    [ChildElementInfo(typeof(TopLinePunctuation))]
-    [ChildElementInfo(typeof(AutoSpaceDE))]
-    [ChildElementInfo(typeof(AutoSpaceDN))]
-    [ChildElementInfo(typeof(BiDi))]
-    [ChildElementInfo(typeof(AdjustRightIndent))]
-    [ChildElementInfo(typeof(SnapToGrid))]
-    [ChildElementInfo(typeof(SpacingBetweenLines))]
-    [ChildElementInfo(typeof(Indentation))]
-    [ChildElementInfo(typeof(ContextualSpacing))]
-    [ChildElementInfo(typeof(MirrorIndents))]
-    [ChildElementInfo(typeof(SuppressOverlap))]
-    [ChildElementInfo(typeof(Justification))]
-    [ChildElementInfo(typeof(TextDirection))]
-    [ChildElementInfo(typeof(TextAlignment))]
-    [ChildElementInfo(typeof(TextBoxTightWrap))]
-    [ChildElementInfo(typeof(OutlineLevel))]
-    [ChildElementInfo(typeof(DivId))]
-    [ChildElementInfo(typeof(ConditionalFormatStyle))]
-    [ChildElementInfo(typeof(ParagraphMarkRunProperties))]
-    [ChildElementInfo(typeof(SectionProperties))]
-    [ChildElementInfo(typeof(ParagraphPropertiesChange))]
     public partial class ParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -50386,6 +50350,42 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ParagraphStyleId>();
+            builder.AddChild<KeepNext>();
+            builder.AddChild<KeepLines>();
+            builder.AddChild<PageBreakBefore>();
+            builder.AddChild<FrameProperties>();
+            builder.AddChild<WidowControl>();
+            builder.AddChild<NumberingProperties>();
+            builder.AddChild<SuppressLineNumbers>();
+            builder.AddChild<ParagraphBorders>();
+            builder.AddChild<Shading>();
+            builder.AddChild<Tabs>();
+            builder.AddChild<SuppressAutoHyphens>();
+            builder.AddChild<Kinsoku>();
+            builder.AddChild<WordWrap>();
+            builder.AddChild<OverflowPunctuation>();
+            builder.AddChild<TopLinePunctuation>();
+            builder.AddChild<AutoSpaceDE>();
+            builder.AddChild<AutoSpaceDN>();
+            builder.AddChild<BiDi>();
+            builder.AddChild<AdjustRightIndent>();
+            builder.AddChild<SnapToGrid>();
+            builder.AddChild<SpacingBetweenLines>();
+            builder.AddChild<Indentation>();
+            builder.AddChild<ContextualSpacing>();
+            builder.AddChild<MirrorIndents>();
+            builder.AddChild<SuppressOverlap>();
+            builder.AddChild<Justification>();
+            builder.AddChild<TextDirection>();
+            builder.AddChild<TextAlignment>();
+            builder.AddChild<TextBoxTightWrap>();
+            builder.AddChild<OutlineLevel>();
+            builder.AddChild<DivId>();
+            builder.AddChild<ConditionalFormatStyle>();
+            builder.AddChild<ParagraphMarkRunProperties>();
+            builder.AddChild<SectionProperties>();
+            builder.AddChild<ParagraphPropertiesChange>();
         }
 
         /// <summary>
@@ -51021,7 +51021,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (254L) });
     ///   <item><description>GridColumn &lt;w:gridCol></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GridColumn))]
     public partial class PreviousTableGrid : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51060,6 +51059,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (254L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "tblGrid");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<GridColumn>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -51353,7 +51353,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocPartReference &lt;w:docPart></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocPartReference))]
     public partial class SdtPlaceholder : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51392,6 +51391,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "placeholder");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocPartReference>();
         }
 
         /// <summary>
@@ -51503,7 +51503,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ListItem &lt;w:listItem></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ListItem))]
     public partial class SdtContentComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51555,6 +51554,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "comboBox");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ListItem>();
             builder.AddElement<SdtContentComboBox>()
 .AddAttribute(23, "lastValue", a => a.LastValue);
         }
@@ -51584,10 +51584,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Calendar &lt;w:calendar></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DateFormat))]
-    [ChildElementInfo(typeof(LanguageId))]
-    [ChildElementInfo(typeof(SdtDateMappingType))]
-    [ChildElementInfo(typeof(Calendar))]
     public partial class SdtContentDate : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51639,6 +51635,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "date");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DateFormat>();
+            builder.AddChild<LanguageId>();
+            builder.AddChild<SdtDateMappingType>();
+            builder.AddChild<Calendar>();
             builder.AddElement<SdtContentDate>()
 .AddAttribute(23, "fullDate", a => a.FullDate);
         }
@@ -51854,9 +51854,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocPartUnique &lt;w:docPartUnique></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocPartGallery))]
-    [ChildElementInfo(typeof(DocPartCategory))]
-    [ChildElementInfo(typeof(DocPartUnique))]
     public abstract partial class SdtDocPartType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51893,6 +51890,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocPartGallery>();
+            builder.AddChild<DocPartCategory>();
+            builder.AddChild<DocPartUnique>();
         }
 
         /// <summary>
@@ -51946,7 +51946,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ListItem &lt;w:listItem></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ListItem))]
     public partial class SdtContentDropDownList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51998,6 +51997,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "dropDownList");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ListItem>();
             builder.AddElement<SdtContentDropDownList>()
 .AddAttribute(23, "lastValue", a => a.LastValue);
         }
@@ -53047,22 +53047,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DataSourceObject &lt;w:odso></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MainDocumentType))]
-    [ChildElementInfo(typeof(LinkToQuery))]
-    [ChildElementInfo(typeof(DataType))]
-    [ChildElementInfo(typeof(ConnectString))]
-    [ChildElementInfo(typeof(Query))]
-    [ChildElementInfo(typeof(DataSourceReference))]
-    [ChildElementInfo(typeof(HeaderSource))]
-    [ChildElementInfo(typeof(DoNotSuppressBlankLines))]
-    [ChildElementInfo(typeof(Destination))]
-    [ChildElementInfo(typeof(AddressFieldName))]
-    [ChildElementInfo(typeof(MailSubject))]
-    [ChildElementInfo(typeof(MailAsAttachment))]
-    [ChildElementInfo(typeof(ViewMergedData))]
-    [ChildElementInfo(typeof(ActiveRecord))]
-    [ChildElementInfo(typeof(CheckErrors))]
-    [ChildElementInfo(typeof(DataSourceObject))]
     public partial class MailMerge : OpenXmlCompositeElement
     {
         /// <summary>
@@ -53101,6 +53085,22 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "mailMerge");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<MainDocumentType>();
+            builder.AddChild<LinkToQuery>();
+            builder.AddChild<DataType>();
+            builder.AddChild<ConnectString>();
+            builder.AddChild<Query>();
+            builder.AddChild<DataSourceReference>();
+            builder.AddChild<HeaderSource>();
+            builder.AddChild<DoNotSuppressBlankLines>();
+            builder.AddChild<Destination>();
+            builder.AddChild<AddressFieldName>();
+            builder.AddChild<MailSubject>();
+            builder.AddChild<MailAsAttachment>();
+            builder.AddChild<ViewMergedData>();
+            builder.AddChild<ActiveRecord>();
+            builder.AddChild<CheckErrors>();
+            builder.AddChild<DataSourceObject>();
         }
 
         /// <summary>
@@ -54384,8 +54384,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ShapeLayout &lt;o:shapelayout></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeDefaults))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeLayout))]
     public abstract partial class ShapeDefaultsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54422,6 +54420,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ShapeDefaults>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ShapeLayout>();
         }
     }
 
@@ -54440,11 +54440,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
     ///   <item><description>FootnoteSpecialReference &lt;w:footnote></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FootnotePosition))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(NumberingStart))]
-    [ChildElementInfo(typeof(NumberingRestart))]
-    [ChildElementInfo(typeof(FootnoteSpecialReference))]
     public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54483,6 +54478,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "footnotePr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FootnotePosition>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<NumberingStart>();
+            builder.AddChild<NumberingRestart>();
+            builder.AddChild<FootnoteSpecialReference>();
         }
 
         /// <summary>
@@ -54579,11 +54579,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
     ///   <item><description>EndnoteSpecialReference &lt;w:endnote></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EndnotePosition))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(NumberingStart))]
-    [ChildElementInfo(typeof(NumberingRestart))]
-    [ChildElementInfo(typeof(EndnoteSpecialReference))]
     public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54622,6 +54617,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "endnotePr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EndnotePosition>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<NumberingStart>();
+            builder.AddChild<NumberingRestart>();
+            builder.AddChild<EndnoteSpecialReference>();
         }
 
         /// <summary>
@@ -54779,72 +54779,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
     ///   <item><description>CompatibilitySetting &lt;w:compatSetting></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UseSingleBorderForContiguousCells))]
-    [ChildElementInfo(typeof(WordPerfectJustification))]
-    [ChildElementInfo(typeof(NoTabHangIndent))]
-    [ChildElementInfo(typeof(NoLeading))]
-    [ChildElementInfo(typeof(SpaceForUnderline))]
-    [ChildElementInfo(typeof(NoColumnBalance))]
-    [ChildElementInfo(typeof(BalanceSingleByteDoubleByteWidth))]
-    [ChildElementInfo(typeof(NoExtraLineSpacing))]
-    [ChildElementInfo(typeof(DoNotLeaveBackslashAlone))]
-    [ChildElementInfo(typeof(UnderlineTrailingSpaces))]
-    [ChildElementInfo(typeof(DoNotExpandShiftReturn))]
-    [ChildElementInfo(typeof(SpacingInWholePoints))]
-    [ChildElementInfo(typeof(LineWrapLikeWord6))]
-    [ChildElementInfo(typeof(PrintBodyTextBeforeHeader))]
-    [ChildElementInfo(typeof(PrintColorBlackWhite))]
-    [ChildElementInfo(typeof(WordPerfectSpaceWidth))]
-    [ChildElementInfo(typeof(ShowBreaksInFrames))]
-    [ChildElementInfo(typeof(SubFontBySize))]
-    [ChildElementInfo(typeof(SuppressBottomSpacing))]
-    [ChildElementInfo(typeof(SuppressTopSpacing))]
-    [ChildElementInfo(typeof(SuppressSpacingAtTopOfPage))]
-    [ChildElementInfo(typeof(SuppressTopSpacingWordPerfect))]
-    [ChildElementInfo(typeof(SuppressSpacingBeforeAfterPageBreak))]
-    [ChildElementInfo(typeof(SwapBordersFacingPages))]
-    [ChildElementInfo(typeof(ConvertMailMergeEscape))]
-    [ChildElementInfo(typeof(TruncateFontHeightsLikeWordPerfect))]
-    [ChildElementInfo(typeof(MacWordSmallCaps))]
-    [ChildElementInfo(typeof(UsePrinterMetrics))]
-    [ChildElementInfo(typeof(DoNotSuppressParagraphBorders))]
-    [ChildElementInfo(typeof(WrapTrailSpaces))]
-    [ChildElementInfo(typeof(FootnoteLayoutLikeWord8))]
-    [ChildElementInfo(typeof(ShapeLayoutLikeWord8))]
-    [ChildElementInfo(typeof(AlignTablesRowByRow))]
-    [ChildElementInfo(typeof(ForgetLastTabAlignment))]
-    [ChildElementInfo(typeof(AdjustLineHeightInTable))]
-    [ChildElementInfo(typeof(AutoSpaceLikeWord95))]
-    [ChildElementInfo(typeof(NoSpaceRaiseLower))]
-    [ChildElementInfo(typeof(DoNotUseHTMLParagraphAutoSpacing))]
-    [ChildElementInfo(typeof(LayoutRawTableWidth))]
-    [ChildElementInfo(typeof(LayoutTableRowsApart))]
-    [ChildElementInfo(typeof(UseWord97LineBreakRules))]
-    [ChildElementInfo(typeof(DoNotBreakWrappedTables))]
-    [ChildElementInfo(typeof(DoNotSnapToGridInCell))]
-    [ChildElementInfo(typeof(SelectFieldWithFirstOrLastChar))]
-    [ChildElementInfo(typeof(ApplyBreakingRules))]
-    [ChildElementInfo(typeof(DoNotWrapTextWithPunctuation))]
-    [ChildElementInfo(typeof(DoNotUseEastAsianBreakRules))]
-    [ChildElementInfo(typeof(UseWord2002TableStyleRules))]
-    [ChildElementInfo(typeof(GrowAutofit))]
-    [ChildElementInfo(typeof(UseFarEastLayout))]
-    [ChildElementInfo(typeof(UseNormalStyleForList))]
-    [ChildElementInfo(typeof(DoNotUseIndentAsNumberingTabStop))]
-    [ChildElementInfo(typeof(UseAltKinsokuLineBreakRules))]
-    [ChildElementInfo(typeof(AllowSpaceOfSameStyleInTable))]
-    [ChildElementInfo(typeof(DoNotSuppressIndentation))]
-    [ChildElementInfo(typeof(DoNotAutofitConstrainedTables))]
-    [ChildElementInfo(typeof(AutofitToFirstFixedWidthCell))]
-    [ChildElementInfo(typeof(UnderlineTabInNumberingList))]
-    [ChildElementInfo(typeof(DisplayHangulFixedWidth))]
-    [ChildElementInfo(typeof(SplitPageBreakAndParagraphMark))]
-    [ChildElementInfo(typeof(DoNotVerticallyAlignCellWithShape))]
-    [ChildElementInfo(typeof(DoNotBreakConstrainedForcedTable))]
-    [ChildElementInfo(typeof(DoNotVerticallyAlignInTextBox))]
-    [ChildElementInfo(typeof(UseAnsiKerningPairs))]
-    [ChildElementInfo(typeof(CachedColumnBalance))]
-    [ChildElementInfo(typeof(CompatibilitySetting))]
     public partial class Compatibility : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54883,6 +54817,72 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "compat");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<UseSingleBorderForContiguousCells>();
+            builder.AddChild<WordPerfectJustification>();
+            builder.AddChild<NoTabHangIndent>();
+            builder.AddChild<NoLeading>();
+            builder.AddChild<SpaceForUnderline>();
+            builder.AddChild<NoColumnBalance>();
+            builder.AddChild<BalanceSingleByteDoubleByteWidth>();
+            builder.AddChild<NoExtraLineSpacing>();
+            builder.AddChild<DoNotLeaveBackslashAlone>();
+            builder.AddChild<UnderlineTrailingSpaces>();
+            builder.AddChild<DoNotExpandShiftReturn>();
+            builder.AddChild<SpacingInWholePoints>();
+            builder.AddChild<LineWrapLikeWord6>();
+            builder.AddChild<PrintBodyTextBeforeHeader>();
+            builder.AddChild<PrintColorBlackWhite>();
+            builder.AddChild<WordPerfectSpaceWidth>();
+            builder.AddChild<ShowBreaksInFrames>();
+            builder.AddChild<SubFontBySize>();
+            builder.AddChild<SuppressBottomSpacing>();
+            builder.AddChild<SuppressTopSpacing>();
+            builder.AddChild<SuppressSpacingAtTopOfPage>();
+            builder.AddChild<SuppressTopSpacingWordPerfect>();
+            builder.AddChild<SuppressSpacingBeforeAfterPageBreak>();
+            builder.AddChild<SwapBordersFacingPages>();
+            builder.AddChild<ConvertMailMergeEscape>();
+            builder.AddChild<TruncateFontHeightsLikeWordPerfect>();
+            builder.AddChild<MacWordSmallCaps>();
+            builder.AddChild<UsePrinterMetrics>();
+            builder.AddChild<DoNotSuppressParagraphBorders>();
+            builder.AddChild<WrapTrailSpaces>();
+            builder.AddChild<FootnoteLayoutLikeWord8>();
+            builder.AddChild<ShapeLayoutLikeWord8>();
+            builder.AddChild<AlignTablesRowByRow>();
+            builder.AddChild<ForgetLastTabAlignment>();
+            builder.AddChild<AdjustLineHeightInTable>();
+            builder.AddChild<AutoSpaceLikeWord95>();
+            builder.AddChild<NoSpaceRaiseLower>();
+            builder.AddChild<DoNotUseHTMLParagraphAutoSpacing>();
+            builder.AddChild<LayoutRawTableWidth>();
+            builder.AddChild<LayoutTableRowsApart>();
+            builder.AddChild<UseWord97LineBreakRules>();
+            builder.AddChild<DoNotBreakWrappedTables>();
+            builder.AddChild<DoNotSnapToGridInCell>();
+            builder.AddChild<SelectFieldWithFirstOrLastChar>();
+            builder.AddChild<ApplyBreakingRules>();
+            builder.AddChild<DoNotWrapTextWithPunctuation>();
+            builder.AddChild<DoNotUseEastAsianBreakRules>();
+            builder.AddChild<UseWord2002TableStyleRules>();
+            builder.AddChild<GrowAutofit>();
+            builder.AddChild<UseFarEastLayout>();
+            builder.AddChild<UseNormalStyleForList>();
+            builder.AddChild<DoNotUseIndentAsNumberingTabStop>();
+            builder.AddChild<UseAltKinsokuLineBreakRules>();
+            builder.AddChild<AllowSpaceOfSameStyleInTable>();
+            builder.AddChild<DoNotSuppressIndentation>();
+            builder.AddChild<DoNotAutofitConstrainedTables>();
+            builder.AddChild<AutofitToFirstFixedWidthCell>();
+            builder.AddChild<UnderlineTabInNumberingList>();
+            builder.AddChild<DisplayHangulFixedWidth>();
+            builder.AddChild<SplitPageBreakAndParagraphMark>();
+            builder.AddChild<DoNotVerticallyAlignCellWithShape>();
+            builder.AddChild<DoNotBreakConstrainedForcedTable>();
+            builder.AddChild<DoNotVerticallyAlignInTextBox>();
+            builder.AddChild<UseAnsiKerningPairs>();
+            builder.AddChild<CachedColumnBalance>();
+            builder.AddChild<CompatibilitySetting>();
         }
 
         /// <summary>
@@ -55817,7 +55817,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
     ///   <item><description>DocumentVariable &lt;w:docVar></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentVariable))]
     public partial class DocumentVariables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -55856,6 +55855,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "docVars");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentVariable>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -55881,8 +55881,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
     ///   <item><description>Rsid &lt;w:rsid></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RsidRoot))]
-    [ChildElementInfo(typeof(Rsid))]
     public partial class Rsids : OpenXmlCompositeElement
     {
         /// <summary>
@@ -55921,6 +55919,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "rsids");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RsidRoot>();
+            builder.AddChild<Rsid>();
         }
 
         /// <summary>
@@ -56154,8 +56154,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
     ///   <item><description>AutoCaptions &lt;w:autoCaptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Caption))]
-    [ChildElementInfo(typeof(AutoCaptions))]
     public partial class Captions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -56194,6 +56192,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (100L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "captions");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Caption>();
+            builder.AddChild<AutoCaptions>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -56372,15 +56372,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Vml.Shapetype &lt;v:shapetype></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Group))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.ImageFile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Line))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Oval))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.PolyLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Rectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.RoundRectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shape))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shapetype))]
     public partial class PictureBulletBase : OpenXmlCompositeElement
     {
         /// <summary>
@@ -56419,6 +56410,15 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(23, "pict");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Group>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Line>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Oval>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.PolyLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Rectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.RoundRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shapetype>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)

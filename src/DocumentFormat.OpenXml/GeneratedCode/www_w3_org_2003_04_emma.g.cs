@@ -149,8 +149,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
     ///   <item><description>Node &lt;emma:node></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Arc))]
-    [ChildElementInfo(typeof(Node))]
     public partial class Lattice : OpenXmlCompositeElement
     {
         /// <summary>
@@ -235,6 +233,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "lattice");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Arc>();
+            builder.AddChild<Node>();
             builder.AddElement<Lattice>()
 .AddAttribute(0, "initial", a => a.Initial, aBuilder =>
 {
@@ -314,11 +314,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Ink.ContextNode &lt;msink:context></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DerivedFrom))]
-    [ChildElementInfo(typeof(Info))]
-    [ChildElementInfo(typeof(Lattice))]
-    [ChildElementInfo(typeof(Literal))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode))]
     public partial class Interpretation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -692,6 +687,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "interpretation");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DerivedFrom>();
+            builder.AddChild<Info>();
+            builder.AddChild<Lattice>();
+            builder.AddChild<Literal>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.ContextNode>();
             builder.AddElement<Interpretation>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -772,12 +772,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>Sequence &lt;emma:sequence></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DerivedFrom))]
-    [ChildElementInfo(typeof(Info))]
-    [ChildElementInfo(typeof(Interpretation))]
-    [ChildElementInfo(typeof(OneOf))]
-    [ChildElementInfo(typeof(Group))]
-    [ChildElementInfo(typeof(Sequence))]
     public partial class OneOf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1135,6 +1129,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "one-of");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DerivedFrom>();
+            builder.AddChild<Info>();
+            builder.AddChild<Interpretation>();
+            builder.AddChild<OneOf>();
+            builder.AddChild<Group>();
+            builder.AddChild<Sequence>();
             builder.AddElement<OneOf>()
 .AddAttribute(0, "disjunction-type", a => a.DisjunctionType)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -1215,13 +1215,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>Sequence &lt;emma:sequence></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DerivedFrom))]
-    [ChildElementInfo(typeof(GroupInfo))]
-    [ChildElementInfo(typeof(Info))]
-    [ChildElementInfo(typeof(Interpretation))]
-    [ChildElementInfo(typeof(OneOf))]
-    [ChildElementInfo(typeof(Group))]
-    [ChildElementInfo(typeof(Sequence))]
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1569,6 +1562,13 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "group");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DerivedFrom>();
+            builder.AddChild<GroupInfo>();
+            builder.AddChild<Info>();
+            builder.AddChild<Interpretation>();
+            builder.AddChild<OneOf>();
+            builder.AddChild<Group>();
+            builder.AddChild<Sequence>();
             builder.AddElement<Group>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -1642,12 +1642,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>Sequence &lt;emma:sequence></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DerivedFrom))]
-    [ChildElementInfo(typeof(Info))]
-    [ChildElementInfo(typeof(Interpretation))]
-    [ChildElementInfo(typeof(OneOf))]
-    [ChildElementInfo(typeof(Group))]
-    [ChildElementInfo(typeof(Sequence))]
     public partial class Sequence : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1995,6 +1989,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "sequence");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DerivedFrom>();
+            builder.AddChild<Info>();
+            builder.AddChild<Interpretation>();
+            builder.AddChild<OneOf>();
+            builder.AddChild<Group>();
+            builder.AddChild<Sequence>();
             builder.AddElement<Sequence>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2136,10 +2136,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>Group &lt;emma:group></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Interpretation))]
-    [ChildElementInfo(typeof(OneOf))]
-    [ChildElementInfo(typeof(Sequence))]
-    [ChildElementInfo(typeof(Group))]
     public partial class Derivation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2178,6 +2174,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "derivation");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Interpretation>();
+            builder.AddChild<OneOf>();
+            builder.AddChild<Sequence>();
+            builder.AddChild<Group>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -2347,7 +2347,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>EndPoint &lt;emma:endpoint></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EndPoint))]
     public partial class EndPointInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2396,6 +2395,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "endpoint-info");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EndPoint>();
             builder.AddElement<EndPointInfo>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2638,7 +2638,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
     ///   <item><description>Info &lt;emma:info></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Info))]
     public partial class Node : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2713,6 +2712,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "node");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Info>();
             builder.AddElement<Node>()
 .AddAttribute(0, "node-number", a => a.NodeNumber, aBuilder =>
 {
@@ -2751,7 +2751,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>Info &lt;emma:info></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Info))]
     public partial class Arc : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2940,6 +2939,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "arc");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Info>();
             builder.AddElement<Arc>()
 .AddAttribute(0, "from", a => a.From, aBuilder =>
 {
@@ -2999,15 +2999,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>Sequence &lt;emma:sequence></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Derivation))]
-    [ChildElementInfo(typeof(Grammar))]
-    [ChildElementInfo(typeof(Model))]
-    [ChildElementInfo(typeof(EndPointInfo))]
-    [ChildElementInfo(typeof(Info))]
-    [ChildElementInfo(typeof(Interpretation))]
-    [ChildElementInfo(typeof(OneOf))]
-    [ChildElementInfo(typeof(Group))]
-    [ChildElementInfo(typeof(Sequence))]
     public partial class Emma : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3056,6 +3047,15 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "emma");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Derivation>();
+            builder.AddChild<Grammar>();
+            builder.AddChild<Model>();
+            builder.AddChild<EndPointInfo>();
+            builder.AddChild<Info>();
+            builder.AddChild<Interpretation>();
+            builder.AddChild<OneOf>();
+            builder.AddChild<Group>();
+            builder.AddChild<Sequence>();
             builder.AddElement<Emma>()
 .AddAttribute(0, "version", a => a.Version, aBuilder =>
 {

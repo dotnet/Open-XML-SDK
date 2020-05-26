@@ -34,15 +34,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>ClientData &lt;xdr:clientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FromMarker))]
-    [ChildElementInfo(typeof(ToMarker))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ClientData))]
     public partial class TwoCellAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -91,6 +82,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "twoCellAnchor");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FromMarker>();
+            builder.AddChild<ToMarker>();
+            builder.AddChild<Shape>();
+            builder.AddChild<GroupShape>();
+            builder.AddChild<GraphicFrame>();
+            builder.AddChild<ConnectionShape>();
+            builder.AddChild<Picture>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<ClientData>();
             builder.AddElement<TwoCellAnchor>()
 .AddAttribute(0, "editAs", a => a.EditAs, aBuilder =>
 {
@@ -171,15 +171,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ClientData &lt;xdr:clientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FromMarker))]
-    [ChildElementInfo(typeof(Extent))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ClientData))]
     public partial class OneCellAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -218,6 +209,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "oneCellAnchor");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<FromMarker>();
+            builder.AddChild<Extent>();
+            builder.AddChild<Shape>();
+            builder.AddChild<GroupShape>();
+            builder.AddChild<GraphicFrame>();
+            builder.AddChild<ConnectionShape>();
+            builder.AddChild<Picture>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<ClientData>();
         }
 
         /// <summary>
@@ -293,15 +293,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ClientData &lt;xdr:clientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(Extent))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ClientData))]
     public partial class AbsoluteAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -340,6 +331,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "absoluteAnchor");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Position>();
+            builder.AddChild<Extent>();
+            builder.AddChild<Shape>();
+            builder.AddChild<GroupShape>();
+            builder.AddChild<GraphicFrame>();
+            builder.AddChild<ConnectionShape>();
+            builder.AddChild<Picture>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<ClientData>();
         }
 
         /// <summary>
@@ -410,10 +410,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>TextBody &lt;xdr:txBody></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualShapeProperties))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [ChildElementInfo(typeof(TextBody))]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -492,6 +488,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "sp");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualShapeProperties>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ShapeStyle>();
+            builder.AddChild<TextBody>();
             builder.AddElement<Shape>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "textlink", a => a.TextLink)
@@ -589,14 +589,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart &lt;xdr14:contentPart></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualGroupShapeProperties))]
-    [ChildElementInfo(typeof(GroupShapeProperties))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart), FileFormatVersions.Office2010)]
     public partial class GroupShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -635,6 +627,14 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "grpSp");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualGroupShapeProperties>();
+            builder.AddChild<GroupShapeProperties>();
+            builder.AddChild<Shape>();
+            builder.AddChild<GroupShape>();
+            builder.AddChild<GraphicFrame>();
+            builder.AddChild<ConnectionShape>();
+            builder.AddChild<Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart>();
         }
 
         /// <summary>
@@ -697,9 +697,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Graphic &lt;a:graphic></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualGraphicFrameProperties))]
-    [ChildElementInfo(typeof(Transform))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -758,6 +755,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "graphicFrame");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualGraphicFrameProperties>();
+            builder.AddChild<Transform>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddElement<GraphicFrame>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
@@ -834,9 +834,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ShapeStyle &lt;xdr:style></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualConnectionShapeProperties))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(ShapeStyle))]
     public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -895,6 +892,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cxnSp");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualConnectionShapeProperties>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ShapeStyle>();
             builder.AddElement<ConnectionShape>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
@@ -972,10 +972,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ShapeStyle &lt;xdr:style></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualPictureProperties))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(ShapeStyle))]
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1034,6 +1030,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "pic");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualPictureProperties>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ShapeStyle>();
             builder.AddElement<Picture>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
@@ -1119,10 +1119,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList &lt;xdr14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
     public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1184,6 +1180,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "contentPart");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
             builder.AddElement<ContentPart>()
 .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
 {
@@ -1274,9 +1274,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>AbsoluteAnchor &lt;xdr:absoluteAnchor></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TwoCellAnchor))]
-    [ChildElementInfo(typeof(OneCellAnchor))]
-    [ChildElementInfo(typeof(AbsoluteAnchor))]
     public partial class WorksheetDrawing : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1315,6 +1312,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "wsDr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TwoCellAnchor>();
+            builder.AddChild<OneCellAnchor>();
+            builder.AddChild<AbsoluteAnchor>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1379,8 +1379,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualShapeDrawingProperties &lt;xdr:cNvSpPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualShapeDrawingProperties))]
     public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1419,6 +1417,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "nvSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualShapeDrawingProperties>();
         }
 
         /// <summary>
@@ -1484,21 +1484,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1547,6 +1532,21 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "spPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -1624,10 +1624,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1666,6 +1662,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "style");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
         }
 
         /// <summary>
@@ -1747,9 +1747,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1788,6 +1785,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "txBody");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
         }
 
         /// <summary>
@@ -1841,8 +1841,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualConnectorShapeDrawingProperties &lt;xdr:cNvCxnSpPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualConnectorShapeDrawingProperties))]
     public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1881,6 +1879,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "nvCxnSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualConnectorShapeDrawingProperties>();
         }
 
         /// <summary>
@@ -1933,8 +1933,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualPictureDrawingProperties &lt;xdr:cNvPicPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualPictureDrawingProperties))]
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1973,6 +1971,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "nvPicPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualPictureDrawingProperties>();
         }
 
         /// <summary>
@@ -2027,10 +2027,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Stretch &lt;a:stretch></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Blip))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Tile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Stretch))]
     public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2079,6 +2075,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "blipFill");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
             builder.AddElement<BlipFill>()
 .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
         }
@@ -2141,8 +2141,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NonVisualGraphicFrameDrawingProperties &lt;xdr:cNvGraphicFramePr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2181,6 +2179,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "nvGraphicFramePr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualGraphicFrameDrawingProperties>();
         }
 
         /// <summary>
@@ -2233,8 +2233,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
     public partial class Transform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2303,6 +2301,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "xfrm");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform>()
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "flipH", a => a.HorizontalFlip)
@@ -2653,10 +2653,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>RowOffset &lt;xdr:rowOff></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColumnId))]
-    [ChildElementInfo(typeof(ColumnOffset))]
-    [ChildElementInfo(typeof(RowId))]
-    [ChildElementInfo(typeof(RowOffset))]
     public abstract partial class MarkerType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2693,6 +2689,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<ColumnId>();
+            builder.AddChild<ColumnOffset>();
+            builder.AddChild<RowId>();
+            builder.AddChild<RowOffset>();
         }
 
         /// <summary>
@@ -2921,9 +2921,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3012,6 +3009,9 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cNvPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -3096,8 +3096,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3146,6 +3144,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cNvSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<NonVisualShapeDrawingProperties>()
 .AddAttribute(0, "txBox", a => a.TextBox);
         }
@@ -3202,10 +3202,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.StartConnection))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EndConnection))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3244,6 +3240,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cNvCxnSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
 
         /// <summary>
@@ -3324,8 +3324,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList))]
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3374,6 +3372,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cNvPicPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
 .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
         }
@@ -3428,8 +3428,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3468,6 +3466,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cNvGraphicFramePr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
 
         /// <summary>
@@ -3520,8 +3520,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList))]
     public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3560,6 +3558,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "cNvGrpSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
         }
 
         /// <summary>
@@ -3612,8 +3612,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NonVisualGroupShapeDrawingProperties &lt;xdr:cNvGrpSpPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualGroupShapeDrawingProperties))]
     public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3652,6 +3650,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "nvGrpSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualGroupShapeDrawingProperties>();
         }
 
         /// <summary>
@@ -3713,17 +3713,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3772,6 +3761,17 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "grpSpPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<GroupShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {

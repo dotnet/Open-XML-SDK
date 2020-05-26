@@ -23,7 +23,6 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     ///   <item><description>LongProperty &lt;lp:LongProp></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LongProperty))]
     public partial class LongProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -62,6 +61,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema(40, "LongProperties");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LongProperty>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

@@ -35,17 +35,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description>ColorMenu &lt;o:colormenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Fill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Stroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.TextBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shadow))]
-    [ChildElementInfo(typeof(Skew))]
-    [ChildElementInfo(typeof(Extrusion))]
-    [ChildElementInfo(typeof(Callout))]
-    [ChildElementInfo(typeof(Lock))]
-    [ChildElementInfo(typeof(ColorMostRecentlyUsed))]
-    [ChildElementInfo(typeof(ColorMenu))]
     public partial class ShapeDefaults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -196,6 +185,17 @@ namespace DocumentFormat.OpenXml.Vml.Office
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "shapedefaults");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
+            builder.AddChild<Skew>();
+            builder.AddChild<Extrusion>();
+            builder.AddChild<Callout>();
+            builder.AddChild<Lock>();
+            builder.AddChild<ColorMostRecentlyUsed>();
+            builder.AddChild<ColorMenu>();
             builder.AddElement<ShapeDefaults>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "spidmax", a => a.MaxShapeId)
@@ -386,9 +386,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description>Rules &lt;o:rules></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeIdMap))]
-    [ChildElementInfo(typeof(RegroupTable))]
-    [ChildElementInfo(typeof(Rules))]
     public partial class ShapeLayout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -440,6 +437,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "shapelayout");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ShapeIdMap>();
+            builder.AddChild<RegroupTable>();
+            builder.AddChild<Rules>();
             builder.AddElement<ShapeLayout>()
 .AddAttribute(26, "ext", a => a.Extension);
         }
@@ -748,7 +748,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>RelationTable &lt;o:relationtable></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RelationTable))]
     public partial class Diagram : OpenXmlCompositeElement
     {
         /// <summary>
@@ -890,6 +889,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "diagram");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RelationTable>();
             builder.AddElement<Diagram>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "dgmstyle", a => a.Style)
@@ -1764,9 +1764,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>FieldCodes &lt;o:FieldCodes></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LinkType))]
-    [ChildElementInfo(typeof(LockedField))]
-    [ChildElementInfo(typeof(FieldCodes))]
     public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1878,6 +1875,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "OLEObject");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LinkType>();
+            builder.AddChild<LockedField>();
+            builder.AddChild<FieldCodes>();
             builder.AddElement<OleObject>()
 .AddAttribute(0, "Type", a => a.Type)
 .AddAttribute(0, "ProgID", a => a.ProgId)
@@ -2614,7 +2614,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Entry &lt;o:entry></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Entry))]
     public partial class RegroupTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2666,6 +2665,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "regrouptable");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Entry>();
             builder.AddElement<RegroupTable>()
 .AddAttribute(26, "ext", a => a.Extension);
         }
@@ -2692,7 +2692,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Rule &lt;o:r></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Rule))]
     public partial class Rules : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2744,6 +2743,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "rules");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Rule>();
             builder.AddElement<Rules>()
 .AddAttribute(26, "ext", a => a.Extension);
         }
@@ -2818,7 +2818,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Proxy &lt;o:proxy></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Proxy))]
     public partial class Rule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2897,6 +2896,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "r");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Proxy>();
             builder.AddElement<Rule>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2932,7 +2932,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Relation &lt;o:rel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Relation))]
     public partial class RelationTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2984,6 +2983,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "relationtable");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Relation>();
             builder.AddElement<RelationTable>()
 .AddAttribute(26, "ext", a => a.Extension);
         }

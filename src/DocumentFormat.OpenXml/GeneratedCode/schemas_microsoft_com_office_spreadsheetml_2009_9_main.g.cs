@@ -26,7 +26,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>ConditionalFormatting &lt;x14:conditionalFormatting></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConditionalFormatting), FileFormatVersions.Office2010)]
     public partial class ConditionalFormattings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -65,6 +64,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormattings");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ConditionalFormatting>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -89,7 +89,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>DataValidation &lt;x14:dataValidation></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DataValidation), FileFormatVersions.Office2010)]
     public partial class DataValidations : OpenXmlCompositeElement
     {
         /// <summary>
@@ -168,6 +167,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dataValidations");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DataValidation>();
             builder.AddElement<DataValidations>()
 .AddAttribute(0, "disablePrompts", a => a.DisablePrompts)
 .AddAttribute(0, "xWindow", a => a.XWindow)
@@ -204,7 +204,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>SparklineGroup &lt;x14:sparklineGroup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SparklineGroup), FileFormatVersions.Office2010)]
     public partial class SparklineGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -243,6 +242,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparklineGroups");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SparklineGroup>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -267,7 +267,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>SlicerRef &lt;x14:slicer></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SlicerRef), FileFormatVersions.Office2010)]
     public partial class SlicerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -306,6 +305,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerList");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SlicerRef>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -330,7 +330,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>ProtectedRange &lt;x14:protectedRange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ProtectedRange), FileFormatVersions.Office2010)]
     public partial class ProtectedRanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -369,6 +368,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "protectedRanges");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ProtectedRange>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -394,8 +394,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(IgnoredError), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class IgnoredErrors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -434,6 +432,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "ignoredErrors");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<IgnoredError>();
+            builder.AddChild<ExtensionList>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -459,7 +459,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>DefinedName &lt;x14:definedName></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DefinedName), FileFormatVersions.Office2010)]
     public partial class DefinedNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -498,6 +497,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "definedNames");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DefinedName>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -522,7 +522,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotCache &lt;x:pivotCache></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache))]
     public partial class PivotCaches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -561,6 +560,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotCaches");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -585,7 +585,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>SlicerCache &lt;x14:slicerCache></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SlicerCache), FileFormatVersions.Office2010)]
     public partial class SlicerCaches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -624,6 +623,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerCaches");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SlicerCache>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -713,7 +713,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>TupleSet &lt;x14:tupleSet></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TupleSet), FileFormatVersions.Office2010)]
     public partial class CalculatedMember : OpenXmlCompositeElement
     {
         /// <summary>
@@ -802,6 +801,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "calculatedMember");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TupleSet>();
             builder.AddElement<CalculatedMember>()
 .AddAttribute(0, "displayFolder", a => a.DisplayFolder)
 .AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
@@ -852,7 +852,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>SetLevels &lt;x14:setLevels></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SetLevels), FileFormatVersions.Office2010)]
     public partial class CacheHierarchy : OpenXmlCompositeElement
     {
         /// <summary>
@@ -931,6 +930,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cacheHierarchy");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SetLevels>();
             builder.AddElement<CacheHierarchy>()
 .AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
 .AddAttribute(0, "measuresSet", a => a.MeasuresSet)
@@ -1097,9 +1097,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>ConditionalFormats &lt;x14:conditionalFormats></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotEdits), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(PivotChanges), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ConditionalFormats), FileFormatVersions.Office2010)]
     public partial class PivotTableDefinition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1238,6 +1235,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotTableDefinition");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<PivotEdits>();
+            builder.AddChild<PivotChanges>();
+            builder.AddChild<ConditionalFormats>();
             builder.AddElement<PivotTableDefinition>()
 .AddAttribute(0, "fillDownLabelsDefault", a => a.FillDownLabelsDefault)
 .AddAttribute(0, "visualTotalsForSets", a => a.VisualTotalsForSets)
@@ -1403,7 +1403,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>CalculatedMembers &lt;x14:calculatedMembers></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CalculatedMembers), FileFormatVersions.Office2010)]
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1462,6 +1461,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "connection");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<CalculatedMembers>();
             builder.AddElement<Connection>()
 .AddAttribute(0, "culture", a => a.Culture)
 .AddAttribute(0, "embeddedDataId", a => a.EmbeddedDataId);
@@ -1564,7 +1564,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description>SlicerStyle &lt;x14:slicerStyle></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SlicerStyle), FileFormatVersions.Office2010)]
     public partial class SlicerStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1613,6 +1612,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerStyles");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SlicerStyle>();
             builder.AddElement<SlicerStyles>()
 .AddAttribute(0, "defaultSlicerStyle", a => a.DefaultSlicerStyle, aBuilder =>
 {
@@ -1648,7 +1648,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat &lt;x:dxf></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat))]
     public partial class DifferentialFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1697,6 +1696,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dxfs");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
             builder.AddElement<DifferentialFormats>()
 .AddAttribute(0, "count", a => a.Count);
         }
@@ -1723,7 +1723,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DdeValues &lt;x14:values></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DdeValues), FileFormatVersions.Office2010)]
     public partial class OleItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1802,6 +1801,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "oleItem");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DdeValues>();
             builder.AddElement<OleItem>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -2051,7 +2051,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>CustomFilter &lt;x14:customFilter></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomFilter), FileFormatVersions.Office2010)]
     public partial class CustomFilters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2100,6 +2099,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "customFilters");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<CustomFilter>();
             builder.AddElement<CustomFilters>()
 .AddAttribute(0, "and", a => a.And);
         }
@@ -2280,7 +2280,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class DatastoreItem : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2329,6 +2328,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "datastoreItem");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<DatastoreItem>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2409,8 +2409,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ListItems), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class FormControlProperties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2759,6 +2757,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "formControlPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ListItems>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<FormControlProperties>()
 .AddAttribute(0, "objectType", a => a.ObjectType, aBuilder =>
 {
@@ -2898,7 +2898,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Slicer &lt;x14:slicer></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Slicer), FileFormatVersions.Office2010)]
     public partial class Slicers : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2937,6 +2936,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicers");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Slicer>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2994,9 +2994,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>SlicerCacheDefinitionExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SlicerCachePivotTables), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SlicerCacheData), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SlicerCacheDefinitionExtensionList), FileFormatVersions.Office2010)]
     public partial class SlicerCacheDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3055,6 +3052,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerCacheDefinition");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SlicerCachePivotTables>();
+            builder.AddChild<SlicerCacheData>();
+            builder.AddChild<SlicerCacheDefinitionExtensionList>();
             builder.AddElement<SlicerCacheDefinition>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -3162,9 +3162,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConditionalFormattingRule), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence))]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class ConditionalFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3213,6 +3210,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormatting");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ConditionalFormattingRule>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormatting>()
 .AddAttribute(0, "pivot", a => a.Pivot);
         }
@@ -3246,12 +3246,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
-    [ChildElementInfo(typeof(ColorScale), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DataBar), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(IconSet), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DifferentialType), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3430,6 +3424,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cfRule");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild<ColorScale>();
+            builder.AddChild<DataBar>();
+            builder.AddChild<IconSet>();
+            builder.AddChild<DifferentialType>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormattingRule>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "priority", a => a.Priority)
@@ -3491,7 +3491,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension))]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3530,6 +3529,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "extLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3562,9 +3562,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>DocumentFormat.OpenXml.Office.Excel.ReferenceSequence &lt;xne:sqref></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DataValidationForumla1), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DataValidationForumla2), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence))]
     public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3723,6 +3720,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dataValidation");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DataValidationForumla1>();
+            builder.AddChild<DataValidationForumla2>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddElement<DataValidation>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "errorStyle", a => a.ErrorStyle)
@@ -3933,7 +3933,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
     public abstract partial class DataValidationFormulaType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3970,6 +3969,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
         }
 
         /// <summary>
@@ -4006,16 +4006,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>Sparklines &lt;x14:sparklines></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SeriesColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NegativeColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(AxisColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MarkersColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(FirstMarkerColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LastMarkerColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(HighMarkerColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LowMarkerColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
-    [ChildElementInfo(typeof(Sparklines), FileFormatVersions.Office2010)]
     public partial class SparklineGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4224,6 +4214,16 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparklineGroup");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SeriesColor>();
+            builder.AddChild<NegativeColor>();
+            builder.AddChild<AxisColor>();
+            builder.AddChild<MarkersColor>();
+            builder.AddChild<FirstMarkerColor>();
+            builder.AddChild<LastMarkerColor>();
+            builder.AddChild<HighMarkerColor>();
+            builder.AddChild<LowMarkerColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild<Sparklines>();
             builder.AddElement<SparklineGroup>()
 .AddAttribute(0, "manualMax", a => a.ManualMax)
 .AddAttribute(0, "manualMin", a => a.ManualMin)
@@ -4883,7 +4883,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>Sparkline &lt;x14:sparkline></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Sparkline), FileFormatVersions.Office2010)]
     public partial class Sparklines : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4922,6 +4921,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparklines");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Sparkline>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4947,8 +4947,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>DocumentFormat.OpenXml.Office.Excel.ReferenceSequence &lt;xne:sqref></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence))]
     public partial class Sparkline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4987,6 +4985,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparkline");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
         }
 
         /// <summary>
@@ -5136,7 +5136,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ArgumentDescriptions &lt;x14:argumentDescriptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ArgumentDescriptions), FileFormatVersions.Office2010)]
     public partial class DefinedName : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5185,6 +5184,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "definedName");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ArgumentDescriptions>();
             builder.AddElement<DefinedName>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -5233,7 +5233,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ArgumentDescription &lt;x14:argumentDescription></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ArgumentDescription), FileFormatVersions.Office2010)]
     public partial class ArgumentDescriptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5282,6 +5281,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "argumentDescriptions");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ArgumentDescription>();
             builder.AddElement<ArgumentDescriptions>()
 .AddAttribute(0, "count", a => a.Count);
         }
@@ -5368,8 +5368,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TupleSetRows &lt;x14:rows></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TupleSetHeaders), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TupleSetRows), FileFormatVersions.Office2010)]
     public partial class TupleSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5428,6 +5426,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "tupleSet");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TupleSetHeaders>();
+            builder.AddChild<TupleSetRows>();
             builder.AddElement<TupleSet>()
 .AddAttribute(0, "rowCount", a => a.RowCount)
 .AddAttribute(0, "columnCount", a => a.ColumnCount);
@@ -5482,7 +5482,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TupleSetHeader &lt;x14:header></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TupleSetHeader), FileFormatVersions.Office2010)]
     public partial class TupleSetHeaders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5521,6 +5520,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "headers");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TupleSetHeader>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5545,7 +5545,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TupleSetRow &lt;x14:row></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TupleSetRow), FileFormatVersions.Office2010)]
     public partial class TupleSetRows : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5584,6 +5583,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "rows");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TupleSetRow>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5663,7 +5663,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TupleSetRowItem &lt;x14:rowItem></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TupleSetRowItem), FileFormatVersions.Office2010)]
     public partial class TupleSetRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5702,6 +5701,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "row");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TupleSetRowItem>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5827,7 +5827,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SetLevel &lt;x14:setLevel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SetLevel), FileFormatVersions.Office2010)]
     public partial class SetLevels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5876,6 +5875,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "setLevels");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SetLevel>();
             builder.AddElement<SetLevels>()
 .AddAttribute(0, "count", a => a.Count);
         }
@@ -5903,8 +5903,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Color &lt;x14:color></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConditionalFormattingValueObject), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Color), FileFormatVersions.Office2010)]
     public partial class ColorScale : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5943,6 +5941,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorScale");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ConditionalFormattingValueObject>();
+            builder.AddChild<Color>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5973,12 +5973,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>BarAxisColor &lt;x14:axisColor></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConditionalFormattingValueObject), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(FillColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BorderColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NegativeFillColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NegativeBorderColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BarAxisColor), FileFormatVersions.Office2010)]
     public partial class DataBar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6107,6 +6101,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dataBar");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ConditionalFormattingValueObject>();
+            builder.AddChild<FillColor>();
+            builder.AddChild<BorderColor>();
+            builder.AddChild<NegativeFillColor>();
+            builder.AddChild<NegativeBorderColor>();
+            builder.AddChild<BarAxisColor>();
             builder.AddElement<DataBar>()
 .AddAttribute(0, "minLength", a => a.MinLength)
 .AddAttribute(0, "maxLength", a => a.MaxLength)
@@ -6154,8 +6154,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ConditionalFormattingIcon &lt;x14:cfIcon></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConditionalFormattingValueObject), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ConditionalFormattingIcon), FileFormatVersions.Office2010)]
     public partial class IconSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6244,6 +6242,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "iconSet");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ConditionalFormattingValueObject>();
+            builder.AddChild<ConditionalFormattingIcon>();
             builder.AddElement<IconSet>()
 .AddAttribute(0, "iconSet", a => a.IconSetTypes)
 .AddAttribute(0, "showValue", a => a.ShowValue)
@@ -6281,13 +6281,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Font))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Border))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
     public partial class DifferentialType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6326,6 +6319,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dxf");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
         }
 
         /// <summary>
@@ -6448,8 +6448,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class ConditionalFormattingValueObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6508,6 +6506,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cfvo");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormattingValueObject>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -6619,7 +6619,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>PivotEdit &lt;x14:pivotEdit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotEdit), FileFormatVersions.Office2010)]
     public partial class PivotEdits : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6658,6 +6657,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotEdits");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<PivotEdit>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6682,7 +6682,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>PivotChange &lt;x14:pivotChange></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotChange), FileFormatVersions.Office2010)]
     public partial class PivotChanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6721,6 +6720,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotChanges");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<PivotChange>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6745,7 +6745,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ConditionalFormat &lt;x14:conditionalFormat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ConditionalFormat), FileFormatVersions.Office2010)]
     public partial class ConditionalFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6794,6 +6793,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormats");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ConditionalFormat>();
             builder.AddElement<ConditionalFormats>()
 .AddAttribute(0, "count", a => a.Count);
         }
@@ -6820,7 +6820,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.CalculatedMember &lt;x:calculatedMember></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMember))]
     public partial class CalculatedMembers : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6869,6 +6868,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "calculatedMembers");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMember>();
             builder.AddElement<CalculatedMembers>()
 .AddAttribute(0, "count", a => a.Count);
         }
@@ -6898,10 +6898,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotUserEdit), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TupleItems), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(PivotArea), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class PivotEdit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6940,6 +6936,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotEdit");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<PivotUserEdit>();
+            builder.AddChild<TupleItems>();
+            builder.AddChild<PivotArea>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -7020,8 +7020,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>PivotEditValue &lt;x14:editValue></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
-    [ChildElementInfo(typeof(PivotEditValue), FileFormatVersions.Office2010)]
     public partial class PivotUserEdit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7060,6 +7058,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "userEdit");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild<PivotEditValue>();
         }
 
         /// <summary>
@@ -7111,7 +7111,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Xstring &lt;x14:tupleItem></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Xstring), FileFormatVersions.Office2010)]
     public partial class TupleItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7150,6 +7149,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "tupleItems");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Xstring>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7175,8 +7175,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
     public partial class PivotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7335,6 +7333,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotArea");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<PivotArea>()
 .AddAttribute(0, "field", a => a.Field)
 .AddAttribute(0, "type", a => a.Type)
@@ -7401,9 +7401,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotEditValue), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TupleItems), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class PivotChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7462,6 +7459,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotChange");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<PivotEditValue>();
+            builder.AddChild<TupleItems>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<PivotChange>()
 .AddAttribute(0, "allocationMethod", a => a.AllocationMethod)
 .AddAttribute(0, "weightExpression", a => a.WeightExpression);
@@ -7633,7 +7633,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SlicerStyleElement &lt;x14:slicerStyleElement></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SlicerStyleElement), FileFormatVersions.Office2010)]
     public partial class SlicerStyleElements : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7672,6 +7671,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerStyleElements");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SlicerStyleElement>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -7696,7 +7696,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Value &lt;x:value></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Value))]
     public partial class DdeValues : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7755,6 +7754,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "values");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Value>();
             builder.AddElement<DdeValues>()
 .AddAttribute(0, "rows", a => a.Rows)
 .AddAttribute(0, "cols", a => a.Columns);
@@ -7783,8 +7783,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotAreas), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class ConditionalFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7863,6 +7861,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormat");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<PivotAreas>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormat>()
 .AddAttribute(0, "scope", a => a.Scope)
 .AddAttribute(0, "type", a => a.Type)
@@ -7931,7 +7931,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotArea &lt;x:pivotArea></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea))]
     public partial class PivotAreas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7980,6 +7979,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotAreas");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<PivotAreas>()
 .AddAttribute(0, "count", a => a.Count);
         }
@@ -8006,7 +8006,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>SlicerStyleElements &lt;x14:slicerStyleElements></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SlicerStyleElements), FileFormatVersions.Office2010)]
     public partial class SlicerStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8055,6 +8054,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerStyle");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SlicerStyleElements>();
             builder.AddElement<SlicerStyle>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -8163,7 +8163,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office.Excel.ReferenceSequence &lt;xne:sqref></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence))]
     public partial class IgnoredError : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8292,6 +8291,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "ignoredError");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddElement<IgnoredError>()
 .AddAttribute(0, "evalError", a => a.EvalError)
 .AddAttribute(0, "twoDigitTextYear", a => a.TwoDigitTextYear)
@@ -8339,7 +8339,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office.Excel.ReferenceSequence &lt;xne:sqref></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence))]
     public partial class ProtectedRange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8448,6 +8447,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "protectedRange");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddElement<ProtectedRange>()
 .AddAttribute(0, "password", a => a.Password, aBuilder =>
 {
@@ -8596,8 +8596,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ListItem), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class ListItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8636,6 +8634,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "itemLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ListItem>();
+            builder.AddChild<ExtensionList>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -8661,7 +8661,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class Slicer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8800,6 +8799,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicer");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ExtensionList>();
             builder.AddElement<Slicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -8868,9 +8868,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OlapSlicerCacheLevelsData), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(OlapSlicerCacheSelections), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class OlapSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8919,6 +8916,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "olap");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OlapSlicerCacheLevelsData>();
+            builder.AddChild<OlapSlicerCacheSelections>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<OlapSlicerCache>()
 .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
 {
@@ -8990,8 +8990,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;x14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TabularSlicerCacheItems), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
     public partial class TabularSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9080,6 +9078,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "tabular");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TabularSlicerCacheItems>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<TabularSlicerCache>()
 .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
 {
@@ -9240,7 +9240,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OlapSlicerCacheItemParent &lt;x14:p></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OlapSlicerCacheItemParent), FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9309,6 +9308,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "i");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OlapSlicerCacheItemParent>();
             builder.AddElement<OlapSlicerCacheItem>()
 .AddAttribute(0, "n", a => a.Name, aBuilder =>
 {
@@ -9340,7 +9340,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OlapSlicerCacheItem &lt;x14:i></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OlapSlicerCacheItem), FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheRange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9389,6 +9388,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "range");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OlapSlicerCacheItem>();
             builder.AddElement<OlapSlicerCacheRange>()
 .AddAttribute(0, "startItem", a => a.StartItem, aBuilder =>
 {
@@ -9424,7 +9424,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OlapSlicerCacheRange &lt;x14:range></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OlapSlicerCacheRange), FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheRanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9463,6 +9462,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "ranges");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OlapSlicerCacheRange>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -9487,7 +9487,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OlapSlicerCacheRanges &lt;x14:ranges></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OlapSlicerCacheRanges), FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheLevelData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9576,6 +9575,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "level");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OlapSlicerCacheRanges>();
             builder.AddElement<OlapSlicerCacheLevelData>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
 {
@@ -9631,7 +9631,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OlapSlicerCacheLevelData &lt;x14:level></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OlapSlicerCacheLevelData), FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheLevelsData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9680,6 +9679,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "levels");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OlapSlicerCacheLevelData>();
             builder.AddElement<OlapSlicerCacheLevelsData>()
 .AddAttribute(0, "count", a => a.Count);
         }
@@ -9706,7 +9706,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OlapSlicerCacheSelection &lt;x14:selection></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OlapSlicerCacheSelection), FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheSelections : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9755,6 +9754,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "selections");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OlapSlicerCacheSelection>();
             builder.AddElement<OlapSlicerCacheSelections>()
 .AddAttribute(0, "count", a => a.Count);
         }
@@ -9781,7 +9781,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>OlapSlicerCacheItemParent &lt;x14:p></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OlapSlicerCacheItemParent), FileFormatVersions.Office2010)]
     public partial class OlapSlicerCacheSelection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9830,6 +9829,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "selection");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OlapSlicerCacheItemParent>();
             builder.AddElement<OlapSlicerCacheSelection>()
 .AddAttribute(0, "n", a => a.Name, aBuilder =>
 {
@@ -9859,7 +9859,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TabularSlicerCacheItem &lt;x14:i></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TabularSlicerCacheItem), FileFormatVersions.Office2010)]
     public partial class TabularSlicerCacheItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9908,6 +9907,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "items");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TabularSlicerCacheItem>();
             builder.AddElement<TabularSlicerCacheItems>()
 .AddAttribute(0, "count", a => a.Count);
         }
@@ -10002,7 +10002,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SlicerCachePivotTable &lt;x14:pivotTable></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SlicerCachePivotTable), FileFormatVersions.Office2010)]
     public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10041,6 +10040,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotTables");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SlicerCachePivotTable>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -10066,8 +10066,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>TabularSlicerCache &lt;x14:tabular></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OlapSlicerCache), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TabularSlicerCache), FileFormatVersions.Office2010)]
     public partial class SlicerCacheData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10106,6 +10104,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "data");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OlapSlicerCache>();
+            builder.AddChild<TabularSlicerCache>();
         }
 
         /// <summary>
@@ -10157,7 +10157,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension &lt;x:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension))]
     public partial class SlicerCacheDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10196,6 +10195,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "extLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

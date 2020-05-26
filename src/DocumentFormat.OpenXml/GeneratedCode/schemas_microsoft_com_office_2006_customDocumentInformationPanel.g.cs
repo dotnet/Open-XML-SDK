@@ -25,9 +25,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     ///   <item><description>CustomPropertyEditor &lt;cdip:customPropertyEditor></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShowOnOpen))]
-    [ChildElementInfo(typeof(DefaultPropertyEditorNamespace))]
-    [ChildElementInfo(typeof(CustomPropertyEditor))]
     public partial class CustomPropertyEditors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -66,6 +63,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "customPropertyEditors");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ShowOnOpen>();
+            builder.AddChild<DefaultPropertyEditorNamespace>();
+            builder.AddChild<CustomPropertyEditor>();
         }
 
         /// <summary>
@@ -274,8 +274,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     ///   <item><description>XsnFileLocation &lt;cdip:XSNLocation></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PropertyEditorNamespace))]
-    [ChildElementInfo(typeof(XsnFileLocation))]
     public partial class CustomPropertyEditor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -314,6 +312,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "customPropertyEditor");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PropertyEditorNamespace>();
+            builder.AddChild<XsnFileLocation>();
         }
 
         /// <summary>

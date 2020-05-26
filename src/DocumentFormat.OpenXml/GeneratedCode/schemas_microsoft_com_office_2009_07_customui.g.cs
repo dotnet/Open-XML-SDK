@@ -1199,8 +1199,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ButtonRegular &lt;mso14:button></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
     public partial class GalleryRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1729,6 +1727,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "gallery");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Item>();
+            builder.AddChild<ButtonRegular>();
             builder.AddElement<GalleryRegular>()
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
 {
@@ -2535,9 +2535,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>MenuRegular &lt;mso14:menu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VisibleButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(VisibleToggleButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
     public partial class SplitButtonRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2736,6 +2733,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "splitButton");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<VisibleButton>();
+            builder.AddChild<VisibleToggleButton>();
+            builder.AddChild<MenuRegular>();
             builder.AddElement<SplitButtonRegular>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
@@ -2832,15 +2832,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>DynamicMenuRegular &lt;mso14:dynamicMenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuSeparator), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
     public partial class MenuRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3179,6 +3170,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ControlCloneRegular>();
+            builder.AddChild<ButtonRegular>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<GalleryRegular>();
+            builder.AddChild<ToggleButtonRegular>();
+            builder.AddChild<MenuSeparator>();
+            builder.AddChild<SplitButtonRegular>();
+            builder.AddChild<MenuRegular>();
+            builder.AddChild<DynamicMenuRegular>();
             builder.AddElement<MenuRegular>()
 .AddAttribute(0, "itemSize", a => a.ItemSize)
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
@@ -3783,9 +3783,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>MenuWithTitle &lt;mso14:menu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VisibleButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(VisibleToggleButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuWithTitle), FileFormatVersions.Office2010)]
     public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3984,6 +3981,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "splitButton");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<VisibleButton>();
+            builder.AddChild<VisibleToggleButton>();
+            builder.AddChild<MenuWithTitle>();
             builder.AddElement<SplitButtonWithTitle>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
@@ -4080,15 +4080,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>DynamicMenuRegular &lt;mso14:dynamicMenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuSeparator), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SplitButtonWithTitle), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuWithTitle), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
     public partial class MenuWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4427,6 +4418,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ControlCloneRegular>();
+            builder.AddChild<ButtonRegular>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<GalleryRegular>();
+            builder.AddChild<ToggleButtonRegular>();
+            builder.AddChild<MenuSeparator>();
+            builder.AddChild<SplitButtonWithTitle>();
+            builder.AddChild<MenuWithTitle>();
+            builder.AddChild<DynamicMenuRegular>();
             builder.AddElement<MenuWithTitle>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -6827,7 +6827,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>Item &lt;mso14:item></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
     public partial class ComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7256,6 +7255,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "comboBox");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Item>();
             builder.AddElement<ComboBox>()
 .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
 .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
@@ -7423,8 +7423,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ButtonRegular &lt;mso14:button></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
     public partial class DropDownRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7853,6 +7851,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "dropDown");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Item>();
+            builder.AddChild<ButtonRegular>();
             builder.AddElement<DropDownRegular>()
 .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
 {
@@ -8021,8 +8021,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ButtonRegular &lt;mso14:button></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
     public partial class Gallery : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8571,6 +8569,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "gallery");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Item>();
+            builder.AddChild<ButtonRegular>();
             builder.AddElement<Gallery>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -8791,15 +8791,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>DynamicMenuRegular &lt;mso14:dynamicMenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuSeparator), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
     public partial class Menu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9158,6 +9149,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ControlCloneRegular>();
+            builder.AddChild<ButtonRegular>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<GalleryRegular>();
+            builder.AddChild<ToggleButtonRegular>();
+            builder.AddChild<MenuSeparator>();
+            builder.AddChild<SplitButtonRegular>();
+            builder.AddChild<MenuRegular>();
+            builder.AddChild<DynamicMenuRegular>();
             builder.AddElement<Menu>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -9795,9 +9795,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>MenuRegular &lt;mso14:menu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VisibleButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(VisibleToggleButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
     public partial class SplitButton : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10016,6 +10013,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "splitButton");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<VisibleButton>();
+            builder.AddChild<VisibleToggleButton>();
+            builder.AddChild<MenuRegular>();
             builder.AddElement<SplitButton>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -10125,20 +10125,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ButtonGroup &lt;mso14:buttonGroup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlClone), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LabelControl), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Button), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ToggleButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(EditBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ComboBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DropDownRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Gallery), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Menu), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DynamicMenu), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SplitButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Box), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonGroup), FileFormatVersions.Office2010)]
     public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10277,6 +10263,20 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "box");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ControlClone>();
+            builder.AddChild<LabelControl>();
+            builder.AddChild<Button>();
+            builder.AddChild<ToggleButton>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<EditBox>();
+            builder.AddChild<ComboBox>();
+            builder.AddChild<DropDownRegular>();
+            builder.AddChild<Gallery>();
+            builder.AddChild<Menu>();
+            builder.AddChild<DynamicMenu>();
+            builder.AddChild<SplitButton>();
+            builder.AddChild<Box>();
+            builder.AddChild<ButtonGroup>();
             builder.AddElement<Box>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -10359,14 +10359,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
     ///   <item><description>Separator &lt;mso14:separator></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
     public partial class ButtonGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10495,6 +10487,14 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "buttonGroup");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ControlCloneRegular>();
+            builder.AddChild<ButtonRegular>();
+            builder.AddChild<ToggleButtonRegular>();
+            builder.AddChild<GalleryRegular>();
+            builder.AddChild<MenuRegular>();
+            builder.AddChild<DynamicMenuRegular>();
+            builder.AddChild<SplitButtonRegular>();
+            builder.AddChild<Separator>();
             builder.AddElement<ButtonGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -11062,7 +11062,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>BackstageMenuGroup &lt;mso14:menuGroup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageMenuGroup), FileFormatVersions.Office2010)]
     public partial class BackstageSubMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11261,6 +11260,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<BackstageMenuGroup>();
             builder.AddElement<BackstageSubMenu>()
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
 {
@@ -12490,7 +12490,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ItemBackstageItem &lt;mso14:item></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ItemBackstageItem), FileFormatVersions.Office2010)]
     public partial class BackstageDropDown : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12759,6 +12758,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "dropDown");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ItemBackstageItem>();
             builder.AddElement<BackstageDropDown>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -12864,7 +12864,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>RadioButtonBackstageItem &lt;mso14:radioButton></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RadioButtonBackstageItem), FileFormatVersions.Office2010)]
     public partial class RadioGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13083,6 +13082,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "radioGroup");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<RadioButtonBackstageItem>();
             builder.AddElement<RadioGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -13168,7 +13168,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ItemBackstageItem &lt;mso14:item></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ItemBackstageItem), FileFormatVersions.Office2010)]
     public partial class BackstageComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13397,6 +13396,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "comboBox");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ItemBackstageItem>();
             builder.AddElement<BackstageComboBox>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -14011,17 +14011,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageGroupButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageCheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageEditBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageDropDown), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RadioGroup), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageComboBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Hyperlink), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageLabelControl), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GroupBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LayoutContainer), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
     public partial class GroupBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14120,6 +14109,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "groupBox");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<BackstageGroupButton>();
+            builder.AddChild<BackstageCheckBox>();
+            builder.AddChild<BackstageEditBox>();
+            builder.AddChild<BackstageDropDown>();
+            builder.AddChild<RadioGroup>();
+            builder.AddChild<BackstageComboBox>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<BackstageLabelControl>();
+            builder.AddChild<GroupBox>();
+            builder.AddChild<LayoutContainer>();
+            builder.AddChild<ImageControl>();
             builder.AddElement<GroupBox>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -14192,17 +14192,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageGroupButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageCheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageEditBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageDropDown), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RadioGroup), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageComboBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Hyperlink), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageLabelControl), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GroupBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LayoutContainer), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
     public partial class LayoutContainer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14301,6 +14290,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "layoutContainer");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<BackstageGroupButton>();
+            builder.AddChild<BackstageCheckBox>();
+            builder.AddChild<BackstageEditBox>();
+            builder.AddChild<BackstageDropDown>();
+            builder.AddChild<RadioGroup>();
+            builder.AddChild<BackstageComboBox>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<BackstageLabelControl>();
+            builder.AddChild<GroupBox>();
+            builder.AddChild<LayoutContainer>();
+            builder.AddChild<ImageControl>();
             builder.AddElement<LayoutContainer>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -14547,9 +14547,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>BottomItemsGroupControls &lt;mso14:bottomItems></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PrimaryItem), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TopItemsGroupControls), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BottomItemsGroupControls), FileFormatVersions.Office2010)]
     public partial class BackstageGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14768,6 +14765,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "group");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<PrimaryItem>();
+            builder.AddChild<TopItemsGroupControls>();
+            builder.AddChild<BottomItemsGroupControls>();
             builder.AddElement<BackstageGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -14861,7 +14861,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>TaskGroupCategory &lt;mso14:category></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TaskGroupCategory), FileFormatVersions.Office2010)]
     public partial class TaskGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15070,6 +15069,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "taskGroup");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TaskGroupCategory>();
             builder.AddElement<TaskGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -15162,15 +15162,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>DynamicMenuRegular &lt;mso14:dynamicMenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuSeparator), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
     public partial class MenuRoot : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15239,6 +15230,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ControlCloneRegular>();
+            builder.AddChild<ButtonRegular>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<GalleryRegular>();
+            builder.AddChild<ToggleButtonRegular>();
+            builder.AddChild<MenuSeparator>();
+            builder.AddChild<SplitButtonRegular>();
+            builder.AddChild<MenuRegular>();
+            builder.AddChild<DynamicMenuRegular>();
             builder.AddElement<MenuRoot>()
 .AddAttribute(0, "title", a => a.Title, aBuilder =>
 {
@@ -15299,10 +15299,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ContextMenus &lt;mso14:contextMenus></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Commands), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Ribbon), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Backstage), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ContextMenus), FileFormatVersions.Office2010)]
     public partial class CustomUI : OpenXmlPartRootElement
     {
         /// <summary>
@@ -15361,6 +15357,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "customUI");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Commands>();
+            builder.AddChild<Ribbon>();
+            builder.AddChild<Backstage>();
+            builder.AddChild<ContextMenus>();
             builder.AddElement<CustomUI>()
 .AddAttribute(0, "onLoad", a => a.OnLoad, aBuilder =>
 {
@@ -16571,7 +16571,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
     ///   <item><description>ButtonRegular &lt;mso14:button></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
     public partial class DialogBoxLauncher : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16610,6 +16609,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "dialogBoxLauncher");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ButtonRegular>();
         }
 
         /// <summary>
@@ -16662,22 +16662,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
     ///   <item><description>DialogBoxLauncher &lt;mso14:dialogBoxLauncher></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlClone), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LabelControl), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Button), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ToggleButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(EditBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ComboBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DropDownRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Gallery), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Menu), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DynamicMenu), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SplitButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Box), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonGroup), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DialogBoxLauncher), FileFormatVersions.Office2010)]
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16946,6 +16930,22 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "group");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ControlClone>();
+            builder.AddChild<LabelControl>();
+            builder.AddChild<Button>();
+            builder.AddChild<ToggleButton>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<EditBox>();
+            builder.AddChild<ComboBox>();
+            builder.AddChild<DropDownRegular>();
+            builder.AddChild<Gallery>();
+            builder.AddChild<Menu>();
+            builder.AddChild<DynamicMenu>();
+            builder.AddChild<SplitButton>();
+            builder.AddChild<Box>();
+            builder.AddChild<ButtonGroup>();
+            builder.AddChild<Separator>();
+            builder.AddChild<DialogBoxLauncher>();
             builder.AddElement<Group>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -17658,9 +17658,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>Separator &lt;mso14:separator></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlCloneQat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
     public abstract partial class QatItemsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17697,6 +17694,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<ControlCloneQat>();
+            builder.AddChild<ButtonRegular>();
+            builder.AddChild<Separator>();
         }
     }
 
@@ -17711,7 +17711,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>Group &lt;mso14:group></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Group), FileFormatVersions.Office2010)]
     public partial class Tab : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17890,6 +17889,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "tab");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Group>();
             builder.AddElement<Tab>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -17971,7 +17971,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>Tab &lt;mso14:tab></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tab), FileFormatVersions.Office2010)]
     public partial class TabSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18040,6 +18039,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "tabSet");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Tab>();
             builder.AddElement<TabSet>()
 .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
 {
@@ -18155,8 +18155,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
     ///   <item><description>DocumentControlsQatItems &lt;mso14:documentControls></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SharedControlsQatItems), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentControlsQatItems), FileFormatVersions.Office2010)]
     public partial class QuickAccessToolbar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18195,6 +18193,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "qat");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<SharedControlsQatItems>();
+            builder.AddChild<DocumentControlsQatItems>();
         }
 
         /// <summary>
@@ -18246,7 +18246,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
     ///   <item><description>Tab &lt;mso14:tab></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tab), FileFormatVersions.Office2010)]
     public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18285,6 +18284,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "tabs");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Tab>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18309,7 +18309,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
     ///   <item><description>TabSet &lt;mso14:tabSet></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TabSet), FileFormatVersions.Office2010)]
     public partial class ContextualTabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18348,6 +18347,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "contextualTabs");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TabSet>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18380,15 +18380,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
     ///   <item><description>MenuSeparatorNoTitle &lt;mso14:menuSeparator></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlCloneRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GalleryRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ToggleButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SplitButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(MenuSeparatorNoTitle), FileFormatVersions.Office2010)]
     public partial class ContextMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18437,6 +18428,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "contextMenu");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ControlCloneRegular>();
+            builder.AddChild<ButtonRegular>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<GalleryRegular>();
+            builder.AddChild<ToggleButtonRegular>();
+            builder.AddChild<SplitButtonRegular>();
+            builder.AddChild<MenuRegular>();
+            builder.AddChild<DynamicMenuRegular>();
+            builder.AddChild<MenuSeparatorNoTitle>();
             builder.AddElement<ContextMenu>()
 .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
 {
@@ -18893,7 +18893,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>BackstageMenuGroup &lt;mso14:menuGroup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageMenuGroup), FileFormatVersions.Office2010)]
     public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19112,6 +19111,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<BackstageMenuGroup>();
             builder.AddElement<BackstagePrimaryMenu>()
 .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
 {
@@ -19212,10 +19212,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>BackstageMenuToggleButton &lt;mso14:toggleButton></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageMenuButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageMenuCheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageSubMenu), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageMenuToggleButton), FileFormatVersions.Office2010)]
     public partial class BackstageMenuGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19314,6 +19310,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menuGroup");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<BackstageMenuButton>();
+            builder.AddChild<BackstageMenuCheckBox>();
+            builder.AddChild<BackstageSubMenu>();
+            builder.AddChild<BackstageMenuToggleButton>();
             builder.AddElement<BackstageMenuGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -19373,8 +19373,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>BackstagePrimaryMenu &lt;mso14:menu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageRegularButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstagePrimaryMenu), FileFormatVersions.Office2010)]
     public partial class PrimaryItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19413,6 +19411,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "primaryItem");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<BackstageRegularButton>();
+            builder.AddChild<BackstagePrimaryMenu>();
         }
 
         /// <summary>
@@ -19650,17 +19650,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageGroupButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageCheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageEditBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageDropDown), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RadioGroup), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageComboBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Hyperlink), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageLabelControl), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GroupBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LayoutContainer), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
     public abstract partial class GroupControlsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19697,6 +19686,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<BackstageGroupButton>();
+            builder.AddChild<BackstageCheckBox>();
+            builder.AddChild<BackstageEditBox>();
+            builder.AddChild<BackstageDropDown>();
+            builder.AddChild<RadioGroup>();
+            builder.AddChild<BackstageComboBox>();
+            builder.AddChild<Hyperlink>();
+            builder.AddChild<BackstageLabelControl>();
+            builder.AddChild<GroupBox>();
+            builder.AddChild<LayoutContainer>();
+            builder.AddChild<ImageControl>();
         }
     }
 
@@ -19711,7 +19711,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>TaskGroupTask &lt;mso14:task></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TaskGroupTask), FileFormatVersions.Office2010)]
     public partial class TaskGroupCategory : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19870,6 +19869,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "category");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TaskGroupTask>();
             builder.AddElement<TaskGroupCategory>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -20279,7 +20279,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>TaskFormGroupTask &lt;mso14:task></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TaskFormGroupTask), FileFormatVersions.Office2010)]
     public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20438,6 +20437,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "category");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TaskFormGroupTask>();
             builder.AddElement<TaskFormGroupCategory>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -20508,7 +20508,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>BackstageGroup &lt;mso14:group></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageGroup), FileFormatVersions.Office2010)]
     public partial class TaskFormGroupTask : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20757,6 +20756,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "task");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<BackstageGroup>();
             builder.AddElement<TaskFormGroupTask>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -20860,7 +20860,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>TaskFormGroupCategory &lt;mso14:category></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TaskFormGroupCategory), FileFormatVersions.Office2010)]
     public partial class TaskFormGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21029,6 +21028,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "taskFormGroup");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TaskFormGroupCategory>();
             builder.AddElement<TaskFormGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -21099,9 +21099,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>TaskGroup &lt;mso14:taskGroup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TaskFormGroup), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageGroup), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TaskGroup), FileFormatVersions.Office2010)]
     public partial class BackstageGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21140,6 +21137,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "firstColumn");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<TaskFormGroup>();
+            builder.AddChild<BackstageGroup>();
+            builder.AddChild<TaskGroup>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -21179,8 +21179,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>TaskGroup &lt;mso14:taskGroup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageGroup), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(TaskGroup), FileFormatVersions.Office2010)]
     public partial class SimpleGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21219,6 +21217,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "secondColumn");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<BackstageGroup>();
+            builder.AddChild<TaskGroup>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
@@ -21251,8 +21251,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>SimpleGroups &lt;mso14:secondColumn></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageGroups), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SimpleGroups), FileFormatVersions.Office2010)]
     public partial class BackstageTab : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21521,6 +21519,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "tab");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<BackstageGroups>();
+            builder.AddChild<SimpleGroups>();
             builder.AddElement<BackstageTab>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -21970,7 +21970,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>Command &lt;mso14:command></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Command), FileFormatVersions.Office2010)]
     public partial class Commands : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22009,6 +22008,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "commands");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<Command>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -22035,9 +22035,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ContextualTabs &lt;mso14:contextualTabs></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(QuickAccessToolbar), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Tabs), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ContextualTabs), FileFormatVersions.Office2010)]
     public partial class Ribbon : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22086,6 +22083,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "ribbon");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<QuickAccessToolbar>();
+            builder.AddChild<Tabs>();
+            builder.AddChild<ContextualTabs>();
             builder.AddElement<Ribbon>()
 .AddAttribute(0, "startFromScratch", a => a.StartFromScratch);
         }
@@ -22154,8 +22154,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>BackstageFastCommandButton &lt;mso14:button></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BackstageTab), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageFastCommandButton), FileFormatVersions.Office2010)]
     public partial class Backstage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22214,6 +22212,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "backstage");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<BackstageTab>();
+            builder.AddChild<BackstageFastCommandButton>();
             builder.AddElement<Backstage>()
 .AddAttribute(0, "onShow", a => a.OnShow, aBuilder =>
 {
@@ -22251,7 +22251,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ContextMenu &lt;mso14:contextMenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ContextMenu), FileFormatVersions.Office2010)]
     public partial class ContextMenus : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22290,6 +22289,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "contextMenus");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ContextMenu>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

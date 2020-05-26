@@ -23,7 +23,6 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     ///   <item><description>Characteristic &lt;ac:characteristic></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Characteristic))]
     public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     {
         /// <summary>
@@ -62,6 +61,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
             base.ConfigureMetadata(builder);
             builder.SetSchema(8, "additionalCharacteristics");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Characteristic>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

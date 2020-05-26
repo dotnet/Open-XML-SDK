@@ -25,9 +25,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     ///   <item><description>DestinationLink &lt;msink:destinationLink></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ContextNodeProperty))]
-    [ChildElementInfo(typeof(SourceLink))]
-    [ChildElementInfo(typeof(DestinationLink))]
     public partial class ContextNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -276,6 +273,9 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
             base.ConfigureMetadata(builder);
             builder.SetSchema(45, "context");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ContextNodeProperty>();
+            builder.AddChild<SourceLink>();
+            builder.AddChild<DestinationLink>();
             builder.AddElement<ContextNode>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {

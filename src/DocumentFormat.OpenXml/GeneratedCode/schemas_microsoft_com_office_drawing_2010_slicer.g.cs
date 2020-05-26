@@ -25,7 +25,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
     ///   <item><description>OfficeArtExtensionList &lt;sle:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
     public partial class Slicer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -74,6 +73,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
             base.ConfigureMetadata(builder);
             builder.SetSchema(62, "slicer");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<Slicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -116,7 +116,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -155,6 +154,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(62, "extLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

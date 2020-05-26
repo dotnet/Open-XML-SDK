@@ -25,7 +25,6 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description>OfficeArtExtensionList &lt;thm15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
     public partial class ThemeFamily : OpenXmlCompositeElement
     {
         /// <summary>
@@ -94,6 +93,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "themeFamily");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<ThemeFamily>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -152,7 +152,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -191,6 +190,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "extLst");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -221,7 +221,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
     ///   <item><description>OfficeArtExtensionList &lt;thm15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
     public partial class ThemeVariant : OpenXmlCompositeElement
     {
         /// <summary>
@@ -313,6 +312,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "themeVariant");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<ThemeVariant>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -374,7 +374,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ThemeVariant &lt;thm15:themeVariant></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ThemeVariant), FileFormatVersions.Office2013)]
     public partial class ThemeVariantList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -413,6 +412,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "themeVariantLst");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<ThemeVariant>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

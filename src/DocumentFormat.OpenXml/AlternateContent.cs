@@ -11,8 +11,6 @@ namespace DocumentFormat.OpenXml
     /// Represents the mc:AlternateContent element of markup
     /// compatibility.
     /// </summary>
-    [ChildElementInfo(typeof(AlternateContentChoice))]
-    [ChildElementInfo(typeof(AlternateContentFallback))]
     public class AlternateContent : OpenXmlCompositeElement
     {
         internal const string Namespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
@@ -132,6 +130,9 @@ namespace DocumentFormat.OpenXml
             base.ConfigureMetadata(builder);
 
             builder.SetSchema(Namespace, Name);
+
+            builder.AddChild<AlternateContentChoice>();
+            builder.AddChild<AlternateContentFallback>();
         }
     }
 }

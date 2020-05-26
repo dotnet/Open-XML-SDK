@@ -28,10 +28,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description>OfficeArtExtensionList &lt;xdr14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExcelNonVisualContentPartShapeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Transform2D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
     public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -93,6 +89,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(54, "contentPart");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<ExcelNonVisualContentPartShapeProperties>();
+            builder.AddChild<ApplicationNonVisualDrawingProperties>();
+            builder.AddChild<Transform2D>();
+            builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<ContentPart>()
 .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
 {
@@ -183,9 +183,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -274,6 +271,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(54, "cNvPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -352,8 +352,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList &lt;a14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
     public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -402,6 +400,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(54, "cNvContentPartPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             builder.AddElement<NonVisualInkContentPartProperties>()
 .AddAttribute(0, "isComment", a => a.IsComment);
         }
@@ -456,8 +456,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NonVisualInkContentPartProperties &lt;xdr14:cNvContentPartPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NonVisualInkContentPartProperties), FileFormatVersions.Office2010)]
     public partial class ExcelNonVisualContentPartShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -496,6 +494,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(54, "nvContentPartPr");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualInkContentPartProperties>();
         }
 
         /// <summary>
@@ -596,8 +596,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -666,6 +664,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(54, "xfrm");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "flipH", a => a.HorizontalFlip)
@@ -721,7 +721,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -760,6 +759,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(54, "extLst");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

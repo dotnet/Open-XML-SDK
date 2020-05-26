@@ -30,13 +30,6 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description>TraceView &lt;inkml:traceView></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Annotation))]
-    [ChildElementInfo(typeof(AnnotationXml))]
-    [ChildElementInfo(typeof(Definitions))]
-    [ChildElementInfo(typeof(Context))]
-    [ChildElementInfo(typeof(Trace))]
-    [ChildElementInfo(typeof(TraceGroup))]
-    [ChildElementInfo(typeof(TraceView))]
     public partial class Ink : OpenXmlPartRootElement
     {
         /// <summary>
@@ -85,6 +78,13 @@ namespace DocumentFormat.OpenXml.InkML
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "ink");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Annotation>();
+            builder.AddChild<AnnotationXml>();
+            builder.AddChild<Definitions>();
+            builder.AddChild<Context>();
+            builder.AddChild<Trace>();
+            builder.AddChild<TraceGroup>();
+            builder.AddChild<TraceView>();
             builder.AddElement<Ink>()
 .AddAttribute(0, "documentID", a => a.DocumentId, aBuilder =>
 {
@@ -321,10 +321,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>Mapping &lt;inkml:mapping></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Bind))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Mapping))]
     public partial class Mapping : OpenXmlCompositeElement
     {
         /// <summary>
@@ -396,6 +392,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "mapping");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Bind>();
+            builder.AddChild<Table>();
+            builder.AddChild<Matrix>();
+            builder.AddChild<Mapping>();
             builder.AddElement<Mapping>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "type", a => a.Type)
@@ -439,7 +439,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>Mapping &lt;inkml:mapping></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Mapping))]
     public partial class Channel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -571,6 +570,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channel");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Mapping>();
             builder.AddElement<Channel>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -645,7 +645,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>Channel &lt;inkml:channel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Channel))]
     public partial class IntermittentChannels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -684,6 +683,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "intermittentChannels");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Channel>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -820,8 +820,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>IntermittentChannels &lt;inkml:intermittentChannels></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Channel))]
-    [ChildElementInfo(typeof(IntermittentChannels))]
     public partial class TraceFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -873,6 +871,8 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceFormat");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Channel>();
+            builder.AddChild<IntermittentChannels>();
             builder.AddElement<TraceFormat>()
 .AddAttribute(1, "id", a => a.Id);
         }
@@ -1170,7 +1170,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>ChannelProperty &lt;inkml:channelProperty></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChannelProperty))]
     public partial class ChannelProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1209,6 +1208,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channelProperties");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ChannelProperty>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1294,7 +1294,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>DocumentFormat.OpenXml.EMMA.Emma &lt;emma:emma></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.EMMA.Emma))]
     public partial class AnnotationXml : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1363,6 +1362,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "annotationXML");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.EMMA.Emma>();
             builder.AddElement<AnnotationXml>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "encoding", a => a.Encoding)
@@ -1408,8 +1408,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>AnnotationXml &lt;inkml:annotationXML></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Annotation))]
-    [ChildElementInfo(typeof(AnnotationXml))]
     public partial class BrushProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1478,6 +1476,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "brushProperty");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Annotation>();
+            builder.AddChild<AnnotationXml>();
             builder.AddElement<BrushProperty>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -1548,7 +1548,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
     ///   <item><description>TraceFormat &lt;inkml:traceFormat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TraceFormat))]
     public partial class Canvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1610,6 +1609,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "canvas");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TraceFormat>();
             builder.AddElement<Canvas>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "traceFormatRef", a => a.TraceFormatRef, aBuilder =>
@@ -1653,7 +1653,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>Mapping &lt;inkml:mapping></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Mapping))]
     public partial class CanvasTransform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1715,6 +1714,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "canvasTransform");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Mapping>();
             builder.AddElement<CanvasTransform>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "invertible", a => a.Invertible);
@@ -1747,12 +1747,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>ChannelProperties &lt;inkml:channelProperties></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TraceFormat))]
-    [ChildElementInfo(typeof(SampleRate))]
-    [ChildElementInfo(typeof(Latency))]
-    [ChildElementInfo(typeof(ActiveArea))]
-    [ChildElementInfo(typeof(SourceProperty))]
-    [ChildElementInfo(typeof(ChannelProperties))]
     public partial class InkSource : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1854,6 +1848,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "inkSource");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TraceFormat>();
+            builder.AddChild<SampleRate>();
+            builder.AddChild<Latency>();
+            builder.AddChild<ActiveArea>();
+            builder.AddChild<SourceProperty>();
+            builder.AddChild<ChannelProperties>();
             builder.AddElement<InkSource>()
 .AddAttribute(1, "id", a => a.Id, aBuilder =>
 {
@@ -1950,9 +1950,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>BrushProperty &lt;inkml:brushProperty></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Annotation))]
-    [ChildElementInfo(typeof(AnnotationXml))]
-    [ChildElementInfo(typeof(BrushProperty))]
     public partial class Brush : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2014,6 +2011,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "brush");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Annotation>();
+            builder.AddChild<AnnotationXml>();
+            builder.AddChild<BrushProperty>();
             builder.AddElement<Brush>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
@@ -2278,10 +2278,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>TraceGroup &lt;inkml:traceGroup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Annotation))]
-    [ChildElementInfo(typeof(AnnotationXml))]
-    [ChildElementInfo(typeof(Trace))]
-    [ChildElementInfo(typeof(TraceGroup))]
     public partial class TraceGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2353,6 +2349,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceGroup");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Annotation>();
+            builder.AddChild<AnnotationXml>();
+            builder.AddChild<Trace>();
+            builder.AddChild<TraceGroup>();
             builder.AddElement<TraceGroup>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
@@ -2392,9 +2392,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>TraceView &lt;inkml:traceView></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Annotation))]
-    [ChildElementInfo(typeof(AnnotationXml))]
-    [ChildElementInfo(typeof(TraceView))]
     public partial class TraceView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2486,6 +2483,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceView");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Annotation>();
+            builder.AddChild<AnnotationXml>();
+            builder.AddChild<TraceView>();
             builder.AddElement<TraceView>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
@@ -2529,12 +2529,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>Timestamp &lt;inkml:timestamp></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Canvas))]
-    [ChildElementInfo(typeof(CanvasTransform))]
-    [ChildElementInfo(typeof(TraceFormat))]
-    [ChildElementInfo(typeof(InkSource))]
-    [ChildElementInfo(typeof(Brush))]
-    [ChildElementInfo(typeof(Timestamp))]
     public partial class Context : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2656,6 +2650,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "context");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Canvas>();
+            builder.AddChild<CanvasTransform>();
+            builder.AddChild<TraceFormat>();
+            builder.AddChild<InkSource>();
+            builder.AddChild<Brush>();
+            builder.AddChild<Timestamp>();
             builder.AddElement<Context>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
@@ -2803,17 +2803,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
     ///   <item><description>TraceView &lt;inkml:traceView></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Brush))]
-    [ChildElementInfo(typeof(Canvas))]
-    [ChildElementInfo(typeof(CanvasTransform))]
-    [ChildElementInfo(typeof(Context))]
-    [ChildElementInfo(typeof(InkSource))]
-    [ChildElementInfo(typeof(Mapping))]
-    [ChildElementInfo(typeof(Timestamp))]
-    [ChildElementInfo(typeof(Trace))]
-    [ChildElementInfo(typeof(TraceFormat))]
-    [ChildElementInfo(typeof(TraceGroup))]
-    [ChildElementInfo(typeof(TraceView))]
     public partial class Definitions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2852,6 +2841,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "definitions");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Brush>();
+            builder.AddChild<Canvas>();
+            builder.AddChild<CanvasTransform>();
+            builder.AddChild<Context>();
+            builder.AddChild<InkSource>();
+            builder.AddChild<Mapping>();
+            builder.AddChild<Timestamp>();
+            builder.AddChild<Trace>();
+            builder.AddChild<TraceFormat>();
+            builder.AddChild<TraceGroup>();
+            builder.AddChild<TraceView>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)

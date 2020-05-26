@@ -58,41 +58,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description>VTClipboardData &lt;vt:cf></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Variant))]
-    [ChildElementInfo(typeof(VTVector))]
-    [ChildElementInfo(typeof(VTArray))]
-    [ChildElementInfo(typeof(VTBlob))]
-    [ChildElementInfo(typeof(VTOBlob))]
-    [ChildElementInfo(typeof(VTEmpty))]
-    [ChildElementInfo(typeof(VTNull))]
-    [ChildElementInfo(typeof(VTByte))]
-    [ChildElementInfo(typeof(VTShort))]
-    [ChildElementInfo(typeof(VTInt32))]
-    [ChildElementInfo(typeof(VTInt64))]
-    [ChildElementInfo(typeof(VTInteger))]
-    [ChildElementInfo(typeof(VTUnsignedByte))]
-    [ChildElementInfo(typeof(VTUnsignedShort))]
-    [ChildElementInfo(typeof(VTUnsignedInt32))]
-    [ChildElementInfo(typeof(VTUnsignedInt64))]
-    [ChildElementInfo(typeof(VTUnsignedInteger))]
-    [ChildElementInfo(typeof(VTFloat))]
-    [ChildElementInfo(typeof(VTDouble))]
-    [ChildElementInfo(typeof(VTDecimal))]
-    [ChildElementInfo(typeof(VTLPSTR))]
-    [ChildElementInfo(typeof(VTLPWSTR))]
-    [ChildElementInfo(typeof(VTBString))]
-    [ChildElementInfo(typeof(VTDate))]
-    [ChildElementInfo(typeof(VTFileTime))]
-    [ChildElementInfo(typeof(VTBool))]
-    [ChildElementInfo(typeof(VTCurrency))]
-    [ChildElementInfo(typeof(VTError))]
-    [ChildElementInfo(typeof(VTStreamData))]
-    [ChildElementInfo(typeof(VTOStreamData))]
-    [ChildElementInfo(typeof(VTStorage))]
-    [ChildElementInfo(typeof(VTOStorage))]
-    [ChildElementInfo(typeof(VTVStreamData))]
-    [ChildElementInfo(typeof(VTClassId))]
-    [ChildElementInfo(typeof(VTClipboardData))]
     public partial class Variant : OpenXmlCompositeElement
     {
         /// <summary>
@@ -131,6 +96,41 @@ namespace DocumentFormat.OpenXml.VariantTypes
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "variant");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Variant>();
+            builder.AddChild<VTVector>();
+            builder.AddChild<VTArray>();
+            builder.AddChild<VTBlob>();
+            builder.AddChild<VTOBlob>();
+            builder.AddChild<VTEmpty>();
+            builder.AddChild<VTNull>();
+            builder.AddChild<VTByte>();
+            builder.AddChild<VTShort>();
+            builder.AddChild<VTInt32>();
+            builder.AddChild<VTInt64>();
+            builder.AddChild<VTInteger>();
+            builder.AddChild<VTUnsignedByte>();
+            builder.AddChild<VTUnsignedShort>();
+            builder.AddChild<VTUnsignedInt32>();
+            builder.AddChild<VTUnsignedInt64>();
+            builder.AddChild<VTUnsignedInteger>();
+            builder.AddChild<VTFloat>();
+            builder.AddChild<VTDouble>();
+            builder.AddChild<VTDecimal>();
+            builder.AddChild<VTLPSTR>();
+            builder.AddChild<VTLPWSTR>();
+            builder.AddChild<VTBString>();
+            builder.AddChild<VTDate>();
+            builder.AddChild<VTFileTime>();
+            builder.AddChild<VTBool>();
+            builder.AddChild<VTCurrency>();
+            builder.AddChild<VTError>();
+            builder.AddChild<VTStreamData>();
+            builder.AddChild<VTOStreamData>();
+            builder.AddChild<VTStorage>();
+            builder.AddChild<VTOStorage>();
+            builder.AddChild<VTVStreamData>();
+            builder.AddChild<VTClassId>();
+            builder.AddChild<VTClipboardData>();
         }
 
         /// <summary>
@@ -664,27 +664,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description>VTClipboardData &lt;vt:cf></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Variant))]
-    [ChildElementInfo(typeof(VTByte))]
-    [ChildElementInfo(typeof(VTShort))]
-    [ChildElementInfo(typeof(VTInt32))]
-    [ChildElementInfo(typeof(VTInt64))]
-    [ChildElementInfo(typeof(VTUnsignedByte))]
-    [ChildElementInfo(typeof(VTUnsignedShort))]
-    [ChildElementInfo(typeof(VTUnsignedInt32))]
-    [ChildElementInfo(typeof(VTUnsignedInt64))]
-    [ChildElementInfo(typeof(VTFloat))]
-    [ChildElementInfo(typeof(VTDouble))]
-    [ChildElementInfo(typeof(VTLPSTR))]
-    [ChildElementInfo(typeof(VTLPWSTR))]
-    [ChildElementInfo(typeof(VTBString))]
-    [ChildElementInfo(typeof(VTDate))]
-    [ChildElementInfo(typeof(VTFileTime))]
-    [ChildElementInfo(typeof(VTBool))]
-    [ChildElementInfo(typeof(VTCurrency))]
-    [ChildElementInfo(typeof(VTError))]
-    [ChildElementInfo(typeof(VTClassId))]
-    [ChildElementInfo(typeof(VTClipboardData))]
     public partial class VTVector : OpenXmlCompositeElement
     {
         /// <summary>
@@ -743,6 +722,27 @@ namespace DocumentFormat.OpenXml.VariantTypes
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "vector");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Variant>();
+            builder.AddChild<VTByte>();
+            builder.AddChild<VTShort>();
+            builder.AddChild<VTInt32>();
+            builder.AddChild<VTInt64>();
+            builder.AddChild<VTUnsignedByte>();
+            builder.AddChild<VTUnsignedShort>();
+            builder.AddChild<VTUnsignedInt32>();
+            builder.AddChild<VTUnsignedInt64>();
+            builder.AddChild<VTFloat>();
+            builder.AddChild<VTDouble>();
+            builder.AddChild<VTLPSTR>();
+            builder.AddChild<VTLPWSTR>();
+            builder.AddChild<VTBString>();
+            builder.AddChild<VTDate>();
+            builder.AddChild<VTFileTime>();
+            builder.AddChild<VTBool>();
+            builder.AddChild<VTCurrency>();
+            builder.AddChild<VTError>();
+            builder.AddChild<VTClassId>();
+            builder.AddChild<VTClipboardData>();
             builder.AddElement<VTVector>()
 .AddAttribute(0, "baseType", a => a.BaseType, aBuilder =>
 {
@@ -812,23 +812,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>VTCurrency &lt;vt:cy></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Variant))]
-    [ChildElementInfo(typeof(VTByte))]
-    [ChildElementInfo(typeof(VTShort))]
-    [ChildElementInfo(typeof(VTInt32))]
-    [ChildElementInfo(typeof(VTInteger))]
-    [ChildElementInfo(typeof(VTUnsignedByte))]
-    [ChildElementInfo(typeof(VTUnsignedShort))]
-    [ChildElementInfo(typeof(VTUnsignedInt32))]
-    [ChildElementInfo(typeof(VTUnsignedInteger))]
-    [ChildElementInfo(typeof(VTFloat))]
-    [ChildElementInfo(typeof(VTDouble))]
-    [ChildElementInfo(typeof(VTDecimal))]
-    [ChildElementInfo(typeof(VTBString))]
-    [ChildElementInfo(typeof(VTDate))]
-    [ChildElementInfo(typeof(VTBool))]
-    [ChildElementInfo(typeof(VTError))]
-    [ChildElementInfo(typeof(VTCurrency))]
     public partial class VTArray : OpenXmlCompositeElement
     {
         /// <summary>
@@ -897,6 +880,23 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "array");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Variant>();
+            builder.AddChild<VTByte>();
+            builder.AddChild<VTShort>();
+            builder.AddChild<VTInt32>();
+            builder.AddChild<VTInteger>();
+            builder.AddChild<VTUnsignedByte>();
+            builder.AddChild<VTUnsignedShort>();
+            builder.AddChild<VTUnsignedInt32>();
+            builder.AddChild<VTUnsignedInteger>();
+            builder.AddChild<VTFloat>();
+            builder.AddChild<VTDouble>();
+            builder.AddChild<VTDecimal>();
+            builder.AddChild<VTBString>();
+            builder.AddChild<VTDate>();
+            builder.AddChild<VTBool>();
+            builder.AddChild<VTError>();
+            builder.AddChild<VTCurrency>();
             builder.AddElement<VTArray>()
 .AddAttribute(0, "lBound", a => a.LowerBounds, aBuilder =>
 {

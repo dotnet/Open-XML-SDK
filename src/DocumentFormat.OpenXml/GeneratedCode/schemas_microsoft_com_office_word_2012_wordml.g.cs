@@ -238,7 +238,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>CommentEx &lt;w15:commentEx></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CommentEx), FileFormatVersions.Office2013)]
     public partial class CommentsEx : OpenXmlPartRootElement
     {
         /// <summary>
@@ -277,6 +276,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "commentsEx");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<CommentEx>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -332,7 +332,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>Person &lt;w15:person></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Person), FileFormatVersions.Office2013)]
     public partial class People : OpenXmlPartRootElement
     {
         /// <summary>
@@ -371,6 +370,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "people");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<Person>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -427,8 +427,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>DoNotAllowInsertDeleteSection &lt;w15:doNotAllowInsertDeleteSection></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SectionTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DoNotAllowInsertDeleteSection), FileFormatVersions.Office2013)]
     public partial class SdtRepeatedSection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -467,6 +465,8 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "repeatingSection");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<SectionTitle>();
+            builder.AddChild<DoNotAllowInsertDeleteSection>();
         }
 
         /// <summary>
@@ -877,7 +877,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
     ///   <item><description>PresenceInfo &lt;w15:presenceInfo></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PresenceInfo), FileFormatVersions.Office2013)]
     public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
@@ -942,6 +941,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "person");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<PresenceInfo>();
             builder.AddElement<Person>()
 .AddAttribute(69, "author", a => a.Author, aBuilder =>
 {

@@ -92,20 +92,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class ChartShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -154,6 +140,20 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "spPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<ChartShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -358,9 +358,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
     public abstract partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -397,6 +394,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
         }
 
         /// <summary>
@@ -1624,8 +1624,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ManualLayout))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Layout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1664,6 +1662,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "layout");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ManualLayout>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -1717,9 +1717,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>StringLiteral &lt;c:strLit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StringReference))]
-    [ChildElementInfo(typeof(RichText))]
-    [ChildElementInfo(typeof(StringLiteral))]
     public partial class ChartText : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1758,6 +1755,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "tx");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StringReference>();
+            builder.AddChild<RichText>();
+            builder.AddChild<StringLiteral>();
         }
 
         /// <summary>
@@ -2198,7 +2198,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartShapeProperties))]
     public abstract partial class ChartLinesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2235,6 +2234,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<ChartShapeProperties>();
         }
 
         /// <summary>
@@ -2546,8 +2546,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NumericValue &lt;c:v></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StringReference))]
-    [ChildElementInfo(typeof(NumericValue))]
     public partial class SeriesText : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2586,6 +2584,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "tx");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StringReference>();
+            builder.AddChild<NumericValue>();
         }
 
         /// <summary>
@@ -2690,20 +2690,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>LineSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(Marker))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Trendline))]
-    [ChildElementInfo(typeof(ErrorBars))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(Smooth))]
-    [ChildElementInfo(typeof(LineSerExtensionList))]
     public partial class LineChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2742,6 +2728,20 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ser");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<Marker>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Trendline>();
+            builder.AddChild<ErrorBars>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<Smooth>();
+            builder.AddChild<LineSerExtensionList>();
         }
 
         /// <summary>
@@ -2878,22 +2878,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DLblsExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DataLabel))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(DataLabelPosition))]
-    [ChildElementInfo(typeof(ShowLegendKey))]
-    [ChildElementInfo(typeof(ShowValue))]
-    [ChildElementInfo(typeof(ShowCategoryName))]
-    [ChildElementInfo(typeof(ShowSeriesName))]
-    [ChildElementInfo(typeof(ShowPercent))]
-    [ChildElementInfo(typeof(ShowBubbleSize))]
-    [ChildElementInfo(typeof(Separator))]
-    [ChildElementInfo(typeof(ShowLeaderLines))]
-    [ChildElementInfo(typeof(LeaderLines))]
-    [ChildElementInfo(typeof(DLblsExtensionList))]
     public partial class DataLabels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2932,6 +2916,22 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "dLbls");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DataLabel>();
+            builder.AddChild<Delete>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<DataLabelPosition>();
+            builder.AddChild<ShowLegendKey>();
+            builder.AddChild<ShowValue>();
+            builder.AddChild<ShowCategoryName>();
+            builder.AddChild<ShowSeriesName>();
+            builder.AddChild<ShowPercent>();
+            builder.AddChild<ShowBubbleSize>();
+            builder.AddChild<Separator>();
+            builder.AddChild<ShowLeaderLines>();
+            builder.AddChild<LeaderLines>();
+            builder.AddChild<DLblsExtensionList>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3076,20 +3076,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>BarSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(InvertIfNegative))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Trendline))]
-    [ChildElementInfo(typeof(ErrorBars))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(BarSerExtensionList))]
     public partial class BarChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3128,6 +3114,20 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ser");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<InvertIfNegative>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Trendline>();
+            builder.AddChild<ErrorBars>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<Shape>();
+            builder.AddChild<BarSerExtensionList>();
         }
 
         /// <summary>
@@ -3260,18 +3260,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>AreaSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Trendline))]
-    [ChildElementInfo(typeof(ErrorBars))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(AreaSerExtensionList))]
     public partial class AreaChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3310,6 +3298,18 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ser");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Trendline>();
+            builder.AddChild<ErrorBars>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<AreaSerExtensionList>();
         }
 
         /// <summary>
@@ -3426,17 +3426,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>PieSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(Explosion))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(PieSerExtensionList))]
     public partial class PieChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3475,6 +3464,17 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ser");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<Explosion>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<PieSerExtensionList>();
         }
 
         /// <summary>
@@ -3601,15 +3601,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SurfaceSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(Bubble3D))]
-    [ChildElementInfo(typeof(SurfaceSerExtensionList))]
     public partial class SurfaceChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3648,6 +3639,15 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ser");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<Bubble3D>();
+            builder.AddChild<SurfaceSerExtensionList>();
         }
 
         /// <summary>
@@ -3803,7 +3803,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>BandFormat &lt;c:bandFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BandFormat))]
     public partial class BandFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3842,6 +3841,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "bandFmts");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BandFormat>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3870,11 +3870,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LogBase))]
-    [ChildElementInfo(typeof(Orientation))]
-    [ChildElementInfo(typeof(MaxAxisValue))]
-    [ChildElementInfo(typeof(MinAxisValue))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Scaling : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3913,6 +3908,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "scaling");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LogBase>();
+            builder.AddChild<Orientation>();
+            builder.AddChild<MaxAxisValue>();
+            builder.AddChild<MinAxisValue>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -4051,12 +4051,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartText))]
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(Overlay))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Title : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4095,6 +4089,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "title");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ChartText>();
+            builder.AddChild<Layout>();
+            builder.AddChild<Overlay>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -4766,21 +4766,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ChartSpaceExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Date1904))]
-    [ChildElementInfo(typeof(EditingLanguage))]
-    [ChildElementInfo(typeof(RoundedCorners))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Style))]
-    [ChildElementInfo(typeof(ColorMapOverride))]
-    [ChildElementInfo(typeof(PivotSource))]
-    [ChildElementInfo(typeof(Protection))]
-    [ChildElementInfo(typeof(Chart))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExternalData))]
-    [ChildElementInfo(typeof(PrintSettings))]
-    [ChildElementInfo(typeof(UserShapesReference))]
-    [ChildElementInfo(typeof(ChartSpaceExtensionList))]
     public partial class ChartSpace : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4819,6 +4804,21 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "chartSpace");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Date1904>();
+            builder.AddChild<EditingLanguage>();
+            builder.AddChild<RoundedCorners>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style>();
+            builder.AddChild<Style>();
+            builder.AddChild<ColorMapOverride>();
+            builder.AddChild<PivotSource>();
+            builder.AddChild<Protection>();
+            builder.AddChild<Chart>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExternalData>();
+            builder.AddChild<PrintSettings>();
+            builder.AddChild<UserShapesReference>();
+            builder.AddChild<ChartSpaceExtensionList>();
         }
 
         /// <summary>
@@ -4931,8 +4931,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize &lt;cdr:absSizeAnchor></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize))]
     public partial class UserShapes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4971,6 +4969,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "userShapes");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5565,7 +5565,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NumericValue &lt;c:v></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumericValue))]
     public partial class NumericPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5624,6 +5623,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "pt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NumericValue>();
             builder.AddElement<NumericPoint>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
@@ -5673,7 +5673,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>Extension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Extension))]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5712,6 +5711,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5738,9 +5738,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NumRefExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula))]
-    [ChildElementInfo(typeof(NumberingCache))]
-    [ChildElementInfo(typeof(NumRefExtensionList))]
     public partial class NumberReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5779,6 +5776,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "numRef");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Formula>();
+            builder.AddChild<NumberingCache>();
+            builder.AddChild<NumRefExtensionList>();
         }
 
         /// <summary>
@@ -5983,10 +5983,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FormatCode))]
-    [ChildElementInfo(typeof(PointCount))]
-    [ChildElementInfo(typeof(NumericPoint))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class NumberDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6023,6 +6019,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<FormatCode>();
+            builder.AddChild<PointCount>();
+            builder.AddChild<NumericPoint>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -6063,7 +6063,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>StringPoint &lt;c:pt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StringPoint))]
     public partial class Level : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6102,6 +6101,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "lvl");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StringPoint>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6128,9 +6128,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>MultiLvlStrRefExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula))]
-    [ChildElementInfo(typeof(MultiLevelStringCache))]
-    [ChildElementInfo(typeof(MultiLvlStrRefExtensionList))]
     public partial class MultiLevelStringReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6169,6 +6166,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "multiLvlStrRef");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Formula>();
+            builder.AddChild<MultiLevelStringCache>();
+            builder.AddChild<MultiLvlStrRefExtensionList>();
         }
 
         /// <summary>
@@ -6236,9 +6236,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>StrRefExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula))]
-    [ChildElementInfo(typeof(StringCache))]
-    [ChildElementInfo(typeof(StrRefExtensionList))]
     public partial class StringReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6277,6 +6274,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "strRef");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Formula>();
+            builder.AddChild<StringCache>();
+            builder.AddChild<StrRefExtensionList>();
         }
 
         /// <summary>
@@ -6476,9 +6476,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>StrDataExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PointCount))]
-    [ChildElementInfo(typeof(StringPoint))]
-    [ChildElementInfo(typeof(StrDataExtensionList))]
     public abstract partial class StringDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6515,6 +6512,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<PointCount>();
+            builder.AddChild<StringPoint>();
+            builder.AddChild<StrDataExtensionList>();
         }
 
         /// <summary>
@@ -6720,16 +6720,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LayoutTarget))]
-    [ChildElementInfo(typeof(LeftMode))]
-    [ChildElementInfo(typeof(TopMode))]
-    [ChildElementInfo(typeof(WidthMode))]
-    [ChildElementInfo(typeof(HeightMode))]
-    [ChildElementInfo(typeof(Left))]
-    [ChildElementInfo(typeof(Top))]
-    [ChildElementInfo(typeof(Width))]
-    [ChildElementInfo(typeof(Height))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ManualLayout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6768,6 +6758,16 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "manualLayout");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LayoutTarget>();
+            builder.AddChild<LeftMode>();
+            builder.AddChild<TopMode>();
+            builder.AddChild<WidthMode>();
+            builder.AddChild<HeightMode>();
+            builder.AddChild<Left>();
+            builder.AddChild<Top>();
+            builder.AddChild<Width>();
+            builder.AddChild<Height>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -7214,10 +7214,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Symbol))]
-    [ChildElementInfo(typeof(Size))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Marker : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7256,6 +7252,10 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "marker");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Symbol>();
+            builder.AddChild<Size>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -7339,11 +7339,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
     ///   <item><description>PictureStackUnit &lt;c:pictureStackUnit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ApplyToFront))]
-    [ChildElementInfo(typeof(ApplyToSides))]
-    [ChildElementInfo(typeof(ApplyToEnd))]
-    [ChildElementInfo(typeof(PictureFormat))]
-    [ChildElementInfo(typeof(PictureStackUnit))]
     public partial class PictureOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7382,6 +7377,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "pictureOptions");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ApplyToFront>();
+            builder.AddChild<ApplyToSides>();
+            builder.AddChild<ApplyToEnd>();
+            builder.AddChild<PictureFormat>();
+            builder.AddChild<PictureStackUnit>();
         }
 
         /// <summary>
@@ -7599,12 +7599,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(ChartText))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class TrendlineLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7643,6 +7637,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "trendlineLbl");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Layout>();
+            builder.AddChild<ChartText>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -8206,8 +8206,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>NumberLiteral &lt;c:numLit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
     public abstract partial class NumberDataSourceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8244,6 +8242,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<NumberReference>();
+            builder.AddChild<NumberLiteral>();
         }
 
         /// <summary>
@@ -8493,7 +8493,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartShapeProperties))]
     public abstract partial class UpDownBarType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8530,6 +8529,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<ChartShapeProperties>();
         }
 
         /// <summary>
@@ -8637,7 +8637,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SecondPiePoint &lt;c:secondPiePt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SecondPiePoint))]
     public partial class CustomSplit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8676,6 +8675,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "custSplit");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SecondPiePoint>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -8741,8 +8741,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (5L), MaxI
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
     public partial class BandFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8781,6 +8779,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (5L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "bandFmt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<ChartShapeProperties>();
         }
 
         /// <summary>
@@ -8953,10 +8953,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
     ///   <item><description>TextProperties &lt;c:txPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(ChartText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
     public partial class DisplayUnitsLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8995,6 +8991,10 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "dispUnitsLbl");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Layout>();
+            builder.AddChild<ChartText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
         }
 
         /// <summary>
@@ -9156,11 +9156,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(Marker))]
-    [ChildElementInfo(typeof(DataLabel))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class PivotFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9199,6 +9194,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "pivotFmt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<Marker>();
+            builder.AddChild<DataLabel>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -9332,10 +9332,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class LegendEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9374,6 +9370,10 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "legendEntry");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<Delete>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -9423,7 +9423,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
     ///   <item><description>PivotFormat &lt;c:pivotFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotFormat))]
     public partial class PivotFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9462,6 +9461,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "pivotFmts");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PivotFormat>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -9492,13 +9492,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RotateX))]
-    [ChildElementInfo(typeof(HeightPercent))]
-    [ChildElementInfo(typeof(RotateY))]
-    [ChildElementInfo(typeof(DepthPercent))]
-    [ChildElementInfo(typeof(RightAngleAxes))]
-    [ChildElementInfo(typeof(Perspective))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class View3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9537,6 +9530,13 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "view3D");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RotateX>();
+            builder.AddChild<HeightPercent>();
+            builder.AddChild<RotateY>();
+            builder.AddChild<DepthPercent>();
+            builder.AddChild<RightAngleAxes>();
+            builder.AddChild<Perspective>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -9865,10 +9865,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Thickness))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class SurfaceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9905,6 +9901,10 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<Thickness>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -9994,30 +9994,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(AreaChart))]
-    [ChildElementInfo(typeof(Area3DChart))]
-    [ChildElementInfo(typeof(LineChart))]
-    [ChildElementInfo(typeof(Line3DChart))]
-    [ChildElementInfo(typeof(StockChart))]
-    [ChildElementInfo(typeof(RadarChart))]
-    [ChildElementInfo(typeof(ScatterChart))]
-    [ChildElementInfo(typeof(PieChart))]
-    [ChildElementInfo(typeof(Pie3DChart))]
-    [ChildElementInfo(typeof(DoughnutChart))]
-    [ChildElementInfo(typeof(BarChart))]
-    [ChildElementInfo(typeof(Bar3DChart))]
-    [ChildElementInfo(typeof(OfPieChart))]
-    [ChildElementInfo(typeof(SurfaceChart))]
-    [ChildElementInfo(typeof(Surface3DChart))]
-    [ChildElementInfo(typeof(BubbleChart))]
-    [ChildElementInfo(typeof(ValueAxis))]
-    [ChildElementInfo(typeof(CategoryAxis))]
-    [ChildElementInfo(typeof(DateAxis))]
-    [ChildElementInfo(typeof(SeriesAxis))]
-    [ChildElementInfo(typeof(DataTable))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class PlotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10056,6 +10032,30 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "plotArea");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Layout>();
+            builder.AddChild<AreaChart>();
+            builder.AddChild<Area3DChart>();
+            builder.AddChild<LineChart>();
+            builder.AddChild<Line3DChart>();
+            builder.AddChild<StockChart>();
+            builder.AddChild<RadarChart>();
+            builder.AddChild<ScatterChart>();
+            builder.AddChild<PieChart>();
+            builder.AddChild<Pie3DChart>();
+            builder.AddChild<DoughnutChart>();
+            builder.AddChild<BarChart>();
+            builder.AddChild<Bar3DChart>();
+            builder.AddChild<OfPieChart>();
+            builder.AddChild<SurfaceChart>();
+            builder.AddChild<Surface3DChart>();
+            builder.AddChild<BubbleChart>();
+            builder.AddChild<ValueAxis>();
+            builder.AddChild<CategoryAxis>();
+            builder.AddChild<DateAxis>();
+            builder.AddChild<SeriesAxis>();
+            builder.AddChild<DataTable>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -10128,13 +10128,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LegendPosition))]
-    [ChildElementInfo(typeof(LegendEntry))]
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(Overlay))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Legend : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10173,6 +10166,13 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "legend");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LegendPosition>();
+            builder.AddChild<LegendEntry>();
+            builder.AddChild<Layout>();
+            builder.AddChild<Overlay>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -10258,12 +10258,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
     ///   <item><description>FirstFooter &lt;c:firstFooter></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OddHeader))]
-    [ChildElementInfo(typeof(OddFooter))]
-    [ChildElementInfo(typeof(EvenHeader))]
-    [ChildElementInfo(typeof(EvenFooter))]
-    [ChildElementInfo(typeof(FirstHeader))]
-    [ChildElementInfo(typeof(FirstFooter))]
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10332,6 +10326,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "headerFooter");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<OddHeader>();
+            builder.AddChild<OddFooter>();
+            builder.AddChild<EvenHeader>();
+            builder.AddChild<EvenFooter>();
+            builder.AddChild<FirstHeader>();
+            builder.AddChild<FirstFooter>();
             builder.AddElement<HeaderFooter>()
 .AddAttribute(0, "alignWithMargins", a => a.AlignWithMargins)
 .AddAttribute(0, "differentOddEven", a => a.DifferentOddEven)
@@ -10710,21 +10710,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10773,6 +10758,21 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "spPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -10862,22 +10862,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DLblExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(ChartText))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(DataLabelPosition))]
-    [ChildElementInfo(typeof(ShowLegendKey))]
-    [ChildElementInfo(typeof(ShowValue))]
-    [ChildElementInfo(typeof(ShowCategoryName))]
-    [ChildElementInfo(typeof(ShowSeriesName))]
-    [ChildElementInfo(typeof(ShowPercent))]
-    [ChildElementInfo(typeof(ShowBubbleSize))]
-    [ChildElementInfo(typeof(Separator))]
-    [ChildElementInfo(typeof(DLblExtensionList))]
     public partial class DataLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10916,6 +10900,22 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "dLbl");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<Delete>();
+            builder.AddChild<Layout>();
+            builder.AddChild<ChartText>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<DataLabelPosition>();
+            builder.AddChild<ShowLegendKey>();
+            builder.AddChild<ShowValue>();
+            builder.AddChild<ShowCategoryName>();
+            builder.AddChild<ShowSeriesName>();
+            builder.AddChild<ShowPercent>();
+            builder.AddChild<ShowBubbleSize>();
+            builder.AddChild<Separator>();
+            builder.AddChild<DLblExtensionList>();
         }
 
         /// <summary>
@@ -10989,13 +10989,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>AreaChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Grouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(AreaChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(DropLines))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(AreaChartExtensionList))]
     public partial class AreaChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11034,6 +11027,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "areaChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Grouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<AreaChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DropLines>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<AreaChartExtensionList>();
         }
 
         /// <summary>
@@ -11103,14 +11103,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Area3DChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Grouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(AreaChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(DropLines))]
-    [ChildElementInfo(typeof(GapDepth))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Area3DChartExtensionList))]
     public partial class Area3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11149,6 +11141,14 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "area3DChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Grouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<AreaChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DropLines>();
+            builder.AddChild<GapDepth>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<Area3DChartExtensionList>();
         }
 
         /// <summary>
@@ -11222,17 +11222,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>LineChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Grouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(LineChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(DropLines))]
-    [ChildElementInfo(typeof(HighLowLines))]
-    [ChildElementInfo(typeof(UpDownBars))]
-    [ChildElementInfo(typeof(ShowMarker))]
-    [ChildElementInfo(typeof(Smooth))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(LineChartExtensionList))]
     public partial class LineChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11271,6 +11260,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "lineChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Grouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<LineChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DropLines>();
+            builder.AddChild<HighLowLines>();
+            builder.AddChild<UpDownBars>();
+            builder.AddChild<ShowMarker>();
+            builder.AddChild<Smooth>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<LineChartExtensionList>();
         }
 
         /// <summary>
@@ -11344,14 +11344,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Line3DChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Grouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(LineChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(DropLines))]
-    [ChildElementInfo(typeof(GapDepth))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Line3DChartExtensionList))]
     public partial class Line3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11390,6 +11382,14 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "line3DChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Grouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<LineChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DropLines>();
+            builder.AddChild<GapDepth>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<Line3DChartExtensionList>();
         }
 
         /// <summary>
@@ -11459,13 +11459,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>StockChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LineChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(DropLines))]
-    [ChildElementInfo(typeof(HighLowLines))]
-    [ChildElementInfo(typeof(UpDownBars))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(StockChartExtensionList))]
     public partial class StockChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11504,6 +11497,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "stockChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LineChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DropLines>();
+            builder.AddChild<HighLowLines>();
+            builder.AddChild<UpDownBars>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<StockChartExtensionList>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -11539,12 +11539,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>RadarChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RadarStyle))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(RadarChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(RadarChartExtensionList))]
     public partial class RadarChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11583,6 +11577,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "radarChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RadarStyle>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<RadarChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<RadarChartExtensionList>();
         }
 
         /// <summary>
@@ -11643,12 +11643,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ScatterChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ScatterStyle))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(ScatterChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(ScatterChartExtensionList))]
     public partial class ScatterChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11687,6 +11681,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "scatterChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ScatterStyle>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<ScatterChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<ScatterChartExtensionList>();
         }
 
         /// <summary>
@@ -11746,11 +11746,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PieChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(PieChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(FirstSliceAngle))]
-    [ChildElementInfo(typeof(PieChartExtensionList))]
     public partial class PieChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11789,6 +11784,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "pieChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<VaryColors>();
+            builder.AddChild<PieChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<FirstSliceAngle>();
+            builder.AddChild<PieChartExtensionList>();
         }
 
         /// <summary>
@@ -11839,10 +11839,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Pie3DChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(PieChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Pie3DChartExtensionList))]
     public partial class Pie3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11881,6 +11877,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "pie3DChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<VaryColors>();
+            builder.AddChild<PieChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Pie3DChartExtensionList>();
         }
 
         /// <summary>
@@ -11932,12 +11932,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(PieChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(FirstSliceAngle))]
-    [ChildElementInfo(typeof(HoleSize))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class DoughnutChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11976,6 +11970,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "doughnutChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<VaryColors>();
+            builder.AddChild<PieChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<FirstSliceAngle>();
+            builder.AddChild<HoleSize>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -12033,16 +12033,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>BarChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BarDirection))]
-    [ChildElementInfo(typeof(BarGrouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(BarChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(GapWidth))]
-    [ChildElementInfo(typeof(Overlap))]
-    [ChildElementInfo(typeof(SeriesLines))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(BarChartExtensionList))]
     public partial class BarChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12081,6 +12071,16 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "barChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BarDirection>();
+            builder.AddChild<BarGrouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<BarChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<GapWidth>();
+            builder.AddChild<Overlap>();
+            builder.AddChild<SeriesLines>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<BarChartExtensionList>();
         }
 
         /// <summary>
@@ -12168,16 +12168,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Bar3DChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BarDirection))]
-    [ChildElementInfo(typeof(BarGrouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(BarChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(GapWidth))]
-    [ChildElementInfo(typeof(GapDepth))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Bar3DChartExtensionList))]
     public partial class Bar3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12216,6 +12206,16 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "bar3DChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BarDirection>();
+            builder.AddChild<BarGrouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<BarChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<GapWidth>();
+            builder.AddChild<GapDepth>();
+            builder.AddChild<Shape>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<Bar3DChartExtensionList>();
         }
 
         /// <summary>
@@ -12304,17 +12304,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfPieType))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(PieChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(GapWidth))]
-    [ChildElementInfo(typeof(SplitType))]
-    [ChildElementInfo(typeof(SplitPosition))]
-    [ChildElementInfo(typeof(CustomSplit))]
-    [ChildElementInfo(typeof(SecondPieSize))]
-    [ChildElementInfo(typeof(SeriesLines))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class OfPieChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12353,6 +12342,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ofPieChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<OfPieType>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<PieChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<GapWidth>();
+            builder.AddChild<SplitType>();
+            builder.AddChild<SplitPosition>();
+            builder.AddChild<CustomSplit>();
+            builder.AddChild<SecondPieSize>();
+            builder.AddChild<SeriesLines>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -12423,11 +12423,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>SurfaceChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Wireframe))]
-    [ChildElementInfo(typeof(SurfaceChartSeries))]
-    [ChildElementInfo(typeof(BandFormats))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(SurfaceChartExtensionList))]
     public partial class SurfaceChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12466,6 +12461,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "surfaceChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Wireframe>();
+            builder.AddChild<SurfaceChartSeries>();
+            builder.AddChild<BandFormats>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<SurfaceChartExtensionList>();
         }
 
         /// <summary>
@@ -12518,12 +12518,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Surface3DChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Wireframe))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(SurfaceChartSeries))]
-    [ChildElementInfo(typeof(BandFormats))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Surface3DChartExtensionList))]
     public partial class Surface3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12562,6 +12556,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "surface3DChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Wireframe>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<SurfaceChartSeries>();
+            builder.AddChild<BandFormats>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<Surface3DChartExtensionList>();
         }
 
         /// <summary>
@@ -12625,15 +12625,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>BubbleChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(BubbleChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Bubble3D))]
-    [ChildElementInfo(typeof(BubbleScale))]
-    [ChildElementInfo(typeof(ShowNegativeBubbles))]
-    [ChildElementInfo(typeof(SizeRepresents))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(BubbleChartExtensionList))]
     public partial class BubbleChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12672,6 +12663,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "bubbleChart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<VaryColors>();
+            builder.AddChild<BubbleChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Bubble3D>();
+            builder.AddChild<BubbleScale>();
+            builder.AddChild<ShowNegativeBubbles>();
+            builder.AddChild<SizeRepresents>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<BubbleChartExtensionList>();
         }
 
         /// <summary>
@@ -12737,27 +12737,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ValAxExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Scaling))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(AxisPosition))]
-    [ChildElementInfo(typeof(MajorGridlines))]
-    [ChildElementInfo(typeof(MinorGridlines))]
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(MajorTickMark))]
-    [ChildElementInfo(typeof(MinorTickMark))]
-    [ChildElementInfo(typeof(TickLabelPosition))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(CrossingAxis))]
-    [ChildElementInfo(typeof(Crosses))]
-    [ChildElementInfo(typeof(CrossesAt))]
-    [ChildElementInfo(typeof(CrossBetween))]
-    [ChildElementInfo(typeof(MajorUnit))]
-    [ChildElementInfo(typeof(MinorUnit))]
-    [ChildElementInfo(typeof(DisplayUnits))]
-    [ChildElementInfo(typeof(ValAxExtensionList))]
     public partial class ValueAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12796,6 +12775,27 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "valAx");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AxisId>();
+            builder.AddChild<Scaling>();
+            builder.AddChild<Delete>();
+            builder.AddChild<AxisPosition>();
+            builder.AddChild<MajorGridlines>();
+            builder.AddChild<MinorGridlines>();
+            builder.AddChild<Title>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<MajorTickMark>();
+            builder.AddChild<MinorTickMark>();
+            builder.AddChild<TickLabelPosition>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<CrossingAxis>();
+            builder.AddChild<Crosses>();
+            builder.AddChild<CrossesAt>();
+            builder.AddChild<CrossBetween>();
+            builder.AddChild<MajorUnit>();
+            builder.AddChild<MinorUnit>();
+            builder.AddChild<DisplayUnits>();
+            builder.AddChild<ValAxExtensionList>();
         }
 
         /// <summary>
@@ -13053,29 +13053,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>CatAxExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Scaling))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(AxisPosition))]
-    [ChildElementInfo(typeof(MajorGridlines))]
-    [ChildElementInfo(typeof(MinorGridlines))]
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(MajorTickMark))]
-    [ChildElementInfo(typeof(MinorTickMark))]
-    [ChildElementInfo(typeof(TickLabelPosition))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(CrossingAxis))]
-    [ChildElementInfo(typeof(Crosses))]
-    [ChildElementInfo(typeof(CrossesAt))]
-    [ChildElementInfo(typeof(AutoLabeled))]
-    [ChildElementInfo(typeof(LabelAlignment))]
-    [ChildElementInfo(typeof(LabelOffset))]
-    [ChildElementInfo(typeof(TickLabelSkip))]
-    [ChildElementInfo(typeof(TickMarkSkip))]
-    [ChildElementInfo(typeof(NoMultiLevelLabels))]
-    [ChildElementInfo(typeof(CatAxExtensionList))]
     public partial class CategoryAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13114,6 +13091,29 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "catAx");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AxisId>();
+            builder.AddChild<Scaling>();
+            builder.AddChild<Delete>();
+            builder.AddChild<AxisPosition>();
+            builder.AddChild<MajorGridlines>();
+            builder.AddChild<MinorGridlines>();
+            builder.AddChild<Title>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<MajorTickMark>();
+            builder.AddChild<MinorTickMark>();
+            builder.AddChild<TickLabelPosition>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<CrossingAxis>();
+            builder.AddChild<Crosses>();
+            builder.AddChild<CrossesAt>();
+            builder.AddChild<AutoLabeled>();
+            builder.AddChild<LabelAlignment>();
+            builder.AddChild<LabelOffset>();
+            builder.AddChild<TickLabelSkip>();
+            builder.AddChild<TickMarkSkip>();
+            builder.AddChild<NoMultiLevelLabels>();
+            builder.AddChild<CatAxExtensionList>();
         }
 
         /// <summary>
@@ -13374,30 +13374,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DateAxExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Scaling))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(AxisPosition))]
-    [ChildElementInfo(typeof(MajorGridlines))]
-    [ChildElementInfo(typeof(MinorGridlines))]
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(MajorTickMark))]
-    [ChildElementInfo(typeof(MinorTickMark))]
-    [ChildElementInfo(typeof(TickLabelPosition))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(CrossingAxis))]
-    [ChildElementInfo(typeof(Crosses))]
-    [ChildElementInfo(typeof(CrossesAt))]
-    [ChildElementInfo(typeof(AutoLabeled))]
-    [ChildElementInfo(typeof(LabelOffset))]
-    [ChildElementInfo(typeof(BaseTimeUnit))]
-    [ChildElementInfo(typeof(MajorUnit))]
-    [ChildElementInfo(typeof(MajorTimeUnit))]
-    [ChildElementInfo(typeof(MinorUnit))]
-    [ChildElementInfo(typeof(MinorTimeUnit))]
-    [ChildElementInfo(typeof(DateAxExtensionList))]
     public partial class DateAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13436,6 +13412,30 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "dateAx");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AxisId>();
+            builder.AddChild<Scaling>();
+            builder.AddChild<Delete>();
+            builder.AddChild<AxisPosition>();
+            builder.AddChild<MajorGridlines>();
+            builder.AddChild<MinorGridlines>();
+            builder.AddChild<Title>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<MajorTickMark>();
+            builder.AddChild<MinorTickMark>();
+            builder.AddChild<TickLabelPosition>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<CrossingAxis>();
+            builder.AddChild<Crosses>();
+            builder.AddChild<CrossesAt>();
+            builder.AddChild<AutoLabeled>();
+            builder.AddChild<LabelOffset>();
+            builder.AddChild<BaseTimeUnit>();
+            builder.AddChild<MajorUnit>();
+            builder.AddChild<MajorTimeUnit>();
+            builder.AddChild<MinorUnit>();
+            builder.AddChild<MinorTimeUnit>();
+            builder.AddChild<DateAxExtensionList>();
         }
 
         /// <summary>
@@ -13692,25 +13692,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>SerAxExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Scaling))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(AxisPosition))]
-    [ChildElementInfo(typeof(MajorGridlines))]
-    [ChildElementInfo(typeof(MinorGridlines))]
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(MajorTickMark))]
-    [ChildElementInfo(typeof(MinorTickMark))]
-    [ChildElementInfo(typeof(TickLabelPosition))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(CrossingAxis))]
-    [ChildElementInfo(typeof(Crosses))]
-    [ChildElementInfo(typeof(CrossesAt))]
-    [ChildElementInfo(typeof(TickLabelSkip))]
-    [ChildElementInfo(typeof(TickMarkSkip))]
-    [ChildElementInfo(typeof(SerAxExtensionList))]
     public partial class SeriesAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13749,6 +13730,25 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "serAx");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AxisId>();
+            builder.AddChild<Scaling>();
+            builder.AddChild<Delete>();
+            builder.AddChild<AxisPosition>();
+            builder.AddChild<MajorGridlines>();
+            builder.AddChild<MinorGridlines>();
+            builder.AddChild<Title>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<MajorTickMark>();
+            builder.AddChild<MinorTickMark>();
+            builder.AddChild<TickLabelPosition>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<CrossingAxis>();
+            builder.AddChild<Crosses>();
+            builder.AddChild<CrossesAt>();
+            builder.AddChild<TickLabelSkip>();
+            builder.AddChild<TickMarkSkip>();
+            builder.AddChild<SerAxExtensionList>();
         }
 
         /// <summary>
@@ -13988,13 +13988,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShowHorizontalBorder))]
-    [ChildElementInfo(typeof(ShowVerticalBorder))]
-    [ChildElementInfo(typeof(ShowOutlineBorder))]
-    [ChildElementInfo(typeof(ShowKeys))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class DataTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14033,6 +14026,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "dTable");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ShowHorizontalBorder>();
+            builder.AddChild<ShowVerticalBorder>();
+            builder.AddChild<ShowOutlineBorder>();
+            builder.AddChild<ShowKeys>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -14235,7 +14235,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxI
     ///   <item><description>NumericValue &lt;c:v></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumericValue))]
     public partial class StringPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14284,6 +14283,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "pt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NumericValue>();
             builder.AddElement<StringPoint>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
@@ -14372,7 +14372,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension &lt;c15:filteredLineSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), FileFormatVersions.Office2013)]
     public partial class StockChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14421,6 +14420,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
             builder.AddElement<StockChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -14452,7 +14452,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries &lt;c15:filteredPieSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), FileFormatVersions.Office2013)]
     public partial class PieChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14501,6 +14500,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
             builder.AddElement<PieChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -14532,7 +14532,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries &lt;c15:filteredPieSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), FileFormatVersions.Office2013)]
     public partial class Pie3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14581,6 +14580,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
             builder.AddElement<Pie3DChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -14614,9 +14614,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference &lt;c15:formulaRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), FileFormatVersions.Office2013)]
     public partial class NumRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14665,6 +14662,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
             builder.AddElement<NumRefExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -14698,7 +14698,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories &lt;c15:autoCat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories), FileFormatVersions.Office2013)]
     public partial class StrDataExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14747,6 +14746,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories>();
             builder.AddElement<StrDataExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -14780,9 +14780,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference &lt;c15:formulaRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), FileFormatVersions.Office2013)]
     public partial class StrRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14831,6 +14828,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
             builder.AddElement<StrRefExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -14866,9 +14866,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference &lt;c15:formulaRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), FileFormatVersions.Office2013)]
     public partial class MultiLvlStrRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14917,6 +14914,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
             builder.AddElement<MultiLvlStrRefExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -14954,11 +14954,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout &lt;c15:layout></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), FileFormatVersions.Office2013)]
     public partial class DLblExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15007,6 +15002,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
             builder.AddElement<DLblExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15048,13 +15048,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines &lt;c15:leaderLines></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines), FileFormatVersions.Office2013)]
     public partial class DLblsExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15103,6 +15096,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines>();
             builder.AddElement<DLblsExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15143,10 +15143,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
     public partial class LineSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15195,6 +15191,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddElement<LineSerExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15232,10 +15232,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
     public partial class ScatterSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15284,6 +15280,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddElement<ScatterSerExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15321,10 +15321,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
     public partial class RadarSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15373,6 +15369,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddElement<RadarSerExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15410,10 +15410,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
     public partial class AreaSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15462,6 +15458,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddElement<AreaSerExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15499,10 +15499,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
     public partial class PieSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15551,6 +15547,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddElement<PieSerExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15587,9 +15587,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
     public partial class SurfaceSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15638,6 +15635,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddElement<SurfaceSerExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15671,7 +15671,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension &lt;c15:filteredLineSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), FileFormatVersions.Office2013)]
     public partial class LineChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15720,6 +15719,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
             builder.AddElement<LineChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15751,7 +15751,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension &lt;c15:filteredLineSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), FileFormatVersions.Office2013)]
     public partial class Line3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15800,6 +15799,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
             builder.AddElement<Line3DChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15831,7 +15831,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries &lt;c15:filteredScatterSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries), FileFormatVersions.Office2013)]
     public partial class ScatterChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15880,6 +15879,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries>();
             builder.AddElement<ScatterChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15911,7 +15911,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries &lt;c15:filteredRadarSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries), FileFormatVersions.Office2013)]
     public partial class RadarChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15960,6 +15959,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries>();
             builder.AddElement<RadarChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -15991,7 +15991,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries &lt;c15:filteredBarSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), FileFormatVersions.Office2013)]
     public partial class BarChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16040,6 +16039,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
             builder.AddElement<BarChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16071,7 +16071,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries &lt;c15:filteredBarSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), FileFormatVersions.Office2013)]
     public partial class Bar3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16120,6 +16119,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
             builder.AddElement<Bar3DChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16151,7 +16151,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries &lt;c15:filteredAreaSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), FileFormatVersions.Office2013)]
     public partial class AreaChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16200,6 +16199,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
             builder.AddElement<AreaChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16231,7 +16231,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries &lt;c15:filteredAreaSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), FileFormatVersions.Office2013)]
     public partial class Area3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16280,6 +16279,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
             builder.AddElement<Area3DChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16311,7 +16311,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries &lt;c15:filteredBubbleSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries), FileFormatVersions.Office2013)]
     public partial class BubbleChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16360,6 +16359,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries>();
             builder.AddElement<BubbleChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16391,7 +16391,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries &lt;c15:filteredSurfaceSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), FileFormatVersions.Office2013)]
     public partial class SurfaceChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16440,6 +16439,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
             builder.AddElement<SurfaceChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16471,7 +16471,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries &lt;c15:filteredSurfaceSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), FileFormatVersions.Office2013)]
     public partial class Surface3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16520,6 +16519,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
             builder.AddElement<Surface3DChartExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16551,7 +16551,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat &lt;c15:numFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
     public partial class CatAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16600,6 +16599,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
             builder.AddElement<CatAxExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16631,7 +16631,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat &lt;c15:numFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
     public partial class DateAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16680,6 +16679,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
             builder.AddElement<DateAxExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16711,7 +16711,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat &lt;c15:numFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
     public partial class SerAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16760,6 +16759,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
             builder.AddElement<SerAxExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16791,7 +16791,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat &lt;c15:numFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
     public partial class ValAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16840,6 +16839,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
             builder.AddElement<ValAxExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -16874,10 +16874,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GapWidth))]
-    [ChildElementInfo(typeof(UpBars))]
-    [ChildElementInfo(typeof(DownBars))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class UpDownBars : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16916,6 +16912,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "upDownBars");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<GapWidth>();
+            builder.AddChild<UpBars>();
+            builder.AddChild<DownBars>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -16995,7 +16995,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>StockChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StockChartExtension))]
     public partial class StockChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17034,6 +17033,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StockChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17058,7 +17058,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PieChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PieChartExtension))]
     public partial class PieChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17097,6 +17096,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PieChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17121,7 +17121,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Pie3DChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Pie3DChartExtension))]
     public partial class Pie3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17160,6 +17159,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Pie3DChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17184,7 +17184,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>NumRefExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumRefExtension))]
     public partial class NumRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17223,6 +17222,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<NumRefExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17247,7 +17247,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>StrDataExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StrDataExtension))]
     public partial class StrDataExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17286,6 +17285,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StrDataExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17310,7 +17310,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>StrRefExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StrRefExtension))]
     public partial class StrRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17349,6 +17348,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StrRefExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17375,9 +17375,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PointCount))]
-    [ChildElementInfo(typeof(Level))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class MultiLevelStringCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17416,6 +17413,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "multiLvlStrCache");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PointCount>();
+            builder.AddChild<Level>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -17455,7 +17455,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>MultiLvlStrRefExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MultiLvlStrRefExtension))]
     public partial class MultiLvlStrRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17494,6 +17493,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<MultiLvlStrRefExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17518,7 +17518,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DLblExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DLblExtension))]
     public partial class DLblExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17557,6 +17556,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DLblExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17581,7 +17581,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DLblsExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DLblsExtension))]
     public partial class DLblsExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17620,6 +17619,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DLblsExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17651,14 +17651,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(InvertIfNegative))]
-    [ChildElementInfo(typeof(Marker))]
-    [ChildElementInfo(typeof(Bubble3D))]
-    [ChildElementInfo(typeof(Explosion))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class DataPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17697,6 +17689,14 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "dPt");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<InvertIfNegative>();
+            builder.AddChild<Marker>();
+            builder.AddChild<Bubble3D>();
+            builder.AddChild<Explosion>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -17843,18 +17843,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TrendlineName))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TrendlineType))]
-    [ChildElementInfo(typeof(PolynomialOrder))]
-    [ChildElementInfo(typeof(Period))]
-    [ChildElementInfo(typeof(Forward))]
-    [ChildElementInfo(typeof(Backward))]
-    [ChildElementInfo(typeof(Intercept))]
-    [ChildElementInfo(typeof(DisplayRSquaredValue))]
-    [ChildElementInfo(typeof(DisplayEquation))]
-    [ChildElementInfo(typeof(TrendlineLabel))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Trendline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17893,6 +17881,18 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "trendline");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<TrendlineName>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TrendlineType>();
+            builder.AddChild<PolynomialOrder>();
+            builder.AddChild<Period>();
+            builder.AddChild<Forward>();
+            builder.AddChild<Backward>();
+            builder.AddChild<Intercept>();
+            builder.AddChild<DisplayRSquaredValue>();
+            builder.AddChild<DisplayEquation>();
+            builder.AddChild<TrendlineLabel>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -18092,15 +18092,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ErrorDirection))]
-    [ChildElementInfo(typeof(ErrorBarType))]
-    [ChildElementInfo(typeof(ErrorBarValueType))]
-    [ChildElementInfo(typeof(NoEndCap))]
-    [ChildElementInfo(typeof(Plus))]
-    [ChildElementInfo(typeof(Minus))]
-    [ChildElementInfo(typeof(ErrorBarValue))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class ErrorBars : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18139,6 +18130,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "errBars");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ErrorDirection>();
+            builder.AddChild<ErrorBarType>();
+            builder.AddChild<ErrorBarValueType>();
+            builder.AddChild<NoEndCap>();
+            builder.AddChild<Plus>();
+            builder.AddChild<Minus>();
+            builder.AddChild<ErrorBarValue>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -18438,11 +18438,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>StringLiteral &lt;c:strLit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MultiLevelStringReference))]
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
-    [ChildElementInfo(typeof(StringReference))]
-    [ChildElementInfo(typeof(StringLiteral))]
     public abstract partial class AxisDataSourceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18479,6 +18474,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<MultiLevelStringReference>();
+            builder.AddChild<NumberReference>();
+            builder.AddChild<NumberLiteral>();
+            builder.AddChild<StringReference>();
+            builder.AddChild<StringLiteral>();
         }
 
         /// <summary>
@@ -18558,7 +18558,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>LineSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LineSerExtension))]
     public partial class LineSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18597,6 +18596,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LineSerExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18621,7 +18621,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ScatterSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ScatterSerExtension))]
     public partial class ScatterSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18660,6 +18659,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ScatterSerExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18684,7 +18684,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>RadarSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RadarSerExtension))]
     public partial class RadarSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18723,6 +18722,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RadarSerExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18784,7 +18784,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>BarSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BarSerExtension))]
     public partial class BarSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18823,6 +18822,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BarSerExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18851,11 +18851,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
     public partial class BarSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18904,6 +18899,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddElement<BarSerExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -18939,7 +18939,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>AreaSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AreaSerExtension))]
     public partial class AreaSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18978,6 +18977,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AreaSerExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19002,7 +19002,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PieSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PieSerExtension))]
     public partial class PieSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19041,6 +19040,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PieSerExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19065,7 +19065,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>BubbleSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BubbleSerExtension))]
     public partial class BubbleSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19104,6 +19103,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BubbleSerExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19131,10 +19131,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
     public partial class BubbleSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19183,6 +19179,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddElement<BubbleSerExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -19217,7 +19217,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>SurfaceSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SurfaceSerExtension))]
     public partial class SurfaceSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19256,6 +19255,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SurfaceSerExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19280,7 +19280,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>LineChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LineChartExtension))]
     public partial class LineChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19319,6 +19318,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<LineChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19343,7 +19343,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>Line3DChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Line3DChartExtension))]
     public partial class Line3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19382,6 +19381,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Line3DChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19455,19 +19455,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ScatterSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(Marker))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Trendline))]
-    [ChildElementInfo(typeof(ErrorBars))]
-    [ChildElementInfo(typeof(XValues))]
-    [ChildElementInfo(typeof(YValues))]
-    [ChildElementInfo(typeof(Smooth))]
-    [ChildElementInfo(typeof(ScatterSerExtensionList))]
     public partial class ScatterChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19506,6 +19493,19 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ser");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<Marker>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Trendline>();
+            builder.AddChild<ErrorBars>();
+            builder.AddChild<XValues>();
+            builder.AddChild<YValues>();
+            builder.AddChild<Smooth>();
+            builder.AddChild<ScatterSerExtensionList>();
         }
 
         /// <summary>
@@ -19613,7 +19613,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ScatterChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ScatterChartExtension))]
     public partial class ScatterChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19652,6 +19651,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ScatterChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19726,17 +19726,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>RadarSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(Marker))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(RadarSerExtensionList))]
     public partial class RadarChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19775,6 +19764,17 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ser");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<Marker>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<RadarSerExtensionList>();
         }
 
         /// <summary>
@@ -19893,7 +19893,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>RadarChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RadarChartExtension))]
     public partial class RadarChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19932,6 +19931,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RadarChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -19996,7 +19996,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), M
     ///   <item><description>BarChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BarChartExtension))]
     public partial class BarChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20035,6 +20034,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), M
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BarChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20059,7 +20059,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), M
     ///   <item><description>Bar3DChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Bar3DChartExtension))]
     public partial class Bar3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20098,6 +20097,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), M
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Bar3DChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20122,7 +20122,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), M
     ///   <item><description>AreaChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AreaChartExtension))]
     public partial class AreaChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20161,6 +20160,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), M
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AreaChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20185,7 +20185,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), M
     ///   <item><description>Area3DChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Area3DChartExtension))]
     public partial class Area3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20224,6 +20223,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), M
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Area3DChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20262,21 +20262,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), M
     ///   <item><description>BubbleSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(InvertIfNegative))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Trendline))]
-    [ChildElementInfo(typeof(ErrorBars))]
-    [ChildElementInfo(typeof(XValues))]
-    [ChildElementInfo(typeof(YValues))]
-    [ChildElementInfo(typeof(BubbleSize))]
-    [ChildElementInfo(typeof(Bubble3D))]
-    [ChildElementInfo(typeof(BubbleSerExtensionList))]
     public partial class BubbleChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20315,6 +20300,21 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), M
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ser");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<InvertIfNegative>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Trendline>();
+            builder.AddChild<ErrorBars>();
+            builder.AddChild<XValues>();
+            builder.AddChild<YValues>();
+            builder.AddChild<BubbleSize>();
+            builder.AddChild<Bubble3D>();
+            builder.AddChild<BubbleSerExtensionList>();
         }
 
         /// <summary>
@@ -20514,7 +20514,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>BubbleChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BubbleChartExtension))]
     public partial class BubbleChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20553,6 +20552,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<BubbleChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20577,7 +20577,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>SurfaceChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SurfaceChartExtension))]
     public partial class SurfaceChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20616,6 +20615,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SurfaceChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20640,7 +20640,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>Surface3DChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Surface3DChartExtension))]
     public partial class Surface3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20679,6 +20678,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Surface3DChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20869,7 +20869,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>CatAxExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CatAxExtension))]
     public partial class CatAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20908,6 +20907,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CatAxExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -21125,7 +21125,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DateAxExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DateAxExtension))]
     public partial class DateAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21164,6 +21163,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DateAxExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -21188,7 +21188,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>SerAxExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SerAxExtension))]
     public partial class SerAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21227,6 +21226,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SerAxExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -21294,10 +21294,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomDisplayUnit))]
-    [ChildElementInfo(typeof(BuiltInUnit))]
-    [ChildElementInfo(typeof(DisplayUnitsLabel))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class DisplayUnits : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21336,6 +21332,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "dispUnits");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<CustomDisplayUnit>();
+            builder.AddChild<BuiltInUnit>();
+            builder.AddChild<DisplayUnitsLabel>();
+            builder.AddChild<ExtensionList>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -21366,7 +21366,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ValAxExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ValAxExtension))]
     public partial class ValAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21405,6 +21404,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ValAxExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -21509,7 +21509,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class ColorMapOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21668,6 +21667,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "clrMapOvr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<ColorMapOverride>()
 .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
 {
@@ -21768,9 +21768,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotTableName))]
-    [ChildElementInfo(typeof(FormatId))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class PivotSource : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21809,6 +21806,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "pivotSource");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<PivotTableName>();
+            builder.AddChild<FormatId>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -21878,11 +21878,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>UserInterface &lt;c:userInterface></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartObject))]
-    [ChildElementInfo(typeof(Data))]
-    [ChildElementInfo(typeof(Formatting))]
-    [ChildElementInfo(typeof(Selection))]
-    [ChildElementInfo(typeof(UserInterface))]
     public partial class Protection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21921,6 +21916,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "protection");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ChartObject>();
+            builder.AddChild<Data>();
+            builder.AddChild<Formatting>();
+            builder.AddChild<Selection>();
+            builder.AddChild<UserInterface>();
         }
 
         /// <summary>
@@ -22026,19 +22026,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(AutoTitleDeleted))]
-    [ChildElementInfo(typeof(PivotFormats))]
-    [ChildElementInfo(typeof(View3D))]
-    [ChildElementInfo(typeof(Floor))]
-    [ChildElementInfo(typeof(SideWall))]
-    [ChildElementInfo(typeof(BackWall))]
-    [ChildElementInfo(typeof(PlotArea))]
-    [ChildElementInfo(typeof(Legend))]
-    [ChildElementInfo(typeof(PlotVisibleOnly))]
-    [ChildElementInfo(typeof(DisplayBlanksAs))]
-    [ChildElementInfo(typeof(ShowDataLabelsOverMaximum))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public partial class Chart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22077,6 +22064,19 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "chart");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Title>();
+            builder.AddChild<AutoTitleDeleted>();
+            builder.AddChild<PivotFormats>();
+            builder.AddChild<View3D>();
+            builder.AddChild<Floor>();
+            builder.AddChild<SideWall>();
+            builder.AddChild<BackWall>();
+            builder.AddChild<PlotArea>();
+            builder.AddChild<Legend>();
+            builder.AddChild<PlotVisibleOnly>();
+            builder.AddChild<DisplayBlanksAs>();
+            builder.AddChild<ShowDataLabelsOverMaximum>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -22282,7 +22282,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>AutoUpdate &lt;c:autoUpdate></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AutoUpdate))]
     public partial class ExternalData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22334,6 +22333,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "externalData");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AutoUpdate>();
             builder.AddElement<ExternalData>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -22385,10 +22385,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>LegacyDrawingHeaderFooter &lt;c:legacyDrawingHF></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(HeaderFooter))]
-    [ChildElementInfo(typeof(PageMargins))]
-    [ChildElementInfo(typeof(PageSetup))]
-    [ChildElementInfo(typeof(LegacyDrawingHeaderFooter))]
     public partial class PrintSettings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22427,6 +22423,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "printSettings");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<HeaderFooter>();
+            builder.AddChild<PageMargins>();
+            builder.AddChild<PageSetup>();
+            builder.AddChild<LegacyDrawingHeaderFooter>();
         }
 
         /// <summary>
@@ -22506,7 +22506,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ChartSpaceExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartSpaceExtension))]
     public partial class ChartSpaceExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22545,6 +22544,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "extLst");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ChartSpaceExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -22571,9 +22571,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource &lt;c15:pivotSource></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource), FileFormatVersions.Office2013)]
     public partial class ChartSpaceExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22622,6 +22619,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ext");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource>();
             builder.AddElement<ChartSpaceExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {

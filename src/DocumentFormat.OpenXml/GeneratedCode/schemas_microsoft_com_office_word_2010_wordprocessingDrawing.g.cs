@@ -102,7 +102,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     ///   <item><description>PercentageWidth &lt;wp14:pctWidth></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PercentageWidth), FileFormatVersions.Office2010)]
     public partial class RelativeWidth : OpenXmlCompositeElement
     {
         /// <summary>
@@ -151,6 +150,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(51, "sizeRelH");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<PercentageWidth>();
             builder.AddElement<RelativeWidth>()
 .AddAttribute(0, "relativeFrom", a => a.ObjectId, aBuilder =>
 {
@@ -194,7 +194,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>PercentageHeight &lt;wp14:pctHeight></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PercentageHeight), FileFormatVersions.Office2010)]
     public partial class RelativeHeight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -243,6 +242,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(51, "sizeRelV");
             builder.Availability = (FileFormatVersions.Office2010);
+            builder.AddChild<PercentageHeight>();
             builder.AddElement<RelativeHeight>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
 {

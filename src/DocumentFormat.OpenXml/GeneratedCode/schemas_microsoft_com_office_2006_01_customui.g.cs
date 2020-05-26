@@ -1192,8 +1192,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>UnsizedButton &lt;mso:button></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Item))]
-    [ChildElementInfo(typeof(UnsizedButton))]
     public partial class UnsizedGallery : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1712,6 +1710,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "gallery");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Item>();
+            builder.AddChild<UnsizedButton>();
             builder.AddElement<UnsizedGallery>()
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
 {
@@ -2503,9 +2503,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>UnsizedMenu &lt;mso:menu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VisibleButton))]
-    [ChildElementInfo(typeof(VisibleToggleButton))]
-    [ChildElementInfo(typeof(UnsizedMenu))]
     public partial class UnsizedSplitButton : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2704,6 +2701,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "splitButton");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<VisibleButton>();
+            builder.AddChild<VisibleToggleButton>();
+            builder.AddChild<UnsizedMenu>();
             builder.AddElement<UnsizedSplitButton>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
@@ -2800,15 +2800,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>UnsizedDynamicMenu &lt;mso:dynamicMenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UnsizedControlClone))]
-    [ChildElementInfo(typeof(UnsizedButton))]
-    [ChildElementInfo(typeof(CheckBox))]
-    [ChildElementInfo(typeof(UnsizedGallery))]
-    [ChildElementInfo(typeof(UnsizedToggleButton))]
-    [ChildElementInfo(typeof(MenuSeparator))]
-    [ChildElementInfo(typeof(UnsizedSplitButton))]
-    [ChildElementInfo(typeof(UnsizedMenu))]
-    [ChildElementInfo(typeof(UnsizedDynamicMenu))]
     public partial class UnsizedMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3147,6 +3138,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "menu");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<UnsizedControlClone>();
+            builder.AddChild<UnsizedButton>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<UnsizedGallery>();
+            builder.AddChild<UnsizedToggleButton>();
+            builder.AddChild<MenuSeparator>();
+            builder.AddChild<UnsizedSplitButton>();
+            builder.AddChild<UnsizedMenu>();
+            builder.AddChild<UnsizedDynamicMenu>();
             builder.AddElement<UnsizedMenu>()
 .AddAttribute(0, "itemSize", a => a.ItemSize)
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
@@ -3751,9 +3751,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>MenuWithTitle &lt;mso:menu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VisibleButton))]
-    [ChildElementInfo(typeof(VisibleToggleButton))]
-    [ChildElementInfo(typeof(MenuWithTitle))]
     public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3952,6 +3949,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "splitButton");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<VisibleButton>();
+            builder.AddChild<VisibleToggleButton>();
+            builder.AddChild<MenuWithTitle>();
             builder.AddElement<SplitButtonWithTitle>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
@@ -4048,15 +4048,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>UnsizedDynamicMenu &lt;mso:dynamicMenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UnsizedControlClone))]
-    [ChildElementInfo(typeof(UnsizedButton))]
-    [ChildElementInfo(typeof(CheckBox))]
-    [ChildElementInfo(typeof(UnsizedGallery))]
-    [ChildElementInfo(typeof(UnsizedToggleButton))]
-    [ChildElementInfo(typeof(MenuSeparator))]
-    [ChildElementInfo(typeof(SplitButtonWithTitle))]
-    [ChildElementInfo(typeof(MenuWithTitle))]
-    [ChildElementInfo(typeof(UnsizedDynamicMenu))]
     public partial class MenuWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4395,6 +4386,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "menu");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<UnsizedControlClone>();
+            builder.AddChild<UnsizedButton>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<UnsizedGallery>();
+            builder.AddChild<UnsizedToggleButton>();
+            builder.AddChild<MenuSeparator>();
+            builder.AddChild<SplitButtonWithTitle>();
+            builder.AddChild<MenuWithTitle>();
+            builder.AddChild<UnsizedDynamicMenu>();
             builder.AddElement<MenuWithTitle>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -6659,7 +6659,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>Item &lt;mso:item></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Item))]
     public partial class ComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7088,6 +7087,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "comboBox");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Item>();
             builder.AddElement<ComboBox>()
 .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
 .AddAttribute(0, "getItemCount", a => a.GetItemCount, aBuilder =>
@@ -7255,8 +7255,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>UnsizedButton &lt;mso:button></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Item))]
-    [ChildElementInfo(typeof(UnsizedButton))]
     public partial class DropDown : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7685,6 +7683,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "dropDown");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Item>();
+            builder.AddChild<UnsizedButton>();
             builder.AddElement<DropDown>()
 .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
 {
@@ -7853,8 +7853,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>UnsizedButton &lt;mso:button></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Item))]
-    [ChildElementInfo(typeof(UnsizedButton))]
     public partial class Gallery : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8393,6 +8391,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "gallery");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Item>();
+            builder.AddChild<UnsizedButton>();
             builder.AddElement<Gallery>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -8612,15 +8612,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>UnsizedDynamicMenu &lt;mso:dynamicMenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UnsizedControlClone))]
-    [ChildElementInfo(typeof(UnsizedButton))]
-    [ChildElementInfo(typeof(CheckBox))]
-    [ChildElementInfo(typeof(UnsizedGallery))]
-    [ChildElementInfo(typeof(UnsizedToggleButton))]
-    [ChildElementInfo(typeof(MenuSeparator))]
-    [ChildElementInfo(typeof(UnsizedSplitButton))]
-    [ChildElementInfo(typeof(UnsizedMenu))]
-    [ChildElementInfo(typeof(UnsizedDynamicMenu))]
     public partial class Menu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8979,6 +8970,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "menu");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<UnsizedControlClone>();
+            builder.AddChild<UnsizedButton>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<UnsizedGallery>();
+            builder.AddChild<UnsizedToggleButton>();
+            builder.AddChild<MenuSeparator>();
+            builder.AddChild<UnsizedSplitButton>();
+            builder.AddChild<UnsizedMenu>();
+            builder.AddChild<UnsizedDynamicMenu>();
             builder.AddElement<Menu>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -9616,9 +9616,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>UnsizedMenu &lt;mso:menu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VisibleButton))]
-    [ChildElementInfo(typeof(VisibleToggleButton))]
-    [ChildElementInfo(typeof(UnsizedMenu))]
     public partial class SplitButton : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9837,6 +9834,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "splitButton");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<VisibleButton>();
+            builder.AddChild<VisibleToggleButton>();
+            builder.AddChild<UnsizedMenu>();
             builder.AddElement<SplitButton>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -9946,20 +9946,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>ButtonGroup &lt;mso:buttonGroup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlClone))]
-    [ChildElementInfo(typeof(TextLabel))]
-    [ChildElementInfo(typeof(Button))]
-    [ChildElementInfo(typeof(ToggleButton))]
-    [ChildElementInfo(typeof(CheckBox))]
-    [ChildElementInfo(typeof(EditBox))]
-    [ChildElementInfo(typeof(ComboBox))]
-    [ChildElementInfo(typeof(DropDown))]
-    [ChildElementInfo(typeof(Gallery))]
-    [ChildElementInfo(typeof(Menu))]
-    [ChildElementInfo(typeof(DynamicMenu))]
-    [ChildElementInfo(typeof(SplitButton))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(ButtonGroup))]
     public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10088,6 +10074,20 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "box");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ControlClone>();
+            builder.AddChild<TextLabel>();
+            builder.AddChild<Button>();
+            builder.AddChild<ToggleButton>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<EditBox>();
+            builder.AddChild<ComboBox>();
+            builder.AddChild<DropDown>();
+            builder.AddChild<Gallery>();
+            builder.AddChild<Menu>();
+            builder.AddChild<DynamicMenu>();
+            builder.AddChild<SplitButton>();
+            builder.AddChild<Box>();
+            builder.AddChild<ButtonGroup>();
             builder.AddElement<Box>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -10165,13 +10165,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
     ///   <item><description>UnsizedSplitButton &lt;mso:splitButton></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UnsizedControlClone))]
-    [ChildElementInfo(typeof(UnsizedButton))]
-    [ChildElementInfo(typeof(UnsizedToggleButton))]
-    [ChildElementInfo(typeof(UnsizedGallery))]
-    [ChildElementInfo(typeof(UnsizedMenu))]
-    [ChildElementInfo(typeof(UnsizedDynamicMenu))]
-    [ChildElementInfo(typeof(UnsizedSplitButton))]
     public partial class ButtonGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10290,6 +10283,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "buttonGroup");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<UnsizedControlClone>();
+            builder.AddChild<UnsizedButton>();
+            builder.AddChild<UnsizedToggleButton>();
+            builder.AddChild<UnsizedGallery>();
+            builder.AddChild<UnsizedMenu>();
+            builder.AddChild<UnsizedDynamicMenu>();
+            builder.AddChild<UnsizedSplitButton>();
             builder.AddElement<ButtonGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -10361,15 +10361,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
     ///   <item><description>UnsizedDynamicMenu &lt;mso:dynamicMenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UnsizedControlClone))]
-    [ChildElementInfo(typeof(UnsizedButton))]
-    [ChildElementInfo(typeof(CheckBox))]
-    [ChildElementInfo(typeof(UnsizedGallery))]
-    [ChildElementInfo(typeof(UnsizedToggleButton))]
-    [ChildElementInfo(typeof(MenuSeparator))]
-    [ChildElementInfo(typeof(UnsizedSplitButton))]
-    [ChildElementInfo(typeof(UnsizedMenu))]
-    [ChildElementInfo(typeof(UnsizedDynamicMenu))]
     public partial class MenuRoot : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10438,6 +10429,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "menu");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<UnsizedControlClone>();
+            builder.AddChild<UnsizedButton>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<UnsizedGallery>();
+            builder.AddChild<UnsizedToggleButton>();
+            builder.AddChild<MenuSeparator>();
+            builder.AddChild<UnsizedSplitButton>();
+            builder.AddChild<UnsizedMenu>();
+            builder.AddChild<UnsizedDynamicMenu>();
             builder.AddElement<MenuRoot>()
 .AddAttribute(0, "title", a => a.Title, aBuilder =>
 {
@@ -10496,8 +10496,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>Ribbon &lt;mso:ribbon></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RepurposedCommands))]
-    [ChildElementInfo(typeof(Ribbon))]
     public partial class CustomUI : OpenXmlPartRootElement
     {
         /// <summary>
@@ -10556,6 +10554,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "customUI");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RepurposedCommands>();
+            builder.AddChild<Ribbon>();
             builder.AddElement<CustomUI>()
 .AddAttribute(0, "onLoad", a => a.OnLoad, aBuilder =>
 {
@@ -11693,7 +11693,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
     ///   <item><description>UnsizedButton &lt;mso:button></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UnsizedButton))]
     public partial class DialogBoxLauncher : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11732,6 +11731,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "dialogBoxLauncher");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<UnsizedButton>();
         }
 
         /// <summary>
@@ -11784,22 +11784,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
     ///   <item><description>DialogBoxLauncher &lt;mso:dialogBoxLauncher></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlClone))]
-    [ChildElementInfo(typeof(TextLabel))]
-    [ChildElementInfo(typeof(Button))]
-    [ChildElementInfo(typeof(ToggleButton))]
-    [ChildElementInfo(typeof(CheckBox))]
-    [ChildElementInfo(typeof(EditBox))]
-    [ChildElementInfo(typeof(ComboBox))]
-    [ChildElementInfo(typeof(DropDown))]
-    [ChildElementInfo(typeof(Gallery))]
-    [ChildElementInfo(typeof(Menu))]
-    [ChildElementInfo(typeof(DynamicMenu))]
-    [ChildElementInfo(typeof(SplitButton))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(ButtonGroup))]
-    [ChildElementInfo(typeof(VerticalSeparator))]
-    [ChildElementInfo(typeof(DialogBoxLauncher))]
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12048,6 +12032,22 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "group");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ControlClone>();
+            builder.AddChild<TextLabel>();
+            builder.AddChild<Button>();
+            builder.AddChild<ToggleButton>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<EditBox>();
+            builder.AddChild<ComboBox>();
+            builder.AddChild<DropDown>();
+            builder.AddChild<Gallery>();
+            builder.AddChild<Menu>();
+            builder.AddChild<DynamicMenu>();
+            builder.AddChild<SplitButton>();
+            builder.AddChild<Box>();
+            builder.AddChild<ButtonGroup>();
+            builder.AddChild<VerticalSeparator>();
+            builder.AddChild<DialogBoxLauncher>();
             builder.AddElement<Group>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -12752,9 +12752,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>VerticalSeparator &lt;mso:separator></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(QuickAccessToolbarControlClone))]
-    [ChildElementInfo(typeof(UnsizedButton))]
-    [ChildElementInfo(typeof(VerticalSeparator))]
     public abstract partial class QatItemsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12791,6 +12788,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<QuickAccessToolbarControlClone>();
+            builder.AddChild<UnsizedButton>();
+            builder.AddChild<VerticalSeparator>();
         }
     }
 
@@ -12805,7 +12805,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>Group &lt;mso:group></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Group))]
     public partial class Tab : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12984,6 +12983,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "tab");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Group>();
             builder.AddElement<Tab>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -13065,7 +13065,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
     ///   <item><description>Tab &lt;mso:tab></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tab))]
     public partial class ContextualTabSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13134,6 +13133,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "tabSet");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Tab>();
             builder.AddElement<ContextualTabSet>()
 .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
 {
@@ -13256,15 +13256,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
     ///   <item><description>UnsizedDynamicMenu &lt;mso:dynamicMenu></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UnsizedControlClone))]
-    [ChildElementInfo(typeof(UnsizedButton))]
-    [ChildElementInfo(typeof(CheckBox))]
-    [ChildElementInfo(typeof(UnsizedGallery))]
-    [ChildElementInfo(typeof(UnsizedToggleButton))]
-    [ChildElementInfo(typeof(MenuSeparator))]
-    [ChildElementInfo(typeof(SplitButtonWithTitle))]
-    [ChildElementInfo(typeof(MenuWithTitle))]
-    [ChildElementInfo(typeof(UnsizedDynamicMenu))]
     public partial class OfficeMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13303,6 +13294,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "officeMenu");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<UnsizedControlClone>();
+            builder.AddChild<UnsizedButton>();
+            builder.AddChild<CheckBox>();
+            builder.AddChild<UnsizedGallery>();
+            builder.AddChild<UnsizedToggleButton>();
+            builder.AddChild<MenuSeparator>();
+            builder.AddChild<SplitButtonWithTitle>();
+            builder.AddChild<MenuWithTitle>();
+            builder.AddChild<UnsizedDynamicMenu>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13351,8 +13351,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
     ///   <item><description>DocumentSpecificQuickAccessToolbarControls &lt;mso:documentControls></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SharedQatControls))]
-    [ChildElementInfo(typeof(DocumentSpecificQuickAccessToolbarControls))]
     public partial class QuickAccessToolbar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13391,6 +13389,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "qat");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SharedQatControls>();
+            builder.AddChild<DocumentSpecificQuickAccessToolbarControls>();
         }
 
         /// <summary>
@@ -13442,7 +13442,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
     ///   <item><description>Tab &lt;mso:tab></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tab))]
     public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13481,6 +13480,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "tabs");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Tab>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13505,7 +13505,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
     ///   <item><description>ContextualTabSet &lt;mso:tabSet></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ContextualTabSet))]
     public partial class ContextualTabSets : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13544,6 +13543,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "contextualTabs");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ContextualTabSet>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13568,7 +13568,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
     ///   <item><description>RepurposedCommand &lt;mso:command></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RepurposedCommand))]
     public partial class RepurposedCommands : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13607,6 +13606,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "commands");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<RepurposedCommand>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -13634,10 +13634,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
     ///   <item><description>ContextualTabSets &lt;mso:contextualTabs></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfficeMenu))]
-    [ChildElementInfo(typeof(QuickAccessToolbar))]
-    [ChildElementInfo(typeof(Tabs))]
-    [ChildElementInfo(typeof(ContextualTabSets))]
     public partial class Ribbon : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13686,6 +13682,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "ribbon");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<OfficeMenu>();
+            builder.AddChild<QuickAccessToolbar>();
+            builder.AddChild<Tabs>();
+            builder.AddChild<ContextualTabSets>();
             builder.AddElement<Ribbon>()
 .AddAttribute(0, "startFromScratch", a => a.StartFromScratch);
         }

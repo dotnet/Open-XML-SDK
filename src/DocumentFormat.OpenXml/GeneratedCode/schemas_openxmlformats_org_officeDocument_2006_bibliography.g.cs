@@ -23,7 +23,6 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>Source &lt;b:Source></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Source))]
     public partial class Sources : OpenXmlPartRootElement
     {
         /// <summary>
@@ -92,6 +91,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Sources");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Source>();
             builder.AddElement<Sources>()
 .AddAttribute(0, "SelectedStyle", a => a.SelectedStyle, aBuilder =>
 {
@@ -131,9 +131,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
     ///   <item><description>Middle &lt;b:Middle></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Last))]
-    [ChildElementInfo(typeof(First))]
-    [ChildElementInfo(typeof(Middle))]
     public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
@@ -172,6 +169,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Person");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Last>();
+            builder.AddChild<First>();
+            builder.AddChild<Middle>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2304,7 +2304,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
     ///   <item><description>Person &lt;b:Person></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Person))]
     public partial class NameList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2343,6 +2342,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "NameList");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Person>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3235,7 +3235,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NameList))]
     public abstract partial class NameType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3272,6 +3271,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<NameList>();
         }
 
         /// <summary>
@@ -3434,8 +3434,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
     ///   <item><description>Corporate &lt;b:Corporate></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NameList))]
-    [ChildElementInfo(typeof(Corporate))]
     public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3472,6 +3470,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<NameList>();
+            builder.AddChild<Corporate>();
         }
 
         /// <summary>
@@ -3527,22 +3527,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
     ///   <item><description>Writer &lt;b:Writer></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Artist))]
-    [ChildElementInfo(typeof(Author))]
-    [ChildElementInfo(typeof(BookAuthor))]
-    [ChildElementInfo(typeof(Compiler))]
-    [ChildElementInfo(typeof(Composer))]
-    [ChildElementInfo(typeof(Conductor))]
-    [ChildElementInfo(typeof(Counsel))]
-    [ChildElementInfo(typeof(Director))]
-    [ChildElementInfo(typeof(Editor))]
-    [ChildElementInfo(typeof(Interviewee))]
-    [ChildElementInfo(typeof(Interviewer))]
-    [ChildElementInfo(typeof(Inventor))]
-    [ChildElementInfo(typeof(Performer))]
-    [ChildElementInfo(typeof(ProducerName))]
-    [ChildElementInfo(typeof(Translator))]
-    [ChildElementInfo(typeof(Writer))]
     public partial class AuthorList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3581,6 +3565,22 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Artist>();
+            builder.AddChild<Author>();
+            builder.AddChild<BookAuthor>();
+            builder.AddChild<Compiler>();
+            builder.AddChild<Composer>();
+            builder.AddChild<Conductor>();
+            builder.AddChild<Counsel>();
+            builder.AddChild<Director>();
+            builder.AddChild<Editor>();
+            builder.AddChild<Interviewee>();
+            builder.AddChild<Interviewer>();
+            builder.AddChild<Inventor>();
+            builder.AddChild<Performer>();
+            builder.AddChild<ProducerName>();
+            builder.AddChild<Translator>();
+            builder.AddChild<Writer>();
         }
 
         /// <summary>
@@ -3921,58 +3921,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
     ///   <item><description>YearAccessed &lt;b:YearAccessed></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AbbreviatedCaseNumber))]
-    [ChildElementInfo(typeof(AlbumTitle))]
-    [ChildElementInfo(typeof(AuthorList))]
-    [ChildElementInfo(typeof(BookTitle))]
-    [ChildElementInfo(typeof(Broadcaster))]
-    [ChildElementInfo(typeof(BroadcastTitle))]
-    [ChildElementInfo(typeof(CaseNumber))]
-    [ChildElementInfo(typeof(ChapterNumber))]
-    [ChildElementInfo(typeof(City))]
-    [ChildElementInfo(typeof(Comments))]
-    [ChildElementInfo(typeof(ConferenceName))]
-    [ChildElementInfo(typeof(CountryRegion))]
-    [ChildElementInfo(typeof(Court))]
-    [ChildElementInfo(typeof(Day))]
-    [ChildElementInfo(typeof(DayAccessed))]
-    [ChildElementInfo(typeof(Department))]
-    [ChildElementInfo(typeof(Distributor))]
-    [ChildElementInfo(typeof(Edition))]
-    [ChildElementInfo(typeof(GuidString))]
-    [ChildElementInfo(typeof(Institution))]
-    [ChildElementInfo(typeof(InternetSiteTitle))]
-    [ChildElementInfo(typeof(Issue))]
-    [ChildElementInfo(typeof(JournalName))]
-    [ChildElementInfo(typeof(LcId))]
-    [ChildElementInfo(typeof(Medium))]
-    [ChildElementInfo(typeof(Month))]
-    [ChildElementInfo(typeof(MonthAccessed))]
-    [ChildElementInfo(typeof(NumberVolumes))]
-    [ChildElementInfo(typeof(Pages))]
-    [ChildElementInfo(typeof(PatentNumber))]
-    [ChildElementInfo(typeof(PeriodicalTitle))]
-    [ChildElementInfo(typeof(ProductionCompany))]
-    [ChildElementInfo(typeof(PublicationTitle))]
-    [ChildElementInfo(typeof(Publisher))]
-    [ChildElementInfo(typeof(RecordingNumber))]
-    [ChildElementInfo(typeof(ReferenceOrder))]
-    [ChildElementInfo(typeof(Reporter))]
-    [ChildElementInfo(typeof(SourceType))]
-    [ChildElementInfo(typeof(ShortTitle))]
-    [ChildElementInfo(typeof(StandardNumber))]
-    [ChildElementInfo(typeof(StateProvince))]
-    [ChildElementInfo(typeof(Station))]
-    [ChildElementInfo(typeof(Tag))]
-    [ChildElementInfo(typeof(Theater))]
-    [ChildElementInfo(typeof(ThesisType))]
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(PatentType))]
-    [ChildElementInfo(typeof(UrlString))]
-    [ChildElementInfo(typeof(Version))]
-    [ChildElementInfo(typeof(Volume))]
-    [ChildElementInfo(typeof(Year))]
-    [ChildElementInfo(typeof(YearAccessed))]
     public partial class Source : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4011,6 +3959,58 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Source");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<AbbreviatedCaseNumber>();
+            builder.AddChild<AlbumTitle>();
+            builder.AddChild<AuthorList>();
+            builder.AddChild<BookTitle>();
+            builder.AddChild<Broadcaster>();
+            builder.AddChild<BroadcastTitle>();
+            builder.AddChild<CaseNumber>();
+            builder.AddChild<ChapterNumber>();
+            builder.AddChild<City>();
+            builder.AddChild<Comments>();
+            builder.AddChild<ConferenceName>();
+            builder.AddChild<CountryRegion>();
+            builder.AddChild<Court>();
+            builder.AddChild<Day>();
+            builder.AddChild<DayAccessed>();
+            builder.AddChild<Department>();
+            builder.AddChild<Distributor>();
+            builder.AddChild<Edition>();
+            builder.AddChild<GuidString>();
+            builder.AddChild<Institution>();
+            builder.AddChild<InternetSiteTitle>();
+            builder.AddChild<Issue>();
+            builder.AddChild<JournalName>();
+            builder.AddChild<LcId>();
+            builder.AddChild<Medium>();
+            builder.AddChild<Month>();
+            builder.AddChild<MonthAccessed>();
+            builder.AddChild<NumberVolumes>();
+            builder.AddChild<Pages>();
+            builder.AddChild<PatentNumber>();
+            builder.AddChild<PeriodicalTitle>();
+            builder.AddChild<ProductionCompany>();
+            builder.AddChild<PublicationTitle>();
+            builder.AddChild<Publisher>();
+            builder.AddChild<RecordingNumber>();
+            builder.AddChild<ReferenceOrder>();
+            builder.AddChild<Reporter>();
+            builder.AddChild<SourceType>();
+            builder.AddChild<ShortTitle>();
+            builder.AddChild<StandardNumber>();
+            builder.AddChild<StateProvince>();
+            builder.AddChild<Station>();
+            builder.AddChild<Tag>();
+            builder.AddChild<Theater>();
+            builder.AddChild<ThesisType>();
+            builder.AddChild<Title>();
+            builder.AddChild<PatentType>();
+            builder.AddChild<UrlString>();
+            builder.AddChild<Version>();
+            builder.AddChild<Volume>();
+            builder.AddChild<Year>();
+            builder.AddChild<YearAccessed>();
         }
 
         /// <summary>

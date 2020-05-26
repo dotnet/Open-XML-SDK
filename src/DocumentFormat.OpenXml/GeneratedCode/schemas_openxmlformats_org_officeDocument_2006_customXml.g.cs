@@ -23,7 +23,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     ///   <item><description>SchemaReferences &lt;ds:schemaRefs></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SchemaReferences))]
     public partial class DataStoreItem : OpenXmlPartRootElement
     {
         /// <summary>
@@ -75,6 +74,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema(20, "datastoreItem");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SchemaReferences>();
             builder.AddElement<DataStoreItem>()
 .AddAttribute(20, "itemID", a => a.ItemId, aBuilder =>
 {
@@ -192,7 +192,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>SchemaReference &lt;ds:schemaRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SchemaReference))]
     public partial class SchemaReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -231,6 +230,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(20, "schemaRefs");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SchemaReference>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

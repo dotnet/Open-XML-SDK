@@ -238,7 +238,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>Formula &lt;v:f></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula))]
     public partial class Formulas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -277,6 +276,7 @@ namespace DocumentFormat.OpenXml.Vml
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "formulas");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Formula>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -301,7 +301,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>ShapeHandle &lt;v:h></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeHandle))]
     public partial class ShapeHandles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -340,6 +339,7 @@ namespace DocumentFormat.OpenXml.Vml
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "handles");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<ShapeHandle>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -364,7 +364,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties &lt;o:fill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties))]
     public partial class Fill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -681,6 +680,7 @@ namespace DocumentFormat.OpenXml.Vml
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "fill");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
             builder.AddElement<Fill>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "type", a => a.Type)
@@ -761,11 +761,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ColumnStroke &lt;o:column></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.TopStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.RightStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke))]
     public partial class Stroke : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1099,6 +1094,11 @@ namespace DocumentFormat.OpenXml.Vml
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "stroke");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.BottomStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>();
             builder.AddElement<Stroke>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "on", a => a.On)
@@ -1384,7 +1384,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.TextBoxContent &lt;w:txbxContent></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
     public partial class TextBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1466,6 +1465,7 @@ namespace DocumentFormat.OpenXml.Vml
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "textbox");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
             builder.AddElement<TextBox>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -1912,31 +1912,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag &lt;pvml:iscomment></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag))]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2640,6 +2615,31 @@ namespace DocumentFormat.OpenXml.Vml
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "shape");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Ink>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag>();
             builder.AddElement<Shape>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -2785,30 +2785,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Complex &lt;o:complex></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Complex))]
     public partial class Shapetype : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3492,6 +3468,30 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "shapetype");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Complex>();
             builder.AddElement<Shapetype>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -3627,23 +3627,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Group))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(Shapetype))]
-    [ChildElementInfo(typeof(Arc))]
-    [ChildElementInfo(typeof(Curve))]
-    [ChildElementInfo(typeof(ImageFile))]
-    [ChildElementInfo(typeof(Line))]
-    [ChildElementInfo(typeof(Oval))]
-    [ChildElementInfo(typeof(PolyLine))]
-    [ChildElementInfo(typeof(Rectangle))]
-    [ChildElementInfo(typeof(RoundRectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Diagram))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4088,6 +4071,23 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "group");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Group>();
+            builder.AddChild<Shape>();
+            builder.AddChild<Shapetype>();
+            builder.AddChild<Arc>();
+            builder.AddChild<Curve>();
+            builder.AddChild<ImageFile>();
+            builder.AddChild<Line>();
+            builder.AddChild<Oval>();
+            builder.AddChild<PolyLine>();
+            builder.AddChild<Rectangle>();
+            builder.AddChild<RoundRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Diagram>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
             builder.AddElement<Group>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -4172,7 +4172,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>Fill &lt;v:fill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Fill))]
     public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4293,6 +4292,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "background");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Fill>();
             builder.AddElement<Background>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -4369,29 +4369,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLeng
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     public partial class Arc : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5065,6 +5042,29 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "arc");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
             builder.AddElement<Arc>()
 .AddAttribute(27, "spid", a => a.OptionalString)
 .AddAttribute(27, "oned", a => a.Oned)
@@ -5210,29 +5210,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLeng
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     public partial class Curve : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5936,6 +5913,29 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLeng
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "curve");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
             builder.AddElement<Curve>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -6079,29 +6079,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     public partial class ImageFile : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6855,6 +6832,29 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "image");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
             builder.AddElement<ImageFile>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -7003,29 +7003,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     public partial class Line : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7709,6 +7686,29 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "line");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
             builder.AddElement<Line>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -7848,29 +7848,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     public partial class Oval : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8534,6 +8511,29 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "oval");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
             builder.AddElement<Oval>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -8674,30 +8674,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Ink &lt;o:ink></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
     public partial class PolyLine : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9371,6 +9347,30 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "polyline");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Ink>();
             builder.AddElement<PolyLine>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -9511,29 +9511,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     public partial class Rectangle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10197,6 +10174,29 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "rect");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
             builder.AddElement<Rectangle>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -10336,29 +10336,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     public partial class RoundRectangle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11022,6 +10999,29 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "roundrect");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
             builder.AddElement<RoundRectangle>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)

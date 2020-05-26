@@ -51,7 +51,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description>EffectExtent &lt;wp:effectExtent></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EffectExtent))]
     public partial class WrapSquare : OpenXmlCompositeElement
     {
         /// <summary>
@@ -140,6 +139,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapSquare");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EffectExtent>();
             builder.AddElement<WrapSquare>()
 .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
 {
@@ -187,7 +187,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>WrapPolygon &lt;wp:wrapPolygon></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WrapPolygon))]
     public partial class WrapTight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -256,6 +255,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapTight");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<WrapPolygon>();
             builder.AddElement<WrapTight>()
 .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
 {
@@ -301,7 +301,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>WrapPolygon &lt;wp:wrapPolygon></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WrapPolygon))]
     public partial class WrapThrough : OpenXmlCompositeElement
     {
         /// <summary>
@@ -370,6 +369,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapThrough");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<WrapPolygon>();
             builder.AddElement<WrapThrough>()
 .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
 {
@@ -415,7 +415,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>EffectExtent &lt;wp:effectExtent></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EffectExtent))]
     public partial class WrapTopBottom : OpenXmlCompositeElement
     {
         /// <summary>
@@ -474,6 +473,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapTopAndBottom");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<EffectExtent>();
             builder.AddElement<WrapTopBottom>()
 .AddAttribute(0, "distT", a => a.DistanceFromTop)
 .AddAttribute(0, "distB", a => a.DistanceFromBottom);
@@ -518,11 +518,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Graphic &lt;a:graphic></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Extent))]
-    [ChildElementInfo(typeof(EffectExtent))]
-    [ChildElementInfo(typeof(DocProperties))]
-    [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
     public partial class Inline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -627,6 +622,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "inline");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<Extent>();
+            builder.AddChild<EffectExtent>();
+            builder.AddChild<DocProperties>();
+            builder.AddChild<NonVisualGraphicFrameDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddElement<Inline>()
 .AddAttribute(0, "distT", a => a.DistanceFromTop)
 .AddAttribute(0, "distB", a => a.DistanceFromBottom)
@@ -749,21 +749,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight &lt;wp14:sizeRelV></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SimplePosition))]
-    [ChildElementInfo(typeof(HorizontalPosition))]
-    [ChildElementInfo(typeof(VerticalPosition))]
-    [ChildElementInfo(typeof(Extent))]
-    [ChildElementInfo(typeof(EffectExtent))]
-    [ChildElementInfo(typeof(WrapNone))]
-    [ChildElementInfo(typeof(WrapSquare))]
-    [ChildElementInfo(typeof(WrapTight))]
-    [ChildElementInfo(typeof(WrapThrough))]
-    [ChildElementInfo(typeof(WrapTopBottom))]
-    [ChildElementInfo(typeof(DocProperties))]
-    [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), FileFormatVersions.Office2010)]
     public partial class Anchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -938,6 +923,21 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "anchor");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<SimplePosition>();
+            builder.AddChild<HorizontalPosition>();
+            builder.AddChild<VerticalPosition>();
+            builder.AddChild<Extent>();
+            builder.AddChild<EffectExtent>();
+            builder.AddChild<WrapNone>();
+            builder.AddChild<WrapSquare>();
+            builder.AddChild<WrapTight>();
+            builder.AddChild<WrapThrough>();
+            builder.AddChild<WrapTopBottom>();
+            builder.AddChild<DocProperties>();
+            builder.AddChild<NonVisualGraphicFrameDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight>();
             builder.AddElement<Anchor>()
 .AddAttribute(0, "distT", a => a.DistanceFromTop)
 .AddAttribute(0, "distB", a => a.DistanceFromBottom)
@@ -1300,8 +1300,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>LineTo &lt;wp:lineTo></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StartPoint))]
-    [ChildElementInfo(typeof(LineTo))]
     public partial class WrapPolygon : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1350,6 +1348,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapPolygon");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<StartPoint>();
+            builder.AddChild<LineTo>();
             builder.AddElement<WrapPolygon>()
 .AddAttribute(0, "edited", a => a.Edited);
         }
@@ -1392,9 +1392,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset &lt;wp14:pctPosHOffset></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(HorizontalAlignment))]
-    [ChildElementInfo(typeof(PositionOffset))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), FileFormatVersions.Office2010)]
     public partial class HorizontalPosition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1443,6 +1440,9 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "positionH");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<HorizontalAlignment>();
+            builder.AddChild<PositionOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
             builder.AddElement<HorizontalPosition>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
 {
@@ -1519,9 +1519,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset &lt;wp14:pctPosVOffset></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VerticalAlignment))]
-    [ChildElementInfo(typeof(PositionOffset))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), FileFormatVersions.Office2010)]
     public partial class VerticalPosition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1570,6 +1567,9 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "positionV");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<VerticalAlignment>();
+            builder.AddChild<PositionOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
             builder.AddElement<VerticalPosition>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
 {
@@ -1702,9 +1702,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
     public partial class DocProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1793,6 +1790,9 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "docPr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<DocProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -1877,8 +1877,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1917,6 +1915,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "cNvGraphicFramePr");
             builder.Availability = (FileFormatVersions.Office2007);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
 
         /// <summary>

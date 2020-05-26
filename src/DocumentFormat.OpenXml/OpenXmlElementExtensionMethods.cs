@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml
         {
             if (parent is OpenXmlCompositeElement)
             {
-                foreach (var element in parent.ElementData.Children.Elements)
+                foreach (var element in parent.Metadata.Children.Elements)
                 {
                     if (element.Type.GetTypeInfo().IsAssignableFrom(child.GetType().GetTypeInfo()))
                     {

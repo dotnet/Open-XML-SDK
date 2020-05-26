@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Framework
         {
         }
 
-        public static PartConstraintCollection Create<T>(Func<Type, OpenXmlElementData> dataFactory, Type type)
+        public static PartConstraintCollection Create<T>(Type type)
             where T : IConstraintAttribute
         {
             var collection = new PartConstraintCollection();

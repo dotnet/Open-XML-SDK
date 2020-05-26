@@ -146,7 +146,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ParentCommentIdentifier &lt;p15:parentCm></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ParentCommentIdentifier), FileFormatVersions.Office2013)]
     public partial class ThreadingInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -195,6 +194,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "threadingInfo");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<ParentCommentIdentifier>();
             builder.AddElement<ThreadingInfo>()
 .AddAttribute(0, "timeZoneBias", a => a.TimeZoneBias);
         }
@@ -363,8 +363,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtendedGuide), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
     public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -401,6 +399,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadataBuilder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<ExtendedGuide>();
+            builder.AddChild<ExtensionList>();
         }
     }
 
@@ -508,12 +508,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
     public partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -552,6 +546,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "clr");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
         }
 
         /// <summary>
@@ -665,7 +665,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>DocumentFormat.OpenXml.Presentation.Extension &lt;p:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -704,6 +703,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "extLst");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -735,8 +735,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
     ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
     public partial class ExtendedGuide : OpenXmlCompositeElement
     {
         /// <summary>
@@ -825,6 +823,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "guide");
             builder.Availability = (FileFormatVersions.Office2013);
+            builder.AddChild<ColorType>();
+            builder.AddChild<ExtensionList>();
             builder.AddElement<ExtendedGuide>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
