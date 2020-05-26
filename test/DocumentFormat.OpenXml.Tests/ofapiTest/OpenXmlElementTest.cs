@@ -559,7 +559,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var clonedParagraph = paragraph.CloneNode(false);
                 Assert.False(clonedParagraph.HasChildren);
                 Assert.True(clonedParagraph.HasAttributes);
-                Assert.Equal(paragraph.Metadata.Attributes.Length, clonedParagraph.Metadata.Attributes.Length);
+                Assert.Equal(paragraph.EState.Attributes.Length, clonedParagraph.EState.Attributes.Length);
                 Assert.Equal(paragraph.ExtendedAttributes.Count(), clonedParagraph.ExtendedAttributes.Count());
 
                 // Deep clone the document
@@ -575,7 +575,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(curElem.GetType(), elem.GetType());
                     Assert.Equal(curElem.NamespaceUri, elem.NamespaceUri);
                     Assert.Equal(curElem.XmlQualifiedName, elem.XmlQualifiedName);
-                    Assert.Equal(curElem.Metadata.Attributes.Length, elem.Metadata.Attributes.Length);
+                    Assert.Equal(curElem.EState.Attributes.Length, elem.EState.Attributes.Length);
 
                     Assert.Equal(curElem.ExtendedAttributes.Count(), elem.ExtendedAttributes.Count());
                     var a1 = curElem.ExtendedAttributes.ToArray();

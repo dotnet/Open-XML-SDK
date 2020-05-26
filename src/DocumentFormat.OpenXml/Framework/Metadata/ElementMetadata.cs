@@ -9,27 +9,30 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal readonly struct ElementMetadata
     {
-        private static readonly ConcurrentDictionary<Type, ReadOnlyArray<AttributeMetadata>> _lookup = new ConcurrentDictionary<Type, ReadOnlyArray<AttributeMetadata>>(new[]
+        private static readonly ConcurrentDictionary<Type, ElementMetadata> _lookup = new ConcurrentDictionary<Type, ElementMetadata>(new[]
         {
-            new KeyValuePair<Type, ReadOnlyArray<AttributeMetadata>>(typeof(OpenXmlUnknownElement), null),
-            new KeyValuePair<Type, ReadOnlyArray<AttributeMetadata>>(typeof(OpenXmlMiscNode), null),
+            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlUnknownElement), default),
+            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), default),
         });
 
-        public static ElementMetadata Empty => new ElementMetadata(null);
+        public ElementMetadata(ReadOnlyArray<AttributeMetadata> attributes)
+        {
+            Attributes = attributes;
+        }
 
-        public bool IsEmpty => Attributes.IsEmpty;
+        public ReadOnlyArray<AttributeMetadata> Attributes { get; }
 
         public static ElementMetadata Create(Type type)
         {
             var data = _lookup.GetOrAdd(type, t =>
             {
                 var helper = typeof(BuilderProvider<>).MakeGenericType(t);
-                var builder = (IMetadataBuilder<ReadOnlyArray<AttributeMetadata>>)Activator.CreateInstance(helper);
+                var builder = (IMetadataBuilder<ElementMetadata>)Activator.CreateInstance(helper);
 
                 return builder.Build();
             });
 
-            return new ElementMetadata(data);
+            return data;
         }
 
         public static ElementMetadata Create<TElement>()
@@ -42,13 +45,13 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 return builder.Build();
             });
 
-            return new ElementMetadata(data);
+            return data;
         }
 
-        private class BuilderProvider<T> : IMetadataBuilder<ReadOnlyArray<AttributeMetadata>>
+        private class BuilderProvider<T> : IMetadataBuilder<ElementMetadata>
             where T : OpenXmlElement, new()
         {
-            public ReadOnlyArray<AttributeMetadata> Build()
+            public ElementMetadata Build()
             {
                 var element = new T();
 
@@ -56,15 +59,8 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 element.ConfigureMetadata(builder);
 
-                return builder.Build();
+                return new ElementMetadata(builder.Build());
             }
         }
-
-        public ElementMetadata(ReadOnlyArray<AttributeMetadata> tags)
-        {
-            Attributes = new AttributeCollection(tags);
-        }
-
-        public AttributeCollection Attributes { get; }
     }
 }

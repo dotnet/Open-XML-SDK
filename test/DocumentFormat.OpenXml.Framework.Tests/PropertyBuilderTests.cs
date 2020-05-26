@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 {
                 })
                 .Build();
-            var element = new ElementMetadata(data);
+            var element = new Metadata.ElementState(new ElementMetadata(data));
 
             ref var str = ref element.Attributes.GetProperty(nameof(SomeElement.Str));
 
