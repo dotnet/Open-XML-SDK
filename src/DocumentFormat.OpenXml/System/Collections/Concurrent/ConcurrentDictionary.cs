@@ -16,7 +16,12 @@ namespace System.Collections.Concurrent
 
         public ConcurrentDictionary(IEnumerable<KeyValuePair<TKey, TValue>> values)
         {
-            _dictionary = new Dictionary<TKey, TValue>(values);
+            _dictionary = new Dictionary<TKey, TValue>();
+
+            foreach (var value in values)
+            {
+                _dictionary.Add(value.Key, value.Value);
+            }
         }
 
         public TValue GetOrAdd(TKey type, Func<TKey, TValue> create)
