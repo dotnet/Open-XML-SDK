@@ -7,7 +7,17 @@ namespace System.Collections.Concurrent
 {
     internal class ConcurrentDictionary<TKey, TValue>
     {
-        private readonly Dictionary<TKey, TValue> _dictionary = new Dictionary<TKey, TValue>();
+        private readonly Dictionary<TKey, TValue> _dictionary;
+
+        public ConcurrentDictionary()
+        {
+            _dictionary = new Dictionary<TKey, TValue>();
+        }
+
+        public ConcurrentDictionary(IEnumerable<KeyValuePair<TKey, TValue>> values)
+        {
+            _dictionary = new Dictionary<TKey, TValue>(values);
+        }
 
         public TValue GetOrAdd(TKey type, Func<TKey, TValue> create)
         {
