@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(25, "schemaLibrary");
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(25, "schema");

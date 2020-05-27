@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "spPr");
@@ -189,7 +189,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "explosion");
@@ -219,7 +219,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "invertIfNegative");
@@ -244,7 +244,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "bubble3D");
@@ -279,7 +279,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BooleanType>()
@@ -334,7 +334,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "marker");
@@ -470,7 +470,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "dLbl");
@@ -591,7 +591,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "categoryFilterExceptions");
@@ -654,7 +654,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "pivotOptions16");
@@ -730,7 +730,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "datapointuniqueidmap");
@@ -763,7 +763,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "uniqueId");
@@ -788,7 +788,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "uniqueID");
@@ -823,7 +823,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<UniqueIDChart>()
@@ -884,7 +884,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "categoryFilterException");
@@ -1053,7 +1053,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "numCache");
@@ -1148,7 +1148,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "filteredLitCache");
@@ -1226,7 +1226,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "strCache");
@@ -1306,7 +1306,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "filteredLitCache");
@@ -1384,7 +1384,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "multiLvlStrCache");
@@ -1464,7 +1464,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "filteredLitCache");
@@ -1520,7 +1520,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "literalDataChart");
@@ -1560,7 +1560,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "showExpandCollapseFieldButtons");
@@ -1600,7 +1600,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             return new UInt32Value { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
@@ -1657,7 +1657,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(82, "ptentry");

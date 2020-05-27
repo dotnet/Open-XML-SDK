@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(72, "list");

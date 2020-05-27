@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Sources");
@@ -164,7 +164,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Person");
@@ -214,7 +214,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -253,7 +253,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -292,7 +292,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -331,7 +331,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -370,7 +370,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -409,7 +409,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -448,7 +448,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -487,7 +487,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -526,7 +526,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -565,7 +565,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -604,7 +604,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -643,7 +643,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -682,7 +682,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -721,7 +721,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -760,7 +760,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -799,7 +799,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -838,7 +838,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -877,7 +877,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -916,7 +916,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -955,7 +955,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -994,7 +994,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1033,7 +1033,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1072,7 +1072,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1111,7 +1111,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1150,7 +1150,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1189,7 +1189,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1228,7 +1228,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1267,7 +1267,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1306,7 +1306,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1345,7 +1345,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1384,7 +1384,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1423,7 +1423,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1462,7 +1462,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1501,7 +1501,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1540,7 +1540,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1579,7 +1579,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1618,7 +1618,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1657,7 +1657,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1696,7 +1696,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1735,7 +1735,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1774,7 +1774,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1813,7 +1813,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1852,7 +1852,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1891,7 +1891,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1930,7 +1930,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -1969,7 +1969,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -2008,7 +2008,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -2047,7 +2047,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -2086,7 +2086,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -2125,7 +2125,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -2164,7 +2164,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -2203,7 +2203,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -2242,7 +2242,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -2281,7 +2281,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
@@ -2337,7 +2337,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "NameList");
@@ -2400,7 +2400,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Artist");
@@ -2462,7 +2462,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "BookAuthor");
@@ -2524,7 +2524,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Compiler");
@@ -2586,7 +2586,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Composer");
@@ -2648,7 +2648,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Conductor");
@@ -2710,7 +2710,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Counsel");
@@ -2772,7 +2772,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Director");
@@ -2834,7 +2834,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Editor");
@@ -2896,7 +2896,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewee");
@@ -2958,7 +2958,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewer");
@@ -3020,7 +3020,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Inventor");
@@ -3082,7 +3082,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "ProducerName");
@@ -3144,7 +3144,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Translator");
@@ -3206,7 +3206,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Writer");
@@ -3268,7 +3268,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddChild<NameList>();
@@ -3333,7 +3333,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
@@ -3400,7 +3400,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Performer");
@@ -3467,7 +3467,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddChild<NameList>();
@@ -3560,7 +3560,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
@@ -3847,7 +3847,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             return new EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues> { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>)) });
@@ -3954,7 +3954,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Source");

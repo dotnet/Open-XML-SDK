@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(62, "slicer");
@@ -149,7 +149,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(62, "extLst");

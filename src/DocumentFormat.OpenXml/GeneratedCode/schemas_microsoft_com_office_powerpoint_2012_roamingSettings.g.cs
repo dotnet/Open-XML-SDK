@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(76, "key");
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(76, "value");
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(76, "props");

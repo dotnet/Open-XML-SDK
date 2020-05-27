@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(50, "style");
@@ -181,7 +181,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(50, "extLst");

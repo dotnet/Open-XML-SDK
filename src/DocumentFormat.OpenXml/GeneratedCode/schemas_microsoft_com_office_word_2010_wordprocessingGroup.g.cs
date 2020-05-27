@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "wgp");
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "grpSp");
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddChild<NonVisualDrawingProperties>();
@@ -380,7 +380,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "cNvPr");
@@ -499,7 +499,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "cNvFrPr");
@@ -621,7 +621,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "xfrm");
@@ -716,7 +716,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "extLst");
@@ -786,7 +786,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "cNvGrpSpPr");
@@ -897,7 +897,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "grpSpPr");
@@ -1014,7 +1014,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "graphicFrame");

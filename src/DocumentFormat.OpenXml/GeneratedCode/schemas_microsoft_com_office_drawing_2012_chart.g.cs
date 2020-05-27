@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "pivotSource");
@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "numFmt");
@@ -241,7 +241,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "spPr");
@@ -369,7 +369,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "layout");
@@ -460,7 +460,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "fullRef");
@@ -536,7 +536,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "levelRef");
@@ -612,7 +612,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "formulaRef");
@@ -688,7 +688,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredSeriesTitle");
@@ -764,7 +764,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredCategoryTitle");
@@ -840,7 +840,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredAreaSeries");
@@ -916,7 +916,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredBarSeries");
@@ -992,7 +992,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredBubbleSeries");
@@ -1068,7 +1068,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredLineSeries");
@@ -1144,7 +1144,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredPieSeries");
@@ -1220,7 +1220,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredRadarSeries");
@@ -1296,7 +1296,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredScatterSeries");
@@ -1372,7 +1372,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "filteredSurfaceSeries");
@@ -1449,7 +1449,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "datalabelsRange");
@@ -1540,7 +1540,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "categoryFilterExceptions");
@@ -1603,7 +1603,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "dlblFieldTable");
@@ -1636,7 +1636,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "xForSave");
@@ -1661,7 +1661,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "showDataLabelsRange");
@@ -1686,7 +1686,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "showLeaderLines");
@@ -1711,7 +1711,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "autoCat");
@@ -1736,7 +1736,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "invertIfNegative");
@@ -1761,7 +1761,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "bubble3D");
@@ -1796,7 +1796,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BooleanType>()
@@ -1850,7 +1850,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "tx");
@@ -1959,7 +1959,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "leaderLines");
@@ -2018,7 +2018,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "sqref");
@@ -2056,7 +2056,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "f");
@@ -2094,7 +2094,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "txfldGUID");
@@ -2153,7 +2153,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "cat");
@@ -2305,7 +2305,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
@@ -2491,7 +2491,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
@@ -2676,7 +2676,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
@@ -2845,7 +2845,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
@@ -3011,7 +3011,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
@@ -3192,7 +3192,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
@@ -3377,7 +3377,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
@@ -3552,7 +3552,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "ser");
@@ -3756,7 +3756,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "dlblRangeCache");
@@ -3822,7 +3822,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "dlblFieldTableCache");
@@ -3888,7 +3888,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
@@ -3934,7 +3934,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "explosion");
@@ -3997,7 +3997,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "marker");
@@ -4133,7 +4133,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "dLbl");
@@ -4260,7 +4260,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "categoryFilterException");
@@ -4428,7 +4428,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "dlblFTEntry");

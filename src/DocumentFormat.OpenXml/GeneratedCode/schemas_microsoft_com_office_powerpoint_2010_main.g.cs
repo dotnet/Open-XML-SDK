@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "nvContentPartPr");
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "xfrm");
@@ -304,7 +304,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "extLst");
@@ -404,7 +404,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "media");
@@ -505,7 +505,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "vortex");
@@ -530,7 +530,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "pan");
@@ -565,7 +565,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<SideDirectionTransitionType>()
@@ -590,7 +590,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "switch");
@@ -615,7 +615,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "flip");
@@ -640,7 +640,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "ferris");
@@ -665,7 +665,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "gallery");
@@ -690,7 +690,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "conveyor");
@@ -725,7 +725,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<LeftRightDirectionTransitionType>()
@@ -760,7 +760,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "ripple");
@@ -794,7 +794,7 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "honeycomb");
@@ -819,7 +819,7 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "flash");
@@ -844,7 +844,7 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
         }
@@ -894,7 +894,7 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "prism");
@@ -926,7 +926,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "doors");
@@ -951,7 +951,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "window");
@@ -986,7 +986,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<OrientationTransitionType>()
@@ -1031,7 +1031,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "glitter");
@@ -1075,7 +1075,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "warp");
@@ -1125,7 +1125,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "flythrough");
@@ -1176,7 +1176,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "shred");
@@ -1230,7 +1230,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "reveal");
@@ -1271,7 +1271,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "wheelReverse");
@@ -1318,7 +1318,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "bmkTgt");
@@ -1382,7 +1382,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sectionPr");
@@ -1445,7 +1445,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sectionLst");
@@ -1488,7 +1488,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "browseMode");
@@ -1550,7 +1550,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "laserClr");
@@ -1687,7 +1687,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "defaultImageDpi");
@@ -1727,7 +1727,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "discardImageEditData");
@@ -1767,7 +1767,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "showMediaCtrls");
@@ -1827,7 +1827,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "laserTraceLst");
@@ -1860,7 +1860,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "creationId");
@@ -1885,7 +1885,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "modId");
@@ -1920,7 +1920,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<RandomIdType>()
@@ -1981,7 +1981,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "showEvtLst");
@@ -2202,7 +2202,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "cNvPr");
@@ -2331,7 +2331,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "cNvContentPartPr");
@@ -2451,7 +2451,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "nvPr");
@@ -2540,7 +2540,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "bmk");
@@ -2595,7 +2595,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "trim");
@@ -2643,7 +2643,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "fade");
@@ -2701,7 +2701,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "bmkLst");
@@ -2764,7 +2764,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "extLst");
@@ -2863,7 +2863,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "section");
@@ -2929,7 +2929,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sldId");
@@ -2990,7 +2990,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (214748364
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sldIdLst");
@@ -3074,7 +3074,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (214748364
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "section");
@@ -3171,7 +3171,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "tracePt");
@@ -3241,7 +3241,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "tracePtLst");
@@ -3304,7 +3304,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "triggerEvt");
@@ -3343,7 +3343,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "playEvt");
@@ -3368,7 +3368,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "stopEvt");
@@ -3393,7 +3393,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "pauseEvt");
@@ -3418,7 +3418,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "resumeEvt");
@@ -3463,7 +3463,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<MediaPlaybackEventRecordType>()
@@ -3522,7 +3522,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "seekEvt");
@@ -3580,7 +3580,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "nullEvt");

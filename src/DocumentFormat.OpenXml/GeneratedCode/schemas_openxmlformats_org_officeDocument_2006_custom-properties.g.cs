@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(4, "Properties");
@@ -225,7 +225,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(4, "property");

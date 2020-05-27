@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             return new Int32Value { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             return new Int32Value { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(51, "sizeRelH");
@@ -237,7 +237,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(51, "sizeRelV");
@@ -302,7 +302,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             return new Int32Value { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
@@ -341,7 +341,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             return new Int32Value { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });

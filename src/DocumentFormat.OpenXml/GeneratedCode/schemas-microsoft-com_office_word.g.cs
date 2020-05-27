@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "bordertop");
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "borderleft");
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "borderright");
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "borderbottom");
@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<BorderType>()
@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "wrap");
@@ -253,7 +253,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "anchorlock");

@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private class OfficeNonElement : MockedXmlElement
         {
-            internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+            internal override void ConfigureMetadata(ElementMetadata.Builder builder)
             {
                 builder.Availability = FileFormatVersions.None;
             }
@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private class Office2007Element : MockedXmlElement
         {
-            internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+            internal override void ConfigureMetadata(ElementMetadata.Builder builder)
             {
                 builder.Availability = FileFormatVersions.Office2007;
             }

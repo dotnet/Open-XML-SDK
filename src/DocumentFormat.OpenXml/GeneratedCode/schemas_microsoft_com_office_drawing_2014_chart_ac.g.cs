@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(81, "multiLvlStrLit");

@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void Sanity()
         {
-            var builder = new ElementMetadataBuilder();
+            var builder = new ElementMetadata.Builder();
             builder.AddElement<SomeElement>()
                 .AddAttribute(0, "s", a => a.Str, a =>
                 {
@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void IsRequired()
         {
-            var builder = new ElementMetadataBuilder();
+            var builder = new ElementMetadata.Builder();
             builder.AddElement<SomeElement>()
                 .AddAttribute(0, "s", a => a.Str, a =>
                 {

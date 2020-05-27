@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "customXsn");
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "xsnLocation");
@@ -201,7 +201,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "cached");
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "openByDefault");
@@ -277,7 +277,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "xsnScope");

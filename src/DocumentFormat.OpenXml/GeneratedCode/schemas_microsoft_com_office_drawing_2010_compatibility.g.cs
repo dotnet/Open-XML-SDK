@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(63, "compatSp");

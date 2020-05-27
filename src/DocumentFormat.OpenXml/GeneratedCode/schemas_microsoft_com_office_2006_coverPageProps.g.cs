@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CoverPageProperties");
@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "PublishDate");
@@ -233,7 +233,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "Abstract");
@@ -271,7 +271,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CompanyAddress");
@@ -309,7 +309,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CompanyPhone");
@@ -347,7 +347,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CompanyFax");
@@ -385,7 +385,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CompanyEmail");

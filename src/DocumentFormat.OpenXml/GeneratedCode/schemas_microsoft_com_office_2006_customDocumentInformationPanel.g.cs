@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "customPropertyEditors");
@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
@@ -173,7 +173,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
@@ -212,7 +212,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "XSNLocation");
@@ -250,7 +250,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             return new BooleanValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
@@ -307,7 +307,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "customPropertyEditor");

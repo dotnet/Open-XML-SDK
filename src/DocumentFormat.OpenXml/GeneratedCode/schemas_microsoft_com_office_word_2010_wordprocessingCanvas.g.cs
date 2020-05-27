@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(59, "wpc");
@@ -181,7 +181,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(59, "bg");
@@ -272,7 +272,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(59, "whole");
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(59, "graphicFrame");
@@ -498,7 +498,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(59, "extLst");

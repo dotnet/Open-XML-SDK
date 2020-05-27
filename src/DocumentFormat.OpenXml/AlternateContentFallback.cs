@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml
             return CloneImp<AlternateContentFallback>(deep);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
 

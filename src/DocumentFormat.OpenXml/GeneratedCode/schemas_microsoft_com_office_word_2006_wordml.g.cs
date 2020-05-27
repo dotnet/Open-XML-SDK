@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "tcg");
@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "mcds");
@@ -224,7 +224,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "vbaSuppData");
@@ -346,7 +346,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "recipients");
@@ -418,7 +418,7 @@ namespace DocumentFormat.OpenXml.Office.Word
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "fci");
@@ -453,7 +453,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "macro");
@@ -478,7 +478,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "wll");
@@ -516,7 +516,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<MacroWllType>()
@@ -538,7 +538,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acd");
@@ -563,7 +563,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acdEntry");
@@ -601,7 +601,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<AcceleratorKeymapType>()
@@ -636,7 +636,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "wch");
@@ -766,7 +766,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymap");
@@ -942,7 +942,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acd");
@@ -1040,7 +1040,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "mcd");
@@ -1098,7 +1098,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocNew");
@@ -1136,7 +1136,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocOpen");
@@ -1174,7 +1174,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocClose");
@@ -1212,7 +1212,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocSync");
@@ -1250,7 +1250,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocXmlAfterInsert");
@@ -1288,7 +1288,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocXmlBeforeDelete");
@@ -1326,7 +1326,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocContentControlAfterInsert");
@@ -1364,7 +1364,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocContentControlBeforeDelete");
@@ -1402,7 +1402,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocContentControlOnExit");
@@ -1440,7 +1440,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocContentControlOnEnter");
@@ -1478,7 +1478,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocStoreUpdate");
@@ -1516,7 +1516,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocContentControlContentUpdate");
@@ -1554,7 +1554,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocBuildingBlockAfterInsert");
@@ -1621,7 +1621,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "docEvents");
@@ -1877,7 +1877,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acdManifest");
@@ -1923,7 +1923,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "toolbarData");
@@ -1983,7 +1983,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymaps");
@@ -2045,7 +2045,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymapsBad");
@@ -2107,7 +2107,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddChild<KeyMapEntry>();
@@ -2159,7 +2159,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "toolbars");
@@ -2224,7 +2224,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acds");
@@ -2270,7 +2270,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "active");
@@ -2310,7 +2310,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "hash");
@@ -2371,7 +2371,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "recipientData");

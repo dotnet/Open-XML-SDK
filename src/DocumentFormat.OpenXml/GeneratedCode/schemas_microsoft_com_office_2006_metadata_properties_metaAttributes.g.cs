@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(41, "DummyContentTypeElement");

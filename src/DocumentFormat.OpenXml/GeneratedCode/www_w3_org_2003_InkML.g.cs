@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.InkML
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "ink");
@@ -163,7 +163,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "bind");
@@ -239,7 +239,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "table");
@@ -294,7 +294,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "matrix");
@@ -387,7 +387,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "mapping");
@@ -565,7 +565,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channel");
@@ -678,7 +678,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "intermittentChannels");
@@ -751,7 +751,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channelProperty");
@@ -866,7 +866,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceFormat");
@@ -923,7 +923,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "sampleRate");
@@ -964,7 +964,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "latency");
@@ -1034,7 +1034,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "activeArea");
@@ -1116,7 +1116,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "srcProperty");
@@ -1203,7 +1203,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channelProperties");
@@ -1269,7 +1269,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "annotation");
@@ -1357,7 +1357,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "annotationXML");
@@ -1471,7 +1471,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "brushProperty");
@@ -1604,7 +1604,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "canvas");
@@ -1709,7 +1709,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "canvasTransform");
@@ -1843,7 +1843,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "inkSource");
@@ -2006,7 +2006,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "brush");
@@ -2102,7 +2102,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "timestamp");
@@ -2235,7 +2235,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "trace");
@@ -2344,7 +2344,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceGroup");
@@ -2478,7 +2478,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceView");
@@ -2645,7 +2645,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "context");
@@ -2836,7 +2836,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "definitions");

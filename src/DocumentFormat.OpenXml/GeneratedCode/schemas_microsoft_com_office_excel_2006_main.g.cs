@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "macrosheet");
@@ -282,7 +282,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "worksheetSortMap");
@@ -387,7 +387,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
             return new ListValue<StringValue> { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)) });
@@ -426,7 +426,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
             return new StringValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "f");
@@ -501,7 +501,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "rowSortMap");
@@ -593,7 +593,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "colSortMap");
@@ -635,7 +635,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "row");
@@ -660,7 +660,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "col");
@@ -705,7 +705,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<SortMapItemType>()

@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(40, "LongProperties");
@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(40, "LongProp");

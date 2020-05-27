@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(15, "lockedCanvas");

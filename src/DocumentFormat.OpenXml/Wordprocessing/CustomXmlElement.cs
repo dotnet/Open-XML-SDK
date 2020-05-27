@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => _constraint.Set(this, value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
 

@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "colorStyle");
@@ -250,7 +250,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "chartStyle");
@@ -851,7 +851,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "variation");
@@ -974,7 +974,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "extLst");
@@ -1080,7 +1080,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "styleClr");
@@ -1219,7 +1219,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "lnRef");
@@ -1299,7 +1299,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "fillRef");
@@ -1379,7 +1379,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "effectRef");
@@ -1479,7 +1479,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
@@ -1525,7 +1525,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             return new DoubleValue { InnerText = text };
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)) });
@@ -1607,7 +1607,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "fontRef");
@@ -1719,7 +1719,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "spPr");
@@ -2057,7 +2057,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "defRPr");
@@ -2434,7 +2434,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-400000L)
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "bodyPr");
@@ -2547,7 +2547,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "categoryAxis");
@@ -2572,7 +2572,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "seriesAxis");
@@ -2597,7 +2597,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "valueAxis");
@@ -2692,7 +2692,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddElement<AxisProperties>()
@@ -2821,7 +2821,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataSeries");
@@ -2939,7 +2939,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataLabels");
@@ -3029,7 +3029,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataTable");
@@ -3101,7 +3101,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "legend");
@@ -3149,7 +3149,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "title");
@@ -3209,7 +3209,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "trendline");
@@ -3307,7 +3307,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "view3D");
@@ -3395,7 +3395,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "axisTitle");
@@ -3473,7 +3473,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "categoryAxis");
@@ -3551,7 +3551,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "chartArea");
@@ -3629,7 +3629,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataLabel");
@@ -3707,7 +3707,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataLabelCallout");
@@ -3785,7 +3785,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPoint");
@@ -3863,7 +3863,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPoint3D");
@@ -3941,7 +3941,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointLine");
@@ -4019,7 +4019,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointMarker");
@@ -4097,7 +4097,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointWireframe");
@@ -4175,7 +4175,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataTable");
@@ -4253,7 +4253,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "downBar");
@@ -4331,7 +4331,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dropLine");
@@ -4409,7 +4409,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "errorBar");
@@ -4487,7 +4487,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "floor");
@@ -4565,7 +4565,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "gridlineMajor");
@@ -4643,7 +4643,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "gridlineMinor");
@@ -4721,7 +4721,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "hiLoLine");
@@ -4799,7 +4799,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "leaderLine");
@@ -4877,7 +4877,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "legend");
@@ -4955,7 +4955,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "plotArea");
@@ -5033,7 +5033,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "plotArea3D");
@@ -5111,7 +5111,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "seriesAxis");
@@ -5189,7 +5189,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "seriesLine");
@@ -5267,7 +5267,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "title");
@@ -5345,7 +5345,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "trendline");
@@ -5423,7 +5423,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "trendlineLabel");
@@ -5501,7 +5501,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "upBar");
@@ -5579,7 +5579,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "valueAxis");
@@ -5657,7 +5657,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "wall");
@@ -5745,7 +5745,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.AddChild<LineReference>();
@@ -5913,7 +5913,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointMarkerLayout");

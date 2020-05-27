@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(13, "legacyDrawing");

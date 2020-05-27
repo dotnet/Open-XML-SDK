@@ -205,7 +205,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal byte NamespaceId => Metadata.Schema?.NamespaceId ?? throw new InvalidOperationException();
 
-        internal virtual void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal virtual void ConfigureMetadata(ElementMetadata.Builder builder)
         {
         }
 

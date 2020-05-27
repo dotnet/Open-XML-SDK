@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         {
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(30, "iscomment");
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
             set => SetAttribute(value);
         }
 
-        internal override void ConfigureMetadata(ElementMetadataBuilder builder)
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(30, "textdata");
