@@ -1,10 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -19,10 +17,9 @@ namespace DocumentFormat.OpenXml.Framework
     {
         public static ElementLookup Parts { get; } = CreatePartLookup(typeof(OpenXmlPartRootElement), PackageCache.Cache.GetFactory<OpenXmlElement>);
 
-        public static readonly ElementLookup Empty = new ElementLookup(Array.Empty<ElementChild>());
+        public static readonly ElementLookup Empty = new ElementLookup(Enumerable.Empty<ElementChild>());
 
-        private ElementChild[] _data;
-        private IEnumerable<IMetadataBuilder<ElementChild>> _providers;
+        private readonly ElementChild[] _data;
 
         public ElementLookup(IEnumerable<ElementChild> lookup)
         {
@@ -33,41 +30,13 @@ namespace DocumentFormat.OpenXml.Framework
             _data = array;
         }
 
-        public ElementLookup(IEnumerable<IMetadataBuilder<ElementChild>> providers)
-        {
-            _providers = providers;
-        }
+        public int Count => _data.Length;
 
-        private ElementChild[] Lookup
-        {
-            get
-            {
-                if (_data is null)
-                {
-                    lock (Empty)
-                    {
-                        if (_data is null)
-                        {
-                            var data = _providers.Select(b => b.Build()).ToArray();
-
-                            Array.Sort(data, ElementChildNameComparer.Instance);
-
-                            _data = data;
-                        }
-                    }
-                }
-
-                return _data;
-            }
-        }
-
-        public int Count => Lookup.Length;
-
-        public IEnumerable<ElementChild> Elements => Lookup;
+        public IEnumerable<ElementChild> Elements => _data;
 
         public bool Contains(byte id, string name)
         {
-            foreach (var child in Lookup)
+            foreach (var child in _data)
             {
                 if (child.NamespaceId == id && object.Equals(child.Name, name))
                 {
@@ -80,21 +49,21 @@ namespace DocumentFormat.OpenXml.Framework
 
         public OpenXmlElement Create(byte id, string name)
         {
-            if (Lookup.Length == 0)
+            if (_data.Length == 0)
             {
                 return null;
             }
 
             // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so using a sorted
             // list to store them with a binary search improves overall performance.
-            var idx = Array.BinarySearch(Lookup, new ElementChild(null, id, name), ElementChildNameComparer.Instance);
+            var idx = Array.BinarySearch(_data, new ElementChild(null, id, name), ElementChildNameComparer.Instance);
 
             if (idx < 0)
             {
                 return null;
             }
 
-            return Lookup[idx].Create();
+            return _data[idx].Create();
         }
 
         private static ElementLookup CreatePartLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)

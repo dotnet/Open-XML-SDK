@@ -15,9 +15,14 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), new ElementMetadata()),
         });
 
-        private readonly ElementLookup _children;
+        private readonly Lazy<ElementLookup> _children;
 
-        public ElementMetadata(ReadOnlyArray<AttributeMetadata> attributes, ValidatorCollection validators, FileFormatVersions version, SchemaAttrAttribute schema, ElementLookup lookup)
+        internal ElementMetadata(
+            ReadOnlyArray<AttributeMetadata> attributes,
+            ValidatorCollection validators,
+            FileFormatVersions version,
+            SchemaAttrAttribute schema,
+            Lazy<ElementLookup> lookup)
         {
             Attributes = attributes;
             Validators = validators;
@@ -32,7 +37,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public ReadOnlyArray<AttributeMetadata> Attributes { get; }
 
-        public ElementLookup Children => _children ?? ElementLookup.Empty;
+        public ElementLookup Children => _children?.Value ?? ElementLookup.Empty;
 
         public ValidatorCollection Validators { get; }
 

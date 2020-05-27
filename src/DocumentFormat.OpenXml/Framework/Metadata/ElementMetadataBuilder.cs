@@ -3,11 +3,14 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal class ElementMetadataBuilder : ValidatorBuilder
     {
+        private static readonly Lazy<ElementLookup> _lazy = new Lazy<ElementLookup>(() => ElementLookup.Empty, true);
+
         private List<IMetadataBuilder<AttributeMetadata>> _attributes;
         private HashSet<IMetadataBuilder<ElementLookup.ElementChild>> _children;
         private byte _nsId;
@@ -54,7 +57,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         public ElementMetadata Build()
         {
             var schema = _localName is null ? null : new SchemaAttrAttribute(_nsId, _localName);
-            var lookup = _children is null ? ElementLookup.Empty : new ElementLookup(_children);
+            var lookup = _children is null ? _lazy : new Lazy<ElementLookup>(() => new ElementLookup(_children.Select(c => c.Build())), true);
 
             return new ElementMetadata(BuildAttributes(), new ValidatorCollection(ToArray()), Availability, schema, lookup);
         }
