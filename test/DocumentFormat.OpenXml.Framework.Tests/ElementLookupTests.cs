@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                     {
                         return ElementLookup.Parts;
                     }
-                    else if (type.GetConstructor(Array.Empty<Type>()) != null)
+                    else if (type.GetConstructor(Cached.Array<Type>()) != null)
                     {
                         var instance = (OpenXmlElement)Activator.CreateInstance(type);
                         return instance.Metadata.Children;
