@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(75, "webVideoPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WebVideoProperty>()
 .AddAttribute(0, "embeddedHtml", a => a.EmbeddedHtml)
 .AddAttribute(0, "h", a => a.Height)

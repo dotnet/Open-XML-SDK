@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(72, "list");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>

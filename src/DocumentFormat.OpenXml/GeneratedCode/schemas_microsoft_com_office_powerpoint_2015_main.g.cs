@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(78, "designElem");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<DesignElement>()
 .AddAttribute(0, "val", a => a.Val);
         }

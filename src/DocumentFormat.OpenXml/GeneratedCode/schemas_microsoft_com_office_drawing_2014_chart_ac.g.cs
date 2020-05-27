@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(81, "multiLvlStrLit");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Level>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();

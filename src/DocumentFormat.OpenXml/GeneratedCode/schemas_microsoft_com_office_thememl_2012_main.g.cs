@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "themeFamily");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<ThemeFamily>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -189,7 +189,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "extLst");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
@@ -311,7 +311,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "themeVariant");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<ThemeVariant>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -411,7 +411,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(73, "themeVariantLst");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ThemeVariant>();
         }
 

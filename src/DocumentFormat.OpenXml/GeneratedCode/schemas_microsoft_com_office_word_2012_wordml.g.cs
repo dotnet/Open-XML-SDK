@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "color");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Color>()
 .AddAttribute(23, "val", a => a.Val, aBuilder =>
 {
@@ -167,7 +167,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "dataBinding");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataBinding>()
 .AddAttribute(23, "prefixMappings", a => a.PrefixMappings)
 .AddAttribute(23, "xpath", a => a.XPath, aBuilder =>
@@ -215,7 +215,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "appearance");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Appearance>()
 .AddAttribute(69, "val", a => a.Val, aBuilder =>
 {
@@ -275,7 +275,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "commentsEx");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<CommentEx>();
         }
 
@@ -369,7 +369,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "people");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<Person>();
         }
 
@@ -464,7 +464,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "repeatingSection");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<SectionTitle>();
             builder.AddChild<DoNotAllowInsertDeleteSection>();
         }
@@ -525,7 +525,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "repeatingSectionItem");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -550,7 +550,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "chartTrackingRefBased");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -575,7 +575,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "collapsed");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -600,7 +600,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "webExtensionLinked");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -625,7 +625,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "webExtensionCreated");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -650,7 +650,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "doNotAllowInsertDeleteSection");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -723,7 +723,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "docId");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PersistentDocumentId>()
 .AddAttribute(69, "val", a => a.Val, aBuilder =>
 {
@@ -767,7 +767,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "footnoteColumns");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<FootnoteColumns>()
 .AddAttribute(23, "val", a => a.Val, aBuilder =>
 {
@@ -836,7 +836,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "commentEx");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<CommentEx>()
 .AddAttribute(69, "paraId", a => a.ParaId, aBuilder =>
 {
@@ -940,7 +940,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "person");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<PresenceInfo>();
             builder.AddElement<Person>()
 .AddAttribute(69, "author", a => a.Author, aBuilder =>
@@ -1023,7 +1023,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "presenceInfo");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PresenceInfo>()
 .AddAttribute(69, "providerId", a => a.ProviderId, aBuilder =>
 {
@@ -1079,7 +1079,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(69, "sectionTitle");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<SectionTitle>()
 .AddAttribute(23, "val", a => a.Val, aBuilder =>
 {

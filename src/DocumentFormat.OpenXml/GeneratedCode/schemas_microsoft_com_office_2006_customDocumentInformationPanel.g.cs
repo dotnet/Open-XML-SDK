@@ -62,7 +62,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "customPropertyEditors");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ShowOnOpen>();
             builder.AddChild<DefaultPropertyEditorNamespace>();
             builder.AddChild<CustomPropertyEditor>();
@@ -139,7 +138,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             builder.SetSchema(37, "XMLNamespace");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -178,7 +176,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             builder.SetSchema(37, "defaultPropertyEditorNamespace");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -216,7 +213,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "XSNLocation");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -255,7 +251,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
             builder.SetSchema(37, "showOnOpen");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -311,7 +306,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "customPropertyEditor");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PropertyEditorNamespace>();
             builder.AddChild<XsnFileLocation>();
         }

@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "pivotOptions");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DropZoneFilter>();
             builder.AddChild<DropZoneCategories>();
             builder.AddChild<DropZoneData>();
@@ -204,7 +204,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "sketchOptions");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<InSketchMode>();
             builder.AddChild<ShowSketchButton>();
         }
@@ -295,7 +295,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "invertSolidFillFmt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ShapeProperties>();
         }
 
@@ -351,7 +351,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "style");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Style>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -436,7 +436,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (101L), Ma
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "spPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
@@ -533,7 +533,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "dropZoneFilter");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -558,7 +558,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "dropZoneCategories");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -583,7 +583,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "dropZoneData");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -608,7 +608,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "dropZoneSeries");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -633,7 +633,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "dropZonesVisible");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -658,7 +658,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "inSketchMode");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -725,7 +725,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(46, "showSketchBtn");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShowSketchButton>()
 .AddAttribute(0, "val", a => a.Val);
         }

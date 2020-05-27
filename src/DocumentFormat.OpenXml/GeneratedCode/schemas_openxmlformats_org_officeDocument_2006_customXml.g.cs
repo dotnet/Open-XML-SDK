@@ -73,7 +73,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(20, "datastoreItem");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SchemaReferences>();
             builder.AddElement<DataStoreItem>()
 .AddAttribute(20, "itemID", a => a.ItemId, aBuilder =>
@@ -169,7 +168,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(20, "schemaRef");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SchemaReference>()
 .AddAttribute(20, "uri", a => a.Uri, aBuilder =>
 {
@@ -229,7 +227,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(20, "schemaRefs");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SchemaReference>();
         }
 

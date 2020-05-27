@@ -95,7 +95,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "variant");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Variant>();
             builder.AddChild<VTVector>();
             builder.AddChild<VTArray>();
@@ -721,7 +720,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "vector");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Variant>();
             builder.AddChild<VTByte>();
             builder.AddChild<VTShort>();
@@ -879,7 +877,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "array");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Variant>();
             builder.AddChild<VTByte>();
             builder.AddChild<VTShort>();
@@ -971,7 +968,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
             builder.SetSchema(5, "blob");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1010,7 +1006,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
             builder.SetSchema(5, "oblob");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1049,7 +1044,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
             builder.SetSchema(5, "stream");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1088,7 +1082,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
             builder.SetSchema(5, "ostream");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1127,7 +1120,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
             builder.SetSchema(5, "storage");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1166,7 +1158,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
             builder.SetSchema(5, "ostorage");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1191,7 +1182,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "empty");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1216,7 +1206,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "null");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1255,7 +1244,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(SByteValue)) });
             builder.SetSchema(5, "i1");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1294,7 +1282,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int16Value)) });
             builder.SetSchema(5, "i2");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1333,7 +1320,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(5, "i4");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1372,7 +1358,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(5, "int");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1411,7 +1396,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int64Value)) });
             builder.SetSchema(5, "i8");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1450,7 +1434,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ByteValue)) });
             builder.SetSchema(5, "ui1");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1489,7 +1472,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt16Value)) });
             builder.SetSchema(5, "ui2");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1528,7 +1510,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
             builder.SetSchema(5, "ui4");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1567,7 +1548,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
             builder.SetSchema(5, "uint");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1606,7 +1586,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt64Value)) });
             builder.SetSchema(5, "ui8");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1645,7 +1624,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(SingleValue)) });
             builder.SetSchema(5, "r4");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1684,7 +1662,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)) });
             builder.SetSchema(5, "r8");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1723,7 +1700,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DecimalValue)) });
             builder.SetSchema(5, "decimal");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1761,7 +1737,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "lpstr");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1799,7 +1774,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "lpwstr");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1837,7 +1811,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "bstr");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1876,7 +1849,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DateTimeValue)) });
             builder.SetSchema(5, "date");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1915,7 +1887,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DateTimeValue)) });
             builder.SetSchema(5, "filetime");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1954,7 +1925,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
             builder.SetSchema(5, "bool");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1993,7 +1963,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*[0-9]*\\.[0-9]{4}\\s*") });
             builder.SetSchema(5, "cy");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2032,7 +2001,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { Pattern = ("0x[0-9A-Fa-f]{8}") });
             builder.SetSchema(5, "error");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2080,7 +2048,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "vstream");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<VTVStreamData>()
 .AddAttribute(0, "version", a => a.Version, aBuilder =>
 {
@@ -2131,7 +2098,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
             builder.SetSchema(5, "clsid");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2189,16 +2155,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(5, "cf");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<VTClipboardData>()
-.AddAttribute(0, "format", a => a.Format, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-3L) });
-})
-.AddAttribute(0, "size", a => a.Size, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-});
+ .AddAttribute(0, "format", a => a.Format, aBuilder =>
+ {
+     aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-3L) });
+ })
+ .AddAttribute(0, "size", a => a.Size, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ });
         }
 
         /// <inheritdoc/>

@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "wgp");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -153,7 +153,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "grpSp");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -384,7 +384,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "cNvPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -503,7 +503,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "cNvFrPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
@@ -625,7 +625,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "xfrm");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()
@@ -720,7 +720,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "extLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
@@ -790,7 +790,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "cNvGrpSpPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
         }
@@ -901,7 +901,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "grpSpPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
@@ -1018,7 +1018,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "graphicFrame");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualGraphicFrameProperties>();
             builder.AddChild<Transform2D>();

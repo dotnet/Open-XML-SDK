@@ -33,7 +33,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapNone");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -138,7 +137,6 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapSquare");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<EffectExtent>();
             builder.AddElement<WrapSquare>()
 .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
@@ -254,7 +252,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapTight");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<WrapPolygon>();
             builder.AddElement<WrapTight>()
 .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
@@ -368,7 +365,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapThrough");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<WrapPolygon>();
             builder.AddElement<WrapThrough>()
 .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
@@ -472,7 +468,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapTopAndBottom");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<EffectExtent>();
             builder.AddElement<WrapTopBottom>()
 .AddAttribute(0, "distT", a => a.DistanceFromTop)
@@ -621,7 +616,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "inline");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Extent>();
             builder.AddChild<EffectExtent>();
             builder.AddChild<DocProperties>();
@@ -922,7 +916,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "anchor");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SimplePosition>();
             builder.AddChild<HorizontalPosition>();
             builder.AddChild<VerticalPosition>();
@@ -1094,7 +1087,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "start");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1119,7 +1111,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "lineTo");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1144,7 +1135,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "simplePos");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1260,7 +1250,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "effectExtent");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<EffectExtent>()
 .AddAttribute(0, "l", a => a.LeftEdge, aBuilder =>
 {
@@ -1347,7 +1336,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "wrapPolygon");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<StartPoint>();
             builder.AddChild<LineTo>();
             builder.AddElement<WrapPolygon>()
@@ -1439,7 +1427,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "positionH");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<HorizontalAlignment>();
             builder.AddChild<PositionOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
@@ -1566,7 +1553,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "positionV");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<VerticalAlignment>();
             builder.AddChild<PositionOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
@@ -1671,7 +1657,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "extent");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Extent>()
 .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
 {
@@ -1789,7 +1774,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "docPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -1914,7 +1898,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "cNvGraphicFramePr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
@@ -1990,7 +1973,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues>)) });
             builder.SetSchema(16, "align");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2029,7 +2011,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(16, "posOffset");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2069,7 +2050,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues>)) });
             builder.SetSchema(16, "align");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

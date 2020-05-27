@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "prstTrans");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PresetTransition>()
 .AddAttribute(0, "prst", a => a.Preset)
 .AddAttribute(0, "invX", a => a.InvX)
@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "presenceInfo");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PresenceInfo>()
 .AddAttribute(0, "userId", a => a.UserId, aBuilder =>
 {
@@ -193,7 +193,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "threadingInfo");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ParentCommentIdentifier>();
             builder.AddElement<ThreadingInfo>()
 .AddAttribute(0, "timeZoneBias", a => a.TimeZoneBias);
@@ -272,7 +272,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "sldGuideLst");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -336,7 +336,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "notesGuideLst");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -432,7 +432,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "chartTrackingRefBased");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ChartTrackingReferenceBased>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -482,7 +482,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "parentCm");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ParentCommentIdentifier>()
 .AddAttribute(0, "authorId", a => a.AuthorId)
 .AddAttribute(0, "idx", a => a.Index);
@@ -545,7 +545,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "clr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -702,7 +702,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "extLst");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
         }
 
@@ -822,7 +822,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(68, "guide");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ColorType>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<ExtendedGuide>()

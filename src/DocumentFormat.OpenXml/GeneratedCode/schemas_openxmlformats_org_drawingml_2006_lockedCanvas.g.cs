@@ -70,7 +70,6 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(15, "lockedCanvas");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TextShape>();

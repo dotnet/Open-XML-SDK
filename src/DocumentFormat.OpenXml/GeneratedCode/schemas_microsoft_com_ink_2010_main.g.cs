@@ -272,7 +272,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(45, "context");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ContextNodeProperty>();
             builder.AddChild<SourceLink>();
             builder.AddChild<DestinationLink>();
@@ -415,7 +414,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(45, "property");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ContextNodeProperty>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -445,7 +443,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(45, "sourceLink");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -470,7 +467,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(45, "destinationLink");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

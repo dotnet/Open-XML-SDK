@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "cameraTool");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CameraTool>()
 .AddAttribute(0, "cellRange", a => a.CellRange)
 .AddAttribute(0, "spid", a => a.ShapeId);
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "compatExt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CompatExtension>()
 .AddAttribute(0, "spid", a => a.ShapeId);
         }
@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "isCanvas");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<IsCanvas>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -224,7 +224,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "contentPart");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<NonVisualContentPartProperties>();
             builder.AddChild<Transform2D>();
             builder.AddChild<OfficeArtExtensionList>();
@@ -319,7 +319,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "shadowObscured");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShadowObscured>()
 .AddAttribute(0, "val", a => a.Val);
         }
@@ -381,7 +381,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "hiddenFill");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
@@ -589,7 +589,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "hiddenLine");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
@@ -710,7 +710,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "hiddenEffects");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
         }
@@ -810,7 +810,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "hiddenScene3d");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Camera>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LightRig>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Backdrop>();
@@ -975,7 +975,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "hiddenSp3d");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelTop>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelBottom>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
@@ -1128,7 +1128,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "imgProps");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ImageLayer>();
         }
 
@@ -1184,7 +1184,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "useLocalDpi");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<UseLocalDpi>()
 .AddAttribute(0, "val", a => a.Val);
         }
@@ -1211,7 +1211,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "m");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1266,7 +1266,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "extLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
@@ -1435,7 +1435,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "cpLocks");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<ContentPartLocks>()
 .AddAttribute(0, "noGrp", a => a.NoGrouping)
@@ -1532,7 +1532,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "foregroundMark");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ForegroundMark>()
 .AddAttribute(0, "x1", a => a.FirstXCoordinate, aBuilder =>
 {
@@ -1618,7 +1618,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "backgroundMark");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackgroundMark>()
 .AddAttribute(0, "x1", a => a.FirstXCoordinate, aBuilder =>
 {
@@ -1674,7 +1674,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticBlur");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticBlur>()
 .AddAttribute(0, "radius", a => a.Radius, aBuilder =>
 {
@@ -1724,7 +1724,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticCement");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticCement>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -1778,7 +1778,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticChalkSketch");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticChalkSketch>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -1832,7 +1832,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticCrisscrossEtching");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticCrisscrossEtching>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -1886,7 +1886,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticCutout");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticCutout>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -1940,7 +1940,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticFilmGrain");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticFilmGrain>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -1994,7 +1994,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticGlass");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticGlass>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2048,7 +2048,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticGlowDiffused");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticGlowDiffused>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2102,7 +2102,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticGlowEdges");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticGlowEdges>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2156,7 +2156,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticLightScreen");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticLightScreen>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2210,7 +2210,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticLineDrawing");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticLineDrawing>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2264,7 +2264,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticMarker");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticMarker>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2318,7 +2318,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticMosiaicBubbles");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticMosaicBubbles>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2372,7 +2372,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticPaintStrokes");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPaintStrokes>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2426,7 +2426,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticPaintBrush");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPaintBrush>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2480,7 +2480,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticPastelsSmooth");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPastelsSmooth>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2534,7 +2534,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticPencilGrayscale");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPencilGrayscale>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2588,7 +2588,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticPencilSketch");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPencilSketch>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2642,7 +2642,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticPhotocopy");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPhotocopy>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2696,7 +2696,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticPlasticWrap");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticPlasticWrap>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2750,7 +2750,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticTexturizer");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticTexturizer>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2804,7 +2804,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "artisticWatercolorSponge");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArtisticWatercolorSponge>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
@@ -2909,7 +2909,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "backgroundRemoval");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ForegroundMark>();
             builder.AddChild<BackgroundMark>();
             builder.AddElement<BackgroundRemoval>()
@@ -2985,7 +2985,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "brightnessContrast");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BrightnessContrast>()
 .AddAttribute(0, "bright", a => a.Bright, aBuilder =>
 {
@@ -3029,7 +3029,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "colorTemperature");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ColorTemperature>()
 .AddAttribute(0, "colorTemp", a => a.ColorTemperatureValue, aBuilder =>
 {
@@ -3069,7 +3069,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1500L), M
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "saturation");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Saturation>()
 .AddAttribute(0, "sat", a => a.SaturationAmount, aBuilder =>
 {
@@ -3109,7 +3109,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "sharpenSoften");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SharpenSoften>()
 .AddAttribute(0, "amount", a => a.Amount, aBuilder =>
 {
@@ -3205,7 +3205,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "imgEffect");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ArtisticBlur>();
             builder.AddChild<ArtisticCement>();
             builder.AddChild<ArtisticChalkSketch>();
@@ -3686,7 +3686,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "imgLayer");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ImageEffect>();
             builder.AddElement<ImageLayer>()
 .AddAttribute(19, "embed", a => a.Embed);
@@ -3803,7 +3803,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "cNvPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -3932,7 +3932,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "cNvContentPartPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ContentPartLocks>();
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<NonVisualInkContentPartProperties>()
@@ -4026,7 +4026,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "nvContentPartPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualInkContentPartProperties>();
         }
@@ -4148,7 +4148,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(48, "xfrm");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()

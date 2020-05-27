@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(67, "backgroundPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<BackgroundProperties>()
 .AddAttribute(0, "bwMode", a => a.Mode, aBuilder =>
 {
@@ -123,7 +123,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(67, "nonVisualGroupProps");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<NonVisualGroupProperties>()
 .AddAttribute(0, "isLegacyGroup", a => a.IsLegacyGroup);
         }
@@ -180,7 +180,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(67, "objectPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ObjectProperties>()
 .AddAttribute(0, "objectId", a => a.Id)
 .AddAttribute(0, "isActiveX", a => a.IsActiveX)
@@ -329,7 +329,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(67, "signatureLine");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<SignatureLine>()
 .AddAttribute(0, "isSignatureLine", a => a.IsSignatureLine)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>

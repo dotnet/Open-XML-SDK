@@ -62,7 +62,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "drawing");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ShapeTree>();
         }
 
@@ -159,7 +158,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "dataModelExt");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataModelExtensionBlock>()
 .AddAttribute(0, "relId", a => a.RelId)
 .AddAttribute(0, "minVer", a => a.MinVer, aBuilder =>
@@ -272,7 +270,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "cNvPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -401,7 +398,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "cNvSpPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<NonVisualDrawingShapeProperties>()
@@ -495,7 +491,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "nvSpPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualDrawingShapeProperties>();
         }
@@ -610,7 +605,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "spPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
@@ -740,7 +734,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "style");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
@@ -863,7 +856,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "txBody");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
@@ -987,7 +979,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "txXfrm");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()
@@ -1082,7 +1073,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
@@ -1152,7 +1142,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "cNvGrpSpPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
         }
@@ -1244,7 +1233,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "nvGrpSpPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualGroupDrawingShapeProperties>();
         }
@@ -1355,7 +1343,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "grpSpPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
@@ -1483,7 +1470,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "sp");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ShapeNonVisualProperties>();
             builder.AddChild<ShapeProperties>();
             builder.AddChild<ShapeStyle>();
@@ -1648,7 +1634,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "grpSp");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1721,7 +1706,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(56, "spTree");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

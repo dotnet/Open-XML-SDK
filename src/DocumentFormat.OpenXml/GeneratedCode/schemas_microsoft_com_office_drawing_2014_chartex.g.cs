@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "chartSpace");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<ChartData>();
             builder.AddChild<Chart>();
             builder.AddChild<ShapeProperties>();
@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
             builder.SetSchema(80, "binCount");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -308,7 +308,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "ext");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Extension2>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
@@ -368,7 +368,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "pt");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ChartStringValue>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
@@ -421,7 +421,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "pt");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<NumericValue>()
 .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
 {
@@ -492,7 +492,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "numDim");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<Formula>();
             builder.AddChild<NumericLevel>();
             builder.AddElement<NumericDimension>()
@@ -576,7 +576,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "strDim");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<Formula>();
             builder.AddChild<StringLevel>();
             builder.AddElement<StringDimension>()
@@ -649,7 +649,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "extLst");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<Extension2>();
         }
 
@@ -708,7 +708,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "externalData");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ExternalData>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -784,7 +784,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "data");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<NumericDimension>();
             builder.AddChild<StringDimension>();
             builder.AddChild<ExtensionList>();
@@ -860,7 +860,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "txData");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<Formula>();
             builder.AddChild<VXsdstring>();
         }
@@ -930,7 +930,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "rich");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -996,7 +996,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "txPr");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1142,7 +1142,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "tx");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<TextData>();
             builder.AddChild<RichTextBody>();
         }
@@ -1260,7 +1260,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "spPr");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
@@ -1390,7 +1390,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "unitsLabel");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<Text>();
             builder.AddChild<ShapeProperties>();
             builder.AddChild<TxPrTextBody>();
@@ -1491,7 +1491,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "catScaling");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<CategoryAxisScaling>()
 .AddAttribute(0, "gapWidth", a => a.GapWidth, aBuilder =>
 {
@@ -1565,7 +1565,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "valScaling");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ValueAxisScaling>()
 .AddAttribute(0, "max", a => a.Max, aBuilder =>
 {
@@ -1656,7 +1656,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "title");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<Text>();
             builder.AddChild<ShapeProperties>();
             builder.AddChild<TxPrTextBody>();
@@ -1788,7 +1788,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "units");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<AxisUnitsLabel>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<AxisUnits>()
@@ -1882,7 +1882,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "majorGridlines");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1946,7 +1946,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "minorGridlines");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2088,7 +2088,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "majorTickMarks");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2150,7 +2150,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "minorTickMarks");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2288,7 +2288,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "tickLabels");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<ExtensionList>();
         }
 
@@ -2354,7 +2354,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "numFmt");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<NumberFormat>()
 .AddAttribute(0, "formatCode", a => a.FormatCode, aBuilder =>
 {
@@ -2399,7 +2399,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)) });
             builder.SetSchema(80, "binSize");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -2434,7 +2434,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "parentLabelLayout");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ParentLabelLayout>()
 .AddAttribute(0, "val", a => a.ParentLabelLayoutVal, aBuilder =>
 {
@@ -2514,7 +2514,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "visibility");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SeriesElementVisibilities>()
 .AddAttribute(0, "connectorLines", a => a.ConnectorLines)
 .AddAttribute(0, "meanLine", a => a.MeanLine)
@@ -2545,7 +2545,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "aggregation");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -2631,7 +2631,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "binning");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<Xsddouble>();
             builder.AddChild<BinCountXsdunsignedInt>();
             builder.AddElement<Binning>()
@@ -2720,7 +2720,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "statistics");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Statistics>()
 .AddAttribute(0, "quartileMethod", a => a.QuartileMethod);
         }
@@ -2777,7 +2777,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "subtotals");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<UnsignedIntegerType>();
         }
 
@@ -2840,7 +2840,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "visibility");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<DataLabelVisibilities>()
 .AddAttribute(0, "seriesName", a => a.SeriesName)
 .AddAttribute(0, "categoryName", a => a.CategoryName)
@@ -2882,7 +2882,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "separator");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -2920,7 +2920,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "oddHeader");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -2958,7 +2958,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "oddFooter");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -2996,7 +2996,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "evenHeader");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -3034,7 +3034,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "evenFooter");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -3072,7 +3072,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "firstHeader");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -3110,7 +3110,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "firstFooter");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -3148,7 +3148,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "v");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -3228,7 +3228,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataLabel");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<NumberFormat>();
             builder.AddChild<ShapeProperties>();
             builder.AddChild<TxPrTextBody>();
@@ -3365,7 +3365,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataLabelHidden");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<DataLabelHidden>()
 .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
 {
@@ -3436,7 +3436,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataPt");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<ShapeProperties>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<DataPoint>()
@@ -3549,7 +3549,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataLabels");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<NumberFormat>();
             builder.AddChild<ShapeProperties>();
             builder.AddChild<TxPrTextBody>();
@@ -3673,7 +3673,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "dataId");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<DataId>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -3739,7 +3739,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "layoutPr");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<ParentLabelLayout>();
             builder.AddChild<SeriesElementVisibilities>();
             builder.AddChild<Aggregation>();
@@ -3827,7 +3827,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
             builder.SetSchema(80, "axisId");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -3883,7 +3883,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "plotSurface");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<ShapeProperties>();
             builder.AddChild<ExtensionList>();
         }
@@ -4031,7 +4031,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "series");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<Text>();
             builder.AddChild<ShapeProperties>();
             builder.AddChild<DataPoint>();
@@ -4145,7 +4145,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "plotAreaRegion");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<PlotSurface>();
             builder.AddChild<Series>();
             builder.AddChild<ExtensionList>();
@@ -4257,7 +4257,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "axis");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<CategoryAxisScaling>();
             builder.AddChild<ValueAxisScaling>();
             builder.AddChild<AxisTitle>();
@@ -4386,7 +4386,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "title");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<Text>();
             builder.AddChild<ShapeProperties>();
             builder.AddChild<TxPrTextBody>();
@@ -4514,7 +4514,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "plotArea");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<PlotAreaRegion>();
             builder.AddChild<Axis>();
             builder.AddChild<ShapeProperties>();
@@ -4628,7 +4628,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "legend");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<ShapeProperties>();
             builder.AddChild<TxPrTextBody>();
             builder.AddChild<ExtensionList>();
@@ -4773,7 +4773,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "headerFooter");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<OddHeaderXsdstring>();
             builder.AddChild<OddFooterXsdstring>();
             builder.AddChild<EvenHeaderXsdstring>();
@@ -4958,7 +4958,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "pageMargins");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<PageMargins>()
 .AddAttribute(0, "l", a => a.L, aBuilder =>
 {
@@ -5098,7 +5098,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "pageSetup");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<PageSetup>()
 .AddAttribute(0, "paperSize", a => a.PaperSize)
 .AddAttribute(0, "firstPageNumber", a => a.FirstPageNumber)
@@ -5165,7 +5165,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "chartData");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<ExternalData>();
             builder.AddChild<Data>();
             builder.AddChild<ExtensionList>();
@@ -5248,7 +5248,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "chart");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<ChartTitle>();
             builder.AddChild<PlotArea>();
             builder.AddChild<Legend>();
@@ -5489,7 +5489,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "clrMapOvr");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<ColorMappingType>()
 .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
@@ -5628,7 +5628,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "printSettings");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<HeaderFooter>();
             builder.AddChild<PageMargins>();
             builder.AddChild<PageSetup>();
@@ -5727,7 +5727,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "f");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Formula>()
 .AddAttribute(0, "dir", a => a.Dir);
         }
@@ -5794,7 +5794,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "lvl");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<ChartStringValue>();
             builder.AddElement<StringLevel>()
 .AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
@@ -5882,7 +5882,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "lvl");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<NumericValue>();
             builder.AddElement<NumericLevel>()
 .AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
@@ -5931,7 +5931,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(80, "idx");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<UnsignedIntegerType>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {

@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(51, "pctPosHOffset");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(51, "pctPosVOffset");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(51, "sizeRelH");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<PercentageWidth>();
             builder.AddElement<RelativeWidth>()
 .AddAttribute(0, "relativeFrom", a => a.ObjectId, aBuilder =>
@@ -241,7 +241,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(51, "sizeRelV");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<PercentageHeight>();
             builder.AddElement<RelativeHeight>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
@@ -307,7 +307,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(51, "pctWidth");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -346,7 +346,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(51, "pctHeight");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>

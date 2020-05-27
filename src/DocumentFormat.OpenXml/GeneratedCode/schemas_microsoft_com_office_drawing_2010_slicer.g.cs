@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(62, "slicer");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<Slicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -153,7 +153,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(62, "extLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 

@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(79, "creationId");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<CreationId>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -81,7 +81,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(79, "predDERef");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<PredecessorDrawingElementReference>()
 .AddAttribute(0, "pred", a => a.Pred, aBuilder =>
 {
@@ -131,7 +131,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(79, "cxnDERefs");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ConnectableReferences>()
 .AddAttribute(0, "st", a => a.St, aBuilder =>
 {
@@ -165,7 +165,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(79, "rowId");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -190,7 +190,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(79, "colId");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>

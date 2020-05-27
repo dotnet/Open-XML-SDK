@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "nvContentPartPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualInkContentPartProperties>();
             builder.AddChild<ApplicationNonVisualDrawingProperties>();
@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "xfrm");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform2D>()
@@ -308,7 +308,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "extLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.AddElement<ExtensionListModify>()
 .AddAttribute(0, "mod", a => a.Modify);
@@ -408,7 +408,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "media");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<MediaTrim>();
             builder.AddChild<MediaFade>();
             builder.AddChild<MediaBookmarkList>();
@@ -509,7 +509,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "vortex");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -534,7 +534,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "pan");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -594,7 +594,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "switch");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -619,7 +619,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "flip");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -644,7 +644,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "ferris");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -669,7 +669,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "gallery");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -694,7 +694,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "conveyor");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -764,7 +764,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "ripple");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<RippleTransition>()
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
 {
@@ -798,7 +798,7 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "honeycomb");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -823,7 +823,7 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "flash");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -898,7 +898,7 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "prism");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PrismTransition>()
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
 {
@@ -930,7 +930,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "doors");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -955,7 +955,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "window");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1035,7 +1035,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "glitter");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<GlitterTransition>()
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
 {
@@ -1079,7 +1079,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "warp");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<WarpTransition>()
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
 {
@@ -1129,7 +1129,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "flythrough");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<FlythroughTransition>()
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
 {
@@ -1180,7 +1180,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "shred");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShredTransition>()
 .AddAttribute(0, "pattern", a => a.Pattern, aBuilder =>
 {
@@ -1234,7 +1234,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "reveal");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<RevealTransition>()
 .AddAttribute(0, "thruBlk", a => a.ThroughBlack)
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
@@ -1275,7 +1275,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "wheelReverse");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<WheelReverseTransition>()
 .AddAttribute(0, "spokes", a => a.Spokes);
         }
@@ -1322,7 +1322,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "bmkTgt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BookmarkTarget>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
@@ -1386,7 +1386,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sectionPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SectionOld>();
         }
 
@@ -1449,7 +1449,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sectionLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Section>();
         }
 
@@ -1492,7 +1492,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "browseMode");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BrowseMode>()
 .AddAttribute(0, "showStatus", a => a.ShowStatus);
         }
@@ -1554,7 +1554,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "laserClr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -1691,7 +1691,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "defaultImageDpi");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DefaultImageDpi>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -1731,7 +1731,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "discardImageEditData");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DiscardImageEditData>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -1771,7 +1771,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "showMediaCtrls");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShowMediaControls>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -1831,7 +1831,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "laserTraceLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TracePointList>();
         }
 
@@ -1864,7 +1864,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "creationId");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1889,7 +1889,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "modId");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1985,7 +1985,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "showEvtLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TriggerEventRecord>();
             builder.AddChild<PlayEventRecord>();
             builder.AddChild<StopEventRecord>();
@@ -2206,7 +2206,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "cNvPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -2335,7 +2335,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "cNvContentPartPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             builder.AddElement<NonVisualInkContentPartProperties>()
@@ -2455,7 +2455,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "nvPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromCD>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.WaveAudioFile>();
@@ -2544,7 +2544,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "bmk");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MediaBookmark>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "time", a => a.Time);
@@ -2599,7 +2599,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "trim");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MediaTrim>()
 .AddAttribute(0, "st", a => a.Start)
 .AddAttribute(0, "end", a => a.End);
@@ -2647,7 +2647,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "fade");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MediaFade>()
 .AddAttribute(0, "in", a => a.InDuration)
 .AddAttribute(0, "out", a => a.OutDuration);
@@ -2705,7 +2705,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "bmkLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<MediaBookmark>();
         }
 
@@ -2768,7 +2768,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "extLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
         }
 
@@ -2867,7 +2867,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "section");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ExtensionList>();
             builder.AddElement<SectionOld>()
 .AddAttribute(0, "name", a => a.Name)
@@ -2933,7 +2933,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sldId");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SectionSlideIdListEntry>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2994,7 +2994,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (214748364
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "sldIdLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SectionSlideIdListEntry>();
         }
 
@@ -3078,7 +3078,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (214748364
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "section");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SectionSlideIdList>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<Section>()
@@ -3175,7 +3175,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "tracePt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TracePoint>()
 .AddAttribute(0, "t", a => a.Time, aBuilder =>
 {
@@ -3245,7 +3245,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "tracePtLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TracePoint>();
         }
 
@@ -3308,7 +3308,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "triggerEvt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TriggerEventRecord>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -3347,7 +3347,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "playEvt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -3372,7 +3372,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "stopEvt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -3397,7 +3397,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "pauseEvt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -3422,7 +3422,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "resumeEvt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -3526,7 +3526,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "seekEvt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SeekEventRecord>()
 .AddAttribute(0, "time", a => a.Time, aBuilder =>
 {
@@ -3584,7 +3584,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "nullEvt");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<NullEventRecord>()
 .AddAttribute(0, "time", a => a.Time, aBuilder =>
 {

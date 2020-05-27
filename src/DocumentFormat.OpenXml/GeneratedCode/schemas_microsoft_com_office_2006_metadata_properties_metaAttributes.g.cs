@@ -200,7 +200,6 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(41, "DummyContentTypeElement");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Dummy>()
 .AddAttribute(0, "decimals", a => a.Decimals)
 .AddAttribute(0, "default", a => a.Default)

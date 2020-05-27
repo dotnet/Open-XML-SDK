@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(58, "cNvPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -211,7 +211,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(58, "recolorImg");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<RecolorImages>()
 .AddAttribute(0, "val", a => a.Val);
         }

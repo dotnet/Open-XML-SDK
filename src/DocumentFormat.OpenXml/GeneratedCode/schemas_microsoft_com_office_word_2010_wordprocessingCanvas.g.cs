@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(59, "wpc");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackgroundFormatting>();
             builder.AddChild<WholeFormatting>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape>();
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(59, "bg");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
@@ -276,7 +276,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(59, "whole");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -366,7 +366,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(59, "graphicFrame");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>();
@@ -502,7 +502,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(59, "extLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 

@@ -60,7 +60,6 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(40, "LongProperties");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<LongProperty>();
         }
 
@@ -116,7 +115,6 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(40, "LongProp");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<LongProperty>()
 .AddAttribute(0, "name", a => a.Name);
         }

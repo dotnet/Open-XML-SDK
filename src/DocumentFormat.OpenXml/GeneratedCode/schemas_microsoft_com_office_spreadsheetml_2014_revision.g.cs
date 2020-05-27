@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "revHdrs");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<RevExHeader>();
             builder.AddElement<RevExHeaders>()
 .AddAttribute(0, "minRev", a => a.MinRev, aBuilder =>
@@ -198,7 +198,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "revStream");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<RevExFuture>();
             builder.AddChild<RevExUnsupported>();
             builder.AddChild<RevExTrimmed>();
@@ -293,7 +293,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "dxf");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
@@ -449,7 +449,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "revisionPtr");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionPtr>()
 .AddAttribute(0, "revIDLastSave", a => a.RevIDLastSave, aBuilder =>
 {
@@ -518,7 +518,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "objectState");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DataValidation>();
             builder.AddChild<Hyperlink>();
             builder.AddChild<SparklineGroup>();
@@ -682,7 +682,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "hdr");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExHeader>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -808,7 +808,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrftr");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<RevExTest>();
             builder.AddElement<RevExFuture>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
@@ -912,7 +912,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrUspt");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExUnsupported>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -1007,7 +1007,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrTrim");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExTrimmed>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -1132,7 +1132,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrrc");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExRowColumn>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -1266,7 +1266,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrm");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExMove>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -1454,7 +1454,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrc");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<RevCell>();
             builder.AddChild<ChangeCellSubEdit>();
             builder.AddElement<RevExChangeCell>()
@@ -1741,7 +1741,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrf");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DifferentialFormatType>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<RevExFormatting>()
@@ -2033,7 +2033,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrDefName");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<FormulaFormula>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<RevExDefinedName>()
@@ -2208,7 +2208,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrdo");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<StateBasedHeader>();
             builder.AddElement<RevExDelObj>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
@@ -2356,7 +2356,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrco");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<StateBasedHeader>();
             builder.AddChild<RevisionStateLink>();
             builder.AddChild<RevisionState>();
@@ -2519,7 +2519,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrSheet");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExSheetOp>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -2701,7 +2701,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrList");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionList>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -2830,7 +2830,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrListExpR");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevListAutoExpandRw>()
 .AddAttribute(0, "rev", a => a.Rev, aBuilder =>
 {
@@ -2976,7 +2976,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrg");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<RevExFuture>();
             builder.AddChild<RevExUnsupported>();
             builder.AddChild<RevExTrimmed>();
@@ -3053,7 +3053,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "xrrtest");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -3150,7 +3150,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "c");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<FFormula>();
             builder.AddChild<Xstring>();
             builder.AddChild<RstType>();
@@ -3301,7 +3301,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "ccse");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<RevCell>();
             builder.AddElement<ChangeCellSubEdit>()
 .AddAttribute(0, "r", a => a.R, aBuilder =>
@@ -3372,7 +3372,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "extLst");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
         }
 
@@ -3424,7 +3424,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "formula");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -3462,7 +3462,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "f");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -3567,7 +3567,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "hdr");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<RefMap>();
             builder.AddElement<StateBasedHeader>()
 .AddAttribute(0, "uid", a => a.Uid, aBuilder =>
@@ -3639,7 +3639,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "link");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionStateLink>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -3703,7 +3703,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "body");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<RowColVisualOps>();
             builder.AddChild<HideUnhideSheet>();
             builder.AddChild<ShowGridlinesHeadings>();
@@ -3843,7 +3843,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "refmap");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<RefCell>();
             builder.AddChild<SheetXluid>();
             builder.AddChild<RefOartAnchor>();
@@ -3924,7 +3924,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "rowColVisualOps");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RowColVisualOps>()
 .AddAttribute(0, "action", a => a.Action, aBuilder =>
 {
@@ -3970,7 +3970,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "hideUnhideSheet");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<HideUnhideSheet>()
 .AddAttribute(0, "hide", a => a.Hide, aBuilder =>
 {
@@ -4020,7 +4020,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "showGridlinesHeadings");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ShowGridlinesHeadings>()
 .AddAttribute(0, "showGridLines", a => a.ShowGridLines, aBuilder =>
 {
@@ -4064,7 +4064,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "freezePanes");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<FreezePanes>()
 .AddAttribute(0, "sheetViewUid", a => a.SheetViewUid, aBuilder =>
 {
@@ -4134,7 +4134,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "outlines");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<Outline>();
             builder.AddElement<Outlines>()
 .AddAttribute(0, "isRow", a => a.IsRow, aBuilder =>
@@ -4192,7 +4192,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "outline");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Outline>()
 .AddAttribute(0, "isCollapsed", a => a.IsCollapsed, aBuilder =>
 {
@@ -4239,7 +4239,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "v");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -4297,7 +4297,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "is");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Run>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticRun>();
@@ -4419,7 +4419,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "ref");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefCell>()
 .AddAttribute(0, "n", a => a.N, aBuilder =>
 {
@@ -4517,7 +4517,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "sheetUid");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SheetXluid>()
 .AddAttribute(0, "n", a => a.N, aBuilder =>
 {
@@ -4698,7 +4698,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "oartAnchor");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefOartAnchor>()
 .AddAttribute(0, "n", a => a.N, aBuilder =>
 {
@@ -4771,7 +4771,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "future");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -4836,7 +4836,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "test");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefTest>()
 .AddAttribute(0, "n", a => a.N, aBuilder =>
 {
@@ -5034,7 +5034,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "dataValidation");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
@@ -5180,7 +5180,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "hyperlink");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Hyperlink>()
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
@@ -5423,7 +5423,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "sparklineGroup");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>();
@@ -5654,7 +5654,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "comments");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Authors>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -5772,7 +5772,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "autoFilter");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -6537,7 +6537,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(83, "pivotTableDefinition");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Location>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowFields>();

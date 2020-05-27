@@ -184,7 +184,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "shapedefaults");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
@@ -436,7 +435,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "shapelayout");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ShapeIdMap>();
             builder.AddChild<RegroupTable>();
             builder.AddChild<Rules>();
@@ -656,7 +654,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "signatureline");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SignatureLine>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "issignatureline", a => a.IsSignatureLine)
@@ -727,7 +724,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "ink");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Ink>()
 .AddAttribute(0, "i", a => a.InkData)
 .AddAttribute(0, "annotation", a => a.AnnotationFlag);
@@ -888,7 +884,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "diagram");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RelationTable>();
             builder.AddElement<Diagram>()
 .AddAttribute(26, "ext", a => a.Extension)
@@ -1008,7 +1003,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "skew");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Skew>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "id", a => a.Id)
@@ -1353,7 +1347,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "extrusion");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Extrusion>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "on", a => a.On)
@@ -1562,7 +1555,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "callout");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Callout>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "on", a => a.On)
@@ -1731,7 +1723,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "lock");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Lock>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "position", a => a.Position)
@@ -1874,7 +1865,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "OLEObject");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<LinkType>();
             builder.AddChild<LockedField>();
             builder.AddChild<FieldCodes>();
@@ -1978,7 +1968,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "complex");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Complex>()
 .AddAttribute(26, "ext", a => a.Extension);
         }
@@ -2005,7 +1994,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "left");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2030,7 +2018,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "top");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2055,7 +2042,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "right");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2080,7 +2066,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "bottom");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2112,7 +2097,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "column");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2489,7 +2473,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "clippath");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ClipPath>()
 .AddAttribute(27, "v", a => a.Value, aBuilder =>
 {
@@ -2542,7 +2525,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "fill");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FillExtendedProperties>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "type", a => a.Type);
@@ -2593,7 +2575,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "idmap");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeIdMap>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "data", a => a.Data);
@@ -2664,7 +2645,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "regrouptable");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Entry>();
             builder.AddElement<RegroupTable>()
 .AddAttribute(26, "ext", a => a.Extension);
@@ -2742,7 +2722,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "rules");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Rule>();
             builder.AddElement<Rules>()
 .AddAttribute(26, "ext", a => a.Extension);
@@ -2797,7 +2776,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "entry");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Entry>()
 .AddAttribute(0, "new", a => a.New)
 .AddAttribute(0, "old", a => a.Old);
@@ -2895,7 +2873,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "r");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Proxy>();
             builder.AddElement<Rule>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -2982,7 +2959,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "relationtable");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Relation>();
             builder.AddElement<RelationTable>()
 .AddAttribute(26, "ext", a => a.Extension);
@@ -3060,20 +3036,19 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "rel");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Relation>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "idsrc", a => a.SourceId, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 })
 .AddAttribute(0, "iddest", a => a.DestinationId, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 })
 .AddAttribute(0, "idcntr", a => a.CenterShapeId, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 });
         }
 
@@ -3113,7 +3088,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>)) });
             builder.SetSchema(27, "LinkType");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -3152,7 +3126,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(TrueFalseBlankValue)) });
             builder.SetSchema(27, "LockedField");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -3190,7 +3163,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "FieldCodes");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -3255,18 +3227,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "proxy");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Proxy>()
 .AddAttribute(0, "start", a => a.Start)
 .AddAttribute(0, "end", a => a.End)
 .AddAttribute(0, "idref", a => a.ShapeReference, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 })
 .AddAttribute(0, "connectloc", a => a.ConnectionLocation, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -3315,7 +3286,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "colormru");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorMostRecentlyUsed>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "colors", a => a.Colors);
@@ -3396,7 +3366,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "colormenu");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorMenu>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "strokecolor", a => a.StrokeColor)

@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(74, "absPath");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<AbsolutePath>()
 .AddAttribute(0, "url", a => a.Url, aBuilder =>
 {

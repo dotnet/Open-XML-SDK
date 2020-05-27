@@ -70,12 +70,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Extension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 });
         }
 
@@ -139,7 +138,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calcChain");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CalculationCell>();
             builder.AddChild<ExtensionList>();
         }
@@ -237,7 +235,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "comments");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Authors>();
             builder.AddChild<CommentList>();
             builder.AddChild<ExtensionList>();
@@ -385,7 +382,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "MapInfo");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Schema>();
             builder.AddChild<Map>();
             builder.AddElement<MapInfo>()
@@ -486,7 +482,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "connections");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Connection>();
         }
 
@@ -783,7 +778,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotCacheDefinition");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CacheSource>();
             builder.AddChild<CacheFields>();
             builder.AddChild<CacheHierarchies>();
@@ -1077,7 +1071,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotCacheRecords");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotCacheRecord>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<PivotCacheRecords>()
@@ -1871,7 +1864,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotTableDefinition");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Location>();
             builder.AddChild<PivotFields>();
             builder.AddChild<RowFields>();
@@ -2535,7 +2527,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryTable");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<QueryTableRefresh>();
             builder.AddChild<QueryTableExtensionList>();
             builder.AddElement<QueryTable>()
@@ -2716,7 +2707,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SharedStringItem>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<SharedStringTable>()
@@ -2942,7 +2932,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "headers");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Header>();
             builder.AddElement<Headers>()
 .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
@@ -3076,7 +3065,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "revisions");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RevisionRowColumn>();
             builder.AddChild<RevisionMove>();
             builder.AddChild<RevisionCustomView>();
@@ -3202,7 +3190,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "users");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<UserInfo>();
             builder.AddElement<Users>()
 .AddAttribute(0, "count", a => a.Count);
@@ -3341,7 +3328,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "worksheet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SheetProperties>();
             builder.AddChild<SheetDimension>();
             builder.AddChild<SheetViews>();
@@ -3574,7 +3560,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "chartsheet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ChartSheetProperties>();
             builder.AddChild<ChartSheetViews>();
             builder.AddChild<ChartSheetProtection>();
@@ -3891,7 +3876,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dialogsheet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SheetProperties>();
             builder.AddChild<SheetViews>();
             builder.AddChild<SheetFormatProperties>();
@@ -4229,7 +4213,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "metadata");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MetadataTypes>();
             builder.AddChild<MetadataStrings>();
             builder.AddChild<MdxMetadata>();
@@ -4374,7 +4357,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "singleXmlCells");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SingleXmlCell>();
         }
 
@@ -4478,7 +4460,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "styleSheet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<NumberingFormats>();
             builder.AddChild<Fonts>();
             builder.AddChild<Fills>();
@@ -4738,7 +4719,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "externalLink");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExternalBook>();
             builder.AddChild<DdeLink>();
             builder.AddChild<OleLink>();
@@ -5065,7 +5045,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "table");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<AutoFilter>();
             builder.AddChild<SortState>();
             builder.AddChild<TableColumns>();
@@ -5285,7 +5264,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "volTypes");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<VolatileType>();
             builder.AddChild<ExtensionList>();
         }
@@ -5408,7 +5386,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "workbook");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<FileVersion>();
             builder.AddChild<FileSharing>();
             builder.AddChild<WorkbookProperties>();
@@ -5771,7 +5748,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "filterColumn");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Filters>();
             builder.AddChild<Top10>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
@@ -6016,7 +5992,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sortState");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SortCondition>();
             builder.AddChild<SortCondition>();
             builder.AddChild<ExtensionList>();
@@ -6094,7 +6069,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Extension>();
         }
 
@@ -6153,7 +6127,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customFilter");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomFilter>()
 .AddAttribute(0, "operator", a => a.Operator)
 .AddAttribute(0, "val", a => a.Val);
@@ -6241,17 +6214,16 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "c");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CalculationCell>()
-.AddAttribute(0, "r", a => a.CellReference, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-})
-.AddAttribute(0, "i", a => a.SheetId)
-.AddAttribute(0, "s", a => a.InChildChain)
-.AddAttribute(0, "l", a => a.NewLevel)
-.AddAttribute(0, "t", a => a.NewThread)
-.AddAttribute(0, "a", a => a.Array);
+ .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ })
+ .AddAttribute(0, "i", a => a.SheetId)
+ .AddAttribute(0, "s", a => a.InChildChain)
+ .AddAttribute(0, "l", a => a.NewLevel)
+ .AddAttribute(0, "t", a => a.NewThread)
+ .AddAttribute(0, "a", a => a.Array);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -6314,7 +6286,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "authors");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Author>();
         }
 
@@ -6377,7 +6348,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "commentList");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Comment>();
         }
 
@@ -6481,7 +6451,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "comment");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CommentText>();
             builder.AddChild<CommentProperties>();
             builder.AddElement<Comment>()
@@ -6579,7 +6548,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "author");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6617,7 +6585,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "t");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6655,7 +6622,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "v");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6693,7 +6659,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "formula");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6731,7 +6696,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oldFormula");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6769,7 +6733,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oddHeader");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6807,7 +6770,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oddFooter");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6845,7 +6807,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "evenHeader");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6883,7 +6844,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "evenFooter");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6921,7 +6881,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "firstHeader");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6959,7 +6918,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "firstFooter");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -6997,7 +6955,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "val");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -7035,7 +6992,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "stp");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -7073,7 +7029,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "formula1");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -7111,7 +7066,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "formula2");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -7238,7 +7192,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "Schema");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Schema>()
 .AddAttribute(0, "ID", a => a.Id, aBuilder =>
 {
@@ -7406,7 +7359,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "Map");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DataBinding>();
             builder.AddElement<Map>()
 .AddAttribute(0, "ID", a => a.ID, aBuilder =>
@@ -7572,7 +7524,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "DataBinding");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataBinding>()
 .AddAttribute(0, "DataBindingName", a => a.DataBindingName)
 .AddAttribute(0, "FileBinding", a => a.FileBinding)
@@ -7862,7 +7813,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "connection");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DatabaseProperties>();
             builder.AddChild<OlapProperties>();
             builder.AddChild<WebQueryProperties>();
@@ -8066,7 +8016,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tables");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MissingTable>();
             builder.AddChild<CharacterValue>();
             builder.AddChild<FieldItem>();
@@ -8205,7 +8154,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "parameter");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Parameter>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "sqlType", a => a.SqlType)
@@ -8251,7 +8199,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "m");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -8286,12 +8233,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "s");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CharacterValue>()
-.AddAttribute(0, "v", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-});
+ .AddAttribute(0, "v", a => a.Val, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ });
         }
 
         /// <inheritdoc/>
@@ -8326,12 +8272,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "x");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FieldItem>()
-.AddAttribute(0, "v", a => a.Val, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-});
+ .AddAttribute(0, "v", a => a.Val, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ });
         }
 
         /// <inheritdoc/>
@@ -8376,7 +8321,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "textField");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextField>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "position", a => a.Position);
@@ -8573,7 +8517,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cacheField");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SharedItems>();
             builder.AddChild<FieldGroup>();
             builder.AddChild<MemberPropertiesMap>();
@@ -8701,7 +8644,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pages");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Page>();
             builder.AddElement<Pages>()
 .AddAttribute(0, "count", a => a.Count);
@@ -8776,7 +8718,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rangeSets");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RangeSet>();
             builder.AddElement<RangeSets>()
 .AddAttribute(0, "count", a => a.Count);
@@ -8851,7 +8792,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "page");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PageItem>();
             builder.AddElement<Page>()
 .AddAttribute(0, "count", a => a.Count);
@@ -8896,7 +8836,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pageItem");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PageItem>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -9009,7 +8948,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rangeSet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RangeSet>()
 .AddAttribute(0, "i1", a => a.FieldItemIndexPage1)
 .AddAttribute(0, "i2", a => a.FieldItemIndexPage2)
@@ -9191,7 +9129,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "m");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Tuples>();
             builder.AddChild<MemberPropertyIndex>();
             builder.AddElement<MissingItem>()
@@ -9402,7 +9339,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "n");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Tuples>();
             builder.AddChild<MemberPropertyIndex>();
             builder.AddElement<NumberItem>()
@@ -9547,7 +9483,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "b");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MemberPropertyIndex>();
             builder.AddElement<BooleanItem>()
 .AddAttribute(0, "v", a => a.Val, aBuilder =>
@@ -9746,7 +9681,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "e");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Tuples>();
             builder.AddChild<MemberPropertyIndex>();
             builder.AddElement<ErrorItem>()
@@ -9974,7 +9908,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "s");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Tuples>();
             builder.AddChild<MemberPropertyIndex>();
             builder.AddElement<StringItem>()
@@ -10118,7 +10051,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "d");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MemberPropertyIndex>();
             builder.AddElement<DateTimeItem>()
 .AddAttribute(0, "v", a => a.Val, aBuilder =>
@@ -10196,7 +10128,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tpls");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -10258,7 +10189,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sortByTuple");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -10353,7 +10283,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "x");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -10378,7 +10307,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mpMap");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -10477,7 +10405,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "r");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MissingItem>();
             builder.AddChild<NumberItem>();
             builder.AddChild<BooleanItem>();
@@ -10622,22 +10549,21 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "kpi");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Kpi>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "caption", a => a.Caption, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "displayFolder", a => a.DisplayFolder)
 .AddAttribute(0, "measureGroup", a => a.MeasureGroup)
 .AddAttribute(0, "parent", a => a.ParentKpi)
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "goal", a => a.Goal)
 .AddAttribute(0, "status", a => a.Status)
@@ -10692,7 +10618,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fieldUsage");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FieldUsage>()
 .AddAttribute(0, "x", a => a.Index, aBuilder =>
 {
@@ -10800,7 +10725,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groupLevel");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Groups>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<GroupLevel>()
@@ -10918,7 +10842,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groups");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Group>();
             builder.AddElement<Groups>()
 .AddAttribute(0, "count", a => a.Count);
@@ -11033,7 +10956,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "group");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<GroupMembers>();
             builder.AddElement<Group>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -11143,7 +11065,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groupMembers");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<GroupMember>();
             builder.AddElement<GroupMembers>()
 .AddAttribute(0, "count", a => a.Count);
@@ -11198,7 +11119,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groupMember");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GroupMember>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
 {
@@ -11279,7 +11199,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "entries");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MissingItem>();
             builder.AddChild<NumberItem>();
             builder.AddChild<ErrorItem>();
@@ -11360,7 +11279,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sets");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TupleSet>();
             builder.AddElement<Sets>()
 .AddAttribute(0, "count", a => a.Count);
@@ -11435,7 +11353,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryCache");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Query>();
             builder.AddElement<QueryCache>()
 .AddAttribute(0, "count", a => a.Count);
@@ -11510,7 +11427,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "serverFormats");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ServerFormat>();
             builder.AddElement<ServerFormats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -11565,7 +11481,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "serverFormat");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ServerFormat>()
 .AddAttribute(0, "culture", a => a.Culture)
 .AddAttribute(0, "format", a => a.Format);
@@ -11631,13 +11546,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tpl");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Tuple>()
 .AddAttribute(0, "fld", a => a.Field)
 .AddAttribute(0, "hier", a => a.Hierarchy)
 .AddAttribute(0, "item", a => a.Item, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -11752,7 +11666,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "set");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Tuples>();
             builder.AddChild<SortByTuple>();
             builder.AddElement<TupleSet>()
@@ -11846,7 +11759,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "query");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Tuples>();
             builder.AddElement<Query>()
 .AddAttribute(0, "mdx", a => a.Mdx, aBuilder =>
@@ -11954,7 +11866,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calculatedItem");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotArea>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<CalculatedItem>()
@@ -12169,7 +12080,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotArea");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotAreaReferences>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<PivotArea>()
@@ -12349,7 +12259,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calculatedMember");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CalculatedMemberExtensionList>();
             builder.AddElement<CalculatedMember>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -12935,7 +12844,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotField");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Items>();
             builder.AddChild<AutoSortScope>();
             builder.AddChild<PivotFieldExtensionList>();
@@ -13176,7 +13084,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "item");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Item>()
 .AddAttribute(0, "n", a => a.ItemName)
 .AddAttribute(0, "t", a => a.ItemType)
@@ -13321,7 +13228,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataField");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DataFieldExtensionList>();
             builder.AddElement<DataField>()
 .AddAttribute(0, "name", a => a.Name)
@@ -13444,7 +13350,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "i");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MemberPropertyIndex>();
             builder.AddElement<RowItem>()
 .AddAttribute(0, "t", a => a.ItemType)
@@ -13497,11 +13402,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "field");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Field>()
 .AddAttribute(0, "x", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -13584,7 +13488,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "format");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotArea>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<Format>()
@@ -13715,7 +13618,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "conditionalFormat");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotAreas>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormat>()
@@ -13829,7 +13731,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotAreas");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotArea>();
             builder.AddElement<PivotAreas>()
 .AddAttribute(0, "count", a => a.Count);
@@ -13924,7 +13825,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "chartFormat");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotArea>();
             builder.AddElement<ChartFormat>()
 .AddAttribute(0, "chart", a => a.Chart, aBuilder =>
@@ -14122,7 +14022,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotHierarchy");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MemberProperties>();
             builder.AddChild<Members>();
             builder.AddChild<PivotHierarchyExtensionList>();
@@ -14190,7 +14089,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rowHierarchyUsage");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -14215,7 +14113,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colHierarchyUsage");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -14365,7 +14262,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mp");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MemberProperty>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "showCell", a => a.ShowCell)
@@ -14377,7 +14273,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(0, "level", a => a.Level)
 .AddAttribute(0, "field", a => a.Field, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+    aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -14419,7 +14315,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "member");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Member>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -14489,7 +14384,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dimension");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Dimension>()
 .AddAttribute(0, "measure", a => a.Measure)
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -14557,7 +14451,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "measureGroup");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MeasureGroup>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -14618,15 +14511,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "map");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MeasureDimensionMap>()
 .AddAttribute(0, "measureGroup", a => a.MeasureGroup, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "dimension", a => a.Dimension, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -14793,7 +14685,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "filter");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<AutoFilter>();
             builder.AddChild<PivotFilterExtensionList>();
             builder.AddElement<PivotFilter>()
@@ -15136,7 +15027,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cacheHierarchy");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<FieldsUsage>();
             builder.AddChild<GroupLevels>();
             builder.AddChild<CacheHierarchyExtensionList>();
@@ -15332,7 +15222,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rangePr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RangeProperties>()
 .AddAttribute(0, "autoStart", a => a.AutoStart)
 .AddAttribute(0, "autoEnd", a => a.AutoEnd)
@@ -15412,7 +15301,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "discretePr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<FieldItem>();
             builder.AddElement<DiscreteProperties>()
 .AddAttribute(0, "count", a => a.Count);
@@ -15492,7 +15380,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groupItems");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MissingItem>();
             builder.AddChild<NumberItem>();
             builder.AddChild<BooleanItem>();
@@ -15617,7 +15504,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pageField");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<PageField>()
 .AddAttribute(0, "fld", a => a.Field, aBuilder =>
@@ -15719,7 +15605,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "references");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotAreaReference>();
             builder.AddElement<PivotAreaReferences>()
 .AddAttribute(0, "count", a => a.Count);
@@ -15955,7 +15840,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "reference");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<FieldItem>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<PivotAreaReference>()
@@ -16048,7 +15932,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryTableFields");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<QueryTableField>();
             builder.AddElement<QueryTableFields>()
 .AddAttribute(0, "count", a => a.Count);
@@ -16123,7 +16006,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryTableDeletedFields");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DeletedField>();
             builder.AddElement<QueryTableDeletedFields>()
 .AddAttribute(0, "count", a => a.Count);
@@ -16168,7 +16050,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "deletedField");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DeletedField>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -16304,7 +16185,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryTableField");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<QueryTableField>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -16405,7 +16285,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "si");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -16473,7 +16352,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "is");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -16541,7 +16419,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "text");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -16646,7 +16523,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "b");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16671,7 +16547,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "i");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16696,7 +16571,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "strike");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16721,7 +16595,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "condense");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16746,7 +16619,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extend");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16771,7 +16643,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "outline");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16796,7 +16667,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "shadow");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -16863,9 +16733,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "u");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Underline>()
-.AddAttribute(0, "val", a => a.Val);
+ .AddAttribute(0, "val", a => a.Val);
         }
 
         /// <inheritdoc/>
@@ -16900,7 +16769,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "vertAlign");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<VerticalTextAlignment>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -16940,11 +16808,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sz");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FontSize>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+    aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -16976,7 +16843,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "color");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17009,7 +16875,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tabColor");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17041,7 +16906,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fgColor");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17072,7 +16936,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bgColor");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17192,11 +17055,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rFont");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RunFont>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -17228,7 +17090,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "family");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17259,7 +17120,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "charset");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -17335,7 +17195,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "scheme");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FontScheme>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -17409,7 +17268,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Bold>();
             builder.AddChild<Italic>();
             builder.AddChild<Strike>();
@@ -17501,7 +17359,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "r");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RunProperties>();
             builder.AddChild<Text>();
         }
@@ -17612,7 +17469,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rPh");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Text>();
             builder.AddElement<PhoneticRun>()
 .AddAttribute(0, "sb", a => a.BaseTextStartIndex, aBuilder =>
@@ -17703,7 +17559,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "phoneticPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PhoneticProperties>()
 .AddAttribute(0, "fontId", a => a.FontId, aBuilder =>
 {
@@ -17846,7 +17701,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "header");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SheetIdMap>();
             builder.AddChild<ReviewedList>();
             builder.AddChild<ExtensionList>();
@@ -18066,7 +17920,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rrc");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Undo>();
             builder.AddChild<RevisionCellChange>();
             builder.AddChild<RevisionFormat>();
@@ -18232,7 +18085,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rm");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Undo>();
             builder.AddChild<RevisionCellChange>();
             builder.AddChild<RevisionFormat>();
@@ -18316,16 +18168,15 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rcv");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionCustomView>()
 .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
 .AddAttribute(0, "action", a => a.Action, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -18441,7 +18292,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rsnm");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<RevisionSheetName>()
 .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
@@ -18572,25 +18422,24 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ris");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionInsertSheet>()
 .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "ua", a => a.Ua)
 .AddAttribute(0, "ra", a => a.Ra)
 .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "sheetPosition", a => a.SheetPosition, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -18797,7 +18646,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rcc");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<OldCell>();
             builder.AddChild<NewCell>();
             builder.AddChild<OldDifferentialFormat>();
@@ -19021,7 +18869,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rfmt");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DifferentialFormat>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<RevisionFormat>()
@@ -19191,11 +19038,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "raf");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionAutoFormat>()
 .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "autoFormatId", a => a.AutoFormatId)
 .AddAttribute(0, "applyNumberFormats", a => a.ApplyNumberFormats)
@@ -19206,7 +19052,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats)
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -19511,7 +19357,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rdn");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Formula>();
             builder.AddChild<OldFormula>();
             builder.AddChild<ExtensionList>();
@@ -19748,20 +19593,19 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rcmt");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionComment>()
 .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "cell", a => a.Cell, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
 .AddAttribute(0, "action", a => a.Action)
 .AddAttribute(0, "alwaysShow", a => a.AlwaysShow)
@@ -19770,7 +19614,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
 .AddAttribute(0, "hiddenColumn", a => a.HiddenColumn)
 .AddAttribute(0, "author", a => a.Author, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "oldLength", a => a.OldLength)
 .AddAttribute(0, "newLength", a => a.NewLength);
@@ -19834,19 +19678,18 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rqt");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionQueryTable>()
 .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "fieldId", a => a.FieldId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -19912,11 +19755,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rcft");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RevisionConflict>()
 .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "ua", a => a.Ua)
 .AddAttribute(0, "ra", a => a.Ra)
@@ -19991,7 +19833,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetIdMap");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SheetId>();
             builder.AddElement<SheetIdMap>()
 .AddAttribute(0, "count", a => a.Count);
@@ -20066,7 +19907,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "reviewedList");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Reviewed>();
             builder.AddElement<ReviewedList>()
 .AddAttribute(0, "count", a => a.Count);
@@ -20111,7 +19951,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "reviewed");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Reviewed>()
 .AddAttribute(0, "rId", a => a.RevisionId, aBuilder =>
 {
@@ -20257,15 +20096,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "undo");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Undo>()
 .AddAttribute(0, "index", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "exp", a => a.Expression, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "ref3D", a => a.Reference3D)
 .AddAttribute(0, "array", a => a.Array)
@@ -20274,7 +20112,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(0, "cs", a => a.CrossSheetMove)
 .AddAttribute(0, "dr", a => a.DeletedRange, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "dn", a => a.DefinedName)
 .AddAttribute(0, "r", a => a.CellReference)
@@ -20345,7 +20183,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oc");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -20421,7 +20258,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "c");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -20736,7 +20572,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "nc");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CellFormula>();
             builder.AddChild<CellValue>();
             builder.AddChild<InlineString>();
@@ -20881,7 +20716,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "odxf");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -20955,7 +20789,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ndxf");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -21029,7 +20862,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dxf");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -21231,7 +21063,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetId");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetId>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -21413,21 +21244,20 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "f");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CellFormula>()
-.AddAttribute(0, "t", a => a.FormulaType)
-.AddAttribute(0, "aca", a => a.AlwaysCalculateArray)
-.AddAttribute(0, "ref", a => a.Reference)
-.AddAttribute(0, "dt2D", a => a.DataTable2D)
-.AddAttribute(0, "dtr", a => a.DataTableRow)
-.AddAttribute(0, "del1", a => a.Input1Deleted)
-.AddAttribute(0, "del2", a => a.Input2Deleted)
-.AddAttribute(0, "r1", a => a.R1)
-.AddAttribute(0, "r2", a => a.R2)
-.AddAttribute(0, "ca", a => a.CalculateCell)
-.AddAttribute(0, "si", a => a.SharedIndex)
-.AddAttribute(0, "bx", a => a.Bx)
-.AddAttribute(1, "space", a => a.Space);
+ .AddAttribute(0, "t", a => a.FormulaType)
+ .AddAttribute(0, "aca", a => a.AlwaysCalculateArray)
+ .AddAttribute(0, "ref", a => a.Reference)
+ .AddAttribute(0, "dt2D", a => a.DataTable2D)
+ .AddAttribute(0, "dtr", a => a.DataTableRow)
+ .AddAttribute(0, "del1", a => a.Input1Deleted)
+ .AddAttribute(0, "del2", a => a.Input2Deleted)
+ .AddAttribute(0, "r1", a => a.R1)
+ .AddAttribute(0, "r2", a => a.R2)
+ .AddAttribute(0, "ca", a => a.CalculateCell)
+ .AddAttribute(0, "si", a => a.SharedIndex)
+ .AddAttribute(0, "bx", a => a.Bx)
+ .AddAttribute(1, "space", a => a.Space);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -21529,7 +21359,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "userInfo");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<UserInfo>()
 .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
@@ -21757,7 +21586,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "row");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Cell>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<Row>()
@@ -21917,15 +21745,14 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "col");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Column>()
 .AddAttribute(0, "min", a => a.Min, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "max", a => a.Max, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "width", a => a.Width)
 .AddAttribute(0, "style", a => a.Style)
@@ -22011,7 +21838,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "outlinePr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OutlineProperties>()
 .AddAttribute(0, "applyStyles", a => a.ApplyStyles)
 .AddAttribute(0, "summaryBelow", a => a.SummaryBelow)
@@ -22061,7 +21887,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pageSetUpPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PageSetupProperties>()
 .AddAttribute(0, "autoPageBreaks", a => a.AutoPageBreaks)
 .AddAttribute(0, "fitToPage", a => a.FitToPage);
@@ -22139,7 +21964,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pane");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Pane>()
 .AddAttribute(0, "xSplit", a => a.HorizontalSplit)
 .AddAttribute(0, "ySplit", a => a.VerticalSplit)
@@ -22210,7 +22034,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "selection");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Selection>()
 .AddAttribute(0, "pane", a => a.Pane)
 .AddAttribute(0, "activeCell", a => a.ActiveCell)
@@ -22449,7 +22272,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotSelection");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotArea>();
             builder.AddElement<PivotSelection>()
 .AddAttribute(0, "pane", a => a.Pane)
@@ -22574,7 +22396,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "brk");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Break>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "min", a => a.Min)
@@ -22656,7 +22477,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataRef");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DataReference>()
 .AddAttribute(0, "ref", a => a.Reference)
 .AddAttribute(0, "name", a => a.Name)
@@ -22716,7 +22536,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rowBreaks");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -22785,7 +22604,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colBreaks");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -22958,7 +22776,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pageMargins");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PageMargins>()
 .AddAttribute(0, "left", a => a.Left, aBuilder =>
 {
@@ -23069,7 +22886,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "printOptions");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PrintOptions>()
 .AddAttribute(0, "horizontalCentered", a => a.HorizontalCentered)
 .AddAttribute(0, "verticalCentered", a => a.VerticalCentered)
@@ -23273,7 +23089,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pageSetup");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PageSetup>()
 .AddAttribute(0, "paperSize", a => a.PaperSize)
 .AddAttribute(0, "scale", a => a.Scale)
@@ -23401,7 +23216,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "headerFooter");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<OddHeader>();
             builder.AddChild<OddFooter>();
             builder.AddChild<EvenHeader>();
@@ -23569,7 +23383,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "autoFilter");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<FilterColumn>();
             builder.AddChild<SortState>();
             builder.AddChild<ExtensionList>();
@@ -23772,7 +23585,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cfRule");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Formula>();
             builder.AddChild<ColorScale>();
             builder.AddChild<DataBar>();
@@ -23894,7 +23706,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "hyperlink");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Hyperlink>()
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
@@ -23997,7 +23808,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cfvo");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormatValueObject>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
@@ -24140,7 +23950,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "scenario");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<InputCells>();
             builder.AddElement<Scenario>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -24273,7 +24082,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "protectedRange");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ProtectedRange>()
 .AddAttribute(0, "password", a => a.Password, aBuilder =>
 {
@@ -24334,7 +24142,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellWatch");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CellWatch>()
 .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
 {
@@ -24483,7 +24290,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pageSetup");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ChartSheetPageSetup>()
 .AddAttribute(0, "paperSize", a => a.PaperSize)
 .AddAttribute(0, "firstPageNumber", a => a.FirstPageNumber)
@@ -24551,7 +24357,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CustomProperty>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -24671,7 +24476,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "webPublishItem");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WebPublishItem>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -24742,7 +24546,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tablePart");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TablePart>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -24842,7 +24645,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetView");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<ChartSheetView>()
 .AddAttribute(0, "tabSelected", a => a.TabSelected)
@@ -24975,7 +24777,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customSheetView");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PageMargins>();
             builder.AddChild<ChartSheetPageSetup>();
             builder.AddChild<HeaderFooter>();
@@ -25116,7 +24917,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "inputCells");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<InputCells>()
 .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
 {
@@ -25222,7 +25022,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "control");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ControlProperties>();
             builder.AddElement<Control>()
 .AddAttribute(0, "shapeId", a => a.ShapeId, aBuilder =>
@@ -25386,7 +25185,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ignoredError");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<IgnoredError>()
 .AddAttribute(0, "sqref", a => a.SequenceOfReferences, aBuilder =>
 {
@@ -25441,7 +25239,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mergeCell");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MergeCell>()
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
@@ -25633,7 +25430,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataValidation");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
             builder.AddChild<Formula1>();
             builder.AddChild<Formula2>();
@@ -25957,7 +25753,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetView");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Pane>();
             builder.AddChild<Selection>();
             builder.AddChild<PivotSelection>();
@@ -26281,7 +26076,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customSheetView");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Pane>();
             builder.AddChild<Selection>();
             builder.AddChild<RowBreaks>();
@@ -26597,7 +26391,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleObject");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<EmbeddedObjectProperties>();
             builder.AddElement<OleObject>()
 .AddAttribute(0, "progId", a => a.ProgId)
@@ -26702,7 +26495,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "metadataTypes");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MetadataType>();
             builder.AddElement<MetadataTypes>()
 .AddAttribute(0, "count", a => a.Count);
@@ -26783,7 +26575,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "metadataStrings");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CharacterValue>();
             builder.AddElement<MetadataStrings>()
 .AddAttribute(0, "count", a => a.Count);
@@ -26864,7 +26655,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mdxMetadata");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Mdx>();
             builder.AddElement<MdxMetadata>()
 .AddAttribute(0, "count", a => a.Count);
@@ -26956,7 +26746,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "futureMetadata");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<FutureMetadataBlock>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<FutureMetadata>()
@@ -27036,7 +26825,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellMetadata");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -27104,7 +26892,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "valueMetadata");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -27485,7 +27272,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "metadataType");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MetadataType>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -27582,7 +27368,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bk");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MetadataRecord>();
         }
 
@@ -27635,15 +27420,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rc");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MetadataRecord>()
 .AddAttribute(0, "t", a => a.TypeIndex, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+    aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "v", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+    aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -27706,7 +27490,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bk");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
         }
 
@@ -27805,7 +27588,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mdx");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MdxTuple>();
             builder.AddChild<MdxSet>();
             builder.AddChild<MdxMemberProp>();
@@ -28042,7 +27824,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "t");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<NameIndex>();
             builder.AddElement<MdxTuple>()
 .AddAttribute(0, "c", a => a.MemberIndexCount)
@@ -28161,7 +27942,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ms");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<NameIndex>();
             builder.AddElement<MdxSet>()
 .AddAttribute(0, "ns", a => a.SetDefinitionIndex, aBuilder =>
@@ -28229,16 +28009,15 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "p");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MdxMemberProp>()
-.AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-})
-.AddAttribute(0, "np", a => a.PropertyNameIndex, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-});
+ .AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ })
+ .AddAttribute(0, "np", a => a.PropertyNameIndex, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ });
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -28302,20 +28081,19 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "k");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MdxKpi>()
-.AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-})
-.AddAttribute(0, "np", a => a.KpiIndex, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-})
-.AddAttribute(0, "p", a => a.KpiProperty, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-});
+ .AddAttribute(0, "n", a => a.NameIndex, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ })
+ .AddAttribute(0, "np", a => a.KpiIndex, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ })
+ .AddAttribute(0, "p", a => a.KpiProperty, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ });
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -28369,13 +28147,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "n");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NameIndex>()
-.AddAttribute(0, "x", a => a.Index, aBuilder =>
-{
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-})
-.AddAttribute(0, "s", a => a.IsASet);
+ .AddAttribute(0, "x", a => a.Index, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ })
+ .AddAttribute(0, "s", a => a.IsASet);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -28468,7 +28245,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "singleXmlCell");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<XmlCellProperties>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<SingleXmlCell>()
@@ -28601,7 +28377,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "xmlCellPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<XmlProperties>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<XmlCellProperties>()
@@ -28739,7 +28514,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "xmlPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<XmlProperties>()
 .AddAttribute(0, "mapId", a => a.MapId, aBuilder =>
@@ -28846,7 +28620,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "patternFill");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ForegroundColor>();
             builder.AddChild<BackgroundColor>();
             builder.AddElement<PatternFill>()
@@ -28999,7 +28772,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "gradientFill");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<GradientStop>();
             builder.AddElement<GradientFill>()
 .AddAttribute(0, "type", a => a.Type)
@@ -29089,7 +28861,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "stop");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Color>();
             builder.AddElement<GradientStop>()
 .AddAttribute(0, "position", a => a.Position, aBuilder =>
@@ -29166,7 +28937,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "numFmt");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<NumberingFormat>()
 .AddAttribute(0, "numFmtId", a => a.NumberFormatId, aBuilder =>
 {
@@ -29306,7 +29076,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "alignment");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Alignment>()
 .AddAttribute(0, "horizontal", a => a.Horizontal)
 .AddAttribute(0, "vertical", a => a.Vertical)
@@ -29370,7 +29139,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "protection");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Protection>()
 .AddAttribute(0, "locked", a => a.Locked)
 .AddAttribute(0, "hidden", a => a.Hidden);
@@ -29442,7 +29210,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "font");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Bold>();
             builder.AddChild<Italic>();
             builder.AddChild<Strike>();
@@ -29729,7 +29496,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fill");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PatternFill>();
             builder.AddChild<GradientFill>();
         }
@@ -29858,7 +29624,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "border");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<StartBorder>();
             builder.AddChild<EndBorder>();
             builder.AddChild<LeftBorder>();
@@ -30058,7 +29823,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "indexedColors");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RgbColor>();
         }
 
@@ -30121,7 +29885,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mruColors");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Color>();
         }
 
@@ -30224,7 +29987,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableStyle");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TableStyleElement>();
             builder.AddElement<TableStyle>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -30281,7 +30043,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rgbColor");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RgbColor>()
 .AddAttribute(0, "rgb", a => a.Rgb, aBuilder =>
 {
@@ -30401,7 +30162,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellStyle");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<CellStyle>()
 .AddAttribute(0, "name", a => a.Name)
@@ -30629,7 +30389,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "xf");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Alignment>();
             builder.AddChild<Protection>();
             builder.AddChild<ExtensionList>();
@@ -30739,12 +30498,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "name");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FontName>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L) });
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L) });
 });
         }
 
@@ -30786,7 +30544,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "family");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FontFamilyNumbering>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -30827,7 +30584,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "charset");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FontCharSet>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -30888,7 +30644,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableStyleElement");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TableStyleElement>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -30957,7 +30712,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetNames");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SheetName>();
         }
 
@@ -31020,7 +30774,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "definedNames");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExternalDefinedName>();
         }
 
@@ -31083,7 +30836,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetDataSet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExternalSheetData>();
         }
 
@@ -31146,7 +30898,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "definedName");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ExternalDefinedName>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -31234,7 +30985,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetData");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExternalRow>();
             builder.AddElement<ExternalSheetData>()
 .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
@@ -31319,7 +31069,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "row");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExternalCell>();
             builder.AddElement<ExternalRow>()
 .AddAttribute(0, "r", a => a.RowIndex, aBuilder =>
@@ -31423,7 +31172,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cell");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Xstring>();
             builder.AddElement<ExternalCell>()
 .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
@@ -31513,7 +31261,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ddeItems");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DdeItem>();
         }
 
@@ -31616,7 +31363,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ddeItem");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Values>();
             builder.AddElement<DdeItem>()
 .AddAttribute(0, "name", a => a.Name)
@@ -31724,7 +31470,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "values");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Value>();
             builder.AddElement<Values>()
 .AddAttribute(0, "rows", a => a.Rows)
@@ -31807,7 +31552,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "value");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DdeLinkValue>();
             builder.AddElement<Value>()
 .AddAttribute(0, "t", a => a.ValueType);
@@ -31886,7 +31630,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleItems");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<OleItem>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OleItem>();
         }
@@ -31966,7 +31709,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "externalBook");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SheetNames>();
             builder.AddChild<ExternalDefinedNames>();
             builder.AddChild<SheetDataSet>();
@@ -32097,7 +31839,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ddeLink");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DdeItems>();
             builder.AddElement<DdeLink>()
 .AddAttribute(0, "ddeService", a => a.DdeService, aBuilder =>
@@ -32212,7 +31953,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleLink");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<OleItems>();
             builder.AddElement<OleLink>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
@@ -32283,7 +32023,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetName");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetName>()
 .AddAttribute(0, "val", a => a.Val);
         }
@@ -32329,7 +32068,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "v");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -32507,7 +32245,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableColumn");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CalculatedColumnFormula>();
             builder.AddChild<TotalsRowFormula>();
             builder.AddChild<XmlColumnProperties>();
@@ -32649,7 +32386,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calculatedColumnFormula");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -32687,7 +32423,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "totalsRowFormula");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -32841,7 +32576,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "xmlColumnPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<XmlColumnProperties>()
 .AddAttribute(0, "mapId", a => a.MapId, aBuilder =>
@@ -32949,7 +32683,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "volType");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Main>();
             builder.AddElement<VolatileType>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
@@ -33027,7 +32760,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "main");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Topic>();
             builder.AddElement<Main>()
 .AddAttribute(0, "first", a => a.First, aBuilder =>
@@ -33113,7 +32845,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tp");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Xstring>();
             builder.AddChild<Subtopic>();
             builder.AddChild<TopicReferences>();
@@ -33185,15 +32916,14 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TopicReferences>()
 .AddAttribute(0, "r", a => a.CellReference, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+    aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "s", a => a.SheetId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+    aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -33248,7 +32978,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotCache");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotCache>()
 .AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
 {
@@ -33349,7 +33078,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "webPublishObject");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WebPublishObject>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -33413,7 +33141,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "externalReference");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ExternalReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -33713,7 +33440,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customWorkbookView");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<CustomWorkbookView>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -33847,20 +33573,19 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Sheet>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "sheetId", a => a.SheetId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "state", a => a.State)
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -34058,7 +33783,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "workbookView");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<WorkbookView>()
 .AddAttribute(0, "visibility", a => a.Visibility)
@@ -34290,7 +34014,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "definedName");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DefinedName>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -34352,7 +34075,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "functionGroup");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FunctionGroup>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -34428,7 +34150,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Table>();
             builder.AddElement<TableExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
@@ -34529,7 +34250,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "anchor");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<FromMarker>();
             builder.AddChild<ToMarker>();
             builder.AddElement<ObjectAnchor>()
@@ -34627,7 +34348,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "from");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -34695,7 +34416,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "to");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -34879,7 +34600,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Id>();
             builder.AddElement<ConditionalFormattingRuleExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
@@ -34959,7 +34679,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy>();
             builder.AddElement<PivotHierarchyExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
@@ -35039,7 +34758,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotField>();
             builder.AddElement<PivotFieldExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
@@ -35119,7 +34837,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SourceConnection>();
             builder.AddElement<CacheSourceExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
@@ -35199,7 +34916,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableColumns");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TableColumn>();
             builder.AddElement<TableColumns>()
 .AddAttribute(0, "count", a => a.Count);
@@ -35284,7 +35000,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableStyleInfo");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TableStyleInfo>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "showFirstColumn", a => a.ShowFirstColumn)
@@ -35351,7 +35066,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TableExtension>();
         }
 
@@ -35424,7 +35138,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleItem");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleItem>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -35494,7 +35207,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "start");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -35556,7 +35269,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "end");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -35618,7 +35331,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "left");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -35680,7 +35392,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "right");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -35742,7 +35453,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "top");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -35804,7 +35514,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bottom");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -35866,7 +35575,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "diagonal");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -35928,7 +35636,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "vertical");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -35990,7 +35697,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "horizontal");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -36281,7 +35987,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "controlPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ObjectAnchor>();
             builder.AddElement<ControlProperties>()
 .AddAttribute(0, "locked", a => a.Locked)
@@ -36496,7 +36202,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "objectPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ObjectAnchor>();
             builder.AddElement<EmbeddedObjectProperties>()
 .AddAttribute(0, "locked", a => a.Locked)
@@ -36605,7 +36311,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TabColor>();
             builder.AddElement<ChartSheetProperties>()
 .AddAttribute(0, "published", a => a.Published)
@@ -36692,7 +36397,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetViews");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ChartSheetView>();
             builder.AddChild<ExtensionList>();
         }
@@ -36797,7 +36501,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetProtection");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ChartSheetProtection>()
 .AddAttribute(0, "password", a => a.Password, aBuilder =>
 {
@@ -36863,7 +36566,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customSheetViews");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CustomChartsheetView>();
         }
 
@@ -36909,7 +36611,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "drawing");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Drawing>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -36945,7 +36646,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "legacyDrawing");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -36976,7 +36676,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "legacyDrawingHF");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -37232,7 +36931,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "drawingHF");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DrawingHeaderFooter>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -37293,7 +36991,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "picture");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Picture>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -37363,7 +37060,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "webPublishItems");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<WebPublishItem>();
             builder.AddElement<WebPublishItems>()
 .AddAttribute(0, "count", a => a.Count);
@@ -37429,7 +37125,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colorScale");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ConditionalFormatValueObject>();
             builder.AddChild<Color>();
         }
@@ -37525,7 +37220,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataBar");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ConditionalFormatValueObject>();
             builder.AddChild<Color>();
             builder.AddElement<DataBar>()
@@ -37641,7 +37335,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "iconSet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ConditionalFormatValueObject>();
             builder.AddElement<IconSet>()
 .AddAttribute(0, "iconSet", a => a.IconSetValue)
@@ -37709,7 +37402,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ConditionalFormattingRuleExtension>();
         }
 
@@ -37782,7 +37474,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataRefs");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DataReference>();
             builder.AddElement<DataReferences>()
 .AddAttribute(0, "count", a => a.Count);
@@ -37939,7 +37630,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TabColor>();
             builder.AddChild<OutlineProperties>();
             builder.AddChild<PageSetupProperties>();
@@ -38062,7 +37752,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetViews");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SheetView>();
             builder.AddChild<ExtensionList>();
         }
@@ -38200,7 +37889,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetFormatPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetFormatProperties>()
 .AddAttribute(0, "baseColWidth", a => a.BaseColumnWidth)
 .AddAttribute(0, "defaultColWidth", a => a.DefaultColumnWidth)
@@ -38461,7 +38149,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetProtection");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetProtection>()
 .AddAttribute(0, "password", a => a.Password, aBuilder =>
 {
@@ -38541,7 +38228,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customSheetViews");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CustomSheetView>();
         }
 
@@ -38604,7 +38290,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleObjects");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<OleObject>();
         }
 
@@ -38667,7 +38352,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "controls");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Control>();
         }
 
@@ -38710,7 +38394,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dimension");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetDimension>()
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
@@ -38770,7 +38453,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cols");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Column>();
         }
 
@@ -38833,7 +38515,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetData");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Row>();
         }
 
@@ -38946,7 +38627,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataConsolidate");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DataReferences>();
             builder.AddElement<DataConsolidate>()
 .AddAttribute(0, "function", a => a.Function)
@@ -39052,7 +38732,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "conditionalFormatting");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ConditionalFormattingRule>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormatting>()
@@ -39126,7 +38805,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customProperties");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CustomProperty>();
         }
 
@@ -39199,7 +38877,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mps");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MemberProperty>();
             builder.AddElement<MemberProperties>()
 .AddAttribute(0, "count", a => a.Count);
@@ -39284,7 +38961,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "members");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Member>();
             builder.AddElement<Members>()
 .AddAttribute(0, "count", a => a.Count)
@@ -39350,7 +39026,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotHierarchyExtension>();
         }
 
@@ -39423,7 +39098,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "items");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Item>();
             builder.AddElement<Items>()
 .AddAttribute(0, "count", a => a.Count);
@@ -39488,7 +39162,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "autoSortScope");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotArea>();
         }
 
@@ -39564,7 +39237,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotFieldExtension>();
         }
 
@@ -39640,7 +39312,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "worksheetSource");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WorksheetSource>()
 .AddAttribute(0, "ref", a => a.Reference)
 .AddAttribute(0, "name", a => a.Name)
@@ -39719,7 +39390,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "consolidation");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Pages>();
             builder.AddChild<RangeSets>();
             builder.AddElement<Consolidation>()
@@ -39812,7 +39482,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CacheSourceExtension>();
         }
 
@@ -40025,7 +39694,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "commentPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ObjectAnchor>();
             builder.AddElement<CommentProperties>()
 .AddAttribute(0, "locked", a => a.Locked)
@@ -40157,7 +39826,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sortCondition");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SortCondition>()
 .AddAttribute(0, "descending", a => a.Descending)
 .AddAttribute(0, "sortBy", a => a.SortBy)
@@ -40203,7 +39871,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "filter");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Filter>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -40303,7 +39970,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dateGroupItem");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DateGroupItem>()
 .AddAttribute(0, "year", a => a.Year, aBuilder =>
 {
@@ -40405,7 +40071,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "filters");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Filter>();
             builder.AddChild<Filter>();
             builder.AddChild<DateGroupItem>();
@@ -40485,13 +40150,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "top10");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Top10>()
 .AddAttribute(0, "top", a => a.Top)
 .AddAttribute(0, "percent", a => a.Percent)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "filterVal", a => a.FilterValue);
         }
@@ -40558,7 +40222,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customFilters");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CustomFilter>();
             builder.AddElement<CustomFilters>()
 .AddAttribute(0, "and", a => a.And);
@@ -40643,7 +40306,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dynamicFilter");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DynamicFilter>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -40703,7 +40365,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colorFilter");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorFilter>()
 .AddAttribute(0, "dxfId", a => a.FormatId, aBuilder =>
 {
@@ -40760,7 +40421,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "iconFilter");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<IconFilter>()
 .AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
 {
@@ -40833,7 +40493,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData>();
@@ -40918,7 +40577,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotFilter>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState>();
             builder.AddElement<PivotFilterExtension>()
@@ -41000,7 +40658,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.QueryTable>();
             builder.AddElement<QueryTableExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
@@ -41080,11 +40737,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dbPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DatabaseProperties>()
 .AddAttribute(0, "connection", a => a.Connection, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 })
 .AddAttribute(0, "command", a => a.Command)
 .AddAttribute(0, "serverCommand", a => a.ServerCommand)
@@ -41210,7 +40866,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "olapPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OlapProperties>()
 .AddAttribute(0, "local", a => a.Local)
 .AddAttribute(0, "localConnection", a => a.LocalConnection)
@@ -41411,7 +41066,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "webPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Tables>();
             builder.AddElement<WebQueryProperties>()
 .AddAttribute(0, "xml", a => a.XmlSource)
@@ -41667,7 +41321,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "textPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TextFields>();
             builder.AddElement<TextProperties>()
 .AddAttribute(0, "prompt", a => a.Prompt)
@@ -41780,7 +41433,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "parameters");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Parameter>();
             builder.AddElement<Parameters>()
 .AddAttribute(0, "count", a => a.Count);
@@ -41845,7 +41497,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ConnectionExtension>();
         }
 
@@ -41919,7 +41570,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Connection>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.Connection>();
             builder.AddElement<ConnectionExtension>()
@@ -42001,7 +41651,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "textFields");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TextField>();
             builder.AddElement<TextFields>()
 .AddAttribute(0, "count", a => a.Count);
@@ -42088,7 +41737,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cacheSource");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<WorksheetSource>();
             builder.AddChild<Consolidation>();
             builder.AddChild<CacheSourceExtensionList>();
@@ -42217,7 +41865,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cacheFields");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CacheField>();
             builder.AddElement<CacheFields>()
 .AddAttribute(0, "count", a => a.Count);
@@ -42292,7 +41939,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cacheHierarchies");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CacheHierarchy>();
             builder.AddElement<CacheHierarchies>()
 .AddAttribute(0, "count", a => a.Count);
@@ -42367,7 +42013,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "kpis");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Kpi>();
             builder.AddElement<Kpis>()
 .AddAttribute(0, "count", a => a.Count);
@@ -42436,7 +42081,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tupleCache");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Entries>();
             builder.AddChild<Sets>();
             builder.AddChild<QueryCache>();
@@ -42582,7 +42226,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calculatedItems");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CalculatedItem>();
             builder.AddElement<CalculatedItems>()
 .AddAttribute(0, "count", a => a.Count);
@@ -42657,7 +42300,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calculatedMembers");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CalculatedMember>();
             builder.AddElement<CalculatedMembers>()
 .AddAttribute(0, "count", a => a.Count);
@@ -42732,7 +42374,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dimensions");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Dimension>();
             builder.AddElement<Dimensions>()
 .AddAttribute(0, "count", a => a.Count);
@@ -42807,7 +42448,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "measureGroups");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MeasureGroup>();
             builder.AddElement<MeasureGroups>()
 .AddAttribute(0, "count", a => a.Count);
@@ -42882,7 +42522,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "maps");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MeasureDimensionMap>();
             builder.AddElement<Maps>()
 .AddAttribute(0, "count", a => a.Count);
@@ -42947,7 +42586,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotCacheDefinitionExtension>();
         }
 
@@ -43023,7 +42661,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition>();
@@ -43244,7 +42881,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sharedItems");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MissingItem>();
             builder.AddChild<NumberItem>();
             builder.AddChild<BooleanItem>();
@@ -43362,7 +42998,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fieldGroup");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RangeProperties>();
             builder.AddChild<DiscreteProperties>();
             builder.AddChild<GroupItems>();
@@ -43435,7 +43070,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CacheFieldExtension>();
         }
 
@@ -43509,7 +43143,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CacheField>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames>();
             builder.AddElement<CacheFieldExtension>()
@@ -43591,7 +43224,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fieldsUsage");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<FieldUsage>();
             builder.AddElement<FieldsUsage>()
 .AddAttribute(0, "count", a => a.Count);
@@ -43666,7 +43298,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "groupLevels");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<GroupLevel>();
             builder.AddElement<GroupLevels>()
 .AddAttribute(0, "count", a => a.Count);
@@ -43731,7 +43362,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CacheHierarchyExtension>();
         }
 
@@ -43805,7 +43435,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy>();
             builder.AddElement<CacheHierarchyExtension>()
@@ -43877,7 +43506,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CalculatedMemberExtension>();
         }
 
@@ -43951,7 +43579,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember>();
             builder.AddElement<CalculatedMemberExtension>()
@@ -44053,7 +43680,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "location");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Location>()
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
@@ -44137,7 +43763,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotFields");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotField>();
             builder.AddElement<PivotFields>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44212,7 +43837,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rowFields");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Field>();
             builder.AddElement<RowFields>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44287,7 +43911,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rowItems");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RowItem>();
             builder.AddElement<RowItems>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44362,7 +43985,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colFields");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Field>();
             builder.AddElement<ColumnFields>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44437,7 +44059,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colItems");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RowItem>();
             builder.AddElement<ColumnItems>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44512,7 +44133,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pageFields");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PageField>();
             builder.AddElement<PageFields>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44587,7 +44207,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataFields");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DataField>();
             builder.AddElement<DataFields>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44662,7 +44281,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "formats");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Format>();
             builder.AddElement<Formats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44737,7 +44355,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "conditionalFormats");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ConditionalFormat>();
             builder.AddElement<ConditionalFormats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44812,7 +44429,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "chartFormats");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ChartFormat>();
             builder.AddElement<ChartFormats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44887,7 +44503,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotHierarchies");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotHierarchy>();
             builder.AddElement<PivotHierarchies>()
 .AddAttribute(0, "count", a => a.Count);
@@ -44982,7 +44597,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotTableStyleInfo");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PivotTableStyle>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "showRowHeaders", a => a.ShowRowHeaders)
@@ -45060,7 +44674,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "filters");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotFilter>();
             builder.AddElement<PivotFilters>()
 .AddAttribute(0, "count", a => a.Count);
@@ -45135,7 +44748,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rowHierarchiesUsage");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RowHierarchyUsage>();
             builder.AddElement<RowHierarchiesUsage>()
 .AddAttribute(0, "count", a => a.Count);
@@ -45210,7 +44822,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colHierarchiesUsage");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ColumnHierarchyUsage>();
             builder.AddElement<ColumnHierarchiesUsage>()
 .AddAttribute(0, "count", a => a.Count);
@@ -45275,7 +44886,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotTableDefinitionExtension>();
         }
 
@@ -45350,7 +44960,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableData>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings>();
@@ -45424,7 +45033,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DataFieldExtension>();
         }
 
@@ -45498,7 +45106,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataField>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DataField>();
             builder.AddElement<DataFieldExtension>()
@@ -45570,7 +45177,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotFilterExtension>();
         }
 
@@ -45706,7 +45312,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "queryTableRefresh");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<QueryTableFields>();
             builder.AddChild<QueryTableDeletedFields>();
             builder.AddChild<SortState>();
@@ -45844,7 +45449,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<QueryTableExtension>();
         }
 
@@ -45887,7 +45491,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetCalcPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SheetCalculationProperties>()
 .AddAttribute(0, "fullCalcOnLoad", a => a.FullCalculationOnLoad);
         }
@@ -45944,7 +45547,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "protectedRanges");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ProtectedRange>();
         }
 
@@ -46037,7 +45639,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "scenarios");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Scenario>();
             builder.AddElement<Scenarios>()
 .AddAttribute(0, "current", a => a.Current)
@@ -46114,7 +45715,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mergeCells");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<MergeCell>();
             builder.AddElement<MergeCells>()
 .AddAttribute(0, "count", a => a.Count);
@@ -46219,7 +45819,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dataValidations");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DataValidation>();
             builder.AddElement<DataValidations>()
 .AddAttribute(0, "disablePrompts", a => a.DisablePrompts)
@@ -46295,7 +45894,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "hyperlinks");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Hyperlink>();
         }
 
@@ -46358,7 +45956,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellWatches");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CellWatch>();
         }
 
@@ -46422,7 +46019,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ignoredErrors");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<IgnoredError>();
             builder.AddChild<ExtensionList>();
         }
@@ -46497,7 +46093,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableParts");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TablePart>();
             builder.AddElement<TableParts>()
 .AddAttribute(0, "count", a => a.Count);
@@ -46562,7 +46157,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<WorksheetExtension>();
         }
 
@@ -46642,7 +46236,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidations>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups>();
@@ -46736,7 +46329,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "numFmts");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<NumberingFormat>();
             builder.AddElement<NumberingFormats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -46824,7 +46416,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fonts");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Font>();
             builder.AddElement<Fonts>()
 .AddAttribute(0, "count", a => a.Count)
@@ -46903,7 +46494,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fills");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Fill>();
             builder.AddElement<Fills>()
 .AddAttribute(0, "count", a => a.Count);
@@ -46978,7 +46568,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "borders");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Border>();
             builder.AddElement<Borders>()
 .AddAttribute(0, "count", a => a.Count);
@@ -47053,7 +46642,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellStyleXfs");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CellFormat>();
             builder.AddElement<CellStyleFormats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -47128,7 +46716,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellXfs");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CellFormat>();
             builder.AddElement<CellFormats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -47203,7 +46790,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellStyles");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CellStyle>();
             builder.AddElement<CellStyles>()
 .AddAttribute(0, "count", a => a.Count);
@@ -47278,7 +46864,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dxfs");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DifferentialFormat>();
             builder.AddElement<DifferentialFormats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -47373,7 +46958,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tableStyles");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TableStyle>();
             builder.AddElement<TableStyles>()
 .AddAttribute(0, "count", a => a.Count)
@@ -47447,7 +47031,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colors");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<IndexedColors>();
             builder.AddChild<MruColors>();
         }
@@ -47538,7 +47121,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<StylesheetExtension>();
         }
 
@@ -47614,7 +47196,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats>();
@@ -47710,7 +47291,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fileVersion");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FileVersion>()
 .AddAttribute(0, "appName", a => a.ApplicationName)
 .AddAttribute(0, "lastEdited", a => a.LastEdited)
@@ -47823,7 +47403,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fileSharing");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FileSharing>()
 .AddAttribute(0, "readOnlyRecommended", a => a.ReadOnlyRecommended)
 .AddAttribute(0, "userName", a => a.UserName)
@@ -48055,7 +47634,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "workbookPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WorkbookProperties>()
 .AddAttribute(0, "date1904", a => a.Date1904)
 .AddAttribute(0, "dateCompatibility", a => a.DateCompatibility, aBuilder =>
@@ -48233,7 +47811,6 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "workbookProtection");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WorkbookProtection>()
 .AddAttribute(0, "workbookPassword", a => a.WorkbookPassword, aBuilder =>
 {
@@ -48308,7 +47885,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bookViews");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<WorkbookView>();
         }
 
@@ -48371,7 +47947,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheets");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Sheet>();
         }
 
@@ -48444,7 +48019,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "functionGroups");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<FunctionGroup>();
             builder.AddElement<FunctionGroups>()
 .AddAttribute(0, "builtInGroupCount", a => a.BuiltInGroupCount);
@@ -48515,7 +48089,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "externalReferences");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExternalReference>();
         }
 
@@ -48578,7 +48151,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "definedNames");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DefinedName>();
         }
 
@@ -48741,7 +48313,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "calcPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CalculationProperties>()
 .AddAttribute(0, "calcId", a => a.CalculationId)
 .AddAttribute(0, "calcMode", a => a.CalculationMode)
@@ -48790,7 +48361,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleSize");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OleSize>()
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
@@ -48850,7 +48420,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customWorkbookViews");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CustomWorkbookView>();
         }
 
@@ -48913,7 +48482,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotCaches");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PivotCache>();
         }
 
@@ -49036,7 +48604,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "webPublishing");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<WebPublishing>()
 .AddAttribute(0, "css", a => a.UseCss)
 .AddAttribute(0, "thicket", a => a.Thicket)
@@ -49111,7 +48678,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fileRecoveryPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FileRecoveryProperties>()
 .AddAttribute(0, "autoRecover", a => a.AutoRecover)
 .AddAttribute(0, "crashSave", a => a.CrashSave)
@@ -49181,7 +48747,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "webPublishObjects");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<WebPublishObject>();
             builder.AddElement<WebPublishObjects>()
 .AddAttribute(0, "count", a => a.Count);
@@ -49246,7 +48811,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<WorkbookExtension>();
         }
 
@@ -49329,7 +48893,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ext");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DefinedNames>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotCaches>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches>();

@@ -61,7 +61,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(25, "schemaLibrary");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Schema>();
         }
 
@@ -133,7 +132,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(25, "schema");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Schema>()
 .AddAttribute(25, "uri", a => a.Uri)
 .AddAttribute(25, "manifestLocation", a => a.ManifestLocation)

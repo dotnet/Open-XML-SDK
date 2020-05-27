@@ -62,7 +62,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(4, "Properties");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<CustomDocumentProperty>();
         }
 
@@ -229,7 +228,6 @@ namespace DocumentFormat.OpenXml.CustomProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(4, "property");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTArray>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();

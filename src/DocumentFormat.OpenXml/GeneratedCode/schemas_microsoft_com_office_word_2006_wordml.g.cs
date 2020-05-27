@@ -64,7 +64,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "tcg");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<KeyMapCustomizations>();
             builder.AddChild<MismatchedKeyMapCustomization>();
             builder.AddChild<Toolbars>();
@@ -164,7 +163,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "mcds");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Mcd>();
         }
 
@@ -228,7 +226,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "vbaSuppData");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocEvents>();
             builder.AddChild<Mcds>();
         }
@@ -350,7 +347,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "recipients");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SingleDataSourceRecord>();
         }
 
@@ -422,16 +418,15 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "fci");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<FixedCommandKeyboardCustomization>()
 .AddAttribute(33, "fciName", a => a.CommandName)
 .AddAttribute(33, "fciIndex", a => a.CommandIndex, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
 })
 .AddAttribute(33, "swArg", a => a.Argument, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
 });
         }
 
@@ -457,7 +452,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "macro");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -482,7 +476,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "wll");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -542,7 +535,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acd");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -567,7 +559,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acdEntry");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -640,12 +631,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "wch");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CharacterInsertion>()
 .AddAttribute(33, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
 });
         }
 
@@ -770,7 +760,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymap");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<FixedCommandKeyboardCustomization>();
             builder.AddChild<MacroKeyboardCustomization>();
             builder.AddChild<AllocatedCommandKeyboardCustomization>();
@@ -946,13 +935,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acd");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AllocatedCommand>()
 .AddAttribute(33, "argValue", a => a.ArgumentValue)
 .AddAttribute(33, "fciBasedOn", a => a.CommandBasedOn)
 .AddAttribute(33, "fciIndexBasedOn", a => a.CommandIndexBasedOn, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
 })
 .AddAttribute(33, "acdName", a => a.AcceleratorName);
         }
@@ -1044,18 +1032,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "mcd");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Mcd>()
 .AddAttribute(33, "macroName", a => a.MacroName)
 .AddAttribute(33, "name", a => a.Name)
 .AddAttribute(33, "menuHelp", a => a.MenuHelp)
 .AddAttribute(33, "bEncrypt", a => a.BEncrypt, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
+   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
 })
 .AddAttribute(33, "cmg", a => a.Cmg, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
+   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
 });
         }
 
@@ -1102,7 +1089,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocNew");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1140,7 +1126,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocOpen");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1178,7 +1163,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocClose");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1216,7 +1200,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocSync");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1254,7 +1237,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocXmlAfterInsert");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1292,7 +1274,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocXmlBeforeDelete");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1330,7 +1311,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocContentControlAfterInsert");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1368,7 +1348,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocContentControlBeforeDelete");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1406,7 +1385,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocContentControlOnExit");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1444,7 +1422,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocContentControlOnEnter");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1482,7 +1459,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocStoreUpdate");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1520,7 +1496,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocContentControlContentUpdate");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1558,7 +1533,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "eventDocBuildingBlockAfterInsert");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1625,7 +1599,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "docEvents");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<EventDocNewXsdString>();
             builder.AddChild<EventDocOpenXsdString>();
             builder.AddChild<EventDocCloseXsdString>();
@@ -1881,7 +1854,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acdManifest");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<AllocatedCommandManifestEntry>();
         }
 
@@ -1927,7 +1899,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "toolbarData");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ToolbarData>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -1987,7 +1958,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymaps");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2049,7 +2019,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymapsBad");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2163,7 +2132,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "toolbars");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<AllocatedCommandManifest>();
             builder.AddChild<ToolbarData>();
         }
@@ -2228,7 +2196,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "acds");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<AllocatedCommand>();
         }
 
@@ -2274,7 +2241,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "active");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RecordIncluded>()
 .AddAttribute(33, "val", a => a.Val);
         }
@@ -2314,11 +2280,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "hash");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RecordHashCode>()
 .AddAttribute(33, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -2375,7 +2340,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "recipientData");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RecordIncluded>();
             builder.AddChild<RecordHashCode>();
         }

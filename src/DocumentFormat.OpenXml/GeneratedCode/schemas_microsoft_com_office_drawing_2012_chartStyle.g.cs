@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "colorStyle");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -254,7 +254,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "chartStyle");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<AxisTitle>();
             builder.AddChild<CategoryAxis>();
             builder.AddChild<ChartArea>();
@@ -855,7 +855,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "variation");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Tint>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shade>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Complement>();
@@ -978,7 +978,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "extLst");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
@@ -1084,7 +1084,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "styleClr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Tint>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shade>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Complement>();
@@ -1223,7 +1223,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "lnRef");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1303,7 +1303,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "fillRef");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1383,7 +1383,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "effectRef");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1530,7 +1530,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)) });
             builder.SetSchema(65, "lineWidthScale");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -1611,7 +1611,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "fontRef");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -1723,7 +1723,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "spPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
@@ -2061,7 +2061,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "defRPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
@@ -2438,7 +2438,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-400000L)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "bodyPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetTextWrap>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoAutoFit>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NormalAutoFit>();
@@ -2551,7 +2551,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "categoryAxis");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -2576,7 +2576,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "seriesAxis");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -2601,7 +2601,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "valueAxis");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -2825,7 +2825,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataSeries");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataSeries>()
 .AddAttribute(0, "overlap", a => a.Overlap, aBuilder =>
 {
@@ -2943,7 +2943,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataLabels");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataLabels>()
 .AddAttribute(0, "position", a => a.Position, aBuilder =>
 {
@@ -3033,7 +3033,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataTable");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataTable>()
 .AddAttribute(0, "legendKeys", a => a.LegendKeys, aBuilder =>
 {
@@ -3105,7 +3105,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "legend");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Legend>()
 .AddAttribute(0, "visible", a => a.Visible, aBuilder =>
 {
@@ -3153,7 +3153,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "title");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Title>()
 .AddAttribute(0, "position", a => a.Position, aBuilder =>
 {
@@ -3213,7 +3213,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "trendline");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Trendline>()
 .AddAttribute(0, "add", a => a.Add, aBuilder =>
 {
@@ -3311,7 +3311,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "view3D");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<View3DProperties>()
 .AddAttribute(0, "rotX", a => a.RotX, aBuilder =>
 {
@@ -3399,7 +3399,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "axisTitle");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3477,7 +3477,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "categoryAxis");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3555,7 +3555,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "chartArea");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3633,7 +3633,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataLabel");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3711,7 +3711,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataLabelCallout");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3789,7 +3789,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPoint");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3867,7 +3867,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPoint3D");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3945,7 +3945,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointLine");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4023,7 +4023,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointMarker");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4101,7 +4101,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointWireframe");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4179,7 +4179,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataTable");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4257,7 +4257,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "downBar");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4335,7 +4335,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dropLine");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4413,7 +4413,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "errorBar");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4491,7 +4491,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "floor");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4569,7 +4569,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "gridlineMajor");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4647,7 +4647,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "gridlineMinor");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4725,7 +4725,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "hiLoLine");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4803,7 +4803,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "leaderLine");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4881,7 +4881,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "legend");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4959,7 +4959,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "plotArea");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5037,7 +5037,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "plotArea3D");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5115,7 +5115,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "seriesAxis");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5193,7 +5193,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "seriesLine");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5271,7 +5271,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "title");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5349,7 +5349,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "trendline");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5427,7 +5427,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "trendlineLabel");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5505,7 +5505,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "upBar");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5583,7 +5583,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "valueAxis");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5661,7 +5661,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "wall");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5917,7 +5917,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), Max
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointMarkerLayout");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<MarkerLayoutProperties>()
 .AddAttribute(0, "symbol", a => a.Symbol, aBuilder =>
 {

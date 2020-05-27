@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "webextension");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<WebExtensionStoreReference>();
             builder.AddChild<WebExtensionReferenceList>();
             builder.AddChild<WebExtensionPropertyBag>();
@@ -264,7 +264,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "webextensionref");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WebExtensionReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -314,7 +314,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "property");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WebExtensionProperty>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -378,7 +378,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "extLst");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
@@ -477,7 +477,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "binding");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<WebExtensionBinding>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -606,7 +606,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "reference");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<WebExtensionStoreReference>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -699,7 +699,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "alternateReferences");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<WebExtensionStoreReference>();
         }
 
@@ -762,7 +762,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "properties");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<WebExtensionProperty>();
         }
 
@@ -825,7 +825,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "bindings");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<WebExtensionBinding>();
         }
 
@@ -941,7 +941,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(66, "snapshot");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaBiLevel>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaCeiling>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaFloor>();

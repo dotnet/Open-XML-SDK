@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormattings");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ConditionalFormatting>();
         }
 
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dataValidations");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DataValidation>();
             builder.AddElement<DataValidations>()
 .AddAttribute(0, "disablePrompts", a => a.DisablePrompts)
@@ -241,7 +241,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparklineGroups");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SparklineGroup>();
         }
 
@@ -304,7 +304,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerList");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SlicerRef>();
         }
 
@@ -367,7 +367,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "protectedRanges");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ProtectedRange>();
         }
 
@@ -431,7 +431,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "ignoredErrors");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<IgnoredError>();
             builder.AddChild<ExtensionList>();
         }
@@ -496,7 +496,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "definedNames");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DefinedName>();
         }
 
@@ -559,7 +559,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotCaches");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
         }
 
@@ -622,7 +622,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerCaches");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SlicerCache>();
         }
 
@@ -685,7 +685,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "workbookPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<WorkbookProperties>()
 .AddAttribute(0, "defaultImageDpi", a => a.DefaultImageDpi)
 .AddAttribute(0, "discardImageEditData", a => a.DiscardImageEditData)
@@ -800,7 +800,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "calculatedMember");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TupleSet>();
             builder.AddElement<CalculatedMember>()
 .AddAttribute(0, "displayFolder", a => a.DisplayFolder)
@@ -929,7 +929,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cacheHierarchy");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SetLevels>();
             builder.AddElement<CacheHierarchy>()
 .AddAttribute(0, "flattenHierarchies", a => a.FlattenHierarchies)
@@ -1018,7 +1018,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dataField");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DataField>()
 .AddAttribute(0, "pivotShowAs", a => a.PivotShowAs)
 .AddAttribute(0, "sourceField", a => a.SourceField)
@@ -1074,7 +1074,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotField");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PivotField>()
 .AddAttribute(0, "fillDownLabels", a => a.FillDownLabels)
 .AddAttribute(0, "ignore", a => a.Ignore);
@@ -1234,7 +1234,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotTableDefinition");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<PivotEdits>();
             builder.AddChild<PivotChanges>();
             builder.AddChild<ConditionalFormats>();
@@ -1379,7 +1379,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotCacheDefinition");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PivotCacheDefinition>()
 .AddAttribute(0, "slicerData", a => a.SlicerData)
 .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId)
@@ -1460,7 +1460,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "connection");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<CalculatedMembers>();
             builder.AddElement<Connection>()
 .AddAttribute(0, "culture", a => a.Culture)
@@ -1536,7 +1536,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "table");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Table>()
 .AddAttribute(0, "altText", a => a.AltText)
 .AddAttribute(0, "altTextSummary", a => a.AltTextSummary);
@@ -1611,7 +1611,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerStyles");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SlicerStyle>();
             builder.AddElement<SlicerStyles>()
 .AddAttribute(0, "defaultSlicerStyle", a => a.DefaultSlicerStyle, aBuilder =>
@@ -1695,7 +1695,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dxfs");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
             builder.AddElement<DifferentialFormats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -1800,7 +1800,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "oleItem");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DdeValues>();
             builder.AddElement<OleItem>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -1864,7 +1864,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotHierarchy");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PivotHierarchy>()
 .AddAttribute(0, "ignore", a => a.Ignore);
         }
@@ -1901,7 +1901,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cacheField");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CacheField>()
 .AddAttribute(0, "ignore", a => a.Ignore);
         }
@@ -1942,7 +1942,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
             builder.SetSchema(53, "id");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1987,7 +1987,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "iconFilter");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<IconFilter>()
 .AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
 {
@@ -2031,7 +2031,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "filter");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Filter>()
 .AddAttribute(0, "val", a => a.Val);
         }
@@ -2098,7 +2098,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "customFilters");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<CustomFilter>();
             builder.AddElement<CustomFilters>()
 .AddAttribute(0, "and", a => a.And);
@@ -2203,7 +2203,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sortCondition");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SortCondition>()
 .AddAttribute(0, "descending", a => a.Descending)
 .AddAttribute(0, "sortBy", a => a.SortBy)
@@ -2257,7 +2257,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sourceConnection");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SourceConnection>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -2327,7 +2327,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "datastoreItem");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ExtensionList>();
             builder.AddElement<DatastoreItem>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -2756,7 +2756,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "formControlPr");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ListItems>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<FormControlProperties>()
@@ -2935,7 +2935,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicers");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Slicer>();
         }
 
@@ -3051,7 +3051,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerCacheDefinition");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SlicerCachePivotTables>();
             builder.AddChild<SlicerCacheData>();
             builder.AddChild<SlicerCacheDefinitionExtensionList>();
@@ -3209,7 +3209,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormatting");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ConditionalFormattingRule>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddChild<ExtensionList>();
@@ -3423,7 +3423,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cfRule");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddChild<ColorScale>();
             builder.AddChild<DataBar>();
@@ -3528,7 +3528,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "extLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
         }
 
@@ -3719,7 +3719,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dataValidation");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DataValidationForumla1>();
             builder.AddChild<DataValidationForumla2>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
@@ -3846,7 +3846,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "formula1");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3908,7 +3908,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "formula2");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4213,7 +4213,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparklineGroup");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SeriesColor>();
             builder.AddChild<NegativeColor>();
             builder.AddChild<AxisColor>();
@@ -4419,7 +4419,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorSeries");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4450,7 +4450,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorNegative");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4481,7 +4481,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorAxis");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4512,7 +4512,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorMarkers");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4543,7 +4543,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorFirst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4574,7 +4574,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorLast");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4605,7 +4605,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorHigh");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4636,7 +4636,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorLow");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -4661,7 +4661,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "color");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -4686,7 +4686,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "fillColor");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -4711,7 +4711,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "borderColor");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -4736,7 +4736,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "negativeFillColor");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -4761,7 +4761,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "negativeBorderColor");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -4786,7 +4786,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "axisColor");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -4920,7 +4920,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparklines");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Sparkline>();
         }
 
@@ -4984,7 +4984,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "sparkline");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
         }
@@ -5058,7 +5058,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicer");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SlicerRef>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -5107,7 +5107,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerCache");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SlicerCache>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -5183,7 +5183,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "definedName");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ArgumentDescriptions>();
             builder.AddElement<DefinedName>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -5280,7 +5280,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "argumentDescriptions");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ArgumentDescription>();
             builder.AddElement<ArgumentDescriptions>()
 .AddAttribute(0, "count", a => a.Count);
@@ -5338,7 +5338,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "argumentDescription");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ArgumentDescription>()
 .AddAttribute(0, "index", a => a.Index, aBuilder =>
 {
@@ -5425,7 +5425,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "tupleSet");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TupleSetHeaders>();
             builder.AddChild<TupleSetRows>();
             builder.AddElement<TupleSet>()
@@ -5519,7 +5519,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "headers");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TupleSetHeader>();
         }
 
@@ -5582,7 +5582,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "rows");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TupleSetRow>();
         }
 
@@ -5635,7 +5635,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "header");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TupleSetHeader>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName)
 .AddAttribute(0, "hierarchyName", a => a.HierarchyName);
@@ -5700,7 +5700,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "row");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TupleSetRowItem>();
         }
 
@@ -5753,7 +5753,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "rowItem");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TupleSetRowItem>()
 .AddAttribute(0, "u", a => a.UniqueName)
 .AddAttribute(0, "d", a => a.DisplayName);
@@ -5798,7 +5798,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "setLevel");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SetLevel>()
 .AddAttribute(0, "hierarchy", a => a.Hierarchy, aBuilder =>
 {
@@ -5874,7 +5874,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "setLevels");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SetLevel>();
             builder.AddElement<SetLevels>()
 .AddAttribute(0, "count", a => a.Count);
@@ -5940,7 +5940,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorScale");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ConditionalFormattingValueObject>();
             builder.AddChild<Color>();
         }
@@ -6100,7 +6100,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dataBar");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ConditionalFormattingValueObject>();
             builder.AddChild<FillColor>();
             builder.AddChild<BorderColor>();
@@ -6241,7 +6241,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "iconSet");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ConditionalFormattingValueObject>();
             builder.AddChild<ConditionalFormattingIcon>();
             builder.AddElement<IconSet>()
@@ -6318,7 +6318,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "dxf");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
@@ -6505,7 +6505,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cfvo");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormattingValueObject>()
@@ -6592,7 +6592,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "cfIcon");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ConditionalFormattingIcon>()
 .AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
 {
@@ -6656,7 +6656,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotEdits");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<PivotEdit>();
         }
 
@@ -6719,7 +6719,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotChanges");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<PivotChange>();
         }
 
@@ -6792,7 +6792,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormats");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ConditionalFormat>();
             builder.AddElement<ConditionalFormats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -6867,7 +6867,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "calculatedMembers");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMember>();
             builder.AddElement<CalculatedMembers>()
 .AddAttribute(0, "count", a => a.Count);
@@ -6935,7 +6935,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotEdit");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<PivotUserEdit>();
             builder.AddChild<TupleItems>();
             builder.AddChild<PivotArea>();
@@ -7057,7 +7057,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "userEdit");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddChild<PivotEditValue>();
         }
@@ -7148,7 +7148,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "tupleItems");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Xstring>();
         }
 
@@ -7332,7 +7332,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotArea");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddElement<PivotArea>()
@@ -7458,7 +7458,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotChange");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<PivotEditValue>();
             builder.AddChild<TupleItems>();
             builder.AddChild<ExtensionList>();
@@ -7566,7 +7566,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "editValue");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PivotEditValue>()
 .AddAttribute(0, "valueType", a => a.ValueType, aBuilder =>
 {
@@ -7615,7 +7615,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "tupleItem");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -7670,7 +7670,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerStyleElements");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SlicerStyleElement>();
         }
 
@@ -7753,7 +7753,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "values");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Value>();
             builder.AddElement<DdeValues>()
 .AddAttribute(0, "rows", a => a.Rows)
@@ -7860,7 +7860,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "conditionalFormat");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<PivotAreas>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<ConditionalFormat>()
@@ -7978,7 +7978,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotAreas");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.AddElement<PivotAreas>()
 .AddAttribute(0, "count", a => a.Count);
@@ -8053,7 +8053,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerStyle");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SlicerStyleElements>();
             builder.AddElement<SlicerStyle>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -8132,7 +8132,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicerStyleElement");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SlicerStyleElement>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -8290,7 +8290,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "ignoredError");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddElement<IgnoredError>()
 .AddAttribute(0, "evalError", a => a.EvalError)
@@ -8446,7 +8446,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "protectedRange");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             builder.AddElement<ProtectedRange>()
 .AddAttribute(0, "password", a => a.Password, aBuilder =>
@@ -8534,7 +8534,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "customFilter");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CustomFilter>()
 .AddAttribute(0, "operator", a => a.Operator)
 .AddAttribute(0, "val", a => a.Val);
@@ -8572,7 +8572,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "item");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ListItem>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -8633,7 +8633,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "itemLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ListItem>();
             builder.AddChild<ExtensionList>();
         }
@@ -8798,7 +8798,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "slicer");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ExtensionList>();
             builder.AddElement<Slicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -8915,7 +8915,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "olap");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OlapSlicerCacheLevelsData>();
             builder.AddChild<OlapSlicerCacheSelections>();
             builder.AddChild<ExtensionList>();
@@ -9077,7 +9077,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "tabular");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TabularSlicerCacheItems>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<TabularSlicerCache>()
@@ -9167,7 +9167,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotTable");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SlicerCachePivotTable>()
 .AddAttribute(0, "tabId", a => a.TabId, aBuilder =>
 {
@@ -9217,7 +9217,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "p");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<OlapSlicerCacheItemParent>()
 .AddAttribute(0, "n", a => a.Name, aBuilder =>
 {
@@ -9307,7 +9307,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "i");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OlapSlicerCacheItemParent>();
             builder.AddElement<OlapSlicerCacheItem>()
 .AddAttribute(0, "n", a => a.Name, aBuilder =>
@@ -9387,7 +9387,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "range");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OlapSlicerCacheItem>();
             builder.AddElement<OlapSlicerCacheRange>()
 .AddAttribute(0, "startItem", a => a.StartItem, aBuilder =>
@@ -9461,7 +9461,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "ranges");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OlapSlicerCacheRange>();
         }
 
@@ -9574,7 +9574,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "level");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OlapSlicerCacheRanges>();
             builder.AddElement<OlapSlicerCacheLevelData>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
@@ -9678,7 +9678,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "levels");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OlapSlicerCacheLevelData>();
             builder.AddElement<OlapSlicerCacheLevelsData>()
 .AddAttribute(0, "count", a => a.Count);
@@ -9753,7 +9753,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "selections");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OlapSlicerCacheSelection>();
             builder.AddElement<OlapSlicerCacheSelections>()
 .AddAttribute(0, "count", a => a.Count);
@@ -9828,7 +9828,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "selection");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OlapSlicerCacheItemParent>();
             builder.AddElement<OlapSlicerCacheSelection>()
 .AddAttribute(0, "n", a => a.Name, aBuilder =>
@@ -9906,7 +9906,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "items");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TabularSlicerCacheItem>();
             builder.AddElement<TabularSlicerCacheItems>()
 .AddAttribute(0, "count", a => a.Count);
@@ -9971,7 +9971,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "i");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TabularSlicerCacheItem>()
 .AddAttribute(0, "x", a => a.Atom, aBuilder =>
 {
@@ -10039,7 +10039,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "pivotTables");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SlicerCachePivotTable>();
         }
 
@@ -10103,7 +10103,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "data");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<OlapSlicerCache>();
             builder.AddChild<TabularSlicerCache>();
         }
@@ -10194,7 +10194,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "extLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension>();
         }
 

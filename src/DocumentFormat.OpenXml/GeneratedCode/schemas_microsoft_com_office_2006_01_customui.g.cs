@@ -290,7 +290,6 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "control");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<UnsizedControlClone>()
 .AddAttribute(0, "idQ", a => a.IdQ, aBuilder =>
 {
@@ -708,7 +707,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "button");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<UnsizedButton>()
 .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
 {
@@ -1082,7 +1080,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "checkBox");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<CheckBox>()
 .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
 {
@@ -1709,7 +1706,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "gallery");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Item>();
             builder.AddChild<UnsizedButton>();
             builder.AddElement<UnsizedGallery>()
@@ -2232,7 +2228,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "toggleButton");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<UnsizedToggleButton>()
 .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
 {
@@ -2450,7 +2445,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "menuSeparator");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MenuSeparator>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2700,7 +2694,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "splitButton");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<VisibleButton>();
             builder.AddChild<VisibleToggleButton>();
             builder.AddChild<UnsizedMenu>();
@@ -3137,7 +3130,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "menu");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<UnsizedControlClone>();
             builder.AddChild<UnsizedButton>();
             builder.AddChild<CheckBox>();
@@ -3620,7 +3612,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "dynamicMenu");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<UnsizedDynamicMenu>()
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
 {
@@ -3948,7 +3939,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "splitButton");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<VisibleButton>();
             builder.AddChild<VisibleToggleButton>();
             builder.AddChild<MenuWithTitle>();
@@ -4385,7 +4375,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "menu");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<UnsizedControlClone>();
             builder.AddChild<UnsizedButton>();
             builder.AddChild<CheckBox>();
@@ -4858,7 +4847,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "control");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ControlClone>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -5189,7 +5177,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "labelControl");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextLabel>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -5606,7 +5593,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "button");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Button>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -6075,7 +6061,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "toggleButton");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ToggleButton>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -6528,7 +6513,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "editBox");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<EditBox>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
@@ -7086,7 +7070,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "comboBox");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Item>();
             builder.AddElement<ComboBox>()
 .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
@@ -7682,7 +7665,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "dropDown");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Item>();
             builder.AddChild<UnsizedButton>();
             builder.AddElement<DropDown>()
@@ -8390,7 +8372,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "gallery");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Item>();
             builder.AddChild<UnsizedButton>();
             builder.AddElement<Gallery>()
@@ -8969,7 +8950,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "menu");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<UnsizedControlClone>();
             builder.AddChild<UnsizedButton>();
             builder.AddChild<CheckBox>();
@@ -9480,7 +9460,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "dynamicMenu");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DynamicMenu>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -9833,7 +9812,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "splitButton");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<VisibleButton>();
             builder.AddChild<VisibleToggleButton>();
             builder.AddChild<UnsizedMenu>();
@@ -10073,7 +10051,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "box");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ControlClone>();
             builder.AddChild<TextLabel>();
             builder.AddChild<Button>();
@@ -10282,7 +10259,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "buttonGroup");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<UnsizedControlClone>();
             builder.AddChild<UnsizedButton>();
             builder.AddChild<UnsizedToggleButton>();
@@ -10428,7 +10404,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "menu");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<UnsizedControlClone>();
             builder.AddChild<UnsizedButton>();
             builder.AddChild<CheckBox>();
@@ -10553,7 +10528,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "customUI");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RepurposedCommands>();
             builder.AddChild<Ribbon>();
             builder.AddElement<CustomUI>()
@@ -10683,31 +10657,30 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "item");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Item>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+  aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "label", a => a.Label, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+  aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "image", a => a.Image, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+  aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "imageMso", a => a.ImageMso, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
+  aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+  aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "supertip", a => a.Supertip, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
+  aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLength = (1024L) });
 });
         }
 
@@ -11013,7 +10986,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "button");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<VisibleButton>()
 .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
 {
@@ -11432,7 +11404,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "toggleButton");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<VisibleToggleButton>()
 .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
 {
@@ -11645,7 +11616,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "separator");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<VerticalSeparator>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -11730,7 +11700,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "dialogBoxLauncher");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<UnsizedButton>();
         }
 
@@ -12031,7 +12000,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "group");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ControlClone>();
             builder.AddChild<TextLabel>();
             builder.AddChild<Button>();
@@ -12488,7 +12456,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "control");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<QuickAccessToolbarControlClone>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -12651,7 +12618,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "sharedControls");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -12720,7 +12686,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "documentControls");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -12982,7 +12947,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "tab");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Group>();
             builder.AddElement<Tab>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -13132,7 +13096,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "tabSet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Tab>();
             builder.AddElement<ContextualTabSet>()
 .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
@@ -13216,7 +13179,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "command");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RepurposedCommand>()
 .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
 {
@@ -13293,7 +13255,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "officeMenu");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<UnsizedControlClone>();
             builder.AddChild<UnsizedButton>();
             builder.AddChild<CheckBox>();
@@ -13388,7 +13349,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "qat");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SharedQatControls>();
             builder.AddChild<DocumentSpecificQuickAccessToolbarControls>();
         }
@@ -13479,7 +13439,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "tabs");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Tab>();
         }
 
@@ -13542,7 +13501,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "contextualTabs");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ContextualTabSet>();
         }
 
@@ -13605,7 +13563,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "commands");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RepurposedCommand>();
         }
 
@@ -13681,7 +13638,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "ribbon");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<OfficeMenu>();
             builder.AddChild<QuickAccessToolbar>();
             builder.AddChild<Tabs>();

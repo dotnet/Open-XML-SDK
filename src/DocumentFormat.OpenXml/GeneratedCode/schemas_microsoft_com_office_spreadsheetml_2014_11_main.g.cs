@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(84, "modelTimeGroupings");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<ModelTimeGrouping>();
         }
 
@@ -154,7 +154,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(84, "modelTimeGrouping");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<CalculatedTimeColumn>();
             builder.AddElement<ModelTimeGrouping>()
 .AddAttribute(0, "tableName", a => a.TableName, aBuilder =>
@@ -240,7 +240,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(84, "calculatedTimeColumn");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<CalculatedTimeColumn>()
 .AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
 {

@@ -30,7 +30,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "bordertop");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -55,7 +54,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "borderleft");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -80,7 +78,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "borderright");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -105,7 +102,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "borderbottom");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -227,7 +223,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "wrap");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextWrap>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "side", a => a.Side)
@@ -257,7 +252,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(28, "anchorlock");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

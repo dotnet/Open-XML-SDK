@@ -86,7 +86,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "colorsDef");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ColorDefinitionTitle>();
             builder.AddChild<ColorTransformDescription>();
             builder.AddChild<ColorTransformCategories>();
@@ -230,7 +229,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "colorsDefHdr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ColorDefinitionTitle>();
             builder.AddChild<ColorTransformDescription>();
             builder.AddChild<ColorTransformCategories>();
@@ -306,7 +304,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "colorsDefHdrLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ColorsDefinitionHeader>();
         }
 
@@ -373,7 +370,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "dataModel");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PointList>();
             builder.AddChild<ConnectionList>();
             builder.AddChild<Background>();
@@ -577,7 +573,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutDef");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Title>();
             builder.AddChild<Description>();
             builder.AddChild<CategoryList>();
@@ -732,7 +727,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutDefHdr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Title>();
             builder.AddChild<Description>();
             builder.AddChild<CategoryList>();
@@ -809,7 +803,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutDefHdrLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<LayoutDefinitionHeader>();
         }
 
@@ -894,7 +887,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "relIds");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<RelationshipIds>()
 .AddAttribute(19, "dm", a => a.DataPart, aBuilder =>
 {
@@ -1001,7 +993,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleDef");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<StyleDefinitionTitle>();
             builder.AddChild<StyleLabelDescription>();
             builder.AddChild<StyleDisplayCategories>();
@@ -1141,7 +1132,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleDefHdr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<StyleDefinitionTitle>();
             builder.AddChild<StyleLabelDescription>();
             builder.AddChild<StyleDisplayCategories>();
@@ -1217,7 +1207,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleDefHdrLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<StyleDefinitionHeader>();
         }
 
@@ -1270,16 +1259,15 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "cat");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorTransformCategory>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 })
 .AddAttribute(0, "pri", a => a.Priority, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -1340,7 +1328,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "fillClrLst");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1418,7 +1405,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "linClrLst");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1496,7 +1482,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "effectClrLst");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1574,7 +1559,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "txLinClrLst");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1652,7 +1636,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "txFillClrLst");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1730,7 +1713,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "txEffectClrLst");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1893,7 +1875,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
@@ -1952,12 +1933,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "title");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorDefinitionTitle>()
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -2003,12 +1983,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "desc");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ColorTransformDescription>()
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -2064,7 +2043,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "catLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ColorTransformCategory>();
         }
 
@@ -2143,7 +2121,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleLbl");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<FillColorList>();
             builder.AddChild<LineColorList>();
             builder.AddChild<EffectColorList>();
@@ -2347,7 +2324,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "pt");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PropertySet>();
             builder.AddChild<ShapeProperties>();
             builder.AddChild<TextBody>();
@@ -2580,7 +2556,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "cxn");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<Connection>()
 .AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
@@ -2830,7 +2805,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "constr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<Constraint>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
@@ -3010,7 +2984,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "rule");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<Rule>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
@@ -3094,16 +3067,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "adj");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Adjust>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L) });
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L) });
 })
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -3159,7 +3131,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "adjLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Adjust>();
         }
 
@@ -3212,54 +3183,53 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "param");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Parameter>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 })
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddUnion(union =>
-{
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>)), UnionId = (0) });
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)), UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>)), UnionId = (0) });
-});
+ aBuilder.AddUnion(union =>
+ {
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+     union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+     union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)), UnionId = (0) });
+     union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>)), UnionId = (0) });
+ });
 });
         }
 
@@ -3336,7 +3306,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "alg");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Parameter>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<Algorithm>()
@@ -3482,7 +3451,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "shape");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<AdjustList>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<Shape>()
@@ -3655,7 +3623,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "presOf");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ExtensionList>();
             builder.AddElement<PresentationOf>()
 .AddAttribute(0, "axis", a => a.Axis)
@@ -3738,7 +3705,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "constrLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Constraint>();
         }
 
@@ -3801,7 +3767,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "ruleLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Rule>();
         }
 
@@ -3872,7 +3837,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "varLst");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3950,7 +3914,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "presLayoutVars");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4292,7 +4255,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "forEach");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Algorithm>();
             builder.AddChild<Shape>();
             builder.AddChild<PresentationOf>();
@@ -4435,7 +4397,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "layoutNode");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Algorithm>();
             builder.AddChild<Shape>();
             builder.AddChild<PresentationOf>();
@@ -4541,7 +4502,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "choose");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DiagramChooseIf>();
             builder.AddChild<DiagramChooseElse>();
             builder.AddElement<Choose>()
@@ -4732,7 +4692,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "if");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Algorithm>();
             builder.AddChild<Shape>();
             builder.AddChild<PresentationOf>();
@@ -4874,7 +4833,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "else");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Algorithm>();
             builder.AddChild<Shape>();
             builder.AddChild<PresentationOf>();
@@ -4965,7 +4923,6 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "dataModel");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PointList>();
             builder.AddChild<ConnectionList>();
             builder.AddChild<Background>();
@@ -5091,16 +5048,15 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "cat");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Category>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 })
 .AddAttribute(0, "pri", a => a.Priority, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -5146,12 +5102,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "title");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Title>()
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -5197,12 +5152,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "desc");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Description>()
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -5258,7 +5212,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "catLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Category>();
         }
 
@@ -5321,7 +5274,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "sampData");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5383,7 +5335,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleData");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5445,7 +5396,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "clrData");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5586,7 +5536,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "style");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
@@ -5687,7 +5636,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "orgChart");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<OrganizationChart>()
 .AddAttribute(0, "val", a => a.Val);
         }
@@ -5724,11 +5672,10 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "chMax");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<MaxNumberOfChildren>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
+ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
 });
         }
 
@@ -5764,7 +5711,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "chPref");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<PreferredNumberOfChildren>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -5804,7 +5750,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "bulletEnabled");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<BulletEnabled>()
 .AddAttribute(0, "val", a => a.Val);
         }
@@ -5841,11 +5786,10 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "dir");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Direction>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 });
         }
 
@@ -5881,7 +5825,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "hierBranch");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<HierarchyBranch>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -5921,7 +5864,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "animOne");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AnimateOneByOne>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -5961,7 +5903,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "animLvl");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<AnimationLevel>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -6001,7 +5942,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "resizeHandles");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ResizeHandles>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
@@ -6051,16 +5991,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "cat");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StyleDisplayCategory>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 })
 .AddAttribute(0, "pri", a => a.Priority, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -6119,7 +6058,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "scene3d");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Camera>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LightRig>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Backdrop>();
@@ -6284,7 +6222,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "sp3d");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelTop>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelBottom>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
@@ -6438,7 +6375,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "txPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
         }
@@ -6525,12 +6461,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "title");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StyleDefinitionTitle>()
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -6576,12 +6511,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "desc");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<StyleLabelDescription>()
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
 });
         }
 
@@ -6637,7 +6571,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "catLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<StyleDisplayCategory>();
         }
 
@@ -6714,7 +6647,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "styleLbl");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Scene3D>();
             builder.AddChild<Shape3D>();
             builder.AddChild<TextProperties>();
@@ -6855,7 +6787,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "ptLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Point>();
         }
 
@@ -6918,7 +6849,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "cxnLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Connection>();
         }
 
@@ -6988,7 +6918,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "bg");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
@@ -7079,7 +7008,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "whole");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -7165,7 +7093,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.DataModelExtension>();
         }
 
@@ -7509,7 +7436,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "prSet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PresentationLayoutVariables>();
             builder.AddChild<Style>();
             builder.AddElement<PropertySet>()
@@ -7660,7 +7586,6 @@ union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "spPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
@@ -7789,7 +7714,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "t");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
@@ -7882,7 +7806,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(14, "extLst");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PtExtension>();
         }
 

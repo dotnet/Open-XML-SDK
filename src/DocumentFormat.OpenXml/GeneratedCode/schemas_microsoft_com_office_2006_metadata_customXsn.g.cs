@@ -63,7 +63,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "customXsn");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<XsnLocation>();
             builder.AddChild<CachedView>();
             builder.AddChild<OpenByDefault>();
@@ -167,7 +166,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "xsnLocation");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -205,7 +203,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "cached");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -243,7 +240,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "openByDefault");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -281,7 +277,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(39, "xsnScope");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

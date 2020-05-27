@@ -198,7 +198,6 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "path");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Path>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "v", a => a.Value)
@@ -275,7 +274,6 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "formulas");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Formula>();
         }
 
@@ -338,7 +336,6 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "handles");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ShapeHandle>();
         }
 
@@ -679,7 +676,6 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "fill");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
             builder.AddElement<Fill>()
 .AddAttribute(0, "id", a => a.Id)
@@ -1093,7 +1089,6 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "stroke");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
@@ -1348,7 +1343,6 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "shadow");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Shadow>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "on", a => a.On)
@@ -1464,7 +1458,6 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "textbox");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
             builder.AddElement<TextBox>()
 .AddAttribute(0, "id", a => a.Id)
@@ -1589,7 +1582,6 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "textpath");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextPath>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "style", a => a.Style)
@@ -1837,7 +1829,6 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "imagedata");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ImageData>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "chromakey", a => a.ChromAKey)
@@ -2614,7 +2605,6 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "shape");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Path>();
             builder.AddChild<Formulas>();
             builder.AddChild<ShapeHandles>();
@@ -3467,7 +3457,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "shapetype");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Path>();
             builder.AddChild<Formulas>();
             builder.AddChild<ShapeHandles>();
@@ -4070,7 +4059,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "group");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Group>();
             builder.AddChild<Shape>();
             builder.AddChild<Shapetype>();
@@ -4291,7 +4279,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "background");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Fill>();
             builder.AddElement<Background>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -5041,7 +5028,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "arc");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Path>();
             builder.AddChild<Formulas>();
             builder.AddChild<ShapeHandles>();
@@ -5912,7 +5898,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "curve");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Path>();
             builder.AddChild<Formulas>();
             builder.AddChild<ShapeHandles>();
@@ -6831,7 +6816,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "image");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Path>();
             builder.AddChild<Formulas>();
             builder.AddChild<ShapeHandles>();
@@ -7685,7 +7669,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "line");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Path>();
             builder.AddChild<Formulas>();
             builder.AddChild<ShapeHandles>();
@@ -8510,7 +8493,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "oval");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Path>();
             builder.AddChild<Formulas>();
             builder.AddChild<ShapeHandles>();
@@ -9346,7 +9328,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "polyline");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Path>();
             builder.AddChild<Formulas>();
             builder.AddChild<ShapeHandles>();
@@ -10173,7 +10154,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "rect");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Path>();
             builder.AddChild<Formulas>();
             builder.AddChild<ShapeHandles>();
@@ -10998,7 +10978,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "roundrect");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Path>();
             builder.AddChild<Formulas>();
             builder.AddChild<ShapeHandles>();
@@ -11236,17 +11215,16 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "h");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ShapeHandle>()
-.AddAttribute(0, "position", a => a.Position)
-.AddAttribute(0, "polar", a => a.Polar)
-.AddAttribute(0, "map", a => a.Map)
-.AddAttribute(0, "invx", a => a.InvertX)
-.AddAttribute(0, "invy", a => a.InvertY)
-.AddAttribute(0, "switch", a => a.Switch)
-.AddAttribute(0, "xrange", a => a.XRange)
-.AddAttribute(0, "yrange", a => a.YRange)
-.AddAttribute(0, "radiusrange", a => a.RadiusRange);
+ .AddAttribute(0, "position", a => a.Position)
+ .AddAttribute(0, "polar", a => a.Polar)
+ .AddAttribute(0, "map", a => a.Map)
+ .AddAttribute(0, "invx", a => a.InvertX)
+ .AddAttribute(0, "invy", a => a.InvertY)
+ .AddAttribute(0, "switch", a => a.Switch)
+ .AddAttribute(0, "xrange", a => a.XRange)
+ .AddAttribute(0, "yrange", a => a.YRange)
+ .AddAttribute(0, "radiusrange", a => a.RadiusRange);
         }
 
         /// <inheritdoc/>
@@ -11281,9 +11259,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "f");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Formula>()
-.AddAttribute(0, "eqn", a => a.Equation);
+ .AddAttribute(0, "eqn", a => a.Equation);
         }
 
         /// <inheritdoc/>

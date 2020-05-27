@@ -291,7 +291,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "control");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ControlCloneRegular>()
 .AddAttribute(0, "idQ", a => a.QualifiedId, aBuilder =>
 {
@@ -709,7 +709,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "button");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ButtonRegular>()
 .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
 {
@@ -1089,7 +1089,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "checkBox");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CheckBox>()
 .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
 {
@@ -1726,7 +1726,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "gallery");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Item>();
             builder.AddChild<ButtonRegular>();
             builder.AddElement<GalleryRegular>()
@@ -2250,7 +2250,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "toggleButton");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ToggleButtonRegular>()
 .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
 {
@@ -2478,7 +2478,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menuSeparator");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MenuSeparator>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2732,7 +2732,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "splitButton");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<VisibleButton>();
             builder.AddChild<VisibleToggleButton>();
             builder.AddChild<MenuRegular>();
@@ -3169,7 +3169,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ControlCloneRegular>();
             builder.AddChild<ButtonRegular>();
             builder.AddChild<CheckBox>();
@@ -3652,7 +3652,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "dynamicMenu");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DynamicMenuRegular>()
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
 {
@@ -3980,7 +3980,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "splitButton");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<VisibleButton>();
             builder.AddChild<VisibleToggleButton>();
             builder.AddChild<MenuWithTitle>();
@@ -4417,7 +4417,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ControlCloneRegular>();
             builder.AddChild<ButtonRegular>();
             builder.AddChild<CheckBox>();
@@ -4660,7 +4660,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menuSeparator");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MenuSeparatorNoTitle>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -5014,7 +5014,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "control");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ControlClone>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -5351,7 +5351,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "labelControl");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<LabelControl>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -5768,7 +5768,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "button");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Button>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -6243,7 +6243,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "toggleButton");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ToggleButton>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -6696,7 +6696,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "editBox");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<EditBox>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
@@ -7254,7 +7254,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "comboBox");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Item>();
             builder.AddElement<ComboBox>()
 .AddAttribute(0, "showItemImage", a => a.ShowItemImage)
@@ -7850,7 +7850,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "dropDown");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Item>();
             builder.AddChild<ButtonRegular>();
             builder.AddElement<DropDownRegular>()
@@ -8568,7 +8568,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "gallery");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Item>();
             builder.AddChild<ButtonRegular>();
             builder.AddElement<Gallery>()
@@ -9148,7 +9148,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ControlCloneRegular>();
             builder.AddChild<ButtonRegular>();
             builder.AddChild<CheckBox>();
@@ -9659,7 +9659,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "dynamicMenu");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DynamicMenu>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -10012,7 +10012,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "splitButton");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<VisibleButton>();
             builder.AddChild<VisibleToggleButton>();
             builder.AddChild<MenuRegular>();
@@ -10262,7 +10262,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "box");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ControlClone>();
             builder.AddChild<LabelControl>();
             builder.AddChild<Button>();
@@ -10486,7 +10486,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "buttonGroup");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ControlCloneRegular>();
             builder.AddChild<ButtonRegular>();
             builder.AddChild<ToggleButtonRegular>();
@@ -10750,7 +10750,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "button");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackstageMenuButton>()
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
 {
@@ -10989,7 +10989,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "checkBox");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackstageMenuCheckBox>()
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
 {
@@ -11259,7 +11259,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageMenuGroup>();
             builder.AddElement<BackstageSubMenu>()
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
@@ -11537,7 +11537,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "toggleButton");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackstageMenuToggleButton>()
 .AddAttribute(0, "image", a => a.Image, aBuilder =>
 {
@@ -11849,7 +11849,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "button");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackstageGroupButton>()
 .AddAttribute(0, "expand", a => a.Expand)
 .AddAttribute(0, "style", a => a.Style)
@@ -12148,7 +12148,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "checkBox");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackstageCheckBox>()
 .AddAttribute(0, "expand", a => a.Expand)
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
@@ -12415,7 +12415,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "editBox");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackstageEditBox>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -12757,7 +12757,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "dropDown");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ItemBackstageItem>();
             builder.AddElement<BackstageDropDown>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -13081,7 +13081,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "radioGroup");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<RadioButtonBackstageItem>();
             builder.AddElement<RadioGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -13395,7 +13395,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "comboBox");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ItemBackstageItem>();
             builder.AddElement<BackstageComboBox>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -13723,7 +13723,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "hyperlink");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Hyperlink>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -13949,7 +13949,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "labelControl");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackstageLabelControl>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -14108,7 +14108,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "groupBox");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageGroupButton>();
             builder.AddChild<BackstageCheckBox>();
             builder.AddChild<BackstageEditBox>();
@@ -14289,7 +14289,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "layoutContainer");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageGroupButton>();
             builder.AddChild<BackstageCheckBox>();
             builder.AddChild<BackstageEditBox>();
@@ -14484,7 +14484,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "imageControl");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ImageControl>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -14764,7 +14764,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "group");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<PrimaryItem>();
             builder.AddChild<TopItemsGroupControls>();
             builder.AddChild<BottomItemsGroupControls>();
@@ -15068,7 +15068,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "taskGroup");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TaskGroupCategory>();
             builder.AddElement<TaskGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -15229,7 +15229,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ControlCloneRegular>();
             builder.AddChild<ButtonRegular>();
             builder.AddChild<CheckBox>();
@@ -15356,7 +15356,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "customUI");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Commands>();
             builder.AddChild<Ribbon>();
             builder.AddChild<Backstage>();
@@ -15547,7 +15547,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "item");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Item>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -15877,7 +15877,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "button");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<VisibleButton>()
 .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
 {
@@ -16296,7 +16296,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "toggleButton");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<VisibleToggleButton>()
 .AddAttribute(0, "getPressed", a => a.GetPressed, aBuilder =>
 {
@@ -16519,7 +16519,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "separator");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Separator>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -16608,7 +16608,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "dialogBoxLauncher");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ButtonRegular>();
         }
 
@@ -16929,7 +16929,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsQName = (true), MinLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "group");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ControlClone>();
             builder.AddChild<LabelControl>();
             builder.AddChild<Button>();
@@ -17388,7 +17388,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "control");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ControlCloneQat>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -17557,7 +17557,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "sharedControls");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17626,7 +17626,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "documentControls");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -17888,7 +17888,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "tab");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Group>();
             builder.AddElement<Tab>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -18038,7 +18038,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "tabSet");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Tab>();
             builder.AddElement<TabSet>()
 .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
@@ -18122,7 +18122,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "command");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<Command>()
 .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
 {
@@ -18192,7 +18192,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "qat");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SharedControlsQatItems>();
             builder.AddChild<DocumentControlsQatItems>();
         }
@@ -18283,7 +18283,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "tabs");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Tab>();
         }
 
@@ -18346,7 +18346,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "contextualTabs");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TabSet>();
         }
 
@@ -18427,7 +18427,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "contextMenu");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ControlCloneRegular>();
             builder.AddChild<ButtonRegular>();
             builder.AddChild<CheckBox>();
@@ -18490,7 +18490,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "item");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -18515,7 +18515,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "radioButton");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -18803,7 +18803,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), IsNcNam
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "button");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackstageRegularButton>()
 .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
 {
@@ -19110,7 +19110,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageMenuGroup>();
             builder.AddElement<BackstagePrimaryMenu>()
 .AddAttribute(0, "screentip", a => a.Screentip, aBuilder =>
@@ -19309,7 +19309,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menuGroup");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageMenuButton>();
             builder.AddChild<BackstageMenuCheckBox>();
             builder.AddChild<BackstageSubMenu>();
@@ -19410,7 +19410,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "primaryItem");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageRegularButton>();
             builder.AddChild<BackstagePrimaryMenu>();
         }
@@ -19511,7 +19511,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "topItems");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
@@ -19599,7 +19599,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "bottomItems");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
@@ -19868,7 +19868,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "category");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TaskGroupTask>();
             builder.AddElement<TaskGroupCategory>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -20177,7 +20177,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "task");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TaskGroupTask>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -20436,7 +20436,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "category");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TaskFormGroupTask>();
             builder.AddElement<TaskFormGroupCategory>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -20755,7 +20755,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "task");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageGroup>();
             builder.AddElement<TaskFormGroupTask>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -21027,7 +21027,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "taskFormGroup");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TaskFormGroupCategory>();
             builder.AddElement<TaskFormGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -21136,7 +21136,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "firstColumn");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TaskFormGroup>();
             builder.AddChild<BackstageGroup>();
             builder.AddChild<TaskGroup>();
@@ -21216,7 +21216,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "secondColumn");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageGroup>();
             builder.AddChild<TaskGroup>();
         }
@@ -21518,7 +21518,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "tab");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageGroups>();
             builder.AddChild<SimpleGroups>();
             builder.AddElement<BackstageTab>()
@@ -21876,7 +21876,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "button");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BackstageFastCommandButton>()
 .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
 {
@@ -22007,7 +22007,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "commands");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Command>();
         }
 
@@ -22082,7 +22082,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "ribbon");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<QuickAccessToolbar>();
             builder.AddChild<Tabs>();
             builder.AddChild<ContextualTabs>();
@@ -22211,7 +22211,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "backstage");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageTab>();
             builder.AddChild<BackstageFastCommandButton>();
             builder.AddElement<Backstage>()
@@ -22288,7 +22288,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (1L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "contextMenus");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ContextMenu>();
         }
 

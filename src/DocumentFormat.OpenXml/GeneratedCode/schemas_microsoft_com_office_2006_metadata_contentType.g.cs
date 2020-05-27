@@ -159,7 +159,6 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(38, "contentTypeSchema");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ContentTypeSchema>()
 .AddAttribute(38, "_", a => a.UnderScore)
 .AddAttribute(41, "_", a => a.ReservedAttributeString)

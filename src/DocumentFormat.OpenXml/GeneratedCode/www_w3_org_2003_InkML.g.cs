@@ -77,7 +77,6 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "ink");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Annotation>();
             builder.AddChild<AnnotationXml>();
             builder.AddChild<Definitions>();
@@ -167,7 +166,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "bind");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Bind>()
 .AddAttribute(0, "source", a => a.Source)
 .AddAttribute(0, "target", a => a.Target)
@@ -243,7 +241,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "table");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Table>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "apply", a => a.Apply)
@@ -298,7 +295,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "matrix");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Matrix>()
 .AddAttribute(1, "id", a => a.Id);
         }
@@ -391,7 +387,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "mapping");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Bind>();
             builder.AddChild<Table>();
             builder.AddChild<Matrix>();
@@ -569,7 +564,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channel");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Mapping>();
             builder.AddElement<Channel>()
 .AddAttribute(1, "id", a => a.Id)
@@ -682,7 +676,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "intermittentChannels");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Channel>();
         }
 
@@ -755,7 +748,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channelProperty");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ChannelProperty>()
 .AddAttribute(0, "channel", a => a.Channel, aBuilder =>
 {
@@ -870,7 +862,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceFormat");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Channel>();
             builder.AddChild<IntermittentChannels>();
             builder.AddElement<TraceFormat>()
@@ -927,7 +918,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "sampleRate");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SampleRate>()
 .AddAttribute(0, "uniform", a => a.Uniform)
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
@@ -968,7 +958,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "latency");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Latency>()
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
 {
@@ -1038,7 +1027,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "activeArea");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<ActiveArea>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "height", a => a.Height)
@@ -1120,7 +1108,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "srcProperty");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SourceProperty>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -1207,7 +1194,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channelProperties");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ChannelProperty>();
         }
 
@@ -1273,7 +1259,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "annotation");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Annotation>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "encoding", a => a.Encoding);
@@ -1361,7 +1346,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "annotationXML");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Emma>();
             builder.AddElement<AnnotationXml>()
 .AddAttribute(0, "type", a => a.Type)
@@ -1475,7 +1459,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "brushProperty");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Annotation>();
             builder.AddChild<AnnotationXml>();
             builder.AddElement<BrushProperty>()
@@ -1608,7 +1591,6 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "canvas");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TraceFormat>();
             builder.AddElement<Canvas>()
 .AddAttribute(1, "id", a => a.Id)
@@ -1713,7 +1695,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "canvasTransform");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Mapping>();
             builder.AddElement<CanvasTransform>()
 .AddAttribute(1, "id", a => a.Id)
@@ -1847,7 +1828,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "inkSource");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<TraceFormat>();
             builder.AddChild<SampleRate>();
             builder.AddChild<Latency>();
@@ -2010,7 +1990,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "brush");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Annotation>();
             builder.AddChild<AnnotationXml>();
             builder.AddChild<BrushProperty>();
@@ -2106,7 +2085,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "timestamp");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Timestamp>()
 .AddAttribute(1, "id", a => a.Id, aBuilder =>
 {
@@ -2239,22 +2217,21 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "trace");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Trace>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "continuation", a => a.Continuation)
 .AddAttribute(0, "priorRef", a => a.PriorRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 })
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 })
 .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 })
 .AddAttribute(0, "duration", a => a.Duration)
 .AddAttribute(0, "timeOffset", a => a.TimeOffset);
@@ -2348,7 +2325,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceGroup");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Annotation>();
             builder.AddChild<AnnotationXml>();
             builder.AddChild<Trace>();
@@ -2482,7 +2458,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "traceView");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Annotation>();
             builder.AddChild<AnnotationXml>();
             builder.AddChild<TraceView>();
@@ -2649,7 +2624,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "context");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Canvas>();
             builder.AddChild<CanvasTransform>();
             builder.AddChild<TraceFormat>();
@@ -2840,7 +2814,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "definitions");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Brush>();
             builder.AddChild<Canvas>();
             builder.AddChild<CanvasTransform>();

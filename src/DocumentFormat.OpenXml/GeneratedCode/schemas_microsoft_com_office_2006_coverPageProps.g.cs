@@ -65,7 +65,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CoverPageProperties");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<PublishDate>();
             builder.AddChild<DocumentAbstract>();
             builder.AddChild<CompanyAddress>();
@@ -199,7 +198,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "PublishDate");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -237,7 +235,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "Abstract");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -275,7 +272,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CompanyAddress");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -313,7 +309,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CompanyPhone");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -351,7 +346,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CompanyFax");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -389,7 +383,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(36, "CompanyEmail");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

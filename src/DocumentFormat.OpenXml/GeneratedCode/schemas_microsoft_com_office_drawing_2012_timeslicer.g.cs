@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(77, "timeslicer");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<TimeSlicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -152,7 +152,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(77, "extLst");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 

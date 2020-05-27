@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(70, "taskpanes");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<WebExtensionTaskpane>();
         }
 
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(70, "webextensionref");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WebExtensionPartReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -206,7 +206,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(70, "extLst");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
@@ -326,7 +326,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(70, "taskpane");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<WebExtensionPartReference>();
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<WebExtensionTaskpane>()

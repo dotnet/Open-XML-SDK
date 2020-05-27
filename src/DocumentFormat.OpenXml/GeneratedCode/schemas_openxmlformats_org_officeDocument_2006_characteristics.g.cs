@@ -60,7 +60,6 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(8, "additionalCharacteristics");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Characteristic>();
         }
 
@@ -133,7 +132,6 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(8, "characteristic");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Characteristic>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {

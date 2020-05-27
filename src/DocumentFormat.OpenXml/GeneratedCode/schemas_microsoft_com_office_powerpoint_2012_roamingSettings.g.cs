@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(76, "key");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(76, "value");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(76, "props");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<Key>();
             builder.AddChild<Value>();
         }

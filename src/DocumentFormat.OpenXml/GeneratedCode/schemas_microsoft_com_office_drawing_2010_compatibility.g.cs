@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(63, "compatSp");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<CompatibilityShape>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {

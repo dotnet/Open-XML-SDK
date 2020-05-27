@@ -90,7 +90,6 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Sources");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Source>();
             builder.AddElement<Sources>()
 .AddAttribute(0, "SelectedStyle", a => a.SelectedStyle, aBuilder =>
@@ -168,7 +167,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Person");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Last>();
             builder.AddChild<First>();
             builder.AddChild<Middle>();
@@ -219,7 +217,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Last");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -258,7 +255,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "First");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -297,7 +293,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Middle");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -336,7 +331,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Corporate");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -375,7 +369,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "AbbreviatedCaseNumber");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -414,7 +407,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "AlbumTitle");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -453,7 +445,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "BookTitle");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -492,7 +483,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Broadcaster");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -531,7 +521,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "BroadcastTitle");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -570,7 +559,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "CaseNumber");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -609,7 +597,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "ChapterNumber");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -648,7 +635,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "City");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -687,7 +673,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Comments");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -726,7 +711,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "ConferenceName");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -765,7 +749,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "CountryRegion");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -804,7 +787,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Court");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -843,7 +825,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Day");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -882,7 +863,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "DayAccessed");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -921,7 +901,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Department");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -960,7 +939,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Distributor");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -999,7 +977,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Edition");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1038,7 +1015,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Guid");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1077,7 +1053,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Institution");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1116,7 +1091,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "InternetSiteTitle");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1155,7 +1129,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Issue");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1194,7 +1167,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "JournalName");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1233,7 +1205,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "LCID");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1272,7 +1243,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Medium");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1311,7 +1281,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Month");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1350,7 +1319,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "MonthAccessed");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1389,7 +1357,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "NumberVolumes");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1428,7 +1395,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Pages");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1467,7 +1433,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "PatentNumber");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1506,7 +1471,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "PeriodicalTitle");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1545,7 +1509,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "ProductionCompany");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1584,7 +1547,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "PublicationTitle");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1623,7 +1585,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Publisher");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1662,7 +1623,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "RecordingNumber");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1701,7 +1661,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "RefOrder");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1740,7 +1699,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Reporter");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1779,7 +1737,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "ShortTitle");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1818,7 +1775,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "StandardNumber");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1857,7 +1813,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "StateProvince");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1896,7 +1851,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Station");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1935,7 +1889,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Tag");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1974,7 +1927,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Theater");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2013,7 +1965,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "ThesisType");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2052,7 +2003,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Title");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2091,7 +2041,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Type");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2130,7 +2079,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "URL");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2169,7 +2117,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Version");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2208,7 +2155,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Volume");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2247,7 +2193,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Year");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2286,7 +2231,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "YearAccessed");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -2341,7 +2285,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "NameList");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Person>();
         }
 
@@ -2404,7 +2347,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Artist");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2466,7 +2408,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "BookAuthor");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2528,7 +2469,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Compiler");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2590,7 +2530,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Composer");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2652,7 +2591,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Conductor");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2714,7 +2652,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Counsel");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2776,7 +2713,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Director");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2838,7 +2774,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Editor");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2900,7 +2835,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewee");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2962,7 +2896,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewer");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3024,7 +2957,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Inventor");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3086,7 +3018,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "ProducerName");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3148,7 +3079,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Translator");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3210,7 +3140,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Writer");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3337,7 +3266,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3404,7 +3332,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Performer");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3564,7 +3491,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Artist>();
             builder.AddChild<Author>();
             builder.AddChild<BookAuthor>();
@@ -3852,7 +3778,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
             base.ConfigureMetadata(builder);
             builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>)) });
             builder.SetSchema(9, "SourceType");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -3958,7 +3883,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Source");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<AbbreviatedCaseNumber>();
             builder.AddChild<AlbumTitle>();
             builder.AddChild<AuthorList>();

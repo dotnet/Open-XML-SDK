@@ -52,7 +52,6 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "derived-from");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<DerivedFrom>()
 .AddAttribute(0, "resource", a => a.Resource, aBuilder =>
 {
@@ -118,11 +117,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "info");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Info>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+  aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
 });
         }
 
@@ -232,7 +230,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "lattice");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Arc>();
             builder.AddChild<Node>();
             builder.AddElement<Lattice>()
@@ -292,7 +289,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "literal");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -686,7 +682,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "interpretation");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DerivedFrom>();
             builder.AddChild<Info>();
             builder.AddChild<Lattice>();
@@ -1128,7 +1123,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "one-of");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DerivedFrom>();
             builder.AddChild<Info>();
             builder.AddChild<Interpretation>();
@@ -1561,7 +1555,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "group");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DerivedFrom>();
             builder.AddChild<GroupInfo>();
             builder.AddChild<Info>();
@@ -1988,7 +1981,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "sequence");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DerivedFrom>();
             builder.AddChild<Info>();
             builder.AddChild<Interpretation>();
@@ -2103,7 +2095,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "group-info");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<GroupInfo>()
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
@@ -2173,7 +2164,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "derivation");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Interpretation>();
             builder.AddChild<OneOf>();
             builder.AddChild<Sequence>();
@@ -2232,7 +2222,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "grammar");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Grammar>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2312,16 +2301,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "model");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<Model>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 });
         }
 
@@ -2394,7 +2382,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "endpoint-info");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<EndPoint>();
             builder.AddElement<EndPointInfo>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -2597,7 +2584,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "endpoint");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<EndPoint>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -2711,7 +2697,6 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "node");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Info>();
             builder.AddElement<Node>()
 .AddAttribute(0, "node-number", a => a.NodeNumber, aBuilder =>
@@ -2938,7 +2923,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "arc");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Info>();
             builder.AddElement<Arc>()
 .AddAttribute(0, "from", a => a.From, aBuilder =>
@@ -3046,7 +3030,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "emma");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Derivation>();
             builder.AddChild<Grammar>();
             builder.AddChild<Model>();

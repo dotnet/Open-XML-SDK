@@ -87,7 +87,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "macrosheet");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
@@ -286,7 +285,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "worksheetSortMap");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RowSortMap>();
             builder.AddChild<ColumnSortMap>();
         }
@@ -392,7 +390,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)) });
             builder.SetSchema(32, "sqref");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -430,7 +428,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "f");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -505,7 +503,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "rowSortMap");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<RowSortMapItem>();
             builder.AddElement<RowSortMap>()
 .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
@@ -597,7 +594,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "colSortMap");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ColumnSortMapItem>();
             builder.AddElement<ColumnSortMap>()
 .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
@@ -639,7 +635,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "row");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -664,7 +659,6 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(32, "col");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>

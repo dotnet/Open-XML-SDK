@@ -112,7 +112,6 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(35, "ocx");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ActiveXObjectProperty>();
             builder.AddElement<ActiveXControlData>()
 .AddAttribute(35, "classid", a => a.ActiveXControlClassId, aBuilder =>
@@ -213,7 +212,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(35, "ocxPr");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<SharedComFont>();
             builder.AddChild<SharedComPicture>();
             builder.AddElement<ActiveXObjectProperty>()
@@ -339,7 +337,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(35, "font");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<ActiveXObjectProperty>();
             builder.AddElement<SharedComFont>()
 .AddAttribute(35, "persistence", a => a.Persistence)
@@ -388,7 +385,6 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(35, "picture");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<SharedComPicture>()
 .AddAttribute(19, "id", a => a.Id);
         }

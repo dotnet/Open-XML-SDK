@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotCaches");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineCachePivotCaches");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTableReferences");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<PivotTableReference>();
         }
 
@@ -302,7 +302,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "queryTable");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<QueryTable>()
 .AddAttribute(0, "clipped", a => a.Clipped)
 .AddAttribute(0, "sourceDataName", a => a.SourceDataName)
@@ -361,7 +361,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "webExtensions");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<WebExtension>();
         }
 
@@ -424,7 +424,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineCacheRefs");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<TimelineCacheReference>();
         }
 
@@ -487,7 +487,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineRefs");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<TimelineReference>();
         }
 
@@ -530,7 +530,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "workbookPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<WorkbookProperties>()
 .AddAttribute(0, "chartTrackingRefBase", a => a.ChartTrackingReferenceBase);
         }
@@ -597,7 +597,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineStyles");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<TimelineStyle>();
             builder.AddElement<TimelineStyles>()
 .AddAttribute(0, "defaultTimelineStyle", a => a.DefaultTimelineStyle, aBuilder =>
@@ -675,7 +675,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "dxfs");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
             builder.AddElement<DifferentialFormats>()
 .AddAttribute(0, "count", a => a.Count);
@@ -794,7 +794,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "connection");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<TextProperties>();
             builder.AddChild<ModelTextProperties>();
             builder.AddChild<RangeProperties>();
@@ -939,7 +939,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "calculatedMember");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<CalculatedMember>()
 .AddAttribute(0, "measureGroup", a => a.MeasureGroup)
 .AddAttribute(0, "numberFormat", a => a.NumberFormat)
@@ -1019,7 +1019,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTableUISettings");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<FieldListActiveTabTopLevelEntity>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<PivotTableUISettings>()
@@ -1067,7 +1067,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotFilter");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PivotFilter>()
 .AddAttribute(0, "useWholeDay", a => a.UseWholeDay, aBuilder =>
 {
@@ -1127,7 +1127,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "cachedUniqueNames");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<CachedUniqueName>();
         }
 
@@ -1170,7 +1170,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "cacheHierarchy");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<CacheHierarchy>()
 .AddAttribute(0, "aggregatedColumn", a => a.AggregatedColumn, aBuilder =>
 {
@@ -1210,7 +1210,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelinePivotCacheDefinition");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<TimelinePivotCacheDefinition>()
 .AddAttribute(0, "timelineData", a => a.TimelineData);
         }
@@ -1257,7 +1257,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotCacheIdVersion");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PivotCacheIdVersion>()
 .AddAttribute(0, "cacheIdSupportedVersion", a => a.CacheIdSupportedVersion, aBuilder =>
 {
@@ -1333,7 +1333,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "dataModel");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ModelTables>();
             builder.AddChild<ModelRelationships>();
             builder.AddChild<ExtensionList>();
@@ -1471,7 +1471,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTableData");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<PivotRow>();
             builder.AddElement<PivotTableData>()
 .AddAttribute(0, "rowCount", a => a.RowCount)
@@ -1524,7 +1524,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotCacheDecoupled");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PivotCacheDecoupled>()
 .AddAttribute(0, "decoupled", a => a.Decoupled);
         }
@@ -1561,7 +1561,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "dataField");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataField>()
 .AddAttribute(0, "isCountDistinct", a => a.IsCountDistinct);
         }
@@ -1638,7 +1638,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "movingPeriodState");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<MovingPeriodState>()
 .AddAttribute(0, "referenceDateBegin", a => a.ReferenceDateBegin, aBuilder =>
 {
@@ -1714,7 +1714,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "slicerCaches");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCache>();
         }
 
@@ -1827,7 +1827,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "tableSlicerCache");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ExtensionList>();
             builder.AddElement<TableSlicerCache>()
 .AddAttribute(0, "tableId", a => a.TableId, aBuilder =>
@@ -1925,7 +1925,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "slicerCacheHideItemsWithNoData");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<SlicerCacheOlapLevelName>();
             builder.AddElement<SlicerCacheHideItemsWithNoData>()
 .AddAttribute(0, "count", a => a.Count);
@@ -1990,7 +1990,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "slicerCachePivotTables");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable>();
         }
 
@@ -2097,7 +2097,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "survey");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<SurveyPrSurveyElementPr>();
             builder.AddChild<TitlePrSurveyElementPr>();
             builder.AddChild<DescriptionPrSurveyElementPr>();
@@ -2245,7 +2245,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelines");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<Timeline>();
         }
 
@@ -2361,7 +2361,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineCacheDefinition");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<TimelineCachePivotTables>();
             builder.AddChild<TimelineState>();
             builder.AddChild<ExtensionList>();
@@ -2490,7 +2490,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTableReference");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PivotTableReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -2560,7 +2560,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "webExtension");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
             builder.AddElement<WebExtension>()
 .AddAttribute(0, "appRef", a => a.ApplicationReference, aBuilder =>
@@ -2624,7 +2624,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineCacheRef");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<TimelineCacheReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -2667,7 +2667,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineRef");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<TimelineReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
@@ -2737,7 +2737,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineStyle");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<TimelineStyleElements>();
             builder.AddElement<TimelineStyle>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -2808,7 +2808,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineStyleElement");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<TimelineStyleElement>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -2869,7 +2869,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timelineStyleElements");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<TimelineStyleElement>();
         }
 
@@ -2912,7 +2912,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "dbTable");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DbTable>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -2972,7 +2972,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "dbTables");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DbTable>();
         }
 
@@ -3015,7 +3015,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "dbCommand");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DbCommand>()
 .AddAttribute(0, "text", a => a.Text, aBuilder =>
 {
@@ -3235,7 +3235,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "textPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
             builder.AddElement<TextProperties>()
 .AddAttribute(0, "prompt", a => a.Prompt)
@@ -3308,7 +3308,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "modelTextPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ModelTextProperties>()
 .AddAttribute(0, "headers", a => a.Headers);
         }
@@ -3345,7 +3345,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "rangePr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<RangeProperties>()
 .AddAttribute(0, "sourceName", a => a.SourceName, aBuilder =>
 {
@@ -3416,7 +3416,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "oledbPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DbTables>();
             builder.AddChild<DbCommand>();
             builder.AddElement<OleDbPrpoperties>()
@@ -3519,7 +3519,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "dataFeedPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DbTables>();
             builder.AddElement<DataFeedProperties>()
 .AddAttribute(0, "connection", a => a.Connection, aBuilder =>
@@ -3590,7 +3590,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "activeTabTopLevelEntity");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<FieldListActiveTabTopLevelEntity>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -3651,7 +3651,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "extLst");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
         }
 
@@ -3710,7 +3710,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "cachedUniqueName");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<CachedUniqueName>()
 .AddAttribute(0, "index", a => a.Index, aBuilder =>
 {
@@ -3774,7 +3774,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "modelTable");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ModelTable>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -3852,7 +3852,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "modelRelationship");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ModelRelationship>()
 .AddAttribute(0, "fromTable", a => a.FromTable, aBuilder =>
 {
@@ -3924,7 +3924,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "modelTables");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ModelTable>();
         }
 
@@ -3987,7 +3987,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "modelRelationships");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ModelRelationship>();
         }
 
@@ -4071,7 +4071,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "c");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<Xstring>();
             builder.AddChild<PivotValueCellExtra>();
             builder.AddElement<PivotValueCell>()
@@ -4148,7 +4148,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "v");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -4243,7 +4243,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "x");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PivotValueCellExtra>()
 .AddAttribute(0, "in", a => a.FormatIndex)
 .AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
@@ -4322,7 +4322,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTableServerFormats");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ServerFormat>();
             builder.AddElement<PivotTableServerFormats>()
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
@@ -4380,7 +4380,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "serverFormat");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ServerFormat>()
 .AddAttribute(0, "culture", a => a.Culture)
 .AddAttribute(0, "format", a => a.Format);
@@ -4428,7 +4428,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "slicerCacheOlapLevelName");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<SlicerCacheOlapLevelName>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
 {
@@ -4492,7 +4492,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "surveyPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4554,7 +4554,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "titlePr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4616,7 +4616,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "descriptionPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4678,7 +4678,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "questionsPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4740,7 +4740,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "questionPr");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4956,7 +4956,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "questions");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<QuestionsPrSurveyElementPr>();
             builder.AddChild<SurveyQuestion>();
         }
@@ -5125,7 +5125,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "question");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<QuestionPrSurveyElementPr>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<SurveyQuestion>()
@@ -5339,7 +5339,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "timeline");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ExtensionList>();
             builder.AddElement<Timeline>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -5435,7 +5435,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTable");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<TimelineCachePivotTable>()
 .AddAttribute(0, "tabId", a => a.TabId, aBuilder =>
 {
@@ -5469,7 +5469,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "selection");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -5494,7 +5494,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "bounds");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -5610,7 +5610,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "autoFilter");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -5679,7 +5679,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotTables");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<TimelineCachePivotTable>();
         }
 
@@ -5825,7 +5825,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "state");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<SelectionTimelineRange>();
             builder.AddChild<BoundsTimelineRange>();
             builder.AddChild<MovingPeriodState>();
@@ -5987,7 +5987,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(71, "pivotRow");
-            builder.Availability = (FileFormatVersions.Office2013);
+            builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<PivotValueCell>();
             builder.AddElement<PivotRow>()
 .AddAttribute(0, "r", a => a.Reference)

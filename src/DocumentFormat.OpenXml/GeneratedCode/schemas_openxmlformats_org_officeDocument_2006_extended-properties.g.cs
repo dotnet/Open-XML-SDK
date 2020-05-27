@@ -87,7 +87,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "Properties");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<Template>();
             builder.AddChild<Manager>();
             builder.AddChild<Company>();
@@ -567,7 +566,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "Template");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -605,7 +603,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "Manager");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -643,7 +640,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "Company");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -681,7 +677,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "PresentationFormat");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -719,7 +714,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "HyperlinkBase");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -757,7 +751,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "Application");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -795,7 +788,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "AppVersion");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -834,7 +826,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "Pages");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -873,7 +864,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "Words");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -912,7 +902,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "Characters");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -951,7 +940,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "Lines");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -990,7 +978,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "Paragraphs");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1029,7 +1016,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "Slides");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1068,7 +1054,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "Notes");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1107,7 +1092,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "TotalTime");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1146,7 +1130,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "HiddenSlides");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1185,7 +1168,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "MMClips");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1224,7 +1206,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "CharactersWithSpaces");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1263,7 +1244,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
             builder.SetSchema(3, "DocSecurity");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1302,7 +1282,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
             builder.SetSchema(3, "ScaleCrop");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1341,7 +1320,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
             builder.SetSchema(3, "LinksUpToDate");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1380,7 +1358,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
             builder.SetSchema(3, "SharedDoc");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1419,7 +1396,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
             builder.SetSchema(3, "HyperlinksChanged");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -1474,7 +1450,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "HeadingPairs");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1536,7 +1511,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "HLinks");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1662,7 +1636,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "TitlesOfParts");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
         }
 
@@ -1738,7 +1711,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "DigSig");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
         }
 

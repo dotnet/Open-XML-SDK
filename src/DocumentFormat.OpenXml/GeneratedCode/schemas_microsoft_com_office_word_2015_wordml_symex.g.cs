@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(86, "symEx");
-            builder.Availability = (FileFormatVersions.Office2016);
+            builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SymEx>()
 .AddAttribute(86, "font", a => a.Font, aBuilder =>
 {

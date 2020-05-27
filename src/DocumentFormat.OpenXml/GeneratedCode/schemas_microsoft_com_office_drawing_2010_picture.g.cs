@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(50, "style");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(50, "extLst");
-            builder.Availability = (FileFormatVersions.Office2010);
+            builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 

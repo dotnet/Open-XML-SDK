@@ -42,7 +42,6 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(13, "legacyDrawing");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<LegacyDrawing>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {

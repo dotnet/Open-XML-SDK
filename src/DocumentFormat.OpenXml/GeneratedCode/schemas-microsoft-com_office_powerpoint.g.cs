@@ -30,7 +30,6 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(30, "iscomment");
-            builder.Availability = (FileFormatVersions.Office2007);
         }
 
         /// <inheritdoc/>
@@ -65,7 +64,6 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(30, "textdata");
-            builder.Availability = (FileFormatVersions.Office2007);
             builder.AddElement<TextData>()
 .AddAttribute(0, "id", a => a.Id);
         }
