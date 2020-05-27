@@ -50,7 +50,10 @@ namespace System.Collections.Concurrent
         {
             lock(_dictionary)
             {
-                _dictionary.Add(key, value);
+                if (!_dictionary.ContainsKey(key))
+                {
+                    _dictionary.Add(key, value);
+                }
             }
         }
     }
