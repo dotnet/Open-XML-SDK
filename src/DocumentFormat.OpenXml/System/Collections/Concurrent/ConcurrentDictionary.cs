@@ -48,7 +48,7 @@ namespace System.Collections.Concurrent
 
         public void TryAdd(TKey key, TValue value)
         {
-            lock(_dictionary)
+            lock (_dictionary)
             {
                 if (!_dictionary.ContainsKey(key))
                 {
