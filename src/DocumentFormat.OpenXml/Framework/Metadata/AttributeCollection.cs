@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             if (tags.Length == 0)
             {
-                _data = Array.Empty<OpenXmlSimpleType>();
+                _data = Cached.Array<OpenXmlSimpleType>();
             }
             else
             {
