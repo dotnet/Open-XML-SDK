@@ -40,45 +40,34 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public SchemaAttrAttribute Schema { get; }
 
-        public static ElementMetadata Create(Type type)
+        public static ElementMetadata Create(OpenXmlElement element)
         {
-            var data = _lookup.GetOrAdd(type, t =>
+            var type = element.GetType();
+
+            // Use TryGetValue first for the common case of already existing types to limit number of allocations
+            if (_lookup.TryGetValue(type, out var result))
             {
-                var helper = typeof(BuilderProvider<>).MakeGenericType(t);
-                var builder = (IMetadataBuilder<ElementMetadata>)Activator.CreateInstance(helper);
+                return result;
+            }
 
-                return builder.Build();
-            });
+            var metadata = CreateInternal(element);
 
-            return data;
+            _lookup.TryAdd(type, metadata);
+
+            return metadata;
         }
 
         public static ElementMetadata Create<TElement>()
             where TElement : OpenXmlElement, new()
+            => _lookup.GetOrAdd(typeof(TElement), t => CreateInternal(new TElement()));
+
+        private static ElementMetadata CreateInternal(OpenXmlElement element)
         {
-            var data = _lookup.GetOrAdd(typeof(TElement), t =>
-            {
-                var builder = new BuilderProvider<TElement>();
+            var builder = new ElementMetadataBuilder();
 
-                return builder.Build();
-            });
+            element.ConfigureMetadata(builder);
 
-            return data;
-        }
-
-        private class BuilderProvider<T> : IMetadataBuilder<ElementMetadata>
-            where T : OpenXmlElement, new()
-        {
-            public ElementMetadata Build()
-            {
-                var element = new T();
-
-                var builder = new ElementMetadataBuilder();
-
-                element.ConfigureMetadata(builder);
-
-                return builder.Build();
-            }
+            return builder.Build();
         }
     }
 }

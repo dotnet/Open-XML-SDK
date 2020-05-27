@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal ElementMetadata Metadata => ElementMetadata.Create(GetType());
+        internal ElementMetadata Metadata => ElementMetadata.Create(this);
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
