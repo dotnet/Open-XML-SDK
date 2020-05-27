@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
-namespace DocumentFormat.OpenXml.Framework
+namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     /// <summary>
     /// A lookup that identifies properties on an <see cref="OpenXmlElement"/> and caches the schema information
