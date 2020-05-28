@@ -450,7 +450,7 @@ namespace DocumentFormat.OpenXml
 
                     foreach (var attribute in RawState.Attributes)
                     {
-                        attribute.SetValue(null);
+                        attribute.Value = null;
                     }
 
                     MCAttributes = null;
@@ -653,7 +653,7 @@ namespace DocumentFormat.OpenXml
                 var attribute = RawState.Attributes[namespaceUri, localName];
                 if (!attribute.IsNil)
                 {
-                    attribute.SetValue(null);
+                    attribute.Value = null;
                 }
                 else
                 {
@@ -710,7 +710,7 @@ namespace DocumentFormat.OpenXml
             // clear known attributes defined in schema
             foreach (var attribute in RawState.Attributes)
             {
-                attribute.SetValue(null);
+                attribute.Value = null;
             }
 
             // clear extended attributes
@@ -1508,7 +1508,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (!attribute.HasValue)
                     {
-                        attribute.SetValue(attribute.Property.CreateNew());
+                        attribute.Value = attribute.Property.CreateNew();
                     }
 
                     attribute.Value.InnerText = value;
@@ -1892,7 +1892,7 @@ namespace DocumentFormat.OpenXml
 
                     if (attribute.HasValue)
                     {
-                        RawState.Attributes[i].SetValue((OpenXmlSimpleType)attribute.Value.Clone());
+                        RawState.Attributes[i].Value = (OpenXmlSimpleType)attribute.Value.Clone();
                     }
                 }
 
@@ -2742,7 +2742,7 @@ namespace DocumentFormat.OpenXml
 
                     if (action == AttributeAction.Ignore)
                     {
-                        attribute.SetValue(null);
+                        attribute.Value = null;
                     }
                 }
             }

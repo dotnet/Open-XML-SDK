@@ -119,8 +119,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public ref OpenXmlSimpleType Value => ref _collection._data[_index];
 
-            public void SetValue(OpenXmlSimpleType value) => _collection._data[_index] = value;
-
             public bool HasValue => Value != null;
         }
     }
