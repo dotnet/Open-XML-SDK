@@ -233,6 +233,8 @@ namespace DocumentFormat.OpenXml
 
         internal virtual ParticleConstraint ParticleConstraint { get; }
 
+        internal virtual ISemanticConstraint[] SemanticConstraints => Cached.Array<ISemanticConstraint>();
+
         /// <summary>
         /// Gets the first child of the OpenXmlElement element.
         /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.

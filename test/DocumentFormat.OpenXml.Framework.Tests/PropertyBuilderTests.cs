@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             var element = new Metadata.ElementState(data);
 
-            ref var str = ref element.Attributes.GetProperty(nameof(SomeElement.Str));
+            ref var str = ref element.Attributes.GetProperty(nameof(SomeElement.Str)).Value;
 
             Assert.Null(str);
 
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             Assert.NotNull(str);
 
-            var str2 = element.Attributes.GetProperty(nameof(SomeElement.Str));
+            var str2 = element.Attributes.GetProperty(nameof(SomeElement.Str)).Value;
 
             Assert.Same(str, tmp);
         }

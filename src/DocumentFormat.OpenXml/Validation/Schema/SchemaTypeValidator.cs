@@ -240,10 +240,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             public override Type Type => Value.GetType();
 
             public override OpenXmlSimpleType CreateNew() => throw new NotImplementedException();
-
-            public override OpenXmlSimpleType GetValue(OpenXmlElement element) => Value;
-
-            public override void SetValue(OpenXmlElement element, OpenXmlSimpleType value) => throw new NotImplementedException();
         }
     }
 }
