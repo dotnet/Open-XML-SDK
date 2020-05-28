@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -49,35 +50,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Columns))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProtection))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DataConsolidate))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.RowBreaks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-    [SchemaAttr(32, "macrosheet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Macrosheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -109,6 +81,39 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Macrosheet(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(32, "macrosheet");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Columns>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetData>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataConsolidate>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
         }
 
         /// <summary>
@@ -243,10 +248,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description>ColumnSortMap &lt;xne:colSortMap></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RowSortMap))]
-    [ChildElementInfo(typeof(ColumnSortMap))]
-    [SchemaAttr(32, "worksheetSortMap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WorksheetSortMap : OpenXmlPartRootElement
     {
         /// <summary>
@@ -278,6 +279,14 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public WorksheetSortMap(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(32, "worksheetSortMap");
+            builder.AddChild<RowSortMap>();
+            builder.AddChild<ColumnSortMap>();
         }
 
         /// <summary>
@@ -354,9 +363,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:sqref.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(ListValue<StringValue>))]
-    [SchemaAttr(32, "sqref")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ReferenceSequence : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -379,6 +385,14 @@ namespace DocumentFormat.OpenXml.Office.Excel
             return new ListValue<StringValue> { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)) });
+            builder.SetSchema(32, "sqref");
+            builder.Availability = FileFormatVersions.Office2010;
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReferenceSequence>(deep);
     }
@@ -388,8 +402,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:f.</para>
     /// </summary>
-    [SchemaAttr(32, "f")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Formula : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -412,6 +424,13 @@ namespace DocumentFormat.OpenXml.Office.Excel
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(32, "f");
+            builder.Availability = FileFormatVersions.Office2010;
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
     }
@@ -427,9 +446,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description>RowSortMapItem &lt;xne:row></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RowSortMapItem))]
-    [SchemaAttr(32, "rowSortMap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowSortMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -467,19 +483,37 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ref")]
-        [Index(0)]
-        public StringValue Ref { get; set; }
+        public StringValue Ref
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [NumberValidator(MaxInclusive = 536870910L)]
-        [SchemaAttr(0, "count")]
-        [Index(1)]
-        public UInt32Value Count { get; set; }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(32, "rowSortMap");
+            builder.AddChild<RowSortMapItem>();
+            builder.AddElement<RowSortMap>()
+.AddAttribute(0, "ref", a => a.Ref, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "count", a => a.Count, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910L) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -503,9 +537,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description>ColumnSortMapItem &lt;xne:col></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColumnSortMapItem))]
-    [SchemaAttr(32, "colSortMap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnSortMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -543,19 +574,37 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "ref")]
-        [Index(0)]
-        public StringValue Ref { get; set; }
+        public StringValue Ref
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [NumberValidator(MaxInclusive = 536870910L)]
-        [SchemaAttr(0, "count")]
-        [Index(1)]
-        public UInt32Value Count { get; set; }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(32, "colSortMap");
+            builder.AddChild<ColumnSortMapItem>();
+            builder.AddElement<ColumnSortMap>()
+.AddAttribute(0, "ref", a => a.Ref, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "count", a => a.Count, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910L) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -573,8 +622,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:row.</para>
     /// </summary>
-    [SchemaAttr(32, "row")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowSortMapItem : SortMapItemType
     {
         /// <summary>
@@ -582,6 +629,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </summary>
         public RowSortMapItem() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(32, "row");
         }
 
         /// <inheritdoc/>
@@ -593,8 +646,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:col.</para>
     /// </summary>
-    [SchemaAttr(32, "col")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnSortMapItem : SortMapItemType
     {
         /// <summary>
@@ -602,6 +653,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </summary>
         public ColumnSortMapItem() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(32, "col");
         }
 
         /// <inheritdoc/>
@@ -626,18 +683,34 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>New Value</para>
         /// <para>Represents the following attribute in the schema: newVal</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "newVal")]
-        [Index(0)]
-        public UInt32Value NewVal { get; set; }
+        public UInt32Value NewVal
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Old Value</para>
         /// <para>Represents the following attribute in the schema: oldVal</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "oldVal")]
-        [Index(1)]
-        public UInt32Value OldVal { get; set; }
+        public UInt32Value OldVal
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SortMapItemType>()
+                           .AddAttribute(0, "newVal", a => a.NewVal, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "oldVal", a => a.OldVal, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 }

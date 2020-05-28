@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -12,6 +13,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -114,7 +116,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         protected OpenXmlElement()
         {
-            ElementData = PackageCache.Cache.ParseElementData(this);
         }
 
         /// <summary>
@@ -132,13 +133,10 @@ namespace DocumentFormat.OpenXml
                 }
 
                 RawOuterXml = outerXml;
-                MakeSureParsed();
             }
         }
 
         #region internal properties
-
-        internal OpenXmlElementData ElementData { get; }
 
         /// <summary>
         /// Gets or sets the next element in the linked list.
@@ -168,31 +166,56 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        private Framework.Metadata.ElementState _state;
+
         /// <summary>
         /// Gets an array of fixed attributes (attributes that are defined in the schema) without forcing any parsing of the element.
-        /// If parsing is required, please use <see cref="Attributes"/>
+        /// If parsing is required, please use <see cref="ParsedState"/>
         /// </summary>
-        internal ElementPropertyCollection<OpenXmlSimpleType> RawAttributes => ElementData.RawAttributes.WrapElement(this);
+        private protected Framework.Metadata.ElementState RawState
+        {
+            get
+            {
+                if (_state.IsEmpty)
+                {
+                    _state = new Framework.Metadata.ElementState(Metadata);
+                }
+
+                return _state;
+            }
+        }
+
+        internal ElementMetadata Metadata => ElementMetadata.Create(this);
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
-        /// use <see cref="RawAttributes"/>.
+        /// use <see cref="RawState"/>.
         /// </summary>
-        internal ElementPropertyCollection<OpenXmlSimpleType> Attributes
+        internal Framework.Metadata.ElementState ParsedState
         {
             get
             {
                 MakeSureParsed();
-                return RawAttributes;
+                return RawState;
             }
         }
-
-        internal ElementPropertyCollection<OpenXmlElement> RawElements => ElementData.RawElements.WrapElement(this);
 
         /// <summary>
         /// Gets the namespace ID of the current element.
         /// </summary>
-        internal byte NamespaceId => ElementData.Info.Schema?.NamespaceId ?? throw new InvalidOperationException();
+        internal byte NamespaceId => Metadata.Schema?.NamespaceId ?? throw new InvalidOperationException();
+
+        internal virtual void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+        }
+
+        private protected void SetAttribute<TSimpleType>(TSimpleType value, [CallerMemberName] string propertyName = null)
+            where TSimpleType : OpenXmlSimpleType
+            => ParsedState.Attributes.GetProperty(propertyName).Value = value;
+
+        private protected TSimpleType GetAttribute<TSimpleType>([CallerMemberName] string propertyName = null)
+            where TSimpleType : OpenXmlSimpleType
+            => ParsedState.Attributes.GetProperty(propertyName).Value as TSimpleType;
 
         #endregion
 
@@ -237,7 +260,7 @@ namespace DocumentFormat.OpenXml
                     return true;
                 }
 
-                foreach (var value in Attributes)
+                foreach (var value in ParsedState.Attributes)
                 {
                     if (value.HasValue)
                     {
@@ -295,12 +318,12 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace URI of the current element.
         /// </summary>
-        public virtual string NamespaceUri => ElementData.Info.Schema.NamespaceUri;
+        public virtual string NamespaceUri => Metadata.Schema.NamespaceUri;
 
         /// <summary>
         /// Gets the local name of the current element.
         /// </summary>
-        public virtual string LocalName => ElementData.Info.Schema.Tag;
+        public virtual string LocalName => Metadata.Schema.Tag;
 
         /// <summary>
         /// Gets the namespace prefix of current element.
@@ -425,9 +448,9 @@ namespace DocumentFormat.OpenXml
                     NamespaceDeclField = null;
                     ExtendedAttributesField = null;
 
-                    foreach (var attribute in RawAttributes)
+                    foreach (var attribute in RawState.Attributes)
                     {
-                        attribute.SetValue(null);
+                        attribute.Value = null;
                     }
 
                     MCAttributes = null;
@@ -436,7 +459,6 @@ namespace DocumentFormat.OpenXml
                 if (!string.IsNullOrEmpty(value))
                 {
                     RawOuterXml = value;
-                    MakeSureParsed();
                 }
                 else
                 {
@@ -479,7 +501,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (namespaceUri != null)
                 {
-                    foreach (var attribute in Attributes)
+                    foreach (var attribute in ParsedState.Attributes)
                     {
                         if (attribute.HasValue &&
                             attribute.Property.Name == localName &&
@@ -519,7 +541,7 @@ namespace DocumentFormat.OpenXml
             {
                 var attributes = new List<OpenXmlAttribute>();
 
-                foreach (var attribute in Attributes)
+                foreach (var attribute in ParsedState.Attributes)
                 {
                     if (attribute.HasValue)
                     {
@@ -628,10 +650,10 @@ namespace DocumentFormat.OpenXml
             if (HasAttributes)
             {
                 // get attribute namespace ID
-                var attribute = RawAttributes[namespaceUri, localName];
+                var attribute = RawState.Attributes[namespaceUri, localName];
                 if (!attribute.IsNil)
                 {
-                    attribute.SetValue(null);
+                    attribute.Value = null;
                 }
                 else
                 {
@@ -686,9 +708,9 @@ namespace DocumentFormat.OpenXml
             MakeSureParsed();
 
             // clear known attributes defined in schema
-            foreach (var attribute in RawAttributes)
+            foreach (var attribute in RawState.Attributes)
             {
-                attribute.SetValue(null);
+                attribute.Value = null;
             }
 
             // clear extended attributes
@@ -1420,7 +1442,7 @@ namespace DocumentFormat.OpenXml
 
             if (XmlParsed && HasAttributes)
             {
-                foreach (var attribute in Attributes)
+                foreach (var attribute in ParsedState.Attributes)
                 {
                     if (attribute.HasValue)
                     {
@@ -1473,20 +1495,20 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the attribute is a known attribute.</returns>
         private bool TrySetFixedAttribute(string namespaceUri, string localName, string value, bool strictRelationshipFound)
         {
-            if (ElementData.RawAttributes.Any())
+            if (RawState.Attributes.Any())
             {
                 if (strictRelationshipFound)
                 {
                     return StrictTranslateAttribute(namespaceUri, localName, value);
                 }
 
-                var attribute = RawAttributes[namespaceUri, localName];
+                var attribute = RawState.Attributes[namespaceUri, localName];
 
                 if (!attribute.IsNil)
                 {
                     if (!attribute.HasValue)
                     {
-                        attribute.SetValue(attribute.Property.CreateNew());
+                        attribute.Value = attribute.Property.CreateNew();
                     }
 
                     attribute.Value.InnerText = value;
@@ -1836,7 +1858,7 @@ namespace DocumentFormat.OpenXml
             return newElement;
         }
 
-        internal virtual OpenXmlElement ElementFactory(byte namespaceId, string name) => ElementData.Children.Create(namespaceId, name);
+        internal virtual OpenXmlElement ElementFactory(byte namespaceId, string name) => Metadata.Children.Create(namespaceId, name);
 
         internal virtual T CloneImp<T>(bool deep)
             where T : OpenXmlElement, new()
@@ -1864,14 +1886,13 @@ namespace DocumentFormat.OpenXml
                 }
 
                 // Copy Attributes.
-                Debug.Assert(container.RawAttributes.Length == container.RawAttributes.Length);
-                for (var i = 0; i < container.Attributes.Length; i++)
+                for (var i = 0; i < container.ParsedState.Attributes.Length; i++)
                 {
-                    var attribute = container.Attributes[i];
+                    var attribute = container.ParsedState.Attributes[i];
 
                     if (attribute.HasValue)
                     {
-                        RawAttributes[i].SetValue((OpenXmlSimpleType)attribute.Value.Clone());
+                        RawState.Attributes[i].Value = (OpenXmlSimpleType)attribute.Value.Clone();
                     }
                 }
 
@@ -1940,7 +1961,7 @@ namespace DocumentFormat.OpenXml
         /// For <see cref="OpenXmlUnknownElement"/>, always returns <c>false</c>
         /// For <see cref="OpenXmlMiscNode"/>, always returns <c>true</c>
         /// </summary>
-        internal FileFormatVersions InitialVersion => ElementData.Info.Availability;
+        internal FileFormatVersions InitialVersion => RawState.Metadata.Availability;
 
         #endregion
 
@@ -2713,7 +2734,7 @@ namespace DocumentFormat.OpenXml
                 return;
             }
 
-            foreach (var attribute in RawAttributes)
+            foreach (var attribute in RawState.Attributes)
             {
                 if (attribute.HasValue)
                 {
@@ -2721,7 +2742,7 @@ namespace DocumentFormat.OpenXml
 
                     if (action == AttributeAction.Ignore)
                     {
-                        attribute.SetValue(null);
+                        attribute.Value = null;
                     }
                 }
             }

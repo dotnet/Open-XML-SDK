@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Diagnostics;
 
@@ -87,7 +88,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             ValidationErrorInfo errorInfo;
 
-            foreach (var attribute in element.Attributes)
+            foreach (var attribute in element.ParsedState.Attributes)
             {
                 ValidateValue(validationContext, attribute.Property.Validators, attribute.Value, attribute.Property, true);
             }
@@ -116,7 +117,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        private static void ValidateValue(ValidationContext validationContext, ValidatorCollection validators, OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> state, bool isAttribute)
+        private static void ValidateValue(ValidationContext validationContext, ValidatorCollection validators, OpenXmlSimpleType value, AttributeMetadata state, bool isAttribute)
         {
             var errors = validationContext.Errors.Count;
 
@@ -185,10 +186,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             ValidateEmptyComplexType(validationContext);
 
             var element = (OpenXmlLeafTextElement)validationContext.Stack.Current.Element;
-            var value = element.InnerTextToValue(element.Text);
-            var state = new ElementProperty<OpenXmlSimpleType>(element.NamespaceId, element.LocalName, 0, element.ElementData.Info.Validators, new ElementPropertyAccessor<OpenXmlSimpleType>(_ => value, (_, __) => throw new NotImplementedException(), value.GetType()));
+            var state = new LeafAccessor(element);
 
-            SchemaTypeValidator.ValidateValue(validationContext, element.ElementData.Info.Validators, value, state, false);
+            SchemaTypeValidator.ValidateValue(validationContext, element.ParsedState.Metadata.Validators, state.Value, state, false);
         }
 
         /// <summary>
@@ -215,6 +215,32 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     Debug.Assert(false);
                     break;
             }
+        }
+
+        [DebuggerDisplay("{PropertyName,nq}")]
+        private class LeafAccessor : AttributeMetadata
+        {
+            private readonly OpenXmlLeafTextElement _element;
+
+            public LeafAccessor(OpenXmlLeafTextElement element)
+            {
+                _element = element;
+                Value = element.InnerTextToValue(element.Text);
+            }
+
+            public OpenXmlSimpleType Value { get; }
+
+            public override string PropertyName => "Value";
+
+            public override string Name => _element.LocalName;
+
+            public override byte NamespaceId => _element.NamespaceId;
+
+            public override ValidatorCollection Validators => _element.ParsedState.Metadata.Validators;
+
+            public override Type Type => Value.GetType();
+
+            public override OpenXmlSimpleType CreateNew() => throw new NotImplementedException();
         }
     }
 }

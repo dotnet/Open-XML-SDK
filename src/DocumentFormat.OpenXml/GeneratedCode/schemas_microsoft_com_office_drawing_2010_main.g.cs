@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -18,8 +19,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:cameraTool.</para>
     /// </summary>
-    [SchemaAttr(48, "cameraTool")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CameraTool : OpenXmlLeafElement
     {
         /// <summary>
@@ -33,17 +32,31 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>cellRange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cellRange</para>
         /// </summary>
-        [SchemaAttr(0, "cellRange")]
-        [Index(0)]
-        public StringValue CellRange { get; set; }
+        public StringValue CellRange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [SchemaAttr(0, "spid")]
-        [Index(1)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "cameraTool");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<CameraTool>()
+.AddAttribute(0, "cellRange", a => a.CellRange)
+.AddAttribute(0, "spid", a => a.ShapeId);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(1 /*:spid*/, @"_x0000_s(102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[1-9][0-9]{3,7}|1[0-9]{8}|2[0-5][0-9]{7}|26[0-7][0-9]{6}|268[0-3][0-9]{5}|2684[0-2][0-9]{4}|26843[0-4][0-9]{3}|268435[0-3][0-9]{2}|2684354[0-4][0-9]|26843545[0-6])") { Version = FileFormatVersions.Office2010 }
@@ -60,8 +73,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:compatExt.</para>
     /// </summary>
-    [SchemaAttr(48, "compatExt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CompatExtension : OpenXmlLeafElement
     {
         /// <summary>
@@ -75,9 +86,20 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "compatExt");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<CompatExtension>()
+.AddAttribute(0, "spid", a => a.ShapeId);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*:spid*/, @"_x0000_s(102[5-9]|10[3-9][0-9]|1[1-9][0-9]{2}|[1-9][0-9]{3,7}|1[0-9]{8}|2[0-5][0-9]{7}|26[0-7][0-9]{6}|268[0-3][0-9]{5}|2684[0-2][0-9]{4}|26843[0-4][0-9]{3}|268435[0-3][0-9]{2}|2684354[0-4][0-9]|26843545[0-6])") { Version = FileFormatVersions.Office2010 }
@@ -94,8 +116,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:isCanvas.</para>
     /// </summary>
-    [SchemaAttr(48, "isCanvas")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class IsCanvas : OpenXmlLeafElement
     {
         /// <summary>
@@ -109,10 +129,23 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "isCanvas");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<IsCanvas>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IsCanvas>(deep);
@@ -131,11 +164,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>OfficeArtExtensionList &lt;a14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualContentPartProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Transform2D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(48, "contentPart")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GvmlContentPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -173,10 +201,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
@@ -185,10 +214,30 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(1)]
-        public StringValue RelationshipId { get; set; }
+        public StringValue RelationshipId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "contentPart");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<NonVisualContentPartProperties>();
+            builder.AddChild<Transform2D>();
+            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddElement<GvmlContentPart>()
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <summary>
         /// <para>NonVisualContentPartProperties.</para>
@@ -247,8 +296,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:shadowObscured.</para>
     /// </summary>
-    [SchemaAttr(48, "shadowObscured")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ShadowObscured : OpenXmlLeafElement
     {
         /// <summary>
@@ -262,9 +309,20 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "shadowObscured");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ShadowObscured>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShadowObscured>(deep);
@@ -286,14 +344,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>DocumentFormat.OpenXml.Drawing.GroupFill &lt;a:grpFill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [SchemaAttr(48, "hiddenFill")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class HiddenFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -325,6 +375,19 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public HiddenFillProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "hiddenFill");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
         }
 
         /// <summary>
@@ -449,20 +512,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetDash))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomDash))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Round))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Miter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.TailEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(48, "hiddenLine")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class HiddenLineProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -500,37 +549,77 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Line Width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 20116800L)]
-        [SchemaAttr(0, "w")]
-        [Index(0)]
-        public Int32Value Width { get; set; }
+        public Int32Value Width
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Ending Cap Type</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "cap")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Compound Line Type</para>
         /// <para>Represents the following attribute in the schema: cmpd</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "cmpd")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "algn")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "hiddenLine");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetDash>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomDash>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Round>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineJoinBevel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Miter>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HeadEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TailEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddElement<HiddenLineProperties>()
+.AddAttribute(0, "w", a => a.Width, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (20116800L) });
+})
+.AddAttribute(0, "cap", a => a.CapType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "cmpd", a => a.CompoundLineType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "algn", a => a.Alignment, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -584,10 +673,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [SchemaAttr(48, "hiddenEffects")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class HiddenEffectsProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -619,6 +704,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public HiddenEffectsProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "hiddenEffects");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
         }
 
         /// <summary>
@@ -679,12 +773,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Camera))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LightRig))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Backdrop))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(48, "hiddenScene3d")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class HiddenScene3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -716,6 +804,17 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public HiddenScene3D(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "hiddenScene3d");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Camera>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LightRig>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Backdrop>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
 
         /// <summary>
@@ -799,13 +898,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BevelTop))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BevelBottom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtrusionColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ContourColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(48, "hiddenSp3d")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class HiddenShape3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -843,37 +935,70 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Shape Depth</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "z")]
-        [Index(0)]
-        public Int64Value Z { get; set; }
+        public Int64Value Z
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Height</para>
         /// <para>Represents the following attribute in the schema: extrusionH</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "extrusionH")]
-        [Index(1)]
-        public Int64Value ExtrusionHeight { get; set; }
+        public Int64Value ExtrusionHeight
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contour Width</para>
         /// <para>Represents the following attribute in the schema: contourW</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "contourW")]
-        [Index(2)]
-        public Int64Value ContourWidth { get; set; }
+        public Int64Value ContourWidth
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Preset Material Type</para>
         /// <para>Represents the following attribute in the schema: prstMaterial</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "prstMaterial")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "hiddenSp3d");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelTop>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelBottom>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ContourColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddElement<HiddenShape3D>()
+.AddAttribute(0, "z", a => a.Z, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "extrusionH", a => a.ExtrusionHeight, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "contourW", a => a.ContourWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "prstMaterial", a => a.PresetMaterial, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>Top Bevel.</para>
@@ -966,9 +1091,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>ImageLayer &lt;a14:imgLayer></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ImageLayer), FileFormatVersions.Office2010)]
-    [SchemaAttr(48, "imgProps")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ImageProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1002,6 +1124,14 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "imgProps");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<ImageLayer>();
+        }
+
         /// <summary>
         /// <para>ImageLayer.</para>
         /// <para>Represents the following element tag in the schema: a14:imgLayer.</para>
@@ -1031,8 +1161,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:useLocalDpi.</para>
     /// </summary>
-    [SchemaAttr(48, "useLocalDpi")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class UseLocalDpi : OpenXmlLeafElement
     {
         /// <summary>
@@ -1046,9 +1174,20 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "useLocalDpi");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<UseLocalDpi>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseLocalDpi>(deep);
@@ -1059,8 +1198,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:m.</para>
     /// </summary>
-    [SchemaAttr(48, "m")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TextMath : OpenXmlLeafElement
     {
         /// <summary>
@@ -1068,6 +1205,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// </summary>
         public TextMath() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "m");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1085,9 +1229,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(48, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1121,6 +1262,14 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "extLst");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -1149,9 +1298,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>OfficeArtExtensionList &lt;a14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(48, "cpLocks")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ContentPartLocks : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1189,81 +1335,120 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Disallow Shape Grouping</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
-        [SchemaAttr(0, "noGrp")]
-        [Index(0)]
-        public BooleanValue NoGrouping { get; set; }
+        public BooleanValue NoGrouping
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Selection</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
-        [SchemaAttr(0, "noSelect")]
-        [Index(1)]
-        public BooleanValue NoSelection { get; set; }
+        public BooleanValue NoSelection
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Rotation</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
-        [SchemaAttr(0, "noRot")]
-        [Index(2)]
-        public BooleanValue NoRotation { get; set; }
+        public BooleanValue NoRotation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Aspect Ratio Change</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
-        [SchemaAttr(0, "noChangeAspect")]
-        [Index(3)]
-        public BooleanValue NoChangeAspect { get; set; }
+        public BooleanValue NoChangeAspect
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Movement</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
-        [SchemaAttr(0, "noMove")]
-        [Index(4)]
-        public BooleanValue NoMove { get; set; }
+        public BooleanValue NoMove
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Resize</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
-        [SchemaAttr(0, "noResize")]
-        [Index(5)]
-        public BooleanValue NoResize { get; set; }
+        public BooleanValue NoResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Point Editing</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
-        [SchemaAttr(0, "noEditPoints")]
-        [Index(6)]
-        public BooleanValue NoEditPoints { get; set; }
+        public BooleanValue NoEditPoints
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Showing Adjust Handles</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
-        [SchemaAttr(0, "noAdjustHandles")]
-        [Index(7)]
-        public BooleanValue NoAdjustHandles { get; set; }
+        public BooleanValue NoAdjustHandles
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Arrowhead Changes</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
-        [SchemaAttr(0, "noChangeArrowheads")]
-        [Index(8)]
-        public BooleanValue NoChangeArrowheads { get; set; }
+        public BooleanValue NoChangeArrowheads
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Disallow Shape Type Change</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
-        [SchemaAttr(0, "noChangeShapeType")]
-        [Index(9)]
-        public BooleanValue NoChangeShapeType { get; set; }
+        public BooleanValue NoChangeShapeType
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "cpLocks");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddElement<ContentPartLocks>()
+.AddAttribute(0, "noGrp", a => a.NoGrouping)
+.AddAttribute(0, "noSelect", a => a.NoSelection)
+.AddAttribute(0, "noRot", a => a.NoRotation)
+.AddAttribute(0, "noChangeAspect", a => a.NoChangeAspect)
+.AddAttribute(0, "noMove", a => a.NoMove)
+.AddAttribute(0, "noResize", a => a.NoResize)
+.AddAttribute(0, "noEditPoints", a => a.NoEditPoints)
+.AddAttribute(0, "noAdjustHandles", a => a.NoAdjustHandles)
+.AddAttribute(0, "noChangeArrowheads", a => a.NoChangeArrowheads)
+.AddAttribute(0, "noChangeShapeType", a => a.NoChangeShapeType);
+        }
 
         /// <summary>
         /// <para>OfficeArtExtensionList.</para>
@@ -1294,8 +1479,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:foregroundMark.</para>
     /// </summary>
-    [SchemaAttr(48, "foregroundMark")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ForegroundMark : OpenXmlLeafElement
     {
         /// <summary>
@@ -1309,41 +1492,69 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>x1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "x1")]
-        [Index(0)]
-        public Int32Value FirstXCoordinate { get; set; }
+        public Int32Value FirstXCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>y1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "y1")]
-        [Index(1)]
-        public Int32Value FirstYCoordinate { get; set; }
+        public Int32Value FirstYCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>x2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "x2")]
-        [Index(2)]
-        public Int32Value SecondXCoordinate { get; set; }
+        public Int32Value SecondXCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>y2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "y2")]
-        [Index(3)]
-        public Int32Value SecondYCoordinate { get; set; }
+        public Int32Value SecondYCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "foregroundMark");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ForegroundMark>()
+.AddAttribute(0, "x1", a => a.FirstXCoordinate, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "y1", a => a.FirstYCoordinate, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "x2", a => a.SecondXCoordinate, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "y2", a => a.SecondYCoordinate, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForegroundMark>(deep);
@@ -1354,8 +1565,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:backgroundMark.</para>
     /// </summary>
-    [SchemaAttr(48, "backgroundMark")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackgroundMark : OpenXmlLeafElement
     {
         /// <summary>
@@ -1369,41 +1578,69 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>x1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "x1")]
-        [Index(0)]
-        public Int32Value FirstXCoordinate { get; set; }
+        public Int32Value FirstXCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>y1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "y1")]
-        [Index(1)]
-        public Int32Value FirstYCoordinate { get; set; }
+        public Int32Value FirstYCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>x2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "x2")]
-        [Index(2)]
-        public Int32Value SecondXCoordinate { get; set; }
+        public Int32Value SecondXCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>y2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "y2")]
-        [Index(3)]
-        public Int32Value SecondYCoordinate { get; set; }
+        public Int32Value SecondYCoordinate
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "backgroundMark");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<BackgroundMark>()
+.AddAttribute(0, "x1", a => a.FirstXCoordinate, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "y1", a => a.FirstYCoordinate, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "x2", a => a.SecondXCoordinate, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "y2", a => a.SecondYCoordinate, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundMark>(deep);
@@ -1414,8 +1651,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticBlur.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticBlur")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticBlur : OpenXmlLeafElement
     {
         /// <summary>
@@ -1429,10 +1664,23 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>radius, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: radius</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "radius")]
-        [Index(0)]
-        public Int32Value Radius { get; set; }
+        public Int32Value Radius
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticBlur");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticBlur>()
+.AddAttribute(0, "radius", a => a.Radius, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticBlur>(deep);
@@ -1443,8 +1691,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticCement.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticCement")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticCement : OpenXmlLeafElement
     {
         /// <summary>
@@ -1458,19 +1704,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>crackSpacing, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: crackSpacing</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "crackSpacing")]
-        [Index(1)]
-        public Int32Value CrackSpacing { get; set; }
+        public Int32Value CrackSpacing
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticCement");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticCement>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "crackSpacing", a => a.CrackSpacing, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticCement>(deep);
@@ -1481,8 +1745,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticChalkSketch.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticChalkSketch")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticChalkSketch : OpenXmlLeafElement
     {
         /// <summary>
@@ -1496,19 +1758,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 4L)]
-        [SchemaAttr(0, "pressure")]
-        [Index(1)]
-        public Int32Value Pressure { get; set; }
+        public Int32Value Pressure
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticChalkSketch");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticChalkSketch>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (4L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticChalkSketch>(deep);
@@ -1519,8 +1799,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticCrisscrossEtching.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticCrisscrossEtching")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticCrisscrossEtching : OpenXmlLeafElement
     {
         /// <summary>
@@ -1534,19 +1812,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "pressure")]
-        [Index(1)]
-        public Int32Value Pressure { get; set; }
+        public Int32Value Pressure
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticCrisscrossEtching");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticCrisscrossEtching>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticCrisscrossEtching>(deep);
@@ -1557,8 +1853,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticCutout.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticCutout")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticCutout : OpenXmlLeafElement
     {
         /// <summary>
@@ -1572,19 +1866,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>numberOfShades, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: numberOfShades</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 6L)]
-        [SchemaAttr(0, "numberOfShades")]
-        [Index(1)]
-        public Int32Value NumberOfShades { get; set; }
+        public Int32Value NumberOfShades
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticCutout");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticCutout>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "numberOfShades", a => a.NumberOfShades, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (6L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticCutout>(deep);
@@ -1595,8 +1907,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticFilmGrain.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticFilmGrain")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticFilmGrain : OpenXmlLeafElement
     {
         /// <summary>
@@ -1610,19 +1920,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>grainSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: grainSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "grainSize")]
-        [Index(1)]
-        public Int32Value GrainSize { get; set; }
+        public Int32Value GrainSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticFilmGrain");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticFilmGrain>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "grainSize", a => a.GrainSize, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticFilmGrain>(deep);
@@ -1633,8 +1961,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticGlass.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticGlass")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticGlass : OpenXmlLeafElement
     {
         /// <summary>
@@ -1648,19 +1974,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "scaling")]
-        [Index(1)]
-        public Int32Value Scaling { get; set; }
+        public Int32Value Scaling
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticGlass");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticGlass>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "scaling", a => a.Scaling, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticGlass>(deep);
@@ -1671,8 +2015,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticGlowDiffused.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticGlowDiffused")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticGlowDiffused : OpenXmlLeafElement
     {
         /// <summary>
@@ -1686,19 +2028,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>intensity, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "intensity")]
-        [Index(1)]
-        public Int32Value Intensity { get; set; }
+        public Int32Value Intensity
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticGlowDiffused");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticGlowDiffused>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "intensity", a => a.Intensity, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticGlowDiffused>(deep);
@@ -1709,8 +2069,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticGlowEdges.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticGlowEdges")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticGlowEdges : OpenXmlLeafElement
     {
         /// <summary>
@@ -1724,19 +2082,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>smoothness, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "smoothness")]
-        [Index(1)]
-        public Int32Value Smoothness { get; set; }
+        public Int32Value Smoothness
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticGlowEdges");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticGlowEdges>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "smoothness", a => a.Smoothness, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticGlowEdges>(deep);
@@ -1747,8 +2123,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticLightScreen.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticLightScreen")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticLightScreen : OpenXmlLeafElement
     {
         /// <summary>
@@ -1762,19 +2136,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>gridSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: gridSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "gridSize")]
-        [Index(1)]
-        public Int32Value GridSize { get; set; }
+        public Int32Value GridSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticLightScreen");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticLightScreen>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "gridSize", a => a.GridSize, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticLightScreen>(deep);
@@ -1785,8 +2177,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticLineDrawing.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticLineDrawing")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticLineDrawing : OpenXmlLeafElement
     {
         /// <summary>
@@ -1800,19 +2190,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pencilSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "pencilSize")]
-        [Index(1)]
-        public Int32Value PencilSize { get; set; }
+        public Int32Value PencilSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticLineDrawing");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticLineDrawing>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "pencilSize", a => a.PencilSize, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticLineDrawing>(deep);
@@ -1823,8 +2231,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticMarker.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticMarker")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticMarker : OpenXmlLeafElement
     {
         /// <summary>
@@ -1838,19 +2244,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "size")]
-        [Index(1)]
-        public Int32Value Size { get; set; }
+        public Int32Value Size
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticMarker");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticMarker>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "size", a => a.Size, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticMarker>(deep);
@@ -1861,8 +2285,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticMosiaicBubbles.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticMosiaicBubbles")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticMosaicBubbles : OpenXmlLeafElement
     {
         /// <summary>
@@ -1876,19 +2298,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "pressure")]
-        [Index(1)]
-        public Int32Value Pressure { get; set; }
+        public Int32Value Pressure
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticMosiaicBubbles");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticMosaicBubbles>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticMosaicBubbles>(deep);
@@ -1899,8 +2339,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPaintStrokes.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticPaintStrokes")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticPaintStrokes : OpenXmlLeafElement
     {
         /// <summary>
@@ -1914,19 +2352,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>intensity, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "intensity")]
-        [Index(1)]
-        public Int32Value Intensity { get; set; }
+        public Int32Value Intensity
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticPaintStrokes");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticPaintStrokes>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "intensity", a => a.Intensity, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPaintStrokes>(deep);
@@ -1937,8 +2393,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPaintBrush.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticPaintBrush")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticPaintBrush : OpenXmlLeafElement
     {
         /// <summary>
@@ -1952,19 +2406,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>brushSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "brushSize")]
-        [Index(1)]
-        public Int32Value BrushSize { get; set; }
+        public Int32Value BrushSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticPaintBrush");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticPaintBrush>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "brushSize", a => a.BrushSize, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPaintBrush>(deep);
@@ -1975,8 +2447,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPastelsSmooth.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticPastelsSmooth")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticPastelsSmooth : OpenXmlLeafElement
     {
         /// <summary>
@@ -1990,19 +2460,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "scaling")]
-        [Index(1)]
-        public Int32Value BrushSize { get; set; }
+        public Int32Value BrushSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticPastelsSmooth");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticPastelsSmooth>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "scaling", a => a.BrushSize, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPastelsSmooth>(deep);
@@ -2013,8 +2501,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPencilGrayscale.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticPencilGrayscale")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticPencilGrayscale : OpenXmlLeafElement
     {
         /// <summary>
@@ -2028,19 +2514,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pencilSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "pencilSize")]
-        [Index(1)]
-        public Int32Value BrushSize { get; set; }
+        public Int32Value BrushSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticPencilGrayscale");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticPencilGrayscale>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "pencilSize", a => a.BrushSize, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPencilGrayscale>(deep);
@@ -2051,8 +2555,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPencilSketch.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticPencilSketch")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticPencilSketch : OpenXmlLeafElement
     {
         /// <summary>
@@ -2066,19 +2568,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "pressure")]
-        [Index(1)]
-        public Int32Value Pressure { get; set; }
+        public Int32Value Pressure
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticPencilSketch");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticPencilSketch>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPencilSketch>(deep);
@@ -2089,8 +2609,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPhotocopy.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticPhotocopy")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticPhotocopy : OpenXmlLeafElement
     {
         /// <summary>
@@ -2104,19 +2622,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>detail, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: detail</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "detail")]
-        [Index(1)]
-        public Int32Value Detail { get; set; }
+        public Int32Value Detail
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticPhotocopy");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticPhotocopy>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "detail", a => a.Detail, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPhotocopy>(deep);
@@ -2127,8 +2663,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPlasticWrap.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticPlasticWrap")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticPlasticWrap : OpenXmlLeafElement
     {
         /// <summary>
@@ -2142,19 +2676,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>smoothness, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "smoothness")]
-        [Index(1)]
-        public Int32Value Smoothness { get; set; }
+        public Int32Value Smoothness
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticPlasticWrap");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticPlasticWrap>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "smoothness", a => a.Smoothness, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticPlasticWrap>(deep);
@@ -2165,8 +2717,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticTexturizer.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticTexturizer")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticTexturizer : OpenXmlLeafElement
     {
         /// <summary>
@@ -2180,19 +2730,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "scaling")]
-        [Index(1)]
-        public Int32Value Scaling { get; set; }
+        public Int32Value Scaling
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticTexturizer");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticTexturizer>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "scaling", a => a.Scaling, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticTexturizer>(deep);
@@ -2203,8 +2771,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticWatercolorSponge.</para>
     /// </summary>
-    [SchemaAttr(48, "artisticWatercolorSponge")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ArtisticWatercolorSponge : OpenXmlLeafElement
     {
         /// <summary>
@@ -2218,19 +2784,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "trans")]
-        [Index(0)]
-        public Int32Value Transparancy { get; set; }
+        public Int32Value Transparancy
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>brushSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 10L)]
-        [SchemaAttr(0, "brushSize")]
-        [Index(1)]
-        public Int32Value BrushSize { get; set; }
+        public Int32Value BrushSize
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "artisticWatercolorSponge");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ArtisticWatercolorSponge>()
+.AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "brushSize", a => a.BrushSize, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArtisticWatercolorSponge>(deep);
@@ -2248,10 +2832,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>BackgroundMark &lt;a14:backgroundMark></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ForegroundMark), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackgroundMark), FileFormatVersions.Office2010)]
-    [SchemaAttr(48, "backgroundRemoval")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BackgroundRemoval : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2289,41 +2869,71 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>t, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "t")]
-        [Index(0)]
-        public Int32Value MarqueeTop { get; set; }
+        public Int32Value MarqueeTop
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>b, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "b")]
-        [Index(1)]
-        public Int32Value MarqueeBottom { get; set; }
+        public Int32Value MarqueeBottom
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>l, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "l")]
-        [Index(2)]
-        public Int32Value MarqueeLeft { get; set; }
+        public Int32Value MarqueeLeft
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>r, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "r")]
-        [Index(3)]
-        public Int32Value MarqueeRight { get; set; }
+        public Int32Value MarqueeRight
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "backgroundRemoval");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<ForegroundMark>();
+            builder.AddChild<BackgroundMark>();
+            builder.AddElement<BackgroundRemoval>()
+.AddAttribute(0, "t", a => a.MarqueeTop, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "b", a => a.MarqueeBottom, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "l", a => a.MarqueeLeft, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "r", a => a.MarqueeRight, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2342,8 +2952,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:brightnessContrast.</para>
     /// </summary>
-    [SchemaAttr(48, "brightnessContrast")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BrightnessContrast : OpenXmlLeafElement
     {
         /// <summary>
@@ -2357,19 +2965,37 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>bright, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bright</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "bright")]
-        [Index(0)]
-        public Int32Value Bright { get; set; }
+        public Int32Value Bright
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contrast, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: contrast</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "contrast")]
-        [Index(1)]
-        public Int32Value Contrast { get; set; }
+        public Int32Value Contrast
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "brightnessContrast");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<BrightnessContrast>()
+.AddAttribute(0, "bright", a => a.Bright, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+})
+.AddAttribute(0, "contrast", a => a.Contrast, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BrightnessContrast>(deep);
@@ -2380,8 +3006,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:colorTemperature.</para>
     /// </summary>
-    [SchemaAttr(48, "colorTemperature")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ColorTemperature : OpenXmlLeafElement
     {
         /// <summary>
@@ -2395,10 +3019,23 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>colorTemp, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: colorTemp</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1500L, MaxInclusive = 11500L)]
-        [SchemaAttr(0, "colorTemp")]
-        [Index(0)]
-        public Int32Value ColorTemperatureValue { get; set; }
+        public Int32Value ColorTemperatureValue
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "colorTemperature");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ColorTemperature>()
+.AddAttribute(0, "colorTemp", a => a.ColorTemperatureValue, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1500L), MaxInclusive = (11500L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTemperature>(deep);
@@ -2409,8 +3046,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:saturation.</para>
     /// </summary>
-    [SchemaAttr(48, "saturation")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Saturation : OpenXmlLeafElement
     {
         /// <summary>
@@ -2424,10 +3059,23 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>sat, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sat</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 400000L)]
-        [SchemaAttr(0, "sat")]
-        [Index(0)]
-        public Int32Value SaturationAmount { get; set; }
+        public Int32Value SaturationAmount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "saturation");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<Saturation>()
+.AddAttribute(0, "sat", a => a.SaturationAmount, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (400000L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Saturation>(deep);
@@ -2438,8 +3086,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:sharpenSoften.</para>
     /// </summary>
-    [SchemaAttr(48, "sharpenSoften")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SharpenSoften : OpenXmlLeafElement
     {
         /// <summary>
@@ -2453,10 +3099,23 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>amount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: amount</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -100000L, MaxInclusive = 100000L)]
-        [SchemaAttr(0, "amount")]
-        [Index(0)]
-        public Int32Value Amount { get; set; }
+        public Int32Value Amount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "sharpenSoften");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<SharpenSoften>()
+.AddAttribute(0, "amount", a => a.Amount, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharpenSoften>(deep);
@@ -2499,35 +3158,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>SharpenSoften &lt;a14:sharpenSoften></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ArtisticBlur), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticCement), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticChalkSketch), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticCrisscrossEtching), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticCutout), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticFilmGrain), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticGlass), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticGlowDiffused), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticGlowEdges), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticLightScreen), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticLineDrawing), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticMarker), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticMosaicBubbles), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticPaintStrokes), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticPaintBrush), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticPastelsSmooth), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticPencilGrayscale), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticPencilSketch), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticPhotocopy), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticPlasticWrap), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticTexturizer), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ArtisticWatercolorSponge), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackgroundRemoval), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BrightnessContrast), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ColorTemperature), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Saturation), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SharpenSoften), FileFormatVersions.Office2010)]
-    [SchemaAttr(48, "imgEffect")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ImageEffect : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2565,9 +3195,47 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        [SchemaAttr(0, "visible")]
-        [Index(0)]
-        public BooleanValue Visible { get; set; }
+        public BooleanValue Visible
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "imgEffect");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<ArtisticBlur>();
+            builder.AddChild<ArtisticCement>();
+            builder.AddChild<ArtisticChalkSketch>();
+            builder.AddChild<ArtisticCrisscrossEtching>();
+            builder.AddChild<ArtisticCutout>();
+            builder.AddChild<ArtisticFilmGrain>();
+            builder.AddChild<ArtisticGlass>();
+            builder.AddChild<ArtisticGlowDiffused>();
+            builder.AddChild<ArtisticGlowEdges>();
+            builder.AddChild<ArtisticLightScreen>();
+            builder.AddChild<ArtisticLineDrawing>();
+            builder.AddChild<ArtisticMarker>();
+            builder.AddChild<ArtisticMosaicBubbles>();
+            builder.AddChild<ArtisticPaintStrokes>();
+            builder.AddChild<ArtisticPaintBrush>();
+            builder.AddChild<ArtisticPastelsSmooth>();
+            builder.AddChild<ArtisticPencilGrayscale>();
+            builder.AddChild<ArtisticPencilSketch>();
+            builder.AddChild<ArtisticPhotocopy>();
+            builder.AddChild<ArtisticPlasticWrap>();
+            builder.AddChild<ArtisticTexturizer>();
+            builder.AddChild<ArtisticWatercolorSponge>();
+            builder.AddChild<BackgroundRemoval>();
+            builder.AddChild<BrightnessContrast>();
+            builder.AddChild<ColorTemperature>();
+            builder.AddChild<Saturation>();
+            builder.AddChild<SharpenSoften>();
+            builder.AddElement<ImageEffect>()
+.AddAttribute(0, "visible", a => a.Visible);
+        }
 
         /// <summary>
         /// <para>ArtisticBlur.</para>
@@ -2968,9 +3636,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>ImageEffect &lt;a14:imgEffect></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ImageEffect), FileFormatVersions.Office2010)]
-    [SchemaAttr(48, "imgLayer")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ImageLayer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3011,9 +3676,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "embed")]
-        [Index(0)]
-        public StringValue Embed { get; set; }
+        public StringValue Embed
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "imgLayer");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<ImageEffect>();
+            builder.AddElement<ImageLayer>()
+.AddAttribute(19, "embed", a => a.Embed);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3039,11 +3716,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(48, "cNvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3081,43 +3753,73 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr(0, "descr")]
-        [Index(2)]
-        public StringValue Description { get; set; }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr(0, "hidden")]
-        [Index(3)]
-        public BooleanValue Hidden { get; set; }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(4)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "cNvPr");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddElement<NonVisualDrawingProperties>()
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "descr", a => a.Description)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "title", a => a.Title);
+        }
 
         /// <summary>
         /// <para>HyperlinkOnClick.</para>
@@ -3183,10 +3885,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>OfficeArtExtensionList &lt;a14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ContentPartLocks), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(48, "cNvContentPartPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3224,9 +3922,22 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        [SchemaAttr(0, "isComment")]
-        [Index(0)]
-        public BooleanValue IsComment { get; set; }
+        public BooleanValue IsComment
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "cNvContentPartPr");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<ContentPartLocks>();
+            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddElement<NonVisualInkContentPartProperties>()
+.AddAttribute(0, "isComment", a => a.IsComment);
+        }
 
         /// <summary>
         /// <para>ContentPartLocks.</para>
@@ -3278,10 +3989,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>NonVisualInkContentPartProperties &lt;a14:cNvContentPartPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NonVisualInkContentPartProperties), FileFormatVersions.Office2010)]
-    [SchemaAttr(48, "nvContentPartPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3313,6 +4020,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualContentPartProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "nvContentPartPr");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualInkContentPartProperties>();
         }
 
         /// <summary>
@@ -3365,10 +4081,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-    [SchemaAttr(48, "xfrm")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3406,25 +4118,44 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr(0, "rot")]
-        [Index(0)]
-        public Int32Value Rotation { get; set; }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr(0, "flipH")]
-        [Index(1)]
-        public BooleanValue HorizontalFlip { get; set; }
+        public BooleanValue HorizontalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr(0, "flipV")]
-        [Index(2)]
-        public BooleanValue VerticalFlip { get; set; }
+        public BooleanValue VerticalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(48, "xfrm");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddElement<Transform2D>()
+.AddAttribute(0, "rot", a => a.Rotation)
+.AddAttribute(0, "flipH", a => a.HorizontalFlip)
+.AddAttribute(0, "flipV", a => a.VerticalFlip);
+        }
 
         /// <summary>
         /// <para>Offset.</para>

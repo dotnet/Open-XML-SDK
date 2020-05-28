@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
@@ -10,9 +11,6 @@ namespace DocumentFormat.OpenXml
     /// Represents the mc:AlternateContent element of markup
     /// compatibility.
     /// </summary>
-    [SchemaAttr(Namespace, Name)]
-    [ChildElementInfo(typeof(AlternateContentChoice))]
-    [ChildElementInfo(typeof(AlternateContentFallback))]
     public class AlternateContent : OpenXmlCompositeElement
     {
         internal const string Namespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
@@ -125,6 +123,16 @@ namespace DocumentFormat.OpenXml
         public override OpenXmlElement CloneNode(bool deep)
         {
             return CloneImp<AlternateContent>(deep);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+
+            builder.SetSchema(Namespace, Name);
+
+            builder.AddChild<AlternateContentChoice>();
+            builder.AddChild<AlternateContentFallback>();
         }
     }
 }

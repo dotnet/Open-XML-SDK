@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -769,7 +770,7 @@ namespace DocumentFormat.OpenXml
             }
 
             if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)
-                && PackageCache.Cache.ParseElementData(typeof(OpenXmlPartRootElement)).Children.Create(nsId, name) is OpenXmlElement element)
+                && ElementLookup.Parts.Create(nsId, name) is OpenXmlElement element)
             {
                 return element;
             }

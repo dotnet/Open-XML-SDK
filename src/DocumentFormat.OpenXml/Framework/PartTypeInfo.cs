@@ -6,9 +6,9 @@ using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal sealed class ElementTypeInfo
+    internal sealed class PartTypeInfo
     {
-        public ElementTypeInfo(Type type)
+        public PartTypeInfo(Type type)
         {
 #pragma warning disable CS0618 // Type or member is obsolete
             PartClassName = type.Name;
@@ -16,22 +16,16 @@ namespace DocumentFormat.OpenXml.Framework
             PartContentType = type.GetTypeInfo().GetCustomAttribute<ContentTypeAttribute>()?.ContentType;
             Availability = type.GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
             RelationshipType = type.GetTypeInfo().GetCustomAttribute<RelationshipTypeAttribute>()?.RelationshipType ?? string.Empty;
-            Validators = new ValidatorCollection(type);
-            Schema = type.GetTypeInfo().GetCustomAttribute<SchemaAttrAttribute>();
         }
 
-        public static ElementTypeInfo Create(Type type) => new ElementTypeInfo(type);
+        public static PartTypeInfo Create(Type type) => new PartTypeInfo(type);
 
         public string RelationshipType { get; }
-
-        public ValidatorCollection Validators { get; }
 
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
         public string PartClassName { get; }
 
         public string PartContentType { get; }
-
-        public SchemaAttrAttribute Schema { get; }
 
         public FileFormatVersions Availability { get; }
     }

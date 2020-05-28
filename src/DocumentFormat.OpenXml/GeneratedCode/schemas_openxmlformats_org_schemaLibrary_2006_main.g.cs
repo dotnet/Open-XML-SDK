@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -23,9 +24,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     ///   <item><description>Schema &lt;sl:schema></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Schema))]
-    [SchemaAttr(25, "schemaLibrary")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SchemaLibrary : OpenXmlCompositeElement
     {
         /// <summary>
@@ -59,6 +57,13 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(25, "schemaLibrary");
+            builder.AddChild<Schema>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema), 0, 0)
@@ -75,8 +80,6 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schema.</para>
     /// </summary>
-    [SchemaAttr(25, "schema")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Schema : OpenXmlLeafElement
     {
         /// <summary>
@@ -93,9 +96,11 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        [SchemaAttr(25, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Resource File Location</para>
@@ -104,9 +109,11 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        [SchemaAttr(25, "manifestLocation")]
-        [Index(1)]
-        public StringValue ManifestLocation { get; set; }
+        public StringValue ManifestLocation
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom XML Schema Location</para>
@@ -115,9 +122,21 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        [SchemaAttr(25, "schemaLocation")]
-        [Index(2)]
-        public StringValue SchemaLocation { get; set; }
+        public StringValue SchemaLocation
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(25, "schema");
+            builder.AddElement<Schema>()
+.AddAttribute(25, "uri", a => a.Uri)
+.AddAttribute(25, "manifestLocation", a => a.ManifestLocation)
+.AddAttribute(25, "schemaLocation", a => a.SchemaLocation);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(1 /*sl:manifestLocation*/, 0, 2083) { Application = ApplicationType.Word },

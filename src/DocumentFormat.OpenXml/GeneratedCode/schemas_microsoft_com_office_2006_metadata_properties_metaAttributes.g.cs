@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -16,8 +17,6 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ma:DummyContentTypeElement.</para>
     /// </summary>
-    [SchemaAttr(41, "DummyContentTypeElement")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Dummy : OpenXmlLeafElement
     {
         /// <summary>
@@ -31,139 +30,201 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         /// <para>decimals</para>
         /// <para>Represents the following attribute in the schema: decimals</para>
         /// </summary>
-        [SchemaAttr(0, "decimals")]
-        [Index(0)]
-        public StringValue Decimals { get; set; }
+        public StringValue Decimals
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>default</para>
         /// <para>Represents the following attribute in the schema: default</para>
         /// </summary>
-        [SchemaAttr(0, "default")]
-        [Index(1)]
-        public StringValue Default { get; set; }
+        public StringValue Default
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr(0, "description")]
-        [Index(2)]
-        public StringValue Description { get; set; }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>displayName</para>
         /// <para>Represents the following attribute in the schema: displayName</para>
         /// </summary>
-        [SchemaAttr(0, "displayName")]
-        [Index(3)]
-        public StringValue DisplayName { get; set; }
+        public StringValue DisplayName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fieldsID</para>
         /// <para>Represents the following attribute in the schema: fieldsID</para>
         /// </summary>
-        [SchemaAttr(0, "fieldsID")]
-        [Index(4)]
-        public StringValue FieldsID { get; set; }
+        public StringValue FieldsID
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>format</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        [SchemaAttr(0, "format")]
-        [Index(5)]
-        public StringValue Format { get; set; }
+        public StringValue Format
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr(0, "hidden")]
-        [Index(6)]
-        public StringValue Hidden { get; set; }
+        public StringValue Hidden
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>index</para>
         /// <para>Represents the following attribute in the schema: index</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(0, "index")]
-        [Index(7)]
-        public Int32Value Index { get; set; }
+        public Int32Value Index
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>internalName</para>
         /// <para>Represents the following attribute in the schema: internalName</para>
         /// </summary>
-        [SchemaAttr(0, "internalName")]
-        [Index(8)]
-        public StringValue InternalName { get; set; }
+        public StringValue InternalName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>LCID</para>
         /// <para>Represents the following attribute in the schema: LCID</para>
         /// </summary>
-        [SchemaAttr(0, "LCID")]
-        [Index(9)]
-        public Int32Value LCID { get; set; }
+        public Int32Value LCID
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>list</para>
         /// <para>Represents the following attribute in the schema: list</para>
         /// </summary>
-        [SchemaAttr(0, "list")]
-        [Index(10)]
-        public StringValue List { get; set; }
+        public StringValue List
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>percentage</para>
         /// <para>Represents the following attribute in the schema: percentage</para>
         /// </summary>
-        [SchemaAttr(0, "percentage")]
-        [Index(11)]
-        public StringValue Percentage { get; set; }
+        public StringValue Percentage
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>readOnly</para>
         /// <para>Represents the following attribute in the schema: readOnly</para>
         /// </summary>
-        [SchemaAttr(0, "readOnly")]
-        [Index(12)]
-        public StringValue ReadOnly { get; set; }
+        public StringValue ReadOnly
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>requiredMultiChoice</para>
         /// <para>Represents the following attribute in the schema: requiredMultiChoice</para>
         /// </summary>
-        [SchemaAttr(0, "requiredMultiChoice")]
-        [Index(13)]
-        public StringValue RequiredMultiChoice { get; set; }
+        public StringValue RequiredMultiChoice
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>root</para>
         /// <para>Represents the following attribute in the schema: root</para>
         /// </summary>
-        [SchemaAttr(0, "root")]
-        [Index(14)]
-        public EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues> Root { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues> Root
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showField</para>
         /// <para>Represents the following attribute in the schema: showField</para>
         /// </summary>
-        [SchemaAttr(0, "showField")]
-        [Index(15)]
-        public StringValue ShowField { get; set; }
+        public StringValue ShowField
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>web</para>
         /// <para>Represents the following attribute in the schema: web</para>
         /// </summary>
-        [StringValidator(Pattern = "[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}")]
-        [SchemaAttr(0, "web")]
-        [Index(16)]
-        public StringValue Web { get; set; }
+        public StringValue Web
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(41, "DummyContentTypeElement");
+            builder.AddElement<Dummy>()
+.AddAttribute(0, "decimals", a => a.Decimals)
+.AddAttribute(0, "default", a => a.Default)
+.AddAttribute(0, "description", a => a.Description)
+.AddAttribute(0, "displayName", a => a.DisplayName)
+.AddAttribute(0, "fieldsID", a => a.FieldsID)
+.AddAttribute(0, "format", a => a.Format)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "index", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+})
+.AddAttribute(0, "internalName", a => a.InternalName)
+.AddAttribute(0, "LCID", a => a.LCID)
+.AddAttribute(0, "list", a => a.List)
+.AddAttribute(0, "percentage", a => a.Percentage)
+.AddAttribute(0, "readOnly", a => a.ReadOnly)
+.AddAttribute(0, "requiredMultiChoice", a => a.RequiredMultiChoice)
+.AddAttribute(0, "root", a => a.Root)
+.AddAttribute(0, "showField", a => a.ShowField)
+.AddAttribute(0, "web", a => a.Web, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}") });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Dummy>(deep);

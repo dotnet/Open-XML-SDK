@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -16,8 +17,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:bordertop.</para>
     /// </summary>
-    [SchemaAttr(28, "bordertop")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TopBorder : BorderType
     {
         /// <summary>
@@ -25,6 +24,12 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// </summary>
         public TopBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "bordertop");
         }
 
         /// <inheritdoc/>
@@ -36,8 +41,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderleft.</para>
     /// </summary>
-    [SchemaAttr(28, "borderleft")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LeftBorder : BorderType
     {
         /// <summary>
@@ -45,6 +48,12 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// </summary>
         public LeftBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "borderleft");
         }
 
         /// <inheritdoc/>
@@ -56,8 +65,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderright.</para>
     /// </summary>
-    [SchemaAttr(28, "borderright")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RightBorder : BorderType
     {
         /// <summary>
@@ -65,6 +72,12 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// </summary>
         public RightBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "borderright");
         }
 
         /// <inheritdoc/>
@@ -76,8 +89,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderbottom.</para>
     /// </summary>
-    [SchemaAttr(28, "borderbottom")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BottomBorder : BorderType
     {
         /// <summary>
@@ -85,6 +96,12 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// </summary>
         public BottomBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "borderbottom");
         }
 
         /// <inheritdoc/>
@@ -109,26 +126,43 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Border Style</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Width</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        [NumberValidator(IsPositive = true)]
-        [SchemaAttr(0, "width")]
-        [Index(1)]
-        public IntegerValue Width { get; set; }
+        public IntegerValue Width
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border shadow</para>
         /// <para>Represents the following attribute in the schema: shadow</para>
         /// </summary>
-        [SchemaAttr(0, "shadow")]
-        [Index(2)]
-        public TrueFalseValue Shadow { get; set; }
+        public TrueFalseValue Shadow
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BorderType>()
+                           .AddAttribute(0, "type", a => a.Type)
+                           .AddAttribute(0, "width", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { IsPositive = (true) });
+                           })
+                           .AddAttribute(0, "shadow", a => a.Shadow);
+        }
     }
 
     /// <summary>
@@ -136,8 +170,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:wrap.</para>
     /// </summary>
-    [SchemaAttr(28, "wrap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextWrap : OpenXmlLeafElement
     {
         /// <summary>
@@ -151,33 +183,52 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Wrapping type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Wrapping side</para>
         /// <para>Represents the following attribute in the schema: side</para>
         /// </summary>
-        [SchemaAttr(0, "side")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Positioning Base</para>
         /// <para>Represents the following attribute in the schema: anchorx</para>
         /// </summary>
-        [SchemaAttr(0, "anchorx")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Positioning Base</para>
         /// <para>Represents the following attribute in the schema: anchory</para>
         /// </summary>
-        [SchemaAttr(0, "anchory")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "wrap");
+            builder.AddElement<TextWrap>()
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "side", a => a.Side)
+.AddAttribute(0, "anchorx", a => a.AnchorX)
+.AddAttribute(0, "anchory", a => a.AnchorY);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextWrap>(deep);
@@ -188,8 +239,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:anchorlock.</para>
     /// </summary>
-    [SchemaAttr(28, "anchorlock")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnchorLock : OpenXmlLeafElement
     {
         /// <summary>
@@ -197,6 +246,12 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// </summary>
         public AnchorLock() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(28, "anchorlock");
         }
 
         /// <inheritdoc/>

@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -57,43 +58,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description>VTClipboardData &lt;vt:cf></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Variant))]
-    [ChildElementInfo(typeof(VTVector))]
-    [ChildElementInfo(typeof(VTArray))]
-    [ChildElementInfo(typeof(VTBlob))]
-    [ChildElementInfo(typeof(VTOBlob))]
-    [ChildElementInfo(typeof(VTEmpty))]
-    [ChildElementInfo(typeof(VTNull))]
-    [ChildElementInfo(typeof(VTByte))]
-    [ChildElementInfo(typeof(VTShort))]
-    [ChildElementInfo(typeof(VTInt32))]
-    [ChildElementInfo(typeof(VTInt64))]
-    [ChildElementInfo(typeof(VTInteger))]
-    [ChildElementInfo(typeof(VTUnsignedByte))]
-    [ChildElementInfo(typeof(VTUnsignedShort))]
-    [ChildElementInfo(typeof(VTUnsignedInt32))]
-    [ChildElementInfo(typeof(VTUnsignedInt64))]
-    [ChildElementInfo(typeof(VTUnsignedInteger))]
-    [ChildElementInfo(typeof(VTFloat))]
-    [ChildElementInfo(typeof(VTDouble))]
-    [ChildElementInfo(typeof(VTDecimal))]
-    [ChildElementInfo(typeof(VTLPSTR))]
-    [ChildElementInfo(typeof(VTLPWSTR))]
-    [ChildElementInfo(typeof(VTBString))]
-    [ChildElementInfo(typeof(VTDate))]
-    [ChildElementInfo(typeof(VTFileTime))]
-    [ChildElementInfo(typeof(VTBool))]
-    [ChildElementInfo(typeof(VTCurrency))]
-    [ChildElementInfo(typeof(VTError))]
-    [ChildElementInfo(typeof(VTStreamData))]
-    [ChildElementInfo(typeof(VTOStreamData))]
-    [ChildElementInfo(typeof(VTStorage))]
-    [ChildElementInfo(typeof(VTOStorage))]
-    [ChildElementInfo(typeof(VTVStreamData))]
-    [ChildElementInfo(typeof(VTClassId))]
-    [ChildElementInfo(typeof(VTClipboardData))]
-    [SchemaAttr(5, "variant")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Variant : OpenXmlCompositeElement
     {
         /// <summary>
@@ -125,6 +89,47 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Variant(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(5, "variant");
+            builder.AddChild<Variant>();
+            builder.AddChild<VTVector>();
+            builder.AddChild<VTArray>();
+            builder.AddChild<VTBlob>();
+            builder.AddChild<VTOBlob>();
+            builder.AddChild<VTEmpty>();
+            builder.AddChild<VTNull>();
+            builder.AddChild<VTByte>();
+            builder.AddChild<VTShort>();
+            builder.AddChild<VTInt32>();
+            builder.AddChild<VTInt64>();
+            builder.AddChild<VTInteger>();
+            builder.AddChild<VTUnsignedByte>();
+            builder.AddChild<VTUnsignedShort>();
+            builder.AddChild<VTUnsignedInt32>();
+            builder.AddChild<VTUnsignedInt64>();
+            builder.AddChild<VTUnsignedInteger>();
+            builder.AddChild<VTFloat>();
+            builder.AddChild<VTDouble>();
+            builder.AddChild<VTDecimal>();
+            builder.AddChild<VTLPSTR>();
+            builder.AddChild<VTLPWSTR>();
+            builder.AddChild<VTBString>();
+            builder.AddChild<VTDate>();
+            builder.AddChild<VTFileTime>();
+            builder.AddChild<VTBool>();
+            builder.AddChild<VTCurrency>();
+            builder.AddChild<VTError>();
+            builder.AddChild<VTStreamData>();
+            builder.AddChild<VTOStreamData>();
+            builder.AddChild<VTStorage>();
+            builder.AddChild<VTOStorage>();
+            builder.AddChild<VTVStreamData>();
+            builder.AddChild<VTClassId>();
+            builder.AddChild<VTClipboardData>();
         }
 
         /// <summary>
@@ -658,29 +663,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description>VTClipboardData &lt;vt:cf></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Variant))]
-    [ChildElementInfo(typeof(VTByte))]
-    [ChildElementInfo(typeof(VTShort))]
-    [ChildElementInfo(typeof(VTInt32))]
-    [ChildElementInfo(typeof(VTInt64))]
-    [ChildElementInfo(typeof(VTUnsignedByte))]
-    [ChildElementInfo(typeof(VTUnsignedShort))]
-    [ChildElementInfo(typeof(VTUnsignedInt32))]
-    [ChildElementInfo(typeof(VTUnsignedInt64))]
-    [ChildElementInfo(typeof(VTFloat))]
-    [ChildElementInfo(typeof(VTDouble))]
-    [ChildElementInfo(typeof(VTLPSTR))]
-    [ChildElementInfo(typeof(VTLPWSTR))]
-    [ChildElementInfo(typeof(VTBString))]
-    [ChildElementInfo(typeof(VTDate))]
-    [ChildElementInfo(typeof(VTFileTime))]
-    [ChildElementInfo(typeof(VTBool))]
-    [ChildElementInfo(typeof(VTCurrency))]
-    [ChildElementInfo(typeof(VTError))]
-    [ChildElementInfo(typeof(VTClassId))]
-    [ChildElementInfo(typeof(VTClipboardData))]
-    [SchemaAttr(5, "vector")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTVector : OpenXmlCompositeElement
     {
         /// <summary>
@@ -718,19 +700,57 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Vector Base Type</para>
         /// <para>Represents the following attribute in the schema: baseType</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "baseType")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vector Size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "size")]
-        [Index(1)]
-        public UInt32Value Size { get; set; }
+        public UInt32Value Size
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(5, "vector");
+            builder.AddChild<Variant>();
+            builder.AddChild<VTByte>();
+            builder.AddChild<VTShort>();
+            builder.AddChild<VTInt32>();
+            builder.AddChild<VTInt64>();
+            builder.AddChild<VTUnsignedByte>();
+            builder.AddChild<VTUnsignedShort>();
+            builder.AddChild<VTUnsignedInt32>();
+            builder.AddChild<VTUnsignedInt64>();
+            builder.AddChild<VTFloat>();
+            builder.AddChild<VTDouble>();
+            builder.AddChild<VTLPSTR>();
+            builder.AddChild<VTLPWSTR>();
+            builder.AddChild<VTBString>();
+            builder.AddChild<VTDate>();
+            builder.AddChild<VTFileTime>();
+            builder.AddChild<VTBool>();
+            builder.AddChild<VTCurrency>();
+            builder.AddChild<VTError>();
+            builder.AddChild<VTClassId>();
+            builder.AddChild<VTClipboardData>();
+            builder.AddElement<VTVector>()
+.AddAttribute(0, "baseType", a => a.BaseType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "size", a => a.Size, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -790,25 +810,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description>VTCurrency &lt;vt:cy></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Variant))]
-    [ChildElementInfo(typeof(VTByte))]
-    [ChildElementInfo(typeof(VTShort))]
-    [ChildElementInfo(typeof(VTInt32))]
-    [ChildElementInfo(typeof(VTInteger))]
-    [ChildElementInfo(typeof(VTUnsignedByte))]
-    [ChildElementInfo(typeof(VTUnsignedShort))]
-    [ChildElementInfo(typeof(VTUnsignedInt32))]
-    [ChildElementInfo(typeof(VTUnsignedInteger))]
-    [ChildElementInfo(typeof(VTFloat))]
-    [ChildElementInfo(typeof(VTDouble))]
-    [ChildElementInfo(typeof(VTDecimal))]
-    [ChildElementInfo(typeof(VTBString))]
-    [ChildElementInfo(typeof(VTDate))]
-    [ChildElementInfo(typeof(VTBool))]
-    [ChildElementInfo(typeof(VTError))]
-    [ChildElementInfo(typeof(VTCurrency))]
-    [SchemaAttr(5, "array")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTArray : OpenXmlCompositeElement
     {
         /// <summary>
@@ -846,28 +847,67 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Array Lower Bounds Attribute</para>
         /// <para>Represents the following attribute in the schema: lBound</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "lBound")]
-        [Index(0)]
-        public Int32Value LowerBounds { get; set; }
+        public Int32Value LowerBounds
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Array Upper Bounds Attribute</para>
         /// <para>Represents the following attribute in the schema: uBound</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "uBound")]
-        [Index(1)]
-        public Int32Value UpperBounds { get; set; }
+        public Int32Value UpperBounds
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Array Base Type</para>
         /// <para>Represents the following attribute in the schema: baseType</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "baseType")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(5, "array");
+            builder.AddChild<Variant>();
+            builder.AddChild<VTByte>();
+            builder.AddChild<VTShort>();
+            builder.AddChild<VTInt32>();
+            builder.AddChild<VTInteger>();
+            builder.AddChild<VTUnsignedByte>();
+            builder.AddChild<VTUnsignedShort>();
+            builder.AddChild<VTUnsignedInt32>();
+            builder.AddChild<VTUnsignedInteger>();
+            builder.AddChild<VTFloat>();
+            builder.AddChild<VTDouble>();
+            builder.AddChild<VTDecimal>();
+            builder.AddChild<VTBString>();
+            builder.AddChild<VTDate>();
+            builder.AddChild<VTBool>();
+            builder.AddChild<VTError>();
+            builder.AddChild<VTCurrency>();
+            builder.AddElement<VTArray>()
+.AddAttribute(0, "lBound", a => a.LowerBounds, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "uBound", a => a.UpperBounds, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "baseType", a => a.BaseType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
         {
@@ -901,9 +941,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:blob.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
-    [SchemaAttr(5, "blob")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTBlob : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -926,6 +963,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.SetSchema(5, "blob");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBlob>(deep);
     }
@@ -935,9 +979,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:oblob.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
-    [SchemaAttr(5, "oblob")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTOBlob : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -960,6 +1001,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.SetSchema(5, "oblob");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOBlob>(deep);
     }
@@ -969,9 +1017,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:stream.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
-    [SchemaAttr(5, "stream")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -994,6 +1039,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.SetSchema(5, "stream");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStreamData>(deep);
     }
@@ -1003,9 +1055,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostream.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
-    [SchemaAttr(5, "ostream")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTOStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1028,6 +1077,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.SetSchema(5, "ostream");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStreamData>(deep);
     }
@@ -1037,9 +1093,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:storage.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
-    [SchemaAttr(5, "storage")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTStorage : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1062,6 +1115,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.SetSchema(5, "storage");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStorage>(deep);
     }
@@ -1071,9 +1131,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostorage.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
-    [SchemaAttr(5, "ostorage")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTOStorage : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1096,6 +1153,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.SetSchema(5, "ostorage");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStorage>(deep);
     }
@@ -1105,8 +1169,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:empty.</para>
     /// </summary>
-    [SchemaAttr(5, "empty")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTEmpty : OpenXmlLeafElement
     {
         /// <summary>
@@ -1114,6 +1176,12 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// </summary>
         public VTEmpty() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(5, "empty");
         }
 
         /// <inheritdoc/>
@@ -1125,8 +1193,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:null.</para>
     /// </summary>
-    [SchemaAttr(5, "null")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTNull : OpenXmlLeafElement
     {
         /// <summary>
@@ -1134,6 +1200,12 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// </summary>
         public VTNull() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(5, "null");
         }
 
         /// <inheritdoc/>
@@ -1145,9 +1217,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i1.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(SByteValue))]
-    [SchemaAttr(5, "i1")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTByte : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1170,6 +1239,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new SByteValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(SByteValue)) });
+            builder.SetSchema(5, "i1");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTByte>(deep);
     }
@@ -1179,9 +1255,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i2.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int16Value))]
-    [SchemaAttr(5, "i2")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTShort : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1204,6 +1277,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Int16Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int16Value)) });
+            builder.SetSchema(5, "i2");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTShort>(deep);
     }
@@ -1213,9 +1293,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i4.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(5, "i4")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTInt32 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1238,6 +1315,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(5, "i4");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt32>(deep);
     }
@@ -1247,9 +1331,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:int.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(5, "int")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTInteger : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1272,6 +1353,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(5, "int");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInteger>(deep);
     }
@@ -1281,9 +1369,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i8.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int64Value))]
-    [SchemaAttr(5, "i8")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTInt64 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1306,6 +1391,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new Int64Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int64Value)) });
+            builder.SetSchema(5, "i8");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt64>(deep);
     }
@@ -1315,9 +1407,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui1.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(ByteValue))]
-    [SchemaAttr(5, "ui1")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTUnsignedByte : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1340,6 +1429,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new ByteValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ByteValue)) });
+            builder.SetSchema(5, "ui1");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedByte>(deep);
     }
@@ -1349,9 +1445,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui2.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt16Value))]
-    [SchemaAttr(5, "ui2")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTUnsignedShort : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1374,6 +1467,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new UInt16Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt16Value)) });
+            builder.SetSchema(5, "ui2");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedShort>(deep);
     }
@@ -1383,9 +1483,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui4.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt32Value))]
-    [SchemaAttr(5, "ui4")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1408,6 +1505,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new UInt32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
+            builder.SetSchema(5, "ui4");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt32>(deep);
     }
@@ -1417,9 +1521,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:uint.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt32Value))]
-    [SchemaAttr(5, "uint")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1442,6 +1543,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new UInt32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
+            builder.SetSchema(5, "uint");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInteger>(deep);
     }
@@ -1451,9 +1559,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui8.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt64Value))]
-    [SchemaAttr(5, "ui8")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1476,6 +1581,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new UInt64Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt64Value)) });
+            builder.SetSchema(5, "ui8");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt64>(deep);
     }
@@ -1485,9 +1597,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r4.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(SingleValue))]
-    [SchemaAttr(5, "r4")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTFloat : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1510,6 +1619,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new SingleValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(SingleValue)) });
+            builder.SetSchema(5, "r4");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTFloat>(deep);
     }
@@ -1519,9 +1635,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r8.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(DoubleValue))]
-    [SchemaAttr(5, "r8")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTDouble : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1544,6 +1657,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new DoubleValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)) });
+            builder.SetSchema(5, "r8");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDouble>(deep);
     }
@@ -1553,9 +1673,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:decimal.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(DecimalValue))]
-    [SchemaAttr(5, "decimal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTDecimal : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1578,6 +1695,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new DecimalValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DecimalValue)) });
+            builder.SetSchema(5, "decimal");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDecimal>(deep);
     }
@@ -1587,8 +1711,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpstr.</para>
     /// </summary>
-    [SchemaAttr(5, "lpstr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTLPSTR : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1611,6 +1733,12 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(5, "lpstr");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPSTR>(deep);
     }
@@ -1620,8 +1748,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpwstr.</para>
     /// </summary>
-    [SchemaAttr(5, "lpwstr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTLPWSTR : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1644,6 +1770,12 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(5, "lpwstr");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPWSTR>(deep);
     }
@@ -1653,8 +1785,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bstr.</para>
     /// </summary>
-    [SchemaAttr(5, "bstr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTBString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1677,6 +1807,12 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(5, "bstr");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBString>(deep);
     }
@@ -1686,9 +1822,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:date.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(DateTimeValue))]
-    [SchemaAttr(5, "date")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTDate : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1711,6 +1844,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new DateTimeValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DateTimeValue)) });
+            builder.SetSchema(5, "date");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDate>(deep);
     }
@@ -1720,9 +1860,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:filetime.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(DateTimeValue))]
-    [SchemaAttr(5, "filetime")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTFileTime : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1745,6 +1882,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new DateTimeValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DateTimeValue)) });
+            builder.SetSchema(5, "filetime");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTFileTime>(deep);
     }
@@ -1754,9 +1898,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bool.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(BooleanValue))]
-    [SchemaAttr(5, "bool")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTBool : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1779,6 +1920,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new BooleanValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
+            builder.SetSchema(5, "bool");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBool>(deep);
     }
@@ -1788,9 +1936,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cy.</para>
     /// </summary>
-    [StringValidator(Pattern = "\\s*[0-9]*\\.[0-9]{4}\\s*")]
-    [SchemaAttr(5, "cy")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTCurrency : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1813,6 +1958,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*[0-9]*\\.[0-9]{4}\\s*") });
+            builder.SetSchema(5, "cy");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTCurrency>(deep);
     }
@@ -1822,9 +1974,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:error.</para>
     /// </summary>
-    [StringValidator(Pattern = "0x[0-9A-Fa-f]{8}")]
-    [SchemaAttr(5, "error")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTError : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1847,6 +1996,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { Pattern = ("0x[0-9A-Fa-f]{8}") });
+            builder.SetSchema(5, "error");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTError>(deep);
     }
@@ -1856,8 +2012,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:vstream.</para>
     /// </summary>
-    [SchemaAttr(5, "vstream")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTVStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1884,11 +2038,23 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>VSTREAM Version Attribute</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(Pattern = "\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*")]
-        [SchemaAttr(0, "version")]
-        [Index(0)]
-        public StringValue Version { get; set; }
+        public StringValue Version
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(5, "vstream");
+            builder.AddElement<VTVStreamData>()
+.AddAttribute(0, "version", a => a.Version, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
+});
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:version*/, true, null)
@@ -1905,9 +2071,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:clsid.</para>
     /// </summary>
-    [StringValidator(Pattern = "\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*")]
-    [SchemaAttr(5, "clsid")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTClassId : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1930,6 +2093,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
+            builder.SetSchema(5, "clsid");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTClassId>(deep);
     }
@@ -1939,8 +2109,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cf.</para>
     /// </summary>
-    [SchemaAttr(5, "cf")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VTClipboardData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1967,19 +2135,36 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Format Attribute</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -3L)]
-        [SchemaAttr(0, "format")]
-        [Index(0)]
-        public Int32Value Format { get; set; }
+        public Int32Value Format
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "size")]
-        [Index(1)]
-        public UInt32Value Size { get; set; }
+        public UInt32Value Size
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(5, "cf");
+            builder.AddElement<VTClipboardData>()
+ .AddAttribute(0, "format", a => a.Format, aBuilder =>
+ {
+     aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-3L) });
+ })
+ .AddAttribute(0, "size", a => a.Size, aBuilder =>
+ {
+     aBuilder.AddValidator(new RequiredValidatorAttribute());
+ });
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTClipboardData>(deep);

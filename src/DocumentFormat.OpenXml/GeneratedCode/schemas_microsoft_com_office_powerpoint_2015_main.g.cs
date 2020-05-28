@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -18,8 +19,6 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p16:designElem.</para>
     /// </summary>
-    [SchemaAttr(78, "designElem")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DesignElement : OpenXmlLeafElement
     {
         /// <summary>
@@ -33,9 +32,20 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(78, "designElem");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddElement<DesignElement>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DesignElement>(deep);

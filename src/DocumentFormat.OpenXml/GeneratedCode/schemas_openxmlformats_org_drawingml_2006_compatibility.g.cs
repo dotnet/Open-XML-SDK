@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -18,8 +19,6 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is comp:legacyDrawing.</para>
     /// </summary>
-    [SchemaAttr(13, "legacyDrawing")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LegacyDrawing : OpenXmlLeafElement
     {
         /// <summary>
@@ -33,11 +32,23 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
         /// <para>Shape ID</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "spid")]
-        [Index(0)]
-        public StringValue ShapeId { get; set; }
+        public StringValue ShapeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(13, "legacyDrawing");
+            builder.AddElement<LegacyDrawing>()
+.AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:spid*/, true, null)

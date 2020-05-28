@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -24,11 +25,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     ///   <item><description>DestinationLink &lt;msink:destinationLink></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ContextNodeProperty))]
-    [ChildElementInfo(typeof(SourceLink))]
-    [ChildElementInfo(typeof(DestinationLink))]
-    [SchemaAttr(45, "context")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ContextNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -66,188 +62,303 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [RequiredValidator()]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>), UnionId = 0)]
-        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
-        [SchemaAttr(0, "type")]
-        [Index(1)]
-        public StringValue Type { get; set; }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rotatedBoundingBox</para>
         /// <para>Represents the following attribute in the schema: rotatedBoundingBox</para>
         /// </summary>
-        [StringValidator(Pattern = "-?[0-9]+,-?[0-9]+")]
-        [SchemaAttr(0, "rotatedBoundingBox")]
-        [Index(2)]
-        public ListValue<StringValue> RotatedBoundingBox { get; set; }
+        public ListValue<StringValue> RotatedBoundingBox
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alignmentLevel</para>
         /// <para>Represents the following attribute in the schema: alignmentLevel</para>
         /// </summary>
-        [SchemaAttr(0, "alignmentLevel")]
-        [Index(3)]
-        public Int32Value AlignmentLevel { get; set; }
+        public Int32Value AlignmentLevel
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contentType</para>
         /// <para>Represents the following attribute in the schema: contentType</para>
         /// </summary>
-        [SchemaAttr(0, "contentType")]
-        [Index(4)]
-        public Int32Value ContentType { get; set; }
+        public Int32Value ContentType
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ascender</para>
         /// <para>Represents the following attribute in the schema: ascender</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(ListValue<StringValue>), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(0, "ascender")]
-        [Index(5)]
-        public StringValue Ascender { get; set; }
+        public StringValue Ascender
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descender</para>
         /// <para>Represents the following attribute in the schema: descender</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(ListValue<StringValue>), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(0, "descender")]
-        [Index(6)]
-        public StringValue Descender { get; set; }
+        public StringValue Descender
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>baseline</para>
         /// <para>Represents the following attribute in the schema: baseline</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(ListValue<StringValue>), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(0, "baseline")]
-        [Index(7)]
-        public StringValue Baseline { get; set; }
+        public StringValue Baseline
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>midline</para>
         /// <para>Represents the following attribute in the schema: midline</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(ListValue<StringValue>), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(0, "midline")]
-        [Index(8)]
-        public StringValue Midline { get; set; }
+        public StringValue Midline
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>customRecognizerId</para>
         /// <para>Represents the following attribute in the schema: customRecognizerId</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "customRecognizerId")]
-        [Index(9)]
-        public StringValue CustomRecognizerId { get; set; }
+        public StringValue CustomRecognizerId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mathML</para>
         /// <para>Represents the following attribute in the schema: mathML</para>
         /// </summary>
-        [SchemaAttr(0, "mathML")]
-        [Index(10)]
-        public StringValue MathML { get; set; }
+        public StringValue MathML
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mathStruct</para>
         /// <para>Represents the following attribute in the schema: mathStruct</para>
         /// </summary>
-        [SchemaAttr(0, "mathStruct")]
-        [Index(11)]
-        public StringValue MathStruct { get; set; }
+        public StringValue MathStruct
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>mathSymbol</para>
         /// <para>Represents the following attribute in the schema: mathSymbol</para>
         /// </summary>
-        [SchemaAttr(0, "mathSymbol")]
-        [Index(12)]
-        public StringValue MathSymbol { get; set; }
+        public StringValue MathSymbol
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>beginModifierType</para>
         /// <para>Represents the following attribute in the schema: beginModifierType</para>
         /// </summary>
-        [SchemaAttr(0, "beginModifierType")]
-        [Index(13)]
-        public StringValue BeginModifierType { get; set; }
+        public StringValue BeginModifierType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endModifierType</para>
         /// <para>Represents the following attribute in the schema: endModifierType</para>
         /// </summary>
-        [SchemaAttr(0, "endModifierType")]
-        [Index(14)]
-        public StringValue EndModifierType { get; set; }
+        public StringValue EndModifierType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rotationAngle</para>
         /// <para>Represents the following attribute in the schema: rotationAngle</para>
         /// </summary>
-        [SchemaAttr(0, "rotationAngle")]
-        [Index(15)]
-        public Int32Value RotationAngle { get; set; }
+        public Int32Value RotationAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hotPoints</para>
         /// <para>Represents the following attribute in the schema: hotPoints</para>
         /// </summary>
-        [StringValidator(Pattern = "-?[0-9]+,-?[0-9]+")]
-        [SchemaAttr(0, "hotPoints")]
-        [Index(16)]
-        public ListValue<StringValue> HotPoints { get; set; }
+        public ListValue<StringValue> HotPoints
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>centroid</para>
         /// <para>Represents the following attribute in the schema: centroid</para>
         /// </summary>
-        [StringValidator(Pattern = "-?[0-9]+,-?[0-9]+")]
-        [SchemaAttr(0, "centroid")]
-        [Index(17)]
-        public StringValue Centroid { get; set; }
+        public StringValue Centroid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>semanticType</para>
         /// <para>Represents the following attribute in the schema: semanticType</para>
         /// </summary>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), UnionId = 0)]
-        [SchemaAttr(0, "semanticType")]
-        [Index(18)]
-        public StringValue SemanticType { get; set; }
+        public StringValue SemanticType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>shapeName</para>
         /// <para>Represents the following attribute in the schema: shapeName</para>
         /// </summary>
-        [SchemaAttr(0, "shapeName")]
-        [Index(19)]
-        public StringValue ShapeName { get; set; }
+        public StringValue ShapeName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>shapeGeometry</para>
         /// <para>Represents the following attribute in the schema: shapeGeometry</para>
         /// </summary>
-        [StringValidator(Pattern = "-?[0-9]+,-?[0-9]+")]
-        [SchemaAttr(0, "shapeGeometry")]
-        [Index(20)]
-        public ListValue<StringValue> ShapeGeometry { get; set; }
+        public ListValue<StringValue> ShapeGeometry
+        {
+            get => GetAttribute<ListValue<StringValue>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(45, "context");
+            builder.AddChild<ContextNodeProperty>();
+            builder.AddChild<SourceLink>();
+            builder.AddChild<DestinationLink>();
+            builder.AddElement<ContextNode>()
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "rotatedBoundingBox", a => a.RotatedBoundingBox, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+})
+.AddAttribute(0, "alignmentLevel", a => a.AlignmentLevel)
+.AddAttribute(0, "contentType", a => a.ContentType)
+.AddAttribute(0, "ascender", a => a.Ascender, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "descender", a => a.Descender, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "baseline", a => a.Baseline, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "midline", a => a.Midline, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "customRecognizerId", a => a.CustomRecognizerId, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "mathML", a => a.MathML)
+.AddAttribute(0, "mathStruct", a => a.MathStruct)
+.AddAttribute(0, "mathSymbol", a => a.MathSymbol)
+.AddAttribute(0, "beginModifierType", a => a.BeginModifierType)
+.AddAttribute(0, "endModifierType", a => a.EndModifierType)
+.AddAttribute(0, "rotationAngle", a => a.RotationAngle)
+.AddAttribute(0, "hotPoints", a => a.HotPoints, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+})
+.AddAttribute(0, "centroid", a => a.Centroid, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+})
+.AddAttribute(0, "semanticType", a => a.SemanticType, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "shapeName", a => a.ShapeName)
+.AddAttribute(0, "shapeGeometry", a => a.ShapeGeometry, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -267,8 +378,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:property.</para>
     /// </summary>
-    [SchemaAttr(45, "property")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ContextNodeProperty : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -295,10 +404,22 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public StringValue Type { get; set; }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(45, "property");
+            builder.AddElement<ContextNodeProperty>()
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextNodeProperty>(deep);
@@ -309,8 +430,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:sourceLink.</para>
     /// </summary>
-    [SchemaAttr(45, "sourceLink")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SourceLink : ContextLinkType
     {
         /// <summary>
@@ -318,6 +437,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// </summary>
         public SourceLink() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(45, "sourceLink");
         }
 
         /// <inheritdoc/>
@@ -329,8 +454,6 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:destinationLink.</para>
     /// </summary>
-    [SchemaAttr(45, "destinationLink")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DestinationLink : ContextLinkType
     {
         /// <summary>
@@ -338,6 +461,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// </summary>
         public DestinationLink() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(45, "destinationLink");
         }
 
         /// <inheritdoc/>
@@ -362,19 +491,36 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>direction</para>
         /// <para>Represents the following attribute in the schema: direction</para>
         /// </summary>
-        [SchemaAttr(0, "direction")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues> Direction { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues> Direction
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ref</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(UInt32Value), UnionId = 0)]
-        [SchemaAttr(0, "ref")]
-        [Index(1)]
-        public StringValue Reference { get; set; }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<ContextLinkType>()
+                           .AddAttribute(0, "direction", a => a.Direction)
+                           .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
+                           {
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>

@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -28,13 +29,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorDefinitionTitle))]
-    [ChildElementInfo(typeof(ColorTransformDescription))]
-    [ChildElementInfo(typeof(ColorTransformCategories))]
-    [ChildElementInfo(typeof(ColorTransformStyleLabel))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "colorsDef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorsDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -72,17 +66,35 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique ID</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [SchemaAttr(0, "uniqueId")]
-        [Index(0)]
-        public StringValue UniqueId { get; set; }
+        public StringValue UniqueId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr(0, "minVer")]
-        [Index(1)]
-        public StringValue MinVersion { get; set; }
+        public StringValue MinVersion
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "colorsDef");
+            builder.AddChild<ColorDefinitionTitle>();
+            builder.AddChild<ColorTransformDescription>();
+            builder.AddChild<ColorTransformCategories>();
+            builder.AddChild<ColorTransformStyleLabel>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<ColorsDefinition>()
+.AddAttribute(0, "uniqueId", a => a.UniqueId)
+.AddAttribute(0, "minVer", a => a.MinVersion);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(1 /*:minVer*/, true, new string[] { "12.0" })
@@ -150,12 +162,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorDefinitionTitle))]
-    [ChildElementInfo(typeof(ColorTransformDescription))]
-    [ChildElementInfo(typeof(ColorTransformCategories))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "colorsDefHdr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -193,26 +199,48 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique ID</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "uniqueId")]
-        [Index(0)]
-        public StringValue UniqueId { get; set; }
+        public StringValue UniqueId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr(0, "minVer")]
-        [Index(1)]
-        public StringValue MinVersion { get; set; }
+        public StringValue MinVersion
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Resource ID</para>
         /// <para>Represents the following attribute in the schema: resId</para>
         /// </summary>
-        [SchemaAttr(0, "resId")]
-        [Index(2)]
-        public Int32Value ResourceId { get; set; }
+        public Int32Value ResourceId
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "colorsDefHdr");
+            builder.AddChild<ColorDefinitionTitle>();
+            builder.AddChild<ColorTransformDescription>();
+            builder.AddChild<ColorTransformCategories>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<ColorsDefinitionHeader>()
+.AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "minVer", a => a.MinVersion)
+.AddAttribute(0, "resId", a => a.ResourceId);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -239,9 +267,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ColorsDefinitionHeader &lt;dgm:colorsDefHdr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorsDefinitionHeader))]
-    [SchemaAttr(14, "colorsDefHdrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -275,6 +300,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "colorsDefHdrLst");
+            builder.AddChild<ColorsDefinitionHeader>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader), 0, 0)
@@ -301,13 +333,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PointList))]
-    [ChildElementInfo(typeof(ConnectionList))]
-    [ChildElementInfo(typeof(Background))]
-    [ChildElementInfo(typeof(Whole))]
-    [ChildElementInfo(typeof(DataModelExtensionList))]
-    [SchemaAttr(14, "dataModel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataModelRoot : OpenXmlPartRootElement
     {
         /// <summary>
@@ -339,6 +364,17 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataModelRoot(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "dataModel");
+            builder.AddChild<PointList>();
+            builder.AddChild<ConnectionList>();
+            builder.AddChild<Background>();
+            builder.AddChild<Whole>();
+            builder.AddChild<DataModelExtensionList>();
         }
 
         /// <summary>
@@ -470,16 +506,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(Description))]
-    [ChildElementInfo(typeof(CategoryList))]
-    [ChildElementInfo(typeof(SampleData))]
-    [ChildElementInfo(typeof(StyleData))]
-    [ChildElementInfo(typeof(ColorData))]
-    [ChildElementInfo(typeof(LayoutNode))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "layoutDef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LayoutDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -517,25 +543,49 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [SchemaAttr(0, "uniqueId")]
-        [Index(0)]
-        public StringValue UniqueId { get; set; }
+        public StringValue UniqueId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr(0, "minVer")]
-        [Index(1)]
-        public StringValue MinVersion { get; set; }
+        public StringValue MinVersion
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Style</para>
         /// <para>Represents the following attribute in the schema: defStyle</para>
         /// </summary>
-        [SchemaAttr(0, "defStyle")]
-        [Index(2)]
-        public StringValue DefaultStyle { get; set; }
+        public StringValue DefaultStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "layoutDef");
+            builder.AddChild<Title>();
+            builder.AddChild<Description>();
+            builder.AddChild<CategoryList>();
+            builder.AddChild<SampleData>();
+            builder.AddChild<StyleData>();
+            builder.AddChild<ColorData>();
+            builder.AddChild<LayoutNode>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<LayoutDefinition>()
+.AddAttribute(0, "uniqueId", a => a.UniqueId)
+.AddAttribute(0, "minVer", a => a.MinVersion)
+.AddAttribute(0, "defStyle", a => a.DefaultStyle);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -600,12 +650,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(Description))]
-    [ChildElementInfo(typeof(CategoryList))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "layoutDefHdr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -643,34 +687,59 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "uniqueId")]
-        [Index(0)]
-        public StringValue UniqueId { get; set; }
+        public StringValue UniqueId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr(0, "minVer")]
-        [Index(1)]
-        public StringValue MinVersion { get; set; }
+        public StringValue MinVersion
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Default Style</para>
         /// <para>Represents the following attribute in the schema: defStyle</para>
         /// </summary>
-        [SchemaAttr(0, "defStyle")]
-        [Index(2)]
-        public StringValue DefaultStyle { get; set; }
+        public StringValue DefaultStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: resId</para>
         /// </summary>
-        [SchemaAttr(0, "resId")]
-        [Index(3)]
-        public Int32Value ResourceId { get; set; }
+        public Int32Value ResourceId
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "layoutDefHdr");
+            builder.AddChild<Title>();
+            builder.AddChild<Description>();
+            builder.AddChild<CategoryList>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<LayoutDefinitionHeader>()
+.AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "minVer", a => a.MinVersion)
+.AddAttribute(0, "defStyle", a => a.DefaultStyle)
+.AddAttribute(0, "resId", a => a.ResourceId);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -697,9 +766,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>LayoutDefinitionHeader &lt;dgm:layoutDefHdr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LayoutDefinitionHeader))]
-    [SchemaAttr(14, "layoutDefHdrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -733,6 +799,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "layoutDefHdrLst");
+            builder.AddChild<LayoutDefinitionHeader>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader), 0, 0)
@@ -749,8 +822,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:relIds.</para>
     /// </summary>
-    [SchemaAttr(14, "relIds")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RelationshipIds : OpenXmlLeafElement
     {
         /// <summary>
@@ -767,10 +838,11 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "dm")]
-        [Index(0)]
-        public StringValue DataPart { get; set; }
+        public StringValue DataPart
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Explicit Relationship to Diagram Layout Definition Part</para>
@@ -779,10 +851,11 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "lo")]
-        [Index(1)]
-        public StringValue LayoutPart { get; set; }
+        public StringValue LayoutPart
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Explicit Relationship to Style Definition Part</para>
@@ -791,10 +864,11 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "qs")]
-        [Index(2)]
-        public StringValue StylePart { get; set; }
+        public StringValue StylePart
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Explicit Relationship to Diagram Colors Part</para>
@@ -803,10 +877,34 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "cs")]
-        [Index(3)]
-        public StringValue ColorPart { get; set; }
+        public StringValue ColorPart
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "relIds");
+            builder.AddElement<RelationshipIds>()
+.AddAttribute(19, "dm", a => a.DataPart, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "lo", a => a.LayoutPart, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "qs", a => a.StylePart, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(19, "cs", a => a.ColorPart, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(3 /*r:cs*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors"),
@@ -838,14 +936,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleDefinitionTitle))]
-    [ChildElementInfo(typeof(StyleLabelDescription))]
-    [ChildElementInfo(typeof(StyleDisplayCategories))]
-    [ChildElementInfo(typeof(Scene3D))]
-    [ChildElementInfo(typeof(StyleLabel))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "styleDef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -883,17 +973,36 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique Style ID</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [SchemaAttr(0, "uniqueId")]
-        [Index(0)]
-        public StringValue UniqueId { get; set; }
+        public StringValue UniqueId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr(0, "minVer")]
-        [Index(1)]
-        public StringValue MinVersion { get; set; }
+        public StringValue MinVersion
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleDef");
+            builder.AddChild<StyleDefinitionTitle>();
+            builder.AddChild<StyleLabelDescription>();
+            builder.AddChild<StyleDisplayCategories>();
+            builder.AddChild<Scene3D>();
+            builder.AddChild<StyleLabel>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<StyleDefinition>()
+.AddAttribute(0, "uniqueId", a => a.UniqueId)
+.AddAttribute(0, "minVer", a => a.MinVersion);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -956,12 +1065,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleDefinitionTitle))]
-    [ChildElementInfo(typeof(StyleLabelDescription))]
-    [ChildElementInfo(typeof(StyleDisplayCategories))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "styleDefHdr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -999,26 +1102,48 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Unique Style ID</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "uniqueId")]
-        [Index(0)]
-        public StringValue UniqueId { get; set; }
+        public StringValue UniqueId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Minimum Version</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
-        [SchemaAttr(0, "minVer")]
-        [Index(1)]
-        public StringValue MinVersion { get; set; }
+        public StringValue MinVersion
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Resource ID</para>
         /// <para>Represents the following attribute in the schema: resId</para>
         /// </summary>
-        [SchemaAttr(0, "resId")]
-        [Index(2)]
-        public Int32Value ResourceId { get; set; }
+        public Int32Value ResourceId
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleDefHdr");
+            builder.AddChild<StyleDefinitionTitle>();
+            builder.AddChild<StyleLabelDescription>();
+            builder.AddChild<StyleDisplayCategories>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<StyleDefinitionHeader>()
+.AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "minVer", a => a.MinVersion)
+.AddAttribute(0, "resId", a => a.ResourceId);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1045,9 +1170,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>StyleDefinitionHeader &lt;dgm:styleDefHdr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleDefinitionHeader))]
-    [SchemaAttr(14, "styleDefHdrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1081,6 +1203,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleDefHdrLst");
+            builder.AddChild<StyleDefinitionHeader>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader), 0, 0)
@@ -1097,8 +1226,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    [SchemaAttr(14, "cat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorTransformCategory : OpenXmlLeafElement
     {
         /// <summary>
@@ -1112,20 +1239,37 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Category Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public StringValue Type { get; set; }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Priority</para>
         /// <para>Represents the following attribute in the schema: pri</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "pri")]
-        [Index(1)]
-        public UInt32Value Priority { get; set; }
+        public UInt32Value Priority
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "cat");
+            builder.AddElement<ColorTransformCategory>()
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+})
+.AddAttribute(0, "pri", a => a.Priority, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformCategory>(deep);
@@ -1147,8 +1291,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "fillClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FillColorList : ColorsType
     {
         /// <summary>
@@ -1180,6 +1322,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public FillColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "fillClrLst");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1220,8 +1368,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "linClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LineColorList : ColorsType
     {
         /// <summary>
@@ -1253,6 +1399,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LineColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "linClrLst");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1293,8 +1445,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "effectClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EffectColorList : ColorsType
     {
         /// <summary>
@@ -1326,6 +1476,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public EffectColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "effectClrLst");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1366,8 +1522,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "txLinClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextLineColorList : ColorsType
     {
         /// <summary>
@@ -1399,6 +1553,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextLineColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "txLinClrLst");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1439,8 +1599,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "txFillClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextFillColorList : ColorsType
     {
         /// <summary>
@@ -1472,6 +1630,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextFillColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "txFillClrLst");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1512,8 +1676,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "txEffectClrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextEffectColorList : ColorsType
     {
         /// <summary>
@@ -1545,6 +1707,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextEffectColorList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "txEffectClrLst");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1585,12 +1753,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
     public abstract partial class ColorsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1628,19 +1790,41 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Color Application Method Type</para>
         /// <para>Represents the following attribute in the schema: meth</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "meth")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ColorApplicationMethodValues> Method { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ColorApplicationMethodValues> Method
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ColorApplicationMethodValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hue Direction</para>
         /// <para>Represents the following attribute in the schema: hueDir</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "hueDir")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HueDirectionValues> HueDirection { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HueDirectionValues> HueDirection
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HueDirectionValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddElement<ColorsType>()
+.AddAttribute(0, "meth", a => a.Method, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "hueDir", a => a.HueDirection, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
     }
 
     /// <summary>
@@ -1654,9 +1838,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(14, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1690,6 +1871,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -1712,8 +1900,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    [SchemaAttr(14, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorDefinitionTitle : OpenXmlLeafElement
     {
         /// <summary>
@@ -1727,18 +1913,33 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr(0, "lang")]
-        [Index(0)]
-        public StringValue Language { get; set; }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Description Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "title");
+            builder.AddElement<ColorDefinitionTitle>()
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorDefinitionTitle>(deep);
@@ -1749,8 +1950,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    [SchemaAttr(14, "desc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorTransformDescription : OpenXmlLeafElement
     {
         /// <summary>
@@ -1764,18 +1963,33 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr(0, "lang")]
-        [Index(0)]
-        public StringValue Language { get; set; }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Description Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "desc");
+            builder.AddElement<ColorTransformDescription>()
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTransformDescription>(deep);
@@ -1792,9 +2006,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ColorTransformCategory &lt;dgm:cat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColorTransformCategory))]
-    [SchemaAttr(14, "catLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorTransformCategories : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1828,6 +2039,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "catLst");
+            builder.AddChild<ColorTransformCategory>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategory), 0, 0)
@@ -1856,15 +2074,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FillColorList))]
-    [ChildElementInfo(typeof(LineColorList))]
-    [ChildElementInfo(typeof(EffectColorList))]
-    [ChildElementInfo(typeof(TextLineColorList))]
-    [ChildElementInfo(typeof(TextFillColorList))]
-    [ChildElementInfo(typeof(TextEffectColorList))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "styleLbl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1902,10 +2111,29 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleLbl");
+            builder.AddChild<FillColorList>();
+            builder.AddChild<LineColorList>();
+            builder.AddChild<EffectColorList>();
+            builder.AddChild<TextLineColorList>();
+            builder.AddChild<TextFillColorList>();
+            builder.AddChild<TextEffectColorList>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<ColorTransformStyleLabel>()
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <summary>
         /// <para>Fill Color List.</para>
@@ -2029,12 +2257,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>PtExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PropertySet))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(TextBody))]
-    [ChildElementInfo(typeof(PtExtensionList))]
-    [SchemaAttr(14, "pt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Point : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2072,31 +2294,63 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Model Identifier</para>
         /// <para>Represents the following attribute in the schema: modelId</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
-        [SchemaAttr(0, "modelId")]
-        [Index(0)]
-        public StringValue ModelId { get; set; }
+        public StringValue ModelId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Point Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PointValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PointValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PointValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Connection Identifier</para>
         /// <para>Represents the following attribute in the schema: cxnId</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
-        [SchemaAttr(0, "cxnId")]
-        [Index(2)]
-        public StringValue ConnectionId { get; set; }
+        public StringValue ConnectionId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "pt");
+            builder.AddChild<PropertySet>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TextBody>();
+            builder.AddChild<PtExtensionList>();
+            builder.AddElement<Point>()
+.AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "cxnId", a => a.ConnectionId, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+});
+        }
 
         /// <summary>
         /// <para>Property Set.</para>
@@ -2175,9 +2429,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "cxn")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2215,89 +2466,155 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Model Identifier</para>
         /// <para>Represents the following attribute in the schema: modelId</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
-        [SchemaAttr(0, "modelId")]
-        [Index(0)]
-        public StringValue ModelId { get; set; }
+        public StringValue ModelId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Point Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Source Identifier</para>
         /// <para>Represents the following attribute in the schema: srcId</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
-        [SchemaAttr(0, "srcId")]
-        [Index(2)]
-        public StringValue SourceId { get; set; }
+        public StringValue SourceId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Destination Identifier</para>
         /// <para>Represents the following attribute in the schema: destId</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
-        [SchemaAttr(0, "destId")]
-        [Index(3)]
-        public StringValue DestinationId { get; set; }
+        public StringValue DestinationId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Source Position</para>
         /// <para>Represents the following attribute in the schema: srcOrd</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "srcOrd")]
-        [Index(4)]
-        public UInt32Value SourcePosition { get; set; }
+        public UInt32Value SourcePosition
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Destination Position</para>
         /// <para>Represents the following attribute in the schema: destOrd</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "destOrd")]
-        [Index(5)]
-        public UInt32Value DestinationPosition { get; set; }
+        public UInt32Value DestinationPosition
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Parent Transition Identifier</para>
         /// <para>Represents the following attribute in the schema: parTransId</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
-        [SchemaAttr(0, "parTransId")]
-        [Index(6)]
-        public StringValue ParentTransitionId { get; set; }
+        public StringValue ParentTransitionId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Sibling Transition Identifier</para>
         /// <para>Represents the following attribute in the schema: sibTransId</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
-        [SchemaAttr(0, "sibTransId")]
-        [Index(7)]
-        public StringValue SiblingTransitionId { get; set; }
+        public StringValue SiblingTransitionId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Presentation Identifier</para>
         /// <para>Represents the following attribute in the schema: presId</para>
         /// </summary>
-        [SchemaAttr(0, "presId")]
-        [Index(8)]
-        public StringValue PresentationId { get; set; }
+        public StringValue PresentationId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "cxn");
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<Connection>()
+.AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "srcId", a => a.SourceId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "destId", a => a.DestinationId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "srcOrd", a => a.SourcePosition, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "destOrd", a => a.DestinationPosition, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "parTransId", a => a.ParentTransitionId, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "sibTransId", a => a.SiblingTransitionId, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "presId", a => a.PresentationId);
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -2341,9 +2658,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "constr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Constraint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2381,97 +2695,152 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Constraint Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>For</para>
         /// <para>Represents the following attribute in the schema: for</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "for")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> For { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> For
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>For Name</para>
         /// <para>Represents the following attribute in the schema: forName</para>
         /// </summary>
-        [SchemaAttr(0, "forName")]
-        [Index(2)]
-        public StringValue ForName { get; set; }
+        public StringValue ForName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Point Type</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "ptType")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> PointType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> PointType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference Type</para>
         /// <para>Represents the following attribute in the schema: refType</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "refType")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> ReferenceType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> ReferenceType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference For</para>
         /// <para>Represents the following attribute in the schema: refFor</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "refFor")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> ReferenceFor { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> ReferenceFor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference For Name</para>
         /// <para>Represents the following attribute in the schema: refForName</para>
         /// </summary>
-        [SchemaAttr(0, "refForName")]
-        [Index(6)]
-        public StringValue ReferenceForName { get; set; }
+        public StringValue ReferenceForName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference Point Type</para>
         /// <para>Represents the following attribute in the schema: refPtType</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "refPtType")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> ReferencePointType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> ReferencePointType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Operator</para>
         /// <para>Represents the following attribute in the schema: op</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "op")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BoolOperatorValues> Operator { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BoolOperatorValues> Operator
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BoolOperatorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(9)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Factor</para>
         /// <para>Represents the following attribute in the schema: fact</para>
         /// </summary>
-        [SchemaAttr(0, "fact")]
-        [Index(10)]
-        public DoubleValue Fact { get; set; }
+        public DoubleValue Fact
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "constr");
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<Constraint>()
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "for", a => a.For, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "forName", a => a.ForName)
+.AddAttribute(0, "ptType", a => a.PointType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "refType", a => a.ReferenceType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "refFor", a => a.ReferenceFor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "refForName", a => a.ReferenceForName)
+.AddAttribute(0, "refPtType", a => a.ReferencePointType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "op", a => a.Operator, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "val", a => a.Val)
+.AddAttribute(0, "fact", a => a.Fact);
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -2508,9 +2877,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "rule")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Rule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2548,61 +2914,96 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Constraint Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>For</para>
         /// <para>Represents the following attribute in the schema: for</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "for")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> For { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> For
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>For Name</para>
         /// <para>Represents the following attribute in the schema: forName</para>
         /// </summary>
-        [SchemaAttr(0, "forName")]
-        [Index(2)]
-        public StringValue ForName { get; set; }
+        public StringValue ForName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Point Type</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "ptType")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> PointType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> PointType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(4)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Factor</para>
         /// <para>Represents the following attribute in the schema: fact</para>
         /// </summary>
-        [SchemaAttr(0, "fact")]
-        [Index(5)]
-        public DoubleValue Fact { get; set; }
+        public DoubleValue Fact
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Max Value</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        [SchemaAttr(0, "max")]
-        [Index(6)]
-        public DoubleValue Max { get; set; }
+        public DoubleValue Max
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "rule");
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<Rule>()
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "for", a => a.For, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "forName", a => a.ForName)
+.AddAttribute(0, "ptType", a => a.PointType, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "val", a => a.Val)
+.AddAttribute(0, "fact", a => a.Fact)
+.AddAttribute(0, "max", a => a.Max);
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -2633,8 +3034,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:adj.</para>
     /// </summary>
-    [SchemaAttr(14, "adj")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Adjust : OpenXmlLeafElement
     {
         /// <summary>
@@ -2648,20 +3047,37 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Adjust Handle Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 1L)]
-        [SchemaAttr(0, "idx")]
-        [Index(0)]
-        public UInt32Value Index { get; set; }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(1)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "adj");
+            builder.AddElement<Adjust>()
+.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L) });
+})
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Adjust>(deep);
@@ -2678,9 +3094,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>Adjust &lt;dgm:adj></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Adjust))]
-    [SchemaAttr(14, "adjLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AdjustList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2714,6 +3127,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "adjLst");
+            builder.AddChild<Adjust>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Adjust), 0, 0)
@@ -2730,8 +3150,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:param.</para>
     /// </summary>
-    [SchemaAttr(14, "param")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Parameter : OpenXmlLeafElement
     {
         /// <summary>
@@ -2745,55 +3163,75 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Parameter Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ParameterIdValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ParameterIdValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ParameterIdValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(DoubleValue), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(BooleanValue), UnionId = 0)]
-        [StringValidator(UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>), UnionId = 0)]
-        [SchemaAttr(0, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "param");
+            builder.AddElement<Parameter>()
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+ aBuilder.AddUnion(union =>
+ {
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>)), UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>)), UnionId = (0) });
+     union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+     union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+     union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)), UnionId = (0) });
+     union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>)), UnionId = (0) });
+ });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Parameter>(deep);
@@ -2811,10 +3249,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Parameter))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "alg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Algorithm : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2852,19 +3286,36 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Algorithm Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AlgorithmValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AlgorithmValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AlgorithmValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Revision Number</para>
         /// <para>Represents the following attribute in the schema: rev</para>
         /// </summary>
-        [SchemaAttr(0, "rev")]
-        [Index(1)]
-        public UInt32Value Revision { get; set; }
+        public UInt32Value Revision
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "alg");
+            builder.AddChild<Parameter>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<Algorithm>()
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "rev", a => a.Revision);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2890,10 +3341,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AdjustList))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "shape")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2931,19 +3378,21 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr(0, "rot")]
-        [Index(0)]
-        public DoubleValue Rotation { get; set; }
+        public DoubleValue Rotation
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShapeValues>), UnionId = 0)]
-        [SchemaAttr(0, "type")]
-        [Index(1)]
-        public StringValue Type { get; set; }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship to Image Part</para>
@@ -2952,41 +3401,74 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "blip")]
-        [Index(2)]
-        public StringValue Blip { get; set; }
+        public StringValue Blip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Z-Order Offset</para>
         /// <para>Represents the following attribute in the schema: zOrderOff</para>
         /// </summary>
-        [SchemaAttr(0, "zOrderOff")]
-        [Index(3)]
-        public Int32Value ZOrderOffset { get; set; }
+        public Int32Value ZOrderOffset
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Geometry</para>
         /// <para>Represents the following attribute in the schema: hideGeom</para>
         /// </summary>
-        [SchemaAttr(0, "hideGeom")]
-        [Index(4)]
-        public BooleanValue HideGeometry { get; set; }
+        public BooleanValue HideGeometry
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Prevent Text Editing</para>
         /// <para>Represents the following attribute in the schema: lkTxEntry</para>
         /// </summary>
-        [SchemaAttr(0, "lkTxEntry")]
-        [Index(5)]
-        public BooleanValue LockedText { get; set; }
+        public BooleanValue LockedText
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Placeholder</para>
         /// <para>Represents the following attribute in the schema: blipPhldr</para>
         /// </summary>
-        [SchemaAttr(0, "blipPhldr")]
-        [Index(6)]
-        public BooleanValue BlipPlaceholder { get; set; }
+        public BooleanValue BlipPlaceholder
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "shape");
+            builder.AddChild<AdjustList>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<Shape>()
+.AddAttribute(0, "rot", a => a.Rotation)
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShapeValues>)), UnionId = (0) });
+});
+})
+.AddAttribute(19, "blip", a => a.Blip)
+.AddAttribute(0, "zOrderOff", a => a.ZOrderOffset)
+.AddAttribute(0, "hideGeom", a => a.HideGeometry)
+.AddAttribute(0, "lkTxEntry", a => a.LockedText)
+.AddAttribute(0, "blipPhldr", a => a.BlipPlaceholder);
+        }
 
         /// <summary>
         /// <para>Shape Adjust List.</para>
@@ -3044,9 +3526,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "presOf")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresentationOf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3084,49 +3563,75 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        [SchemaAttr(0, "axis")]
-        [Index(0)]
-        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Point Type</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [SchemaAttr(0, "ptType")]
-        [Index(1)]
-        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Last Transition</para>
         /// <para>Represents the following attribute in the schema: hideLastTrans</para>
         /// </summary>
-        [SchemaAttr(0, "hideLastTrans")]
-        [Index(2)]
-        public ListValue<BooleanValue> HideLastTrans { get; set; }
+        public ListValue<BooleanValue> HideLastTrans
+        {
+            get => GetAttribute<ListValue<BooleanValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Start</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr(0, "st")]
-        [Index(3)]
-        public ListValue<Int32Value> Start { get; set; }
+        public ListValue<Int32Value> Start
+        {
+            get => GetAttribute<ListValue<Int32Value>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: cnt</para>
         /// </summary>
-        [SchemaAttr(0, "cnt")]
-        [Index(4)]
-        public ListValue<UInt32Value> Count { get; set; }
+        public ListValue<UInt32Value> Count
+        {
+            get => GetAttribute<ListValue<UInt32Value>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Step</para>
         /// <para>Represents the following attribute in the schema: step</para>
         /// </summary>
-        [SchemaAttr(0, "step")]
-        [Index(5)]
-        public ListValue<Int32Value> Step { get; set; }
+        public ListValue<Int32Value> Step
+        {
+            get => GetAttribute<ListValue<Int32Value>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "presOf");
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<PresentationOf>()
+.AddAttribute(0, "axis", a => a.Axis)
+.AddAttribute(0, "ptType", a => a.PointType)
+.AddAttribute(0, "hideLastTrans", a => a.HideLastTrans)
+.AddAttribute(0, "st", a => a.Start)
+.AddAttribute(0, "cnt", a => a.Count)
+.AddAttribute(0, "step", a => a.Step);
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -3163,9 +3668,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>Constraint &lt;dgm:constr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Constraint))]
-    [SchemaAttr(14, "constrLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Constraints : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3199,6 +3701,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "constrLst");
+            builder.AddChild<Constraint>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Constraint), 0, 0)
@@ -3221,9 +3730,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>Rule &lt;dgm:rule></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Rule))]
-    [SchemaAttr(14, "ruleLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RuleList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3257,6 +3763,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "ruleLst");
+            builder.AddChild<Rule>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Rule), 0, 0)
@@ -3287,8 +3800,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "varLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VariableList : LayoutVariablePropertySetType
     {
         /// <summary>
@@ -3320,6 +3831,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public VariableList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "varLst");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3360,8 +3877,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "presLayoutVars")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
     {
         /// <summary>
@@ -3393,6 +3908,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PresentationLayoutVariables(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "presLayoutVars");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3433,15 +3954,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OrganizationChart))]
-    [ChildElementInfo(typeof(MaxNumberOfChildren))]
-    [ChildElementInfo(typeof(PreferredNumberOfChildren))]
-    [ChildElementInfo(typeof(BulletEnabled))]
-    [ChildElementInfo(typeof(Direction))]
-    [ChildElementInfo(typeof(HierarchyBranch))]
-    [ChildElementInfo(typeof(AnimateOneByOne))]
-    [ChildElementInfo(typeof(AnimationLevel))]
-    [ChildElementInfo(typeof(ResizeHandles))]
     public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3473,6 +3985,20 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected LayoutVariablePropertySetType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<OrganizationChart>();
+            builder.AddChild<MaxNumberOfChildren>();
+            builder.AddChild<PreferredNumberOfChildren>();
+            builder.AddChild<BulletEnabled>();
+            builder.AddChild<Direction>();
+            builder.AddChild<HierarchyBranch>();
+            builder.AddChild<AnimateOneByOne>();
+            builder.AddChild<AnimationLevel>();
+            builder.AddChild<ResizeHandles>();
         }
 
         /// <summary>
@@ -3612,17 +4138,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Algorithm))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(PresentationOf))]
-    [ChildElementInfo(typeof(Constraints))]
-    [ChildElementInfo(typeof(RuleList))]
-    [ChildElementInfo(typeof(ForEach))]
-    [ChildElementInfo(typeof(LayoutNode))]
-    [ChildElementInfo(typeof(Choose))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "forEach")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ForEach : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3660,65 +4175,105 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr(0, "ref")]
-        [Index(1)]
-        public StringValue Reference { get; set; }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        [SchemaAttr(0, "axis")]
-        [Index(2)]
-        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Point Type</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [SchemaAttr(0, "ptType")]
-        [Index(3)]
-        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Last Transition</para>
         /// <para>Represents the following attribute in the schema: hideLastTrans</para>
         /// </summary>
-        [SchemaAttr(0, "hideLastTrans")]
-        [Index(4)]
-        public ListValue<BooleanValue> HideLastTrans { get; set; }
+        public ListValue<BooleanValue> HideLastTrans
+        {
+            get => GetAttribute<ListValue<BooleanValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Start</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr(0, "st")]
-        [Index(5)]
-        public ListValue<Int32Value> Start { get; set; }
+        public ListValue<Int32Value> Start
+        {
+            get => GetAttribute<ListValue<Int32Value>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: cnt</para>
         /// </summary>
-        [SchemaAttr(0, "cnt")]
-        [Index(6)]
-        public ListValue<UInt32Value> Count { get; set; }
+        public ListValue<UInt32Value> Count
+        {
+            get => GetAttribute<ListValue<UInt32Value>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Step</para>
         /// <para>Represents the following attribute in the schema: step</para>
         /// </summary>
-        [SchemaAttr(0, "step")]
-        [Index(7)]
-        public ListValue<Int32Value> Step { get; set; }
+        public ListValue<Int32Value> Step
+        {
+            get => GetAttribute<ListValue<Int32Value>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "forEach");
+            builder.AddChild<Algorithm>();
+            builder.AddChild<Shape>();
+            builder.AddChild<PresentationOf>();
+            builder.AddChild<Constraints>();
+            builder.AddChild<RuleList>();
+            builder.AddChild<ForEach>();
+            builder.AddChild<LayoutNode>();
+            builder.AddChild<Choose>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<ForEach>()
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "ref", a => a.Reference)
+.AddAttribute(0, "axis", a => a.Axis)
+.AddAttribute(0, "ptType", a => a.PointType)
+.AddAttribute(0, "hideLastTrans", a => a.HideLastTrans)
+.AddAttribute(0, "st", a => a.Start)
+.AddAttribute(0, "cnt", a => a.Count)
+.AddAttribute(0, "step", a => a.Step);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
@@ -3765,18 +4320,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Algorithm))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(PresentationOf))]
-    [ChildElementInfo(typeof(Constraints))]
-    [ChildElementInfo(typeof(RuleList))]
-    [ChildElementInfo(typeof(VariableList))]
-    [ChildElementInfo(typeof(ForEach))]
-    [ChildElementInfo(typeof(LayoutNode))]
-    [ChildElementInfo(typeof(Choose))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "layoutNode")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LayoutNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3814,34 +4357,65 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Style Label</para>
         /// <para>Represents the following attribute in the schema: styleLbl</para>
         /// </summary>
-        [SchemaAttr(0, "styleLbl")]
-        [Index(1)]
-        public StringValue StyleLabel { get; set; }
+        public StringValue StyleLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Child Order</para>
         /// <para>Represents the following attribute in the schema: chOrder</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "chOrder")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildOrderValues> ChildOrder { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildOrderValues> ChildOrder
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildOrderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Move With</para>
         /// <para>Represents the following attribute in the schema: moveWith</para>
         /// </summary>
-        [SchemaAttr(0, "moveWith")]
-        [Index(3)]
-        public StringValue MoveWith { get; set; }
+        public StringValue MoveWith
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "layoutNode");
+            builder.AddChild<Algorithm>();
+            builder.AddChild<Shape>();
+            builder.AddChild<PresentationOf>();
+            builder.AddChild<Constraints>();
+            builder.AddChild<RuleList>();
+            builder.AddChild<VariableList>();
+            builder.AddChild<ForEach>();
+            builder.AddChild<LayoutNode>();
+            builder.AddChild<Choose>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<LayoutNode>()
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "styleLbl", a => a.StyleLabel)
+.AddAttribute(0, "chOrder", a => a.ChildOrder, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "moveWith", a => a.MoveWith);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
@@ -3881,10 +4455,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DiagramChooseElse &lt;dgm:else></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DiagramChooseIf))]
-    [ChildElementInfo(typeof(DiagramChooseElse))]
-    [SchemaAttr(14, "choose")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Choose : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3922,9 +4492,21 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "choose");
+            builder.AddChild<DiagramChooseIf>();
+            builder.AddChild<DiagramChooseElse>();
+            builder.AddElement<Choose>()
+.AddAttribute(0, "name", a => a.Name);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
@@ -3963,17 +4545,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Algorithm))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(PresentationOf))]
-    [ChildElementInfo(typeof(Constraints))]
-    [ChildElementInfo(typeof(RuleList))]
-    [ChildElementInfo(typeof(ForEach))]
-    [ChildElementInfo(typeof(LayoutNode))]
-    [ChildElementInfo(typeof(Choose))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "if")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DiagramChooseIf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4011,102 +4582,165 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        [SchemaAttr(0, "axis")]
-        [Index(1)]
-        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Data Point Type</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
-        [SchemaAttr(0, "ptType")]
-        [Index(2)]
-        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
+        public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType
+        {
+            get => GetAttribute<ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Last Transition</para>
         /// <para>Represents the following attribute in the schema: hideLastTrans</para>
         /// </summary>
-        [SchemaAttr(0, "hideLastTrans")]
-        [Index(3)]
-        public ListValue<BooleanValue> HideLastTrans { get; set; }
+        public ListValue<BooleanValue> HideLastTrans
+        {
+            get => GetAttribute<ListValue<BooleanValue>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Start</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr(0, "st")]
-        [Index(4)]
-        public ListValue<Int32Value> Start { get; set; }
+        public ListValue<Int32Value> Start
+        {
+            get => GetAttribute<ListValue<Int32Value>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: cnt</para>
         /// </summary>
-        [SchemaAttr(0, "cnt")]
-        [Index(5)]
-        public ListValue<UInt32Value> Count { get; set; }
+        public ListValue<UInt32Value> Count
+        {
+            get => GetAttribute<ListValue<UInt32Value>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Step</para>
         /// <para>Represents the following attribute in the schema: step</para>
         /// </summary>
-        [SchemaAttr(0, "step")]
-        [Index(6)]
-        public ListValue<Int32Value> Step { get; set; }
+        public ListValue<Int32Value> Step
+        {
+            get => GetAttribute<ListValue<Int32Value>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Function</para>
         /// <para>Represents the following attribute in the schema: func</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "func")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionValues> Function { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionValues> Function
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Argument</para>
         /// <para>Represents the following attribute in the schema: arg</para>
         /// </summary>
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VariableValues>), UnionId = 0)]
-        [SchemaAttr(0, "arg")]
-        [Index(8)]
-        public StringValue Argument { get; set; }
+        public StringValue Argument
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Operator</para>
         /// <para>Represents the following attribute in the schema: op</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "op")]
-        [Index(9)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionOperatorValues> Operator { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionOperatorValues> Operator
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionOperatorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(SimpleType = typeof(BooleanValue), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>), UnionId = 0)]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>), UnionId = 0)]
-        [SchemaAttr(0, "val")]
-        [Index(10)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "if");
+            builder.AddChild<Algorithm>();
+            builder.AddChild<Shape>();
+            builder.AddChild<PresentationOf>();
+            builder.AddChild<Constraints>();
+            builder.AddChild<RuleList>();
+            builder.AddChild<ForEach>();
+            builder.AddChild<LayoutNode>();
+            builder.AddChild<Choose>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<DiagramChooseIf>()
+.AddAttribute(0, "name", a => a.Name)
+.AddAttribute(0, "axis", a => a.Axis)
+.AddAttribute(0, "ptType", a => a.PointType)
+.AddAttribute(0, "hideLastTrans", a => a.HideLastTrans)
+.AddAttribute(0, "st", a => a.Start)
+.AddAttribute(0, "cnt", a => a.Count)
+.AddAttribute(0, "step", a => a.Step)
+.AddAttribute(0, "func", a => a.Function, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "arg", a => a.Argument, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VariableValues>)), UnionId = (0) });
+});
+})
+.AddAttribute(0, "op", a => a.Operator, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>)), UnionId = (0) });
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>)), UnionId = (0) });
+});
+});
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
@@ -4152,17 +4786,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Algorithm))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(PresentationOf))]
-    [ChildElementInfo(typeof(Constraints))]
-    [ChildElementInfo(typeof(RuleList))]
-    [ChildElementInfo(typeof(ForEach))]
-    [ChildElementInfo(typeof(LayoutNode))]
-    [ChildElementInfo(typeof(Choose))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "else")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DiagramChooseElse : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4200,9 +4823,28 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "else");
+            builder.AddChild<Algorithm>();
+            builder.AddChild<Shape>();
+            builder.AddChild<PresentationOf>();
+            builder.AddChild<Constraints>();
+            builder.AddChild<RuleList>();
+            builder.AddChild<ForEach>();
+            builder.AddChild<LayoutNode>();
+            builder.AddChild<Choose>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<DiagramChooseElse>()
+.AddAttribute(0, "name", a => a.Name);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
@@ -4244,13 +4886,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DataModelExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PointList))]
-    [ChildElementInfo(typeof(ConnectionList))]
-    [ChildElementInfo(typeof(Background))]
-    [ChildElementInfo(typeof(Whole))]
-    [ChildElementInfo(typeof(DataModelExtensionList))]
-    [SchemaAttr(14, "dataModel")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataModel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4282,6 +4917,17 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataModel(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "dataModel");
+            builder.AddChild<PointList>();
+            builder.AddChild<ConnectionList>();
+            builder.AddChild<Background>();
+            builder.AddChild<Whole>();
+            builder.AddChild<DataModelExtensionList>();
         }
 
         /// <summary>
@@ -4369,8 +5015,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    [SchemaAttr(14, "cat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Category : OpenXmlLeafElement
     {
         /// <summary>
@@ -4384,20 +5028,37 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Category Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public StringValue Type { get; set; }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Priority</para>
         /// <para>Represents the following attribute in the schema: pri</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "pri")]
-        [Index(1)]
-        public UInt32Value Priority { get; set; }
+        public UInt32Value Priority
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "cat");
+            builder.AddElement<Category>()
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+})
+.AddAttribute(0, "pri", a => a.Priority, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Category>(deep);
@@ -4408,8 +5069,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    [SchemaAttr(14, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Title : OpenXmlLeafElement
     {
         /// <summary>
@@ -4423,18 +5082,33 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr(0, "lang")]
-        [Index(0)]
-        public StringValue Language { get; set; }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "title");
+            builder.AddElement<Title>()
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Title>(deep);
@@ -4445,8 +5119,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    [SchemaAttr(14, "desc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Description : OpenXmlLeafElement
     {
         /// <summary>
@@ -4460,18 +5132,33 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr(0, "lang")]
-        [Index(0)]
-        public StringValue Language { get; set; }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "desc");
+            builder.AddElement<Description>()
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Description>(deep);
@@ -4488,9 +5175,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>Category &lt;dgm:cat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Category))]
-    [SchemaAttr(14, "catLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CategoryList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4524,6 +5208,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "catLst");
+            builder.AddChild<Category>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Category), 0, 0)
@@ -4546,8 +5237,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "sampData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SampleData : SampleDataType
     {
         /// <summary>
@@ -4581,6 +5270,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "sampData");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
@@ -4603,8 +5298,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "styleData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleData : SampleDataType
     {
         /// <summary>
@@ -4638,6 +5331,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleData");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
@@ -4660,8 +5359,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(14, "clrData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorData : SampleDataType
     {
         /// <summary>
@@ -4695,6 +5392,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "clrData");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
@@ -4717,7 +5420,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DataModel))]
     public abstract partial class SampleDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4755,9 +5457,19 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Use Default</para>
         /// <para>Represents the following attribute in the schema: useDef</para>
         /// </summary>
-        [SchemaAttr(0, "useDef")]
-        [Index(0)]
-        public BooleanValue UseDefault { get; set; }
+        public BooleanValue UseDefault
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<DataModel>();
+            builder.AddElement<SampleDataType>()
+.AddAttribute(0, "useDef", a => a.UseDefault);
+        }
 
         /// <summary>
         /// <para>Data Model.</para>
@@ -4787,12 +5499,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-    [SchemaAttr(14, "style")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4824,6 +5530,16 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Style(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "style");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
         }
 
         /// <summary>
@@ -4897,8 +5613,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:orgChart.</para>
     /// </summary>
-    [SchemaAttr(14, "orgChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OrganizationChart : OpenXmlLeafElement
     {
         /// <summary>
@@ -4912,9 +5626,19 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Show Organization Chart User Interface Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "orgChart");
+            builder.AddElement<OrganizationChart>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OrganizationChart>(deep);
@@ -4925,8 +5649,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:chMax.</para>
     /// </summary>
-    [SchemaAttr(14, "chMax")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MaxNumberOfChildren : OpenXmlLeafElement
     {
         /// <summary>
@@ -4940,10 +5662,22 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Maximum Children Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -1L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "chMax");
+            builder.AddElement<MaxNumberOfChildren>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MaxNumberOfChildren>(deep);
@@ -4954,8 +5688,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:chPref.</para>
     /// </summary>
-    [SchemaAttr(14, "chPref")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PreferredNumberOfChildren : OpenXmlLeafElement
     {
         /// <summary>
@@ -4969,10 +5701,22 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Preferred Number of CHildren Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -1L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "chPref");
+            builder.AddElement<PreferredNumberOfChildren>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-1L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreferredNumberOfChildren>(deep);
@@ -4983,8 +5727,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:bulletEnabled.</para>
     /// </summary>
-    [SchemaAttr(14, "bulletEnabled")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BulletEnabled : OpenXmlLeafElement
     {
         /// <summary>
@@ -4998,9 +5740,19 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Show Insert Bullet Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "bulletEnabled");
+            builder.AddElement<BulletEnabled>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BulletEnabled>(deep);
@@ -5011,8 +5763,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:dir.</para>
     /// </summary>
-    [SchemaAttr(14, "dir")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Direction : OpenXmlLeafElement
     {
         /// <summary>
@@ -5026,10 +5776,22 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Diagram Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "dir");
+            builder.AddElement<Direction>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Direction>(deep);
@@ -5040,8 +5802,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:hierBranch.</para>
     /// </summary>
-    [SchemaAttr(14, "hierBranch")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HierarchyBranch : OpenXmlLeafElement
     {
         /// <summary>
@@ -5055,10 +5815,22 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Organization Chart Branch Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "hierBranch");
+            builder.AddElement<HierarchyBranch>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HierarchyBranch>(deep);
@@ -5069,8 +5841,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:animOne.</para>
     /// </summary>
-    [SchemaAttr(14, "animOne")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnimateOneByOne : OpenXmlLeafElement
     {
         /// <summary>
@@ -5084,10 +5854,22 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>One By One Animation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "animOne");
+            builder.AddElement<AnimateOneByOne>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateOneByOne>(deep);
@@ -5098,8 +5880,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:animLvl.</para>
     /// </summary>
-    [SchemaAttr(14, "animLvl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AnimationLevel : OpenXmlLeafElement
     {
         /// <summary>
@@ -5113,10 +5893,22 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Level Animation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "animLvl");
+            builder.AddElement<AnimationLevel>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimationLevel>(deep);
@@ -5127,8 +5919,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:resizeHandles.</para>
     /// </summary>
-    [SchemaAttr(14, "resizeHandles")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ResizeHandles : OpenXmlLeafElement
     {
         /// <summary>
@@ -5142,10 +5932,22 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Shape Resize Style Type</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "resizeHandles");
+            builder.AddElement<ResizeHandles>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResizeHandles>(deep);
@@ -5156,8 +5958,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    [SchemaAttr(14, "cat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDisplayCategory : OpenXmlLeafElement
     {
         /// <summary>
@@ -5171,20 +5971,37 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Category Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsUri = true)]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public StringValue Type { get; set; }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Priority</para>
         /// <para>Represents the following attribute in the schema: pri</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "pri")]
-        [Index(1)]
-        public UInt32Value Priority { get; set; }
+        public UInt32Value Priority
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "cat");
+            builder.AddElement<StyleDisplayCategory>()
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+})
+.AddAttribute(0, "pri", a => a.Priority, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDisplayCategory>(deep);
@@ -5204,12 +6021,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Camera))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LightRig))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Backdrop))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(14, "scene3d")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Scene3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5241,6 +6052,16 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Scene3D(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "scene3d");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Camera>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LightRig>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Backdrop>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
 
         /// <summary>
@@ -5324,13 +6145,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BevelTop))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BevelBottom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtrusionColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ContourColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(14, "sp3d")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5368,37 +6182,69 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Shape Depth</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "z")]
-        [Index(0)]
-        public Int64Value Z { get; set; }
+        public Int64Value Z
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Height</para>
         /// <para>Represents the following attribute in the schema: extrusionH</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "extrusionH")]
-        [Index(1)]
-        public Int64Value ExtrusionHeight { get; set; }
+        public Int64Value ExtrusionHeight
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Contour Width</para>
         /// <para>Represents the following attribute in the schema: contourW</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "contourW")]
-        [Index(2)]
-        public Int64Value ContourWidth { get; set; }
+        public Int64Value ContourWidth
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Preset Material Type</para>
         /// <para>Represents the following attribute in the schema: prstMaterial</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "prstMaterial")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "sp3d");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelTop>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelBottom>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ContourColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddElement<Shape3D>()
+.AddAttribute(0, "z", a => a.Z, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "extrusionH", a => a.ExtrusionHeight, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "contourW", a => a.ContourWidth, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "prstMaterial", a => a.PresetMaterial, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>Top Bevel.</para>
@@ -5492,10 +6338,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.FlatText &lt;a:flatTx></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FlatText))]
-    [SchemaAttr(14, "txPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5527,6 +6369,14 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "txPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
         }
 
         /// <summary>
@@ -5578,8 +6428,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    [SchemaAttr(14, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDefinitionTitle : OpenXmlLeafElement
     {
         /// <summary>
@@ -5593,18 +6441,33 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Natural Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr(0, "lang")]
-        [Index(0)]
-        public StringValue Language { get; set; }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Description Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "title");
+            builder.AddElement<StyleDefinitionTitle>()
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleDefinitionTitle>(deep);
@@ -5615,8 +6478,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    [SchemaAttr(14, "desc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleLabelDescription : OpenXmlLeafElement
     {
         /// <summary>
@@ -5630,18 +6491,33 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Natural Language</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        [SchemaAttr(0, "lang")]
-        [Index(0)]
-        public StringValue Language { get; set; }
+        public StringValue Language
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Description Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(1)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "desc");
+            builder.AddElement<StyleLabelDescription>()
+.AddAttribute(0, "lang", a => a.Language)
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLabelDescription>(deep);
@@ -5658,9 +6534,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>StyleDisplayCategory &lt;dgm:cat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleDisplayCategory))]
-    [SchemaAttr(14, "catLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleDisplayCategories : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5694,6 +6567,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "catLst");
+            builder.AddChild<StyleDisplayCategory>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategory), 0, 0)
@@ -5720,13 +6600,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Scene3D))]
-    [ChildElementInfo(typeof(Shape3D))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(Style))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(14, "styleLbl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StyleLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5764,10 +6637,27 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Style Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleLbl");
+            builder.AddChild<Scene3D>();
+            builder.AddChild<Shape3D>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<Style>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<StyleLabel>()
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <summary>
         /// <para>3-D Scene.</para>
@@ -5860,9 +6750,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>Point &lt;dgm:pt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Point))]
-    [SchemaAttr(14, "ptLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PointList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5896,6 +6783,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "ptLst");
+            builder.AddChild<Point>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Point), 0, 0)
@@ -5918,9 +6812,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>Connection &lt;dgm:cxn></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Connection))]
-    [SchemaAttr(14, "cxnLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConnectionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5954,6 +6845,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "cxnLst");
+            builder.AddChild<Connection>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.Connection), 0, 0)
@@ -5983,16 +6881,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [SchemaAttr(14, "bg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6024,6 +6912,20 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Background(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "bg");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6069,11 +6971,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.EffectDag &lt;a:effectDag></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [SchemaAttr(14, "whole")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Whole : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6105,6 +7002,15 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Whole(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "whole");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
         }
 
         /// <summary>
@@ -6150,9 +7056,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.DataModelExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.DataModelExtension))]
-    [SchemaAttr(14, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataModelExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6186,6 +7089,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.DataModelExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DataModelExtension), 0, 0)
@@ -6209,10 +7119,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>Style &lt;dgm:style></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PresentationLayoutVariables))]
-    [ChildElementInfo(typeof(Style))]
-    [SchemaAttr(14, "prSet")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PropertySet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6250,227 +7156,325 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Presentation Element Identifier</para>
         /// <para>Represents the following attribute in the schema: presAssocID</para>
         /// </summary>
-        [NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
-        [StringValidator(Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}", UnionId = 0)]
-        [SchemaAttr(0, "presAssocID")]
-        [Index(0)]
-        public StringValue PresentationElementId { get; set; }
+        public StringValue PresentationElementId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Presentation Name</para>
         /// <para>Represents the following attribute in the schema: presName</para>
         /// </summary>
-        [SchemaAttr(0, "presName")]
-        [Index(1)]
-        public StringValue PresentationName { get; set; }
+        public StringValue PresentationName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Presentation Style Label</para>
         /// <para>Represents the following attribute in the schema: presStyleLbl</para>
         /// </summary>
-        [SchemaAttr(0, "presStyleLbl")]
-        [Index(2)]
-        public StringValue PresentationStyleLabel { get; set; }
+        public StringValue PresentationStyleLabel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Presentation Style Index</para>
         /// <para>Represents the following attribute in the schema: presStyleIdx</para>
         /// </summary>
-        [SchemaAttr(0, "presStyleIdx")]
-        [Index(3)]
-        public Int32Value PresentationStyleIndex { get; set; }
+        public Int32Value PresentationStyleIndex
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Presentation Style Count</para>
         /// <para>Represents the following attribute in the schema: presStyleCnt</para>
         /// </summary>
-        [SchemaAttr(0, "presStyleCnt")]
-        [Index(4)]
-        public Int32Value PresentationStyleCount { get; set; }
+        public Int32Value PresentationStyleCount
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Current Diagram Type</para>
         /// <para>Represents the following attribute in the schema: loTypeId</para>
         /// </summary>
-        [SchemaAttr(0, "loTypeId")]
-        [Index(5)]
-        public StringValue LayoutTypeId { get; set; }
+        public StringValue LayoutTypeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Current Diagram Category</para>
         /// <para>Represents the following attribute in the schema: loCatId</para>
         /// </summary>
-        [SchemaAttr(0, "loCatId")]
-        [Index(6)]
-        public StringValue LayoutCategoryId { get; set; }
+        public StringValue LayoutCategoryId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Current Style Type</para>
         /// <para>Represents the following attribute in the schema: qsTypeId</para>
         /// </summary>
-        [SchemaAttr(0, "qsTypeId")]
-        [Index(7)]
-        public StringValue QuickStyleTypeId { get; set; }
+        public StringValue QuickStyleTypeId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Current Style Category</para>
         /// <para>Represents the following attribute in the schema: qsCatId</para>
         /// </summary>
-        [SchemaAttr(0, "qsCatId")]
-        [Index(8)]
-        public StringValue QuickStyleCategoryId { get; set; }
+        public StringValue QuickStyleCategoryId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Color Transform Type Identifier</para>
         /// <para>Represents the following attribute in the schema: csTypeId</para>
         /// </summary>
-        [SchemaAttr(0, "csTypeId")]
-        [Index(9)]
-        public StringValue ColorType { get; set; }
+        public StringValue ColorType
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Color Transform Category</para>
         /// <para>Represents the following attribute in the schema: csCatId</para>
         /// </summary>
-        [SchemaAttr(0, "csCatId")]
-        [Index(10)]
-        public StringValue ColorCategoryId { get; set; }
+        public StringValue ColorCategoryId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coherent 3D Behavior</para>
         /// <para>Represents the following attribute in the schema: coherent3DOff</para>
         /// </summary>
-        [SchemaAttr(0, "coherent3DOff")]
-        [Index(11)]
-        public BooleanValue Coherent3D { get; set; }
+        public BooleanValue Coherent3D
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Placeholder Text</para>
         /// <para>Represents the following attribute in the schema: phldrT</para>
         /// </summary>
-        [SchemaAttr(0, "phldrT")]
-        [Index(12)]
-        public StringValue PlaceholderText { get; set; }
+        public StringValue PlaceholderText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Placeholder</para>
         /// <para>Represents the following attribute in the schema: phldr</para>
         /// </summary>
-        [SchemaAttr(0, "phldr")]
-        [Index(13)]
-        public BooleanValue Placeholder { get; set; }
+        public BooleanValue Placeholder
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Rotation</para>
         /// <para>Represents the following attribute in the schema: custAng</para>
         /// </summary>
-        [SchemaAttr(0, "custAng")]
-        [Index(14)]
-        public Int32Value Rotation { get; set; }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: custFlipVert</para>
         /// </summary>
-        [SchemaAttr(0, "custFlipVert")]
-        [Index(15)]
-        public BooleanValue VerticalFlip { get; set; }
+        public BooleanValue VerticalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: custFlipHor</para>
         /// </summary>
-        [SchemaAttr(0, "custFlipHor")]
-        [Index(16)]
-        public BooleanValue HorizontalFlip { get; set; }
+        public BooleanValue HorizontalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fixed Width Override</para>
         /// <para>Represents the following attribute in the schema: custSzX</para>
         /// </summary>
-        [SchemaAttr(0, "custSzX")]
-        [Index(17)]
-        public Int32Value FixedWidthOverride { get; set; }
+        public Int32Value FixedWidthOverride
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fixed Height Override</para>
         /// <para>Represents the following attribute in the schema: custSzY</para>
         /// </summary>
-        [SchemaAttr(0, "custSzY")]
-        [Index(18)]
-        public Int32Value FixedHeightOverride { get; set; }
+        public Int32Value FixedHeightOverride
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Width Scale</para>
         /// <para>Represents the following attribute in the schema: custScaleX</para>
         /// </summary>
-        [SchemaAttr(0, "custScaleX")]
-        [Index(19)]
-        public Int32Value WidthScale { get; set; }
+        public Int32Value WidthScale
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Height Scale</para>
         /// <para>Represents the following attribute in the schema: custScaleY</para>
         /// </summary>
-        [SchemaAttr(0, "custScaleY")]
-        [Index(20)]
-        public Int32Value HightScale { get; set; }
+        public Int32Value HightScale
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Changed</para>
         /// <para>Represents the following attribute in the schema: custT</para>
         /// </summary>
-        [SchemaAttr(0, "custT")]
-        [Index(21)]
-        public BooleanValue TextChanged { get; set; }
+        public BooleanValue TextChanged
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Factor Width</para>
         /// <para>Represents the following attribute in the schema: custLinFactX</para>
         /// </summary>
-        [SchemaAttr(0, "custLinFactX")]
-        [Index(22)]
-        public Int32Value FactorWidth { get; set; }
+        public Int32Value FactorWidth
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom Factor Height</para>
         /// <para>Represents the following attribute in the schema: custLinFactY</para>
         /// </summary>
-        [SchemaAttr(0, "custLinFactY")]
-        [Index(23)]
-        public Int32Value FactorHeight { get; set; }
+        public Int32Value FactorHeight
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Neighbor Offset Width</para>
         /// <para>Represents the following attribute in the schema: custLinFactNeighborX</para>
         /// </summary>
-        [SchemaAttr(0, "custLinFactNeighborX")]
-        [Index(24)]
-        public Int32Value NeighborOffsetWidth { get; set; }
+        public Int32Value NeighborOffsetWidth
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Neighbor Offset Height</para>
         /// <para>Represents the following attribute in the schema: custLinFactNeighborY</para>
         /// </summary>
-        [SchemaAttr(0, "custLinFactNeighborY")]
-        [Index(25)]
-        public Int32Value NeighborOffsetHeight { get; set; }
+        public Int32Value NeighborOffsetHeight
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Radius Scale</para>
         /// <para>Represents the following attribute in the schema: custRadScaleRad</para>
         /// </summary>
-        [SchemaAttr(0, "custRadScaleRad")]
-        [Index(26)]
-        public Int32Value RadiusScale { get; set; }
+        public Int32Value RadiusScale
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Include Angle Scale</para>
         /// <para>Represents the following attribute in the schema: custRadScaleInc</para>
         /// </summary>
-        [SchemaAttr(0, "custRadScaleInc")]
-        [Index(27)]
-        public Int32Value IncludeAngleScale { get; set; }
+        public Int32Value IncludeAngleScale
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "prSet");
+            builder.AddChild<PresentationLayoutVariables>();
+            builder.AddChild<Style>();
+            builder.AddElement<PropertySet>()
+.AddAttribute(0, "presAssocID", a => a.PresentationElementId, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+});
+})
+.AddAttribute(0, "presName", a => a.PresentationName)
+.AddAttribute(0, "presStyleLbl", a => a.PresentationStyleLabel)
+.AddAttribute(0, "presStyleIdx", a => a.PresentationStyleIndex)
+.AddAttribute(0, "presStyleCnt", a => a.PresentationStyleCount)
+.AddAttribute(0, "loTypeId", a => a.LayoutTypeId)
+.AddAttribute(0, "loCatId", a => a.LayoutCategoryId)
+.AddAttribute(0, "qsTypeId", a => a.QuickStyleTypeId)
+.AddAttribute(0, "qsCatId", a => a.QuickStyleCategoryId)
+.AddAttribute(0, "csTypeId", a => a.ColorType)
+.AddAttribute(0, "csCatId", a => a.ColorCategoryId)
+.AddAttribute(0, "coherent3DOff", a => a.Coherent3D)
+.AddAttribute(0, "phldrT", a => a.PlaceholderText)
+.AddAttribute(0, "phldr", a => a.Placeholder)
+.AddAttribute(0, "custAng", a => a.Rotation)
+.AddAttribute(0, "custFlipVert", a => a.VerticalFlip)
+.AddAttribute(0, "custFlipHor", a => a.HorizontalFlip)
+.AddAttribute(0, "custSzX", a => a.FixedWidthOverride)
+.AddAttribute(0, "custSzY", a => a.FixedHeightOverride)
+.AddAttribute(0, "custScaleX", a => a.WidthScale)
+.AddAttribute(0, "custScaleY", a => a.HightScale)
+.AddAttribute(0, "custT", a => a.TextChanged)
+.AddAttribute(0, "custLinFactX", a => a.FactorWidth)
+.AddAttribute(0, "custLinFactY", a => a.FactorHeight)
+.AddAttribute(0, "custLinFactNeighborX", a => a.NeighborOffsetWidth)
+.AddAttribute(0, "custLinFactNeighborY", a => a.NeighborOffsetHeight)
+.AddAttribute(0, "custRadScaleRad", a => a.RadiusScale)
+.AddAttribute(0, "custRadScaleInc", a => a.IncludeAngleScale);
+        }
 
         /// <summary>
         /// <para>Presentation Layout Variables.</para>
@@ -6535,23 +7539,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(14, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6589,10 +7576,37 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "spPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddElement<ShapeProperties>()
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -6663,11 +7677,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
-    [SchemaAttr(14, "t")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6699,6 +7708,15 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextBody(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "t");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
         }
 
         /// <summary>
@@ -6751,9 +7769,6 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PtExtension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PtExtension))]
-    [SchemaAttr(14, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6785,6 +7800,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PtExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PtExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

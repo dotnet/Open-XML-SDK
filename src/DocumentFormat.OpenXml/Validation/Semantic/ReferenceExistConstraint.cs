@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
-            var attribute = element.Attributes[_refAttribute];
+            var attribute = element.ParsedState.Attributes[_refAttribute];
 
             if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
                 if (element.GetType() == _element)
                 {
-                    var attribute = element.Attributes[_attribute];
+                    var attribute = element.ParsedState.Attributes[_attribute];
 
                     //Attributes whose value is empty string or null don't need to be cached.
                     if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))

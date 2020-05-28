@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -25,12 +26,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     ///   <item><description>Scope &lt;ntns:xsnScope></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(XsnLocation))]
-    [ChildElementInfo(typeof(CachedView))]
-    [ChildElementInfo(typeof(OpenByDefault))]
-    [ChildElementInfo(typeof(Scope))]
-    [SchemaAttr(39, "customXsn")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomXsn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -62,6 +57,16 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CustomXsn(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(39, "customXsn");
+            builder.AddChild<XsnLocation>();
+            builder.AddChild<CachedView>();
+            builder.AddChild<OpenByDefault>();
+            builder.AddChild<Scope>();
         }
 
         /// <summary>
@@ -135,8 +140,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnLocation.</para>
     /// </summary>
-    [SchemaAttr(39, "xsnLocation")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class XsnLocation : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -159,6 +162,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(39, "xsnLocation");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnLocation>(deep);
     }
@@ -168,8 +177,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:cached.</para>
     /// </summary>
-    [SchemaAttr(39, "cached")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CachedView : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -192,6 +199,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(39, "cached");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedView>(deep);
     }
@@ -201,8 +214,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:openByDefault.</para>
     /// </summary>
-    [SchemaAttr(39, "openByDefault")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OpenByDefault : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -225,6 +236,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(39, "openByDefault");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OpenByDefault>(deep);
     }
@@ -234,8 +251,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnScope.</para>
     /// </summary>
-    [SchemaAttr(39, "xsnScope")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Scope : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -256,6 +271,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(39, "xsnScope");
         }
 
         /// <inheritdoc/>

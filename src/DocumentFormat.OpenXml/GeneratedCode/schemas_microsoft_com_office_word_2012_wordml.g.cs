@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -18,8 +19,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:color.</para>
     /// </summary>
-    [SchemaAttr(69, "color")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Color : OpenXmlLeafElement
     {
         /// <summary>
@@ -36,12 +35,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>), UnionId = 0)]
-        [StringValidator(SimpleType = typeof(HexBinaryValue), Length = 3L, UnionId = 0)]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Run Content Theme Color</para>
@@ -50,9 +48,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "themeColor")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Run Content Theme Color Tint</para>
@@ -61,10 +61,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeTint")]
-        [Index(2)]
-        public StringValue ThemeTint { get; set; }
+        public StringValue ThemeTint
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Run Content Theme Color Shade</para>
@@ -73,10 +74,37 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [StringValidator(Pattern = "[0-9a-fA-F]*", MinLength = 1L, MaxLength = 2L)]
-        [SchemaAttr(23, "themeShade")]
-        [Index(3)]
-        public StringValue ThemeShade { get; set; }
+        public StringValue ThemeShade
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "color");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<Color>()
+.AddAttribute(23, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>)), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { SimpleType = (typeof(HexBinaryValue)), Length = (3L), UnionId = (0) });
+});
+})
+.AddAttribute(23, "themeColor", a => a.ThemeColor)
+.AddAttribute(23, "themeTint", a => a.ThemeTint, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+})
+.AddAttribute(23, "themeShade", a => a.ThemeShade, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Color>(deep);
@@ -87,8 +115,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:dataBinding.</para>
     /// </summary>
-    [SchemaAttr(69, "dataBinding")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataBinding : OpenXmlLeafElement
     {
         /// <summary>
@@ -105,9 +131,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "prefixMappings")]
-        [Index(0)]
-        public StringValue PrefixMappings { get; set; }
+        public StringValue PrefixMappings
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>XPath</para>
@@ -116,10 +144,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "xpath")]
-        [Index(1)]
-        public StringValue XPath { get; set; }
+        public StringValue XPath
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Custom XML Data Storage ID</para>
@@ -128,10 +157,28 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "storeItemID")]
-        [Index(2)]
-        public StringValue StoreItemId { get; set; }
+        public StringValue StoreItemId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "dataBinding");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<DataBinding>()
+.AddAttribute(23, "prefixMappings", a => a.PrefixMappings)
+.AddAttribute(23, "xpath", a => a.XPath, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(23, "storeItemID", a => a.StoreItemId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataBinding>(deep);
@@ -142,8 +189,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:appearance.</para>
     /// </summary>
-    [SchemaAttr(69, "appearance")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Appearance : OpenXmlLeafElement
     {
         /// <summary>
@@ -160,10 +205,23 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2013)]
-        [SchemaAttr(69, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "appearance");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<Appearance>()
+.AddAttribute(69, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Appearance>(deep);
@@ -180,9 +238,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     ///   <item><description>CommentEx &lt;w15:commentEx></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CommentEx), FileFormatVersions.Office2013)]
-    [SchemaAttr(69, "commentsEx")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class CommentsEx : OpenXmlPartRootElement
     {
         /// <summary>
@@ -214,6 +269,14 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CommentsEx(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "commentsEx");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<CommentEx>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -269,9 +332,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     ///   <item><description>Person &lt;w15:person></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Person), FileFormatVersions.Office2013)]
-    [SchemaAttr(69, "people")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class People : OpenXmlPartRootElement
     {
         /// <summary>
@@ -303,6 +363,14 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public People(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "people");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<Person>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -359,10 +427,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     ///   <item><description>DoNotAllowInsertDeleteSection &lt;w15:doNotAllowInsertDeleteSection></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SectionTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DoNotAllowInsertDeleteSection), FileFormatVersions.Office2013)]
-    [SchemaAttr(69, "repeatingSection")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SdtRepeatedSection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -394,6 +458,15 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SdtRepeatedSection(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "repeatingSection");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<SectionTitle>();
+            builder.AddChild<DoNotAllowInsertDeleteSection>();
         }
 
         /// <summary>
@@ -439,8 +512,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:repeatingSectionItem.</para>
     /// </summary>
-    [SchemaAttr(69, "repeatingSectionItem")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -448,6 +519,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </summary>
         public SdtRepeatedSectionItem() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "repeatingSectionItem");
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -459,8 +537,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:chartTrackingRefBased.</para>
     /// </summary>
-    [SchemaAttr(69, "chartTrackingRefBased")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ChartTrackingRefBased : OnOffType
     {
         /// <summary>
@@ -468,6 +544,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </summary>
         public ChartTrackingRefBased() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "chartTrackingRefBased");
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -479,8 +562,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:collapsed.</para>
     /// </summary>
-    [SchemaAttr(69, "collapsed")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DefaultCollapsed : OnOffType
     {
         /// <summary>
@@ -488,6 +569,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </summary>
         public DefaultCollapsed() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "collapsed");
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -499,8 +587,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:webExtensionLinked.</para>
     /// </summary>
-    [SchemaAttr(69, "webExtensionLinked")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class WebExtensionLinked : OnOffType
     {
         /// <summary>
@@ -508,6 +594,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </summary>
         public WebExtensionLinked() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "webExtensionLinked");
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -519,8 +612,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:webExtensionCreated.</para>
     /// </summary>
-    [SchemaAttr(69, "webExtensionCreated")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class WebExtensionCreated : OnOffType
     {
         /// <summary>
@@ -528,6 +619,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </summary>
         public WebExtensionCreated() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "webExtensionCreated");
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -539,8 +637,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:doNotAllowInsertDeleteSection.</para>
     /// </summary>
-    [SchemaAttr(69, "doNotAllowInsertDeleteSection")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DoNotAllowInsertDeleteSection : OnOffType
     {
         /// <summary>
@@ -548,6 +644,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </summary>
         public DoNotAllowInsertDeleteSection() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "doNotAllowInsertDeleteSection");
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -575,9 +678,18 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public OnOffValue Val { get; set; }
+        public OnOffValue Val
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OnOffType>()
+                           .AddAttribute(23, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -585,8 +697,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:docId.</para>
     /// </summary>
-    [SchemaAttr(69, "docId")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PersistentDocumentId : OpenXmlLeafElement
     {
         /// <summary>
@@ -603,11 +713,24 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2013)]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(69, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "docId");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<PersistentDocumentId>()
+.AddAttribute(69, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PersistentDocumentId>(deep);
@@ -618,8 +741,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:footnoteColumns.</para>
     /// </summary>
-    [SchemaAttr(69, "footnoteColumns")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class FootnoteColumns : OpenXmlLeafElement
     {
         /// <summary>
@@ -636,10 +757,23 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "footnoteColumns");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<FootnoteColumns>()
+.AddAttribute(23, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnoteColumns>(deep);
@@ -650,8 +784,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:commentEx.</para>
     /// </summary>
-    [SchemaAttr(69, "commentEx")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class CommentEx : OpenXmlLeafElement
     {
         /// <summary>
@@ -668,12 +800,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2013)]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(69, "paraId")]
-        [Index(0)]
-        public HexBinaryValue ParaId { get; set; }
+        public HexBinaryValue ParaId
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>paraIdParent, this property is only available in Office2013, Office2016</para>
@@ -682,11 +813,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2013)]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(69, "paraIdParent")]
-        [Index(1)]
-        public HexBinaryValue ParaIdParent { get; set; }
+        public HexBinaryValue ParaIdParent
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>done, this property is only available in Office2013, Office2016</para>
@@ -695,10 +826,34 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2013)]
-        [SchemaAttr(69, "done")]
-        [Index(2)]
-        public OnOffValue Done { get; set; }
+        public OnOffValue Done
+        {
+            get => GetAttribute<OnOffValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "commentEx");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<CommentEx>()
+.AddAttribute(69, "paraId", a => a.ParaId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(69, "paraIdParent", a => a.ParaIdParent, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(69, "done", a => a.Done, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+});
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValuePatternConstraint(0 /*w15:paraId*/, @"[0-9a-fA-F]{8}") { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 },
@@ -722,9 +877,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     ///   <item><description>PresenceInfo &lt;w15:presenceInfo></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PresenceInfo), FileFormatVersions.Office2013)]
-    [SchemaAttr(69, "person")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
@@ -765,11 +917,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2013)]
-        [SchemaAttr(69, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contact, this property is only available in Office2013, Office2016</para>
@@ -778,11 +930,30 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2013)]
-        [SchemaAttr(69, "contact")]
-        [Index(1)]
-        public StringValue Contact { get; set; }
+        public StringValue Contact
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "person");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<PresenceInfo>();
+            builder.AddElement<Person>()
+.AddAttribute(69, "author", a => a.Author, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+})
+.AddAttribute(69, "contact", a => a.Contact, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+});
+        }
 
         /// <summary>
         /// <para>PresenceInfo.</para>
@@ -813,8 +984,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:presenceInfo.</para>
     /// </summary>
-    [SchemaAttr(69, "presenceInfo")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PresenceInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -831,11 +1000,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2013)]
-        [SchemaAttr(69, "providerId")]
-        [Index(0)]
-        public StringValue ProviderId { get; set; }
+        public StringValue ProviderId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>userId, this property is only available in Office2013, Office2016</para>
@@ -844,11 +1013,29 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2013)]
-        [SchemaAttr(69, "userId")]
-        [Index(1)]
-        public StringValue UserId { get; set; }
+        public StringValue UserId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "presenceInfo");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<PresenceInfo>()
+.AddAttribute(69, "providerId", a => a.ProviderId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+})
+.AddAttribute(69, "userId", a => a.UserId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+});
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueLengthConstraint(0 /*w15:providerId*/, 1, 100) { Application = ApplicationType.Word, Version = FileFormatVersions.Office2013 },
@@ -866,8 +1053,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:sectionTitle.</para>
     /// </summary>
-    [SchemaAttr(69, "sectionTitle")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SectionTitle : OpenXmlLeafElement
     {
         /// <summary>
@@ -884,10 +1069,23 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(23, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(69, "sectionTitle");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<SectionTitle>()
+.AddAttribute(23, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionTitle>(deep);

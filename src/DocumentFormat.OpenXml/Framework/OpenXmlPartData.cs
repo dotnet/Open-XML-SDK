@@ -10,10 +10,10 @@ namespace DocumentFormat.OpenXml.Framework
         private readonly Lazy<PartConstraintCollection> _constraints;
         private readonly Lazy<PartConstraintCollection> _dataParts;
 
-        public OpenXmlPartData(Type type, Func<Type, OpenXmlElementData> dataFactory)
+        public OpenXmlPartData(Type type)
         {
-            _constraints = new Lazy<PartConstraintCollection>(() => PartConstraintCollection.Create<PartConstraintAttribute>(dataFactory, type), true);
-            _dataParts = new Lazy<PartConstraintCollection>(() => PartConstraintCollection.Create<DataPartConstraintAttribute>(dataFactory, type), true);
+            _constraints = new Lazy<PartConstraintCollection>(() => PartConstraintCollection.Create<PartConstraintAttribute>(type), true);
+            _dataParts = new Lazy<PartConstraintCollection>(() => PartConstraintCollection.Create<DataPartConstraintAttribute>(type), true);
         }
 
         public PartConstraintCollection PartConstraints => _constraints.Value;

@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -22,8 +23,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:path.</para>
     /// </summary>
-    [SchemaAttr(26, "path")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Path : OpenXmlLeafElement
     {
         /// <summary>
@@ -37,89 +36,111 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Path Definition</para>
         /// <para>Represents the following attribute in the schema: v</para>
         /// </summary>
-        [SchemaAttr(0, "v")]
-        [Index(1)]
-        public StringValue Value { get; set; }
+        public StringValue Value
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Limo Stretch Point</para>
         /// <para>Represents the following attribute in the schema: limo</para>
         /// </summary>
-        [SchemaAttr(0, "limo")]
-        [Index(2)]
-        public StringValue Limo { get; set; }
+        public StringValue Limo
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Box Bounding Box</para>
         /// <para>Represents the following attribute in the schema: textboxrect</para>
         /// </summary>
-        [SchemaAttr(0, "textboxrect")]
-        [Index(3)]
-        public StringValue TextboxRectangle { get; set; }
+        public StringValue TextboxRectangle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: fillok</para>
         /// </summary>
-        [SchemaAttr(0, "fillok")]
-        [Index(4)]
-        public TrueFalseValue AllowFill { get; set; }
+        public TrueFalseValue AllowFill
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: strokeok</para>
         /// </summary>
-        [SchemaAttr(0, "strokeok")]
-        [Index(5)]
-        public TrueFalseValue AllowStroke { get; set; }
+        public TrueFalseValue AllowStroke
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Toggle</para>
         /// <para>Represents the following attribute in the schema: shadowok</para>
         /// </summary>
-        [SchemaAttr(0, "shadowok")]
-        [Index(6)]
-        public TrueFalseValue AllowShading { get; set; }
+        public TrueFalseValue AllowShading
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Arrowhead Display Toggle</para>
         /// <para>Represents the following attribute in the schema: arrowok</para>
         /// </summary>
-        [SchemaAttr(0, "arrowok")]
-        [Index(7)]
-        public TrueFalseValue ShowArrowhead { get; set; }
+        public TrueFalseValue ShowArrowhead
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Gradient Shape Toggle</para>
         /// <para>Represents the following attribute in the schema: gradientshapeok</para>
         /// </summary>
-        [SchemaAttr(0, "gradientshapeok")]
-        [Index(8)]
-        public TrueFalseValue AllowGradientShape { get; set; }
+        public TrueFalseValue AllowGradientShape
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Path Toggle</para>
         /// <para>Represents the following attribute in the schema: textpathok</para>
         /// </summary>
-        [SchemaAttr(0, "textpathok")]
-        [Index(9)]
-        public TrueFalseValue AllowTextPath { get; set; }
+        public TrueFalseValue AllowTextPath
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Stroke From Path Flag</para>
         /// <para>Represents the following attribute in the schema: insetpenok</para>
         /// </summary>
-        [SchemaAttr(0, "insetpenok")]
-        [Index(10)]
-        public TrueFalseValue AllowInsetPen { get; set; }
+        public TrueFalseValue AllowInsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Connection Point Type</para>
@@ -128,9 +149,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connecttype")]
-        [Index(11)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues> ConnectionPointType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues> ConnectionPointType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Connection Points</para>
@@ -139,9 +162,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectlocs")]
-        [Index(12)]
-        public StringValue ConnectionPoints { get; set; }
+        public StringValue ConnectionPoints
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Connection Point Connect Angles</para>
@@ -150,9 +175,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectangles")]
-        [Index(13)]
-        public StringValue ConnectAngles { get; set; }
+        public StringValue ConnectAngles
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extrusion Toggle</para>
@@ -161,9 +188,33 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "extrusionok")]
-        [Index(14)]
-        public TrueFalseValue AllowExtrusion { get; set; }
+        public TrueFalseValue AllowExtrusion
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "path");
+            builder.AddElement<Path>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "v", a => a.Value)
+.AddAttribute(0, "limo", a => a.Limo)
+.AddAttribute(0, "textboxrect", a => a.TextboxRectangle)
+.AddAttribute(0, "fillok", a => a.AllowFill)
+.AddAttribute(0, "strokeok", a => a.AllowStroke)
+.AddAttribute(0, "shadowok", a => a.AllowShading)
+.AddAttribute(0, "arrowok", a => a.ShowArrowhead)
+.AddAttribute(0, "gradientshapeok", a => a.AllowGradientShape)
+.AddAttribute(0, "textpathok", a => a.AllowTextPath)
+.AddAttribute(0, "insetpenok", a => a.AllowInsetPen)
+.AddAttribute(27, "connecttype", a => a.ConnectionPointType)
+.AddAttribute(27, "connectlocs", a => a.ConnectionPoints)
+.AddAttribute(27, "connectangles", a => a.ConnectAngles)
+.AddAttribute(27, "extrusionok", a => a.AllowExtrusion);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
@@ -186,9 +237,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>Formula &lt;v:f></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula))]
-    [SchemaAttr(26, "formulas")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Formulas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -222,6 +270,13 @@ namespace DocumentFormat.OpenXml.Vml
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "formulas");
+            builder.AddChild<Formula>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formula), 0, 128)
@@ -244,9 +299,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>ShapeHandle &lt;v:h></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeHandle))]
-    [SchemaAttr(26, "handles")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeHandles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -280,6 +332,13 @@ namespace DocumentFormat.OpenXml.Vml
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "handles");
+            builder.AddChild<ShapeHandle>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandle), 0, 4)
@@ -302,9 +361,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties &lt;o:fill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties))]
-    [SchemaAttr(26, "fill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Fill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -342,57 +398,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        [SchemaAttr(0, "on")]
-        [Index(2)]
-        public TrueFalseValue On { get; set; }
+        public TrueFalseValue On
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Primary Color</para>
         /// <para>Represents the following attribute in the schema: color</para>
         /// </summary>
-        [SchemaAttr(0, "color")]
-        [Index(3)]
-        public StringValue Color { get; set; }
+        public StringValue Color
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Primary Color Opacity</para>
         /// <para>Represents the following attribute in the schema: opacity</para>
         /// </summary>
-        [SchemaAttr(0, "opacity")]
-        [Index(4)]
-        public StringValue Opacity { get; set; }
+        public StringValue Opacity
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Secondary Color</para>
         /// <para>Represents the following attribute in the schema: color2</para>
         /// </summary>
-        [SchemaAttr(0, "color2")]
-        [Index(5)]
-        public StringValue Color2 { get; set; }
+        public StringValue Color2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Image Source</para>
         /// <para>Represents the following attribute in the schema: src</para>
         /// </summary>
-        [SchemaAttr(0, "src")]
-        [Index(6)]
-        public StringValue Source { get; set; }
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
@@ -401,9 +471,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "href")]
-        [Index(7)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Image Reference Location</para>
@@ -412,97 +484,121 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "althref")]
-        [Index(8)]
-        public StringValue AlternateImageReference { get; set; }
+        public StringValue AlternateImageReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Image Size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        [SchemaAttr(0, "size")]
-        [Index(9)]
-        public StringValue Size { get; set; }
+        public StringValue Size
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Image Origin</para>
         /// <para>Represents the following attribute in the schema: origin</para>
         /// </summary>
-        [SchemaAttr(0, "origin")]
-        [Index(10)]
-        public StringValue Origin { get; set; }
+        public StringValue Origin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Image Position</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        [SchemaAttr(0, "position")]
-        [Index(11)]
-        public StringValue Position { get; set; }
+        public StringValue Position
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Aspect Ratio</para>
         /// <para>Represents the following attribute in the schema: aspect</para>
         /// </summary>
-        [SchemaAttr(0, "aspect")]
-        [Index(12)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> Aspect { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> Aspect
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Intermediate Colors</para>
         /// <para>Represents the following attribute in the schema: colors</para>
         /// </summary>
-        [SchemaAttr(0, "colors")]
-        [Index(13)]
-        public StringValue Colors { get; set; }
+        public StringValue Colors
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Gradient Angle</para>
         /// <para>Represents the following attribute in the schema: angle</para>
         /// </summary>
-        [SchemaAttr(0, "angle")]
-        [Index(14)]
-        public DecimalValue Angle { get; set; }
+        public DecimalValue Angle
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Align Image With Shape</para>
         /// <para>Represents the following attribute in the schema: alignshape</para>
         /// </summary>
-        [SchemaAttr(0, "alignshape")]
-        [Index(15)]
-        public TrueFalseValue AlignShape { get; set; }
+        public TrueFalseValue AlignShape
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Gradient Center</para>
         /// <para>Represents the following attribute in the schema: focus</para>
         /// </summary>
-        [SchemaAttr(0, "focus")]
-        [Index(16)]
-        public StringValue Focus { get; set; }
+        public StringValue Focus
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Radial Gradient Size</para>
         /// <para>Represents the following attribute in the schema: focussize</para>
         /// </summary>
-        [SchemaAttr(0, "focussize")]
-        [Index(17)]
-        public StringValue FocusSize { get; set; }
+        public StringValue FocusSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Radial Gradient Center</para>
         /// <para>Represents the following attribute in the schema: focusposition</para>
         /// </summary>
-        [SchemaAttr(0, "focusposition")]
-        [Index(18)]
-        public StringValue FocusPosition { get; set; }
+        public StringValue FocusPosition
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Gradient Fill Method</para>
         /// <para>Represents the following attribute in the schema: method</para>
         /// </summary>
-        [SchemaAttr(0, "method")]
-        [Index(19)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues> Method { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues> Method
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Detect Mouse Click</para>
@@ -511,9 +607,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "detectmouseclick")]
-        [Index(20)]
-        public TrueFalseValue DetectMouseClick { get; set; }
+        public TrueFalseValue DetectMouseClick
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Title</para>
@@ -522,9 +620,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "title")]
-        [Index(21)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Secondary Color Opacity</para>
@@ -533,25 +633,31 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "opacity2")]
-        [Index(22)]
-        public StringValue Opacity2 { get; set; }
+        public StringValue Opacity2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Recolor Fill as Picture</para>
         /// <para>Represents the following attribute in the schema: recolor</para>
         /// </summary>
-        [SchemaAttr(0, "recolor")]
-        [Index(23)]
-        public TrueFalseValue Recolor { get; set; }
+        public TrueFalseValue Recolor
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rotate Fill with Shape</para>
         /// <para>Represents the following attribute in the schema: rotate</para>
         /// </summary>
-        [SchemaAttr(0, "rotate")]
-        [Index(24)]
-        public TrueFalseValue Rotate { get; set; }
+        public TrueFalseValue Rotate
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship to Part</para>
@@ -560,9 +666,45 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(25)]
-        public StringValue RelationshipId { get; set; }
+        public StringValue RelationshipId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "fill");
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
+            builder.AddElement<Fill>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "color", a => a.Color)
+.AddAttribute(0, "opacity", a => a.Opacity)
+.AddAttribute(0, "color2", a => a.Color2)
+.AddAttribute(0, "src", a => a.Source)
+.AddAttribute(27, "href", a => a.Href)
+.AddAttribute(27, "althref", a => a.AlternateImageReference)
+.AddAttribute(0, "size", a => a.Size)
+.AddAttribute(0, "origin", a => a.Origin)
+.AddAttribute(0, "position", a => a.Position)
+.AddAttribute(0, "aspect", a => a.Aspect)
+.AddAttribute(0, "colors", a => a.Colors)
+.AddAttribute(0, "angle", a => a.Angle)
+.AddAttribute(0, "alignshape", a => a.AlignShape)
+.AddAttribute(0, "focus", a => a.Focus)
+.AddAttribute(0, "focussize", a => a.FocusSize)
+.AddAttribute(0, "focusposition", a => a.FocusPosition)
+.AddAttribute(0, "method", a => a.Method)
+.AddAttribute(27, "detectmouseclick", a => a.DetectMouseClick)
+.AddAttribute(27, "title", a => a.Title)
+.AddAttribute(27, "opacity2", a => a.Opacity2)
+.AddAttribute(0, "recolor", a => a.Recolor)
+.AddAttribute(0, "rotate", a => a.Rotate)
+.AddAttribute(19, "id", a => a.RelationshipId);
+        }
 
         /// <summary>
         /// <para>FillExtendedProperties.</para>
@@ -615,13 +757,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ColumnStroke &lt;o:column></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.TopStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.RightStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke))]
-    [SchemaAttr(26, "stroke")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Stroke : OpenXmlCompositeElement
     {
         /// <summary>
@@ -659,177 +794,221 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        [SchemaAttr(0, "on")]
-        [Index(1)]
-        public TrueFalseValue On { get; set; }
+        public TrueFalseValue On
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: weight</para>
         /// </summary>
-        [SchemaAttr(0, "weight")]
-        [Index(2)]
-        public StringValue Weight { get; set; }
+        public StringValue Weight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Color</para>
         /// <para>Represents the following attribute in the schema: color</para>
         /// </summary>
-        [SchemaAttr(0, "color")]
-        [Index(3)]
-        public StringValue Color { get; set; }
+        public StringValue Color
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Opacity</para>
         /// <para>Represents the following attribute in the schema: opacity</para>
         /// </summary>
-        [SchemaAttr(0, "opacity")]
-        [Index(4)]
-        public StringValue Opacity { get; set; }
+        public StringValue Opacity
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Line Style</para>
         /// <para>Represents the following attribute in the schema: linestyle</para>
         /// </summary>
-        [SchemaAttr(0, "linestyle")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues> LineStyle { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues> LineStyle
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Miter Joint Limit</para>
         /// <para>Represents the following attribute in the schema: miterlimit</para>
         /// </summary>
-        [SchemaAttr(0, "miterlimit")]
-        [Index(6)]
-        public StringValue Miterlimit { get; set; }
+        public StringValue Miterlimit
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Join Style</para>
         /// <para>Represents the following attribute in the schema: joinstyle</para>
         /// </summary>
-        [SchemaAttr(0, "joinstyle")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues> JoinStyle { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues> JoinStyle
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Cap</para>
         /// <para>Represents the following attribute in the schema: endcap</para>
         /// </summary>
-        [SchemaAttr(0, "endcap")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues> EndCap { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues> EndCap
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Dash Pattern</para>
         /// <para>Represents the following attribute in the schema: dashstyle</para>
         /// </summary>
-        [SchemaAttr(0, "dashstyle")]
-        [Index(9)]
-        public StringValue DashStyle { get; set; }
+        public StringValue DashStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Image Style</para>
         /// <para>Represents the following attribute in the schema: filltype</para>
         /// </summary>
-        [SchemaAttr(0, "filltype")]
-        [Index(10)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues> FillType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues> FillType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Image Location</para>
         /// <para>Represents the following attribute in the schema: src</para>
         /// </summary>
-        [SchemaAttr(0, "src")]
-        [Index(11)]
-        public StringValue Source { get; set; }
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Image Aspect Ratio</para>
         /// <para>Represents the following attribute in the schema: imageaspect</para>
         /// </summary>
-        [SchemaAttr(0, "imageaspect")]
-        [Index(12)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> ImageAspect { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> ImageAspect
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Image Size</para>
         /// <para>Represents the following attribute in the schema: imagesize</para>
         /// </summary>
-        [SchemaAttr(0, "imagesize")]
-        [Index(13)]
-        public StringValue ImageSize { get; set; }
+        public StringValue ImageSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stoke Image Alignment</para>
         /// <para>Represents the following attribute in the schema: imagealignshape</para>
         /// </summary>
-        [SchemaAttr(0, "imagealignshape")]
-        [Index(14)]
-        public TrueFalseValue ImageAlignShape { get; set; }
+        public TrueFalseValue ImageAlignShape
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Alternate Pattern Color</para>
         /// <para>Represents the following attribute in the schema: color2</para>
         /// </summary>
-        [SchemaAttr(0, "color2")]
-        [Index(15)]
-        public StringValue Color2 { get; set; }
+        public StringValue Color2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Start Arrowhead</para>
         /// <para>Represents the following attribute in the schema: startarrow</para>
         /// </summary>
-        [SchemaAttr(0, "startarrow")]
-        [Index(16)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> StartArrow { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> StartArrow
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Start Arrowhead Width</para>
         /// <para>Represents the following attribute in the schema: startarrowwidth</para>
         /// </summary>
-        [SchemaAttr(0, "startarrowwidth")]
-        [Index(17)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> StartArrowWidth { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> StartArrowWidth
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Start Arrowhead Length</para>
         /// <para>Represents the following attribute in the schema: startarrowlength</para>
         /// </summary>
-        [SchemaAttr(0, "startarrowlength")]
-        [Index(18)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> StartArrowLength { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> StartArrowLength
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Arrowhead</para>
         /// <para>Represents the following attribute in the schema: endarrow</para>
         /// </summary>
-        [SchemaAttr(0, "endarrow")]
-        [Index(19)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> EndArrow { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> EndArrow
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Arrowhead Width</para>
         /// <para>Represents the following attribute in the schema: endarrowwidth</para>
         /// </summary>
-        [SchemaAttr(0, "endarrowwidth")]
-        [Index(20)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> EndArrowWidth { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> EndArrowWidth
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Arrowhead Length</para>
         /// <para>Represents the following attribute in the schema: endarrowlength</para>
         /// </summary>
-        [SchemaAttr(0, "endarrowlength")]
-        [Index(21)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> EndArrowLength { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> EndArrowLength
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Original Image Reference</para>
@@ -838,9 +1017,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "href")]
-        [Index(22)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Image Reference</para>
@@ -849,9 +1030,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "althref")]
-        [Index(23)]
-        public StringValue AlternateImageReference { get; set; }
+        public StringValue AlternateImageReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Stroke Title</para>
@@ -860,9 +1043,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "title")]
-        [Index(24)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -871,9 +1056,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(25)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship</para>
@@ -882,17 +1069,61 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(26)]
-        public StringValue RelationshipId { get; set; }
+        public StringValue RelationshipId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(27)]
-        public TrueFalseValue Insetpen { get; set; }
+        public TrueFalseValue Insetpen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "stroke");
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.BottomStroke>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>();
+            builder.AddElement<Stroke>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "weight", a => a.Weight)
+.AddAttribute(0, "color", a => a.Color)
+.AddAttribute(0, "opacity", a => a.Opacity)
+.AddAttribute(0, "linestyle", a => a.LineStyle)
+.AddAttribute(0, "miterlimit", a => a.Miterlimit)
+.AddAttribute(0, "joinstyle", a => a.JoinStyle)
+.AddAttribute(0, "endcap", a => a.EndCap)
+.AddAttribute(0, "dashstyle", a => a.DashStyle)
+.AddAttribute(0, "filltype", a => a.FillType)
+.AddAttribute(0, "src", a => a.Source)
+.AddAttribute(0, "imageaspect", a => a.ImageAspect)
+.AddAttribute(0, "imagesize", a => a.ImageSize)
+.AddAttribute(0, "imagealignshape", a => a.ImageAlignShape)
+.AddAttribute(0, "color2", a => a.Color2)
+.AddAttribute(0, "startarrow", a => a.StartArrow)
+.AddAttribute(0, "startarrowwidth", a => a.StartArrowWidth)
+.AddAttribute(0, "startarrowlength", a => a.StartArrowLength)
+.AddAttribute(0, "endarrow", a => a.EndArrow)
+.AddAttribute(0, "endarrowwidth", a => a.EndArrowWidth)
+.AddAttribute(0, "endarrowlength", a => a.EndArrowLength)
+.AddAttribute(27, "href", a => a.Href)
+.AddAttribute(27, "althref", a => a.AlternateImageReference)
+.AddAttribute(27, "title", a => a.Title)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(19, "id", a => a.RelationshipId)
+.AddAttribute(0, "insetpen", a => a.Insetpen);
+        }
 
         /// <summary>
         /// <para>LeftStroke.</para>
@@ -989,8 +1220,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:shadow.</para>
     /// </summary>
-    [SchemaAttr(26, "shadow")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shadow : OpenXmlLeafElement
     {
         /// <summary>
@@ -1004,89 +1233,129 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        [SchemaAttr(0, "on")]
-        [Index(1)]
-        public TrueFalseValue On { get; set; }
+        public TrueFalseValue On
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Transparency</para>
         /// <para>Represents the following attribute in the schema: obscured</para>
         /// </summary>
-        [SchemaAttr(0, "obscured")]
-        [Index(3)]
-        public TrueFalseValue Obscured { get; set; }
+        public TrueFalseValue Obscured
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Primary Color</para>
         /// <para>Represents the following attribute in the schema: color</para>
         /// </summary>
-        [SchemaAttr(0, "color")]
-        [Index(4)]
-        public StringValue Color { get; set; }
+        public StringValue Color
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Opacity</para>
         /// <para>Represents the following attribute in the schema: opacity</para>
         /// </summary>
-        [SchemaAttr(0, "opacity")]
-        [Index(5)]
-        public StringValue Opacity { get; set; }
+        public StringValue Opacity
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Primary Offset</para>
         /// <para>Represents the following attribute in the schema: offset</para>
         /// </summary>
-        [SchemaAttr(0, "offset")]
-        [Index(6)]
-        public StringValue Offset { get; set; }
+        public StringValue Offset
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Secondary Color</para>
         /// <para>Represents the following attribute in the schema: color2</para>
         /// </summary>
-        [SchemaAttr(0, "color2")]
-        [Index(7)]
-        public StringValue Color2 { get; set; }
+        public StringValue Color2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Secondary Offset</para>
         /// <para>Represents the following attribute in the schema: offset2</para>
         /// </summary>
-        [SchemaAttr(0, "offset2")]
-        [Index(8)]
-        public StringValue Offset2 { get; set; }
+        public StringValue Offset2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Origin</para>
         /// <para>Represents the following attribute in the schema: origin</para>
         /// </summary>
-        [SchemaAttr(0, "origin")]
-        [Index(9)]
-        public StringValue Origin { get; set; }
+        public StringValue Origin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shadow Perspective Matrix</para>
         /// <para>Represents the following attribute in the schema: matrix</para>
         /// </summary>
-        [SchemaAttr(0, "matrix")]
-        [Index(10)]
-        public StringValue Matrix { get; set; }
+        public StringValue Matrix
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "shadow");
+            builder.AddElement<Shadow>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "obscured", a => a.Obscured)
+.AddAttribute(0, "color", a => a.Color)
+.AddAttribute(0, "opacity", a => a.Opacity)
+.AddAttribute(0, "offset", a => a.Offset)
+.AddAttribute(0, "color2", a => a.Color2)
+.AddAttribute(0, "offset2", a => a.Offset2)
+.AddAttribute(0, "origin", a => a.Origin)
+.AddAttribute(0, "matrix", a => a.Matrix);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
@@ -1109,9 +1378,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.TextBoxContent &lt;w:txbxContent></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
-    [SchemaAttr(26, "textbox")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1149,25 +1415,31 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Box Inset</para>
         /// <para>Represents the following attribute in the schema: inset</para>
         /// </summary>
-        [SchemaAttr(0, "inset")]
-        [Index(2)]
-        public StringValue Inset { get; set; }
+        public StringValue Inset
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Box Single-Click Selection Toggle</para>
@@ -1176,9 +1448,23 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "singleclick")]
-        [Index(3)]
-        public TrueFalseValue SingleClick { get; set; }
+        public TrueFalseValue SingleClick
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "textbox");
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
+            builder.AddElement<TextBox>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "inset", a => a.Inset)
+.AddAttribute(27, "singleclick", a => a.SingleClick);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
@@ -1203,8 +1489,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:textpath.</para>
     /// </summary>
-    [SchemaAttr(26, "textpath")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextPath : OpenXmlLeafElement
     {
         /// <summary>
@@ -1218,65 +1502,96 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Path Toggle</para>
         /// <para>Represents the following attribute in the schema: on</para>
         /// </summary>
-        [SchemaAttr(0, "on")]
-        [Index(2)]
-        public TrueFalseValue On { get; set; }
+        public TrueFalseValue On
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fit Toggle</para>
         /// <para>Represents the following attribute in the schema: fitshape</para>
         /// </summary>
-        [SchemaAttr(0, "fitshape")]
-        [Index(3)]
-        public TrueFalseValue FitShape { get; set; }
+        public TrueFalseValue FitShape
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Path Fit Toggle</para>
         /// <para>Represents the following attribute in the schema: fitpath</para>
         /// </summary>
-        [SchemaAttr(0, "fitpath")]
-        [Index(4)]
-        public TrueFalseValue FitPath { get; set; }
+        public TrueFalseValue FitPath
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Path Trim Toggle</para>
         /// <para>Represents the following attribute in the schema: trim</para>
         /// </summary>
-        [SchemaAttr(0, "trim")]
-        [Index(5)]
-        public TrueFalseValue Trim { get; set; }
+        public TrueFalseValue Trim
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text X-Scaling</para>
         /// <para>Represents the following attribute in the schema: xscale</para>
         /// </summary>
-        [SchemaAttr(0, "xscale")]
-        [Index(6)]
-        public TrueFalseValue XScale { get; set; }
+        public TrueFalseValue XScale
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Path Text</para>
         /// <para>Represents the following attribute in the schema: string</para>
         /// </summary>
-        [SchemaAttr(0, "string")]
-        [Index(7)]
-        public StringValue String { get; set; }
+        public StringValue String
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "textpath");
+            builder.AddElement<TextPath>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "on", a => a.On)
+.AddAttribute(0, "fitshape", a => a.FitShape)
+.AddAttribute(0, "fitpath", a => a.FitPath)
+.AddAttribute(0, "trim", a => a.Trim)
+.AddAttribute(0, "xscale", a => a.XScale)
+.AddAttribute(0, "string", a => a.String);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
@@ -1293,8 +1608,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:imagedata.</para>
     /// </summary>
-    [SchemaAttr(26, "imagedata")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ImageData : OpenXmlLeafElement
     {
         /// <summary>
@@ -1308,105 +1621,131 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Transparency Color</para>
         /// <para>Represents the following attribute in the schema: chromakey</para>
         /// </summary>
-        [SchemaAttr(0, "chromakey")]
-        [Index(1)]
-        public StringValue ChromAKey { get; set; }
+        public StringValue ChromAKey
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Left Crop</para>
         /// <para>Represents the following attribute in the schema: cropleft</para>
         /// </summary>
-        [SchemaAttr(0, "cropleft")]
-        [Index(2)]
-        public StringValue CropLeft { get; set; }
+        public StringValue CropLeft
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Top Crop</para>
         /// <para>Represents the following attribute in the schema: croptop</para>
         /// </summary>
-        [SchemaAttr(0, "croptop")]
-        [Index(3)]
-        public StringValue CropTop { get; set; }
+        public StringValue CropTop
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Right Crop</para>
         /// <para>Represents the following attribute in the schema: cropright</para>
         /// </summary>
-        [SchemaAttr(0, "cropright")]
-        [Index(4)]
-        public StringValue CropRight { get; set; }
+        public StringValue CropRight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Bottom Crop</para>
         /// <para>Represents the following attribute in the schema: cropbottom</para>
         /// </summary>
-        [SchemaAttr(0, "cropbottom")]
-        [Index(5)]
-        public StringValue CropBottom { get; set; }
+        public StringValue CropBottom
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Intensity</para>
         /// <para>Represents the following attribute in the schema: gain</para>
         /// </summary>
-        [SchemaAttr(0, "gain")]
-        [Index(6)]
-        public StringValue Gain { get; set; }
+        public StringValue Gain
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Brightness</para>
         /// <para>Represents the following attribute in the schema: blacklevel</para>
         /// </summary>
-        [SchemaAttr(0, "blacklevel")]
-        [Index(7)]
-        public StringValue BlackLevel { get; set; }
+        public StringValue BlackLevel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Gamma Correction</para>
         /// <para>Represents the following attribute in the schema: gamma</para>
         /// </summary>
-        [SchemaAttr(0, "gamma")]
-        [Index(8)]
-        public StringValue Gamma { get; set; }
+        public StringValue Gamma
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Grayscale Toggle</para>
         /// <para>Represents the following attribute in the schema: grayscale</para>
         /// </summary>
-        [SchemaAttr(0, "grayscale")]
-        [Index(9)]
-        public TrueFalseValue Grayscale { get; set; }
+        public TrueFalseValue Grayscale
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Bilevel Toggle</para>
         /// <para>Represents the following attribute in the schema: bilevel</para>
         /// </summary>
-        [SchemaAttr(0, "bilevel")]
-        [Index(10)]
-        public TrueFalseValue BiLevel { get; set; }
+        public TrueFalseValue BiLevel
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embossed Color</para>
         /// <para>Represents the following attribute in the schema: embosscolor</para>
         /// </summary>
-        [SchemaAttr(0, "embosscolor")]
-        [Index(11)]
-        public StringValue EmbossColor { get; set; }
+        public StringValue EmbossColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black Recoloring Color</para>
         /// <para>Represents the following attribute in the schema: recolortarget</para>
         /// </summary>
-        [SchemaAttr(0, "recolortarget")]
-        [Index(12)]
-        public StringValue RecolorTarget { get; set; }
+        public StringValue RecolorTarget
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Data Title</para>
@@ -1415,9 +1754,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "title")]
-        [Index(13)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Detect Mouse Click</para>
@@ -1426,9 +1767,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "detectmouseclick")]
-        [Index(14)]
-        public TrueFalseValue DetectMouseClick { get; set; }
+        public TrueFalseValue DetectMouseClick
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relationship to Part</para>
@@ -1437,9 +1780,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "relid")]
-        [Index(15)]
-        public StringValue RelId { get; set; }
+        public StringValue RelId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Explicit Relationship to Image Data</para>
@@ -1448,9 +1793,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "id")]
-        [Index(16)]
-        public StringValue RelationshipId { get; set; }
+        public StringValue RelationshipId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Explicit Relationship to Alternate Image Data</para>
@@ -1459,9 +1806,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "pict")]
-        [Index(17)]
-        public StringValue Picture { get; set; }
+        public StringValue Picture
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Explicit Relationship to Hyperlink Target</para>
@@ -1470,9 +1819,37 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [SchemaAttr(19, "href")]
-        [Index(18)]
-        public StringValue RelHref { get; set; }
+        public StringValue RelHref
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "imagedata");
+            builder.AddElement<ImageData>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "chromakey", a => a.ChromAKey)
+.AddAttribute(0, "cropleft", a => a.CropLeft)
+.AddAttribute(0, "croptop", a => a.CropTop)
+.AddAttribute(0, "cropright", a => a.CropRight)
+.AddAttribute(0, "cropbottom", a => a.CropBottom)
+.AddAttribute(0, "gain", a => a.Gain)
+.AddAttribute(0, "blacklevel", a => a.BlackLevel)
+.AddAttribute(0, "gamma", a => a.Gamma)
+.AddAttribute(0, "grayscale", a => a.Grayscale)
+.AddAttribute(0, "bilevel", a => a.BiLevel)
+.AddAttribute(0, "embosscolor", a => a.EmbossColor)
+.AddAttribute(0, "recolortarget", a => a.RecolorTarget)
+.AddAttribute(27, "title", a => a.Title)
+.AddAttribute(27, "detectmouseclick", a => a.DetectMouseClick)
+.AddAttribute(27, "relid", a => a.RelId)
+.AddAttribute(19, "id", a => a.RelationshipId)
+.AddAttribute(19, "pict", a => a.Picture)
+.AddAttribute(19, "href", a => a.RelHref);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipTypeConstraint(18 /*r:href*/, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"),
@@ -1526,33 +1903,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag &lt;pvml:iscomment></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag))]
-    [SchemaAttr(26, "shape")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1590,89 +1940,111 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Display Target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(3)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>CSS Reference</para>
         /// <para>Represents the following attribute in the schema: class</para>
         /// </summary>
-        [SchemaAttr(0, "class")]
-        [Index(4)]
-        public StringValue Class { get; set; }
+        public StringValue Class
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Text</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(6)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Size</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(7)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Origin</para>
         /// <para>Represents the following attribute in the schema: coordorigin</para>
         /// </summary>
-        [SchemaAttr(0, "coordorigin")]
-        [Index(8)]
-        public StringValue CoordinateOrigin { get; set; }
+        public StringValue CoordinateOrigin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Bounding Polygon</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(9)]
-        public StringValue WrapCoordinates { get; set; }
+        public StringValue WrapCoordinates
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Toggle</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(10)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional String</para>
@@ -1681,9 +2053,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(11)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Handle Toggle</para>
@@ -1692,9 +2066,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(12)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Regroup ID</para>
@@ -1703,9 +2079,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(13)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double-click Notification Toggle</para>
@@ -1714,9 +2092,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(14)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Button Behavior Toggle</para>
@@ -1725,9 +2105,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(15)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Script Anchors</para>
@@ -1736,9 +2118,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(16)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Graphical Bullet</para>
@@ -1747,9 +2131,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(17)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Toggle</para>
@@ -1758,9 +2144,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(18)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Standard Display Toggle</para>
@@ -1769,9 +2157,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(19)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule 3D Shading Toggle</para>
@@ -1780,9 +2170,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(20)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Length Percentage</para>
@@ -1791,9 +2183,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(21)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Alignment</para>
@@ -1802,9 +2196,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(22)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -1813,9 +2209,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(23)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Shape Overlap</para>
@@ -1824,9 +2222,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(24)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exists In Master Slide</para>
@@ -1835,9 +2235,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(25)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Top Color</para>
@@ -1846,9 +2248,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bordertopcolor")]
-        [Index(26)]
-        public StringValue BorderTopColor { get; set; }
+        public StringValue BorderTopColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Left Color</para>
@@ -1857,9 +2261,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderleftcolor")]
-        [Index(27)]
-        public StringValue BorderLeftColor { get; set; }
+        public StringValue BorderLeftColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Border Color</para>
@@ -1868,9 +2274,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderbottomcolor")]
-        [Index(28)]
-        public StringValue BorderBottomColor { get; set; }
+        public StringValue BorderBottomColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Right Color</para>
@@ -1879,9 +2287,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderrightcolor")]
-        [Index(29)]
-        public StringValue BorderRightColor { get; set; }
+        public StringValue BorderRightColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Layout Identifier</para>
@@ -1890,9 +2300,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(30)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Identifier</para>
@@ -1901,9 +2313,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(31)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Recent Layout Identifier</para>
@@ -1912,9 +2326,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(32)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Inset Mode</para>
@@ -1923,57 +2339,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(33)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: filled</para>
         /// </summary>
-        [SchemaAttr(0, "filled")]
-        [Index(34)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(35)]
-        public StringValue FillColor { get; set; }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroked</para>
         /// </summary>
-        [SchemaAttr(0, "stroked")]
-        [Index(36)]
-        public TrueFalseValue Stroked { get; set; }
+        public TrueFalseValue Stroked
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr(0, "strokecolor")]
-        [Index(37)]
-        public StringValue StrokeColor { get; set; }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: strokeweight</para>
         /// </summary>
-        [SchemaAttr(0, "strokeweight")]
-        [Index(38)]
-        public StringValue StrokeWeight { get; set; }
+        public StringValue StrokeWeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(39)]
-        public TrueFalseValue InsetPen { get; set; }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional Number</para>
@@ -1982,10 +2412,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 202L)]
-        [SchemaAttr(27, "spt")]
-        [Index(40)]
-        public Int32Value OptionalNumber { get; set; }
+        public Int32Value OptionalNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Connector Type</para>
@@ -1994,9 +2425,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectortype")]
-        [Index(41)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -2005,9 +2438,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(42)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -2016,9 +2451,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(43)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -2027,9 +2464,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(44)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -2038,9 +2477,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(45)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Icon Toggle</para>
@@ -2049,9 +2490,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oleicon")]
-        [Index(46)]
-        public TrueFalseValue OleIcon { get; set; }
+        public TrueFalseValue OleIcon
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Toggle</para>
@@ -2060,9 +2503,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "ole")]
-        [Index(47)]
-        public TrueFalseBlankValue Ole { get; set; }
+        public TrueFalseBlankValue Ole
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Resize Toggle</para>
@@ -2071,9 +2516,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "preferrelative")]
-        [Index(48)]
-        public TrueFalseValue PreferRelative { get; set; }
+        public TrueFalseValue PreferRelative
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clip to Wrapping Polygon</para>
@@ -2082,9 +2529,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "cliptowrap")]
-        [Index(49)]
-        public TrueFalseValue ClipToWrap { get; set; }
+        public TrueFalseValue ClipToWrap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipping Toggle</para>
@@ -2093,33 +2542,41 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "clip")]
-        [Index(50)]
-        public TrueFalseValue Clip { get; set; }
+        public TrueFalseValue Clip
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Type Reference</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(51)]
-        public StringValue Type { get; set; }
+        public StringValue Type
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Adjustment Parameters</para>
         /// <para>Represents the following attribute in the schema: adj</para>
         /// </summary>
-        [SchemaAttr(0, "adj")]
-        [Index(52)]
-        public StringValue Adjustment { get; set; }
+        public StringValue Adjustment
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Edge Path</para>
         /// <para>Represents the following attribute in the schema: path</para>
         /// </summary>
-        [SchemaAttr(0, "path")]
-        [Index(53)]
-        public StringValue EdgePath { get; set; }
+        public StringValue EdgePath
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Encoded Package</para>
@@ -2128,17 +2585,112 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "gfxdata")]
-        [Index(54)]
-        public Base64BinaryValue EncodedPackage { get; set; }
+        public Base64BinaryValue EncodedPackage
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Storage for Alternate Math Content</para>
         /// <para>Represents the following attribute in the schema: equationxml</para>
         /// </summary>
-        [SchemaAttr(0, "equationxml")]
-        [Index(55)]
-        public StringValue EquationXml { get; set; }
+        public StringValue EquationXml
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "shape");
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Ink>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag>();
+            builder.AddElement<Shape>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "adj", a => a.Adjustment)
+.AddAttribute(0, "path", a => a.EdgePath)
+.AddAttribute(27, "gfxdata", a => a.EncodedPackage)
+.AddAttribute(0, "equationxml", a => a.EquationXml);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
@@ -2223,32 +2775,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Complex &lt;o:complex></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Complex))]
-    [SchemaAttr(26, "shapetype")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shapetype : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2286,89 +2812,111 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Display Target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(3)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>CSS Reference</para>
         /// <para>Represents the following attribute in the schema: class</para>
         /// </summary>
-        [SchemaAttr(0, "class")]
-        [Index(4)]
-        public StringValue Class { get; set; }
+        public StringValue Class
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Text</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(6)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Size</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(7)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Origin</para>
         /// <para>Represents the following attribute in the schema: coordorigin</para>
         /// </summary>
-        [SchemaAttr(0, "coordorigin")]
-        [Index(8)]
-        public StringValue CoordinateOrigin { get; set; }
+        public StringValue CoordinateOrigin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Bounding Polygon</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(9)]
-        public StringValue WrapCoordinates { get; set; }
+        public StringValue WrapCoordinates
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Toggle</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(10)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional String</para>
@@ -2377,9 +2925,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(11)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Handle Toggle</para>
@@ -2388,9 +2938,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(12)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Regroup ID</para>
@@ -2399,9 +2951,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(13)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double-click Notification Toggle</para>
@@ -2410,9 +2964,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(14)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Button Behavior Toggle</para>
@@ -2421,9 +2977,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(15)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Script Anchors</para>
@@ -2432,9 +2990,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(16)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Graphical Bullet</para>
@@ -2443,9 +3003,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(17)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Toggle</para>
@@ -2454,9 +3016,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(18)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Standard Display Toggle</para>
@@ -2465,9 +3029,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(19)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule 3D Shading Toggle</para>
@@ -2476,9 +3042,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(20)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Length Percentage</para>
@@ -2487,9 +3055,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(21)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Alignment</para>
@@ -2498,9 +3068,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(22)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -2509,9 +3081,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(23)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Shape Overlap</para>
@@ -2520,9 +3094,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(24)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exists In Master Slide</para>
@@ -2531,9 +3107,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(25)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Top Color</para>
@@ -2542,9 +3120,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bordertopcolor")]
-        [Index(26)]
-        public StringValue BorderTopColor { get; set; }
+        public StringValue BorderTopColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Left Color</para>
@@ -2553,9 +3133,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderleftcolor")]
-        [Index(27)]
-        public StringValue BorderLeftColor { get; set; }
+        public StringValue BorderLeftColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Border Color</para>
@@ -2564,9 +3146,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderbottomcolor")]
-        [Index(28)]
-        public StringValue BorderBottomColor { get; set; }
+        public StringValue BorderBottomColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Right Color</para>
@@ -2575,9 +3159,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderrightcolor")]
-        [Index(29)]
-        public StringValue BorderRightColor { get; set; }
+        public StringValue BorderRightColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Layout Identifier</para>
@@ -2586,9 +3172,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(30)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Identifier</para>
@@ -2597,9 +3185,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(31)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Recent Layout Identifier</para>
@@ -2608,9 +3198,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(32)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Inset Mode</para>
@@ -2619,57 +3211,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(33)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: filled</para>
         /// </summary>
-        [SchemaAttr(0, "filled")]
-        [Index(34)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(35)]
-        public StringValue FillColor { get; set; }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroked</para>
         /// </summary>
-        [SchemaAttr(0, "stroked")]
-        [Index(36)]
-        public TrueFalseValue Stroked { get; set; }
+        public TrueFalseValue Stroked
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr(0, "strokecolor")]
-        [Index(37)]
-        public StringValue StrokeColor { get; set; }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: strokeweight</para>
         /// </summary>
-        [SchemaAttr(0, "strokeweight")]
-        [Index(38)]
-        public StringValue StrokeWeight { get; set; }
+        public StringValue StrokeWeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(39)]
-        public TrueFalseValue InsetPen { get; set; }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional Number</para>
@@ -2678,10 +3284,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 202L)]
-        [SchemaAttr(27, "spt")]
-        [Index(40)]
-        public Int32Value OptionalNumber { get; set; }
+        public Int32Value OptionalNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Connector Type</para>
@@ -2690,9 +3297,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectortype")]
-        [Index(41)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -2701,9 +3310,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(42)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -2712,9 +3323,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(43)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -2723,9 +3336,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(44)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -2734,9 +3349,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(45)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Icon Toggle</para>
@@ -2745,9 +3362,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oleicon")]
-        [Index(46)]
-        public TrueFalseValue OleIcon { get; set; }
+        public TrueFalseValue OleIcon
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Toggle</para>
@@ -2756,9 +3375,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "ole")]
-        [Index(47)]
-        public TrueFalseBlankValue Ole { get; set; }
+        public TrueFalseBlankValue Ole
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Resize Toggle</para>
@@ -2767,9 +3388,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "preferrelative")]
-        [Index(48)]
-        public TrueFalseValue PreferRelative { get; set; }
+        public TrueFalseValue PreferRelative
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clip to Wrapping Polygon</para>
@@ -2778,9 +3401,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "cliptowrap")]
-        [Index(49)]
-        public TrueFalseValue ClipToWrap { get; set; }
+        public TrueFalseValue ClipToWrap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipping Toggle</para>
@@ -2789,25 +3414,31 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "clip")]
-        [Index(50)]
-        public TrueFalseValue Clip { get; set; }
+        public TrueFalseValue Clip
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Adjustment Parameters</para>
         /// <para>Represents the following attribute in the schema: adj</para>
         /// </summary>
-        [SchemaAttr(0, "adj")]
-        [Index(51)]
-        public StringValue Adjustment { get; set; }
+        public StringValue Adjustment
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Edge Path</para>
         /// <para>Represents the following attribute in the schema: path</para>
         /// </summary>
-        [SchemaAttr(0, "path")]
-        [Index(52)]
-        public StringValue EdgePath { get; set; }
+        public StringValue EdgePath
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Master Element Toggle</para>
@@ -2816,9 +3447,99 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "master")]
-        [Index(53)]
-        public StringValue Master { get; set; }
+        public StringValue Master
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "shapetype");
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Complex>();
+            builder.AddElement<Shapetype>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(0, "adj", a => a.Adjustment)
+.AddAttribute(0, "path", a => a.EdgePath)
+.AddAttribute(27, "master", a => a.Master);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
@@ -2895,25 +3616,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Group))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(Shapetype))]
-    [ChildElementInfo(typeof(Arc))]
-    [ChildElementInfo(typeof(Curve))]
-    [ChildElementInfo(typeof(ImageFile))]
-    [ChildElementInfo(typeof(Line))]
-    [ChildElementInfo(typeof(Oval))]
-    [ChildElementInfo(typeof(PolyLine))]
-    [ChildElementInfo(typeof(Rectangle))]
-    [ChildElementInfo(typeof(RoundRectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Diagram))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [SchemaAttr(26, "group")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2951,89 +3653,111 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Display Target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(3)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>CSS Reference</para>
         /// <para>Represents the following attribute in the schema: class</para>
         /// </summary>
-        [SchemaAttr(0, "class")]
-        [Index(4)]
-        public StringValue Class { get; set; }
+        public StringValue Class
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Text</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(6)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Size</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(7)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Origin</para>
         /// <para>Represents the following attribute in the schema: coordorigin</para>
         /// </summary>
-        [SchemaAttr(0, "coordorigin")]
-        [Index(8)]
-        public StringValue CoordinateOrigin { get; set; }
+        public StringValue CoordinateOrigin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Bounding Polygon</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(9)]
-        public StringValue WrapCoordinates { get; set; }
+        public StringValue WrapCoordinates
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Toggle</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(10)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>spid</para>
@@ -3042,9 +3766,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(11)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>oned</para>
@@ -3053,9 +3779,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(12)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>regroupid</para>
@@ -3064,9 +3792,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(13)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>doubleclicknotify</para>
@@ -3075,9 +3805,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(14)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>button</para>
@@ -3086,9 +3818,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(15)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>userhidden</para>
@@ -3097,9 +3831,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(16)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bullet</para>
@@ -3108,9 +3844,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(17)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hr</para>
@@ -3119,9 +3857,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(18)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hrstd</para>
@@ -3130,9 +3870,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(19)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hrnoshade</para>
@@ -3141,9 +3883,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(20)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hrpct</para>
@@ -3152,9 +3896,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(21)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hralign</para>
@@ -3163,9 +3909,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(22)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allowincell</para>
@@ -3174,9 +3922,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(23)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>allowoverlap</para>
@@ -3185,9 +3935,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(24)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>userdrawn</para>
@@ -3196,9 +3948,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(25)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dgmlayout</para>
@@ -3207,9 +3961,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(26)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dgmnodekind</para>
@@ -3218,9 +3974,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(27)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dgmlayoutmru</para>
@@ -3229,9 +3987,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(28)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>insetmode</para>
@@ -3240,9 +4000,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(29)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Encoded Package</para>
@@ -3251,17 +4013,21 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "gfxdata")]
-        [Index(30)]
-        public Base64BinaryValue Gfxdata { get; set; }
+        public Base64BinaryValue Gfxdata
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Group Diagram Type</para>
         /// <para>Represents the following attribute in the schema: editas</para>
         /// </summary>
-        [SchemaAttr(0, "editas")]
-        [Index(31)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues> EditAs { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues> EditAs
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Properties</para>
@@ -3270,9 +4036,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "tableproperties")]
-        [Index(32)]
-        public StringValue TableProperties { get; set; }
+        public StringValue TableProperties
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Table Row Height Limits</para>
@@ -3281,9 +4049,69 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "tablelimits")]
-        [Index(33)]
-        public StringValue TableLimits { get; set; }
+        public StringValue TableLimits
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "group");
+            builder.AddChild<Group>();
+            builder.AddChild<Shape>();
+            builder.AddChild<Shapetype>();
+            builder.AddChild<Arc>();
+            builder.AddChild<Curve>();
+            builder.AddChild<ImageFile>();
+            builder.AddChild<Line>();
+            builder.AddChild<Oval>();
+            builder.AddChild<PolyLine>();
+            builder.AddChild<Rectangle>();
+            builder.AddChild<RoundRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Diagram>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddElement<Group>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "editas", a => a.EditAs)
+.AddAttribute(27, "tableproperties", a => a.TableProperties)
+.AddAttribute(27, "tablelimits", a => a.TableLimits);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(31 /*ovml:tableproperties*/, true, new string[] { "1", "2", "3" }),
@@ -3332,9 +4160,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>Fill &lt;v:fill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Fill))]
-    [SchemaAttr(26, "background")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3372,26 +4197,31 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsToken = true, MaxLength = 255L)]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: fill</para>
         /// </summary>
-        [SchemaAttr(0, "fill")]
-        [Index(1)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(2)]
-        public StringValue Fillcolor { get; set; }
+        public StringValue Fillcolor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -3400,9 +4230,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -3411,9 +4243,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -3422,9 +4256,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Target Screen Size</para>
@@ -3433,9 +4269,29 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "targetscreensize")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues> TargetScreenSize { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues> TargetScreenSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "background");
+            builder.AddChild<Fill>();
+            builder.AddElement<Background>()
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLength = (255L) });
+})
+.AddAttribute(0, "fill", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.Fillcolor)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "targetscreensize", a => a.TargetScreenSize);
+        }
 
         /// <summary>
         /// <para>Fill.</para>
@@ -3500,31 +4356,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "arc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Arc : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3565,9 +4396,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(0)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Handle Toggle</para>
@@ -3576,9 +4409,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(1)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Regroup ID</para>
@@ -3587,9 +4422,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(2)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double-click Notification Toggle</para>
@@ -3598,9 +4435,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(3)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Button Behavior Toggle</para>
@@ -3609,9 +4448,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(4)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Script Anchors</para>
@@ -3620,9 +4461,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(5)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Graphical Bullet</para>
@@ -3631,9 +4474,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(6)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Toggle</para>
@@ -3642,9 +4487,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(7)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Standard Display Toggle</para>
@@ -3653,9 +4500,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(8)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule 3D Shading Toggle</para>
@@ -3664,9 +4513,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(9)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Length Percentage</para>
@@ -3675,9 +4526,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(10)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Alignment</para>
@@ -3686,9 +4539,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(11)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -3697,9 +4552,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(12)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Shape Overlap</para>
@@ -3708,9 +4565,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(13)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exists In Master Slide</para>
@@ -3719,9 +4578,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(14)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Top Color</para>
@@ -3730,9 +4591,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bordertopcolor")]
-        [Index(15)]
-        public StringValue BorderTopColor { get; set; }
+        public StringValue BorderTopColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Left Color</para>
@@ -3741,9 +4604,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderleftcolor")]
-        [Index(16)]
-        public StringValue BorderLeftColor { get; set; }
+        public StringValue BorderLeftColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Border Color</para>
@@ -3752,9 +4617,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderbottomcolor")]
-        [Index(17)]
-        public StringValue BorderBottomColor { get; set; }
+        public StringValue BorderBottomColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Right Color</para>
@@ -3763,9 +4630,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderrightcolor")]
-        [Index(18)]
-        public StringValue BorderRightColor { get; set; }
+        public StringValue BorderRightColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Layout Identifier</para>
@@ -3774,9 +4643,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(19)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Identifier</para>
@@ -3785,9 +4656,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(20)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Recent Layout Identifier</para>
@@ -3796,9 +4669,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(21)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Inset Mode</para>
@@ -3807,57 +4682,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(22)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: filled</para>
         /// </summary>
-        [SchemaAttr(0, "filled")]
-        [Index(23)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(24)]
-        public StringValue FillColor { get; set; }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroked</para>
         /// </summary>
-        [SchemaAttr(0, "stroked")]
-        [Index(25)]
-        public TrueFalseValue Stroked { get; set; }
+        public TrueFalseValue Stroked
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr(0, "strokecolor")]
-        [Index(26)]
-        public StringValue StrokeColor { get; set; }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: strokeweight</para>
         /// </summary>
-        [SchemaAttr(0, "strokeweight")]
-        [Index(27)]
-        public StringValue StrokeWeight { get; set; }
+        public StringValue StrokeWeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(28)]
-        public TrueFalseValue InsetPen { get; set; }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional Number</para>
@@ -3866,10 +4755,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 202L)]
-        [SchemaAttr(27, "spt")]
-        [Index(29)]
-        public Int32Value OptionalNumber { get; set; }
+        public Int32Value OptionalNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Connector Type</para>
@@ -3878,9 +4768,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectortype")]
-        [Index(30)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -3889,9 +4781,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(31)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -3900,9 +4794,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(32)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -3911,9 +4807,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(33)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -3922,9 +4820,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(34)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Icon Toggle</para>
@@ -3933,9 +4833,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oleicon")]
-        [Index(35)]
-        public TrueFalseValue OleIcon { get; set; }
+        public TrueFalseValue OleIcon
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Toggle</para>
@@ -3944,9 +4846,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "ole")]
-        [Index(36)]
-        public TrueFalseBlankValue Ole { get; set; }
+        public TrueFalseBlankValue Ole
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Resize Toggle</para>
@@ -3955,9 +4859,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "preferrelative")]
-        [Index(37)]
-        public TrueFalseValue PreferRelative { get; set; }
+        public TrueFalseValue PreferRelative
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clip to Wrapping Polygon</para>
@@ -3966,9 +4872,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "cliptowrap")]
-        [Index(38)]
-        public TrueFalseValue ClipToWrap { get; set; }
+        public TrueFalseValue ClipToWrap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipping Toggle</para>
@@ -3977,9 +4885,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "clip")]
-        [Index(39)]
-        public TrueFalseValue Clip { get; set; }
+        public TrueFalseValue Clip
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Encoded Package</para>
@@ -3988,106 +4898,220 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "gfxdata")]
-        [Index(40)]
-        public Base64BinaryValue Gfxdata { get; set; }
+        public Base64BinaryValue Gfxdata
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [StringValidator(IsToken = true, MaxLength = 255L)]
-        [SchemaAttr(0, "id")]
-        [Index(41)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(42)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(43)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Display Target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(44)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(45)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Text</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(46)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Size</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(47)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Origin</para>
         /// <para>Represents the following attribute in the schema: coordorigin</para>
         /// </summary>
-        [SchemaAttr(0, "coordorigin")]
-        [Index(48)]
-        public StringValue CoordinateOrigin { get; set; }
+        public StringValue CoordinateOrigin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Bounding Polygon</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(49)]
-        public StringValue Wrapcoords { get; set; }
+        public StringValue Wrapcoords
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Toggle</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(50)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Starting Angle</para>
         /// <para>Represents the following attribute in the schema: startangle</para>
         /// </summary>
-        [SchemaAttr(0, "startangle")]
-        [Index(51)]
-        public DecimalValue StartAngle { get; set; }
+        public DecimalValue StartAngle
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Ending Angle</para>
         /// <para>Represents the following attribute in the schema: endangle</para>
         /// </summary>
-        [SchemaAttr(0, "endangle")]
-        [Index(52)]
-        public DecimalValue EndAngle { get; set; }
+        public DecimalValue EndAngle
+        {
+            get => GetAttribute<DecimalValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "arc");
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddElement<Arc>()
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLength = (255L) });
+})
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.Wrapcoords)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(0, "startangle", a => a.StartAngle)
+.AddAttribute(0, "endangle", a => a.EndAngle);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(19 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
@@ -4172,31 +5196,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "curve")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Curve : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4234,89 +5233,111 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Display Target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(3)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>CSS Reference</para>
         /// <para>Represents the following attribute in the schema: class</para>
         /// </summary>
-        [SchemaAttr(0, "class")]
-        [Index(4)]
-        public StringValue Class { get; set; }
+        public StringValue Class
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Text</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(6)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Size</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(7)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Origin</para>
         /// <para>Represents the following attribute in the schema: coordorigin</para>
         /// </summary>
-        [SchemaAttr(0, "coordorigin")]
-        [Index(8)]
-        public StringValue CoordinateOrigin { get; set; }
+        public StringValue CoordinateOrigin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Bounding Polygon</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(9)]
-        public StringValue WrapCoordinates { get; set; }
+        public StringValue WrapCoordinates
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Toggle</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(10)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional String</para>
@@ -4325,9 +5346,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(11)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Handle Toggle</para>
@@ -4336,9 +5359,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(12)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Regroup ID</para>
@@ -4347,9 +5372,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(13)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double-click Notification Toggle</para>
@@ -4358,9 +5385,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(14)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Button Behavior Toggle</para>
@@ -4369,9 +5398,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(15)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Script Anchors</para>
@@ -4380,9 +5411,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(16)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Graphical Bullet</para>
@@ -4391,9 +5424,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(17)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Toggle</para>
@@ -4402,9 +5437,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(18)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Standard Display Toggle</para>
@@ -4413,9 +5450,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(19)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule 3D Shading Toggle</para>
@@ -4424,9 +5463,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(20)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Length Percentage</para>
@@ -4435,9 +5476,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(21)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Alignment</para>
@@ -4446,9 +5489,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(22)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -4457,9 +5502,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(23)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Shape Overlap</para>
@@ -4468,9 +5515,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(24)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exists In Master Slide</para>
@@ -4479,9 +5528,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(25)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Top Color</para>
@@ -4490,9 +5541,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bordertopcolor")]
-        [Index(26)]
-        public StringValue BorderTopColor { get; set; }
+        public StringValue BorderTopColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Left Color</para>
@@ -4501,9 +5554,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderleftcolor")]
-        [Index(27)]
-        public StringValue BorderLeftColor { get; set; }
+        public StringValue BorderLeftColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Border Color</para>
@@ -4512,9 +5567,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderbottomcolor")]
-        [Index(28)]
-        public StringValue BorderBottomColor { get; set; }
+        public StringValue BorderBottomColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Right Color</para>
@@ -4523,9 +5580,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderrightcolor")]
-        [Index(29)]
-        public StringValue BorderRightColor { get; set; }
+        public StringValue BorderRightColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Layout Identifier</para>
@@ -4534,9 +5593,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(30)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Identifier</para>
@@ -4545,9 +5606,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(31)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Recent Layout Identifier</para>
@@ -4556,9 +5619,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(32)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Inset Mode</para>
@@ -4567,57 +5632,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(33)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: filled</para>
         /// </summary>
-        [SchemaAttr(0, "filled")]
-        [Index(34)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(35)]
-        public StringValue FillColor { get; set; }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroked</para>
         /// </summary>
-        [SchemaAttr(0, "stroked")]
-        [Index(36)]
-        public TrueFalseValue Stroked { get; set; }
+        public TrueFalseValue Stroked
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr(0, "strokecolor")]
-        [Index(37)]
-        public StringValue StrokeColor { get; set; }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: strokeweight</para>
         /// </summary>
-        [SchemaAttr(0, "strokeweight")]
-        [Index(38)]
-        public StringValue StrokeWeight { get; set; }
+        public StringValue StrokeWeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(39)]
-        public TrueFalseValue InsetPen { get; set; }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional Number</para>
@@ -4626,10 +5705,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 202L)]
-        [SchemaAttr(27, "spt")]
-        [Index(40)]
-        public Int32Value OptionalNumber { get; set; }
+        public Int32Value OptionalNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Connector Type</para>
@@ -4638,9 +5718,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectortype")]
-        [Index(41)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -4649,9 +5731,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(42)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -4660,9 +5744,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(43)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -4671,9 +5757,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(44)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -4682,9 +5770,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(45)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Icon Toggle</para>
@@ -4693,9 +5783,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oleicon")]
-        [Index(46)]
-        public TrueFalseValue OleIcon { get; set; }
+        public TrueFalseValue OleIcon
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Toggle</para>
@@ -4704,9 +5796,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "ole")]
-        [Index(47)]
-        public TrueFalseBlankValue Ole { get; set; }
+        public TrueFalseBlankValue Ole
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Resize Toggle</para>
@@ -4715,9 +5809,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "preferrelative")]
-        [Index(48)]
-        public TrueFalseValue PreferRelative { get; set; }
+        public TrueFalseValue PreferRelative
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clip to Wrapping Polygon</para>
@@ -4726,9 +5822,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "cliptowrap")]
-        [Index(49)]
-        public TrueFalseValue ClipToWrap { get; set; }
+        public TrueFalseValue ClipToWrap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipping Toggle</para>
@@ -4737,9 +5835,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "clip")]
-        [Index(50)]
-        public TrueFalseValue Clip { get; set; }
+        public TrueFalseValue Clip
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Encoded Package</para>
@@ -4748,41 +5848,140 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "gfxdata")]
-        [Index(51)]
-        public Base64BinaryValue Gfxdata { get; set; }
+        public Base64BinaryValue Gfxdata
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Curve Starting Point</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
-        [SchemaAttr(0, "from")]
-        [Index(52)]
-        public StringValue From { get; set; }
+        public StringValue From
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>First Curve Control Point</para>
         /// <para>Represents the following attribute in the schema: control1</para>
         /// </summary>
-        [SchemaAttr(0, "control1")]
-        [Index(53)]
-        public StringValue Control1 { get; set; }
+        public StringValue Control1
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Second Curve Control Point</para>
         /// <para>Represents the following attribute in the schema: control2</para>
         /// </summary>
-        [SchemaAttr(0, "control2")]
-        [Index(54)]
-        public StringValue Control2 { get; set; }
+        public StringValue Control2
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Curve Ending Point</para>
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
-        [SchemaAttr(0, "to")]
-        [Index(55)]
-        public StringValue To { get; set; }
+        public StringValue To
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "curve");
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddElement<Curve>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "from", a => a.From)
+.AddAttribute(0, "control1", a => a.Control1)
+.AddAttribute(0, "control2", a => a.Control2)
+.AddAttribute(0, "to", a => a.To);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
@@ -4865,31 +6064,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "image")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ImageFile : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4927,81 +6101,101 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>style</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>href</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(3)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>class</para>
         /// <para>Represents the following attribute in the schema: class</para>
         /// </summary>
-        [SchemaAttr(0, "class")]
-        [Index(4)]
-        public StringValue Class { get; set; }
+        public StringValue Class
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alt</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(6)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>coordsize</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(7)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>wrapcoords</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(8)]
-        public StringValue WrapCoordinates { get; set; }
+        public StringValue WrapCoordinates
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>print</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(9)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional String</para>
@@ -5010,9 +6204,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(10)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Handle Toggle</para>
@@ -5021,9 +6217,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(11)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Regroup ID</para>
@@ -5032,9 +6230,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(12)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double-click Notification Toggle</para>
@@ -5043,9 +6243,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(13)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Button Behavior Toggle</para>
@@ -5054,9 +6256,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(14)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Script Anchors</para>
@@ -5065,9 +6269,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(15)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Graphical Bullet</para>
@@ -5076,9 +6282,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(16)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Toggle</para>
@@ -5087,9 +6295,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(17)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Standard Display Toggle</para>
@@ -5098,9 +6308,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(18)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule 3D Shading Toggle</para>
@@ -5109,9 +6321,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(19)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Length Percentage</para>
@@ -5120,9 +6334,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(20)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Alignment</para>
@@ -5131,9 +6347,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(21)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -5142,9 +6360,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(22)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Shape Overlap</para>
@@ -5153,9 +6373,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(23)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exists In Master Slide</para>
@@ -5164,9 +6386,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(24)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Top Color</para>
@@ -5175,9 +6399,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bordertopcolor")]
-        [Index(25)]
-        public StringValue BorderTopColor { get; set; }
+        public StringValue BorderTopColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Left Color</para>
@@ -5186,9 +6412,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderleftcolor")]
-        [Index(26)]
-        public StringValue BorderLeftColor { get; set; }
+        public StringValue BorderLeftColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Border Color</para>
@@ -5197,9 +6425,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderbottomcolor")]
-        [Index(27)]
-        public StringValue BorderBottomColor { get; set; }
+        public StringValue BorderBottomColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Right Color</para>
@@ -5208,9 +6438,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderrightcolor")]
-        [Index(28)]
-        public StringValue BorderRightColor { get; set; }
+        public StringValue BorderRightColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Layout Identifier</para>
@@ -5219,9 +6451,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(29)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Identifier</para>
@@ -5230,9 +6464,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(30)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Recent Layout Identifier</para>
@@ -5241,9 +6477,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(31)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Inset Mode</para>
@@ -5252,57 +6490,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(32)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: filled</para>
         /// </summary>
-        [SchemaAttr(0, "filled")]
-        [Index(33)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(34)]
-        public StringValue FillColor { get; set; }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroked</para>
         /// </summary>
-        [SchemaAttr(0, "stroked")]
-        [Index(35)]
-        public TrueFalseValue Stroked { get; set; }
+        public TrueFalseValue Stroked
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr(0, "strokecolor")]
-        [Index(36)]
-        public StringValue StrokeColor { get; set; }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: strokeweight</para>
         /// </summary>
-        [SchemaAttr(0, "strokeweight")]
-        [Index(37)]
-        public StringValue StrokeWeight { get; set; }
+        public StringValue StrokeWeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(38)]
-        public TrueFalseValue InsetPen { get; set; }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional Number</para>
@@ -5311,10 +6563,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 202L)]
-        [SchemaAttr(27, "spt")]
-        [Index(39)]
-        public Int32Value OptionalNumber { get; set; }
+        public Int32Value OptionalNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Connector Type</para>
@@ -5323,9 +6576,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectortype")]
-        [Index(40)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -5334,9 +6589,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(41)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -5345,9 +6602,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(42)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -5356,9 +6615,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(43)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -5367,9 +6628,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(44)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Icon Toggle</para>
@@ -5378,9 +6641,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oleicon")]
-        [Index(45)]
-        public TrueFalseValue OleIcon { get; set; }
+        public TrueFalseValue OleIcon
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Toggle</para>
@@ -5389,9 +6654,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "ole")]
-        [Index(46)]
-        public TrueFalseBlankValue Ole { get; set; }
+        public TrueFalseBlankValue Ole
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Resize Toggle</para>
@@ -5400,9 +6667,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "preferrelative")]
-        [Index(47)]
-        public TrueFalseValue PreferRelative { get; set; }
+        public TrueFalseValue PreferRelative
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clip to Wrapping Polygon</para>
@@ -5411,9 +6680,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "cliptowrap")]
-        [Index(48)]
-        public TrueFalseValue ClipToWrap { get; set; }
+        public TrueFalseValue ClipToWrap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipping Toggle</para>
@@ -5422,89 +6693,111 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "clip")]
-        [Index(49)]
-        public TrueFalseValue Clip { get; set; }
+        public TrueFalseValue Clip
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Source</para>
         /// <para>Represents the following attribute in the schema: src</para>
         /// </summary>
-        [SchemaAttr(0, "src")]
-        [Index(50)]
-        public StringValue Source { get; set; }
+        public StringValue Source
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Left Crop</para>
         /// <para>Represents the following attribute in the schema: cropleft</para>
         /// </summary>
-        [SchemaAttr(0, "cropleft")]
-        [Index(51)]
-        public StringValue CropLeft { get; set; }
+        public StringValue CropLeft
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Top Crop</para>
         /// <para>Represents the following attribute in the schema: croptop</para>
         /// </summary>
-        [SchemaAttr(0, "croptop")]
-        [Index(52)]
-        public StringValue CropTop { get; set; }
+        public StringValue CropTop
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Right Crop</para>
         /// <para>Represents the following attribute in the schema: cropright</para>
         /// </summary>
-        [SchemaAttr(0, "cropright")]
-        [Index(53)]
-        public StringValue CropRight { get; set; }
+        public StringValue CropRight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Bottom Crop</para>
         /// <para>Represents the following attribute in the schema: cropbottom</para>
         /// </summary>
-        [SchemaAttr(0, "cropbottom")]
-        [Index(54)]
-        public StringValue CropBottom { get; set; }
+        public StringValue CropBottom
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Intensity</para>
         /// <para>Represents the following attribute in the schema: gain</para>
         /// </summary>
-        [SchemaAttr(0, "gain")]
-        [Index(55)]
-        public StringValue Gain { get; set; }
+        public StringValue Gain
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Brightness</para>
         /// <para>Represents the following attribute in the schema: blacklevel</para>
         /// </summary>
-        [SchemaAttr(0, "blacklevel")]
-        [Index(56)]
-        public StringValue BlackLevel { get; set; }
+        public StringValue BlackLevel
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Gamma Correction</para>
         /// <para>Represents the following attribute in the schema: gamma</para>
         /// </summary>
-        [SchemaAttr(0, "gamma")]
-        [Index(57)]
-        public StringValue Gamma { get; set; }
+        public StringValue Gamma
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Grayscale Toggle</para>
         /// <para>Represents the following attribute in the schema: grayscale</para>
         /// </summary>
-        [SchemaAttr(0, "grayscale")]
-        [Index(58)]
-        public TrueFalseValue GrayScale { get; set; }
+        public TrueFalseValue GrayScale
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Image Bilevel Toggle</para>
         /// <para>Represents the following attribute in the schema: bilevel</para>
         /// </summary>
-        [SchemaAttr(0, "bilevel")]
-        [Index(59)]
-        public TrueFalseValue BiLevel { get; set; }
+        public TrueFalseValue BiLevel
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Encoded Package</para>
@@ -5513,9 +6806,105 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "gfxdata")]
-        [Index(60)]
-        public Base64BinaryValue Gfxdata { get; set; }
+        public Base64BinaryValue Gfxdata
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "image");
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddElement<ImageFile>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(0, "src", a => a.Source)
+.AddAttribute(0, "cropleft", a => a.CropLeft)
+.AddAttribute(0, "croptop", a => a.CropTop)
+.AddAttribute(0, "cropright", a => a.CropRight)
+.AddAttribute(0, "cropbottom", a => a.CropBottom)
+.AddAttribute(0, "gain", a => a.Gain)
+.AddAttribute(0, "blacklevel", a => a.BlackLevel)
+.AddAttribute(0, "gamma", a => a.Gamma)
+.AddAttribute(0, "grayscale", a => a.GrayScale)
+.AddAttribute(0, "bilevel", a => a.BiLevel)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(29 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
@@ -5598,31 +6987,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "line")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Line : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5660,89 +7024,111 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Display Target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(3)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>CSS Reference</para>
         /// <para>Represents the following attribute in the schema: class</para>
         /// </summary>
-        [SchemaAttr(0, "class")]
-        [Index(4)]
-        public StringValue Class { get; set; }
+        public StringValue Class
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Text</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(6)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Size</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(7)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Origin</para>
         /// <para>Represents the following attribute in the schema: coordorigin</para>
         /// </summary>
-        [SchemaAttr(0, "coordorigin")]
-        [Index(8)]
-        public StringValue CoordinateOrigin { get; set; }
+        public StringValue CoordinateOrigin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Bounding Polygon</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(9)]
-        public StringValue WrapCoordinates { get; set; }
+        public StringValue WrapCoordinates
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Toggle</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(10)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional String</para>
@@ -5751,9 +7137,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(11)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Handle Toggle</para>
@@ -5762,9 +7150,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(12)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Regroup ID</para>
@@ -5773,9 +7163,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(13)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double-click Notification Toggle</para>
@@ -5784,9 +7176,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(14)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Button Behavior Toggle</para>
@@ -5795,9 +7189,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(15)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Script Anchors</para>
@@ -5806,9 +7202,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(16)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Graphical Bullet</para>
@@ -5817,9 +7215,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(17)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Toggle</para>
@@ -5828,9 +7228,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(18)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Standard Display Toggle</para>
@@ -5839,9 +7241,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(19)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule 3D Shading Toggle</para>
@@ -5850,9 +7254,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(20)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Length Percentage</para>
@@ -5861,9 +7267,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(21)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Alignment</para>
@@ -5872,9 +7280,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(22)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -5883,9 +7293,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(23)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Shape Overlap</para>
@@ -5894,9 +7306,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(24)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exists In Master Slide</para>
@@ -5905,9 +7319,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(25)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Top Color</para>
@@ -5916,9 +7332,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bordertopcolor")]
-        [Index(26)]
-        public StringValue BorderTopColor { get; set; }
+        public StringValue BorderTopColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Left Color</para>
@@ -5927,9 +7345,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderleftcolor")]
-        [Index(27)]
-        public StringValue BorderLeftColor { get; set; }
+        public StringValue BorderLeftColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Border Color</para>
@@ -5938,9 +7358,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderbottomcolor")]
-        [Index(28)]
-        public StringValue BorderBottomColor { get; set; }
+        public StringValue BorderBottomColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Right Color</para>
@@ -5949,9 +7371,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderrightcolor")]
-        [Index(29)]
-        public StringValue BorderRightColor { get; set; }
+        public StringValue BorderRightColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Layout Identifier</para>
@@ -5960,9 +7384,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(30)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Identifier</para>
@@ -5971,9 +7397,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(31)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Recent Layout Identifier</para>
@@ -5982,9 +7410,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(32)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Inset Mode</para>
@@ -5993,57 +7423,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(33)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: filled</para>
         /// </summary>
-        [SchemaAttr(0, "filled")]
-        [Index(34)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(35)]
-        public StringValue FillColor { get; set; }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroked</para>
         /// </summary>
-        [SchemaAttr(0, "stroked")]
-        [Index(36)]
-        public TrueFalseValue Stroked { get; set; }
+        public TrueFalseValue Stroked
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr(0, "strokecolor")]
-        [Index(37)]
-        public StringValue StrokeColor { get; set; }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: strokeweight</para>
         /// </summary>
-        [SchemaAttr(0, "strokeweight")]
-        [Index(38)]
-        public StringValue StrokeWeight { get; set; }
+        public StringValue StrokeWeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(39)]
-        public TrueFalseValue InsetPen { get; set; }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional Number</para>
@@ -6052,10 +7496,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 202L)]
-        [SchemaAttr(27, "spt")]
-        [Index(40)]
-        public Int32Value OptionalNumber { get; set; }
+        public Int32Value OptionalNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Connector Type</para>
@@ -6064,9 +7509,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectortype")]
-        [Index(41)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -6075,9 +7522,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(42)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -6086,9 +7535,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(43)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -6097,9 +7548,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(44)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -6108,9 +7561,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(45)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Icon Toggle</para>
@@ -6119,9 +7574,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oleicon")]
-        [Index(46)]
-        public TrueFalseValue OleIcon { get; set; }
+        public TrueFalseValue OleIcon
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Toggle</para>
@@ -6130,9 +7587,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "ole")]
-        [Index(47)]
-        public TrueFalseBlankValue Ole { get; set; }
+        public TrueFalseBlankValue Ole
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Resize Toggle</para>
@@ -6141,9 +7600,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "preferrelative")]
-        [Index(48)]
-        public TrueFalseValue PreferRelative { get; set; }
+        public TrueFalseValue PreferRelative
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clip to Wrapping Polygon</para>
@@ -6152,9 +7613,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "cliptowrap")]
-        [Index(49)]
-        public TrueFalseValue ClipToWrap { get; set; }
+        public TrueFalseValue ClipToWrap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipping Toggle</para>
@@ -6163,9 +7626,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "clip")]
-        [Index(50)]
-        public TrueFalseValue Clip { get; set; }
+        public TrueFalseValue Clip
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Encoded Package</para>
@@ -6174,25 +7639,118 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "gfxdata")]
-        [Index(51)]
-        public Base64BinaryValue Gfxdata { get; set; }
+        public Base64BinaryValue Gfxdata
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line Start</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
-        [SchemaAttr(0, "from")]
-        [Index(52)]
-        public StringValue From { get; set; }
+        public StringValue From
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Line End Point</para>
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
-        [SchemaAttr(0, "to")]
-        [Index(53)]
-        public StringValue To { get; set; }
+        public StringValue To
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "line");
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddElement<Line>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "from", a => a.From)
+.AddAttribute(0, "to", a => a.To);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
@@ -6273,31 +7831,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "oval")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Oval : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6335,89 +7868,111 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Display Target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(3)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>CSS Reference</para>
         /// <para>Represents the following attribute in the schema: class</para>
         /// </summary>
-        [SchemaAttr(0, "class")]
-        [Index(4)]
-        public StringValue Class { get; set; }
+        public StringValue Class
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Text</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(6)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Size</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(7)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Origin</para>
         /// <para>Represents the following attribute in the schema: coordorigin</para>
         /// </summary>
-        [SchemaAttr(0, "coordorigin")]
-        [Index(8)]
-        public StringValue CoordinateOrigin { get; set; }
+        public StringValue CoordinateOrigin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Bounding Polygon</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(9)]
-        public StringValue WrapCoordinates { get; set; }
+        public StringValue WrapCoordinates
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Toggle</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(10)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional String</para>
@@ -6426,9 +7981,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(11)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Handle Toggle</para>
@@ -6437,9 +7994,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(12)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Regroup ID</para>
@@ -6448,9 +8007,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(13)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double-click Notification Toggle</para>
@@ -6459,9 +8020,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(14)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Button Behavior Toggle</para>
@@ -6470,9 +8033,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(15)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Script Anchors</para>
@@ -6481,9 +8046,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(16)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Graphical Bullet</para>
@@ -6492,9 +8059,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(17)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Toggle</para>
@@ -6503,9 +8072,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(18)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Standard Display Toggle</para>
@@ -6514,9 +8085,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(19)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule 3D Shading Toggle</para>
@@ -6525,9 +8098,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(20)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Length Percentage</para>
@@ -6536,9 +8111,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(21)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Alignment</para>
@@ -6547,9 +8124,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(22)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -6558,9 +8137,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(23)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Shape Overlap</para>
@@ -6569,9 +8150,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(24)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exists In Master Slide</para>
@@ -6580,9 +8163,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(25)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Top Color</para>
@@ -6591,9 +8176,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bordertopcolor")]
-        [Index(26)]
-        public StringValue BorderTopColor { get; set; }
+        public StringValue BorderTopColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Left Color</para>
@@ -6602,9 +8189,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderleftcolor")]
-        [Index(27)]
-        public StringValue BorderLeftColor { get; set; }
+        public StringValue BorderLeftColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Border Color</para>
@@ -6613,9 +8202,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderbottomcolor")]
-        [Index(28)]
-        public StringValue BorderBottomColor { get; set; }
+        public StringValue BorderBottomColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Right Color</para>
@@ -6624,9 +8215,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderrightcolor")]
-        [Index(29)]
-        public StringValue BorderRightColor { get; set; }
+        public StringValue BorderRightColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Layout Identifier</para>
@@ -6635,9 +8228,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(30)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Identifier</para>
@@ -6646,9 +8241,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(31)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Recent Layout Identifier</para>
@@ -6657,9 +8254,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(32)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Inset Mode</para>
@@ -6668,57 +8267,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(33)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: filled</para>
         /// </summary>
-        [SchemaAttr(0, "filled")]
-        [Index(34)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(35)]
-        public StringValue FillColor { get; set; }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroked</para>
         /// </summary>
-        [SchemaAttr(0, "stroked")]
-        [Index(36)]
-        public TrueFalseValue Stroked { get; set; }
+        public TrueFalseValue Stroked
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr(0, "strokecolor")]
-        [Index(37)]
-        public StringValue StrokeColor { get; set; }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: strokeweight</para>
         /// </summary>
-        [SchemaAttr(0, "strokeweight")]
-        [Index(38)]
-        public StringValue StrokeWeight { get; set; }
+        public StringValue StrokeWeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(39)]
-        public TrueFalseValue InsetPen { get; set; }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional Number</para>
@@ -6727,10 +8340,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 202L)]
-        [SchemaAttr(27, "spt")]
-        [Index(40)]
-        public Int32Value OptionalNumber { get; set; }
+        public Int32Value OptionalNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Connector Type</para>
@@ -6739,9 +8353,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectortype")]
-        [Index(41)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -6750,9 +8366,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(42)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -6761,9 +8379,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(43)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -6772,9 +8392,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(44)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -6783,9 +8405,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(45)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Icon Toggle</para>
@@ -6794,9 +8418,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oleicon")]
-        [Index(46)]
-        public TrueFalseValue OleIcon { get; set; }
+        public TrueFalseValue OleIcon
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Toggle</para>
@@ -6805,9 +8431,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "ole")]
-        [Index(47)]
-        public TrueFalseBlankValue Ole { get; set; }
+        public TrueFalseBlankValue Ole
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Resize Toggle</para>
@@ -6816,9 +8444,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "preferrelative")]
-        [Index(48)]
-        public TrueFalseValue PreferRelative { get; set; }
+        public TrueFalseValue PreferRelative
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clip to Wrapping Polygon</para>
@@ -6827,9 +8457,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "cliptowrap")]
-        [Index(49)]
-        public TrueFalseValue ClipToWrap { get; set; }
+        public TrueFalseValue ClipToWrap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipping Toggle</para>
@@ -6838,9 +8470,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "clip")]
-        [Index(50)]
-        public TrueFalseValue Clip { get; set; }
+        public TrueFalseValue Clip
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Encoded Package</para>
@@ -6849,9 +8483,96 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "gfxdata")]
-        [Index(51)]
-        public Base64BinaryValue Gfxdata { get; set; }
+        public Base64BinaryValue Gfxdata
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "oval");
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddElement<Oval>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
@@ -6935,32 +8656,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Ink &lt;o:ink></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
-    [SchemaAttr(26, "polyline")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PolyLine : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6998,89 +8693,111 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Display Target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(3)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>CSS Reference</para>
         /// <para>Represents the following attribute in the schema: class</para>
         /// </summary>
-        [SchemaAttr(0, "class")]
-        [Index(4)]
-        public StringValue Class { get; set; }
+        public StringValue Class
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Text</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(6)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Size</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(7)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Origin</para>
         /// <para>Represents the following attribute in the schema: coordorigin</para>
         /// </summary>
-        [SchemaAttr(0, "coordorigin")]
-        [Index(8)]
-        public StringValue CoordinateOrigin { get; set; }
+        public StringValue CoordinateOrigin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Bounding Polygon</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(9)]
-        public StringValue WrapCoordinates { get; set; }
+        public StringValue WrapCoordinates
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Toggle</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(10)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional String</para>
@@ -7089,9 +8806,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(11)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Handle Toggle</para>
@@ -7100,9 +8819,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(12)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Regroup ID</para>
@@ -7111,9 +8832,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(13)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double-click Notification Toggle</para>
@@ -7122,9 +8845,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(14)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Button Behavior Toggle</para>
@@ -7133,9 +8858,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(15)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Script Anchors</para>
@@ -7144,9 +8871,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(16)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Graphical Bullet</para>
@@ -7155,9 +8884,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(17)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Toggle</para>
@@ -7166,9 +8897,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(18)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Standard Display Toggle</para>
@@ -7177,9 +8910,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(19)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule 3D Shading Toggle</para>
@@ -7188,9 +8923,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(20)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Length Percentage</para>
@@ -7199,9 +8936,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(21)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Alignment</para>
@@ -7210,9 +8949,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(22)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -7221,9 +8962,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(23)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Shape Overlap</para>
@@ -7232,9 +8975,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(24)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exists In Master Slide</para>
@@ -7243,9 +8988,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(25)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Top Color</para>
@@ -7254,9 +9001,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bordertopcolor")]
-        [Index(26)]
-        public StringValue BorderTopColor { get; set; }
+        public StringValue BorderTopColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Left Color</para>
@@ -7265,9 +9014,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderleftcolor")]
-        [Index(27)]
-        public StringValue BorderLeftColor { get; set; }
+        public StringValue BorderLeftColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Border Color</para>
@@ -7276,9 +9027,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderbottomcolor")]
-        [Index(28)]
-        public StringValue BorderBottomColor { get; set; }
+        public StringValue BorderBottomColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Right Color</para>
@@ -7287,9 +9040,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderrightcolor")]
-        [Index(29)]
-        public StringValue BorderRightColor { get; set; }
+        public StringValue BorderRightColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Layout Identifier</para>
@@ -7298,9 +9053,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(30)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Identifier</para>
@@ -7309,9 +9066,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(31)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Recent Layout Identifier</para>
@@ -7320,9 +9079,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(32)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Inset Mode</para>
@@ -7331,57 +9092,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(33)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: filled</para>
         /// </summary>
-        [SchemaAttr(0, "filled")]
-        [Index(34)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(35)]
-        public StringValue FillColor { get; set; }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroked</para>
         /// </summary>
-        [SchemaAttr(0, "stroked")]
-        [Index(36)]
-        public TrueFalseValue Stroked { get; set; }
+        public TrueFalseValue Stroked
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr(0, "strokecolor")]
-        [Index(37)]
-        public StringValue StrokeColor { get; set; }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: strokeweight</para>
         /// </summary>
-        [SchemaAttr(0, "strokeweight")]
-        [Index(38)]
-        public StringValue StrokeWeight { get; set; }
+        public StringValue StrokeWeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(39)]
-        public TrueFalseValue InsetPen { get; set; }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional Number</para>
@@ -7390,10 +9165,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 202L)]
-        [SchemaAttr(27, "spt")]
-        [Index(40)]
-        public Int32Value OptionalNumber { get; set; }
+        public Int32Value OptionalNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Connector Type</para>
@@ -7402,9 +9178,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectortype")]
-        [Index(41)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -7413,9 +9191,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(42)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -7424,9 +9204,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(43)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -7435,9 +9217,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(44)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -7446,9 +9230,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(45)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Icon Toggle</para>
@@ -7457,9 +9243,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oleicon")]
-        [Index(46)]
-        public TrueFalseValue OleIcon { get; set; }
+        public TrueFalseValue OleIcon
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Toggle</para>
@@ -7468,9 +9256,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "ole")]
-        [Index(47)]
-        public TrueFalseBlankValue Ole { get; set; }
+        public TrueFalseBlankValue Ole
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Resize Toggle</para>
@@ -7479,9 +9269,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "preferrelative")]
-        [Index(48)]
-        public TrueFalseValue PreferRelative { get; set; }
+        public TrueFalseValue PreferRelative
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clip to Wrapping Polygon</para>
@@ -7490,9 +9282,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "cliptowrap")]
-        [Index(49)]
-        public TrueFalseValue ClipToWrap { get; set; }
+        public TrueFalseValue ClipToWrap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipping Toggle</para>
@@ -7501,9 +9295,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "clip")]
-        [Index(50)]
-        public TrueFalseValue Clip { get; set; }
+        public TrueFalseValue Clip
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Encoded Package</para>
@@ -7512,17 +9308,108 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "gfxdata")]
-        [Index(51)]
-        public Base64BinaryValue Gfxdata { get; set; }
+        public Base64BinaryValue Gfxdata
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Points for Compound Line</para>
         /// <para>Represents the following attribute in the schema: points</para>
         /// </summary>
-        [SchemaAttr(0, "points")]
-        [Index(52)]
-        public StringValue Points { get; set; }
+        public StringValue Points
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "polyline");
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Ink>();
+            builder.AddElement<PolyLine>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "points", a => a.Points);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
@@ -7605,31 +9492,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "rect")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Rectangle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7667,89 +9529,111 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Styling Properties</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Target</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink Display Target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(3)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>CSS Reference</para>
         /// <para>Represents the following attribute in the schema: class</para>
         /// </summary>
-        [SchemaAttr(0, "class")]
-        [Index(4)]
-        public StringValue Class { get; set; }
+        public StringValue Class
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Alternate Text</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(6)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Size</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(7)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Coordinate Space Origin</para>
         /// <para>Represents the following attribute in the schema: coordorigin</para>
         /// </summary>
-        [SchemaAttr(0, "coordorigin")]
-        [Index(8)]
-        public StringValue CoordinateOrigin { get; set; }
+        public StringValue CoordinateOrigin
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Bounding Polygon</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(9)]
-        public StringValue WrapCoordinates { get; set; }
+        public StringValue WrapCoordinates
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Print Toggle</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(10)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional String</para>
@@ -7758,9 +9642,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(11)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Handle Toggle</para>
@@ -7769,9 +9655,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(12)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Regroup ID</para>
@@ -7780,9 +9668,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(13)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double-click Notification Toggle</para>
@@ -7791,9 +9681,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(14)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Button Behavior Toggle</para>
@@ -7802,9 +9694,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(15)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Script Anchors</para>
@@ -7813,9 +9707,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(16)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Graphical Bullet</para>
@@ -7824,9 +9720,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(17)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Toggle</para>
@@ -7835,9 +9733,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(18)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Standard Display Toggle</para>
@@ -7846,9 +9746,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(19)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule 3D Shading Toggle</para>
@@ -7857,9 +9759,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(20)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Length Percentage</para>
@@ -7868,9 +9772,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(21)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Alignment</para>
@@ -7879,9 +9785,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(22)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -7890,9 +9798,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(23)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Shape Overlap</para>
@@ -7901,9 +9811,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(24)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exists In Master Slide</para>
@@ -7912,9 +9824,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(25)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Top Color</para>
@@ -7923,9 +9837,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bordertopcolor")]
-        [Index(26)]
-        public StringValue BorderTopColor { get; set; }
+        public StringValue BorderTopColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Left Color</para>
@@ -7934,9 +9850,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderleftcolor")]
-        [Index(27)]
-        public StringValue BorderLeftColor { get; set; }
+        public StringValue BorderLeftColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Border Color</para>
@@ -7945,9 +9863,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderbottomcolor")]
-        [Index(28)]
-        public StringValue BorderBottomColor { get; set; }
+        public StringValue BorderBottomColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Right Color</para>
@@ -7956,9 +9876,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderrightcolor")]
-        [Index(29)]
-        public StringValue BorderRightColor { get; set; }
+        public StringValue BorderRightColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Layout Identifier</para>
@@ -7967,9 +9889,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(30)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Identifier</para>
@@ -7978,9 +9902,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(31)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Recent Layout Identifier</para>
@@ -7989,9 +9915,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(32)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Inset Mode</para>
@@ -8000,57 +9928,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(33)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: filled</para>
         /// </summary>
-        [SchemaAttr(0, "filled")]
-        [Index(34)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(35)]
-        public StringValue FillColor { get; set; }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroked</para>
         /// </summary>
-        [SchemaAttr(0, "stroked")]
-        [Index(36)]
-        public TrueFalseValue Stroked { get; set; }
+        public TrueFalseValue Stroked
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr(0, "strokecolor")]
-        [Index(37)]
-        public StringValue StrokeColor { get; set; }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: strokeweight</para>
         /// </summary>
-        [SchemaAttr(0, "strokeweight")]
-        [Index(38)]
-        public StringValue StrokeWeight { get; set; }
+        public StringValue StrokeWeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(39)]
-        public TrueFalseValue InsetPen { get; set; }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional Number</para>
@@ -8059,10 +10001,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 202L)]
-        [SchemaAttr(27, "spt")]
-        [Index(40)]
-        public Int32Value OptionalNumber { get; set; }
+        public Int32Value OptionalNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Connector Type</para>
@@ -8071,9 +10014,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectortype")]
-        [Index(41)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -8082,9 +10027,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(42)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -8093,9 +10040,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(43)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -8104,9 +10053,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(44)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -8115,9 +10066,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(45)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Icon Toggle</para>
@@ -8126,9 +10079,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oleicon")]
-        [Index(46)]
-        public TrueFalseValue OleIcon { get; set; }
+        public TrueFalseValue OleIcon
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Toggle</para>
@@ -8137,9 +10092,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "ole")]
-        [Index(47)]
-        public TrueFalseBlankValue Ole { get; set; }
+        public TrueFalseBlankValue Ole
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Resize Toggle</para>
@@ -8148,9 +10105,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "preferrelative")]
-        [Index(48)]
-        public TrueFalseValue PreferRelative { get; set; }
+        public TrueFalseValue PreferRelative
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clip to Wrapping Polygon</para>
@@ -8159,9 +10118,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "cliptowrap")]
-        [Index(49)]
-        public TrueFalseValue ClipToWrap { get; set; }
+        public TrueFalseValue ClipToWrap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipping Toggle</para>
@@ -8170,9 +10131,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "clip")]
-        [Index(50)]
-        public TrueFalseValue Clip { get; set; }
+        public TrueFalseValue Clip
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Encoded Package</para>
@@ -8181,9 +10144,96 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "gfxdata")]
-        [Index(51)]
-        public Base64BinaryValue Gfxdata { get; set; }
+        public Base64BinaryValue Gfxdata
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "rect");
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddElement<Rectangle>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "coordorigin", a => a.CoordinateOrigin)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(30 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
@@ -8266,31 +10316,6 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Path))]
-    [ChildElementInfo(typeof(Formulas))]
-    [ChildElementInfo(typeof(ShapeHandles))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(Stroke))]
-    [ChildElementInfo(typeof(Shadow))]
-    [ChildElementInfo(typeof(TextBox))]
-    [ChildElementInfo(typeof(TextPath))]
-    [ChildElementInfo(typeof(ImageData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Skew))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Callout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Lock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-    [SchemaAttr(26, "roundrect")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RoundRectangle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8328,81 +10353,101 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Unique Identifier</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>style</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(1)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>href</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        [SchemaAttr(0, "href")]
-        [Index(2)]
-        public StringValue Href { get; set; }
+        public StringValue Href
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        [SchemaAttr(0, "target")]
-        [Index(3)]
-        public StringValue Target { get; set; }
+        public StringValue Target
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>class</para>
         /// <para>Represents the following attribute in the schema: class</para>
         /// </summary>
-        [SchemaAttr(0, "class")]
-        [Index(4)]
-        public StringValue Class { get; set; }
+        public StringValue Class
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(5)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>alt</para>
         /// <para>Represents the following attribute in the schema: alt</para>
         /// </summary>
-        [SchemaAttr(0, "alt")]
-        [Index(6)]
-        public StringValue Alternate { get; set; }
+        public StringValue Alternate
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>coordsize</para>
         /// <para>Represents the following attribute in the schema: coordsize</para>
         /// </summary>
-        [SchemaAttr(0, "coordsize")]
-        [Index(7)]
-        public StringValue CoordinateSize { get; set; }
+        public StringValue CoordinateSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>wrapcoords</para>
         /// <para>Represents the following attribute in the schema: wrapcoords</para>
         /// </summary>
-        [SchemaAttr(0, "wrapcoords")]
-        [Index(8)]
-        public StringValue WrapCoordinates { get; set; }
+        public StringValue WrapCoordinates
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>print</para>
         /// <para>Represents the following attribute in the schema: print</para>
         /// </summary>
-        [SchemaAttr(0, "print")]
-        [Index(9)]
-        public TrueFalseValue Print { get; set; }
+        public TrueFalseValue Print
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional String</para>
@@ -8411,9 +10456,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "spid")]
-        [Index(10)]
-        public StringValue OptionalString { get; set; }
+        public StringValue OptionalString
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Handle Toggle</para>
@@ -8422,9 +10469,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oned")]
-        [Index(11)]
-        public TrueFalseValue Oned { get; set; }
+        public TrueFalseValue Oned
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Regroup ID</para>
@@ -8433,9 +10482,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "regroupid")]
-        [Index(12)]
-        public IntegerValue RegroupId { get; set; }
+        public IntegerValue RegroupId
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Double-click Notification Toggle</para>
@@ -8444,9 +10495,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "doubleclicknotify")]
-        [Index(13)]
-        public TrueFalseValue DoubleClickNotify { get; set; }
+        public TrueFalseValue DoubleClickNotify
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Button Behavior Toggle</para>
@@ -8455,9 +10508,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "button")]
-        [Index(14)]
-        public TrueFalseValue Button { get; set; }
+        public TrueFalseValue Button
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hide Script Anchors</para>
@@ -8466,9 +10521,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userhidden")]
-        [Index(15)]
-        public TrueFalseValue UserHidden { get; set; }
+        public TrueFalseValue UserHidden
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Graphical Bullet</para>
@@ -8477,9 +10534,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bullet")]
-        [Index(16)]
-        public TrueFalseValue Bullet { get; set; }
+        public TrueFalseValue Bullet
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Toggle</para>
@@ -8488,9 +10547,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hr")]
-        [Index(17)]
-        public TrueFalseValue Horizontal { get; set; }
+        public TrueFalseValue Horizontal
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Standard Display Toggle</para>
@@ -8499,9 +10560,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrstd")]
-        [Index(18)]
-        public TrueFalseValue HorizontalStandard { get; set; }
+        public TrueFalseValue HorizontalStandard
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule 3D Shading Toggle</para>
@@ -8510,9 +10573,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrnoshade")]
-        [Index(19)]
-        public TrueFalseValue HorizontalNoShade { get; set; }
+        public TrueFalseValue HorizontalNoShade
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Length Percentage</para>
@@ -8521,9 +10586,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hrpct")]
-        [Index(20)]
-        public SingleValue HorizontalPercentage { get; set; }
+        public SingleValue HorizontalPercentage
+        {
+            get => GetAttribute<SingleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Rule Alignment</para>
@@ -8532,9 +10599,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "hralign")]
-        [Index(21)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow in Table Cell</para>
@@ -8543,9 +10612,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowincell")]
-        [Index(22)]
-        public TrueFalseValue AllowInCell { get; set; }
+        public TrueFalseValue AllowInCell
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Allow Shape Overlap</para>
@@ -8554,9 +10625,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "allowoverlap")]
-        [Index(23)]
-        public TrueFalseValue AllowOverlap { get; set; }
+        public TrueFalseValue AllowOverlap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Exists In Master Slide</para>
@@ -8565,9 +10638,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "userdrawn")]
-        [Index(24)]
-        public TrueFalseValue UserDrawn { get; set; }
+        public TrueFalseValue UserDrawn
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Top Color</para>
@@ -8576,9 +10651,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bordertopcolor")]
-        [Index(25)]
-        public StringValue BorderTopColor { get; set; }
+        public StringValue BorderTopColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Left Color</para>
@@ -8587,9 +10664,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderleftcolor")]
-        [Index(26)]
-        public StringValue BorderLeftColor { get; set; }
+        public StringValue BorderLeftColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom Border Color</para>
@@ -8598,9 +10677,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderbottomcolor")]
-        [Index(27)]
-        public StringValue BorderBottomColor { get; set; }
+        public StringValue BorderBottomColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Border Right Color</para>
@@ -8609,9 +10690,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "borderrightcolor")]
-        [Index(28)]
-        public StringValue BorderRightColor { get; set; }
+        public StringValue BorderRightColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Layout Identifier</para>
@@ -8620,9 +10703,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayout")]
-        [Index(29)]
-        public IntegerValue DiagramLayout { get; set; }
+        public IntegerValue DiagramLayout
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Identifier</para>
@@ -8631,9 +10716,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmnodekind")]
-        [Index(30)]
-        public IntegerValue DiagramNodeKind { get; set; }
+        public IntegerValue DiagramNodeKind
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Diagram Node Recent Layout Identifier</para>
@@ -8642,9 +10729,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "dgmlayoutmru")]
-        [Index(31)]
-        public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+        public IntegerValue DiagramLayoutMostRecentUsed
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Inset Mode</para>
@@ -8653,57 +10742,71 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "insetmode")]
-        [Index(32)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Fill Toggle</para>
         /// <para>Represents the following attribute in the schema: filled</para>
         /// </summary>
-        [SchemaAttr(0, "filled")]
-        [Index(33)]
-        public TrueFalseValue Filled { get; set; }
+        public TrueFalseValue Filled
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Fill Color</para>
         /// <para>Represents the following attribute in the schema: fillcolor</para>
         /// </summary>
-        [SchemaAttr(0, "fillcolor")]
-        [Index(34)]
-        public StringValue FillColor { get; set; }
+        public StringValue FillColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Toggle</para>
         /// <para>Represents the following attribute in the schema: stroked</para>
         /// </summary>
-        [SchemaAttr(0, "stroked")]
-        [Index(35)]
-        public TrueFalseValue Stroked { get; set; }
+        public TrueFalseValue Stroked
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Color</para>
         /// <para>Represents the following attribute in the schema: strokecolor</para>
         /// </summary>
-        [SchemaAttr(0, "strokecolor")]
-        [Index(36)]
-        public StringValue StrokeColor { get; set; }
+        public StringValue StrokeColor
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Stroke Weight</para>
         /// <para>Represents the following attribute in the schema: strokeweight</para>
         /// </summary>
-        [SchemaAttr(0, "strokeweight")]
-        [Index(37)]
-        public StringValue StrokeWeight { get; set; }
+        public StringValue StrokeWeight
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Inset Border From Path</para>
         /// <para>Represents the following attribute in the schema: insetpen</para>
         /// </summary>
-        [SchemaAttr(0, "insetpen")]
-        [Index(38)]
-        public TrueFalseValue InsetPen { get; set; }
+        public TrueFalseValue InsetPen
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Optional Number</para>
@@ -8712,10 +10815,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 202L)]
-        [SchemaAttr(27, "spt")]
-        [Index(39)]
-        public Int32Value OptionalNumber { get; set; }
+        public Int32Value OptionalNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Shape Connector Type</para>
@@ -8724,9 +10828,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "connectortype")]
-        [Index(40)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black-and-White Mode</para>
@@ -8735,9 +10841,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwmode")]
-        [Index(41)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Pure Black-and-White Mode</para>
@@ -8746,9 +10854,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwpure")]
-        [Index(42)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Normal Black-and-White Mode</para>
@@ -8757,9 +10867,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "bwnormal")]
-        [Index(43)]
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Force Dashed Outline</para>
@@ -8768,9 +10880,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "forcedash")]
-        [Index(44)]
-        public TrueFalseValue ForceDash { get; set; }
+        public TrueFalseValue ForceDash
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Icon Toggle</para>
@@ -8779,9 +10893,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "oleicon")]
-        [Index(45)]
-        public TrueFalseValue OleIcon { get; set; }
+        public TrueFalseValue OleIcon
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Embedded Object Toggle</para>
@@ -8790,9 +10906,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "ole")]
-        [Index(46)]
-        public TrueFalseBlankValue Ole { get; set; }
+        public TrueFalseBlankValue Ole
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Relative Resize Toggle</para>
@@ -8801,9 +10919,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "preferrelative")]
-        [Index(47)]
-        public TrueFalseValue PreferRelative { get; set; }
+        public TrueFalseValue PreferRelative
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clip to Wrapping Polygon</para>
@@ -8812,9 +10932,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "cliptowrap")]
-        [Index(48)]
-        public TrueFalseValue ClipToWrap { get; set; }
+        public TrueFalseValue ClipToWrap
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Clipping Toggle</para>
@@ -8823,9 +10945,11 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "clip")]
-        [Index(49)]
-        public TrueFalseValue Clip { get; set; }
+        public TrueFalseValue Clip
+        {
+            get => GetAttribute<TrueFalseValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Encoded Package</para>
@@ -8834,17 +10958,106 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        [SchemaAttr(27, "gfxdata")]
-        [Index(50)]
-        public Base64BinaryValue Gfxdata { get; set; }
+        public Base64BinaryValue Gfxdata
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Rounded Corner Arc Size</para>
         /// <para>Represents the following attribute in the schema: arcsize</para>
         /// </summary>
-        [SchemaAttr(0, "arcsize")]
-        [Index(51)]
-        public StringValue ArcSize { get; set; }
+        public StringValue ArcSize
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "roundrect");
+            builder.AddChild<Path>();
+            builder.AddChild<Formulas>();
+            builder.AddChild<ShapeHandles>();
+            builder.AddChild<Fill>();
+            builder.AddChild<Stroke>();
+            builder.AddChild<Shadow>();
+            builder.AddChild<TextBox>();
+            builder.AddChild<TextPath>();
+            builder.AddChild<ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
+            builder.AddElement<RoundRectangle>()
+.AddAttribute(0, "id", a => a.Id)
+.AddAttribute(0, "style", a => a.Style)
+.AddAttribute(0, "href", a => a.Href)
+.AddAttribute(0, "target", a => a.Target)
+.AddAttribute(0, "class", a => a.Class)
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "alt", a => a.Alternate)
+.AddAttribute(0, "coordsize", a => a.CoordinateSize)
+.AddAttribute(0, "wrapcoords", a => a.WrapCoordinates)
+.AddAttribute(0, "print", a => a.Print)
+.AddAttribute(27, "spid", a => a.OptionalString)
+.AddAttribute(27, "oned", a => a.Oned)
+.AddAttribute(27, "regroupid", a => a.RegroupId)
+.AddAttribute(27, "doubleclicknotify", a => a.DoubleClickNotify)
+.AddAttribute(27, "button", a => a.Button)
+.AddAttribute(27, "userhidden", a => a.UserHidden)
+.AddAttribute(27, "bullet", a => a.Bullet)
+.AddAttribute(27, "hr", a => a.Horizontal)
+.AddAttribute(27, "hrstd", a => a.HorizontalStandard)
+.AddAttribute(27, "hrnoshade", a => a.HorizontalNoShade)
+.AddAttribute(27, "hrpct", a => a.HorizontalPercentage)
+.AddAttribute(27, "hralign", a => a.HorizontalAlignment)
+.AddAttribute(27, "allowincell", a => a.AllowInCell)
+.AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
+.AddAttribute(27, "userdrawn", a => a.UserDrawn)
+.AddAttribute(27, "bordertopcolor", a => a.BorderTopColor)
+.AddAttribute(27, "borderleftcolor", a => a.BorderLeftColor)
+.AddAttribute(27, "borderbottomcolor", a => a.BorderBottomColor)
+.AddAttribute(27, "borderrightcolor", a => a.BorderRightColor)
+.AddAttribute(27, "dgmlayout", a => a.DiagramLayout)
+.AddAttribute(27, "dgmnodekind", a => a.DiagramNodeKind)
+.AddAttribute(27, "dgmlayoutmru", a => a.DiagramLayoutMostRecentUsed)
+.AddAttribute(27, "insetmode", a => a.InsetMode)
+.AddAttribute(0, "filled", a => a.Filled)
+.AddAttribute(0, "fillcolor", a => a.FillColor)
+.AddAttribute(0, "stroked", a => a.Stroked)
+.AddAttribute(0, "strokecolor", a => a.StrokeColor)
+.AddAttribute(0, "strokeweight", a => a.StrokeWeight)
+.AddAttribute(0, "insetpen", a => a.InsetPen)
+.AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+})
+.AddAttribute(27, "connectortype", a => a.ConnectorType)
+.AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
+.AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
+.AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
+.AddAttribute(27, "forcedash", a => a.ForceDash)
+.AddAttribute(27, "oleicon", a => a.OleIcon)
+.AddAttribute(27, "ole", a => a.Ole)
+.AddAttribute(27, "preferrelative", a => a.PreferRelative)
+.AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
+.AddAttribute(27, "clip", a => a.Clip)
+.AddAttribute(27, "gfxdata", a => a.Gfxdata)
+.AddAttribute(0, "arcsize", a => a.ArcSize);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueSetConstraint(29 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
@@ -8899,8 +11112,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:h.</para>
     /// </summary>
-    [SchemaAttr(26, "h")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeHandle : OpenXmlLeafElement
     {
         /// <summary>
@@ -8914,73 +11125,107 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Handle Position</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        [SchemaAttr(0, "position")]
-        [Index(0)]
-        public StringValue Position { get; set; }
+        public StringValue Position
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Handle Polar Center</para>
         /// <para>Represents the following attribute in the schema: polar</para>
         /// </summary>
-        [SchemaAttr(0, "polar")]
-        [Index(1)]
-        public StringValue Polar { get; set; }
+        public StringValue Polar
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Handle Coordinate Mapping</para>
         /// <para>Represents the following attribute in the schema: map</para>
         /// </summary>
-        [SchemaAttr(0, "map")]
-        [Index(2)]
-        public StringValue Map { get; set; }
+        public StringValue Map
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Invert Handle's X Position</para>
         /// <para>Represents the following attribute in the schema: invx</para>
         /// </summary>
-        [SchemaAttr(0, "invx")]
-        [Index(3)]
-        public TrueFalseBlankValue InvertX { get; set; }
+        public TrueFalseBlankValue InvertX
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Invert Handle's Y Position</para>
         /// <para>Represents the following attribute in the schema: invy</para>
         /// </summary>
-        [SchemaAttr(0, "invy")]
-        [Index(4)]
-        public TrueFalseBlankValue InvertY { get; set; }
+        public TrueFalseBlankValue InvertY
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Handle Inversion Toggle</para>
         /// <para>Represents the following attribute in the schema: switch</para>
         /// </summary>
-        [SchemaAttr(0, "switch")]
-        [Index(5)]
-        public TrueFalseBlankValue Switch { get; set; }
+        public TrueFalseBlankValue Switch
+        {
+            get => GetAttribute<TrueFalseBlankValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Handle X Position Range</para>
         /// <para>Represents the following attribute in the schema: xrange</para>
         /// </summary>
-        [SchemaAttr(0, "xrange")]
-        [Index(6)]
-        public StringValue XRange { get; set; }
+        public StringValue XRange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Handle Y Position Range</para>
         /// <para>Represents the following attribute in the schema: yrange</para>
         /// </summary>
-        [SchemaAttr(0, "yrange")]
-        [Index(7)]
-        public StringValue YRange { get; set; }
+        public StringValue YRange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Handle Polar Radius Range</para>
         /// <para>Represents the following attribute in the schema: radiusrange</para>
         /// </summary>
-        [SchemaAttr(0, "radiusrange")]
-        [Index(8)]
-        public StringValue RadiusRange { get; set; }
+        public StringValue RadiusRange
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "h");
+            builder.AddElement<ShapeHandle>()
+ .AddAttribute(0, "position", a => a.Position)
+ .AddAttribute(0, "polar", a => a.Polar)
+ .AddAttribute(0, "map", a => a.Map)
+ .AddAttribute(0, "invx", a => a.InvertX)
+ .AddAttribute(0, "invy", a => a.InvertY)
+ .AddAttribute(0, "switch", a => a.Switch)
+ .AddAttribute(0, "xrange", a => a.XRange)
+ .AddAttribute(0, "yrange", a => a.YRange)
+ .AddAttribute(0, "radiusrange", a => a.RadiusRange);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeHandle>(deep);
@@ -8991,8 +11236,6 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:f.</para>
     /// </summary>
-    [SchemaAttr(26, "f")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Formula : OpenXmlLeafElement
     {
         /// <summary>
@@ -9006,9 +11249,19 @@ namespace DocumentFormat.OpenXml.Vml
         /// <para>Equation</para>
         /// <para>Represents the following attribute in the schema: eqn</para>
         /// </summary>
-        [SchemaAttr(0, "eqn")]
-        [Index(0)]
-        public StringValue Equation { get; set; }
+        public StringValue Equation
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(26, "f");
+            builder.AddElement<Formula>()
+ .AddAttribute(0, "eqn", a => a.Equation);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);

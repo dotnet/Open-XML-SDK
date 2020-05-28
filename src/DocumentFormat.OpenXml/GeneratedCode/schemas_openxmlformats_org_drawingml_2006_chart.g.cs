@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.ChartDrawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office2010.Drawing.Charts;
 using DocumentFormat.OpenXml.Office2013.Drawing.Chart;
 using DocumentFormat.OpenXml.Packaging;
@@ -21,8 +22,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:numFmt.</para>
     /// </summary>
-    [SchemaAttr(11, "numFmt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumberingFormat : OpenXmlLeafElement
     {
         /// <summary>
@@ -36,18 +35,33 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Format Code</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "formatCode")]
-        [Index(0)]
-        public StringValue FormatCode { get; set; }
+        public StringValue FormatCode
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Linked to Source</para>
         /// <para>Represents the following attribute in the schema: sourceLinked</para>
         /// </summary>
-        [SchemaAttr(0, "sourceLinked")]
-        [Index(1)]
-        public BooleanValue SourceLinked { get; set; }
+        public BooleanValue SourceLinked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "numFmt");
+            builder.AddElement<NumberingFormat>()
+.AddAttribute(0, "formatCode", a => a.FormatCode, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sourceLinked", a => a.SourceLinked);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingFormat>(deep);
@@ -77,22 +91,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(11, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -130,10 +128,36 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "spPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddElement<ChartShapeProperties>()
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -200,8 +224,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "txPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextProperties : TextBodyType
     {
         /// <summary>
@@ -235,6 +257,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "txPr");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
@@ -261,8 +289,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "rich")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RichText : TextBodyType
     {
         /// <summary>
@@ -296,6 +322,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "rich");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
@@ -322,9 +354,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
     public abstract partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -356,6 +385,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected TextBodyType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
         }
 
         /// <summary>
@@ -390,8 +427,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dLblPos.</para>
     /// </summary>
-    [SchemaAttr(11, "dLblPos")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataLabelPosition : OpenXmlLeafElement
     {
         /// <summary>
@@ -405,10 +440,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Data Label Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dLblPos");
+            builder.AddElement<DataLabelPosition>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelPosition>(deep);
@@ -419,8 +466,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showLegendKey.</para>
     /// </summary>
-    [SchemaAttr(11, "showLegendKey")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowLegendKey : BooleanType
     {
         /// <summary>
@@ -428,6 +473,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowLegendKey() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showLegendKey");
         }
 
         /// <inheritdoc/>
@@ -439,8 +490,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showVal.</para>
     /// </summary>
-    [SchemaAttr(11, "showVal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowValue : BooleanType
     {
         /// <summary>
@@ -448,6 +497,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowValue() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showVal");
         }
 
         /// <inheritdoc/>
@@ -459,8 +514,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showCatName.</para>
     /// </summary>
-    [SchemaAttr(11, "showCatName")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowCategoryName : BooleanType
     {
         /// <summary>
@@ -468,6 +521,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowCategoryName() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showCatName");
         }
 
         /// <inheritdoc/>
@@ -479,8 +538,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showSerName.</para>
     /// </summary>
-    [SchemaAttr(11, "showSerName")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowSeriesName : BooleanType
     {
         /// <summary>
@@ -488,6 +545,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowSeriesName() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showSerName");
         }
 
         /// <inheritdoc/>
@@ -499,8 +562,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showPercent.</para>
     /// </summary>
-    [SchemaAttr(11, "showPercent")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowPercent : BooleanType
     {
         /// <summary>
@@ -508,6 +569,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowPercent() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showPercent");
         }
 
         /// <inheritdoc/>
@@ -519,8 +586,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showBubbleSize.</para>
     /// </summary>
-    [SchemaAttr(11, "showBubbleSize")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowBubbleSize : BooleanType
     {
         /// <summary>
@@ -528,6 +593,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowBubbleSize() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showBubbleSize");
         }
 
         /// <inheritdoc/>
@@ -539,8 +610,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showLeaderLines.</para>
     /// </summary>
-    [SchemaAttr(11, "showLeaderLines")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowLeaderLines : BooleanType
     {
         /// <summary>
@@ -548,6 +617,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowLeaderLines() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showLeaderLines");
         }
 
         /// <inheritdoc/>
@@ -559,8 +634,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:varyColors.</para>
     /// </summary>
-    [SchemaAttr(11, "varyColors")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VaryColors : BooleanType
     {
         /// <summary>
@@ -568,6 +641,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public VaryColors() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "varyColors");
         }
 
         /// <inheritdoc/>
@@ -579,8 +658,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:wireframe.</para>
     /// </summary>
-    [SchemaAttr(11, "wireframe")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Wireframe : BooleanType
     {
         /// <summary>
@@ -588,6 +665,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Wireframe() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "wireframe");
         }
 
         /// <inheritdoc/>
@@ -599,8 +682,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:delete.</para>
     /// </summary>
-    [SchemaAttr(11, "delete")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Delete : BooleanType
     {
         /// <summary>
@@ -608,6 +689,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Delete() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "delete");
         }
 
         /// <inheritdoc/>
@@ -619,8 +706,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:overlay.</para>
     /// </summary>
-    [SchemaAttr(11, "overlay")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Overlay : BooleanType
     {
         /// <summary>
@@ -628,6 +713,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Overlay() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "overlay");
         }
 
         /// <inheritdoc/>
@@ -639,8 +730,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:rAngAx.</para>
     /// </summary>
-    [SchemaAttr(11, "rAngAx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RightAngleAxes : BooleanType
     {
         /// <summary>
@@ -648,6 +737,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public RightAngleAxes() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "rAngAx");
         }
 
         /// <inheritdoc/>
@@ -659,8 +754,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showHorzBorder.</para>
     /// </summary>
-    [SchemaAttr(11, "showHorzBorder")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowHorizontalBorder : BooleanType
     {
         /// <summary>
@@ -668,6 +761,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowHorizontalBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showHorzBorder");
         }
 
         /// <inheritdoc/>
@@ -679,8 +778,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showVertBorder.</para>
     /// </summary>
-    [SchemaAttr(11, "showVertBorder")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowVerticalBorder : BooleanType
     {
         /// <summary>
@@ -688,6 +785,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowVerticalBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showVertBorder");
         }
 
         /// <inheritdoc/>
@@ -699,8 +802,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showOutline.</para>
     /// </summary>
-    [SchemaAttr(11, "showOutline")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowOutlineBorder : BooleanType
     {
         /// <summary>
@@ -708,6 +809,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowOutlineBorder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showOutline");
         }
 
         /// <inheritdoc/>
@@ -719,8 +826,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showKeys.</para>
     /// </summary>
-    [SchemaAttr(11, "showKeys")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowKeys : BooleanType
     {
         /// <summary>
@@ -728,6 +833,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowKeys() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showKeys");
         }
 
         /// <inheritdoc/>
@@ -739,8 +850,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:invertIfNegative.</para>
     /// </summary>
-    [SchemaAttr(11, "invertIfNegative")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class InvertIfNegative : BooleanType
     {
         /// <summary>
@@ -748,6 +857,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public InvertIfNegative() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "invertIfNegative");
         }
 
         /// <inheritdoc/>
@@ -759,8 +874,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:bubble3D.</para>
     /// </summary>
-    [SchemaAttr(11, "bubble3D")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Bubble3D : BooleanType
     {
         /// <summary>
@@ -768,6 +881,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Bubble3D() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "bubble3D");
         }
 
         /// <inheritdoc/>
@@ -779,8 +898,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dispRSqr.</para>
     /// </summary>
-    [SchemaAttr(11, "dispRSqr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DisplayRSquaredValue : BooleanType
     {
         /// <summary>
@@ -788,6 +905,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public DisplayRSquaredValue() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dispRSqr");
         }
 
         /// <inheritdoc/>
@@ -799,8 +922,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dispEq.</para>
     /// </summary>
-    [SchemaAttr(11, "dispEq")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DisplayEquation : BooleanType
     {
         /// <summary>
@@ -808,6 +929,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public DisplayEquation() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dispEq");
         }
 
         /// <inheritdoc/>
@@ -819,8 +946,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:noEndCap.</para>
     /// </summary>
-    [SchemaAttr(11, "noEndCap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NoEndCap : BooleanType
     {
         /// <summary>
@@ -828,6 +953,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public NoEndCap() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "noEndCap");
         }
 
         /// <inheritdoc/>
@@ -839,8 +970,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:applyToFront.</para>
     /// </summary>
-    [SchemaAttr(11, "applyToFront")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ApplyToFront : BooleanType
     {
         /// <summary>
@@ -848,6 +977,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ApplyToFront() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "applyToFront");
         }
 
         /// <inheritdoc/>
@@ -859,8 +994,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:applyToSides.</para>
     /// </summary>
-    [SchemaAttr(11, "applyToSides")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ApplyToSides : BooleanType
     {
         /// <summary>
@@ -868,6 +1001,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ApplyToSides() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "applyToSides");
         }
 
         /// <inheritdoc/>
@@ -879,8 +1018,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:applyToEnd.</para>
     /// </summary>
-    [SchemaAttr(11, "applyToEnd")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ApplyToEnd : BooleanType
     {
         /// <summary>
@@ -888,6 +1025,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ApplyToEnd() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "applyToEnd");
         }
 
         /// <inheritdoc/>
@@ -899,8 +1042,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:autoTitleDeleted.</para>
     /// </summary>
-    [SchemaAttr(11, "autoTitleDeleted")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AutoTitleDeleted : BooleanType
     {
         /// <summary>
@@ -908,6 +1049,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public AutoTitleDeleted() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "autoTitleDeleted");
         }
 
         /// <inheritdoc/>
@@ -919,8 +1066,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:plotVisOnly.</para>
     /// </summary>
-    [SchemaAttr(11, "plotVisOnly")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PlotVisibleOnly : BooleanType
     {
         /// <summary>
@@ -928,6 +1073,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public PlotVisibleOnly() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "plotVisOnly");
         }
 
         /// <inheritdoc/>
@@ -939,8 +1090,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showDLblsOverMax.</para>
     /// </summary>
-    [SchemaAttr(11, "showDLblsOverMax")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowDataLabelsOverMaximum : BooleanType
     {
         /// <summary>
@@ -948,6 +1097,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowDataLabelsOverMaximum() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showDLblsOverMax");
         }
 
         /// <inheritdoc/>
@@ -959,8 +1114,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:chartObject.</para>
     /// </summary>
-    [SchemaAttr(11, "chartObject")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartObject : BooleanType
     {
         /// <summary>
@@ -968,6 +1121,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ChartObject() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "chartObject");
         }
 
         /// <inheritdoc/>
@@ -979,8 +1138,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:data.</para>
     /// </summary>
-    [SchemaAttr(11, "data")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Data : BooleanType
     {
         /// <summary>
@@ -988,6 +1145,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Data() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "data");
         }
 
         /// <inheritdoc/>
@@ -999,8 +1162,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:formatting.</para>
     /// </summary>
-    [SchemaAttr(11, "formatting")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Formatting : BooleanType
     {
         /// <summary>
@@ -1008,6 +1169,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Formatting() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "formatting");
         }
 
         /// <inheritdoc/>
@@ -1019,8 +1186,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:selection.</para>
     /// </summary>
-    [SchemaAttr(11, "selection")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Selection : BooleanType
     {
         /// <summary>
@@ -1028,6 +1193,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Selection() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "selection");
         }
 
         /// <inheritdoc/>
@@ -1039,8 +1210,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:userInterface.</para>
     /// </summary>
-    [SchemaAttr(11, "userInterface")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class UserInterface : BooleanType
     {
         /// <summary>
@@ -1048,6 +1217,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public UserInterface() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "userInterface");
         }
 
         /// <inheritdoc/>
@@ -1059,8 +1234,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:autoUpdate.</para>
     /// </summary>
-    [SchemaAttr(11, "autoUpdate")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AutoUpdate : BooleanType
     {
         /// <summary>
@@ -1068,6 +1241,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public AutoUpdate() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "autoUpdate");
         }
 
         /// <inheritdoc/>
@@ -1079,8 +1258,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:smooth.</para>
     /// </summary>
-    [SchemaAttr(11, "smooth")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Smooth : BooleanType
     {
         /// <summary>
@@ -1088,6 +1265,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Smooth() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "smooth");
         }
 
         /// <inheritdoc/>
@@ -1099,8 +1282,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:marker.</para>
     /// </summary>
-    [SchemaAttr(11, "marker")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowMarker : BooleanType
     {
         /// <summary>
@@ -1108,6 +1289,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowMarker() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "marker");
         }
 
         /// <inheritdoc/>
@@ -1119,8 +1306,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:showNegBubbles.</para>
     /// </summary>
-    [SchemaAttr(11, "showNegBubbles")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowNegativeBubbles : BooleanType
     {
         /// <summary>
@@ -1128,6 +1313,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ShowNegativeBubbles() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "showNegBubbles");
         }
 
         /// <inheritdoc/>
@@ -1139,8 +1330,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:auto.</para>
     /// </summary>
-    [SchemaAttr(11, "auto")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AutoLabeled : BooleanType
     {
         /// <summary>
@@ -1148,6 +1337,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public AutoLabeled() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "auto");
         }
 
         /// <inheritdoc/>
@@ -1159,8 +1354,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:noMultiLvlLbl.</para>
     /// </summary>
-    [SchemaAttr(11, "noMultiLvlLbl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NoMultiLevelLabels : BooleanType
     {
         /// <summary>
@@ -1168,6 +1361,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public NoMultiLevelLabels() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "noMultiLvlLbl");
         }
 
         /// <inheritdoc/>
@@ -1179,8 +1378,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:date1904.</para>
     /// </summary>
-    [SchemaAttr(11, "date1904")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Date1904 : BooleanType
     {
         /// <summary>
@@ -1188,6 +1385,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Date1904() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "date1904");
         }
 
         /// <inheritdoc/>
@@ -1199,8 +1402,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:roundedCorners.</para>
     /// </summary>
-    [SchemaAttr(11, "roundedCorners")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RoundedCorners : BooleanType
     {
         /// <summary>
@@ -1208,6 +1409,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public RoundedCorners() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "roundedCorners");
         }
 
         /// <inheritdoc/>
@@ -1232,9 +1439,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BooleanType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -1242,8 +1458,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:separator.</para>
     /// </summary>
-    [SchemaAttr(11, "separator")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Separator : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1266,6 +1480,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "separator");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Separator>(deep);
     }
@@ -1275,8 +1495,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:name.</para>
     /// </summary>
-    [SchemaAttr(11, "name")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TrendlineName : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1299,6 +1517,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "name");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrendlineName>(deep);
     }
@@ -1308,8 +1532,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:f.</para>
     /// </summary>
-    [SchemaAttr(11, "f")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Formula : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1332,6 +1554,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "f");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
     }
@@ -1348,10 +1576,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ManualLayout))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "layout")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Layout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1383,6 +1607,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Layout(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "layout");
+            builder.AddChild<ManualLayout>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -1436,11 +1668,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StringLiteral &lt;c:strLit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StringReference))]
-    [ChildElementInfo(typeof(RichText))]
-    [ChildElementInfo(typeof(StringLiteral))]
-    [SchemaAttr(11, "tx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartText : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1472,6 +1699,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ChartText(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "tx");
+            builder.AddChild<StringReference>();
+            builder.AddChild<RichText>();
+            builder.AddChild<StringLiteral>();
         }
 
         /// <summary>
@@ -1540,8 +1776,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "leaderLines")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LeaderLines : ChartLinesType
     {
         /// <summary>
@@ -1575,6 +1809,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "leaderLines");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1597,8 +1837,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "dropLines")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DropLines : ChartLinesType
     {
         /// <summary>
@@ -1632,6 +1870,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dropLines");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1654,8 +1898,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "majorGridlines")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MajorGridlines : ChartLinesType
     {
         /// <summary>
@@ -1689,6 +1931,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "majorGridlines");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1711,8 +1959,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "minorGridlines")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MinorGridlines : ChartLinesType
     {
         /// <summary>
@@ -1746,6 +1992,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "minorGridlines");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1768,8 +2020,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "serLines")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SeriesLines : ChartLinesType
     {
         /// <summary>
@@ -1803,6 +2053,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "serLines");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1825,8 +2081,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "hiLowLines")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HighLowLines : ChartLinesType
     {
         /// <summary>
@@ -1860,6 +2114,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "hiLowLines");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -1882,7 +2142,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartShapeProperties))]
     public abstract partial class ChartLinesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1916,6 +2175,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<ChartShapeProperties>();
+        }
+
         /// <summary>
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
@@ -1935,8 +2200,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:idx.</para>
     /// </summary>
-    [SchemaAttr(11, "idx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Index : UnsignedIntegerType
     {
         /// <summary>
@@ -1944,6 +2207,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Index() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "idx");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1961,8 +2230,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:order.</para>
     /// </summary>
-    [SchemaAttr(11, "order")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Order : UnsignedIntegerType
     {
         /// <summary>
@@ -1970,6 +2237,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Order() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "order");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1987,8 +2260,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:axId.</para>
     /// </summary>
-    [SchemaAttr(11, "axId")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AxisId : UnsignedIntegerType
     {
         /// <summary>
@@ -1996,6 +2267,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public AxisId() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "axId");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2013,8 +2290,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:crossAx.</para>
     /// </summary>
-    [SchemaAttr(11, "crossAx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CrossingAxis : UnsignedIntegerType
     {
         /// <summary>
@@ -2022,6 +2297,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public CrossingAxis() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "crossAx");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2039,8 +2320,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ptCount.</para>
     /// </summary>
-    [SchemaAttr(11, "ptCount")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PointCount : UnsignedIntegerType
     {
         /// <summary>
@@ -2048,6 +2327,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public PointCount() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ptCount");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2065,8 +2350,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:secondPiePt.</para>
     /// </summary>
-    [SchemaAttr(11, "secondPiePt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SecondPiePoint : UnsignedIntegerType
     {
         /// <summary>
@@ -2074,6 +2357,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public SecondPiePoint() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "secondPiePt");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2091,8 +2380,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:explosion.</para>
     /// </summary>
-    [SchemaAttr(11, "explosion")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Explosion : UnsignedIntegerType
     {
         /// <summary>
@@ -2100,6 +2387,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Explosion() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "explosion");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2117,8 +2410,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:fmtId.</para>
     /// </summary>
-    [SchemaAttr(11, "fmtId")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FormatId : UnsignedIntegerType
     {
         /// <summary>
@@ -2126,6 +2417,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public FormatId() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "fmtId");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -2156,10 +2453,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsignedIntegerType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -2174,10 +2482,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumericValue &lt;c:v></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StringReference))]
-    [ChildElementInfo(typeof(NumericValue))]
-    [SchemaAttr(11, "tx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SeriesText : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2209,6 +2513,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SeriesText(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "tx");
+            builder.AddChild<StringReference>();
+            builder.AddChild<NumericValue>();
         }
 
         /// <summary>
@@ -2257,8 +2569,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:grouping.</para>
     /// </summary>
-    [SchemaAttr(11, "grouping")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Grouping : OpenXmlLeafElement
     {
         /// <summary>
@@ -2272,9 +2582,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Grouping Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "grouping");
+            builder.AddElement<Grouping>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Grouping>(deep);
@@ -2304,22 +2624,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>LineSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(Marker))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Trendline))]
-    [ChildElementInfo(typeof(ErrorBars))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(Smooth))]
-    [ChildElementInfo(typeof(LineSerExtensionList))]
-    [SchemaAttr(11, "ser")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LineChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2351,6 +2655,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LineChartSeries(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ser");
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<Marker>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Trendline>();
+            builder.AddChild<ErrorBars>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<Smooth>();
+            builder.AddChild<LineSerExtensionList>();
         }
 
         /// <summary>
@@ -2487,24 +2811,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DLblsExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DataLabel))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(DataLabelPosition))]
-    [ChildElementInfo(typeof(ShowLegendKey))]
-    [ChildElementInfo(typeof(ShowValue))]
-    [ChildElementInfo(typeof(ShowCategoryName))]
-    [ChildElementInfo(typeof(ShowSeriesName))]
-    [ChildElementInfo(typeof(ShowPercent))]
-    [ChildElementInfo(typeof(ShowBubbleSize))]
-    [ChildElementInfo(typeof(Separator))]
-    [ChildElementInfo(typeof(ShowLeaderLines))]
-    [ChildElementInfo(typeof(LeaderLines))]
-    [ChildElementInfo(typeof(DLblsExtensionList))]
-    [SchemaAttr(11, "dLbls")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataLabels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2536,6 +2842,28 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataLabels(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dLbls");
+            builder.AddChild<DataLabel>();
+            builder.AddChild<Delete>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<DataLabelPosition>();
+            builder.AddChild<ShowLegendKey>();
+            builder.AddChild<ShowValue>();
+            builder.AddChild<ShowCategoryName>();
+            builder.AddChild<ShowSeriesName>();
+            builder.AddChild<ShowPercent>();
+            builder.AddChild<ShowBubbleSize>();
+            builder.AddChild<Separator>();
+            builder.AddChild<ShowLeaderLines>();
+            builder.AddChild<LeaderLines>();
+            builder.AddChild<DLblsExtensionList>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2584,8 +2912,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:barDir.</para>
     /// </summary>
-    [SchemaAttr(11, "barDir")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BarDirection : OpenXmlLeafElement
     {
         /// <summary>
@@ -2599,10 +2925,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "barDir");
+            builder.AddElement<BarDirection>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarDirection>(deep);
@@ -2613,8 +2951,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:grouping.</para>
     /// </summary>
-    [SchemaAttr(11, "grouping")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BarGrouping : OpenXmlLeafElement
     {
         /// <summary>
@@ -2628,9 +2964,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Grouping Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "grouping");
+            builder.AddElement<BarGrouping>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarGrouping>(deep);
@@ -2660,22 +3006,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>BarSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(InvertIfNegative))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Trendline))]
-    [ChildElementInfo(typeof(ErrorBars))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(BarSerExtensionList))]
-    [SchemaAttr(11, "ser")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BarChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2707,6 +3037,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BarChartSeries(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ser");
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<InvertIfNegative>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Trendline>();
+            builder.AddChild<ErrorBars>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<Shape>();
+            builder.AddChild<BarSerExtensionList>();
         }
 
         /// <summary>
@@ -2839,20 +3189,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>AreaSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Trendline))]
-    [ChildElementInfo(typeof(ErrorBars))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(AreaSerExtensionList))]
-    [SchemaAttr(11, "ser")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AreaChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2884,6 +3220,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public AreaChartSeries(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ser");
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Trendline>();
+            builder.AddChild<ErrorBars>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<AreaSerExtensionList>();
         }
 
         /// <summary>
@@ -3000,19 +3354,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>PieSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(Explosion))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(PieSerExtensionList))]
-    [SchemaAttr(11, "ser")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PieChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3044,6 +3385,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PieChartSeries(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ser");
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<Explosion>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<PieSerExtensionList>();
         }
 
         /// <summary>
@@ -3170,17 +3528,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>SurfaceSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(Bubble3D))]
-    [ChildElementInfo(typeof(SurfaceSerExtensionList))]
-    [SchemaAttr(11, "ser")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SurfaceChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3212,6 +3559,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SurfaceChartSeries(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ser");
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<Bubble3D>();
+            builder.AddChild<SurfaceSerExtensionList>();
         }
 
         /// <summary>
@@ -3367,9 +3729,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>BandFormat &lt;c:bandFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BandFormat))]
-    [SchemaAttr(11, "bandFmts")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BandFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3403,6 +3762,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "bandFmts");
+            builder.AddChild<BandFormat>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BandFormat), 0, 0)
@@ -3429,13 +3795,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LogBase))]
-    [ChildElementInfo(typeof(Orientation))]
-    [ChildElementInfo(typeof(MaxAxisValue))]
-    [ChildElementInfo(typeof(MinAxisValue))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "scaling")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Scaling : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3467,6 +3826,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Scaling(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "scaling");
+            builder.AddChild<LogBase>();
+            builder.AddChild<Orientation>();
+            builder.AddChild<MaxAxisValue>();
+            builder.AddChild<MinAxisValue>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -3554,8 +3924,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:axPos.</para>
     /// </summary>
-    [SchemaAttr(11, "axPos")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AxisPosition : OpenXmlLeafElement
     {
         /// <summary>
@@ -3569,10 +3937,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "axPos");
+            builder.AddElement<AxisPosition>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisPosition>(deep);
@@ -3594,14 +3974,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartText))]
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(Overlay))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "title")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Title : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3633,6 +4005,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Title(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "title");
+            builder.AddChild<ChartText>();
+            builder.AddChild<Layout>();
+            builder.AddChild<Overlay>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -3734,8 +4118,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:majorTickMark.</para>
     /// </summary>
-    [SchemaAttr(11, "majorTickMark")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MajorTickMark : TickMarkType
     {
         /// <summary>
@@ -3743,6 +4125,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public MajorTickMark() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "majorTickMark");
         }
 
         /// <inheritdoc/>
@@ -3754,8 +4142,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:minorTickMark.</para>
     /// </summary>
-    [SchemaAttr(11, "minorTickMark")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MinorTickMark : TickMarkType
     {
         /// <summary>
@@ -3763,6 +4149,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public MinorTickMark() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "minorTickMark");
         }
 
         /// <inheritdoc/>
@@ -3787,9 +4179,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Mark Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TickMarkType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -3797,8 +4198,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:tickLblPos.</para>
     /// </summary>
-    [SchemaAttr(11, "tickLblPos")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TickLabelPosition : OpenXmlLeafElement
     {
         /// <summary>
@@ -3812,9 +4211,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Label Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "tickLblPos");
+            builder.AddElement<TickLabelPosition>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TickLabelPosition>(deep);
@@ -3825,8 +4234,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:crosses.</para>
     /// </summary>
-    [SchemaAttr(11, "crosses")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Crosses : OpenXmlLeafElement
     {
         /// <summary>
@@ -3840,10 +4247,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Crosses Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "crosses");
+            builder.AddElement<Crosses>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Crosses>(deep);
@@ -3854,8 +4273,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:crossesAt.</para>
     /// </summary>
-    [SchemaAttr(11, "crossesAt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CrossesAt : DoubleType
     {
         /// <summary>
@@ -3863,6 +4280,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public CrossesAt() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "crossesAt");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -3880,8 +4303,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:x.</para>
     /// </summary>
-    [SchemaAttr(11, "x")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Left : DoubleType
     {
         /// <summary>
@@ -3889,6 +4310,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Left() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "x");
         }
 
         /// <inheritdoc/>
@@ -3900,8 +4327,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:y.</para>
     /// </summary>
-    [SchemaAttr(11, "y")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Top : DoubleType
     {
         /// <summary>
@@ -3909,6 +4334,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Top() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "y");
         }
 
         /// <inheritdoc/>
@@ -3920,8 +4351,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:w.</para>
     /// </summary>
-    [SchemaAttr(11, "w")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Width : DoubleType
     {
         /// <summary>
@@ -3929,6 +4358,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Width() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "w");
         }
 
         /// <inheritdoc/>
@@ -3940,8 +4375,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:h.</para>
     /// </summary>
-    [SchemaAttr(11, "h")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Height : DoubleType
     {
         /// <summary>
@@ -3949,6 +4382,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Height() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "h");
         }
 
         /// <inheritdoc/>
@@ -3960,8 +4399,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:forward.</para>
     /// </summary>
-    [SchemaAttr(11, "forward")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Forward : DoubleType
     {
         /// <summary>
@@ -3969,6 +4406,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Forward() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "forward");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -3987,8 +4430,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:backward.</para>
     /// </summary>
-    [SchemaAttr(11, "backward")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Backward : DoubleType
     {
         /// <summary>
@@ -3996,6 +4437,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Backward() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "backward");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4013,8 +4460,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:intercept.</para>
     /// </summary>
-    [SchemaAttr(11, "intercept")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Intercept : DoubleType
     {
         /// <summary>
@@ -4022,6 +4467,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public Intercept() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "intercept");
         }
 
         /// <inheritdoc/>
@@ -4033,8 +4484,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:val.</para>
     /// </summary>
-    [SchemaAttr(11, "val")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ErrorBarValue : DoubleType
     {
         /// <summary>
@@ -4042,6 +4491,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ErrorBarValue() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "val");
         }
 
         /// <inheritdoc/>
@@ -4053,8 +4508,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:splitPos.</para>
     /// </summary>
-    [SchemaAttr(11, "splitPos")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SplitPosition : DoubleType
     {
         /// <summary>
@@ -4062,6 +4515,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public SplitPosition() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "splitPos");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4079,8 +4538,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:custUnit.</para>
     /// </summary>
-    [SchemaAttr(11, "custUnit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomDisplayUnit : DoubleType
     {
         /// <summary>
@@ -4088,6 +4545,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public CustomDisplayUnit() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "custUnit");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4105,8 +4568,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:max.</para>
     /// </summary>
-    [SchemaAttr(11, "max")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MaxAxisValue : DoubleType
     {
         /// <summary>
@@ -4114,6 +4575,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public MaxAxisValue() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "max");
         }
 
         /// <inheritdoc/>
@@ -4125,8 +4592,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:min.</para>
     /// </summary>
-    [SchemaAttr(11, "min")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MinAxisValue : DoubleType
     {
         /// <summary>
@@ -4134,6 +4599,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public MinAxisValue() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "min");
         }
 
         /// <inheritdoc/>
@@ -4158,10 +4629,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Floating Point Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<DoubleType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -4189,23 +4671,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartSpaceExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Date1904))]
-    [ChildElementInfo(typeof(EditingLanguage))]
-    [ChildElementInfo(typeof(RoundedCorners))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Style))]
-    [ChildElementInfo(typeof(ColorMapOverride))]
-    [ChildElementInfo(typeof(PivotSource))]
-    [ChildElementInfo(typeof(Protection))]
-    [ChildElementInfo(typeof(Chart))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExternalData))]
-    [ChildElementInfo(typeof(PrintSettings))]
-    [ChildElementInfo(typeof(UserShapesReference))]
-    [ChildElementInfo(typeof(ChartSpaceExtensionList))]
-    [SchemaAttr(11, "chartSpace")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartSpace : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4237,6 +4702,27 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ChartSpace(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "chartSpace");
+            builder.AddChild<Date1904>();
+            builder.AddChild<EditingLanguage>();
+            builder.AddChild<RoundedCorners>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style>();
+            builder.AddChild<Style>();
+            builder.AddChild<ColorMapOverride>();
+            builder.AddChild<PivotSource>();
+            builder.AddChild<Protection>();
+            builder.AddChild<Chart>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExternalData>();
+            builder.AddChild<PrintSettings>();
+            builder.AddChild<UserShapesReference>();
+            builder.AddChild<ChartSpaceExtensionList>();
         }
 
         /// <summary>
@@ -4349,10 +4835,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize &lt;cdr:absSizeAnchor></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize))]
-    [SchemaAttr(11, "userShapes")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class UserShapes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4384,6 +4866,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public UserShapes(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "userShapes");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4440,8 +4930,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:chart.</para>
     /// </summary>
-    [SchemaAttr(11, "chart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartReference : RelationshipIdType
     {
         /// <summary>
@@ -4449,6 +4937,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public ChartReference() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "chart");
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -4466,8 +4960,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:legacyDrawingHF.</para>
     /// </summary>
-    [SchemaAttr(11, "legacyDrawingHF")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LegacyDrawingHeaderFooter : RelationshipIdType
     {
         /// <summary>
@@ -4475,6 +4967,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public LegacyDrawingHeaderFooter() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "legacyDrawingHF");
         }
 
         /// <inheritdoc/>
@@ -4486,8 +4984,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:userShapes.</para>
     /// </summary>
-    [SchemaAttr(11, "userShapes")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class UserShapesReference : RelationshipIdType
     {
         /// <summary>
@@ -4495,6 +4991,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public UserShapesReference() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "userShapes");
         }
 
         /// <inheritdoc/>
@@ -4522,10 +5024,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<RelationshipIdType>()
+                           .AddAttribute(19, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -4533,8 +5046,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Extension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4572,10 +5083,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Uniform Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddElement<Extension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4593,8 +5116,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:v.</para>
     /// </summary>
-    [SchemaAttr(11, "v")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumericValue : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4617,6 +5138,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "v");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumericValue>(deep);
     }
@@ -4626,8 +5153,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:formatCode.</para>
     /// </summary>
-    [SchemaAttr(11, "formatCode")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FormatCode : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4650,6 +5175,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "formatCode");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormatCode>(deep);
     }
@@ -4659,8 +5190,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:oddHeader.</para>
     /// </summary>
-    [SchemaAttr(11, "oddHeader")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OddHeader : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4683,6 +5212,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "oddHeader");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddHeader>(deep);
     }
@@ -4692,8 +5227,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:oddFooter.</para>
     /// </summary>
-    [SchemaAttr(11, "oddFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OddFooter : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4716,6 +5249,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "oddFooter");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddFooter>(deep);
     }
@@ -4725,8 +5264,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:evenHeader.</para>
     /// </summary>
-    [SchemaAttr(11, "evenHeader")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EvenHeader : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4749,6 +5286,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "evenHeader");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenHeader>(deep);
     }
@@ -4758,8 +5301,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:evenFooter.</para>
     /// </summary>
-    [SchemaAttr(11, "evenFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EvenFooter : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4782,6 +5323,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "evenFooter");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenFooter>(deep);
     }
@@ -4791,8 +5338,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:firstHeader.</para>
     /// </summary>
-    [SchemaAttr(11, "firstHeader")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FirstHeader : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4815,6 +5360,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "firstHeader");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstHeader>(deep);
     }
@@ -4824,8 +5375,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:firstFooter.</para>
     /// </summary>
-    [SchemaAttr(11, "firstFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FirstFooter : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4848,6 +5397,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "firstFooter");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstFooter>(deep);
     }
@@ -4857,8 +5412,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:name.</para>
     /// </summary>
-    [SchemaAttr(11, "name")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotTableName : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4881,6 +5434,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "name");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableName>(deep);
     }
@@ -4896,9 +5455,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumericValue &lt;c:v></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumericValue))]
-    [SchemaAttr(11, "pt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumericPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4936,18 +5492,34 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "idx")]
-        [Index(0)]
-        public UInt32Value Index { get; set; }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Number Format</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
-        [SchemaAttr(0, "formatCode")]
-        [Index(1)]
-        public StringValue FormatCode { get; set; }
+        public StringValue FormatCode
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pt");
+            builder.AddChild<NumericValue>();
+            builder.AddElement<NumericPoint>()
+.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "formatCode", a => a.FormatCode);
+        }
 
         /// <summary>
         /// <para>Numeric Value.</para>
@@ -4990,9 +5562,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Extension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Extension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5026,6 +5595,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<Extension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Extension), 0, 0)
@@ -5050,11 +5626,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumRefExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula))]
-    [ChildElementInfo(typeof(NumberingCache))]
-    [ChildElementInfo(typeof(NumRefExtensionList))]
-    [SchemaAttr(11, "numRef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumberReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5086,6 +5657,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NumberReference(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "numRef");
+            builder.AddChild<Formula>();
+            builder.AddChild<NumberingCache>();
+            builder.AddChild<NumRefExtensionList>();
         }
 
         /// <summary>
@@ -5154,8 +5734,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "numLit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumberLiteral : NumberDataType
     {
         /// <summary>
@@ -5189,6 +5767,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "numLit");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
@@ -5217,8 +5801,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "numCache")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumberingCache : NumberDataType
     {
         /// <summary>
@@ -5252,6 +5834,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "numCache");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
@@ -5280,10 +5868,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FormatCode))]
-    [ChildElementInfo(typeof(PointCount))]
-    [ChildElementInfo(typeof(NumericPoint))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class NumberDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5315,6 +5899,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected NumberDataType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<FormatCode>();
+            builder.AddChild<PointCount>();
+            builder.AddChild<NumericPoint>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -5355,9 +5948,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StringPoint &lt;c:pt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StringPoint))]
-    [SchemaAttr(11, "lvl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Level : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5391,6 +5981,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "lvl");
+            builder.AddChild<StringPoint>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0)
@@ -5415,11 +6012,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>MultiLvlStrRefExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula))]
-    [ChildElementInfo(typeof(MultiLevelStringCache))]
-    [ChildElementInfo(typeof(MultiLvlStrRefExtensionList))]
-    [SchemaAttr(11, "multiLvlStrRef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MultiLevelStringReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5451,6 +6043,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MultiLevelStringReference(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "multiLvlStrRef");
+            builder.AddChild<Formula>();
+            builder.AddChild<MultiLevelStringCache>();
+            builder.AddChild<MultiLvlStrRefExtensionList>();
         }
 
         /// <summary>
@@ -5518,11 +6119,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StrRefExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Formula))]
-    [ChildElementInfo(typeof(StringCache))]
-    [ChildElementInfo(typeof(StrRefExtensionList))]
-    [SchemaAttr(11, "strRef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StringReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5554,6 +6150,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public StringReference(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "strRef");
+            builder.AddChild<Formula>();
+            builder.AddChild<StringCache>();
+            builder.AddChild<StrRefExtensionList>();
         }
 
         /// <summary>
@@ -5621,8 +6226,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StrDataExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "strLit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StringLiteral : StringDataType
     {
         /// <summary>
@@ -5656,6 +6259,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "strLit");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
@@ -5682,8 +6291,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StrDataExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "strCache")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StringCache : StringDataType
     {
         /// <summary>
@@ -5717,6 +6324,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "strCache");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
@@ -5743,9 +6356,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StrDataExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PointCount))]
-    [ChildElementInfo(typeof(StringPoint))]
-    [ChildElementInfo(typeof(StrDataExtensionList))]
     public abstract partial class StringDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5779,6 +6389,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<PointCount>();
+            builder.AddChild<StringPoint>();
+            builder.AddChild<StrDataExtensionList>();
+        }
+
         /// <summary>
         /// <para>PointCount.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>
@@ -5798,8 +6416,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:layoutTarget.</para>
     /// </summary>
-    [SchemaAttr(11, "layoutTarget")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LayoutTarget : OpenXmlLeafElement
     {
         /// <summary>
@@ -5813,9 +6429,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Target Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "layoutTarget");
+            builder.AddElement<LayoutTarget>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutTarget>(deep);
@@ -5826,8 +6452,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:xMode.</para>
     /// </summary>
-    [SchemaAttr(11, "xMode")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LeftMode : LayoutModeType
     {
         /// <summary>
@@ -5835,6 +6459,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public LeftMode() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "xMode");
         }
 
         /// <inheritdoc/>
@@ -5846,8 +6476,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:yMode.</para>
     /// </summary>
-    [SchemaAttr(11, "yMode")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TopMode : LayoutModeType
     {
         /// <summary>
@@ -5855,6 +6483,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public TopMode() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "yMode");
         }
 
         /// <inheritdoc/>
@@ -5866,8 +6500,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:wMode.</para>
     /// </summary>
-    [SchemaAttr(11, "wMode")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WidthMode : LayoutModeType
     {
         /// <summary>
@@ -5875,6 +6507,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public WidthMode() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "wMode");
         }
 
         /// <inheritdoc/>
@@ -5886,8 +6524,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:hMode.</para>
     /// </summary>
-    [SchemaAttr(11, "hMode")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HeightMode : LayoutModeType
     {
         /// <summary>
@@ -5895,6 +6531,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public HeightMode() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "hMode");
         }
 
         /// <inheritdoc/>
@@ -5919,9 +6561,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Mode Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LayoutModeType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -5944,18 +6595,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LayoutTarget))]
-    [ChildElementInfo(typeof(LeftMode))]
-    [ChildElementInfo(typeof(TopMode))]
-    [ChildElementInfo(typeof(WidthMode))]
-    [ChildElementInfo(typeof(HeightMode))]
-    [ChildElementInfo(typeof(Left))]
-    [ChildElementInfo(typeof(Top))]
-    [ChildElementInfo(typeof(Width))]
-    [ChildElementInfo(typeof(Height))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "manualLayout")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ManualLayout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5987,6 +6626,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ManualLayout(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "manualLayout");
+            builder.AddChild<LayoutTarget>();
+            builder.AddChild<LeftMode>();
+            builder.AddChild<TopMode>();
+            builder.AddChild<WidthMode>();
+            builder.AddChild<HeightMode>();
+            builder.AddChild<Left>();
+            builder.AddChild<Top>();
+            builder.AddChild<Width>();
+            builder.AddChild<Height>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -6144,8 +6799,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:rotX.</para>
     /// </summary>
-    [SchemaAttr(11, "rotX")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RotateX : OpenXmlLeafElement
     {
         /// <summary>
@@ -6159,10 +6812,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>X Rotation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -90L, MaxInclusive = 90L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public SByteValue Val { get; set; }
+        public SByteValue Val
+        {
+            get => GetAttribute<SByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "rotX");
+            builder.AddElement<RotateX>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+  aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-90L), MaxInclusive = (90L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RotateX>(deep);
@@ -6173,8 +6838,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:hPercent.</para>
     /// </summary>
-    [SchemaAttr(11, "hPercent")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HeightPercent : OpenXmlLeafElement
     {
         /// <summary>
@@ -6188,10 +6851,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Height Percent Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 5L, MaxInclusive = 500L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "hPercent");
+            builder.AddElement<HeightPercent>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (5L), MaxInclusive = (500L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeightPercent>(deep);
@@ -6202,8 +6877,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:rotY.</para>
     /// </summary>
-    [SchemaAttr(11, "rotY")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RotateY : OpenXmlLeafElement
     {
         /// <summary>
@@ -6217,10 +6890,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Y Rotation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 360L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "rotY");
+            builder.AddElement<RotateY>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+  aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (360L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RotateY>(deep);
@@ -6231,8 +6916,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:depthPercent.</para>
     /// </summary>
-    [SchemaAttr(11, "depthPercent")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DepthPercent : OpenXmlLeafElement
     {
         /// <summary>
@@ -6246,10 +6929,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Depth Percent Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 20L, MaxInclusive = 2000L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "depthPercent");
+            builder.AddElement<DepthPercent>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (20L), MaxInclusive = (2000L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DepthPercent>(deep);
@@ -6260,8 +6955,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:perspective.</para>
     /// </summary>
-    [SchemaAttr(11, "perspective")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Perspective : OpenXmlLeafElement
     {
         /// <summary>
@@ -6275,10 +6968,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Perspective Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 240L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "perspective");
+            builder.AddElement<Perspective>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (240L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Perspective>(deep);
@@ -6289,8 +6994,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:symbol.</para>
     /// </summary>
-    [SchemaAttr(11, "symbol")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Symbol : OpenXmlLeafElement
     {
         /// <summary>
@@ -6304,10 +7007,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "symbol");
+            builder.AddElement<Symbol>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Symbol>(deep);
@@ -6318,8 +7033,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:size.</para>
     /// </summary>
-    [SchemaAttr(11, "size")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Size : OpenXmlLeafElement
     {
         /// <summary>
@@ -6333,10 +7046,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 2L, MaxInclusive = 72L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "size");
+            builder.AddElement<Size>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+  aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxInclusive = (72L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Size>(deep);
@@ -6356,12 +7081,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Symbol))]
-    [ChildElementInfo(typeof(Size))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "marker")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Marker : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6393,6 +7112,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Marker(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "marker");
+            builder.AddChild<Symbol>();
+            builder.AddChild<Size>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -6476,13 +7205,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>PictureStackUnit &lt;c:pictureStackUnit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ApplyToFront))]
-    [ChildElementInfo(typeof(ApplyToSides))]
-    [ChildElementInfo(typeof(ApplyToEnd))]
-    [ChildElementInfo(typeof(PictureFormat))]
-    [ChildElementInfo(typeof(PictureStackUnit))]
-    [SchemaAttr(11, "pictureOptions")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PictureOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6514,6 +7236,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PictureOptions(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pictureOptions");
+            builder.AddChild<ApplyToFront>();
+            builder.AddChild<ApplyToSides>();
+            builder.AddChild<ApplyToEnd>();
+            builder.AddChild<PictureFormat>();
+            builder.AddChild<PictureStackUnit>();
         }
 
         /// <summary>
@@ -6601,8 +7334,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:trendlineType.</para>
     /// </summary>
-    [SchemaAttr(11, "trendlineType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TrendlineType : OpenXmlLeafElement
     {
         /// <summary>
@@ -6616,9 +7347,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Trendline Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "trendlineType");
+            builder.AddElement<TrendlineType>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrendlineType>(deep);
@@ -6629,8 +7370,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:order.</para>
     /// </summary>
-    [SchemaAttr(11, "order")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PolynomialOrder : OpenXmlLeafElement
     {
         /// <summary>
@@ -6644,11 +7383,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 2L, MaxInclusive = 6L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "order");
+            builder.AddElement<PolynomialOrder>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxInclusive = (6L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PolynomialOrder>(deep);
@@ -6659,8 +7410,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:period.</para>
     /// </summary>
-    [SchemaAttr(11, "period")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Period : OpenXmlLeafElement
     {
         /// <summary>
@@ -6674,11 +7423,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Period Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 2L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "period");
+            builder.AddElement<Period>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Period>(deep);
@@ -6700,14 +7461,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(ChartText))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "trendlineLbl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TrendlineLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6739,6 +7492,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TrendlineLabel(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "trendlineLbl");
+            builder.AddChild<Layout>();
+            builder.AddChild<ChartText>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -6840,8 +7605,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:errDir.</para>
     /// </summary>
-    [SchemaAttr(11, "errDir")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ErrorDirection : OpenXmlLeafElement
     {
         /// <summary>
@@ -6855,10 +7618,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "errDir");
+            builder.AddElement<ErrorDirection>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorDirection>(deep);
@@ -6869,8 +7644,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:errBarType.</para>
     /// </summary>
-    [SchemaAttr(11, "errBarType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ErrorBarType : OpenXmlLeafElement
     {
         /// <summary>
@@ -6884,10 +7657,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "errBarType");
+            builder.AddElement<ErrorBarType>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorBarType>(deep);
@@ -6898,8 +7683,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:errValType.</para>
     /// </summary>
-    [SchemaAttr(11, "errValType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ErrorBarValueType : OpenXmlLeafElement
     {
         /// <summary>
@@ -6913,10 +7696,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "errValType");
+            builder.AddElement<ErrorBarValueType>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorBarValueType>(deep);
@@ -6934,8 +7729,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumberLiteral &lt;c:numLit></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "plus")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Plus : NumberDataSourceType
     {
         /// <summary>
@@ -6969,6 +7762,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "plus");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -6996,8 +7795,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumberLiteral &lt;c:numLit></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "minus")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Minus : NumberDataSourceType
     {
         /// <summary>
@@ -7031,6 +7828,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "minus");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -7058,8 +7861,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumberLiteral &lt;c:numLit></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "val")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Values : NumberDataSourceType
     {
         /// <summary>
@@ -7093,6 +7894,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "val");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -7120,8 +7927,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumberLiteral &lt;c:numLit></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "yVal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class YValues : NumberDataSourceType
     {
         /// <summary>
@@ -7155,6 +7960,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "yVal");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -7182,8 +7993,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumberLiteral &lt;c:numLit></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "bubbleSize")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BubbleSize : NumberDataSourceType
     {
         /// <summary>
@@ -7217,6 +8026,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "bubbleSize");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -7244,8 +8059,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumberLiteral &lt;c:numLit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
     public abstract partial class NumberDataSourceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7277,6 +8090,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected NumberDataSourceType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<NumberReference>();
+            builder.AddChild<NumberLiteral>();
         }
 
         /// <summary>
@@ -7311,8 +8131,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:gapWidth.</para>
     /// </summary>
-    [SchemaAttr(11, "gapWidth")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GapWidth : GapAmountType
     {
         /// <summary>
@@ -7320,6 +8138,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public GapWidth() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "gapWidth");
         }
 
         /// <inheritdoc/>
@@ -7331,8 +8155,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:gapDepth.</para>
     /// </summary>
-    [SchemaAttr(11, "gapDepth")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GapDepth : GapAmountType
     {
         /// <summary>
@@ -7340,6 +8162,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public GapDepth() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "gapDepth");
         }
 
         /// <inheritdoc/>
@@ -7364,10 +8192,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Gap Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 500L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<GapAmountType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (500L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -7381,8 +8220,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "upBars")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class UpBars : UpDownBarType
     {
         /// <summary>
@@ -7416,6 +8253,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "upBars");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -7438,8 +8281,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "downBars")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DownBars : UpDownBarType
     {
         /// <summary>
@@ -7473,6 +8314,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "downBars");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
@@ -7495,7 +8342,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartShapeProperties))]
     public abstract partial class UpDownBarType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7529,6 +8375,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<ChartShapeProperties>();
+        }
+
         /// <summary>
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
@@ -7548,8 +8400,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ofPieType.</para>
     /// </summary>
-    [SchemaAttr(11, "ofPieType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OfPieType : OpenXmlLeafElement
     {
         /// <summary>
@@ -7563,10 +8413,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Pie of Pie or Bar of Pie Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ofPieType");
+            builder.AddElement<OfPieType>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfPieType>(deep);
@@ -7577,8 +8439,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:splitType.</para>
     /// </summary>
-    [SchemaAttr(11, "splitType")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SplitType : OpenXmlLeafElement
     {
         /// <summary>
@@ -7592,10 +8452,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Split Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "splitType");
+            builder.AddElement<SplitType>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitType>(deep);
@@ -7612,9 +8484,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>SecondPiePoint &lt;c:secondPiePt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SecondPiePoint))]
-    [SchemaAttr(11, "custSplit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CustomSplit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7648,6 +8517,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "custSplit");
+            builder.AddChild<SecondPiePoint>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint), 0, 0)
@@ -7664,8 +8540,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:secondPieSize.</para>
     /// </summary>
-    [SchemaAttr(11, "secondPieSize")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SecondPieSize : OpenXmlLeafElement
     {
         /// <summary>
@@ -7679,10 +8553,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Second Pie Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 5L, MaxInclusive = 200L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "secondPieSize");
+            builder.AddElement<SecondPieSize>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (5L), MaxInclusive = (200L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SecondPieSize>(deep);
@@ -7700,10 +8586,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartShapeProperties &lt;c:spPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [SchemaAttr(11, "bandFmt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BandFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7735,6 +8617,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BandFormat(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "bandFmt");
+            builder.AddChild<Index>();
+            builder.AddChild<ChartShapeProperties>();
         }
 
         /// <summary>
@@ -7780,8 +8670,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pictureFormat.</para>
     /// </summary>
-    [SchemaAttr(11, "pictureFormat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PictureFormat : OpenXmlLeafElement
     {
         /// <summary>
@@ -7795,10 +8683,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Format Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pictureFormat");
+            builder.AddElement<PictureFormat>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PictureFormat>(deep);
@@ -7809,8 +8709,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pictureStackUnit.</para>
     /// </summary>
-    [SchemaAttr(11, "pictureStackUnit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PictureStackUnit : OpenXmlLeafElement
     {
         /// <summary>
@@ -7824,11 +8722,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Stack Unit</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pictureStackUnit");
+            builder.AddElement<PictureStackUnit>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PictureStackUnit>(deep);
@@ -7839,8 +8749,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:builtInUnit.</para>
     /// </summary>
-    [SchemaAttr(11, "builtInUnit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BuiltInUnit : OpenXmlLeafElement
     {
         /// <summary>
@@ -7854,9 +8762,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Built In Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "builtInUnit");
+            builder.AddElement<BuiltInUnit>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuiltInUnit>(deep);
@@ -7876,12 +8794,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>TextProperties &lt;c:txPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(ChartText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [SchemaAttr(11, "dispUnitsLbl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DisplayUnitsLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7913,6 +8825,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DisplayUnitsLabel(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dispUnitsLbl");
+            builder.AddChild<Layout>();
+            builder.AddChild<ChartText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
         }
 
         /// <summary>
@@ -7986,8 +8908,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:logBase.</para>
     /// </summary>
-    [SchemaAttr(11, "logBase")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LogBase : OpenXmlLeafElement
     {
         /// <summary>
@@ -8001,11 +8921,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Logarithmic Base Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 2L, MaxInclusive = 1000L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "logBase");
+            builder.AddElement<LogBase>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2L), MaxInclusive = (1000L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LogBase>(deep);
@@ -8016,8 +8948,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:orientation.</para>
     /// </summary>
-    [SchemaAttr(11, "orientation")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Orientation : OpenXmlLeafElement
     {
         /// <summary>
@@ -8031,9 +8961,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Orientation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "orientation");
+            builder.AddElement<Orientation>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Orientation>(deep);
@@ -8054,13 +8994,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(Marker))]
-    [ChildElementInfo(typeof(DataLabel))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "pivotFmt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8092,6 +9025,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PivotFormat(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pivotFmt");
+            builder.AddChild<Index>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<Marker>();
+            builder.AddChild<DataLabel>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -8179,8 +9123,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:legendPos.</para>
     /// </summary>
-    [SchemaAttr(11, "legendPos")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LegendPosition : OpenXmlLeafElement
     {
         /// <summary>
@@ -8194,9 +9136,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Legend Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "legendPos");
+            builder.AddElement<LegendPosition>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegendPosition>(deep);
@@ -8216,12 +9168,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "legendEntry")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LegendEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8253,6 +9199,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LegendEntry(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "legendEntry");
+            builder.AddChild<Index>();
+            builder.AddChild<Delete>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -8302,9 +9258,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>PivotFormat &lt;c:pivotFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotFormat))]
-    [SchemaAttr(11, "pivotFmts")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8338,6 +9291,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pivotFmts");
+            builder.AddChild<PivotFormat>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotFormat), 0, 0)
@@ -8366,15 +9326,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RotateX))]
-    [ChildElementInfo(typeof(HeightPercent))]
-    [ChildElementInfo(typeof(RotateY))]
-    [ChildElementInfo(typeof(DepthPercent))]
-    [ChildElementInfo(typeof(RightAngleAxes))]
-    [ChildElementInfo(typeof(Perspective))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "view3D")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class View3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8406,6 +9357,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public View3D(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "view3D");
+            builder.AddChild<RotateX>();
+            builder.AddChild<HeightPercent>();
+            builder.AddChild<RotateY>();
+            builder.AddChild<DepthPercent>();
+            builder.AddChild<RightAngleAxes>();
+            builder.AddChild<Perspective>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -8530,8 +9494,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "floor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Floor : SurfaceType
     {
         /// <summary>
@@ -8565,6 +9527,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "floor");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
@@ -8593,8 +9561,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "sideWall")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SideWall : SurfaceType
     {
         /// <summary>
@@ -8628,6 +9594,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "sideWall");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
@@ -8656,8 +9628,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "backWall")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BackWall : SurfaceType
     {
         /// <summary>
@@ -8691,6 +9661,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "backWall");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
@@ -8719,10 +9695,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Thickness))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(ExtensionList))]
     public abstract partial class SurfaceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8754,6 +9726,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected SurfaceType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<Thickness>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -8843,32 +9824,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(AreaChart))]
-    [ChildElementInfo(typeof(Area3DChart))]
-    [ChildElementInfo(typeof(LineChart))]
-    [ChildElementInfo(typeof(Line3DChart))]
-    [ChildElementInfo(typeof(StockChart))]
-    [ChildElementInfo(typeof(RadarChart))]
-    [ChildElementInfo(typeof(ScatterChart))]
-    [ChildElementInfo(typeof(PieChart))]
-    [ChildElementInfo(typeof(Pie3DChart))]
-    [ChildElementInfo(typeof(DoughnutChart))]
-    [ChildElementInfo(typeof(BarChart))]
-    [ChildElementInfo(typeof(Bar3DChart))]
-    [ChildElementInfo(typeof(OfPieChart))]
-    [ChildElementInfo(typeof(SurfaceChart))]
-    [ChildElementInfo(typeof(Surface3DChart))]
-    [ChildElementInfo(typeof(BubbleChart))]
-    [ChildElementInfo(typeof(ValueAxis))]
-    [ChildElementInfo(typeof(CategoryAxis))]
-    [ChildElementInfo(typeof(DateAxis))]
-    [ChildElementInfo(typeof(SeriesAxis))]
-    [ChildElementInfo(typeof(DataTable))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "plotArea")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PlotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8900,6 +9855,36 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PlotArea(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "plotArea");
+            builder.AddChild<Layout>();
+            builder.AddChild<AreaChart>();
+            builder.AddChild<Area3DChart>();
+            builder.AddChild<LineChart>();
+            builder.AddChild<Line3DChart>();
+            builder.AddChild<StockChart>();
+            builder.AddChild<RadarChart>();
+            builder.AddChild<ScatterChart>();
+            builder.AddChild<PieChart>();
+            builder.AddChild<Pie3DChart>();
+            builder.AddChild<DoughnutChart>();
+            builder.AddChild<BarChart>();
+            builder.AddChild<Bar3DChart>();
+            builder.AddChild<OfPieChart>();
+            builder.AddChild<SurfaceChart>();
+            builder.AddChild<Surface3DChart>();
+            builder.AddChild<BubbleChart>();
+            builder.AddChild<ValueAxis>();
+            builder.AddChild<CategoryAxis>();
+            builder.AddChild<DateAxis>();
+            builder.AddChild<SeriesAxis>();
+            builder.AddChild<DataTable>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -8972,15 +9957,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LegendPosition))]
-    [ChildElementInfo(typeof(LegendEntry))]
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(Overlay))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "legend")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Legend : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9012,6 +9988,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Legend(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "legend");
+            builder.AddChild<LegendPosition>();
+            builder.AddChild<LegendEntry>();
+            builder.AddChild<Layout>();
+            builder.AddChild<Overlay>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -9049,8 +10038,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dispBlanksAs.</para>
     /// </summary>
-    [SchemaAttr(11, "dispBlanksAs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DisplayBlanksAs : OpenXmlLeafElement
     {
         /// <summary>
@@ -9064,9 +10051,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Display Blanks As Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dispBlanksAs");
+            builder.AddElement<DisplayBlanksAs>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayBlanksAs>(deep);
@@ -9088,14 +10085,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>FirstFooter &lt;c:firstFooter></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OddHeader))]
-    [ChildElementInfo(typeof(OddFooter))]
-    [ChildElementInfo(typeof(EvenHeader))]
-    [ChildElementInfo(typeof(EvenFooter))]
-    [ChildElementInfo(typeof(FirstHeader))]
-    [ChildElementInfo(typeof(FirstFooter))]
-    [SchemaAttr(11, "headerFooter")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9133,25 +10122,47 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Align With Margins</para>
         /// <para>Represents the following attribute in the schema: alignWithMargins</para>
         /// </summary>
-        [SchemaAttr(0, "alignWithMargins")]
-        [Index(0)]
-        public BooleanValue AlignWithMargins { get; set; }
+        public BooleanValue AlignWithMargins
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Different Odd Even</para>
         /// <para>Represents the following attribute in the schema: differentOddEven</para>
         /// </summary>
-        [SchemaAttr(0, "differentOddEven")]
-        [Index(1)]
-        public BooleanValue DifferentOddEven { get; set; }
+        public BooleanValue DifferentOddEven
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Different First</para>
         /// <para>Represents the following attribute in the schema: differentFirst</para>
         /// </summary>
-        [SchemaAttr(0, "differentFirst")]
-        [Index(2)]
-        public BooleanValue DifferentFirst { get; set; }
+        public BooleanValue DifferentFirst
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "headerFooter");
+            builder.AddChild<OddHeader>();
+            builder.AddChild<OddFooter>();
+            builder.AddChild<EvenHeader>();
+            builder.AddChild<EvenFooter>();
+            builder.AddChild<FirstHeader>();
+            builder.AddChild<FirstFooter>();
+            builder.AddElement<HeaderFooter>()
+.AddAttribute(0, "alignWithMargins", a => a.AlignWithMargins)
+.AddAttribute(0, "differentOddEven", a => a.DifferentOddEven)
+.AddAttribute(0, "differentFirst", a => a.DifferentFirst);
+        }
 
         /// <summary>
         /// <para>Odd Header.</para>
@@ -9252,8 +10263,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pageMargins.</para>
     /// </summary>
-    [SchemaAttr(11, "pageMargins")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PageMargins : OpenXmlLeafElement
     {
         /// <summary>
@@ -9267,55 +10276,92 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Left</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "l")]
-        [Index(0)]
-        public DoubleValue Left { get; set; }
+        public DoubleValue Left
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Right</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "r")]
-        [Index(1)]
-        public DoubleValue Right { get; set; }
+        public DoubleValue Right
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Top</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "t")]
-        [Index(2)]
-        public DoubleValue Top { get; set; }
+        public DoubleValue Top
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Bottom</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "b")]
-        [Index(3)]
-        public DoubleValue Bottom { get; set; }
+        public DoubleValue Bottom
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Header</para>
         /// <para>Represents the following attribute in the schema: header</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "header")]
-        [Index(4)]
-        public DoubleValue Header { get; set; }
+        public DoubleValue Header
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Footer</para>
         /// <para>Represents the following attribute in the schema: footer</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "footer")]
-        [Index(5)]
-        public DoubleValue Footer { get; set; }
+        public DoubleValue Footer
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pageMargins");
+            builder.AddElement<PageMargins>()
+.AddAttribute(0, "l", a => a.Left, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "r", a => a.Right, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "t", a => a.Top, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "b", a => a.Bottom, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "header", a => a.Header, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "footer", a => a.Footer, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(3 /*:b*/, true, 0, true, 49, false),
@@ -9337,8 +10383,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pageSetup.</para>
     /// </summary>
-    [SchemaAttr(11, "pageSetup")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PageSetup : OpenXmlLeafElement
     {
         /// <summary>
@@ -9352,73 +10396,107 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Page Size</para>
         /// <para>Represents the following attribute in the schema: paperSize</para>
         /// </summary>
-        [SchemaAttr(0, "paperSize")]
-        [Index(0)]
-        public UInt32Value PaperSize { get; set; }
+        public UInt32Value PaperSize
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>First Page Number</para>
         /// <para>Represents the following attribute in the schema: firstPageNumber</para>
         /// </summary>
-        [SchemaAttr(0, "firstPageNumber")]
-        [Index(1)]
-        public Int32Value FirstPageNumber { get; set; }
+        public Int32Value FirstPageNumber
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        [SchemaAttr(0, "orientation")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues> Orientation { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues> Orientation
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Black and White</para>
         /// <para>Represents the following attribute in the schema: blackAndWhite</para>
         /// </summary>
-        [SchemaAttr(0, "blackAndWhite")]
-        [Index(3)]
-        public BooleanValue BlackAndWhite { get; set; }
+        public BooleanValue BlackAndWhite
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Draft</para>
         /// <para>Represents the following attribute in the schema: draft</para>
         /// </summary>
-        [SchemaAttr(0, "draft")]
-        [Index(4)]
-        public BooleanValue Draft { get; set; }
+        public BooleanValue Draft
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Use First Page Number</para>
         /// <para>Represents the following attribute in the schema: useFirstPageNumber</para>
         /// </summary>
-        [SchemaAttr(0, "useFirstPageNumber")]
-        [Index(5)]
-        public BooleanValue UseFirstPageNumber { get; set; }
+        public BooleanValue UseFirstPageNumber
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal DPI</para>
         /// <para>Represents the following attribute in the schema: horizontalDpi</para>
         /// </summary>
-        [SchemaAttr(0, "horizontalDpi")]
-        [Index(6)]
-        public Int32Value HorizontalDpi { get; set; }
+        public Int32Value HorizontalDpi
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical DPI</para>
         /// <para>Represents the following attribute in the schema: verticalDpi</para>
         /// </summary>
-        [SchemaAttr(0, "verticalDpi")]
-        [Index(7)]
-        public Int32Value VerticalDpi { get; set; }
+        public Int32Value VerticalDpi
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Copies</para>
         /// <para>Represents the following attribute in the schema: copies</para>
         /// </summary>
-        [SchemaAttr(0, "copies")]
-        [Index(8)]
-        public UInt32Value Copies { get; set; }
+        public UInt32Value Copies
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pageSetup");
+            builder.AddElement<PageSetup>()
+.AddAttribute(0, "paperSize", a => a.PaperSize)
+.AddAttribute(0, "firstPageNumber", a => a.FirstPageNumber)
+.AddAttribute(0, "orientation", a => a.Orientation)
+.AddAttribute(0, "blackAndWhite", a => a.BlackAndWhite)
+.AddAttribute(0, "draft", a => a.Draft)
+.AddAttribute(0, "useFirstPageNumber", a => a.UseFirstPageNumber)
+.AddAttribute(0, "horizontalDpi", a => a.HorizontalDpi)
+.AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
+.AddAttribute(0, "copies", a => a.Copies);
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(8 /*:copies*/, true, double.NegativeInfinity, true, 2147483647, true),
@@ -9456,23 +10534,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(11, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9510,10 +10571,37 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "spPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddElement<ShapeProperties>()
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -9597,24 +10685,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DLblExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(Layout))]
-    [ChildElementInfo(typeof(ChartText))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(DataLabelPosition))]
-    [ChildElementInfo(typeof(ShowLegendKey))]
-    [ChildElementInfo(typeof(ShowValue))]
-    [ChildElementInfo(typeof(ShowCategoryName))]
-    [ChildElementInfo(typeof(ShowSeriesName))]
-    [ChildElementInfo(typeof(ShowPercent))]
-    [ChildElementInfo(typeof(ShowBubbleSize))]
-    [ChildElementInfo(typeof(Separator))]
-    [ChildElementInfo(typeof(DLblExtensionList))]
-    [SchemaAttr(11, "dLbl")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9646,6 +10716,28 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataLabel(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dLbl");
+            builder.AddChild<Index>();
+            builder.AddChild<Delete>();
+            builder.AddChild<Layout>();
+            builder.AddChild<ChartText>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<DataLabelPosition>();
+            builder.AddChild<ShowLegendKey>();
+            builder.AddChild<ShowValue>();
+            builder.AddChild<ShowCategoryName>();
+            builder.AddChild<ShowSeriesName>();
+            builder.AddChild<ShowPercent>();
+            builder.AddChild<ShowBubbleSize>();
+            builder.AddChild<Separator>();
+            builder.AddChild<DLblExtensionList>();
         }
 
         /// <summary>
@@ -9719,15 +10811,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>AreaChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Grouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(AreaChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(DropLines))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(AreaChartExtensionList))]
-    [SchemaAttr(11, "areaChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AreaChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9759,6 +10842,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public AreaChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "areaChart");
+            builder.AddChild<Grouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<AreaChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DropLines>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<AreaChartExtensionList>();
         }
 
         /// <summary>
@@ -9828,16 +10924,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Area3DChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Grouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(AreaChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(DropLines))]
-    [ChildElementInfo(typeof(GapDepth))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Area3DChartExtensionList))]
-    [SchemaAttr(11, "area3DChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Area3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9869,6 +10955,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Area3DChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "area3DChart");
+            builder.AddChild<Grouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<AreaChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DropLines>();
+            builder.AddChild<GapDepth>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<Area3DChartExtensionList>();
         }
 
         /// <summary>
@@ -9942,19 +11042,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>LineChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Grouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(LineChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(DropLines))]
-    [ChildElementInfo(typeof(HighLowLines))]
-    [ChildElementInfo(typeof(UpDownBars))]
-    [ChildElementInfo(typeof(ShowMarker))]
-    [ChildElementInfo(typeof(Smooth))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(LineChartExtensionList))]
-    [SchemaAttr(11, "lineChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LineChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9986,6 +11073,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LineChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "lineChart");
+            builder.AddChild<Grouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<LineChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DropLines>();
+            builder.AddChild<HighLowLines>();
+            builder.AddChild<UpDownBars>();
+            builder.AddChild<ShowMarker>();
+            builder.AddChild<Smooth>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<LineChartExtensionList>();
         }
 
         /// <summary>
@@ -10059,16 +11163,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Line3DChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Grouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(LineChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(DropLines))]
-    [ChildElementInfo(typeof(GapDepth))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Line3DChartExtensionList))]
-    [SchemaAttr(11, "line3DChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Line3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10100,6 +11194,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Line3DChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "line3DChart");
+            builder.AddChild<Grouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<LineChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DropLines>();
+            builder.AddChild<GapDepth>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<Line3DChartExtensionList>();
         }
 
         /// <summary>
@@ -10169,15 +11277,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StockChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LineChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(DropLines))]
-    [ChildElementInfo(typeof(HighLowLines))]
-    [ChildElementInfo(typeof(UpDownBars))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(StockChartExtensionList))]
-    [SchemaAttr(11, "stockChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StockChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10209,6 +11308,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public StockChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "stockChart");
+            builder.AddChild<LineChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<DropLines>();
+            builder.AddChild<HighLowLines>();
+            builder.AddChild<UpDownBars>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<StockChartExtensionList>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -10244,14 +11356,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>RadarChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RadarStyle))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(RadarChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(RadarChartExtensionList))]
-    [SchemaAttr(11, "radarChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RadarChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10283,6 +11387,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RadarChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "radarChart");
+            builder.AddChild<RadarStyle>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<RadarChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<RadarChartExtensionList>();
         }
 
         /// <summary>
@@ -10343,14 +11459,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ScatterChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ScatterStyle))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(ScatterChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(ScatterChartExtensionList))]
-    [SchemaAttr(11, "scatterChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScatterChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10382,6 +11490,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ScatterChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "scatterChart");
+            builder.AddChild<ScatterStyle>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<ScatterChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<ScatterChartExtensionList>();
         }
 
         /// <summary>
@@ -10441,13 +11561,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>PieChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(PieChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(FirstSliceAngle))]
-    [ChildElementInfo(typeof(PieChartExtensionList))]
-    [SchemaAttr(11, "pieChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PieChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10479,6 +11592,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PieChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pieChart");
+            builder.AddChild<VaryColors>();
+            builder.AddChild<PieChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<FirstSliceAngle>();
+            builder.AddChild<PieChartExtensionList>();
         }
 
         /// <summary>
@@ -10529,12 +11653,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Pie3DChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(PieChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Pie3DChartExtensionList))]
-    [SchemaAttr(11, "pie3DChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Pie3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10566,6 +11684,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Pie3DChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pie3DChart");
+            builder.AddChild<VaryColors>();
+            builder.AddChild<PieChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Pie3DChartExtensionList>();
         }
 
         /// <summary>
@@ -10617,14 +11745,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(PieChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(FirstSliceAngle))]
-    [ChildElementInfo(typeof(HoleSize))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "doughnutChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DoughnutChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10656,6 +11776,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DoughnutChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "doughnutChart");
+            builder.AddChild<VaryColors>();
+            builder.AddChild<PieChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<FirstSliceAngle>();
+            builder.AddChild<HoleSize>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -10713,18 +11845,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>BarChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BarDirection))]
-    [ChildElementInfo(typeof(BarGrouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(BarChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(GapWidth))]
-    [ChildElementInfo(typeof(Overlap))]
-    [ChildElementInfo(typeof(SeriesLines))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(BarChartExtensionList))]
-    [SchemaAttr(11, "barChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BarChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10756,6 +11876,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BarChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "barChart");
+            builder.AddChild<BarDirection>();
+            builder.AddChild<BarGrouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<BarChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<GapWidth>();
+            builder.AddChild<Overlap>();
+            builder.AddChild<SeriesLines>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<BarChartExtensionList>();
         }
 
         /// <summary>
@@ -10843,18 +11979,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Bar3DChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BarDirection))]
-    [ChildElementInfo(typeof(BarGrouping))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(BarChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(GapWidth))]
-    [ChildElementInfo(typeof(GapDepth))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Bar3DChartExtensionList))]
-    [SchemaAttr(11, "bar3DChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Bar3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10886,6 +12010,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Bar3DChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "bar3DChart");
+            builder.AddChild<BarDirection>();
+            builder.AddChild<BarGrouping>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<BarChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<GapWidth>();
+            builder.AddChild<GapDepth>();
+            builder.AddChild<Shape>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<Bar3DChartExtensionList>();
         }
 
         /// <summary>
@@ -10974,19 +12114,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OfPieType))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(PieChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(GapWidth))]
-    [ChildElementInfo(typeof(SplitType))]
-    [ChildElementInfo(typeof(SplitPosition))]
-    [ChildElementInfo(typeof(CustomSplit))]
-    [ChildElementInfo(typeof(SecondPieSize))]
-    [ChildElementInfo(typeof(SeriesLines))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "ofPieChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OfPieChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11018,6 +12145,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OfPieChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ofPieChart");
+            builder.AddChild<OfPieType>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<PieChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<GapWidth>();
+            builder.AddChild<SplitType>();
+            builder.AddChild<SplitPosition>();
+            builder.AddChild<CustomSplit>();
+            builder.AddChild<SecondPieSize>();
+            builder.AddChild<SeriesLines>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -11088,13 +12232,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>SurfaceChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Wireframe))]
-    [ChildElementInfo(typeof(SurfaceChartSeries))]
-    [ChildElementInfo(typeof(BandFormats))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(SurfaceChartExtensionList))]
-    [SchemaAttr(11, "surfaceChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SurfaceChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11126,6 +12263,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SurfaceChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "surfaceChart");
+            builder.AddChild<Wireframe>();
+            builder.AddChild<SurfaceChartSeries>();
+            builder.AddChild<BandFormats>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<SurfaceChartExtensionList>();
         }
 
         /// <summary>
@@ -11178,14 +12326,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Surface3DChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Wireframe))]
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(SurfaceChartSeries))]
-    [ChildElementInfo(typeof(BandFormats))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Surface3DChartExtensionList))]
-    [SchemaAttr(11, "surface3DChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Surface3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11217,6 +12357,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Surface3DChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "surface3DChart");
+            builder.AddChild<Wireframe>();
+            builder.AddChild<VaryColors>();
+            builder.AddChild<SurfaceChartSeries>();
+            builder.AddChild<BandFormats>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<Surface3DChartExtensionList>();
         }
 
         /// <summary>
@@ -11280,17 +12432,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>BubbleChartExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(VaryColors))]
-    [ChildElementInfo(typeof(BubbleChartSeries))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Bubble3D))]
-    [ChildElementInfo(typeof(BubbleScale))]
-    [ChildElementInfo(typeof(ShowNegativeBubbles))]
-    [ChildElementInfo(typeof(SizeRepresents))]
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(BubbleChartExtensionList))]
-    [SchemaAttr(11, "bubbleChart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BubbleChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11322,6 +12463,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BubbleChart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "bubbleChart");
+            builder.AddChild<VaryColors>();
+            builder.AddChild<BubbleChartSeries>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Bubble3D>();
+            builder.AddChild<BubbleScale>();
+            builder.AddChild<ShowNegativeBubbles>();
+            builder.AddChild<SizeRepresents>();
+            builder.AddChild<AxisId>();
+            builder.AddChild<BubbleChartExtensionList>();
         }
 
         /// <summary>
@@ -11387,29 +12543,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ValAxExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Scaling))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(AxisPosition))]
-    [ChildElementInfo(typeof(MajorGridlines))]
-    [ChildElementInfo(typeof(MinorGridlines))]
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(MajorTickMark))]
-    [ChildElementInfo(typeof(MinorTickMark))]
-    [ChildElementInfo(typeof(TickLabelPosition))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(CrossingAxis))]
-    [ChildElementInfo(typeof(Crosses))]
-    [ChildElementInfo(typeof(CrossesAt))]
-    [ChildElementInfo(typeof(CrossBetween))]
-    [ChildElementInfo(typeof(MajorUnit))]
-    [ChildElementInfo(typeof(MinorUnit))]
-    [ChildElementInfo(typeof(DisplayUnits))]
-    [ChildElementInfo(typeof(ValAxExtensionList))]
-    [SchemaAttr(11, "valAx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ValueAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11441,6 +12574,33 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ValueAxis(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "valAx");
+            builder.AddChild<AxisId>();
+            builder.AddChild<Scaling>();
+            builder.AddChild<Delete>();
+            builder.AddChild<AxisPosition>();
+            builder.AddChild<MajorGridlines>();
+            builder.AddChild<MinorGridlines>();
+            builder.AddChild<Title>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<MajorTickMark>();
+            builder.AddChild<MinorTickMark>();
+            builder.AddChild<TickLabelPosition>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<CrossingAxis>();
+            builder.AddChild<Crosses>();
+            builder.AddChild<CrossesAt>();
+            builder.AddChild<CrossBetween>();
+            builder.AddChild<MajorUnit>();
+            builder.AddChild<MinorUnit>();
+            builder.AddChild<DisplayUnits>();
+            builder.AddChild<ValAxExtensionList>();
         }
 
         /// <summary>
@@ -11698,31 +12858,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>CatAxExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Scaling))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(AxisPosition))]
-    [ChildElementInfo(typeof(MajorGridlines))]
-    [ChildElementInfo(typeof(MinorGridlines))]
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(MajorTickMark))]
-    [ChildElementInfo(typeof(MinorTickMark))]
-    [ChildElementInfo(typeof(TickLabelPosition))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(CrossingAxis))]
-    [ChildElementInfo(typeof(Crosses))]
-    [ChildElementInfo(typeof(CrossesAt))]
-    [ChildElementInfo(typeof(AutoLabeled))]
-    [ChildElementInfo(typeof(LabelAlignment))]
-    [ChildElementInfo(typeof(LabelOffset))]
-    [ChildElementInfo(typeof(TickLabelSkip))]
-    [ChildElementInfo(typeof(TickMarkSkip))]
-    [ChildElementInfo(typeof(NoMultiLevelLabels))]
-    [ChildElementInfo(typeof(CatAxExtensionList))]
-    [SchemaAttr(11, "catAx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CategoryAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11754,6 +12889,35 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CategoryAxis(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "catAx");
+            builder.AddChild<AxisId>();
+            builder.AddChild<Scaling>();
+            builder.AddChild<Delete>();
+            builder.AddChild<AxisPosition>();
+            builder.AddChild<MajorGridlines>();
+            builder.AddChild<MinorGridlines>();
+            builder.AddChild<Title>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<MajorTickMark>();
+            builder.AddChild<MinorTickMark>();
+            builder.AddChild<TickLabelPosition>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<CrossingAxis>();
+            builder.AddChild<Crosses>();
+            builder.AddChild<CrossesAt>();
+            builder.AddChild<AutoLabeled>();
+            builder.AddChild<LabelAlignment>();
+            builder.AddChild<LabelOffset>();
+            builder.AddChild<TickLabelSkip>();
+            builder.AddChild<TickMarkSkip>();
+            builder.AddChild<NoMultiLevelLabels>();
+            builder.AddChild<CatAxExtensionList>();
         }
 
         /// <summary>
@@ -12014,32 +13178,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DateAxExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Scaling))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(AxisPosition))]
-    [ChildElementInfo(typeof(MajorGridlines))]
-    [ChildElementInfo(typeof(MinorGridlines))]
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(MajorTickMark))]
-    [ChildElementInfo(typeof(MinorTickMark))]
-    [ChildElementInfo(typeof(TickLabelPosition))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(CrossingAxis))]
-    [ChildElementInfo(typeof(Crosses))]
-    [ChildElementInfo(typeof(CrossesAt))]
-    [ChildElementInfo(typeof(AutoLabeled))]
-    [ChildElementInfo(typeof(LabelOffset))]
-    [ChildElementInfo(typeof(BaseTimeUnit))]
-    [ChildElementInfo(typeof(MajorUnit))]
-    [ChildElementInfo(typeof(MajorTimeUnit))]
-    [ChildElementInfo(typeof(MinorUnit))]
-    [ChildElementInfo(typeof(MinorTimeUnit))]
-    [ChildElementInfo(typeof(DateAxExtensionList))]
-    [SchemaAttr(11, "dateAx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DateAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12071,6 +13209,36 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DateAxis(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dateAx");
+            builder.AddChild<AxisId>();
+            builder.AddChild<Scaling>();
+            builder.AddChild<Delete>();
+            builder.AddChild<AxisPosition>();
+            builder.AddChild<MajorGridlines>();
+            builder.AddChild<MinorGridlines>();
+            builder.AddChild<Title>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<MajorTickMark>();
+            builder.AddChild<MinorTickMark>();
+            builder.AddChild<TickLabelPosition>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<CrossingAxis>();
+            builder.AddChild<Crosses>();
+            builder.AddChild<CrossesAt>();
+            builder.AddChild<AutoLabeled>();
+            builder.AddChild<LabelOffset>();
+            builder.AddChild<BaseTimeUnit>();
+            builder.AddChild<MajorUnit>();
+            builder.AddChild<MajorTimeUnit>();
+            builder.AddChild<MinorUnit>();
+            builder.AddChild<MinorTimeUnit>();
+            builder.AddChild<DateAxExtensionList>();
         }
 
         /// <summary>
@@ -12327,27 +13495,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>SerAxExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AxisId))]
-    [ChildElementInfo(typeof(Scaling))]
-    [ChildElementInfo(typeof(Delete))]
-    [ChildElementInfo(typeof(AxisPosition))]
-    [ChildElementInfo(typeof(MajorGridlines))]
-    [ChildElementInfo(typeof(MinorGridlines))]
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(NumberingFormat))]
-    [ChildElementInfo(typeof(MajorTickMark))]
-    [ChildElementInfo(typeof(MinorTickMark))]
-    [ChildElementInfo(typeof(TickLabelPosition))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(CrossingAxis))]
-    [ChildElementInfo(typeof(Crosses))]
-    [ChildElementInfo(typeof(CrossesAt))]
-    [ChildElementInfo(typeof(TickLabelSkip))]
-    [ChildElementInfo(typeof(TickMarkSkip))]
-    [ChildElementInfo(typeof(SerAxExtensionList))]
-    [SchemaAttr(11, "serAx")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SeriesAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12379,6 +13526,31 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SeriesAxis(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "serAx");
+            builder.AddChild<AxisId>();
+            builder.AddChild<Scaling>();
+            builder.AddChild<Delete>();
+            builder.AddChild<AxisPosition>();
+            builder.AddChild<MajorGridlines>();
+            builder.AddChild<MinorGridlines>();
+            builder.AddChild<Title>();
+            builder.AddChild<NumberingFormat>();
+            builder.AddChild<MajorTickMark>();
+            builder.AddChild<MinorTickMark>();
+            builder.AddChild<TickLabelPosition>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<CrossingAxis>();
+            builder.AddChild<Crosses>();
+            builder.AddChild<CrossesAt>();
+            builder.AddChild<TickLabelSkip>();
+            builder.AddChild<TickMarkSkip>();
+            builder.AddChild<SerAxExtensionList>();
         }
 
         /// <summary>
@@ -12618,15 +13790,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShowHorizontalBorder))]
-    [ChildElementInfo(typeof(ShowVerticalBorder))]
-    [ChildElementInfo(typeof(ShowOutlineBorder))]
-    [ChildElementInfo(typeof(ShowKeys))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TextProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "dTable")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12658,6 +13821,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataTable(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dTable");
+            builder.AddChild<ShowHorizontalBorder>();
+            builder.AddChild<ShowVerticalBorder>();
+            builder.AddChild<ShowOutlineBorder>();
+            builder.AddChild<ShowKeys>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -12773,8 +13949,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:firstSliceAng.</para>
     /// </summary>
-    [SchemaAttr(11, "firstSliceAng")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FirstSliceAngle : OpenXmlLeafElement
     {
         /// <summary>
@@ -12788,10 +13962,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>First Slice Angle Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 360L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "firstSliceAng");
+            builder.AddElement<FirstSliceAngle>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (360L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstSliceAngle>(deep);
@@ -12802,8 +13988,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:holeSize.</para>
     /// </summary>
-    [SchemaAttr(11, "holeSize")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HoleSize : OpenXmlLeafElement
     {
         /// <summary>
@@ -12817,11 +14001,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Hole Size Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 90L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "holeSize");
+            builder.AddElement<HoleSize>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (90L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HoleSize>(deep);
@@ -12838,9 +14034,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumericValue &lt;c:v></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumericValue))]
-    [SchemaAttr(11, "pt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StringPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12878,10 +14071,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "idx")]
-        [Index(0)]
-        public UInt32Value Index { get; set; }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pt");
+            builder.AddChild<NumericValue>();
+            builder.AddElement<StringPoint>()
+.AddAttribute(0, "idx", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <summary>
         /// <para>Text Value.</para>
@@ -12918,8 +14124,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:thickness.</para>
     /// </summary>
-    [SchemaAttr(11, "thickness")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Thickness : OpenXmlLeafElement
     {
         /// <summary>
@@ -12933,10 +14137,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "thickness");
+            builder.AddElement<Thickness>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Thickness>(deep);
@@ -12953,9 +14169,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension &lt;c15:filteredLineSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StockChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12993,11 +14206,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
+            builder.AddElement<StockChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13022,9 +14248,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries &lt;c15:filteredPieSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PieChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13062,11 +14285,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
+            builder.AddElement<PieChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13091,9 +14327,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries &lt;c15:filteredPieSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Pie3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13131,11 +14364,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
+            builder.AddElement<Pie3DChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13162,11 +14408,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference &lt;c15:formulaRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13204,11 +14445,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
+            builder.AddElement<NumRefExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13235,9 +14491,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories &lt;c15:autoCat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StrDataExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13275,11 +14528,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories>();
+            builder.AddElement<StrDataExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13306,11 +14572,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference &lt;c15:formulaRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StrRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13348,11 +14609,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
+            builder.AddElement<StrRefExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13381,11 +14657,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference &lt;c15:formulaRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MultiLvlStrRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13423,11 +14694,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
+            builder.AddElement<MultiLvlStrRefExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13458,13 +14744,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout &lt;c15:layout></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DLblExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13502,11 +14781,28 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
+            builder.AddElement<DLblExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13541,15 +14837,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines &lt;c15:leaderLines></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DLblsExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13587,11 +14874,30 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines>();
+            builder.AddElement<DLblsExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13625,12 +14931,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LineSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13668,11 +14968,27 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddElement<LineSerExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13703,12 +15019,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScatterSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13746,11 +15056,27 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddElement<ScatterSerExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13781,12 +15107,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RadarSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13824,11 +15144,27 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddElement<RadarSerExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13859,12 +15195,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AreaSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13902,11 +15232,27 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddElement<AreaSerExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -13937,12 +15283,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PieSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13980,11 +15320,27 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddElement<PieSerExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14014,11 +15370,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SurfaceSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14056,11 +15407,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddElement<SurfaceSerExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14087,9 +15453,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension &lt;c15:filteredLineSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LineChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14127,11 +15490,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
+            builder.AddElement<LineChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14156,9 +15532,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension &lt;c15:filteredLineSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Line3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14196,11 +15569,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
+            builder.AddElement<Line3DChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14225,9 +15611,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries &lt;c15:filteredScatterSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScatterChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14265,11 +15648,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries>();
+            builder.AddElement<ScatterChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14294,9 +15690,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries &lt;c15:filteredRadarSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RadarChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14334,11 +15727,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries>();
+            builder.AddElement<RadarChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14363,9 +15769,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries &lt;c15:filteredBarSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BarChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14403,11 +15806,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
+            builder.AddElement<BarChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14432,9 +15848,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries &lt;c15:filteredBarSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Bar3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14472,11 +15885,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
+            builder.AddElement<Bar3DChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14501,9 +15927,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries &lt;c15:filteredAreaSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AreaChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14541,11 +15964,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
+            builder.AddElement<AreaChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14570,9 +16006,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries &lt;c15:filteredAreaSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Area3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14610,11 +16043,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
+            builder.AddElement<Area3DChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14639,9 +16085,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries &lt;c15:filteredBubbleSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BubbleChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14679,11 +16122,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries>();
+            builder.AddElement<BubbleChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14708,9 +16164,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries &lt;c15:filteredSurfaceSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SurfaceChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14748,11 +16201,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
+            builder.AddElement<SurfaceChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14777,9 +16243,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries &lt;c15:filteredSurfaceSeries></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Surface3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14817,11 +16280,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
+            builder.AddElement<Surface3DChartExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14846,9 +16322,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat &lt;c15:numFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CatAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14886,11 +16359,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+            builder.AddElement<CatAxExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14915,9 +16401,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat &lt;c15:numFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DateAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14955,11 +16438,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+            builder.AddElement<DateAxExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -14984,9 +16480,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat &lt;c15:numFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SerAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15024,11 +16517,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+            builder.AddElement<SerAxExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -15053,9 +16559,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat &lt;c15:numFmt></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ValAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15093,11 +16596,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+            builder.AddElement<ValAxExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -15125,12 +16641,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GapWidth))]
-    [ChildElementInfo(typeof(UpBars))]
-    [ChildElementInfo(typeof(DownBars))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "upDownBars")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class UpDownBars : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15162,6 +16672,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public UpDownBars(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "upDownBars");
+            builder.AddChild<GapWidth>();
+            builder.AddChild<UpBars>();
+            builder.AddChild<DownBars>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -15241,9 +16761,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StockChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StockChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StockChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15277,6 +16794,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<StockChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension), 0, 0)
@@ -15299,9 +16823,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>PieChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PieChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PieChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15335,6 +16856,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<PieChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension), 0, 0)
@@ -15357,9 +16885,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Pie3DChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Pie3DChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Pie3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15393,6 +16918,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<Pie3DChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension), 0, 0)
@@ -15415,9 +16947,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>NumRefExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumRefExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NumRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15451,6 +16980,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<NumRefExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension), 0, 0)
@@ -15473,9 +17009,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StrDataExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StrDataExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StrDataExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15509,6 +17042,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<StrDataExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension), 0, 0)
@@ -15531,9 +17071,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StrRefExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StrRefExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StrRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15567,6 +17104,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<StrRefExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension), 0, 0)
@@ -15591,11 +17135,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PointCount))]
-    [ChildElementInfo(typeof(Level))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "multiLvlStrCache")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MultiLevelStringCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15627,6 +17166,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MultiLevelStringCache(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "multiLvlStrCache");
+            builder.AddChild<PointCount>();
+            builder.AddChild<Level>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -15666,9 +17214,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>MultiLvlStrRefExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MultiLvlStrRefExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MultiLvlStrRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15702,6 +17247,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<MultiLvlStrRefExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension), 0, 0)
@@ -15724,9 +17276,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DLblExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DLblExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DLblExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15760,6 +17309,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<DLblExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtension), 0, 0)
@@ -15782,9 +17338,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DLblsExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DLblsExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DLblsExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15818,6 +17371,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<DLblsExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension), 0, 0)
@@ -15847,16 +17407,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(InvertIfNegative))]
-    [ChildElementInfo(typeof(Marker))]
-    [ChildElementInfo(typeof(Bubble3D))]
-    [ChildElementInfo(typeof(Explosion))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "dPt")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15888,6 +17438,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DataPoint(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dPt");
+            builder.AddChild<Index>();
+            builder.AddChild<InvertIfNegative>();
+            builder.AddChild<Marker>();
+            builder.AddChild<Bubble3D>();
+            builder.AddChild<Explosion>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -16034,20 +17598,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TrendlineName))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(TrendlineType))]
-    [ChildElementInfo(typeof(PolynomialOrder))]
-    [ChildElementInfo(typeof(Period))]
-    [ChildElementInfo(typeof(Forward))]
-    [ChildElementInfo(typeof(Backward))]
-    [ChildElementInfo(typeof(Intercept))]
-    [ChildElementInfo(typeof(DisplayRSquaredValue))]
-    [ChildElementInfo(typeof(DisplayEquation))]
-    [ChildElementInfo(typeof(TrendlineLabel))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "trendline")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Trendline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16079,6 +17629,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Trendline(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "trendline");
+            builder.AddChild<TrendlineName>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<TrendlineType>();
+            builder.AddChild<PolynomialOrder>();
+            builder.AddChild<Period>();
+            builder.AddChild<Forward>();
+            builder.AddChild<Backward>();
+            builder.AddChild<Intercept>();
+            builder.AddChild<DisplayRSquaredValue>();
+            builder.AddChild<DisplayEquation>();
+            builder.AddChild<TrendlineLabel>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -16278,17 +17846,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ErrorDirection))]
-    [ChildElementInfo(typeof(ErrorBarType))]
-    [ChildElementInfo(typeof(ErrorBarValueType))]
-    [ChildElementInfo(typeof(NoEndCap))]
-    [ChildElementInfo(typeof(Plus))]
-    [ChildElementInfo(typeof(Minus))]
-    [ChildElementInfo(typeof(ErrorBarValue))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "errBars")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ErrorBars : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16320,6 +17877,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ErrorBars(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "errBars");
+            builder.AddChild<ErrorDirection>();
+            builder.AddChild<ErrorBarType>();
+            builder.AddChild<ErrorBarValueType>();
+            builder.AddChild<NoEndCap>();
+            builder.AddChild<Plus>();
+            builder.AddChild<Minus>();
+            builder.AddChild<ErrorBarValue>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -16473,8 +18045,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StringLiteral &lt;c:strLit></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "cat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CategoryAxisData : AxisDataSourceType
     {
         /// <summary>
@@ -16506,6 +18076,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CategoryAxisData(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "cat");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -16541,8 +18117,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StringLiteral &lt;c:strLit></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(11, "xVal")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class XValues : AxisDataSourceType
     {
         /// <summary>
@@ -16574,6 +18148,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public XValues(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "xVal");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -16609,11 +18189,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>StringLiteral &lt;c:strLit></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MultiLevelStringReference))]
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
-    [ChildElementInfo(typeof(StringReference))]
-    [ChildElementInfo(typeof(StringLiteral))]
     public abstract partial class AxisDataSourceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16645,6 +18220,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected AxisDataSourceType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<MultiLevelStringReference>();
+            builder.AddChild<NumberReference>();
+            builder.AddChild<NumberLiteral>();
+            builder.AddChild<StringReference>();
+            builder.AddChild<StringLiteral>();
         }
 
         /// <summary>
@@ -16724,9 +18309,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>LineSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LineSerExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LineSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16760,6 +18342,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<LineSerExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension), 0, 0)
@@ -16782,9 +18371,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ScatterSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ScatterSerExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScatterSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16818,6 +18404,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<ScatterSerExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension), 0, 0)
@@ -16840,9 +18433,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>RadarSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RadarSerExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RadarSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16876,6 +18466,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<RadarSerExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension), 0, 0)
@@ -16892,8 +18489,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:shape.</para>
     /// </summary>
-    [SchemaAttr(11, "shape")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape : OpenXmlLeafElement
     {
         /// <summary>
@@ -16907,9 +18502,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Shape Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "shape");
+            builder.AddElement<Shape>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
@@ -16926,9 +18531,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>BarSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BarSerExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BarSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16962,6 +18564,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<BarSerExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension), 0, 0)
@@ -16988,13 +18597,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BarSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17032,11 +18634,28 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddElement<BarSerExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -17065,9 +18684,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>AreaSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AreaSerExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AreaSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17101,6 +18717,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<AreaSerExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension), 0, 0)
@@ -17123,9 +18746,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>PieSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PieSerExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PieSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17159,6 +18779,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<PieSerExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension), 0, 0)
@@ -17181,9 +18808,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>BubbleSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BubbleSerExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BubbleSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17217,6 +18841,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<BubbleSerExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension), 0, 0)
@@ -17242,12 +18873,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions &lt;c15:categoryFilterExceptions></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BubbleSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17285,11 +18910,27 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddElement<BubbleSerExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -17317,9 +18958,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>SurfaceSerExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SurfaceSerExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SurfaceSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17353,6 +18991,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<SurfaceSerExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension), 0, 0)
@@ -17375,9 +19020,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>LineChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LineChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LineChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17411,6 +19053,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<LineChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension), 0, 0)
@@ -17433,9 +19082,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Line3DChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Line3DChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Line3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17469,6 +19115,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<Line3DChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension), 0, 0)
@@ -17485,8 +19138,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:scatterStyle.</para>
     /// </summary>
-    [SchemaAttr(11, "scatterStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScatterStyle : OpenXmlLeafElement
     {
         /// <summary>
@@ -17500,9 +19151,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Scatter Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "scatterStyle");
+            builder.AddElement<ScatterStyle>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScatterStyle>(deep);
@@ -17531,21 +19192,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ScatterSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(Marker))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Trendline))]
-    [ChildElementInfo(typeof(ErrorBars))]
-    [ChildElementInfo(typeof(XValues))]
-    [ChildElementInfo(typeof(YValues))]
-    [ChildElementInfo(typeof(Smooth))]
-    [ChildElementInfo(typeof(ScatterSerExtensionList))]
-    [SchemaAttr(11, "ser")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScatterChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17577,6 +19223,25 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ScatterChartSeries(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ser");
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<Marker>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Trendline>();
+            builder.AddChild<ErrorBars>();
+            builder.AddChild<XValues>();
+            builder.AddChild<YValues>();
+            builder.AddChild<Smooth>();
+            builder.AddChild<ScatterSerExtensionList>();
         }
 
         /// <summary>
@@ -17684,9 +19349,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ScatterChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ScatterChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScatterChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17720,6 +19382,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<ScatterChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension), 0, 0)
@@ -17736,8 +19405,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:radarStyle.</para>
     /// </summary>
-    [SchemaAttr(11, "radarStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RadarStyle : OpenXmlLeafElement
     {
         /// <summary>
@@ -17751,10 +19418,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Radar Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "radarStyle");
+            builder.AddElement<RadarStyle>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadarStyle>(deep);
@@ -17781,19 +19460,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>RadarSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(Marker))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(CategoryAxisData))]
-    [ChildElementInfo(typeof(Values))]
-    [ChildElementInfo(typeof(RadarSerExtensionList))]
-    [SchemaAttr(11, "ser")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RadarChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17825,6 +19491,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RadarChartSeries(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ser");
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<Marker>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<CategoryAxisData>();
+            builder.AddChild<Values>();
+            builder.AddChild<RadarSerExtensionList>();
         }
 
         /// <summary>
@@ -17943,9 +19626,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>RadarChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RadarChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RadarChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17979,6 +19659,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<RadarChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension), 0, 0)
@@ -17995,8 +19682,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:overlap.</para>
     /// </summary>
-    [SchemaAttr(11, "overlap")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Overlap : OpenXmlLeafElement
     {
         /// <summary>
@@ -18010,10 +19695,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Overlap Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = -100L, MaxInclusive = 100L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public SByteValue Val { get; set; }
+        public SByteValue Val
+        {
+            get => GetAttribute<SByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "overlap");
+            builder.AddElement<Overlap>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100L), MaxInclusive = (100L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Overlap>(deep);
@@ -18030,9 +19727,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>BarChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BarChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BarChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18066,6 +19760,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<BarChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension), 0, 0)
@@ -18088,9 +19789,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Bar3DChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Bar3DChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Bar3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18124,6 +19822,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<Bar3DChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension), 0, 0)
@@ -18146,9 +19851,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>AreaChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AreaChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AreaChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18182,6 +19884,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<AreaChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension), 0, 0)
@@ -18204,9 +19913,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Area3DChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Area3DChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Area3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18238,6 +19944,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Area3DChartExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<Area3DChartExtension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -18276,23 +19989,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>BubbleSerExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Index))]
-    [ChildElementInfo(typeof(Order))]
-    [ChildElementInfo(typeof(SeriesText))]
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(InvertIfNegative))]
-    [ChildElementInfo(typeof(DataPoint))]
-    [ChildElementInfo(typeof(DataLabels))]
-    [ChildElementInfo(typeof(Trendline))]
-    [ChildElementInfo(typeof(ErrorBars))]
-    [ChildElementInfo(typeof(XValues))]
-    [ChildElementInfo(typeof(YValues))]
-    [ChildElementInfo(typeof(BubbleSize))]
-    [ChildElementInfo(typeof(Bubble3D))]
-    [ChildElementInfo(typeof(BubbleSerExtensionList))]
-    [SchemaAttr(11, "ser")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BubbleChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18324,6 +20020,27 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BubbleChartSeries(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ser");
+            builder.AddChild<Index>();
+            builder.AddChild<Order>();
+            builder.AddChild<SeriesText>();
+            builder.AddChild<ChartShapeProperties>();
+            builder.AddChild<PictureOptions>();
+            builder.AddChild<InvertIfNegative>();
+            builder.AddChild<DataPoint>();
+            builder.AddChild<DataLabels>();
+            builder.AddChild<Trendline>();
+            builder.AddChild<ErrorBars>();
+            builder.AddChild<XValues>();
+            builder.AddChild<YValues>();
+            builder.AddChild<BubbleSize>();
+            builder.AddChild<Bubble3D>();
+            builder.AddChild<BubbleSerExtensionList>();
         }
 
         /// <summary>
@@ -18440,8 +20157,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:bubbleScale.</para>
     /// </summary>
-    [SchemaAttr(11, "bubbleScale")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BubbleScale : OpenXmlLeafElement
     {
         /// <summary>
@@ -18455,10 +20170,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bubble Scale Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 300L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "bubbleScale");
+            builder.AddElement<BubbleScale>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (300L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BubbleScale>(deep);
@@ -18469,8 +20196,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:sizeRepresents.</para>
     /// </summary>
-    [SchemaAttr(11, "sizeRepresents")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SizeRepresents : OpenXmlLeafElement
     {
         /// <summary>
@@ -18484,9 +20209,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Size Represents Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "sizeRepresents");
+            builder.AddElement<SizeRepresents>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SizeRepresents>(deep);
@@ -18503,9 +20238,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>BubbleChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BubbleChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BubbleChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18539,6 +20271,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<BubbleChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension), 0, 0)
@@ -18561,9 +20300,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>SurfaceChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SurfaceChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SurfaceChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18597,6 +20333,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<SurfaceChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension), 0, 0)
@@ -18619,9 +20362,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>Surface3DChartExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Surface3DChartExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Surface3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18655,6 +20395,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<Surface3DChartExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension), 0, 0)
@@ -18671,8 +20418,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lblAlgn.</para>
     /// </summary>
-    [SchemaAttr(11, "lblAlgn")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LabelAlignment : OpenXmlLeafElement
     {
         /// <summary>
@@ -18686,10 +20431,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Label Alignment Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "lblAlgn");
+            builder.AddElement<LabelAlignment>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LabelAlignment>(deep);
@@ -18700,8 +20457,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lblOffset.</para>
     /// </summary>
-    [SchemaAttr(11, "lblOffset")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LabelOffset : OpenXmlLeafElement
     {
         /// <summary>
@@ -18715,10 +20470,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Label Offset Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 1000L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "lblOffset");
+            builder.AddElement<LabelOffset>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1000L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LabelOffset>(deep);
@@ -18729,8 +20496,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:tickLblSkip.</para>
     /// </summary>
-    [SchemaAttr(11, "tickLblSkip")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TickLabelSkip : SkipType
     {
         /// <summary>
@@ -18738,6 +20503,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public TickLabelSkip() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "tickLblSkip");
         }
 
         /// <inheritdoc/>
@@ -18749,8 +20520,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:tickMarkSkip.</para>
     /// </summary>
-    [SchemaAttr(11, "tickMarkSkip")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TickMarkSkip : SkipType
     {
         /// <summary>
@@ -18758,6 +20527,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public TickMarkSkip() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "tickMarkSkip");
         }
 
         /// <inheritdoc/>
@@ -18782,11 +20557,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Skip Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 1L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SkipType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -18800,9 +20586,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>CatAxExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CatAxExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CatAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18836,6 +20619,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<CatAxExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension), 0, 0)
@@ -18852,8 +20642,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:baseTimeUnit.</para>
     /// </summary>
-    [SchemaAttr(11, "baseTimeUnit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BaseTimeUnit : TimeUnitType
     {
         /// <summary>
@@ -18861,6 +20649,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public BaseTimeUnit() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "baseTimeUnit");
         }
 
         /// <inheritdoc/>
@@ -18872,8 +20666,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:majorTimeUnit.</para>
     /// </summary>
-    [SchemaAttr(11, "majorTimeUnit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MajorTimeUnit : TimeUnitType
     {
         /// <summary>
@@ -18881,6 +20673,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public MajorTimeUnit() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "majorTimeUnit");
         }
 
         /// <inheritdoc/>
@@ -18892,8 +20690,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:minorTimeUnit.</para>
     /// </summary>
-    [SchemaAttr(11, "minorTimeUnit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MinorTimeUnit : TimeUnitType
     {
         /// <summary>
@@ -18901,6 +20697,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public MinorTimeUnit() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "minorTimeUnit");
         }
 
         /// <inheritdoc/>
@@ -18925,9 +20727,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Time Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TimeUnitType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -18935,8 +20746,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:majorUnit.</para>
     /// </summary>
-    [SchemaAttr(11, "majorUnit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MajorUnit : AxisUnitType
     {
         /// <summary>
@@ -18944,6 +20753,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public MajorUnit() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "majorUnit");
         }
 
         /// <inheritdoc/>
@@ -18955,8 +20770,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:minorUnit.</para>
     /// </summary>
-    [SchemaAttr(11, "minorUnit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MinorUnit : AxisUnitType
     {
         /// <summary>
@@ -18964,6 +20777,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </summary>
         public MinorUnit() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "minorUnit");
         }
 
         /// <inheritdoc/>
@@ -18988,11 +20807,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinExclusive = 0L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public DoubleValue Val { get; set; }
+        public DoubleValue Val
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<AxisUnitType>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinExclusive = (0L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -19006,9 +20836,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DateAxExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DateAxExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DateAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19042,6 +20869,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<DateAxExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension), 0, 0)
@@ -19064,9 +20898,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>SerAxExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SerAxExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SerAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19100,6 +20931,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<SerAxExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension), 0, 0)
@@ -19116,8 +20954,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:crossBetween.</para>
     /// </summary>
-    [SchemaAttr(11, "crossBetween")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CrossBetween : OpenXmlLeafElement
     {
         /// <summary>
@@ -19131,10 +20967,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Cross Between Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "crossBetween");
+            builder.AddElement<CrossBetween>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CrossBetween>(deep);
@@ -19154,12 +21002,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CustomDisplayUnit))]
-    [ChildElementInfo(typeof(BuiltInUnit))]
-    [ChildElementInfo(typeof(DisplayUnitsLabel))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "dispUnits")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DisplayUnits : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19193,6 +21035,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "dispUnits");
+            builder.AddChild<CustomDisplayUnit>();
+            builder.AddChild<BuiltInUnit>();
+            builder.AddChild<DisplayUnitsLabel>();
+            builder.AddChild<ExtensionList>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -19221,9 +21073,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ValAxExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ValAxExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ValAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19257,6 +21106,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<ValAxExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension), 0, 0)
@@ -19273,8 +21129,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lang.</para>
     /// </summary>
-    [SchemaAttr(11, "lang")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EditingLanguage : OpenXmlLeafElement
     {
         /// <summary>
@@ -19288,10 +21142,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Language Code</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "lang");
+            builder.AddElement<EditingLanguage>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EditingLanguage>(deep);
@@ -19302,8 +21168,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:style.</para>
     /// </summary>
-    [SchemaAttr(11, "style")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Style : OpenXmlLeafElement
     {
         /// <summary>
@@ -19317,10 +21181,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Style Type</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 48L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "style");
+            builder.AddElement<Style>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (48L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
@@ -19337,9 +21213,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(11, "clrMapOvr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColorMapOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19377,121 +21250,189 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Background 1</para>
         /// <para>Represents the following attribute in the schema: bg1</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bg1")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text 1</para>
         /// <para>Represents the following attribute in the schema: tx1</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "tx1")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Background 2</para>
         /// <para>Represents the following attribute in the schema: bg2</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bg2")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text 2</para>
         /// <para>Represents the following attribute in the schema: tx2</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "tx2")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 1</para>
         /// <para>Represents the following attribute in the schema: accent1</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent1")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 2</para>
         /// <para>Represents the following attribute in the schema: accent2</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent2")]
-        [Index(5)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 3</para>
         /// <para>Represents the following attribute in the schema: accent3</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent3")]
-        [Index(6)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 4</para>
         /// <para>Represents the following attribute in the schema: accent4</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent4")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 5</para>
         /// <para>Represents the following attribute in the schema: accent5</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent5")]
-        [Index(8)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Accent 6</para>
         /// <para>Represents the following attribute in the schema: accent6</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "accent6")]
-        [Index(9)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6 { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Hyperlink</para>
         /// <para>Represents the following attribute in the schema: hlink</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "hlink")]
-        [Index(10)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Followed Hyperlink</para>
         /// <para>Represents the following attribute in the schema: folHlink</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "folHlink")]
-        [Index(11)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "clrMapOvr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddElement<ColorMapOverride>()
+.AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -19530,11 +21471,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotTableName))]
-    [ChildElementInfo(typeof(FormatId))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "pivotSource")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PivotSource : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19566,6 +21502,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PivotSource(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "pivotSource");
+            builder.AddChild<PivotTableName>();
+            builder.AddChild<FormatId>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -19635,13 +21580,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>UserInterface &lt;c:userInterface></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartObject))]
-    [ChildElementInfo(typeof(Data))]
-    [ChildElementInfo(typeof(Formatting))]
-    [ChildElementInfo(typeof(Selection))]
-    [ChildElementInfo(typeof(UserInterface))]
-    [SchemaAttr(11, "protection")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Protection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19673,6 +21611,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Protection(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "protection");
+            builder.AddChild<ChartObject>();
+            builder.AddChild<Data>();
+            builder.AddChild<Formatting>();
+            builder.AddChild<Selection>();
+            builder.AddChild<UserInterface>();
         }
 
         /// <summary>
@@ -19778,21 +21727,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Title))]
-    [ChildElementInfo(typeof(AutoTitleDeleted))]
-    [ChildElementInfo(typeof(PivotFormats))]
-    [ChildElementInfo(typeof(View3D))]
-    [ChildElementInfo(typeof(Floor))]
-    [ChildElementInfo(typeof(SideWall))]
-    [ChildElementInfo(typeof(BackWall))]
-    [ChildElementInfo(typeof(PlotArea))]
-    [ChildElementInfo(typeof(Legend))]
-    [ChildElementInfo(typeof(PlotVisibleOnly))]
-    [ChildElementInfo(typeof(DisplayBlanksAs))]
-    [ChildElementInfo(typeof(ShowDataLabelsOverMaximum))]
-    [ChildElementInfo(typeof(ExtensionList))]
-    [SchemaAttr(11, "chart")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Chart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19824,6 +21758,25 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Chart(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "chart");
+            builder.AddChild<Title>();
+            builder.AddChild<AutoTitleDeleted>();
+            builder.AddChild<PivotFormats>();
+            builder.AddChild<View3D>();
+            builder.AddChild<Floor>();
+            builder.AddChild<SideWall>();
+            builder.AddChild<BackWall>();
+            builder.AddChild<PlotArea>();
+            builder.AddChild<Legend>();
+            builder.AddChild<PlotVisibleOnly>();
+            builder.AddChild<DisplayBlanksAs>();
+            builder.AddChild<ShowDataLabelsOverMaximum>();
+            builder.AddChild<ExtensionList>();
         }
 
         /// <summary>
@@ -20029,9 +21982,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>AutoUpdate &lt;c:autoUpdate></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AutoUpdate))]
-    [SchemaAttr(11, "externalData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ExternalData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20072,10 +22022,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "externalData");
+            builder.AddChild<AutoUpdate>();
+            builder.AddElement<ExternalData>()
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <summary>
         /// <para>Update Automatically.</para>
@@ -20121,12 +22084,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>LegacyDrawingHeaderFooter &lt;c:legacyDrawingHF></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(HeaderFooter))]
-    [ChildElementInfo(typeof(PageMargins))]
-    [ChildElementInfo(typeof(PageSetup))]
-    [ChildElementInfo(typeof(LegacyDrawingHeaderFooter))]
-    [SchemaAttr(11, "printSettings")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PrintSettings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20158,6 +22115,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PrintSettings(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "printSettings");
+            builder.AddChild<HeaderFooter>();
+            builder.AddChild<PageMargins>();
+            builder.AddChild<PageSetup>();
+            builder.AddChild<LegacyDrawingHeaderFooter>();
         }
 
         /// <summary>
@@ -20237,9 +22204,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>ChartSpaceExtension &lt;c:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartSpaceExtension))]
-    [SchemaAttr(11, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartSpaceExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20273,6 +22237,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "extLst");
+            builder.AddChild<ChartSpaceExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension), 0, 0)
@@ -20297,11 +22268,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource &lt;c15:pivotSource></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource), FileFormatVersions.Office2013)]
-    [SchemaAttr(11, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ChartSpaceExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20339,11 +22305,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(11, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource>();
+            builder.AddElement<ChartSpaceExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {

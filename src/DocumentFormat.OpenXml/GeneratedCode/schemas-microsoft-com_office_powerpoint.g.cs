@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -16,8 +17,6 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:iscomment.</para>
     /// </summary>
-    [SchemaAttr(30, "iscomment")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class InkAnnotationFlag : OpenXmlLeafElement
     {
         /// <summary>
@@ -25,6 +24,12 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         /// </summary>
         public InkAnnotationFlag() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(30, "iscomment");
         }
 
         /// <inheritdoc/>
@@ -36,8 +41,6 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:textdata.</para>
     /// </summary>
-    [SchemaAttr(30, "textdata")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextData : OpenXmlLeafElement
     {
         /// <summary>
@@ -51,9 +54,19 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         /// <para>Text Reference</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(30, "textdata");
+            builder.AddElement<TextData>()
+.AddAttribute(0, "id", a => a.Id);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextData>(deep);

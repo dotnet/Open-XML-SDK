@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -38,23 +39,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(82, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -92,10 +76,38 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "spPr");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddElement<ShapeProperties>()
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -158,8 +170,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:explosion.</para>
     /// </summary>
-    [SchemaAttr(82, "explosion")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class UnsignedIntegerType : OpenXmlLeafElement
     {
         /// <summary>
@@ -173,10 +183,23 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "explosion");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddElement<UnsignedIntegerType>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsignedIntegerType>(deep);
@@ -187,8 +210,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:invertIfNegative.</para>
     /// </summary>
-    [SchemaAttr(82, "invertIfNegative")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class InvertIfNegativeBoolean : BooleanType
     {
         /// <summary>
@@ -196,6 +217,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </summary>
         public InvertIfNegativeBoolean() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "invertIfNegative");
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -207,8 +235,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:bubble3D.</para>
     /// </summary>
-    [SchemaAttr(82, "bubble3D")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Bubble3DBoolean : BooleanType
     {
         /// <summary>
@@ -216,6 +242,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </summary>
         public Bubble3DBoolean() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "bubble3D");
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -240,9 +273,18 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BooleanType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -259,12 +301,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Symbol))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-    [SchemaAttr(82, "marker")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class Marker : OpenXmlCompositeElement
     {
         /// <summary>
@@ -296,6 +332,17 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Marker(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "marker");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Size>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
         }
 
         /// <summary>
@@ -390,24 +437,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList))]
-    [SchemaAttr(82, "dLbl")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class DLbl : OpenXmlCompositeElement
     {
         /// <summary>
@@ -439,6 +468,29 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DLbl(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "dLbl");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowPercent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Separator>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList>();
         }
 
         /// <summary>
@@ -506,9 +558,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>CategoryFilterException &lt;c16:categoryFilterException></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CategoryFilterException), FileFormatVersions.Office2016)]
-    [SchemaAttr(82, "categoryFilterExceptions")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class CategoryFilterExceptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -542,6 +591,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "categoryFilterExceptions");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<CategoryFilterException>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterException), 1, 0, version: FileFormatVersions.Office2016)
@@ -564,9 +621,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>BooleanFalse &lt;c16:showExpandCollapseFieldButtons></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BooleanFalse), FileFormatVersions.Office2016)]
-    [SchemaAttr(82, "pivotOptions16")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class PivotOptions16 : OpenXmlCompositeElement
     {
         /// <summary>
@@ -598,6 +652,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PivotOptions16(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "pivotOptions16");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<BooleanFalse>();
         }
 
         /// <summary>
@@ -635,9 +697,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>ChartDataPointUniqueIDMapEntry &lt;c16:ptentry></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ChartDataPointUniqueIDMapEntry), FileFormatVersions.Office2016)]
-    [SchemaAttr(82, "datapointuniqueidmap")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ChartDataPointUniqueIDMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -671,6 +730,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "datapointuniqueidmap");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<ChartDataPointUniqueIDMapEntry>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMapEntry), 0, 0, version: FileFormatVersions.Office2016)
@@ -687,8 +754,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:uniqueId.</para>
     /// </summary>
-    [SchemaAttr(82, "uniqueId")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class UniqueIdChartUniqueID : UniqueIDChart
     {
         /// <summary>
@@ -696,6 +761,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </summary>
         public UniqueIdChartUniqueID() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "uniqueId");
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -707,8 +779,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:uniqueID.</para>
     /// </summary>
-    [SchemaAttr(82, "uniqueID")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class UniqueID : UniqueIDChart
     {
         /// <summary>
@@ -716,6 +786,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </summary>
         public UniqueID() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "uniqueID");
+            builder.Availability = FileFormatVersions.Office2016;
         }
 
         /// <inheritdoc/>
@@ -740,10 +817,21 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UniqueIDChart>()
+                           .AddAttribute(0, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -763,15 +851,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>DLbl &lt;c16:dLbl></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(UniqueIdChartUniqueID), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(UnsignedIntegerType), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(InvertIfNegativeBoolean), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Bubble3DBoolean), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(Marker), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(DLbl), FileFormatVersions.Office2016)]
-    [SchemaAttr(82, "categoryFilterException")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class CategoryFilterException : OpenXmlCompositeElement
     {
         /// <summary>
@@ -803,6 +882,20 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public CategoryFilterException(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "categoryFilterException");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<UniqueIdChartUniqueID>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<UnsignedIntegerType>();
+            builder.AddChild<InvertIfNegativeBoolean>();
+            builder.AddChild<Bubble3DBoolean>();
+            builder.AddChild<Marker>();
+            builder.AddChild<DLbl>();
         }
 
         /// <summary>
@@ -927,12 +1020,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-    [SchemaAttr(82, "numCache")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class NumberDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -964,6 +1051,17 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NumberDataType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "numCache");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
         }
 
         /// <summary>
@@ -1017,9 +1115,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>NumberDataType &lt;c16:numCache></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NumberDataType), FileFormatVersions.Office2016)]
-    [SchemaAttr(82, "filteredLitCache")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class NumFilteredLiteralCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1051,6 +1146,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NumFilteredLiteralCache(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "filteredLitCache");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<NumberDataType>();
         }
 
         /// <summary>
@@ -1090,11 +1193,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList))]
-    [SchemaAttr(82, "strCache")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class StringDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1126,6 +1224,16 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public StringDataType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "strCache");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList>();
         }
 
         /// <summary>
@@ -1165,9 +1273,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>StringDataType &lt;c16:strCache></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StringDataType), FileFormatVersions.Office2016)]
-    [SchemaAttr(82, "filteredLitCache")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class StrFilteredLiteralCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1199,6 +1304,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public StrFilteredLiteralCache(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "filteredLitCache");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<StringDataType>();
         }
 
         /// <summary>
@@ -1238,11 +1351,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-    [SchemaAttr(82, "multiLvlStrCache")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class MultiLvlStrData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1274,6 +1382,16 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MultiLvlStrData(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "multiLvlStrCache");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Level>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
         }
 
         /// <summary>
@@ -1313,9 +1431,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>MultiLvlStrData &lt;c16:multiLvlStrCache></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MultiLvlStrData), FileFormatVersions.Office2016)]
-    [SchemaAttr(82, "filteredLitCache")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class MultiLvlStrFilteredLiteralCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1349,6 +1464,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "filteredLitCache");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<MultiLvlStrData>();
+        }
+
         /// <summary>
         /// <para>MultiLvlStrData.</para>
         /// <para>Represents the following element tag in the schema: c16:multiLvlStrCache.</para>
@@ -1378,8 +1501,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:literalDataChart.</para>
     /// </summary>
-    [SchemaAttr(82, "literalDataChart")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class LiteralDataChart : OpenXmlLeafElement
     {
         /// <summary>
@@ -1393,10 +1514,23 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "literalDataChart");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddElement<LiteralDataChart>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LiteralDataChart>(deep);
@@ -1407,8 +1541,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:showExpandCollapseFieldButtons.</para>
     /// </summary>
-    [SchemaAttr(82, "showExpandCollapseFieldButtons")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class BooleanFalse : OpenXmlLeafElement
     {
         /// <summary>
@@ -1422,9 +1554,20 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "showExpandCollapseFieldButtons");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddElement<BooleanFalse>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BooleanFalse>(deep);
@@ -1435,9 +1578,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:ptidx.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(UInt32Value))]
-    [SchemaAttr(82, "ptidx")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class XsdunsignedInt : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1460,6 +1600,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             return new UInt32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
+            builder.SetSchema(82, "ptidx");
+            builder.Availability = FileFormatVersions.Office2016;
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsdunsignedInt>(deep);
     }
@@ -1476,10 +1624,6 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description>UniqueID &lt;c16:uniqueID></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(XsdunsignedInt), FileFormatVersions.Office2016)]
-    [ChildElementInfo(typeof(UniqueID), FileFormatVersions.Office2016)]
-    [SchemaAttr(82, "ptentry")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1511,6 +1655,15 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ChartDataPointUniqueIDMapEntry(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(82, "ptentry");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<XsdunsignedInt>();
+            builder.AddChild<UniqueID>();
         }
 
         /// <summary>

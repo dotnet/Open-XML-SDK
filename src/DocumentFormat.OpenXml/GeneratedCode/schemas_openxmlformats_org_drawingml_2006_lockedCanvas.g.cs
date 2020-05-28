@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -32,18 +33,6 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     ///   <item><description>DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.TextShape))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShape))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrame))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShape))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList))]
-    [SchemaAttr(15, "lockedCanvas")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LockedCanvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -75,6 +64,22 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LockedCanvas(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(15, "lockedCanvas");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TextShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrame>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList>();
         }
 
         /// <summary>

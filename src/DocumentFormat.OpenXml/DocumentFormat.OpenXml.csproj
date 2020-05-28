@@ -33,6 +33,7 @@
         <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
         <Compile Include="System\Reflection\TypeExtensions.cs" />
         <Compile Include="System\Runtime\InteropServices\Marshal.cs" />
+        <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
         <Compile Include="System\Runtime\CompilerServices\FormattableStringFactory.cs" />
         <Compile Include="System\FormattableString.cs" />
       </ItemGroup>

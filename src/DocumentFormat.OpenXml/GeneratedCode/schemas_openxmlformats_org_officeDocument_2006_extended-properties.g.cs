@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.VariantTypes;
@@ -49,35 +50,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description>DocumentSecurity &lt;ap:DocSecurity></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Template))]
-    [ChildElementInfo(typeof(Manager))]
-    [ChildElementInfo(typeof(Company))]
-    [ChildElementInfo(typeof(Pages))]
-    [ChildElementInfo(typeof(Words))]
-    [ChildElementInfo(typeof(Characters))]
-    [ChildElementInfo(typeof(PresentationFormat))]
-    [ChildElementInfo(typeof(Lines))]
-    [ChildElementInfo(typeof(Paragraphs))]
-    [ChildElementInfo(typeof(Slides))]
-    [ChildElementInfo(typeof(Notes))]
-    [ChildElementInfo(typeof(TotalTime))]
-    [ChildElementInfo(typeof(HiddenSlides))]
-    [ChildElementInfo(typeof(MultimediaClips))]
-    [ChildElementInfo(typeof(ScaleCrop))]
-    [ChildElementInfo(typeof(HeadingPairs))]
-    [ChildElementInfo(typeof(TitlesOfParts))]
-    [ChildElementInfo(typeof(LinksUpToDate))]
-    [ChildElementInfo(typeof(CharactersWithSpaces))]
-    [ChildElementInfo(typeof(SharedDocument))]
-    [ChildElementInfo(typeof(HyperlinkBase))]
-    [ChildElementInfo(typeof(HyperlinkList))]
-    [ChildElementInfo(typeof(HyperlinksChanged))]
-    [ChildElementInfo(typeof(DigitalSignature))]
-    [ChildElementInfo(typeof(Application))]
-    [ChildElementInfo(typeof(ApplicationVersion))]
-    [ChildElementInfo(typeof(DocumentSecurity))]
-    [SchemaAttr(3, "Properties")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -109,6 +81,39 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Properties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "Properties");
+            builder.AddChild<Template>();
+            builder.AddChild<Manager>();
+            builder.AddChild<Company>();
+            builder.AddChild<Pages>();
+            builder.AddChild<Words>();
+            builder.AddChild<Characters>();
+            builder.AddChild<PresentationFormat>();
+            builder.AddChild<Lines>();
+            builder.AddChild<Paragraphs>();
+            builder.AddChild<Slides>();
+            builder.AddChild<Notes>();
+            builder.AddChild<TotalTime>();
+            builder.AddChild<HiddenSlides>();
+            builder.AddChild<MultimediaClips>();
+            builder.AddChild<ScaleCrop>();
+            builder.AddChild<HeadingPairs>();
+            builder.AddChild<TitlesOfParts>();
+            builder.AddChild<LinksUpToDate>();
+            builder.AddChild<CharactersWithSpaces>();
+            builder.AddChild<SharedDocument>();
+            builder.AddChild<HyperlinkBase>();
+            builder.AddChild<HyperlinkList>();
+            builder.AddChild<HyperlinksChanged>();
+            builder.AddChild<DigitalSignature>();
+            builder.AddChild<Application>();
+            builder.AddChild<ApplicationVersion>();
+            builder.AddChild<DocumentSecurity>();
         }
 
         /// <summary>
@@ -535,8 +540,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Template.</para>
     /// </summary>
-    [SchemaAttr(3, "Template")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Template : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -559,6 +562,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "Template");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Template>(deep);
     }
@@ -568,8 +577,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Manager.</para>
     /// </summary>
-    [SchemaAttr(3, "Manager")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Manager : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -592,6 +599,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "Manager");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Manager>(deep);
     }
@@ -601,8 +614,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Company.</para>
     /// </summary>
-    [SchemaAttr(3, "Company")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Company : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -625,6 +636,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "Company");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Company>(deep);
     }
@@ -634,8 +651,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:PresentationFormat.</para>
     /// </summary>
-    [SchemaAttr(3, "PresentationFormat")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PresentationFormat : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -658,6 +673,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "PresentationFormat");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationFormat>(deep);
     }
@@ -667,8 +688,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinkBase.</para>
     /// </summary>
-    [SchemaAttr(3, "HyperlinkBase")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HyperlinkBase : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -691,6 +710,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "HyperlinkBase");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkBase>(deep);
     }
@@ -700,8 +725,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Application.</para>
     /// </summary>
-    [SchemaAttr(3, "Application")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Application : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -724,6 +747,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "Application");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Application>(deep);
     }
@@ -733,8 +762,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:AppVersion.</para>
     /// </summary>
-    [SchemaAttr(3, "AppVersion")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ApplicationVersion : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -757,6 +784,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "AppVersion");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationVersion>(deep);
     }
@@ -766,9 +799,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Pages.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "Pages")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Pages : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -791,6 +821,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "Pages");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
     }
@@ -800,9 +837,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Words.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "Words")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Words : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -825,6 +859,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "Words");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Words>(deep);
     }
@@ -834,9 +875,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Characters.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "Characters")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Characters : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -859,6 +897,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "Characters");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Characters>(deep);
     }
@@ -868,9 +913,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Lines.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "Lines")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Lines : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -893,6 +935,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "Lines");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Lines>(deep);
     }
@@ -902,9 +951,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Paragraphs.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "Paragraphs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Paragraphs : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -927,6 +973,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "Paragraphs");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Paragraphs>(deep);
     }
@@ -936,9 +989,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Slides.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "Slides")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Slides : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -961,6 +1011,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "Slides");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Slides>(deep);
     }
@@ -970,9 +1027,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Notes.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "Notes")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Notes : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -995,6 +1049,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "Notes");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Notes>(deep);
     }
@@ -1004,9 +1065,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:TotalTime.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "TotalTime")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TotalTime : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1029,6 +1087,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "TotalTime");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalTime>(deep);
     }
@@ -1038,9 +1103,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HiddenSlides.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "HiddenSlides")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HiddenSlides : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1063,6 +1125,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "HiddenSlides");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HiddenSlides>(deep);
     }
@@ -1072,9 +1141,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:MMClips.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "MMClips")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MultimediaClips : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1097,6 +1163,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "MMClips");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultimediaClips>(deep);
     }
@@ -1106,9 +1179,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:CharactersWithSpaces.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "CharactersWithSpaces")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class CharactersWithSpaces : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1131,6 +1201,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "CharactersWithSpaces");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CharactersWithSpaces>(deep);
     }
@@ -1140,9 +1217,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:DocSecurity.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(Int32Value))]
-    [SchemaAttr(3, "DocSecurity")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DocumentSecurity : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1165,6 +1239,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(3, "DocSecurity");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentSecurity>(deep);
     }
@@ -1174,9 +1255,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:ScaleCrop.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(BooleanValue))]
-    [SchemaAttr(3, "ScaleCrop")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ScaleCrop : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1199,6 +1277,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new BooleanValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
+            builder.SetSchema(3, "ScaleCrop");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScaleCrop>(deep);
     }
@@ -1208,9 +1293,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:LinksUpToDate.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(BooleanValue))]
-    [SchemaAttr(3, "LinksUpToDate")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LinksUpToDate : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1233,6 +1315,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new BooleanValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
+            builder.SetSchema(3, "LinksUpToDate");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinksUpToDate>(deep);
     }
@@ -1242,9 +1331,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:SharedDoc.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(BooleanValue))]
-    [SchemaAttr(3, "SharedDoc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SharedDocument : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1267,6 +1353,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new BooleanValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
+            builder.SetSchema(3, "SharedDoc");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedDocument>(deep);
     }
@@ -1276,9 +1369,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinksChanged.</para>
     /// </summary>
-    [NumberValidator(SimpleType = typeof(BooleanValue))]
-    [SchemaAttr(3, "HyperlinksChanged")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HyperlinksChanged : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1301,6 +1391,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             return new BooleanValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
+            builder.SetSchema(3, "HyperlinksChanged");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinksChanged>(deep);
     }
@@ -1316,8 +1413,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(3, "HeadingPairs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HeadingPairs : VectorVariantType
     {
         /// <summary>
@@ -1351,6 +1446,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "HeadingPairs");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
@@ -1373,8 +1474,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(3, "HLinks")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HyperlinkList : VectorVariantType
     {
         /// <summary>
@@ -1408,6 +1507,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "HLinks");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
@@ -1430,7 +1535,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector))]
     public abstract partial class VectorVariantType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1464,6 +1568,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
+        }
+
         /// <summary>
         /// <para>Vector.</para>
         /// <para>Represents the following element tag in the schema: vt:vector.</para>
@@ -1489,9 +1599,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector))]
-    [SchemaAttr(3, "TitlesOfParts")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TitlesOfParts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1523,6 +1630,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TitlesOfParts(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "TitlesOfParts");
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
         }
 
         /// <summary>
@@ -1560,9 +1674,6 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTBlob &lt;vt:blob></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTBlob))]
-    [SchemaAttr(3, "DigSig")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DigitalSignature : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1594,6 +1705,13 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DigitalSignature(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(3, "DigSig");
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
         }
 
         /// <summary>

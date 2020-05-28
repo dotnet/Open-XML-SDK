@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
@@ -9,7 +9,6 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines a mc:Fallback element in mc:AlternateContent.
     /// </summary>
-    [SchemaAttr(AlternateContent.Namespace, Name)]
     public class AlternateContentFallback : OpenXmlCompositeElement
     {
         private const string Name = "Fallback";
@@ -90,6 +89,13 @@ namespace DocumentFormat.OpenXml
         public override OpenXmlElement CloneNode(bool deep)
         {
             return CloneImp<AlternateContentFallback>(deep);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+
+            builder.SetSchema(AlternateContent.Namespace, Name);
         }
     }
 }

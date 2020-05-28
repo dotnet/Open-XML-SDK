@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using NSubstitute;
 using System;
@@ -175,14 +176,20 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        [OfficeAvailability(FileFormatVersions.None)]
         private class OfficeNonElement : MockedXmlElement
         {
+            internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+            {
+                builder.Availability = FileFormatVersions.None;
+            }
         }
 
-        [OfficeAvailability(FileFormatVersions.Office2007)]
         private class Office2007Element : MockedXmlElement
         {
+            internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+            {
+                builder.Availability = FileFormatVersions.Office2007;
+            }
         }
 
         private class MockedXmlElement : OpenXmlElement

@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office2010.Excel.Drawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -33,17 +34,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>ClientData &lt;xdr:clientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FromMarker))]
-    [ChildElementInfo(typeof(ToMarker))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ClientData))]
-    [SchemaAttr(18, "twoCellAnchor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TwoCellAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -81,10 +71,31 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Positioning and Resizing Behaviors</para>
         /// <para>Represents the following attribute in the schema: editAs</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "editAs")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues> EditAs { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues> EditAs
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "twoCellAnchor");
+            builder.AddChild<FromMarker>();
+            builder.AddChild<ToMarker>();
+            builder.AddChild<Shape>();
+            builder.AddChild<GroupShape>();
+            builder.AddChild<GraphicFrame>();
+            builder.AddChild<ConnectionShape>();
+            builder.AddChild<Picture>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<ClientData>();
+            builder.AddElement<TwoCellAnchor>()
+.AddAttribute(0, "editAs", a => a.EditAs, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>Starting Anchor Point.</para>
@@ -159,17 +170,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>ClientData &lt;xdr:clientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FromMarker))]
-    [ChildElementInfo(typeof(Extent))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ClientData))]
-    [SchemaAttr(18, "oneCellAnchor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OneCellAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -201,6 +201,21 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OneCellAnchor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "oneCellAnchor");
+            builder.AddChild<FromMarker>();
+            builder.AddChild<Extent>();
+            builder.AddChild<Shape>();
+            builder.AddChild<GroupShape>();
+            builder.AddChild<GraphicFrame>();
+            builder.AddChild<ConnectionShape>();
+            builder.AddChild<Picture>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<ClientData>();
         }
 
         /// <summary>
@@ -276,17 +291,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>ClientData &lt;xdr:clientData></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(Extent))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ClientData))]
-    [SchemaAttr(18, "absoluteAnchor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AbsoluteAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -318,6 +322,21 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public AbsoluteAnchor(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "absoluteAnchor");
+            builder.AddChild<Position>();
+            builder.AddChild<Extent>();
+            builder.AddChild<Shape>();
+            builder.AddChild<GroupShape>();
+            builder.AddChild<GraphicFrame>();
+            builder.AddChild<ConnectionShape>();
+            builder.AddChild<Picture>();
+            builder.AddChild<ContentPart>();
+            builder.AddChild<ClientData>();
         }
 
         /// <summary>
@@ -388,12 +407,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>TextBody &lt;xdr:txBody></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualShapeProperties))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [ChildElementInfo(typeof(TextBody))]
-    [SchemaAttr(18, "sp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -431,33 +444,56 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Reference to Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        [SchemaAttr(0, "macro")]
-        [Index(0)]
-        public StringValue Macro { get; set; }
+        public StringValue Macro
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Text Link</para>
         /// <para>Represents the following attribute in the schema: textlink</para>
         /// </summary>
-        [SchemaAttr(0, "textlink")]
-        [Index(1)]
-        public StringValue TextLink { get; set; }
+        public StringValue TextLink
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Lock Text Flag</para>
         /// <para>Represents the following attribute in the schema: fLocksText</para>
         /// </summary>
-        [SchemaAttr(0, "fLocksText")]
-        [Index(2)]
-        public BooleanValue LockText { get; set; }
+        public BooleanValue LockText
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        [SchemaAttr(0, "fPublished")]
-        [Index(3)]
-        public BooleanValue Published { get; set; }
+        public BooleanValue Published
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "sp");
+            builder.AddChild<NonVisualShapeProperties>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ShapeStyle>();
+            builder.AddChild<TextBody>();
+            builder.AddElement<Shape>()
+.AddAttribute(0, "macro", a => a.Macro)
+.AddAttribute(0, "textlink", a => a.TextLink)
+.AddAttribute(0, "fLocksText", a => a.LockText)
+.AddAttribute(0, "fPublished", a => a.Published);
+        }
 
         /// <summary>
         /// <para>Non-Visual Properties for a Shape.</para>
@@ -549,16 +585,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart &lt;xdr14:contentPart></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualGroupShapeProperties))]
-    [ChildElementInfo(typeof(GroupShapeProperties))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart), FileFormatVersions.Office2010)]
-    [SchemaAttr(18, "grpSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -590,6 +616,20 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GroupShape(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "grpSp");
+            builder.AddChild<NonVisualGroupShapeProperties>();
+            builder.AddChild<GroupShapeProperties>();
+            builder.AddChild<Shape>();
+            builder.AddChild<GroupShape>();
+            builder.AddChild<GraphicFrame>();
+            builder.AddChild<ConnectionShape>();
+            builder.AddChild<Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart>();
         }
 
         /// <summary>
@@ -652,11 +692,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Graphic &lt;a:graphic></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualGraphicFrameProperties))]
-    [ChildElementInfo(typeof(Transform))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
-    [SchemaAttr(18, "graphicFrame")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -694,17 +729,33 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Reference To Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        [SchemaAttr(0, "macro")]
-        [Index(0)]
-        public StringValue Macro { get; set; }
+        public StringValue Macro
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        [SchemaAttr(0, "fPublished")]
-        [Index(1)]
-        public BooleanValue Published { get; set; }
+        public BooleanValue Published
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "graphicFrame");
+            builder.AddChild<NonVisualGraphicFrameProperties>();
+            builder.AddChild<Transform>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
+            builder.AddElement<GraphicFrame>()
+.AddAttribute(0, "macro", a => a.Macro)
+.AddAttribute(0, "fPublished", a => a.Published);
+        }
 
         /// <summary>
         /// <para>Non-Visual Properties for a Graphic Frame.</para>
@@ -777,11 +828,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>ShapeStyle &lt;xdr:style></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualConnectionShapeProperties))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [SchemaAttr(18, "cxnSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -819,17 +865,33 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Reference to Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        [SchemaAttr(0, "macro")]
-        [Index(0)]
-        public StringValue Macro { get; set; }
+        public StringValue Macro
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        [SchemaAttr(0, "fPublished")]
-        [Index(1)]
-        public BooleanValue Published { get; set; }
+        public BooleanValue Published
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "cxnSp");
+            builder.AddChild<NonVisualConnectionShapeProperties>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ShapeStyle>();
+            builder.AddElement<ConnectionShape>()
+.AddAttribute(0, "macro", a => a.Macro)
+.AddAttribute(0, "fPublished", a => a.Published);
+        }
 
         /// <summary>
         /// <para>Non-Visual Properties for a Connection Shape.</para>
@@ -903,12 +965,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>ShapeStyle &lt;xdr:style></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualPictureProperties))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [SchemaAttr(18, "pic")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -946,17 +1002,34 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Reference To Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        [SchemaAttr(0, "macro")]
-        [Index(0)]
-        public StringValue Macro { get; set; }
+        public StringValue Macro
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        [SchemaAttr(0, "fPublished")]
-        [Index(1)]
-        public BooleanValue Published { get; set; }
+        public BooleanValue Published
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "pic");
+            builder.AddChild<NonVisualPictureProperties>();
+            builder.AddChild<BlipFill>();
+            builder.AddChild<ShapeProperties>();
+            builder.AddChild<ShapeStyle>();
+            builder.AddElement<Picture>()
+.AddAttribute(0, "macro", a => a.Macro)
+.AddAttribute(0, "fPublished", a => a.Published);
+        }
 
         /// <summary>
         /// <para>Non-Visual Properties for a Picture.</para>
@@ -1038,12 +1111,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList &lt;xdr14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(18, "contentPart")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1084,19 +1151,41 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue RelationshipId { get; set; }
+        public StringValue RelationshipId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "contentPart");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
+            builder.AddElement<ContentPart>()
+.AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>ExcelNonVisualContentPartShapeProperties.</para>
@@ -1177,11 +1266,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>AbsoluteAnchor &lt;xdr:absoluteAnchor></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TwoCellAnchor))]
-    [ChildElementInfo(typeof(OneCellAnchor))]
-    [ChildElementInfo(typeof(AbsoluteAnchor))]
-    [SchemaAttr(18, "wsDr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WorksheetDrawing : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1213,6 +1297,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public WorksheetDrawing(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "wsDr");
+            builder.AddChild<TwoCellAnchor>();
+            builder.AddChild<OneCellAnchor>();
+            builder.AddChild<AbsoluteAnchor>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1277,10 +1370,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>NonVisualShapeDrawingProperties &lt;xdr:cNvSpPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualShapeDrawingProperties))]
-    [SchemaAttr(18, "nvSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1312,6 +1401,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "nvSpPr");
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualShapeDrawingProperties>();
         }
 
         /// <summary>
@@ -1377,23 +1474,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(18, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1431,10 +1511,37 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "spPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddElement<ShapeProperties>()
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -1506,12 +1613,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LineReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-    [SchemaAttr(18, "style")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1543,6 +1644,16 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ShapeStyle(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "style");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
         }
 
         /// <summary>
@@ -1624,11 +1735,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
-    [SchemaAttr(18, "txBody")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1660,6 +1766,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TextBody(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "txBody");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
         }
 
         /// <summary>
@@ -1713,10 +1828,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>NonVisualConnectorShapeDrawingProperties &lt;xdr:cNvCxnSpPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualConnectorShapeDrawingProperties))]
-    [SchemaAttr(18, "nvCxnSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1748,6 +1859,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualConnectionShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "nvCxnSpPr");
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualConnectorShapeDrawingProperties>();
         }
 
         /// <summary>
@@ -1800,10 +1919,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>NonVisualPictureDrawingProperties &lt;xdr:cNvPicPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualPictureDrawingProperties))]
-    [SchemaAttr(18, "nvPicPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1835,6 +1950,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualPictureProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "nvPicPr");
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualPictureDrawingProperties>();
         }
 
         /// <summary>
@@ -1889,12 +2012,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Stretch &lt;a:stretch></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Blip))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Tile))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Stretch))]
-    [SchemaAttr(18, "blipFill")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1932,9 +2049,23 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
-        [SchemaAttr(0, "rotWithShape")]
-        [Index(0)]
-        public BooleanValue RotateWithShape { get; set; }
+        public BooleanValue RotateWithShape
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "blipFill");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
+            builder.AddElement<BlipFill>()
+.AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
+        }
 
         /// <summary>
         /// <para>Blip.</para>
@@ -1994,10 +2125,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>NonVisualGraphicFrameDrawingProperties &lt;xdr:cNvGraphicFramePr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
-    [SchemaAttr(18, "nvGraphicFramePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2029,6 +2156,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGraphicFrameProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "nvGraphicFramePr");
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualGraphicFrameDrawingProperties>();
         }
 
         /// <summary>
@@ -2081,10 +2216,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-    [SchemaAttr(18, "xfrm")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Transform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2122,25 +2253,43 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr(0, "rot")]
-        [Index(0)]
-        public Int32Value Rotation { get; set; }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr(0, "flipH")]
-        [Index(1)]
-        public BooleanValue HorizontalFlip { get; set; }
+        public BooleanValue HorizontalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr(0, "flipV")]
-        [Index(2)]
-        public BooleanValue VerticalFlip { get; set; }
+        public BooleanValue VerticalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "xfrm");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddElement<Transform>()
+.AddAttribute(0, "rot", a => a.Rotation)
+.AddAttribute(0, "flipH", a => a.HorizontalFlip)
+.AddAttribute(0, "flipV", a => a.VerticalFlip);
+        }
 
         /// <summary>
         /// <para>Offset.</para>
@@ -2185,9 +2334,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:col.</para>
     /// </summary>
-    [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value))]
-    [SchemaAttr(18, "col")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnId : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2210,6 +2356,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(18, "col");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnId>(deep);
     }
@@ -2219,9 +2372,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:colOff.</para>
     /// </summary>
-    [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L, SimpleType = typeof(Int64Value))]
-    [SchemaAttr(18, "colOff")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2244,6 +2394,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             return new Int64Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)) });
+            builder.SetSchema(18, "colOff");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnOffset>(deep);
     }
@@ -2253,9 +2410,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:rowOff.</para>
     /// </summary>
-    [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L, SimpleType = typeof(Int64Value))]
-    [SchemaAttr(18, "rowOff")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2278,6 +2432,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             return new Int64Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)) });
+            builder.SetSchema(18, "rowOff");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowOffset>(deep);
     }
@@ -2287,9 +2448,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:row.</para>
     /// </summary>
-    [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value))]
-    [SchemaAttr(18, "row")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowId : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2312,6 +2470,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             return new Int32Value { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
+            builder.SetSchema(18, "row");
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowId>(deep);
     }
@@ -2330,8 +2495,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>RowOffset &lt;xdr:rowOff></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(18, "from")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FromMarker : MarkerType
     {
         /// <summary>
@@ -2365,6 +2528,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "from");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
@@ -2393,8 +2562,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>RowOffset &lt;xdr:rowOff></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(18, "to")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ToMarker : MarkerType
     {
         /// <summary>
@@ -2428,6 +2595,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "to");
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
@@ -2456,10 +2629,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>RowOffset &lt;xdr:rowOff></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ColumnId))]
-    [ChildElementInfo(typeof(ColumnOffset))]
-    [ChildElementInfo(typeof(RowId))]
-    [ChildElementInfo(typeof(RowOffset))]
     public abstract partial class MarkerType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2491,6 +2660,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected MarkerType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<ColumnId>();
+            builder.AddChild<ColumnOffset>();
+            builder.AddChild<RowId>();
+            builder.AddChild<RowOffset>();
         }
 
         /// <summary>
@@ -2551,8 +2729,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:clientData.</para>
     /// </summary>
-    [SchemaAttr(18, "clientData")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ClientData : OpenXmlLeafElement
     {
         /// <summary>
@@ -2566,17 +2742,30 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Locks With Sheet Flag</para>
         /// <para>Represents the following attribute in the schema: fLocksWithSheet</para>
         /// </summary>
-        [SchemaAttr(0, "fLocksWithSheet")]
-        [Index(0)]
-        public BooleanValue LockWithSheet { get; set; }
+        public BooleanValue LockWithSheet
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Prints With Sheet Flag</para>
         /// <para>Represents the following attribute in the schema: fPrintsWithSheet</para>
         /// </summary>
-        [SchemaAttr(0, "fPrintsWithSheet")]
-        [Index(1)]
-        public BooleanValue PrintWithSheet { get; set; }
+        public BooleanValue PrintWithSheet
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "clientData");
+            builder.AddElement<ClientData>()
+.AddAttribute(0, "fLocksWithSheet", a => a.LockWithSheet)
+.AddAttribute(0, "fPrintsWithSheet", a => a.PrintWithSheet);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClientData>(deep);
@@ -2587,8 +2776,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:ext.</para>
     /// </summary>
-    [SchemaAttr(18, "ext")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Extent : OpenXmlLeafElement
     {
         /// <summary>
@@ -2602,21 +2789,38 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "cx")]
-        [Index(0)]
-        public Int64Value Cx { get; set; }
+        public Int64Value Cx
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(0, "cy")]
-        [Index(1)]
-        public Int64Value Cy { get; set; }
+        public Int64Value Cy
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "ext");
+            builder.AddElement<Extent>()
+.AddAttribute(0, "cx", a => a.Cx, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(0, "cy", a => a.Cy, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Extent>(deep);
@@ -2627,8 +2831,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:pos.</para>
     /// </summary>
-    [SchemaAttr(18, "pos")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Position : OpenXmlLeafElement
     {
         /// <summary>
@@ -2642,21 +2844,38 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "x")]
-        [Index(0)]
-        public Int64Value X { get; set; }
+        public Int64Value X
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -27273042329600L, MaxInclusive = 27273042316900L)]
-        [SchemaAttr(0, "y")]
-        [Index(1)]
-        public Int64Value Y { get; set; }
+        public Int64Value Y
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "pos");
+            builder.AddElement<Position>()
+.AddAttribute(0, "x", a => a.X, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+})
+.AddAttribute(0, "y", a => a.Y, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Position>(deep);
@@ -2675,11 +2894,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(18, "cNvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2717,43 +2931,72 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr(0, "descr")]
-        [Index(2)]
-        public StringValue Description { get; set; }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr(0, "hidden")]
-        [Index(3)]
-        public BooleanValue Hidden { get; set; }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(4)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "cNvPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddElement<NonVisualDrawingProperties>()
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "descr", a => a.Description)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "title", a => a.Title);
+        }
 
         /// <summary>
         /// <para>HyperlinkOnClick.</para>
@@ -2825,10 +3068,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(18, "cNvSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2866,9 +3105,21 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
-        [SchemaAttr(0, "txBox")]
-        [Index(0)]
-        public BooleanValue TextBox { get; set; }
+        public BooleanValue TextBox
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "cNvSpPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddElement<NonVisualShapeDrawingProperties>()
+.AddAttribute(0, "txBox", a => a.TextBox);
+        }
 
         /// <summary>
         /// <para>Shape Locks.</para>
@@ -2922,12 +3173,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.StartConnection))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EndConnection))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(18, "cNvCxnSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2959,6 +3204,16 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualConnectorShapeDrawingProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "cNvCxnSpPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
 
         /// <summary>
@@ -3039,10 +3294,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList))]
-    [SchemaAttr(18, "cNvPicPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3080,9 +3331,21 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>preferRelativeResize</para>
         /// <para>Represents the following attribute in the schema: preferRelativeResize</para>
         /// </summary>
-        [SchemaAttr(0, "preferRelativeResize")]
-        [Index(0)]
-        public BooleanValue PreferRelativeResize { get; set; }
+        public BooleanValue PreferRelativeResize
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "cNvPicPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
+            builder.AddElement<NonVisualPictureDrawingProperties>()
+.AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
+        }
 
         /// <summary>
         /// <para>PictureLocks.</para>
@@ -3134,10 +3397,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(18, "cNvGraphicFramePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3169,6 +3428,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGraphicFrameDrawingProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "cNvGraphicFramePr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
         }
 
         /// <summary>
@@ -3221,10 +3488,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList))]
-    [SchemaAttr(18, "cNvGrpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3256,6 +3519,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGroupShapeDrawingProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "cNvGrpSpPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
         }
 
         /// <summary>
@@ -3308,10 +3579,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>NonVisualGroupShapeDrawingProperties &lt;xdr:cNvGrpSpPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties))]
-    [ChildElementInfo(typeof(NonVisualGroupShapeDrawingProperties))]
-    [SchemaAttr(18, "nvGrpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3343,6 +3610,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NonVisualGroupShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "nvGrpSpPr");
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualGroupShapeDrawingProperties>();
         }
 
         /// <summary>
@@ -3404,19 +3679,6 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-    [SchemaAttr(18, "grpSpPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3454,10 +3716,33 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(18, "grpSpPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddElement<GroupShapeProperties>()
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>2D Transform for Grouped Objects.</para>

@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office2013.WebExtension;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -25,9 +26,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description>WebExtensionTaskpane &lt;wetp:taskpane></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WebExtensionTaskpane), FileFormatVersions.Office2013)]
-    [SchemaAttr(70, "taskpanes")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Taskpanes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -59,6 +57,14 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Taskpanes(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(70, "taskpanes");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<WebExtensionTaskpane>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -108,8 +114,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:webextensionref.</para>
     /// </summary>
-    [SchemaAttr(70, "webextensionref")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class WebExtensionPartReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -126,10 +130,23 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(70, "webextensionref");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<WebExtensionPartReference>()
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new RelationshipExistConstraint(0 /*r:id*/) { Application = ApplicationType.Word | ApplicationType.Excel, Version = FileFormatVersions.Office2013 }
@@ -152,9 +169,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(70, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -188,6 +202,14 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(70, "extLst");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1)
@@ -217,10 +239,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description>OfficeArtExtensionList &lt;wetp:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WebExtensionPartReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(70, "taskpane")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     {
         /// <summary>
@@ -258,45 +276,78 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <para>dockstate, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dockstate</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "dockstate")]
-        [Index(0)]
-        public StringValue DockState { get; set; }
+        public StringValue DockState
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>visibility, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visibility</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "visibility")]
-        [Index(1)]
-        public BooleanValue Visibility { get; set; }
+        public BooleanValue Visibility
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>width, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "width")]
-        [Index(2)]
-        public DoubleValue Width { get; set; }
+        public DoubleValue Width
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>row, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: row</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "row")]
-        [Index(3)]
-        public UInt32Value Row { get; set; }
+        public UInt32Value Row
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>locked, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        [SchemaAttr(0, "locked")]
-        [Index(4)]
-        public BooleanValue Locked { get; set; }
+        public BooleanValue Locked
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(70, "taskpane");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<WebExtensionPartReference>();
+            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddElement<WebExtensionTaskpane>()
+.AddAttribute(0, "dockstate", a => a.DockState, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "visibility", a => a.Visibility, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "width", a => a.Width, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "row", a => a.Row, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "locked", a => a.Locked);
+        }
 
         /// <summary>
         /// <para>WebExtensionPartReference.</para>

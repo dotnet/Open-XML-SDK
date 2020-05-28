@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -22,9 +23,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     ///   <item><description>SchemaReferences &lt;ds:schemaRefs></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SchemaReferences))]
-    [SchemaAttr(20, "datastoreItem")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DataStoreItem : OpenXmlPartRootElement
     {
         /// <summary>
@@ -65,11 +63,24 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(20, "itemID")]
-        [Index(0)]
-        public StringValue ItemId { get; set; }
+        public StringValue ItemId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(20, "datastoreItem");
+            builder.AddChild<SchemaReferences>();
+            builder.AddElement<DataStoreItem>()
+.AddAttribute(20, "itemID", a => a.ItemId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+});
+        }
 
         /// <summary>
         /// <para>Set of Associated XML Schemas.</para>
@@ -131,8 +142,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRef.</para>
     /// </summary>
-    [SchemaAttr(20, "schemaRef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SchemaReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -149,10 +158,22 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(20, "uri")]
-        [Index(0)]
-        public StringValue Uri { get; set; }
+        public StringValue Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(20, "schemaRef");
+            builder.AddElement<SchemaReference>()
+.AddAttribute(20, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemaReference>(deep);
@@ -169,9 +190,6 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     ///   <item><description>SchemaReference &lt;ds:schemaRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SchemaReference))]
-    [SchemaAttr(20, "schemaRefs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SchemaReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -203,6 +221,13 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SchemaReferences(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(20, "schemaRefs");
+            builder.AddChild<SchemaReference>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

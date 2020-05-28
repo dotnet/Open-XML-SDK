@@ -7,10 +7,10 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal readonly struct PartConstraintRule
     {
-        private readonly ElementTypeInfo _info;
+        private readonly PartTypeInfo _info;
 
         public PartConstraintRule(
-            ElementTypeInfo info,
+            PartTypeInfo info,
             bool minOccursIsNonZero,
             bool maxOccursGreatThanOne)
         {

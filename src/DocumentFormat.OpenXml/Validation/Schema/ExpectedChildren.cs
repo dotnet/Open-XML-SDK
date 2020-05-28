@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 if (_elementTypes != null)
                 {
-                    foreach (var childElement in parent.ElementData.Children.Elements)
+                    foreach (var childElement in parent.Metadata.Children.Elements)
                     {
                         if (_elementTypes.Contains(childElement.Type))
                         {

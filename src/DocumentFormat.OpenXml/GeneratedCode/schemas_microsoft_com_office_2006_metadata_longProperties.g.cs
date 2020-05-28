@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -22,9 +23,6 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     ///   <item><description>LongProperty &lt;lp:LongProp></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LongProperty))]
-    [SchemaAttr(40, "LongProperties")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LongProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -58,6 +56,13 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(40, "LongProperties");
+            builder.AddChild<LongProperty>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.LongProperties.LongProperty), 0, 0)
@@ -74,8 +79,6 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is lp:LongProp.</para>
     /// </summary>
-    [SchemaAttr(40, "LongProp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LongProperty : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -102,9 +105,19 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(40, "LongProp");
+            builder.AddElement<LongProperty>()
+.AddAttribute(0, "name", a => a.Name);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LongProperty>(deep);

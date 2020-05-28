@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office2010.Drawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -81,8 +82,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding &lt;w:dir></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(52, "conflictIns")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RunConflictInsertion : RunTrackChangeType
     {
         /// <summary>
@@ -114,6 +113,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RunConflictInsertion(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "conflictIns");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -329,8 +335,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding &lt;w:dir></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(52, "conflictDel")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RunConflictDeletion : RunTrackChangeType
     {
         /// <summary>
@@ -362,6 +366,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RunConflictDeletion(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "conflictDel");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -577,62 +588,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding &lt;w:dir></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding), FileFormatVersions.Office2010)]
     public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -673,11 +628,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -686,9 +641,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -697,12 +654,88 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
+            builder.AddChild<CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
+            builder.AddChild<RunConflictInsertion>();
+            builder.AddChild<RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
+            builder.AddElement<RunTrackChangeType>()
+.AddAttribute(23, "author", a => a.Author, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+})
+.AddAttribute(23, "date", a => a.Date)
+.AddAttribute(23, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+});
+});
+        }
     }
 
     /// <summary>
@@ -710,8 +743,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictIns.</para>
     /// </summary>
-    [SchemaAttr(52, "conflictIns")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConflictInsertion : TrackChangeType
     {
         /// <summary>
@@ -719,6 +750,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public ConflictInsertion() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "conflictIns");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -730,8 +768,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictDel.</para>
     /// </summary>
-    [SchemaAttr(52, "conflictDel")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConflictDeletion : TrackChangeType
     {
         /// <summary>
@@ -739,6 +775,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public ConflictDeletion() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "conflictDel");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -750,8 +793,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictInsRangeStart.</para>
     /// </summary>
-    [SchemaAttr(52, "customXmlConflictInsRangeStart")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CustomXmlConflictInsertionRangeStart : TrackChangeType
     {
         /// <summary>
@@ -759,6 +800,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public CustomXmlConflictInsertionRangeStart() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "customXmlConflictInsRangeStart");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -770,8 +818,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictDelRangeStart.</para>
     /// </summary>
-    [SchemaAttr(52, "customXmlConflictDelRangeStart")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CustomXmlConflictDeletionRangeStart : TrackChangeType
     {
         /// <summary>
@@ -779,6 +825,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public CustomXmlConflictDeletionRangeStart() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "customXmlConflictDelRangeStart");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -806,11 +859,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 255L)]
-        [SchemaAttr(23, "author")]
-        [Index(0)]
-        public StringValue Author { get; set; }
+        public StringValue Author
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>date</para>
@@ -819,9 +872,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [SchemaAttr(23, "date")]
-        [Index(1)]
-        public DateTimeValue Date { get; set; }
+        public DateTimeValue Date
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Annotation Identifier</para>
@@ -830,12 +885,32 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(2)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TrackChangeType>()
+                           .AddAttribute(23, "author", a => a.Author, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                           })
+                           .AddAttribute(23, "date", a => a.Date)
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -843,8 +918,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:tint.</para>
     /// </summary>
-    [SchemaAttr(52, "tint")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Tint : PositiveFixedPercentageType
     {
         /// <summary>
@@ -852,6 +925,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public Tint() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "tint");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -863,8 +943,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:shade.</para>
     /// </summary>
-    [SchemaAttr(52, "shade")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Shade : PositiveFixedPercentageType
     {
         /// <summary>
@@ -872,6 +950,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public Shade() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "shade");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -883,8 +968,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:alpha.</para>
     /// </summary>
-    [SchemaAttr(52, "alpha")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Alpha : PositiveFixedPercentageType
     {
         /// <summary>
@@ -892,6 +975,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public Alpha() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "alpha");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -919,12 +1009,23 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PositiveFixedPercentageType>()
+                           .AddAttribute(52, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -932,8 +1033,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:hueMod.</para>
     /// </summary>
-    [SchemaAttr(52, "hueMod")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class HueModulation : OpenXmlLeafElement
     {
         /// <summary>
@@ -950,12 +1049,25 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "hueMod");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<HueModulation>()
+.AddAttribute(52, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HueModulation>(deep);
@@ -966,8 +1078,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:sat.</para>
     /// </summary>
-    [SchemaAttr(52, "sat")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Saturation : PercentageType
     {
         /// <summary>
@@ -975,6 +1085,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public Saturation() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "sat");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -986,8 +1103,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:satOff.</para>
     /// </summary>
-    [SchemaAttr(52, "satOff")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SaturationOffset : PercentageType
     {
         /// <summary>
@@ -995,6 +1110,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public SaturationOffset() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "satOff");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1006,8 +1128,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:satMod.</para>
     /// </summary>
-    [SchemaAttr(52, "satMod")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SaturationModulation : PercentageType
     {
         /// <summary>
@@ -1015,6 +1135,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public SaturationModulation() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "satMod");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1026,8 +1153,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lum.</para>
     /// </summary>
-    [SchemaAttr(52, "lum")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Luminance : PercentageType
     {
         /// <summary>
@@ -1035,6 +1160,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public Luminance() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "lum");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1046,8 +1178,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lumOff.</para>
     /// </summary>
-    [SchemaAttr(52, "lumOff")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LuminanceOffset : PercentageType
     {
         /// <summary>
@@ -1055,6 +1185,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public LuminanceOffset() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "lumOff");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1066,8 +1203,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lumMod.</para>
     /// </summary>
-    [SchemaAttr(52, "lumMod")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LuminanceModulation : PercentageType
     {
         /// <summary>
@@ -1075,6 +1210,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public LuminanceModulation() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "lumMod");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1102,11 +1244,22 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<PercentageType>()
+                           .AddAttribute(52, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           });
+        }
     }
 
     /// <summary>
@@ -1129,18 +1282,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>LuminanceModulation &lt;w14:lumMod></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tint), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Shade), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Alpha), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(HueModulation), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Saturation), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SaturationOffset), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SaturationModulation), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Luminance), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LuminanceOffset), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LuminanceModulation), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "srgbClr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RgbColorModelHex : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1181,12 +1322,35 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(Length = 3L)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public HexBinaryValue Val { get; set; }
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "srgbClr");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<Tint>();
+            builder.AddChild<Shade>();
+            builder.AddChild<Alpha>();
+            builder.AddChild<HueModulation>();
+            builder.AddChild<Saturation>();
+            builder.AddChild<SaturationOffset>();
+            builder.AddChild<SaturationModulation>();
+            builder.AddChild<Luminance>();
+            builder.AddChild<LuminanceOffset>();
+            builder.AddChild<LuminanceModulation>();
+            builder.AddElement<RgbColorModelHex>()
+.AddAttribute(52, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (3L) });
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1234,18 +1398,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>LuminanceModulation &lt;w14:lumMod></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Tint), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Shade), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Alpha), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(HueModulation), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Saturation), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SaturationOffset), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SaturationModulation), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Luminance), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LuminanceOffset), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LuminanceModulation), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "schemeClr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SchemeColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1286,11 +1438,34 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "schemeClr");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<Tint>();
+            builder.AddChild<Shade>();
+            builder.AddChild<Alpha>();
+            builder.AddChild<HueModulation>();
+            builder.AddChild<Saturation>();
+            builder.AddChild<SaturationOffset>();
+            builder.AddChild<SaturationModulation>();
+            builder.AddChild<Luminance>();
+            builder.AddChild<LuminanceOffset>();
+            builder.AddChild<LuminanceModulation>();
+            builder.AddElement<SchemeColor>()
+.AddAttribute(52, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1323,8 +1498,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lin.</para>
     /// </summary>
-    [SchemaAttr(52, "lin")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LinearShadeProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -1341,11 +1514,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MaxExclusive = 21600000L, MinInclusive = 0L)]
-        [SchemaAttr(52, "ang")]
-        [Index(0)]
-        public Int32Value Angle { get; set; }
+        public Int32Value Angle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>scaled, this property is only available in Office2010, Office2013, Office2016</para>
@@ -1354,10 +1527,28 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "scaled")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Scaled { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Scaled
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "lin");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<LinearShadeProperties>()
+.AddAttribute(52, "ang", a => a.Angle, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+})
+.AddAttribute(52, "scaled", a => a.Scaled, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinearShadeProperties>(deep);
@@ -1374,9 +1565,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>FillToRectangle &lt;w14:fillToRect></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FillToRectangle), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "path")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PathShadeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1417,10 +1605,24 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "path")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues> Path { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues> Path
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "path");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<FillToRectangle>();
+            builder.AddElement<PathShadeProperties>()
+.AddAttribute(52, "path", a => a.Path, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         /// <summary>
         /// <para>FillToRectangle.</para>
@@ -1451,8 +1653,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:noFill.</para>
     /// </summary>
-    [SchemaAttr(52, "noFill")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NoFillEmpty : EmptyType
     {
         /// <summary>
@@ -1460,6 +1660,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public NoFillEmpty() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "noFill");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1471,8 +1678,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:round.</para>
     /// </summary>
-    [SchemaAttr(52, "round")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class RoundEmpty : EmptyType
     {
         /// <summary>
@@ -1480,6 +1685,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public RoundEmpty() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "round");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1491,8 +1703,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:bevel.</para>
     /// </summary>
-    [SchemaAttr(52, "bevel")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BevelEmpty : EmptyType
     {
         /// <summary>
@@ -1500,6 +1710,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public BevelEmpty() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "bevel");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1511,8 +1728,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:entityPicker.</para>
     /// </summary>
-    [SchemaAttr(52, "entityPicker")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class EntityPickerEmpty : EmptyType
     {
         /// <summary>
@@ -1520,6 +1735,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public EntityPickerEmpty() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "entityPicker");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -1539,6 +1761,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         protected EmptyType() : base()
         {
         }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+        }
     }
 
     /// <summary>
@@ -1553,10 +1780,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelHex), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SchemeColor), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "solidFill")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SolidColorFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1588,6 +1811,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SolidColorFillProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "solidFill");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<SchemeColor>();
         }
 
         /// <summary>
@@ -1647,11 +1879,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>PathShadeProperties &lt;w14:path></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GradientStopList), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LinearShadeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(PathShadeProperties), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "gradFill")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GradientFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1683,6 +1910,16 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GradientFillProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "gradFill");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<GradientStopList>();
+            builder.AddChild<LinearShadeProperties>();
+            builder.AddChild<PathShadeProperties>();
         }
 
         /// <summary>
@@ -1722,8 +1959,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:prstDash.</para>
     /// </summary>
-    [SchemaAttr(52, "prstDash")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PresetLineDashProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -1740,10 +1975,23 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "prstDash");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<PresetLineDashProperties>()
+.AddAttribute(52, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresetLineDashProperties>(deep);
@@ -1754,8 +2002,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:miter.</para>
     /// </summary>
-    [SchemaAttr(52, "miter")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LineJoinMiterProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -1772,11 +2018,24 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L)]
-        [SchemaAttr(52, "lim")]
-        [Index(0)]
-        public Int32Value Limit { get; set; }
+        public Int32Value Limit
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "miter");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<LineJoinMiterProperties>()
+.AddAttribute(52, "lim", a => a.Limit, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineJoinMiterProperties>(deep);
@@ -1794,10 +2053,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelHex), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SchemeColor), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "glow")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Glow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1838,11 +2093,26 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(52, "rad")]
-        [Index(0)]
-        public Int64Value GlowRadius { get; set; }
+        public Int64Value GlowRadius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "glow");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<SchemeColor>();
+            builder.AddElement<Glow>()
+.AddAttribute(52, "rad", a => a.GlowRadius, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+});
+        }
 
         /// <summary>
         /// <para>RgbColorModelHex.</para>
@@ -1900,10 +2170,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelHex), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SchemeColor), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "shadow")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Shadow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1944,11 +2210,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(52, "blurRad")]
-        [Index(0)]
-        public Int64Value BlurRadius { get; set; }
+        public Int64Value BlurRadius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dist, this property is only available in Office2010, Office2013, Office2016</para>
@@ -1957,11 +2223,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(52, "dist")]
-        [Index(1)]
-        public Int64Value DistanceFromText { get; set; }
+        public Int64Value DistanceFromText
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
@@ -1970,11 +2236,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MaxExclusive = 21600000L, MinInclusive = 0L)]
-        [SchemaAttr(52, "dir")]
-        [Index(2)]
-        public Int32Value DirectionAngle { get; set; }
+        public Int32Value DirectionAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sx, this property is only available in Office2010, Office2013, Office2016</para>
@@ -1983,10 +2249,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "sx")]
-        [Index(3)]
-        public Int32Value HorizontalScalingFactor { get; set; }
+        public Int32Value HorizontalScalingFactor
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sy, this property is only available in Office2010, Office2013, Office2016</para>
@@ -1995,10 +2262,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "sy")]
-        [Index(4)]
-        public Int32Value VerticalScalingFactor { get; set; }
+        public Int32Value VerticalScalingFactor
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>kx, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2007,11 +2275,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinExclusive = -5400000L, MaxExclusive = 5400000L)]
-        [SchemaAttr(52, "kx")]
-        [Index(5)]
-        public Int32Value HorizontalSkewAngle { get; set; }
+        public Int32Value HorizontalSkewAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ky, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2020,11 +2288,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinExclusive = -5400000L, MaxExclusive = 5400000L)]
-        [SchemaAttr(52, "ky")]
-        [Index(6)]
-        public Int32Value VerticalSkewAngle { get; set; }
+        public Int32Value VerticalSkewAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>algn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2033,10 +2301,58 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "algn")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "shadow");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<SchemeColor>();
+            builder.AddElement<Shadow>()
+.AddAttribute(52, "blurRad", a => a.BlurRadius, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(52, "dist", a => a.DistanceFromText, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(52, "dir", a => a.DirectionAngle, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+})
+.AddAttribute(52, "sx", a => a.HorizontalScalingFactor, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(52, "sy", a => a.VerticalScalingFactor, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(52, "kx", a => a.HorizontalSkewAngle, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
+})
+.AddAttribute(52, "ky", a => a.VerticalSkewAngle, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
+})
+.AddAttribute(52, "algn", a => a.Alignment, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         /// <summary>
         /// <para>RgbColorModelHex.</para>
@@ -2087,8 +2403,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:reflection.</para>
     /// </summary>
-    [SchemaAttr(52, "reflection")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Reflection : OpenXmlLeafElement
     {
         /// <summary>
@@ -2105,11 +2419,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(52, "blurRad")]
-        [Index(0)]
-        public Int64Value BlurRadius { get; set; }
+        public Int64Value BlurRadius
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>stA, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2118,11 +2432,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(52, "stA")]
-        [Index(1)]
-        public Int32Value StartingOpacity { get; set; }
+        public Int32Value StartingOpacity
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>stPos, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2131,11 +2445,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(52, "stPos")]
-        [Index(2)]
-        public Int32Value StartPosition { get; set; }
+        public Int32Value StartPosition
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endA, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2144,11 +2458,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(52, "endA")]
-        [Index(3)]
-        public Int32Value EndingOpacity { get; set; }
+        public Int32Value EndingOpacity
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endPos, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2157,11 +2471,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(52, "endPos")]
-        [Index(4)]
-        public Int32Value EndPosition { get; set; }
+        public Int32Value EndPosition
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dist, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2170,11 +2484,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(52, "dist")]
-        [Index(5)]
-        public Int64Value DistanceFromText { get; set; }
+        public Int64Value DistanceFromText
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2183,11 +2497,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MaxExclusive = 21600000L, MinInclusive = 0L)]
-        [SchemaAttr(52, "dir")]
-        [Index(6)]
-        public Int32Value DirectionAngle { get; set; }
+        public Int32Value DirectionAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fadeDir, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2196,11 +2510,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MaxExclusive = 21600000L, MinInclusive = 0L)]
-        [SchemaAttr(52, "fadeDir")]
-        [Index(7)]
-        public Int32Value FadeDirection { get; set; }
+        public Int32Value FadeDirection
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sx, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2209,10 +2523,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "sx")]
-        [Index(8)]
-        public Int32Value HorizontalScalingFactor { get; set; }
+        public Int32Value HorizontalScalingFactor
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sy, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2221,10 +2536,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "sy")]
-        [Index(9)]
-        public Int32Value VerticalScalingFactor { get; set; }
+        public Int32Value VerticalScalingFactor
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>kx, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2233,11 +2549,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinExclusive = -5400000L, MaxExclusive = 5400000L)]
-        [SchemaAttr(52, "kx")]
-        [Index(10)]
-        public Int32Value HorizontalSkewAngle { get; set; }
+        public Int32Value HorizontalSkewAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>ky, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2246,11 +2562,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinExclusive = -5400000L, MaxExclusive = 5400000L)]
-        [SchemaAttr(52, "ky")]
-        [Index(11)]
-        public Int32Value VerticalSkewAngle { get; set; }
+        public Int32Value VerticalSkewAngle
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>algn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2259,10 +2575,81 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "algn")]
-        [Index(12)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "reflection");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<Reflection>()
+.AddAttribute(52, "blurRad", a => a.BlurRadius, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(52, "stA", a => a.StartingOpacity, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(52, "stPos", a => a.StartPosition, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(52, "endA", a => a.EndingOpacity, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(52, "endPos", a => a.EndPosition, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+})
+.AddAttribute(52, "dist", a => a.DistanceFromText, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(52, "dir", a => a.DirectionAngle, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+})
+.AddAttribute(52, "fadeDir", a => a.FadeDirection, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+})
+.AddAttribute(52, "sx", a => a.HorizontalScalingFactor, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(52, "sy", a => a.VerticalScalingFactor, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(52, "kx", a => a.HorizontalSkewAngle, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
+})
+.AddAttribute(52, "ky", a => a.VerticalSkewAngle, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
+})
+.AddAttribute(52, "algn", a => a.Alignment, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Reflection>(deep);
@@ -2285,15 +2672,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>LineJoinMiterProperties &lt;w14:miter></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NoFillEmpty), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SolidColorFillProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GradientFillProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(PresetLineDashProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RoundEmpty), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BevelEmpty), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LineJoinMiterProperties), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "textOutline")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class TextOutlineEffect : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2334,11 +2712,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 20116800L)]
-        [SchemaAttr(52, "w")]
-        [Index(0)]
-        public Int32Value LineWidth { get; set; }
+        public Int32Value LineWidth
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cap, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2347,10 +2725,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "cap")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues> CapType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues> CapType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cmpd, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2359,10 +2738,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "cmpd")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues> Compound { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues> Compound
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>algn, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2371,10 +2751,43 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "algn")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues> Alignment { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues> Alignment
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "textOutline");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<NoFillEmpty>();
+            builder.AddChild<SolidColorFillProperties>();
+            builder.AddChild<GradientFillProperties>();
+            builder.AddChild<PresetLineDashProperties>();
+            builder.AddChild<RoundEmpty>();
+            builder.AddChild<BevelEmpty>();
+            builder.AddChild<LineJoinMiterProperties>();
+            builder.AddElement<TextOutlineEffect>()
+.AddAttribute(52, "w", a => a.LineWidth, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (20116800L) });
+})
+.AddAttribute(52, "cap", a => a.CapType, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(52, "cmpd", a => a.Compound, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(52, "algn", a => a.Alignment, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -2424,11 +2837,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>GradientFillProperties &lt;w14:gradFill></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NoFillEmpty), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SolidColorFillProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GradientFillProperties), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "textFill")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class FillTextEffect : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2460,6 +2868,16 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public FillTextEffect(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "textFill");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<NoFillEmpty>();
+            builder.AddChild<SolidColorFillProperties>();
+            builder.AddChild<GradientFillProperties>();
         }
 
         /// <summary>
@@ -2532,10 +2950,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>LightRig &lt;w14:lightRig></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Camera), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LightRig), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "scene3d")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Scene3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2567,6 +2981,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Scene3D(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "scene3d");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<Camera>();
+            builder.AddChild<LightRig>();
         }
 
         /// <summary>
@@ -2621,12 +3044,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>ContourColor &lt;w14:contourClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BevelTop), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BevelBottom), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtrusionColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ContourColor), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "props3d")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Properties3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2667,11 +3084,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(52, "extrusionH")]
-        [Index(0)]
-        public Int64Value ExtrusionHeight { get; set; }
+        public Int64Value ExtrusionHeight
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contourW, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2680,11 +3097,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(52, "contourW")]
-        [Index(1)]
-        public Int64Value ContourWidth { get; set; }
+        public Int64Value ContourWidth
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>prstMaterial, this property is only available in Office2010, Office2013, Office2016</para>
@@ -2693,11 +3110,38 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(52, "prstMaterial")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues> PresetMaterialType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues> PresetMaterialType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "props3d");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<BevelTop>();
+            builder.AddChild<BevelBottom>();
+            builder.AddChild<ExtrusionColor>();
+            builder.AddChild<ContourColor>();
+            builder.AddElement<Properties3D>()
+.AddAttribute(52, "extrusionH", a => a.ExtrusionHeight, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(52, "contourW", a => a.ContourWidth, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+})
+.AddAttribute(52, "prstMaterial", a => a.PresetMaterialType, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>BevelTop.</para>
@@ -2770,8 +3214,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:ligatures.</para>
     /// </summary>
-    [SchemaAttr(52, "ligatures")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Ligatures : OpenXmlLeafElement
     {
         /// <summary>
@@ -2788,11 +3230,24 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "ligatures");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<Ligatures>()
+.AddAttribute(52, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Ligatures>(deep);
@@ -2803,8 +3258,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:numForm.</para>
     /// </summary>
-    [SchemaAttr(52, "numForm")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NumberingFormat : OpenXmlLeafElement
     {
         /// <summary>
@@ -2821,11 +3274,24 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "numForm");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<NumberingFormat>()
+.AddAttribute(52, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingFormat>(deep);
@@ -2836,8 +3302,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:numSpacing.</para>
     /// </summary>
-    [SchemaAttr(52, "numSpacing")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NumberSpacing : OpenXmlLeafElement
     {
         /// <summary>
@@ -2854,11 +3318,24 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "numSpacing");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<NumberSpacing>()
+.AddAttribute(52, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberSpacing>(deep);
@@ -2875,9 +3352,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>StyleSet &lt;w14:styleSet></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(StyleSet), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "stylisticSets")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class StylisticSets : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2911,6 +3385,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "stylisticSets");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<StyleSet>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.StyleSet), 0, 0, version: FileFormatVersions.Office2010)
@@ -2927,8 +3409,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:cntxtAlts.</para>
     /// </summary>
-    [SchemaAttr(52, "cntxtAlts")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ContextualAlternatives : OnOffType
     {
         /// <summary>
@@ -2936,6 +3416,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public ContextualAlternatives() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "cntxtAlts");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -2947,8 +3434,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictMode.</para>
     /// </summary>
-    [SchemaAttr(52, "conflictMode")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ConflictMode : OnOffType
     {
         /// <summary>
@@ -2956,6 +3441,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public ConflictMode() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "conflictMode");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -2967,8 +3459,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:discardImageEditingData.</para>
     /// </summary>
-    [SchemaAttr(52, "discardImageEditingData")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DiscardImageEditingData : OnOffType
     {
         /// <summary>
@@ -2976,6 +3466,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public DiscardImageEditingData() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "discardImageEditingData");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -2987,8 +3484,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:checked.</para>
     /// </summary>
-    [SchemaAttr(52, "checked")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Checked : OnOffType
     {
         /// <summary>
@@ -2996,6 +3491,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public Checked() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "checked");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -3023,10 +3525,21 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OnOffType>()
+                           .AddAttribute(52, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           });
+        }
     }
 
     /// <summary>
@@ -3042,11 +3555,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>OfficeArtExtensionList &lt;w14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WordNonVisualContentPartShapeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Transform2D), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "contentPart")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3087,11 +3595,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(52, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3100,10 +3608,31 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(1)]
-        public StringValue RelationshipId { get; set; }
+        public StringValue RelationshipId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "contentPart");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<WordNonVisualContentPartShapeProperties>();
+            builder.AddChild<Transform2D>();
+            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddElement<ContentPart>()
+.AddAttribute(52, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <summary>
         /// <para>WordNonVisualContentPartShapeProperties.</para>
@@ -3162,8 +3691,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:docId.</para>
     /// </summary>
-    [SchemaAttr(52, "docId")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DocumentId : OpenXmlLeafElement
     {
         /// <summary>
@@ -3180,12 +3707,25 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public HexBinaryValue Val { get; set; }
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "docId");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<DocumentId>()
+.AddAttribute(52, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+});
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*w14:val*/, true, 0, false, 2147483648, false) { Version = FileFormatVersions.Office2010 }
@@ -3202,8 +3742,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictInsRangeEnd.</para>
     /// </summary>
-    [SchemaAttr(52, "customXmlConflictInsRangeEnd")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CustomXmlConflictInsertionRangeEnd : MarkupType
     {
         /// <summary>
@@ -3211,6 +3749,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public CustomXmlConflictInsertionRangeEnd() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "customXmlConflictInsRangeEnd");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -3222,8 +3767,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictDelRangeEnd.</para>
     /// </summary>
-    [SchemaAttr(52, "customXmlConflictDelRangeEnd")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CustomXmlConflictDeletionRangeEnd : MarkupType
     {
         /// <summary>
@@ -3231,6 +3774,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public CustomXmlConflictDeletionRangeEnd() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "customXmlConflictDelRangeEnd");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -3258,12 +3808,26 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [NumberValidator(MaxInclusive = -2L, SimpleType = typeof(Int32Value), UnionId = 0)]
-        [SchemaAttr(23, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<MarkupType>()
+                           .AddAttribute(23, "id", a => a.Id, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddUnion(union =>
+                               {
+                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                               });
+                           });
+        }
     }
 
     /// <summary>
@@ -3271,8 +3835,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:defaultImageDpi.</para>
     /// </summary>
-    [SchemaAttr(52, "defaultImageDpi")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DefaultImageDpi : OpenXmlLeafElement
     {
         /// <summary>
@@ -3289,11 +3851,24 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "val")]
-        [Index(0)]
-        public Int32Value Val { get; set; }
+        public Int32Value Val
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "defaultImageDpi");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<DefaultImageDpi>()
+.AddAttribute(52, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultImageDpi>(deep);
@@ -3312,11 +3887,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>UncheckedState &lt;w14:uncheckedState></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Checked), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(CheckedState), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(UncheckedState), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "checkbox")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SdtContentCheckBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3348,6 +3918,16 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SdtContentCheckBox(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "checkbox");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<Checked>();
+            builder.AddChild<CheckedState>();
+            builder.AddChild<UncheckedState>();
         }
 
         /// <summary>
@@ -3414,10 +3994,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelHex), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SchemeColor), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "gs")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GradientStop : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3458,12 +4034,27 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 100000L)]
-        [SchemaAttr(52, "pos")]
-        [Index(0)]
-        public Int32Value StopPosition { get; set; }
+        public Int32Value StopPosition
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "gs");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<SchemeColor>();
+            builder.AddElement<GradientStop>()
+.AddAttribute(52, "pos", a => a.StopPosition, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+});
+        }
 
         /// <summary>
         /// <para>RgbColorModelHex.</para>
@@ -3514,8 +4105,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:fillToRect.</para>
     /// </summary>
-    [SchemaAttr(52, "fillToRect")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class FillToRectangle : OpenXmlLeafElement
     {
         /// <summary>
@@ -3532,10 +4121,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "l")]
-        [Index(0)]
-        public Int32Value Left { get; set; }
+        public Int32Value Left
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>t, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3544,10 +4134,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "t")]
-        [Index(1)]
-        public Int32Value Top { get; set; }
+        public Int32Value Top
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>r, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3556,10 +4147,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "r")]
-        [Index(2)]
-        public Int32Value Right { get; set; }
+        public Int32Value Right
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>b, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3568,10 +4160,35 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "b")]
-        [Index(3)]
-        public Int32Value Bottom { get; set; }
+        public Int32Value Bottom
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "fillToRect");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<FillToRectangle>()
+.AddAttribute(52, "l", a => a.Left, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(52, "t", a => a.Top, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(52, "r", a => a.Right, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(52, "b", a => a.Bottom, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillToRectangle>(deep);
@@ -3588,9 +4205,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>GradientStop &lt;w14:gs></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GradientStop), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "gsLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class GradientStopList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3624,6 +4238,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "gsLst");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<GradientStop>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.GradientStop), 2, 10, version: FileFormatVersions.Office2010)
@@ -3640,8 +4262,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:rot.</para>
     /// </summary>
-    [SchemaAttr(52, "rot")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SphereCoordinates : OpenXmlLeafElement
     {
         /// <summary>
@@ -3658,12 +4278,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MaxExclusive = 21600000L, MinInclusive = 0L)]
-        [SchemaAttr(52, "lat")]
-        [Index(0)]
-        public Int32Value Lattitude { get; set; }
+        public Int32Value Lattitude
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lon, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3672,12 +4291,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MaxExclusive = 21600000L, MinInclusive = 0L)]
-        [SchemaAttr(52, "lon")]
-        [Index(1)]
-        public Int32Value Longitude { get; set; }
+        public Int32Value Longitude
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rev, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3686,12 +4304,37 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MaxExclusive = 21600000L, MinInclusive = 0L)]
-        [SchemaAttr(52, "rev")]
-        [Index(2)]
-        public Int32Value Revolution { get; set; }
+        public Int32Value Revolution
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "rot");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<SphereCoordinates>()
+.AddAttribute(52, "lat", a => a.Lattitude, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+})
+.AddAttribute(52, "lon", a => a.Longitude, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+})
+.AddAttribute(52, "rev", a => a.Revolution, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SphereCoordinates>(deep);
@@ -3702,8 +4345,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:camera.</para>
     /// </summary>
-    [SchemaAttr(52, "camera")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Camera : OpenXmlLeafElement
     {
         /// <summary>
@@ -3720,12 +4361,25 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(52, "prst")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues> PresetCameraType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues> PresetCameraType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "camera");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<Camera>()
+.AddAttribute(52, "prst", a => a.PresetCameraType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Camera>(deep);
@@ -3742,9 +4396,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>SphereCoordinates &lt;w14:rot></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SphereCoordinates), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "lightRig")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class LightRig : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3785,12 +4436,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(52, "rig")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues> LightRigType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues> LightRigType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3799,12 +4449,32 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(52, "dir")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues> LightDirectionType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues> LightDirectionType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "lightRig");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<SphereCoordinates>();
+            builder.AddElement<LightRig>()
+.AddAttribute(52, "rig", a => a.LightRigType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+})
+.AddAttribute(52, "dir", a => a.LightDirectionType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>SphereCoordinates.</para>
@@ -3835,8 +4505,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:bevelT.</para>
     /// </summary>
-    [SchemaAttr(52, "bevelT")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BevelTop : BevelType
     {
         /// <summary>
@@ -3844,6 +4512,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public BevelTop() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "bevelT");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -3855,8 +4530,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:bevelB.</para>
     /// </summary>
-    [SchemaAttr(52, "bevelB")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class BevelBottom : BevelType
     {
         /// <summary>
@@ -3864,6 +4537,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public BevelBottom() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "bevelB");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -3891,11 +4571,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(52, "w")]
-        [Index(0)]
-        public Int64Value Width { get; set; }
+        public Int64Value Width
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>h, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3904,11 +4584,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 2147483647L)]
-        [SchemaAttr(52, "h")]
-        [Index(1)]
-        public Int64Value Height { get; set; }
+        public Int64Value Height
+        {
+            get => GetAttribute<Int64Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>prst, this property is only available in Office2010, Office2013, Office2016</para>
@@ -3917,11 +4597,32 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(52, "prst")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues> PresetProfileType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues> PresetProfileType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BevelType>()
+                           .AddAttribute(52, "w", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                           })
+                           .AddAttribute(52, "h", a => a.Height, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                           })
+                           .AddAttribute(52, "prst", a => a.PresetProfileType, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                           });
+        }
     }
 
     /// <summary>
@@ -3936,8 +4637,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(52, "extrusionClr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ExtrusionColor : ColorType
     {
         /// <summary>
@@ -3971,6 +4670,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "extrusionClr");
+            builder.Availability = FileFormatVersions.Office2010;
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
@@ -4001,8 +4707,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(52, "contourClr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ContourColor : ColorType
     {
         /// <summary>
@@ -4036,6 +4740,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "contourClr");
+            builder.Availability = FileFormatVersions.Office2010;
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
@@ -4066,8 +4777,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>SchemeColor &lt;w14:schemeClr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RgbColorModelHex), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SchemeColor), FileFormatVersions.Office2010)]
     public abstract partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4099,6 +4808,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         protected ColorType(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<RgbColorModelHex>();
+            builder.AddChild<SchemeColor>();
         }
 
         /// <summary>
@@ -4133,8 +4849,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:styleSet.</para>
     /// </summary>
-    [SchemaAttr(52, "styleSet")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class StyleSet : OpenXmlLeafElement
     {
         /// <summary>
@@ -4151,11 +4865,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [RequiredValidator()]
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
@@ -4164,10 +4878,28 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "val")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "styleSet");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<StyleSet>()
+.AddAttribute(52, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+})
+.AddAttribute(52, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+});
+        }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
             new AttributeValueRangeConstraint(0 /*w14:id*/, true, 1, true, 20, true) { Version = FileFormatVersions.Office2010 }
@@ -4184,8 +4916,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:checkedState.</para>
     /// </summary>
-    [SchemaAttr(52, "checkedState")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class CheckedState : CheckBoxSymbolType
     {
         /// <summary>
@@ -4193,6 +4923,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public CheckedState() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "checkedState");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -4204,8 +4941,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:uncheckedState.</para>
     /// </summary>
-    [SchemaAttr(52, "uncheckedState")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class UncheckedState : CheckBoxSymbolType
     {
         /// <summary>
@@ -4213,6 +4948,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </summary>
         public UncheckedState() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "uncheckedState");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -4240,10 +4982,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [SchemaAttr(52, "font")]
-        [Index(0)]
-        public StringValue Font { get; set; }
+        public StringValue Font
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
@@ -4252,11 +4995,26 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
-        [StringValidator(Length = 2L)]
-        [SchemaAttr(52, "val")]
-        [Index(1)]
-        public HexBinaryValue Val { get; set; }
+        public HexBinaryValue Val
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CheckBoxSymbolType>()
+                           .AddAttribute(52, "font", a => a.Font, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                           })
+                           .AddAttribute(52, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -4272,11 +5030,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-    [SchemaAttr(52, "cNvPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4314,43 +5067,73 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        [SchemaAttr(0, "descr")]
-        [Index(2)]
-        public StringValue Description { get; set; }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        [SchemaAttr(0, "hidden")]
-        [Index(3)]
-        public BooleanValue Hidden { get; set; }
+        public BooleanValue Hidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(4)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "cNvPr");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddElement<NonVisualDrawingProperties>()
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "descr", a => a.Description)
+.AddAttribute(0, "hidden", a => a.Hidden)
+.AddAttribute(0, "title", a => a.Title);
+        }
 
         /// <summary>
         /// <para>HyperlinkOnClick.</para>
@@ -4416,10 +5199,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList &lt;a14:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "cNvContentPartPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4457,9 +5236,22 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
-        [SchemaAttr(0, "isComment")]
-        [Index(0)]
-        public BooleanValue IsComment { get; set; }
+        public BooleanValue IsComment
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "cNvContentPartPr");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            builder.AddElement<NonVisualInkContentPartProperties>()
+.AddAttribute(0, "isComment", a => a.IsComment);
+        }
 
         /// <summary>
         /// <para>ContentPartLocks.</para>
@@ -4511,10 +5303,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>NonVisualInkContentPartProperties &lt;w14:cNvContentPartPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NonVisualInkContentPartProperties), FileFormatVersions.Office2010)]
-    [SchemaAttr(52, "nvContentPartPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class WordNonVisualContentPartShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4546,6 +5334,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public WordNonVisualContentPartShapeProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "nvContentPartPr");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<NonVisualDrawingProperties>();
+            builder.AddChild<NonVisualInkContentPartProperties>();
         }
 
         /// <summary>
@@ -4598,10 +5395,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-    [SchemaAttr(52, "xfrm")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4639,25 +5432,44 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        [SchemaAttr(0, "rot")]
-        [Index(0)]
-        public Int32Value Rotation { get; set; }
+        public Int32Value Rotation
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        [SchemaAttr(0, "flipH")]
-        [Index(1)]
-        public BooleanValue HorizontalFlip { get; set; }
+        public BooleanValue HorizontalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        [SchemaAttr(0, "flipV")]
-        [Index(2)]
-        public BooleanValue VerticalFlip { get; set; }
+        public BooleanValue VerticalFlip
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "xfrm");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddElement<Transform2D>()
+.AddAttribute(0, "rot", a => a.Rotation)
+.AddAttribute(0, "flipH", a => a.HorizontalFlip)
+.AddAttribute(0, "flipV", a => a.VerticalFlip);
+        }
 
         /// <summary>
         /// <para>Offset.</para>
@@ -4708,9 +5520,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-    [SchemaAttr(52, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4742,6 +5551,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OfficeArtExtensionList(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(52, "extLst");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)

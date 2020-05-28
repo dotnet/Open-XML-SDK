@@ -7,7 +7,22 @@ namespace System.Collections.Concurrent
 {
     internal class ConcurrentDictionary<TKey, TValue>
     {
-        private readonly Dictionary<TKey, TValue> _dictionary = new Dictionary<TKey, TValue>();
+        private readonly Dictionary<TKey, TValue> _dictionary;
+
+        public ConcurrentDictionary()
+        {
+            _dictionary = new Dictionary<TKey, TValue>();
+        }
+
+        public ConcurrentDictionary(IEnumerable<KeyValuePair<TKey, TValue>> values)
+        {
+            _dictionary = new Dictionary<TKey, TValue>();
+
+            foreach (var value in values)
+            {
+                _dictionary.Add(value.Key, value.Value);
+            }
+        }
 
         public TValue GetOrAdd(TKey type, Func<TKey, TValue> create)
         {
@@ -33,9 +48,12 @@ namespace System.Collections.Concurrent
 
         public void TryAdd(TKey key, TValue value)
         {
-            lock(_dictionary)
+            lock (_dictionary)
             {
-                _dictionary.Add(key, value);
+                if (!_dictionary.ContainsKey(key))
+                {
+                    _dictionary.Add(key, value);
+                }
             }
         }
     }

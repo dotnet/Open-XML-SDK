@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -23,9 +24,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description>ModelTimeGrouping &lt;x16:modelTimeGrouping></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ModelTimeGrouping), FileFormatVersions.Office2016)]
-    [SchemaAttr(84, "modelTimeGroupings")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ModelTimeGroupings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -59,6 +57,14 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(84, "modelTimeGroupings");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<ModelTimeGrouping>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping), 1, 0, version: FileFormatVersions.Office2016)
@@ -81,9 +87,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description>CalculatedTimeColumn &lt;x16:calculatedTimeColumn></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CalculatedTimeColumn), FileFormatVersions.Office2016)]
-    [SchemaAttr(84, "modelTimeGrouping")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class ModelTimeGrouping : OpenXmlCompositeElement
     {
         /// <summary>
@@ -121,28 +124,52 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>tableName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: tableName</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "tableName")]
-        [Index(0)]
-        public StringValue TableName { get; set; }
+        public StringValue TableName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columnName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnName</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "columnName")]
-        [Index(1)]
-        public StringValue ColumnName { get; set; }
+        public StringValue ColumnName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columnId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "columnId")]
-        [Index(2)]
-        public StringValue ColumnId { get; set; }
+        public StringValue ColumnId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(84, "modelTimeGrouping");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddChild<CalculatedTimeColumn>();
+            builder.AddElement<ModelTimeGrouping>()
+.AddAttribute(0, "tableName", a => a.TableName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "columnId", a => a.ColumnId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -160,8 +187,6 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:calculatedTimeColumn.</para>
     /// </summary>
-    [SchemaAttr(84, "calculatedTimeColumn")]
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public partial class CalculatedTimeColumn : OpenXmlLeafElement
     {
         /// <summary>
@@ -175,37 +200,65 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>columnName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnName</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "columnName")]
-        [Index(0)]
-        public StringValue ColumnName { get; set; }
+        public StringValue ColumnName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columnId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "columnId")]
-        [Index(1)]
-        public StringValue ColumnId { get; set; }
+        public StringValue ColumnId
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>contentType, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: contentType</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "contentType")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType> ContentType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType> ContentType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>isSelected, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: isSelected</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "isSelected")]
-        [Index(3)]
-        public BooleanValue IsSelected { get; set; }
+        public BooleanValue IsSelected
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(84, "calculatedTimeColumn");
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddElement<CalculatedTimeColumn>()
+.AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "columnId", a => a.ColumnId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "contentType", a => a.ContentType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "isSelected", a => a.IsSelected, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedTimeColumn>(deep);

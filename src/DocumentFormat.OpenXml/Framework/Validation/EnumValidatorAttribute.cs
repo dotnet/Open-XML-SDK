@@ -9,6 +9,8 @@ namespace DocumentFormat.OpenXml.Framework
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
     internal sealed class EnumValidatorAttribute : VersionedValidatorAttribute
     {
+        public static IOpenXmlSimpleTypeValidator Instance { get; } = new EnumValidatorAttribute();
+
         protected override void ValidateVersion(ValidationContext context)
         {
             var current = context.Stack.Current;

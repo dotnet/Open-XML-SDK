@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     if (string.IsNullOrEmpty(exAttribute.Prefix))
                     {
                         // error on any unprefixed attributes
-                        errorInfo = validationContext.ComposeMcValidationError(acElement, ValidationResources.MC_ErrorOnUnprefixedAttributeName, exAttribute.XmlQualifiedName.ToString());
+                        errorInfo = validationContext.ComposeMcValidationError(acElement, "MC_ErrorOnUnprefixedAttributeName", exAttribute.XmlQualifiedName.ToString());
                         validationContext.AddError(errorInfo);
                     }
 

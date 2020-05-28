@@ -12,14 +12,14 @@ namespace DocumentFormat.OpenXml.Framework
     {
         private readonly ReadOnlyArray<IOpenXmlSimpleTypeValidator> _validators;
 
+        public ValidatorCollection(ReadOnlyArray<IOpenXmlSimpleTypeValidator> validators)
+        {
+            _validators = validators;
+        }
+
         public ValidatorCollection(Type type)
         {
             _validators = Build(type.GetTypeInfo().GetCustomAttributes(true), null);
-        }
-
-        public ValidatorCollection(PropertyInfo property)
-        {
-            _validators = Build(property.GetCustomAttributes(true), property.PropertyType);
         }
 
         public ReadOnlyArray<IOpenXmlSimpleTypeValidator>.Enumerator GetEnumerator() => _validators.GetEnumerator();

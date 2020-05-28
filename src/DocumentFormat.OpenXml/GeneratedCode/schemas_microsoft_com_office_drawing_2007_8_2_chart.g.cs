@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.ChartDrawing;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -29,13 +30,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description>DropZonesVisible &lt;c14:dropZonesVisible></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DropZoneFilter), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DropZoneCategories), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DropZoneData), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DropZoneSeries), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DropZonesVisible), FileFormatVersions.Office2010)]
-    [SchemaAttr(46, "pivotOptions")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class PivotOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -67,6 +61,18 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PivotOptions(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "pivotOptions");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DropZoneFilter>();
+            builder.AddChild<DropZoneCategories>();
+            builder.AddChild<DropZoneData>();
+            builder.AddChild<DropZoneSeries>();
+            builder.AddChild<DropZonesVisible>();
         }
 
         /// <summary>
@@ -161,10 +167,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description>ShowSketchButton &lt;c14:showSketchBtn></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(InSketchMode), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ShowSketchButton), FileFormatVersions.Office2010)]
-    [SchemaAttr(46, "sketchOptions")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class SketchOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -196,6 +198,15 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SketchOptions(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "sketchOptions");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<InSketchMode>();
+            builder.AddChild<ShowSketchButton>();
         }
 
         /// <summary>
@@ -247,9 +258,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description>ShapeProperties &lt;c14:spPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2010)]
-    [SchemaAttr(46, "invertSolidFillFmt")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -283,6 +291,14 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "invertSolidFillFmt");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<ShapeProperties>();
+        }
+
         /// <summary>
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c14:spPr.</para>
@@ -312,8 +328,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:style.</para>
     /// </summary>
-    [SchemaAttr(46, "style")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class Style : OpenXmlLeafElement
     {
         /// <summary>
@@ -327,11 +341,24 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 101L, MaxInclusive = 148L)]
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public ByteValue Val { get; set; }
+        public ByteValue Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "style");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<Style>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (101L), MaxInclusive = (148L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
@@ -362,23 +389,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Transform2D))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NoFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SolidFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GradientFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PatternFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-    [SchemaAttr(46, "spPr")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -416,10 +426,38 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        [StringValidator(IsToken = true)]
-        [SchemaAttr(0, "bwMode")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "spPr");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddElement<ShapeProperties>()
+.AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+});
+        }
 
         /// <summary>
         /// <para>2D Transform for Individual Objects.</para>
@@ -482,8 +520,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneFilter.</para>
     /// </summary>
-    [SchemaAttr(46, "dropZoneFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DropZoneFilter : BooleanFalseType
     {
         /// <summary>
@@ -491,6 +527,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </summary>
         public DropZoneFilter() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "dropZoneFilter");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -502,8 +545,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneCategories.</para>
     /// </summary>
-    [SchemaAttr(46, "dropZoneCategories")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DropZoneCategories : BooleanFalseType
     {
         /// <summary>
@@ -511,6 +552,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </summary>
         public DropZoneCategories() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "dropZoneCategories");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -522,8 +570,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneData.</para>
     /// </summary>
-    [SchemaAttr(46, "dropZoneData")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DropZoneData : BooleanFalseType
     {
         /// <summary>
@@ -531,6 +577,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </summary>
         public DropZoneData() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "dropZoneData");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -542,8 +595,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneSeries.</para>
     /// </summary>
-    [SchemaAttr(46, "dropZoneSeries")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DropZoneSeries : BooleanFalseType
     {
         /// <summary>
@@ -551,6 +602,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </summary>
         public DropZoneSeries() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "dropZoneSeries");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -562,8 +620,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZonesVisible.</para>
     /// </summary>
-    [SchemaAttr(46, "dropZonesVisible")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class DropZonesVisible : BooleanFalseType
     {
         /// <summary>
@@ -571,6 +627,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </summary>
         public DropZonesVisible() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "dropZonesVisible");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -582,8 +645,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:inSketchMode.</para>
     /// </summary>
-    [SchemaAttr(46, "inSketchMode")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class InSketchMode : BooleanFalseType
     {
         /// <summary>
@@ -591,6 +652,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </summary>
         public InSketchMode() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "inSketchMode");
+            builder.Availability = FileFormatVersions.Office2010;
         }
 
         /// <inheritdoc/>
@@ -615,9 +683,18 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<BooleanFalseType>()
+                           .AddAttribute(0, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -625,8 +702,6 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:showSketchBtn.</para>
     /// </summary>
-    [SchemaAttr(46, "showSketchBtn")]
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public partial class ShowSketchButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -640,9 +715,20 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        [SchemaAttr(0, "val")]
-        [Index(0)]
-        public BooleanValue Val { get; set; }
+        public BooleanValue Val
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(46, "showSketchBtn");
+            builder.Availability = FileFormatVersions.Office2010;
+            builder.AddElement<ShowSketchButton>()
+.AddAttribute(0, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowSketchButton>(deep);

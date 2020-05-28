@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.Excel;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Packaging;
@@ -26,8 +27,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotCache &lt;x:pivotCache></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(71, "pivotCaches")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotCaches : OpenXmlPivotCachesElement
     {
         /// <summary>
@@ -61,6 +60,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotCaches");
+            builder.Availability = FileFormatVersions.Office2013;
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
@@ -83,8 +89,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotCache &lt;x:pivotCache></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(71, "timelineCachePivotCaches")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineCachePivotCaches : OpenXmlPivotCachesElement
     {
         /// <summary>
@@ -118,6 +122,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelineCachePivotCaches");
+            builder.Availability = FileFormatVersions.Office2013;
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
@@ -140,7 +151,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotCache &lt;x:pivotCache></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache))]
     public abstract partial class OpenXmlPivotCachesElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -173,6 +183,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         protected OpenXmlPivotCachesElement(string outerXml) : base(outerXml)
         {
         }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
+        }
     }
 
     /// <summary>
@@ -186,9 +202,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>PivotTableReference &lt;x15:pivotTableReference></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotTableReference), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "pivotTableReferences")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotTableReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -222,6 +235,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotTableReferences");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<PivotTableReference>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference), 1, 0, version: FileFormatVersions.Office2013)
@@ -238,8 +259,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:queryTable.</para>
     /// </summary>
-    [SchemaAttr(71, "queryTable")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class QueryTable : OpenXmlLeafElement
     {
         /// <summary>
@@ -253,25 +272,42 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>clipped, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: clipped</para>
         /// </summary>
-        [SchemaAttr(0, "clipped")]
-        [Index(0)]
-        public BooleanValue Clipped { get; set; }
+        public BooleanValue Clipped
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sourceDataName, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sourceDataName</para>
         /// </summary>
-        [SchemaAttr(0, "sourceDataName")]
-        [Index(1)]
-        public StringValue SourceDataName { get; set; }
+        public StringValue SourceDataName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>drillThrough, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: drillThrough</para>
         /// </summary>
-        [SchemaAttr(0, "drillThrough")]
-        [Index(2)]
-        public BooleanValue DrillThrough { get; set; }
+        public BooleanValue DrillThrough
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "queryTable");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<QueryTable>()
+.AddAttribute(0, "clipped", a => a.Clipped)
+.AddAttribute(0, "sourceDataName", a => a.SourceDataName)
+.AddAttribute(0, "drillThrough", a => a.DrillThrough);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<QueryTable>(deep);
@@ -288,9 +324,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>WebExtension &lt;x15:webExtension></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(WebExtension), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "webExtensions")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class WebExtensions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -324,6 +357,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "webExtensions");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<WebExtension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WebExtension), 1, 0, version: FileFormatVersions.Office2013)
@@ -346,9 +387,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>TimelineCacheReference &lt;x15:timelineCacheRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TimelineCacheReference), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "timelineCacheRefs")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineCacheReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -382,6 +420,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelineCacheRefs");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<TimelineCacheReference>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference), 1, 0, version: FileFormatVersions.Office2013)
@@ -404,9 +450,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>TimelineReference &lt;x15:timelineRef></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TimelineReference), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "timelineRefs")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -440,6 +483,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelineRefs");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<TimelineReference>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineReference), 1, 0, version: FileFormatVersions.Office2013)
@@ -456,8 +507,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:workbookPr.</para>
     /// </summary>
-    [SchemaAttr(71, "workbookPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class WorkbookProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -471,9 +520,20 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>chartTrackingRefBase, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: chartTrackingRefBase</para>
         /// </summary>
-        [SchemaAttr(0, "chartTrackingRefBase")]
-        [Index(0)]
-        public BooleanValue ChartTrackingReferenceBase { get; set; }
+        public BooleanValue ChartTrackingReferenceBase
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "workbookPr");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<WorkbookProperties>()
+.AddAttribute(0, "chartTrackingRefBase", a => a.ChartTrackingReferenceBase);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookProperties>(deep);
@@ -490,9 +550,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>TimelineStyle &lt;x15:timelineStyle></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TimelineStyle), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "timelineStyles")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -530,10 +587,24 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>defaultTimelineStyle, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: defaultTimelineStyle</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "defaultTimelineStyle")]
-        [Index(0)]
-        public StringValue DefaultTimelineStyle { get; set; }
+        public StringValue DefaultTimelineStyle
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelineStyles");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<TimelineStyle>();
+            builder.AddElement<TimelineStyles>()
+.AddAttribute(0, "defaultTimelineStyle", a => a.DefaultTimelineStyle, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -557,9 +628,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat &lt;x:dxf></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat))]
-    [SchemaAttr(71, "dxfs")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DifferentialFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -597,9 +665,21 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>Format Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr(0, "count")]
-        [Index(0)]
-        public UInt32Value Count { get; set; }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "dxfs");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
+            builder.AddElement<DifferentialFormats>()
+.AddAttribute(0, "count", a => a.Count);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -627,13 +707,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DataFeedProperties &lt;x15:dataFeedPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TextProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ModelTextProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(RangeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OleDbPrpoperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DataFeedProperties), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "connection")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -671,42 +744,72 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>model, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: model</para>
         /// </summary>
-        [SchemaAttr(0, "model")]
-        [Index(1)]
-        public BooleanValue Model { get; set; }
+        public BooleanValue Model
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>excludeFromRefreshAll, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: excludeFromRefreshAll</para>
         /// </summary>
-        [SchemaAttr(0, "excludeFromRefreshAll")]
-        [Index(2)]
-        public BooleanValue ExcludeFromRefreshAll { get; set; }
+        public BooleanValue ExcludeFromRefreshAll
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>autoDelete, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: autoDelete</para>
         /// </summary>
-        [SchemaAttr(0, "autoDelete")]
-        [Index(3)]
-        public BooleanValue AutoDelete { get; set; }
+        public BooleanValue AutoDelete
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>usedByAddin, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: usedByAddin</para>
         /// </summary>
-        [SchemaAttr(0, "usedByAddin")]
-        [Index(4)]
-        public BooleanValue UsedByAddin { get; set; }
+        public BooleanValue UsedByAddin
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "connection");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<TextProperties>();
+            builder.AddChild<ModelTextProperties>();
+            builder.AddChild<RangeProperties>();
+            builder.AddChild<OleDbPrpoperties>();
+            builder.AddChild<DataFeedProperties>();
+            builder.AddElement<Connection>()
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "model", a => a.Model)
+.AddAttribute(0, "excludeFromRefreshAll", a => a.ExcludeFromRefreshAll)
+.AddAttribute(0, "autoDelete", a => a.AutoDelete)
+.AddAttribute(0, "usedByAddin", a => a.UsedByAddin);
+        }
 
         /// <summary>
         /// <para>TextProperties.</para>
@@ -793,8 +896,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:calculatedMember.</para>
     /// </summary>
-    [SchemaAttr(71, "calculatedMember")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class CalculatedMember : OpenXmlLeafElement
     {
         /// <summary>
@@ -808,25 +909,42 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>measureGroup, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: measureGroup</para>
         /// </summary>
-        [SchemaAttr(0, "measureGroup")]
-        [Index(0)]
-        public StringValue MeasureGroup { get; set; }
+        public StringValue MeasureGroup
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>numberFormat, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: numberFormat</para>
         /// </summary>
-        [SchemaAttr(0, "numberFormat")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.CalculatedMemberNumberFormat> NumberFormat { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.CalculatedMemberNumberFormat> NumberFormat
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.CalculatedMemberNumberFormat>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>measure, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: measure</para>
         /// </summary>
-        [SchemaAttr(0, "measure")]
-        [Index(2)]
-        public BooleanValue Measure { get; set; }
+        public BooleanValue Measure
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "calculatedMember");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<CalculatedMember>()
+.AddAttribute(0, "measureGroup", a => a.MeasureGroup)
+.AddAttribute(0, "numberFormat", a => a.NumberFormat)
+.AddAttribute(0, "measure", a => a.Measure);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedMember>(deep);
@@ -844,10 +962,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FieldListActiveTabTopLevelEntity), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "pivotTableUISettings")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotTableUISettings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -885,17 +999,33 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>sourceDataName, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sourceDataName</para>
         /// </summary>
-        [SchemaAttr(0, "sourceDataName")]
-        [Index(0)]
-        public StringValue SourceDataName { get; set; }
+        public StringValue SourceDataName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>relNeededHidden, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: relNeededHidden</para>
         /// </summary>
-        [SchemaAttr(0, "relNeededHidden")]
-        [Index(1)]
-        public BooleanValue RelNeededHidden { get; set; }
+        public BooleanValue RelNeededHidden
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotTableUISettings");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<FieldListActiveTabTopLevelEntity>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<PivotTableUISettings>()
+.AddAttribute(0, "sourceDataName", a => a.SourceDataName)
+.AddAttribute(0, "relNeededHidden", a => a.RelNeededHidden);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -914,8 +1044,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotFilter.</para>
     /// </summary>
-    [SchemaAttr(71, "pivotFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotFilter : OpenXmlLeafElement
     {
         /// <summary>
@@ -929,10 +1057,23 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>useWholeDay, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: useWholeDay</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "useWholeDay")]
-        [Index(0)]
-        public BooleanValue UseWholeDay { get; set; }
+        public BooleanValue UseWholeDay
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotFilter");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<PivotFilter>()
+.AddAttribute(0, "useWholeDay", a => a.UseWholeDay, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotFilter>(deep);
@@ -949,9 +1090,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>CachedUniqueName &lt;x15:cachedUniqueName></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(CachedUniqueName), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "cachedUniqueNames")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class CachedUniqueNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -985,6 +1123,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "cachedUniqueNames");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<CachedUniqueName>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName), 1, 0, version: FileFormatVersions.Office2013)
@@ -1001,8 +1147,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:cacheHierarchy.</para>
     /// </summary>
-    [SchemaAttr(71, "cacheHierarchy")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class CacheHierarchy : OpenXmlLeafElement
     {
         /// <summary>
@@ -1016,10 +1160,23 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>aggregatedColumn, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: aggregatedColumn</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "aggregatedColumn")]
-        [Index(0)]
-        public Int32Value AggregatedColumn { get; set; }
+        public Int32Value AggregatedColumn
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "cacheHierarchy");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<CacheHierarchy>()
+.AddAttribute(0, "aggregatedColumn", a => a.AggregatedColumn, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheHierarchy>(deep);
@@ -1030,8 +1187,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelinePivotCacheDefinition.</para>
     /// </summary>
-    [SchemaAttr(71, "timelinePivotCacheDefinition")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelinePivotCacheDefinition : OpenXmlLeafElement
     {
         /// <summary>
@@ -1045,9 +1200,20 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>timelineData, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: timelineData</para>
         /// </summary>
-        [SchemaAttr(0, "timelineData")]
-        [Index(0)]
-        public BooleanValue TimelineData { get; set; }
+        public BooleanValue TimelineData
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelinePivotCacheDefinition");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<TimelinePivotCacheDefinition>()
+.AddAttribute(0, "timelineData", a => a.TimelineData);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimelinePivotCacheDefinition>(deep);
@@ -1058,8 +1224,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotCacheIdVersion.</para>
     /// </summary>
-    [SchemaAttr(71, "pivotCacheIdVersion")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotCacheIdVersion : OpenXmlLeafElement
     {
         /// <summary>
@@ -1073,19 +1237,37 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>cacheIdSupportedVersion, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cacheIdSupportedVersion</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "cacheIdSupportedVersion")]
-        [Index(0)]
-        public ByteValue CacheIdSupportedVersion { get; set; }
+        public ByteValue CacheIdSupportedVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cacheIdCreatedVersion, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cacheIdCreatedVersion</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "cacheIdCreatedVersion")]
-        [Index(1)]
-        public ByteValue CacheIdCreatedVersion { get; set; }
+        public ByteValue CacheIdCreatedVersion
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotCacheIdVersion");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<PivotCacheIdVersion>()
+.AddAttribute(0, "cacheIdSupportedVersion", a => a.CacheIdSupportedVersion, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "cacheIdCreatedVersion", a => a.CacheIdCreatedVersion, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheIdVersion>(deep);
@@ -1104,11 +1286,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ModelTables), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ModelRelationships), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "dataModel")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataModel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1146,9 +1323,23 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>minVersionLoad, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: minVersionLoad</para>
         /// </summary>
-        [SchemaAttr(0, "minVersionLoad")]
-        [Index(0)]
-        public ByteValue MinVersionLoad { get; set; }
+        public ByteValue MinVersionLoad
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "dataModel");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<ModelTables>();
+            builder.AddChild<ModelRelationships>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<DataModel>()
+.AddAttribute(0, "minVersionLoad", a => a.MinVersionLoad);
+        }
 
         /// <summary>
         /// <para>ModelTables.</para>
@@ -1213,9 +1404,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>PivotRow &lt;x15:pivotRow></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotRow), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "pivotTableData")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotTableData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1253,26 +1441,46 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>rowCount, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rowCount</para>
         /// </summary>
-        [SchemaAttr(0, "rowCount")]
-        [Index(0)]
-        public UInt32Value RowCount { get; set; }
+        public UInt32Value RowCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>columnCount, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: columnCount</para>
         /// </summary>
-        [SchemaAttr(0, "columnCount")]
-        [Index(1)]
-        public UInt32Value ColumnCount { get; set; }
+        public UInt32Value ColumnCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cacheId, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cacheId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "cacheId")]
-        [Index(2)]
-        public UInt32Value CacheId { get; set; }
+        public UInt32Value CacheId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotTableData");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<PivotRow>();
+            builder.AddElement<PivotTableData>()
+.AddAttribute(0, "rowCount", a => a.RowCount)
+.AddAttribute(0, "columnCount", a => a.ColumnCount)
+.AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -1293,8 +1501,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotCacheDecoupled.</para>
     /// </summary>
-    [SchemaAttr(71, "pivotCacheDecoupled")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotCacheDecoupled : OpenXmlLeafElement
     {
         /// <summary>
@@ -1308,9 +1514,20 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>decoupled, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: decoupled</para>
         /// </summary>
-        [SchemaAttr(0, "decoupled")]
-        [Index(0)]
-        public BooleanValue Decoupled { get; set; }
+        public BooleanValue Decoupled
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotCacheDecoupled");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<PivotCacheDecoupled>()
+.AddAttribute(0, "decoupled", a => a.Decoupled);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheDecoupled>(deep);
@@ -1321,8 +1538,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dataField.</para>
     /// </summary>
-    [SchemaAttr(71, "dataField")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataField : OpenXmlLeafElement
     {
         /// <summary>
@@ -1336,9 +1551,20 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>isCountDistinct, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isCountDistinct</para>
         /// </summary>
-        [SchemaAttr(0, "isCountDistinct")]
-        [Index(0)]
-        public BooleanValue IsCountDistinct { get; set; }
+        public BooleanValue IsCountDistinct
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "dataField");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<DataField>()
+.AddAttribute(0, "isCountDistinct", a => a.IsCountDistinct);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataField>(deep);
@@ -1349,8 +1575,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:movingPeriodState.</para>
     /// </summary>
-    [SchemaAttr(71, "movingPeriodState")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class MovingPeriodState : OpenXmlLeafElement
     {
         /// <summary>
@@ -1364,46 +1588,79 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>referenceDateBegin, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: referenceDateBegin</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "referenceDateBegin")]
-        [Index(0)]
-        public DateTimeValue ReferenceDateBegin { get; set; }
+        public DateTimeValue ReferenceDateBegin
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>referencePeriod, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: referencePeriod</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "referencePeriod")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep> ReferencePeriod { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep> ReferencePeriod
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>referenceMultiple, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: referenceMultiple</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "referenceMultiple")]
-        [Index(2)]
-        public UInt32Value ReferenceMultiple { get; set; }
+        public UInt32Value ReferenceMultiple
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>movingPeriod, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: movingPeriod</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "movingPeriod")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep> MovingPeriod { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep> MovingPeriod
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodStep>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>movingMultiple, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: movingMultiple</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "movingMultiple")]
-        [Index(4)]
-        public UInt32Value MovingMultiple { get; set; }
+        public UInt32Value MovingMultiple
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "movingPeriodState");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<MovingPeriodState>()
+.AddAttribute(0, "referenceDateBegin", a => a.ReferenceDateBegin, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "referencePeriod", a => a.ReferencePeriod, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "referenceMultiple", a => a.ReferenceMultiple, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "movingPeriod", a => a.MovingPeriod, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "movingMultiple", a => a.MovingMultiple, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MovingPeriodState>(deep);
@@ -1420,9 +1677,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SlicerCache &lt;x14:slicerCache></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache), FileFormatVersions.Office2010)]
-    [SchemaAttr(71, "slicerCaches")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SlicerCaches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1456,6 +1710,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "slicerCaches");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCache>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache), 1, 0, version: FileFormatVersions.Office2010)
@@ -1478,9 +1740,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "tableSlicerCache")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TableSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1518,43 +1777,71 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>tableId, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tableId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "tableId")]
-        [Index(0)]
-        public UInt32Value TableId { get; set; }
+        public UInt32Value TableId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>column, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: column</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "column")]
-        [Index(1)]
-        public UInt32Value Column { get; set; }
+        public UInt32Value Column
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sortOrder, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sortOrder</para>
         /// </summary>
-        [SchemaAttr(0, "sortOrder")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues> SortOrder { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues> SortOrder
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>customListSort, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: customListSort</para>
         /// </summary>
-        [SchemaAttr(0, "customListSort")]
-        [Index(3)]
-        public BooleanValue CustomListSort { get; set; }
+        public BooleanValue CustomListSort
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>crossFilter, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: crossFilter</para>
         /// </summary>
-        [SchemaAttr(0, "crossFilter")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues> CrossFilter { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues> CrossFilter
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "tableSlicerCache");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<TableSlicerCache>()
+.AddAttribute(0, "tableId", a => a.TableId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "column", a => a.Column, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sortOrder", a => a.SortOrder)
+.AddAttribute(0, "customListSort", a => a.CustomListSort)
+.AddAttribute(0, "crossFilter", a => a.CrossFilter);
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -1591,9 +1878,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>SlicerCacheOlapLevelName &lt;x15:slicerCacheOlapLevelName></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SlicerCacheOlapLevelName), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "slicerCacheHideItemsWithNoData")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SlicerCacheHideItemsWithNoData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1631,9 +1915,21 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>count, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [SchemaAttr(0, "count")]
-        [Index(0)]
-        public UInt32Value Count { get; set; }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "slicerCacheHideItemsWithNoData");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<SlicerCacheOlapLevelName>();
+            builder.AddElement<SlicerCacheHideItemsWithNoData>()
+.AddAttribute(0, "count", a => a.Count);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -1657,9 +1953,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable &lt;x14:pivotTable></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable), FileFormatVersions.Office2010)]
-    [SchemaAttr(71, "slicerCachePivotTables")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1693,6 +1986,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "slicerCachePivotTables");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable), 1, 0, version: FileFormatVersions.Office2010)
@@ -1719,13 +2020,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SurveyPrSurveyElementPr), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TitlePrSurveyElementPr), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DescriptionPrSurveyElementPr), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(SurveyQuestions), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "survey")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Survey : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1763,36 +2057,65 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public UInt32Value Id { get; set; }
+        public UInt32Value Id
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>guid, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: guid</para>
         /// </summary>
-        [RequiredValidator()]
-        [StringValidator(IsToken = true, Pattern = "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}")]
-        [SchemaAttr(0, "guid")]
-        [Index(1)]
-        public StringValue Guid { get; set; }
+        public StringValue Guid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>title, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        [SchemaAttr(0, "title")]
-        [Index(2)]
-        public StringValue Title { get; set; }
+        public StringValue Title
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>description, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        [SchemaAttr(0, "description")]
-        [Index(3)]
-        public StringValue Description { get; set; }
+        public StringValue Description
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "survey");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<SurveyPrSurveyElementPr>();
+            builder.AddChild<TitlePrSurveyElementPr>();
+            builder.AddChild<DescriptionPrSurveyElementPr>();
+            builder.AddChild<SurveyQuestions>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<Survey>()
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "guid", a => a.Guid, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+})
+.AddAttribute(0, "title", a => a.Title)
+.AddAttribute(0, "description", a => a.Description);
+        }
 
         /// <summary>
         /// <para>SurveyPrSurveyElementPr.</para>
@@ -1885,9 +2208,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>Timeline &lt;x15:timeline></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Timeline), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "timelines")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Timelines : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1919,6 +2239,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Timelines(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelines");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<Timeline>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -1976,11 +2304,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TimelineCachePivotTables), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TimelineState), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "timelineCacheDefinition")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineCacheDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2018,19 +2341,40 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sourceName, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sourceName</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "sourceName")]
-        [Index(1)]
-        public StringValue SourceName { get; set; }
+        public StringValue SourceName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelineCacheDefinition");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<TimelineCachePivotTables>();
+            builder.AddChild<TimelineState>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<TimelineCacheDefinition>()
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "sourceName", a => a.SourceName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <summary>
         /// <para>TimelineCachePivotTables.</para>
@@ -2120,8 +2464,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableReference.</para>
     /// </summary>
-    [SchemaAttr(71, "pivotTableReference")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotTableReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -2138,10 +2480,23 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotTableReference");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<PivotTableReference>()
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableReference>(deep);
@@ -2158,9 +2513,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
-    [SchemaAttr(71, "webExtension")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class WebExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2198,10 +2550,24 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>appRef, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: appRef</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "appRef")]
-        [Index(0)]
-        public StringValue ApplicationReference { get; set; }
+        public StringValue ApplicationReference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "webExtension");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddElement<WebExtension>()
+.AddAttribute(0, "appRef", a => a.ApplicationReference, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <summary>
         /// <para>Formula.</para>
@@ -2232,8 +2598,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineCacheRef.</para>
     /// </summary>
-    [SchemaAttr(71, "timelineCacheRef")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineCacheReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -2250,10 +2614,23 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelineCacheRef");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<TimelineCacheReference>()
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimelineCacheReference>(deep);
@@ -2264,8 +2641,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineRef.</para>
     /// </summary>
-    [SchemaAttr(71, "timelineRef")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -2282,10 +2657,23 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(19, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelineRef");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<TimelineReference>()
+.AddAttribute(19, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimelineReference>(deep);
@@ -2302,9 +2690,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>TimelineStyleElements &lt;x15:timelineStyleElements></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TimelineStyleElements), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "timelineStyle")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2342,10 +2727,24 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelineStyle");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<TimelineStyleElements>();
+            builder.AddElement<TimelineStyle>()
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <summary>
         /// <para>TimelineStyleElements.</para>
@@ -2376,8 +2775,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineStyleElement.</para>
     /// </summary>
-    [SchemaAttr(71, "timelineStyleElement")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineStyleElement : OpenXmlLeafElement
     {
         /// <summary>
@@ -2391,18 +2788,34 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>type, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "type")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleType> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleType> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleType>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>dxfId, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
-        [SchemaAttr(0, "dxfId")]
-        [Index(1)]
-        public UInt32Value FormatId { get; set; }
+        public UInt32Value FormatId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelineStyleElement");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<TimelineStyleElement>()
+.AddAttribute(0, "type", a => a.Type, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "dxfId", a => a.FormatId);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimelineStyleElement>(deep);
@@ -2419,9 +2832,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>TimelineStyleElement &lt;x15:timelineStyleElement></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TimelineStyleElement), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "timelineStyleElements")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineStyleElements : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2455,6 +2865,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timelineStyleElements");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<TimelineStyleElement>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement), 1, 0, version: FileFormatVersions.Office2013)
@@ -2471,8 +2889,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dbTable.</para>
     /// </summary>
-    [SchemaAttr(71, "dbTable")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DbTable : OpenXmlLeafElement
     {
         /// <summary>
@@ -2486,10 +2902,23 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "dbTable");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<DbTable>()
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DbTable>(deep);
@@ -2506,9 +2935,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DbTable &lt;x15:dbTable></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DbTable), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "dbTables")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DbTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2542,6 +2968,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "dbTables");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DbTable>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DbTable), 1, 0, version: FileFormatVersions.Office2013)
@@ -2558,8 +2992,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dbCommand.</para>
     /// </summary>
-    [SchemaAttr(71, "dbCommand")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DbCommand : OpenXmlLeafElement
     {
         /// <summary>
@@ -2573,10 +3005,23 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>text, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: text</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "text")]
-        [Index(0)]
-        public StringValue Text { get; set; }
+        public StringValue Text
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "dbCommand");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<DbCommand>()
+.AddAttribute(0, "text", a => a.Text, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DbCommand>(deep);
@@ -2593,9 +3038,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.TextFields &lt;x:textFields></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.TextFields))]
-    [SchemaAttr(71, "textPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2633,129 +3075,186 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>prompt</para>
         /// <para>Represents the following attribute in the schema: prompt</para>
         /// </summary>
-        [SchemaAttr(0, "prompt")]
-        [Index(0)]
-        public BooleanValue Prompt { get; set; }
+        public BooleanValue Prompt
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fileType</para>
         /// <para>Represents the following attribute in the schema: fileType</para>
         /// </summary>
-        [SchemaAttr(0, "fileType")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues> FileType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues> FileType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>codePage</para>
         /// <para>Represents the following attribute in the schema: codePage</para>
         /// </summary>
-        [SchemaAttr(0, "codePage")]
-        [Index(2)]
-        public UInt32Value CodePage { get; set; }
+        public UInt32Value CodePage
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>characterSet</para>
         /// <para>Represents the following attribute in the schema: characterSet</para>
         /// </summary>
-        [SchemaAttr(0, "characterSet")]
-        [Index(3)]
-        public StringValue TextCharacterSet { get; set; }
+        public StringValue TextCharacterSet
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>firstRow</para>
         /// <para>Represents the following attribute in the schema: firstRow</para>
         /// </summary>
-        [SchemaAttr(0, "firstRow")]
-        [Index(4)]
-        public UInt32Value FirstRow { get; set; }
+        public UInt32Value FirstRow
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>sourceFile</para>
         /// <para>Represents the following attribute in the schema: sourceFile</para>
         /// </summary>
-        [SchemaAttr(0, "sourceFile")]
-        [Index(5)]
-        public StringValue SourceFile { get; set; }
+        public StringValue SourceFile
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>delimited</para>
         /// <para>Represents the following attribute in the schema: delimited</para>
         /// </summary>
-        [SchemaAttr(0, "delimited")]
-        [Index(6)]
-        public BooleanValue Delimited { get; set; }
+        public BooleanValue Delimited
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>decimal</para>
         /// <para>Represents the following attribute in the schema: decimal</para>
         /// </summary>
-        [SchemaAttr(0, "decimal")]
-        [Index(7)]
-        public StringValue Decimal { get; set; }
+        public StringValue Decimal
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>thousands</para>
         /// <para>Represents the following attribute in the schema: thousands</para>
         /// </summary>
-        [SchemaAttr(0, "thousands")]
-        [Index(8)]
-        public StringValue Thousands { get; set; }
+        public StringValue Thousands
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>tab</para>
         /// <para>Represents the following attribute in the schema: tab</para>
         /// </summary>
-        [SchemaAttr(0, "tab")]
-        [Index(9)]
-        public BooleanValue TabAsDelimiter { get; set; }
+        public BooleanValue TabAsDelimiter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>space</para>
         /// <para>Represents the following attribute in the schema: space</para>
         /// </summary>
-        [SchemaAttr(0, "space")]
-        [Index(10)]
-        public BooleanValue Space { get; set; }
+        public BooleanValue Space
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>comma</para>
         /// <para>Represents the following attribute in the schema: comma</para>
         /// </summary>
-        [SchemaAttr(0, "comma")]
-        [Index(11)]
-        public BooleanValue Comma { get; set; }
+        public BooleanValue Comma
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>semicolon</para>
         /// <para>Represents the following attribute in the schema: semicolon</para>
         /// </summary>
-        [SchemaAttr(0, "semicolon")]
-        [Index(12)]
-        public BooleanValue Semicolon { get; set; }
+        public BooleanValue Semicolon
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>consecutive</para>
         /// <para>Represents the following attribute in the schema: consecutive</para>
         /// </summary>
-        [SchemaAttr(0, "consecutive")]
-        [Index(13)]
-        public BooleanValue Consecutive { get; set; }
+        public BooleanValue Consecutive
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>qualifier</para>
         /// <para>Represents the following attribute in the schema: qualifier</para>
         /// </summary>
-        [SchemaAttr(0, "qualifier")]
-        [Index(14)]
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues> Qualifier { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues> Qualifier
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>delimiter</para>
         /// <para>Represents the following attribute in the schema: delimiter</para>
         /// </summary>
-        [SchemaAttr(0, "delimiter")]
-        [Index(15)]
-        public StringValue Delimiter { get; set; }
+        public StringValue Delimiter
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "textPr");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
+            builder.AddElement<TextProperties>()
+.AddAttribute(0, "prompt", a => a.Prompt)
+.AddAttribute(0, "fileType", a => a.FileType)
+.AddAttribute(0, "codePage", a => a.CodePage)
+.AddAttribute(0, "characterSet", a => a.TextCharacterSet)
+.AddAttribute(0, "firstRow", a => a.FirstRow)
+.AddAttribute(0, "sourceFile", a => a.SourceFile)
+.AddAttribute(0, "delimited", a => a.Delimited)
+.AddAttribute(0, "decimal", a => a.Decimal)
+.AddAttribute(0, "thousands", a => a.Thousands)
+.AddAttribute(0, "tab", a => a.TabAsDelimiter)
+.AddAttribute(0, "space", a => a.Space)
+.AddAttribute(0, "comma", a => a.Comma)
+.AddAttribute(0, "semicolon", a => a.Semicolon)
+.AddAttribute(0, "consecutive", a => a.Consecutive)
+.AddAttribute(0, "qualifier", a => a.Qualifier)
+.AddAttribute(0, "delimiter", a => a.Delimiter);
+        }
 
         /// <summary>
         /// <para>TextFields.</para>
@@ -2786,8 +3285,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelTextPr.</para>
     /// </summary>
-    [SchemaAttr(71, "modelTextPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ModelTextProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -2801,9 +3298,20 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>headers, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: headers</para>
         /// </summary>
-        [SchemaAttr(0, "headers")]
-        [Index(0)]
-        public BooleanValue Headers { get; set; }
+        public BooleanValue Headers
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "modelTextPr");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<ModelTextProperties>()
+.AddAttribute(0, "headers", a => a.Headers);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModelTextProperties>(deep);
@@ -2814,8 +3322,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:rangePr.</para>
     /// </summary>
-    [SchemaAttr(71, "rangePr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class RangeProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -2829,10 +3335,23 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>sourceName, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sourceName</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "sourceName")]
-        [Index(0)]
-        public StringValue SourceName { get; set; }
+        public StringValue SourceName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "rangePr");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<RangeProperties>()
+.AddAttribute(0, "sourceName", a => a.SourceName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RangeProperties>(deep);
@@ -2850,10 +3369,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DbCommand &lt;x15:dbCommand></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DbTables), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(DbCommand), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "oledbPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class OleDbPrpoperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2891,9 +3406,22 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>connection, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: connection</para>
         /// </summary>
-        [SchemaAttr(0, "connection")]
-        [Index(0)]
-        public StringValue Connection { get; set; }
+        public StringValue Connection
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "oledbPr");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DbTables>();
+            builder.AddChild<DbCommand>();
+            builder.AddElement<OleDbPrpoperties>()
+.AddAttribute(0, "connection", a => a.Connection);
+        }
 
         /// <summary>
         /// <para>DbTables.</para>
@@ -2944,9 +3472,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DbTables &lt;x15:dbTables></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DbTables), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "dataFeedPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DataFeedProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2984,10 +3509,24 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>connection, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: connection</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "connection")]
-        [Index(0)]
-        public StringValue Connection { get; set; }
+        public StringValue Connection
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "dataFeedPr");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DbTables>();
+            builder.AddElement<DataFeedProperties>()
+.AddAttribute(0, "connection", a => a.Connection, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <summary>
         /// <para>DbTables.</para>
@@ -3018,8 +3557,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:activeTabTopLevelEntity.</para>
     /// </summary>
-    [SchemaAttr(71, "activeTabTopLevelEntity")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class FieldListActiveTabTopLevelEntity : OpenXmlLeafElement
     {
         /// <summary>
@@ -3033,18 +3570,34 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(1)]
-        public UInt32Value Type { get; set; }
+        public UInt32Value Type
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "activeTabTopLevelEntity");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<FieldListActiveTabTopLevelEntity>()
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "type", a => a.Type);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldListActiveTabTopLevelEntity>(deep);
@@ -3061,9 +3614,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension))]
-    [SchemaAttr(71, "extLst")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3097,6 +3647,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "extLst");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new CompositeParticle(ParticleType.Group, 0, 1)
@@ -3119,8 +3677,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:cachedUniqueName.</para>
     /// </summary>
-    [SchemaAttr(71, "cachedUniqueName")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class CachedUniqueName : OpenXmlLeafElement
     {
         /// <summary>
@@ -3134,19 +3690,37 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>index, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: index</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "index")]
-        [Index(0)]
-        public UInt32Value Index { get; set; }
+        public UInt32Value Index
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "cachedUniqueName");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<CachedUniqueName>()
+.AddAttribute(0, "index", a => a.Index, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedUniqueName>(deep);
@@ -3157,8 +3731,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelTable.</para>
     /// </summary>
-    [SchemaAttr(71, "modelTable")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ModelTable : OpenXmlLeafElement
     {
         /// <summary>
@@ -3172,28 +3744,51 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>id, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "id")]
-        [Index(0)]
-        public StringValue Id { get; set; }
+        public StringValue Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>connection, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: connection</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "connection")]
-        [Index(2)]
-        public StringValue Connection { get; set; }
+        public StringValue Connection
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "modelTable");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<ModelTable>()
+.AddAttribute(0, "id", a => a.Id, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "connection", a => a.Connection, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModelTable>(deep);
@@ -3204,8 +3799,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelRelationship.</para>
     /// </summary>
-    [SchemaAttr(71, "modelRelationship")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ModelRelationship : OpenXmlLeafElement
     {
         /// <summary>
@@ -3219,37 +3812,65 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>fromTable, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: fromTable</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "fromTable")]
-        [Index(0)]
-        public StringValue FromTable { get; set; }
+        public StringValue FromTable
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fromColumn, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: fromColumn</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "fromColumn")]
-        [Index(1)]
-        public StringValue FromColumn { get; set; }
+        public StringValue FromColumn
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>toTable, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: toTable</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "toTable")]
-        [Index(2)]
-        public StringValue ToTable { get; set; }
+        public StringValue ToTable
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>toColumn, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: toColumn</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "toColumn")]
-        [Index(3)]
-        public StringValue ToColumn { get; set; }
+        public StringValue ToColumn
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "modelRelationship");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<ModelRelationship>()
+.AddAttribute(0, "fromTable", a => a.FromTable, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "fromColumn", a => a.FromColumn, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "toTable", a => a.ToTable, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "toColumn", a => a.ToColumn, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModelRelationship>(deep);
@@ -3266,9 +3887,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ModelTable &lt;x15:modelTable></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ModelTable), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "modelTables")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ModelTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3302,6 +3920,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "modelTables");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<ModelTable>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ModelTable), 1, 0, version: FileFormatVersions.Office2013)
@@ -3324,9 +3950,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ModelRelationship &lt;x15:modelRelationship></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ModelRelationship), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "modelRelationships")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ModelRelationships : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3360,6 +3983,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "modelRelationships");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<ModelRelationship>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship), 1, 0, version: FileFormatVersions.Office2013)
@@ -3383,10 +4014,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>PivotValueCellExtra &lt;x15:x></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Xstring), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(PivotValueCellExtra), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "c")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotValueCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3424,17 +4051,33 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>i, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        [SchemaAttr(0, "i")]
-        [Index(0)]
-        public UInt32Value Item { get; set; }
+        public UInt32Value Item
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>t, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        [SchemaAttr(0, "t")]
-        [Index(1)]
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.SXVCellType> Text { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.SXVCellType> Text
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.SXVCellType>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "c");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<Xstring>();
+            builder.AddChild<PivotValueCellExtra>();
+            builder.AddElement<PivotValueCell>()
+.AddAttribute(0, "i", a => a.Item)
+.AddAttribute(0, "t", a => a.Text);
+        }
 
         /// <summary>
         /// <para>Xstring.</para>
@@ -3479,8 +4122,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:v.</para>
     /// </summary>
-    [SchemaAttr(71, "v")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Xstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3503,6 +4144,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             return new StringValue { InnerText = text };
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "v");
+            builder.Availability = FileFormatVersions.Office2013;
+        }
+
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Xstring>(deep);
     }
@@ -3512,8 +4160,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:x.</para>
     /// </summary>
-    [SchemaAttr(71, "x")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotValueCellExtra : OpenXmlLeafElement
     {
         /// <summary>
@@ -3527,59 +4173,92 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>in, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: in</para>
         /// </summary>
-        [SchemaAttr(0, "in")]
-        [Index(0)]
-        public UInt32Value FormatIndex { get; set; }
+        public UInt32Value FormatIndex
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bc, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bc</para>
         /// </summary>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(0, "bc")]
-        [Index(1)]
-        public HexBinaryValue BackgroundColor { get; set; }
+        public HexBinaryValue BackgroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>fc, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: fc</para>
         /// </summary>
-        [StringValidator(Length = 4L)]
-        [SchemaAttr(0, "fc")]
-        [Index(2)]
-        public HexBinaryValue ForegroundColor { get; set; }
+        public HexBinaryValue ForegroundColor
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>i, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        [SchemaAttr(0, "i")]
-        [Index(3)]
-        public BooleanValue Italic { get; set; }
+        public BooleanValue Italic
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>un, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: un</para>
         /// </summary>
-        [SchemaAttr(0, "un")]
-        [Index(4)]
-        public BooleanValue Underline { get; set; }
+        public BooleanValue Underline
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>st, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        [SchemaAttr(0, "st")]
-        [Index(5)]
-        public BooleanValue Strikethrough { get; set; }
+        public BooleanValue Strikethrough
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>b, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        [SchemaAttr(0, "b")]
-        [Index(6)]
-        public BooleanValue Bold { get; set; }
+        public BooleanValue Bold
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "x");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<PivotValueCellExtra>()
+.AddAttribute(0, "in", a => a.FormatIndex)
+.AddAttribute(0, "bc", a => a.BackgroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "fc", a => a.ForegroundColor, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+})
+.AddAttribute(0, "i", a => a.Italic)
+.AddAttribute(0, "un", a => a.Underline)
+.AddAttribute(0, "st", a => a.Strikethrough)
+.AddAttribute(0, "b", a => a.Bold);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotValueCellExtra>(deep);
@@ -3596,9 +4275,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ServerFormat &lt;x15:serverFormat></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ServerFormat), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "pivotTableServerFormats")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotTableServerFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3636,10 +4312,24 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>count, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "count")]
-        [Index(0)]
-        public UInt32Value Count { get; set; }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotTableServerFormats");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<ServerFormat>();
+            builder.AddElement<PivotTableServerFormats>()
+.AddAttribute(0, "count", a => a.Count, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -3657,8 +4347,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:serverFormat.</para>
     /// </summary>
-    [SchemaAttr(71, "serverFormat")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class ServerFormat : OpenXmlLeafElement
     {
         /// <summary>
@@ -3672,17 +4360,31 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>Culture</para>
         /// <para>Represents the following attribute in the schema: culture</para>
         /// </summary>
-        [SchemaAttr(0, "culture")]
-        [Index(0)]
-        public StringValue Culture { get; set; }
+        public StringValue Culture
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Format</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        [SchemaAttr(0, "format")]
-        [Index(1)]
-        public StringValue Format { get; set; }
+        public StringValue Format
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "serverFormat");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<ServerFormat>()
+.AddAttribute(0, "culture", a => a.Culture)
+.AddAttribute(0, "format", a => a.Format);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ServerFormat>(deep);
@@ -3693,8 +4395,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:slicerCacheOlapLevelName.</para>
     /// </summary>
-    [SchemaAttr(71, "slicerCacheOlapLevelName")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SlicerCacheOlapLevelName : OpenXmlLeafElement
     {
         /// <summary>
@@ -3708,19 +4408,37 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>uniqueName, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "uniqueName")]
-        [Index(0)]
-        public StringValue UniqueName { get; set; }
+        public StringValue UniqueName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>count, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "count")]
-        [Index(1)]
-        public UInt32Value Count { get; set; }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "slicerCacheOlapLevelName");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<SlicerCacheOlapLevelName>()
+.AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "count", a => a.Count, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerCacheOlapLevelName>(deep);
@@ -3737,8 +4455,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(71, "surveyPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -3772,6 +4488,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "surveyPr");
+            builder.Availability = FileFormatVersions.Office2013;
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -3794,8 +4517,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(71, "titlePr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -3829,6 +4550,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "titlePr");
+            builder.Availability = FileFormatVersions.Office2013;
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -3851,8 +4579,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(71, "descriptionPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -3886,6 +4612,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "descriptionPr");
+            builder.Availability = FileFormatVersions.Office2013;
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -3908,8 +4641,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(71, "questionsPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -3943,6 +4674,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "questionsPr");
+            builder.Availability = FileFormatVersions.Office2013;
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -3965,8 +4703,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(71, "questionPr")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class QuestionPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4000,6 +4736,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "questionPr");
+            builder.Availability = FileFormatVersions.Office2013;
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -4022,7 +4765,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
     public abstract partial class OpenXmlSurveyElementPrElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4060,65 +4802,96 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>cssClass, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cssClass</para>
         /// </summary>
-        [SchemaAttr(0, "cssClass")]
-        [Index(0)]
-        public StringValue CssClass { get; set; }
+        public StringValue CssClass
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>bottom, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bottom</para>
         /// </summary>
-        [SchemaAttr(0, "bottom")]
-        [Index(1)]
-        public Int32Value Bottom { get; set; }
+        public Int32Value Bottom
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>top, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: top</para>
         /// </summary>
-        [SchemaAttr(0, "top")]
-        [Index(2)]
-        public Int32Value Top { get; set; }
+        public Int32Value Top
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>left, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: left</para>
         /// </summary>
-        [SchemaAttr(0, "left")]
-        [Index(3)]
-        public Int32Value Left { get; set; }
+        public Int32Value Left
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>right, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: right</para>
         /// </summary>
-        [SchemaAttr(0, "right")]
-        [Index(4)]
-        public Int32Value Right { get; set; }
+        public Int32Value Right
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>width, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        [SchemaAttr(0, "width")]
-        [Index(5)]
-        public UInt32Value Width { get; set; }
+        public UInt32Value Width
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>height, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: height</para>
         /// </summary>
-        [SchemaAttr(0, "height")]
-        [Index(6)]
-        public UInt32Value Height { get; set; }
+        public UInt32Value Height
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>position, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        [SchemaAttr(0, "position")]
-        [Index(7)]
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.SurveyPosition> Position { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.SurveyPosition> Position
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.SurveyPosition>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<OpenXmlSurveyElementPrElement>()
+.AddAttribute(0, "cssClass", a => a.CssClass)
+.AddAttribute(0, "bottom", a => a.Bottom)
+.AddAttribute(0, "top", a => a.Top)
+.AddAttribute(0, "left", a => a.Left)
+.AddAttribute(0, "right", a => a.Right)
+.AddAttribute(0, "width", a => a.Width)
+.AddAttribute(0, "height", a => a.Height)
+.AddAttribute(0, "position", a => a.Position);
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -4146,10 +4919,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>SurveyQuestion &lt;x15:question></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(QuestionsPrSurveyElementPr), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(SurveyQuestion), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "questions")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SurveyQuestions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4181,6 +4950,15 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SurveyQuestions(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "questions");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<QuestionsPrSurveyElementPr>();
+            builder.AddChild<SurveyQuestion>();
         }
 
         /// <summary>
@@ -4220,10 +4998,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(QuestionPrSurveyElementPr), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "question")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SurveyQuestion : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4261,74 +5035,113 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>binding, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: binding</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "binding")]
-        [Index(0)]
-        public UInt32Value Binding { get; set; }
+        public UInt32Value Binding
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>text, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: text</para>
         /// </summary>
-        [SchemaAttr(0, "text")]
-        [Index(1)]
-        public StringValue Text { get; set; }
+        public StringValue Text
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>type, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        [SchemaAttr(0, "type")]
-        [Index(2)]
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.QuestionType> Type { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.QuestionType> Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.QuestionType>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>format, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        [SchemaAttr(0, "format")]
-        [Index(3)]
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.QuestionFormat> Format { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Excel.QuestionFormat> Format
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Excel.QuestionFormat>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>helpText, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: helpText</para>
         /// </summary>
-        [SchemaAttr(0, "helpText")]
-        [Index(4)]
-        public StringValue HelpText { get; set; }
+        public StringValue HelpText
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>required, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: required</para>
         /// </summary>
-        [SchemaAttr(0, "required")]
-        [Index(5)]
-        public BooleanValue Required { get; set; }
+        public BooleanValue Required
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>defaultValue, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: defaultValue</para>
         /// </summary>
-        [SchemaAttr(0, "defaultValue")]
-        [Index(6)]
-        public StringValue DefaultValue { get; set; }
+        public StringValue DefaultValue
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>decimalPlaces, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: decimalPlaces</para>
         /// </summary>
-        [SchemaAttr(0, "decimalPlaces")]
-        [Index(7)]
-        public UInt32Value DecimalPlaces { get; set; }
+        public UInt32Value DecimalPlaces
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>rowSource, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rowSource</para>
         /// </summary>
-        [SchemaAttr(0, "rowSource")]
-        [Index(8)]
-        public StringValue RowSource { get; set; }
+        public StringValue RowSource
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "question");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<QuestionPrSurveyElementPr>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<SurveyQuestion>()
+.AddAttribute(0, "binding", a => a.Binding, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "text", a => a.Text)
+.AddAttribute(0, "type", a => a.Type)
+.AddAttribute(0, "format", a => a.Format)
+.AddAttribute(0, "helpText", a => a.HelpText)
+.AddAttribute(0, "required", a => a.Required)
+.AddAttribute(0, "defaultValue", a => a.DefaultValue)
+.AddAttribute(0, "decimalPlaces", a => a.DecimalPlaces)
+.AddAttribute(0, "rowSource", a => a.RowSource);
+        }
 
         /// <summary>
         /// <para>QuestionPrSurveyElementPr.</para>
@@ -4379,9 +5192,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "timeline")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class Timeline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4419,93 +5229,143 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(0)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>cache, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cache</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "cache")]
-        [Index(1)]
-        public StringValue Cache { get; set; }
+        public StringValue Cache
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>caption, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: caption</para>
         /// </summary>
-        [SchemaAttr(0, "caption")]
-        [Index(2)]
-        public StringValue Caption { get; set; }
+        public StringValue Caption
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showHeader, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showHeader</para>
         /// </summary>
-        [SchemaAttr(0, "showHeader")]
-        [Index(3)]
-        public BooleanValue ShowHeader { get; set; }
+        public BooleanValue ShowHeader
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showSelectionLabel, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showSelectionLabel</para>
         /// </summary>
-        [SchemaAttr(0, "showSelectionLabel")]
-        [Index(4)]
-        public BooleanValue ShowSelectionLabel { get; set; }
+        public BooleanValue ShowSelectionLabel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showTimeLevel, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showTimeLevel</para>
         /// </summary>
-        [SchemaAttr(0, "showTimeLevel")]
-        [Index(5)]
-        public BooleanValue ShowTimeLevel { get; set; }
+        public BooleanValue ShowTimeLevel
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>showHorizontalScrollbar, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showHorizontalScrollbar</para>
         /// </summary>
-        [SchemaAttr(0, "showHorizontalScrollbar")]
-        [Index(6)]
-        public BooleanValue ShowHorizontalScrollbar { get; set; }
+        public BooleanValue ShowHorizontalScrollbar
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>level, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: level</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "level")]
-        [Index(7)]
-        public UInt32Value Level { get; set; }
+        public UInt32Value Level
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>selectionLevel, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: selectionLevel</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "selectionLevel")]
-        [Index(8)]
-        public UInt32Value SelectionLevel { get; set; }
+        public UInt32Value SelectionLevel
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>scrollPosition, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scrollPosition</para>
         /// </summary>
-        [SchemaAttr(0, "scrollPosition")]
-        [Index(9)]
-        public DateTimeValue ScrollPosition { get; set; }
+        public DateTimeValue ScrollPosition
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>style, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
-        [SchemaAttr(0, "style")]
-        [Index(10)]
-        public StringValue Style { get; set; }
+        public StringValue Style
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "timeline");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<Timeline>()
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "cache", a => a.Cache, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "caption", a => a.Caption)
+.AddAttribute(0, "showHeader", a => a.ShowHeader)
+.AddAttribute(0, "showSelectionLabel", a => a.ShowSelectionLabel)
+.AddAttribute(0, "showTimeLevel", a => a.ShowTimeLevel)
+.AddAttribute(0, "showHorizontalScrollbar", a => a.ShowHorizontalScrollbar)
+.AddAttribute(0, "level", a => a.Level, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "selectionLevel", a => a.SelectionLevel, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "scrollPosition", a => a.ScrollPosition)
+.AddAttribute(0, "style", a => a.Style);
+        }
 
         /// <summary>
         /// <para>ExtensionList.</para>
@@ -4542,8 +5402,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTable.</para>
     /// </summary>
-    [SchemaAttr(71, "pivotTable")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineCachePivotTable : OpenXmlLeafElement
     {
         /// <summary>
@@ -4557,19 +5415,37 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>tabId, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tabId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "tabId")]
-        [Index(0)]
-        public UInt32Value TabId { get; set; }
+        public UInt32Value TabId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>name, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "name")]
-        [Index(1)]
-        public StringValue Name { get; set; }
+        public StringValue Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotTable");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddElement<TimelineCachePivotTable>()
+.AddAttribute(0, "tabId", a => a.TabId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "name", a => a.Name, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimelineCachePivotTable>(deep);
@@ -4580,8 +5456,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:selection.</para>
     /// </summary>
-    [SchemaAttr(71, "selection")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class SelectionTimelineRange : TimelineRange
     {
         /// <summary>
@@ -4589,6 +5463,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </summary>
         public SelectionTimelineRange() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "selection");
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -4600,8 +5481,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:bounds.</para>
     /// </summary>
-    [SchemaAttr(71, "bounds")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class BoundsTimelineRange : TimelineRange
     {
         /// <summary>
@@ -4609,6 +5488,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </summary>
         public BoundsTimelineRange() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "bounds");
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
@@ -4633,19 +5519,35 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>startDate, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: startDate</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "startDate")]
-        [Index(0)]
-        public DateTimeValue StartDate { get; set; }
+        public DateTimeValue StartDate
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>endDate, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: endDate</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "endDate")]
-        [Index(1)]
-        public DateTimeValue EndDate { get; set; }
+        public DateTimeValue EndDate
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TimelineRange>()
+                           .AddAttribute(0, "startDate", a => a.StartDate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           })
+                           .AddAttribute(0, "endDate", a => a.EndDate, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -4661,11 +5563,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-    [SchemaAttr(71, "autoFilter")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class AutoFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4703,9 +5600,23 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>Cell or Range Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
-        [SchemaAttr(0, "ref")]
-        [Index(0)]
-        public StringValue Reference { get; set; }
+        public StringValue Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "autoFilter");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddElement<AutoFilter>()
+.AddAttribute(0, "ref", a => a.Reference);
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
@@ -4731,9 +5642,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>TimelineCachePivotTable &lt;x15:pivotTable></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(TimelineCachePivotTable), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "pivotTables")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineCachePivotTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4767,6 +5675,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotTables");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<TimelineCachePivotTable>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable), 1, 0, version: FileFormatVersions.Office2013)
@@ -4792,12 +5708,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>ExtensionList &lt;x15:extLst></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SelectionTimelineRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(BoundsTimelineRange), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(MovingPeriodState), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "state")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class TimelineState : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4835,69 +5745,113 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>singleRangeFilterState, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: singleRangeFilterState</para>
         /// </summary>
-        [SchemaAttr(0, "singleRangeFilterState")]
-        [Index(0)]
-        public BooleanValue SingleRangeFilterState { get; set; }
+        public BooleanValue SingleRangeFilterState
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>minimalRefreshVersion, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: minimalRefreshVersion</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "minimalRefreshVersion")]
-        [Index(1)]
-        public UInt32Value MinimalRefreshVersion { get; set; }
+        public UInt32Value MinimalRefreshVersion
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>lastRefreshVersion, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: lastRefreshVersion</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "lastRefreshVersion")]
-        [Index(2)]
-        public UInt32Value LastRefreshVersion { get; set; }
+        public UInt32Value LastRefreshVersion
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>pivotCacheId, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pivotCacheId</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "pivotCacheId")]
-        [Index(3)]
-        public UInt32Value PivotCacheId { get; set; }
+        public UInt32Value PivotCacheId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>filterType, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: filterType</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "filterType")]
-        [Index(4)]
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues> FilterType { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues> FilterType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues>>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>filterId, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: filterId</para>
         /// </summary>
-        [SchemaAttr(0, "filterId")]
-        [Index(5)]
-        public UInt32Value FilterId { get; set; }
+        public UInt32Value FilterId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>filterTabId, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: filterTabId</para>
         /// </summary>
-        [SchemaAttr(0, "filterTabId")]
-        [Index(6)]
-        public UInt32Value FilterTabId { get; set; }
+        public UInt32Value FilterTabId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>filterPivotName, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: filterPivotName</para>
         /// </summary>
-        [SchemaAttr(0, "filterPivotName")]
-        [Index(7)]
-        public StringValue FilterPivotName { get; set; }
+        public StringValue FilterPivotName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "state");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<SelectionTimelineRange>();
+            builder.AddChild<BoundsTimelineRange>();
+            builder.AddChild<MovingPeriodState>();
+            builder.AddChild<ExtensionList>();
+            builder.AddElement<TimelineState>()
+.AddAttribute(0, "singleRangeFilterState", a => a.SingleRangeFilterState)
+.AddAttribute(0, "minimalRefreshVersion", a => a.MinimalRefreshVersion, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "lastRefreshVersion", a => a.LastRefreshVersion, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "filterType", a => a.FilterType, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+})
+.AddAttribute(0, "filterId", a => a.FilterId)
+.AddAttribute(0, "filterTabId", a => a.FilterTabId)
+.AddAttribute(0, "filterPivotName", a => a.FilterPivotName);
+        }
 
         /// <summary>
         /// <para>SelectionTimelineRange.</para>
@@ -4976,9 +5930,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description>PivotValueCell &lt;x15:c></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PivotValueCell), FileFormatVersions.Office2013)]
-    [SchemaAttr(71, "pivotRow")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class PivotRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5016,18 +5967,35 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>r, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        [SchemaAttr(0, "r")]
-        [Index(0)]
-        public UInt32Value Reference { get; set; }
+        public UInt32Value Reference
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>count, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
-        [RequiredValidator()]
-        [SchemaAttr(0, "count")]
-        [Index(1)]
-        public UInt32Value Count { get; set; }
+        public UInt32Value Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(71, "pivotRow");
+            builder.Availability = FileFormatVersions.Office2013;
+            builder.AddChild<PivotValueCell>();
+            builder.AddElement<PivotRow>()
+.AddAttribute(0, "r", a => a.Reference)
+.AddAttribute(0, "count", a => a.Count, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {

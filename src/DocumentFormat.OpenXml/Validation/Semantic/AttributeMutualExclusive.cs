@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 attributes += "," + GetAttributeQualifiedName(element, attribute);
 
-                if (element.Attributes[attribute].HasValue)
+                if (element.ParsedState.Attributes[attribute].HasValue)
                 {
                     if (!string.IsNullOrEmpty(existAttribute2))
                     {

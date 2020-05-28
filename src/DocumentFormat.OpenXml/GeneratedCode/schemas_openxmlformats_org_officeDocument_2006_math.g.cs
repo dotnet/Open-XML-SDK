@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -17,8 +18,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:scr.</para>
     /// </summary>
-    [SchemaAttr(21, "scr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Script : OpenXmlLeafElement
     {
         /// <summary>
@@ -35,10 +34,22 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "scr");
+            builder.AddElement<Script>()
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Script>(deep);
@@ -49,8 +60,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sty.</para>
     /// </summary>
-    [SchemaAttr(21, "sty")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Style : OpenXmlLeafElement
     {
         /// <summary>
@@ -67,10 +76,22 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sty");
+            builder.AddElement<Style>()
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
@@ -121,43 +142,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Text &lt;m:t></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RunProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Break))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Text))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedText))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldCode))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.NoBreakHyphen))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SoftHyphen))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DayShort))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MonthShort))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.YearShort))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DayLong))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MonthLong))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.YearLong))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.AnnotationReferenceMark))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.FootnoteReferenceMark))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.EndnoteReferenceMark))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SeparatorMark))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContinuationSeparatorMark))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SymbolChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PageNumber))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CarriageReturn))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TabChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.EmbeddedObject))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Ruby))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.FootnoteReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.EndnoteReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentReference))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Drawing))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PositionalTab))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak))]
-    [ChildElementInfo(typeof(Text))]
-    [SchemaAttr(21, "r")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
@@ -189,6 +173,47 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Run(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "r");
+            builder.AddChild<RunProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Break>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Text>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedText>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldCode>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoBreakHyphen>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SoftHyphen>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DayShort>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MonthShort>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.YearShort>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DayLong>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MonthLong>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.YearLong>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AnnotationReferenceMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteReferenceMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteReferenceMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SeparatorMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContinuationSeparatorMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SymbolChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CarriageReturn>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TabChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EmbeddedObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldChar>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Ruby>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PositionalTab>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak>();
+            builder.AddChild<Text>();
         }
 
         /// <summary>
@@ -289,10 +314,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AccentProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "acc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Accent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -324,6 +345,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Accent(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "acc");
+            builder.AddChild<AccentProperties>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -376,10 +405,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BarProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "bar")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Bar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -411,6 +436,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Bar(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "bar");
+            builder.AddChild<BarProperties>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -463,10 +496,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BoxProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "box")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
@@ -498,6 +527,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Box(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "box");
+            builder.AddChild<BoxProperties>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -550,10 +587,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BorderBoxProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "borderBox")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BorderBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -585,6 +618,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BorderBox(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "borderBox");
+            builder.AddChild<BorderBoxProperties>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -637,10 +678,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DelimiterProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "d")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Delimiter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -672,6 +709,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Delimiter(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "d");
+            builder.AddChild<DelimiterProperties>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -711,10 +756,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(EquationArrayProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "eqArr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EquationArray : OpenXmlCompositeElement
     {
         /// <summary>
@@ -746,6 +787,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public EquationArray(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "eqArr");
+            builder.AddChild<EquationArrayProperties>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -786,11 +835,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Denominator &lt;m:den></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FractionProperties))]
-    [ChildElementInfo(typeof(Numerator))]
-    [ChildElementInfo(typeof(Denominator))]
-    [SchemaAttr(21, "f")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Fraction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -822,6 +866,15 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Fraction(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "f");
+            builder.AddChild<FractionProperties>();
+            builder.AddChild<Numerator>();
+            builder.AddChild<Denominator>();
         }
 
         /// <summary>
@@ -889,11 +942,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FunctionProperties))]
-    [ChildElementInfo(typeof(FunctionName))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "func")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MathFunction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -925,6 +973,15 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MathFunction(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "func");
+            builder.AddChild<FunctionProperties>();
+            builder.AddChild<FunctionName>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -991,10 +1048,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(GroupCharProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "groupChr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupChar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1026,6 +1079,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GroupChar(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "groupChr");
+            builder.AddChild<GroupCharProperties>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -1079,11 +1140,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Limit &lt;m:lim></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LimitLowerProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [ChildElementInfo(typeof(Limit))]
-    [SchemaAttr(21, "limLow")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LimitLower : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1115,6 +1171,15 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LimitLower(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "limLow");
+            builder.AddChild<LimitLowerProperties>();
+            builder.AddChild<Base>();
+            builder.AddChild<Limit>();
         }
 
         /// <summary>
@@ -1182,11 +1247,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Limit &lt;m:lim></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(LimitUpperProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [ChildElementInfo(typeof(Limit))]
-    [SchemaAttr(21, "limUpp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LimitUpper : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1218,6 +1278,15 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LimitUpper(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "limUpp");
+            builder.AddChild<LimitUpperProperties>();
+            builder.AddChild<Base>();
+            builder.AddChild<Limit>();
         }
 
         /// <summary>
@@ -1284,10 +1353,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>MatrixRow &lt;m:mr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MatrixProperties))]
-    [ChildElementInfo(typeof(MatrixRow))]
-    [SchemaAttr(21, "m")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Matrix : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1319,6 +1384,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Matrix(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "m");
+            builder.AddChild<MatrixProperties>();
+            builder.AddChild<MatrixRow>();
         }
 
         /// <summary>
@@ -1360,12 +1433,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(NaryProperties))]
-    [ChildElementInfo(typeof(SubArgument))]
-    [ChildElementInfo(typeof(SuperArgument))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "nary")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Nary : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1397,6 +1464,16 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Nary(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "nary");
+            builder.AddChild<NaryProperties>();
+            builder.AddChild<SubArgument>();
+            builder.AddChild<SuperArgument>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -1477,10 +1554,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PhantomProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "phant")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Phantom : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1512,6 +1585,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Phantom(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "phant");
+            builder.AddChild<PhantomProperties>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -1565,11 +1646,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(RadicalProperties))]
-    [ChildElementInfo(typeof(Degree))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "rad")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Radical : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1601,6 +1677,15 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Radical(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "rad");
+            builder.AddChild<RadicalProperties>();
+            builder.AddChild<Degree>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -1669,12 +1754,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(PreSubSuperProperties))]
-    [ChildElementInfo(typeof(SubArgument))]
-    [ChildElementInfo(typeof(SuperArgument))]
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "sPre")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PreSubSuper : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1706,6 +1785,16 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PreSubSuper(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sPre");
+            builder.AddChild<PreSubSuperProperties>();
+            builder.AddChild<SubArgument>();
+            builder.AddChild<SuperArgument>();
+            builder.AddChild<Base>();
         }
 
         /// <summary>
@@ -1787,11 +1876,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>SubArgument &lt;m:sub></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SubscriptProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [ChildElementInfo(typeof(SubArgument))]
-    [SchemaAttr(21, "sSub")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Subscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1823,6 +1907,15 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Subscript(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sSub");
+            builder.AddChild<SubscriptProperties>();
+            builder.AddChild<Base>();
+            builder.AddChild<SubArgument>();
         }
 
         /// <summary>
@@ -1891,12 +1984,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>SuperArgument &lt;m:sup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SubSuperscriptProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [ChildElementInfo(typeof(SubArgument))]
-    [ChildElementInfo(typeof(SuperArgument))]
-    [SchemaAttr(21, "sSubSup")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SubSuperscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1928,6 +2015,16 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SubSuperscript(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sSubSup");
+            builder.AddChild<SubSuperscriptProperties>();
+            builder.AddChild<Base>();
+            builder.AddChild<SubArgument>();
+            builder.AddChild<SuperArgument>();
         }
 
         /// <summary>
@@ -2009,11 +2106,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>SuperArgument &lt;m:sup></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(SuperscriptProperties))]
-    [ChildElementInfo(typeof(Base))]
-    [ChildElementInfo(typeof(SuperArgument))]
-    [SchemaAttr(21, "sSup")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Superscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2045,6 +2137,15 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Superscript(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sSup");
+            builder.AddChild<SuperscriptProperties>();
+            builder.AddChild<Base>();
+            builder.AddChild<SuperArgument>();
         }
 
         /// <summary>
@@ -2143,42 +2244,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.Run &lt;w:r></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ParagraphProperties))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Run))]
-    [SchemaAttr(21, "oMathPara")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Paragraph : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2210,6 +2275,46 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Paragraph(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "oMathPara");
+            builder.AddChild<ParagraphProperties>();
+            builder.AddChild<OfficeMath>();
+            builder.AddChild<Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
         }
 
         /// <summary>
@@ -2392,64 +2497,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>OfficeMath &lt;m:oMath></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Accent))]
-    [ChildElementInfo(typeof(Bar))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(BorderBox))]
-    [ChildElementInfo(typeof(Delimiter))]
-    [ChildElementInfo(typeof(EquationArray))]
-    [ChildElementInfo(typeof(Fraction))]
-    [ChildElementInfo(typeof(MathFunction))]
-    [ChildElementInfo(typeof(GroupChar))]
-    [ChildElementInfo(typeof(LimitLower))]
-    [ChildElementInfo(typeof(LimitUpper))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Nary))]
-    [ChildElementInfo(typeof(Phantom))]
-    [ChildElementInfo(typeof(Radical))]
-    [ChildElementInfo(typeof(PreSubSuper))]
-    [ChildElementInfo(typeof(Subscript))]
-    [ChildElementInfo(typeof(SubSuperscript))]
-    [ChildElementInfo(typeof(Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [SchemaAttr(21, "oMath")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OfficeMath : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2481,6 +2528,68 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public OfficeMath(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "oMath");
+            builder.AddChild<Accent>();
+            builder.AddChild<Bar>();
+            builder.AddChild<Box>();
+            builder.AddChild<BorderBox>();
+            builder.AddChild<Delimiter>();
+            builder.AddChild<EquationArray>();
+            builder.AddChild<Fraction>();
+            builder.AddChild<MathFunction>();
+            builder.AddChild<GroupChar>();
+            builder.AddChild<LimitLower>();
+            builder.AddChild<LimitUpper>();
+            builder.AddChild<Matrix>();
+            builder.AddChild<Nary>();
+            builder.AddChild<Phantom>();
+            builder.AddChild<Radical>();
+            builder.AddChild<PreSubSuper>();
+            builder.AddChild<Subscript>();
+            builder.AddChild<SubSuperscript>();
+            builder.AddChild<Superscript>();
+            builder.AddChild<Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hyperlink>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<OfficeMath>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -2691,24 +2800,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>NaryLimitLocation &lt;m:naryLim></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MathFont))]
-    [ChildElementInfo(typeof(BreakBinary))]
-    [ChildElementInfo(typeof(BreakBinarySubtraction))]
-    [ChildElementInfo(typeof(SmallFraction))]
-    [ChildElementInfo(typeof(DisplayDefaults))]
-    [ChildElementInfo(typeof(LeftMargin))]
-    [ChildElementInfo(typeof(RightMargin))]
-    [ChildElementInfo(typeof(DefaultJustification))]
-    [ChildElementInfo(typeof(PreSpacing))]
-    [ChildElementInfo(typeof(PostSpacing))]
-    [ChildElementInfo(typeof(InterSpacing))]
-    [ChildElementInfo(typeof(IntraSpacing))]
-    [ChildElementInfo(typeof(WrapIndent))]
-    [ChildElementInfo(typeof(WrapRight))]
-    [ChildElementInfo(typeof(IntegralLimitLocation))]
-    [ChildElementInfo(typeof(NaryLimitLocation))]
-    [SchemaAttr(21, "mathPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MathProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2740,6 +2831,28 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MathProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "mathPr");
+            builder.AddChild<MathFont>();
+            builder.AddChild<BreakBinary>();
+            builder.AddChild<BreakBinarySubtraction>();
+            builder.AddChild<SmallFraction>();
+            builder.AddChild<DisplayDefaults>();
+            builder.AddChild<LeftMargin>();
+            builder.AddChild<RightMargin>();
+            builder.AddChild<DefaultJustification>();
+            builder.AddChild<PreSpacing>();
+            builder.AddChild<PostSpacing>();
+            builder.AddChild<InterSpacing>();
+            builder.AddChild<IntraSpacing>();
+            builder.AddChild<WrapIndent>();
+            builder.AddChild<WrapRight>();
+            builder.AddChild<IntegralLimitLocation>();
+            builder.AddChild<NaryLimitLocation>();
         }
 
         /// <summary>
@@ -2932,8 +3045,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lit.</para>
     /// </summary>
-    [SchemaAttr(21, "lit")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Literal : OnOffType
     {
         /// <summary>
@@ -2941,6 +3052,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public Literal() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "lit");
         }
 
         /// <inheritdoc/>
@@ -2952,8 +3069,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:nor.</para>
     /// </summary>
-    [SchemaAttr(21, "nor")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NormalText : OnOffType
     {
         /// <summary>
@@ -2961,6 +3076,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public NormalText() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "nor");
         }
 
         /// <inheritdoc/>
@@ -2972,8 +3093,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:aln.</para>
     /// </summary>
-    [SchemaAttr(21, "aln")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Alignment : OnOffType
     {
         /// <summary>
@@ -2981,6 +3100,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public Alignment() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "aln");
         }
 
         /// <inheritdoc/>
@@ -2992,8 +3117,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:opEmu.</para>
     /// </summary>
-    [SchemaAttr(21, "opEmu")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class OperatorEmulator : OnOffType
     {
         /// <summary>
@@ -3001,6 +3124,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public OperatorEmulator() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "opEmu");
         }
 
         /// <inheritdoc/>
@@ -3012,8 +3141,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:noBreak.</para>
     /// </summary>
-    [SchemaAttr(21, "noBreak")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NoBreak : OnOffType
     {
         /// <summary>
@@ -3021,6 +3148,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public NoBreak() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "noBreak");
         }
 
         /// <inheritdoc/>
@@ -3032,8 +3165,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:diff.</para>
     /// </summary>
-    [SchemaAttr(21, "diff")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Differential : OnOffType
     {
         /// <summary>
@@ -3041,6 +3172,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public Differential() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "diff");
         }
 
         /// <inheritdoc/>
@@ -3052,8 +3189,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideTop.</para>
     /// </summary>
-    [SchemaAttr(21, "hideTop")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HideTop : OnOffType
     {
         /// <summary>
@@ -3061,6 +3196,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public HideTop() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "hideTop");
         }
 
         /// <inheritdoc/>
@@ -3072,8 +3213,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideBot.</para>
     /// </summary>
-    [SchemaAttr(21, "hideBot")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HideBottom : OnOffType
     {
         /// <summary>
@@ -3081,6 +3220,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public HideBottom() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "hideBot");
         }
 
         /// <inheritdoc/>
@@ -3092,8 +3237,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideLeft.</para>
     /// </summary>
-    [SchemaAttr(21, "hideLeft")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HideLeft : OnOffType
     {
         /// <summary>
@@ -3101,6 +3244,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public HideLeft() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "hideLeft");
         }
 
         /// <inheritdoc/>
@@ -3112,8 +3261,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideRight.</para>
     /// </summary>
-    [SchemaAttr(21, "hideRight")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HideRight : OnOffType
     {
         /// <summary>
@@ -3121,6 +3268,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public HideRight() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "hideRight");
         }
 
         /// <inheritdoc/>
@@ -3132,8 +3285,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeH.</para>
     /// </summary>
-    [SchemaAttr(21, "strikeH")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StrikeHorizontal : OnOffType
     {
         /// <summary>
@@ -3141,6 +3292,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public StrikeHorizontal() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "strikeH");
         }
 
         /// <inheritdoc/>
@@ -3152,8 +3309,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeV.</para>
     /// </summary>
-    [SchemaAttr(21, "strikeV")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StrikeVertical : OnOffType
     {
         /// <summary>
@@ -3161,6 +3316,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public StrikeVertical() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "strikeV");
         }
 
         /// <inheritdoc/>
@@ -3172,8 +3333,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeBLTR.</para>
     /// </summary>
-    [SchemaAttr(21, "strikeBLTR")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StrikeBottomLeftToTopRight : OnOffType
     {
         /// <summary>
@@ -3181,6 +3340,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public StrikeBottomLeftToTopRight() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "strikeBLTR");
         }
 
         /// <inheritdoc/>
@@ -3192,8 +3357,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeTLBR.</para>
     /// </summary>
-    [SchemaAttr(21, "strikeTLBR")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class StrikeTopLeftToBottomRight : OnOffType
     {
         /// <summary>
@@ -3201,6 +3364,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public StrikeTopLeftToBottomRight() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "strikeTLBR");
         }
 
         /// <inheritdoc/>
@@ -3212,8 +3381,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:grow.</para>
     /// </summary>
-    [SchemaAttr(21, "grow")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GrowOperators : OnOffType
     {
         /// <summary>
@@ -3221,6 +3388,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public GrowOperators() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "grow");
         }
 
         /// <inheritdoc/>
@@ -3232,8 +3405,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:maxDist.</para>
     /// </summary>
-    [SchemaAttr(21, "maxDist")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MaxDistribution : OnOffType
     {
         /// <summary>
@@ -3241,6 +3412,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public MaxDistribution() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "maxDist");
         }
 
         /// <inheritdoc/>
@@ -3252,8 +3429,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:objDist.</para>
     /// </summary>
-    [SchemaAttr(21, "objDist")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ObjectDistribution : OnOffType
     {
         /// <summary>
@@ -3261,6 +3436,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public ObjectDistribution() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "objDist");
         }
 
         /// <inheritdoc/>
@@ -3272,8 +3453,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:plcHide.</para>
     /// </summary>
-    [SchemaAttr(21, "plcHide")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HidePlaceholder : OnOffType
     {
         /// <summary>
@@ -3281,6 +3460,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public HidePlaceholder() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "plcHide");
         }
 
         /// <inheritdoc/>
@@ -3292,8 +3477,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:subHide.</para>
     /// </summary>
-    [SchemaAttr(21, "subHide")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HideSubArgument : OnOffType
     {
         /// <summary>
@@ -3301,6 +3484,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public HideSubArgument() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "subHide");
         }
 
         /// <inheritdoc/>
@@ -3312,8 +3501,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:supHide.</para>
     /// </summary>
-    [SchemaAttr(21, "supHide")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HideSuperArgument : OnOffType
     {
         /// <summary>
@@ -3321,6 +3508,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public HideSuperArgument() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "supHide");
         }
 
         /// <inheritdoc/>
@@ -3332,8 +3525,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:show.</para>
     /// </summary>
-    [SchemaAttr(21, "show")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ShowPhantom : OnOffType
     {
         /// <summary>
@@ -3341,6 +3532,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public ShowPhantom() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "show");
         }
 
         /// <inheritdoc/>
@@ -3352,8 +3549,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroWid.</para>
     /// </summary>
-    [SchemaAttr(21, "zeroWid")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ZeroWidth : OnOffType
     {
         /// <summary>
@@ -3361,6 +3556,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public ZeroWidth() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "zeroWid");
         }
 
         /// <inheritdoc/>
@@ -3372,8 +3573,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroAsc.</para>
     /// </summary>
-    [SchemaAttr(21, "zeroAsc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ZeroAscent : OnOffType
     {
         /// <summary>
@@ -3381,6 +3580,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public ZeroAscent() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "zeroAsc");
         }
 
         /// <inheritdoc/>
@@ -3392,8 +3597,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroDesc.</para>
     /// </summary>
-    [SchemaAttr(21, "zeroDesc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ZeroDescent : OnOffType
     {
         /// <summary>
@@ -3401,6 +3604,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public ZeroDescent() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "zeroDesc");
         }
 
         /// <inheritdoc/>
@@ -3412,8 +3621,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:transp.</para>
     /// </summary>
-    [SchemaAttr(21, "transp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Transparent : OnOffType
     {
         /// <summary>
@@ -3421,6 +3628,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public Transparent() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "transp");
         }
 
         /// <inheritdoc/>
@@ -3432,8 +3645,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:degHide.</para>
     /// </summary>
-    [SchemaAttr(21, "degHide")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class HideDegree : OnOffType
     {
         /// <summary>
@@ -3441,6 +3652,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public HideDegree() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "degHide");
         }
 
         /// <inheritdoc/>
@@ -3452,8 +3669,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:alnScr.</para>
     /// </summary>
-    [SchemaAttr(21, "alnScr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AlignScripts : OnOffType
     {
         /// <summary>
@@ -3461,6 +3676,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public AlignScripts() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "alnScr");
         }
 
         /// <inheritdoc/>
@@ -3472,8 +3693,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:smallFrac.</para>
     /// </summary>
-    [SchemaAttr(21, "smallFrac")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SmallFraction : OnOffType
     {
         /// <summary>
@@ -3481,6 +3700,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public SmallFraction() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "smallFrac");
         }
 
         /// <inheritdoc/>
@@ -3492,8 +3717,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:dispDef.</para>
     /// </summary>
-    [SchemaAttr(21, "dispDef")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DisplayDefaults : OnOffType
     {
         /// <summary>
@@ -3501,6 +3724,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public DisplayDefaults() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "dispDef");
         }
 
         /// <inheritdoc/>
@@ -3512,8 +3741,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:wrapRight.</para>
     /// </summary>
-    [SchemaAttr(21, "wrapRight")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WrapRight : OnOffType
     {
         /// <summary>
@@ -3521,6 +3748,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public WrapRight() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "wrapRight");
         }
 
         /// <inheritdoc/>
@@ -3548,9 +3781,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OnOffType>()
+                           .AddAttribute(21, "val", a => a.Val);
+        }
     }
 
     /// <summary>
@@ -3558,8 +3800,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brk.</para>
     /// </summary>
-    [SchemaAttr(21, "brk")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Break : OpenXmlLeafElement
     {
         /// <summary>
@@ -3576,10 +3816,11 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 255L)]
-        [SchemaAttr(21, "alnAt")]
-        [Index(0)]
-        public IntegerValue AlignAt { get; set; }
+        public IntegerValue AlignAt
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
 
         /// <summary>
         /// <para>Index of Operator to Align To</para>
@@ -3588,10 +3829,26 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 255L)]
-        [SchemaAttr(21, "val")]
-        [Index(1)]
-        public IntegerValue Val { get; set; }
+        public IntegerValue Val
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "brk");
+            builder.AddElement<Break>()
+.AddAttribute(21, "alnAt", a => a.AlignAt, aBuilder =>
+{
+   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (255L) });
+})
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (255L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Break>(deep);
@@ -3613,14 +3870,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Alignment &lt;m:aln></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Literal))]
-    [ChildElementInfo(typeof(NormalText))]
-    [ChildElementInfo(typeof(Script))]
-    [ChildElementInfo(typeof(Style))]
-    [ChildElementInfo(typeof(Break))]
-    [ChildElementInfo(typeof(Alignment))]
-    [SchemaAttr(21, "rPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3652,6 +3901,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RunProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "rPr");
+            builder.AddChild<Literal>();
+            builder.AddChild<NormalText>();
+            builder.AddChild<Script>();
+            builder.AddChild<Style>();
+            builder.AddChild<Break>();
+            builder.AddChild<Alignment>();
         }
 
         /// <summary>
@@ -3700,8 +3961,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:t.</para>
     /// </summary>
-    [SchemaAttr(21, "t")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Text : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3731,9 +3990,19 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        [SchemaAttr(1, "space")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "t");
+            builder.AddElement<Text>()
+ .AddAttribute(1, "space", a => a.Space);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
@@ -3744,8 +4013,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:chr.</para>
     /// </summary>
-    [SchemaAttr(21, "chr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AccentChar : CharType
     {
         /// <summary>
@@ -3753,6 +4020,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public AccentChar() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "chr");
         }
 
         /// <inheritdoc/>
@@ -3764,8 +4037,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:begChr.</para>
     /// </summary>
-    [SchemaAttr(21, "begChr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BeginChar : CharType
     {
         /// <summary>
@@ -3773,6 +4044,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public BeginChar() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "begChr");
         }
 
         /// <inheritdoc/>
@@ -3784,8 +4061,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sepChr.</para>
     /// </summary>
-    [SchemaAttr(21, "sepChr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SeparatorChar : CharType
     {
         /// <summary>
@@ -3793,6 +4068,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public SeparatorChar() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sepChr");
         }
 
         /// <inheritdoc/>
@@ -3804,8 +4085,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:endChr.</para>
     /// </summary>
-    [SchemaAttr(21, "endChr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EndChar : CharType
     {
         /// <summary>
@@ -3813,6 +4092,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public EndChar() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "endChr");
         }
 
         /// <inheritdoc/>
@@ -3840,11 +4125,22 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 1L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<CharType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (1L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -3862,13 +4158,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl &lt;w:moveTo></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromMathControl))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl))]
-    [SchemaAttr(21, "ctrlPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ControlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3900,6 +4189,17 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ControlProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "ctrlPr");
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromMathControl>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl>();
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -3953,10 +4253,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AccentChar))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "accPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class AccentProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3988,6 +4284,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public AccentProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "accPr");
+            builder.AddChild<AccentChar>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -4096,8 +4400,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(21, "e")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Base : OfficeMathArgumentType
     {
         /// <summary>
@@ -4129,6 +4431,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Base(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "e");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4383,8 +4691,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(21, "num")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Numerator : OfficeMathArgumentType
     {
         /// <summary>
@@ -4416,6 +4722,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Numerator(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "num");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4670,8 +4982,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(21, "den")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Denominator : OfficeMathArgumentType
     {
         /// <summary>
@@ -4703,6 +5013,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Denominator(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "den");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -4957,8 +5273,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(21, "fName")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FunctionName : OfficeMathArgumentType
     {
         /// <summary>
@@ -4990,6 +5304,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public FunctionName(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "fName");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5244,8 +5564,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(21, "lim")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Limit : OfficeMathArgumentType
     {
         /// <summary>
@@ -5277,6 +5595,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Limit(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "lim");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5531,8 +5855,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(21, "sub")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SubArgument : OfficeMathArgumentType
     {
         /// <summary>
@@ -5564,6 +5886,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SubArgument(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sub");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -5818,8 +6146,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(21, "sup")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SuperArgument : OfficeMathArgumentType
     {
         /// <summary>
@@ -5851,6 +6177,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SuperArgument(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sup");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6105,8 +6437,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [SchemaAttr(21, "deg")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Degree : OfficeMathArgumentType
     {
         /// <summary>
@@ -6138,6 +6468,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public Degree(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "deg");
         }
 
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
@@ -6392,64 +6728,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ArgumentProperties))]
-    [ChildElementInfo(typeof(Accent))]
-    [ChildElementInfo(typeof(Bar))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(BorderBox))]
-    [ChildElementInfo(typeof(Delimiter))]
-    [ChildElementInfo(typeof(EquationArray))]
-    [ChildElementInfo(typeof(Fraction))]
-    [ChildElementInfo(typeof(MathFunction))]
-    [ChildElementInfo(typeof(GroupChar))]
-    [ChildElementInfo(typeof(LimitLower))]
-    [ChildElementInfo(typeof(LimitUpper))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Nary))]
-    [ChildElementInfo(typeof(Phantom))]
-    [ChildElementInfo(typeof(Radical))]
-    [ChildElementInfo(typeof(PreSubSuper))]
-    [ChildElementInfo(typeof(Subscript))]
-    [ChildElementInfo(typeof(SubSuperscript))]
-    [ChildElementInfo(typeof(Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(ControlProperties))]
     public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6483,6 +6761,69 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<ArgumentProperties>();
+            builder.AddChild<Accent>();
+            builder.AddChild<Bar>();
+            builder.AddChild<Box>();
+            builder.AddChild<BorderBox>();
+            builder.AddChild<Delimiter>();
+            builder.AddChild<EquationArray>();
+            builder.AddChild<Fraction>();
+            builder.AddChild<MathFunction>();
+            builder.AddChild<GroupChar>();
+            builder.AddChild<LimitLower>();
+            builder.AddChild<LimitUpper>();
+            builder.AddChild<Matrix>();
+            builder.AddChild<Nary>();
+            builder.AddChild<Phantom>();
+            builder.AddChild<Radical>();
+            builder.AddChild<PreSubSuper>();
+            builder.AddChild<Subscript>();
+            builder.AddChild<SubSuperscript>();
+            builder.AddChild<Superscript>();
+            builder.AddChild<Run>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hyperlink>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
+            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
+            builder.AddChild<Paragraph>();
+            builder.AddChild<OfficeMath>();
+            builder.AddChild<ControlProperties>();
+        }
+
         /// <summary>
         /// <para>Argument Properties.</para>
         /// <para>Represents the following element tag in the schema: m:argPr.</para>
@@ -6502,8 +6843,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:pos.</para>
     /// </summary>
-    [SchemaAttr(21, "pos")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Position : TopBottomType
     {
         /// <summary>
@@ -6511,6 +6850,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public Position() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "pos");
         }
 
         /// <inheritdoc/>
@@ -6522,8 +6867,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:vertJc.</para>
     /// </summary>
-    [SchemaAttr(21, "vertJc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class VerticalJustification : TopBottomType
     {
         /// <summary>
@@ -6531,6 +6874,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public VerticalJustification() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "vertJc");
         }
 
         /// <inheritdoc/>
@@ -6558,10 +6907,21 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TopBottomType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -6576,10 +6936,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "barPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BarProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6611,6 +6967,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BarProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "barPr");
+            builder.AddChild<Position>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -6667,14 +7031,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(OperatorEmulator))]
-    [ChildElementInfo(typeof(NoBreak))]
-    [ChildElementInfo(typeof(Differential))]
-    [ChildElementInfo(typeof(Break))]
-    [ChildElementInfo(typeof(Alignment))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "boxPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BoxProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6706,6 +7062,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BoxProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "boxPr");
+            builder.AddChild<OperatorEmulator>();
+            builder.AddChild<NoBreak>();
+            builder.AddChild<Differential>();
+            builder.AddChild<Break>();
+            builder.AddChild<Alignment>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -6821,17 +7189,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(HideTop))]
-    [ChildElementInfo(typeof(HideBottom))]
-    [ChildElementInfo(typeof(HideLeft))]
-    [ChildElementInfo(typeof(HideRight))]
-    [ChildElementInfo(typeof(StrikeHorizontal))]
-    [ChildElementInfo(typeof(StrikeVertical))]
-    [ChildElementInfo(typeof(StrikeBottomLeftToTopRight))]
-    [ChildElementInfo(typeof(StrikeTopLeftToBottomRight))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "borderBoxPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BorderBoxProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6863,6 +7220,21 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public BorderBoxProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "borderBoxPr");
+            builder.AddChild<HideTop>();
+            builder.AddChild<HideBottom>();
+            builder.AddChild<HideLeft>();
+            builder.AddChild<HideRight>();
+            builder.AddChild<StrikeHorizontal>();
+            builder.AddChild<StrikeVertical>();
+            builder.AddChild<StrikeBottomLeftToTopRight>();
+            builder.AddChild<StrikeTopLeftToBottomRight>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -7006,8 +7378,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:shp.</para>
     /// </summary>
-    [SchemaAttr(21, "shp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Shape : OpenXmlLeafElement
     {
         /// <summary>
@@ -7024,10 +7394,22 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "shp");
+            builder.AddElement<Shape>()
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+   aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
@@ -7049,14 +7431,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BeginChar))]
-    [ChildElementInfo(typeof(SeparatorChar))]
-    [ChildElementInfo(typeof(EndChar))]
-    [ChildElementInfo(typeof(GrowOperators))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "dPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DelimiterProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7088,6 +7462,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public DelimiterProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "dPr");
+            builder.AddChild<BeginChar>();
+            builder.AddChild<SeparatorChar>();
+            builder.AddChild<EndChar>();
+            builder.AddChild<GrowOperators>();
+            builder.AddChild<Shape>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -7189,8 +7575,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:baseJc.</para>
     /// </summary>
-    [SchemaAttr(21, "baseJc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BaseJustification : OpenXmlLeafElement
     {
         /// <summary>
@@ -7207,10 +7591,22 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "baseJc");
+            builder.AddElement<BaseJustification>()
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BaseJustification>(deep);
@@ -7221,8 +7617,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rSpRule.</para>
     /// </summary>
-    [SchemaAttr(21, "rSpRule")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowSpacingRule : SpacingRuleType
     {
         /// <summary>
@@ -7230,6 +7624,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public RowSpacingRule() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "rSpRule");
         }
 
         /// <inheritdoc/>
@@ -7241,8 +7641,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cGpRule.</para>
     /// </summary>
-    [SchemaAttr(21, "cGpRule")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnGapRule : SpacingRuleType
     {
         /// <summary>
@@ -7250,6 +7648,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public ColumnGapRule() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "cGpRule");
         }
 
         /// <inheritdoc/>
@@ -7277,11 +7681,22 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 0L, MaxInclusive = 4L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public IntegerValue Val { get; set; }
+        public IntegerValue Val
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<SpacingRuleType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (4L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -7289,8 +7704,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rSp.</para>
     /// </summary>
-    [SchemaAttr(21, "rSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RowSpacing : UnsignedShortType
     {
         /// <summary>
@@ -7298,6 +7711,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public RowSpacing() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "rSp");
         }
 
         /// <inheritdoc/>
@@ -7309,8 +7728,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cGp.</para>
     /// </summary>
-    [SchemaAttr(21, "cGp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnGap : UnsignedShortType
     {
         /// <summary>
@@ -7318,6 +7735,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public ColumnGap() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "cGp");
         }
 
         /// <inheritdoc/>
@@ -7345,10 +7768,21 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public UInt16Value Val { get; set; }
+        public UInt16Value Val
+        {
+            get => GetAttribute<UInt16Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<UnsignedShortType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -7367,14 +7801,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BaseJustification))]
-    [ChildElementInfo(typeof(MaxDistribution))]
-    [ChildElementInfo(typeof(ObjectDistribution))]
-    [ChildElementInfo(typeof(RowSpacingRule))]
-    [ChildElementInfo(typeof(RowSpacing))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "eqArrPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class EquationArrayProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7406,6 +7832,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public EquationArrayProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "eqArrPr");
+            builder.AddChild<BaseJustification>();
+            builder.AddChild<MaxDistribution>();
+            builder.AddChild<ObjectDistribution>();
+            builder.AddChild<RowSpacingRule>();
+            builder.AddChild<RowSpacing>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -7507,8 +7945,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:type.</para>
     /// </summary>
-    [SchemaAttr(21, "type")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FractionType : OpenXmlLeafElement
     {
         /// <summary>
@@ -7525,10 +7961,22 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "type");
+            builder.AddElement<FractionType>()
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FractionType>(deep);
@@ -7546,10 +7994,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(FractionType))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "fPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FractionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7581,6 +8025,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public FractionProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "fPr");
+            builder.AddChild<FractionType>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -7632,9 +8084,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "funcPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class FunctionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7666,6 +8115,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public FunctionProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "funcPr");
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -7706,12 +8162,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AccentChar))]
-    [ChildElementInfo(typeof(Position))]
-    [ChildElementInfo(typeof(VerticalJustification))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "groupChrPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class GroupCharProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7743,6 +8193,16 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public GroupCharProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "groupChrPr");
+            builder.AddChild<AccentChar>();
+            builder.AddChild<Position>();
+            builder.AddChild<VerticalJustification>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -7822,9 +8282,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "limLowPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LimitLowerProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7856,6 +8313,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public LimitLowerProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "limLowPr");
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -7893,9 +8357,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "limUppPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LimitUpperProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7929,6 +8390,13 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "limUppPr");
+            builder.AddChild<ControlProperties>();
+        }
+
         /// <summary>
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
@@ -7958,8 +8426,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:count.</para>
     /// </summary>
-    [SchemaAttr(21, "count")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MatrixColumnCount : OpenXmlLeafElement
     {
         /// <summary>
@@ -7976,11 +8442,23 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = 1L, MaxInclusive = 64L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public IntegerValue Val { get; set; }
+        public IntegerValue Val
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "count");
+            builder.AddElement<MatrixColumnCount>()
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxInclusive = (64L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixColumnCount>(deep);
@@ -7991,8 +8469,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcJc.</para>
     /// </summary>
-    [SchemaAttr(21, "mcJc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MatrixColumnJustification : OpenXmlLeafElement
     {
         /// <summary>
@@ -8009,10 +8485,22 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "mcJc");
+            builder.AddElement<MatrixColumnJustification>()
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+  aBuilder.AddValidator(new RequiredValidatorAttribute());
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixColumnJustification>(deep);
@@ -8030,10 +8518,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>MatrixColumnJustification &lt;m:mcJc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MatrixColumnCount))]
-    [ChildElementInfo(typeof(MatrixColumnJustification))]
-    [SchemaAttr(21, "mcPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MatrixColumnProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8065,6 +8549,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MatrixColumnProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "mcPr");
+            builder.AddChild<MatrixColumnCount>();
+            builder.AddChild<MatrixColumnJustification>();
         }
 
         /// <summary>
@@ -8116,9 +8608,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>MatrixColumnProperties &lt;m:mcPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MatrixColumnProperties))]
-    [SchemaAttr(21, "mc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MatrixColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8152,6 +8641,13 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "mc");
+            builder.AddChild<MatrixColumnProperties>();
+        }
+
         /// <summary>
         /// <para>Matrix Column Properties.</para>
         /// <para>Represents the following element tag in the schema: m:mcPr.</para>
@@ -8181,8 +8677,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cSp.</para>
     /// </summary>
-    [SchemaAttr(21, "cSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ColumnSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8190,6 +8684,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public ColumnSpacing() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "cSp");
         }
 
         /// <inheritdoc/>
@@ -8201,8 +8701,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lMargin.</para>
     /// </summary>
-    [SchemaAttr(21, "lMargin")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LeftMargin : TwipsMeasureType
     {
         /// <summary>
@@ -8210,6 +8708,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public LeftMargin() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "lMargin");
         }
 
         /// <inheritdoc/>
@@ -8221,8 +8725,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rMargin.</para>
     /// </summary>
-    [SchemaAttr(21, "rMargin")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RightMargin : TwipsMeasureType
     {
         /// <summary>
@@ -8230,6 +8732,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public RightMargin() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "rMargin");
         }
 
         /// <inheritdoc/>
@@ -8241,8 +8749,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:preSp.</para>
     /// </summary>
-    [SchemaAttr(21, "preSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PreSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8250,6 +8756,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public PreSpacing() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "preSp");
         }
 
         /// <inheritdoc/>
@@ -8261,8 +8773,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:postSp.</para>
     /// </summary>
-    [SchemaAttr(21, "postSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PostSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8270,6 +8780,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public PostSpacing() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "postSp");
         }
 
         /// <inheritdoc/>
@@ -8281,8 +8797,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:interSp.</para>
     /// </summary>
-    [SchemaAttr(21, "interSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class InterSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8290,6 +8804,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public InterSpacing() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "interSp");
         }
 
         /// <inheritdoc/>
@@ -8301,8 +8821,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:intraSp.</para>
     /// </summary>
-    [SchemaAttr(21, "intraSp")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class IntraSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8310,6 +8828,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public IntraSpacing() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "intraSp");
         }
 
         /// <inheritdoc/>
@@ -8321,8 +8845,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:wrapIndent.</para>
     /// </summary>
-    [SchemaAttr(21, "wrapIndent")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class WrapIndent : TwipsMeasureType
     {
         /// <summary>
@@ -8330,6 +8852,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public WrapIndent() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "wrapIndent");
         }
 
         /// <inheritdoc/>
@@ -8357,11 +8885,22 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MaxInclusive = 31680L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public UInt32Value Val { get; set; }
+        public UInt32Value Val
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TwipsMeasureType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) });
+                           });
+        }
     }
 
     /// <summary>
@@ -8375,9 +8914,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>MatrixColumn &lt;m:mc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(MatrixColumn))]
-    [SchemaAttr(21, "mcs")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MatrixColumns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8411,6 +8947,13 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "mcs");
+            builder.AddChild<MatrixColumn>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixColumn), 1, 64)
@@ -8441,17 +8984,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(BaseJustification))]
-    [ChildElementInfo(typeof(HidePlaceholder))]
-    [ChildElementInfo(typeof(RowSpacingRule))]
-    [ChildElementInfo(typeof(ColumnGapRule))]
-    [ChildElementInfo(typeof(RowSpacing))]
-    [ChildElementInfo(typeof(ColumnSpacing))]
-    [ChildElementInfo(typeof(ColumnGap))]
-    [ChildElementInfo(typeof(MatrixColumns))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "mPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MatrixProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8483,6 +9015,21 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public MatrixProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "mPr");
+            builder.AddChild<BaseJustification>();
+            builder.AddChild<HidePlaceholder>();
+            builder.AddChild<RowSpacingRule>();
+            builder.AddChild<ColumnGapRule>();
+            builder.AddChild<RowSpacing>();
+            builder.AddChild<ColumnSpacing>();
+            builder.AddChild<ColumnGap>();
+            builder.AddChild<MatrixColumns>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -8632,9 +9179,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Base))]
-    [SchemaAttr(21, "mr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MatrixRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8668,6 +9212,13 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "mr");
+            builder.AddChild<Base>();
+        }
+
         private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 64)
@@ -8684,8 +9235,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLoc.</para>
     /// </summary>
-    [SchemaAttr(21, "limLoc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class LimitLocation : LimitLocationType
     {
         /// <summary>
@@ -8693,6 +9242,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public LimitLocation() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "limLoc");
         }
 
         /// <inheritdoc/>
@@ -8704,8 +9259,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:intLim.</para>
     /// </summary>
-    [SchemaAttr(21, "intLim")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class IntegralLimitLocation : LimitLocationType
     {
         /// <summary>
@@ -8713,6 +9266,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public IntegralLimitLocation() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "intLim");
         }
 
         /// <inheritdoc/>
@@ -8724,8 +9283,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:naryLim.</para>
     /// </summary>
-    [SchemaAttr(21, "naryLim")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NaryLimitLocation : LimitLocationType
     {
         /// <summary>
@@ -8733,6 +9290,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public NaryLimitLocation() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "naryLim");
         }
 
         /// <inheritdoc/>
@@ -8760,10 +9323,21 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LimitLocationType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -8782,14 +9356,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AccentChar))]
-    [ChildElementInfo(typeof(LimitLocation))]
-    [ChildElementInfo(typeof(GrowOperators))]
-    [ChildElementInfo(typeof(HideSubArgument))]
-    [ChildElementInfo(typeof(HideSuperArgument))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "naryPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class NaryProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8821,6 +9387,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public NaryProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "naryPr");
+            builder.AddChild<AccentChar>();
+            builder.AddChild<LimitLocation>();
+            builder.AddChild<GrowOperators>();
+            builder.AddChild<HideSubArgument>();
+            builder.AddChild<HideSuperArgument>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -8933,14 +9511,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ShowPhantom))]
-    [ChildElementInfo(typeof(ZeroWidth))]
-    [ChildElementInfo(typeof(ZeroAscent))]
-    [ChildElementInfo(typeof(ZeroDescent))]
-    [ChildElementInfo(typeof(Transparent))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "phantPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PhantomProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8972,6 +9542,18 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PhantomProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "phantPr");
+            builder.AddChild<ShowPhantom>();
+            builder.AddChild<ZeroWidth>();
+            builder.AddChild<ZeroAscent>();
+            builder.AddChild<ZeroDescent>();
+            builder.AddChild<Transparent>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -9080,10 +9662,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(HideDegree))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "radPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class RadicalProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9115,6 +9693,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public RadicalProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "radPr");
+            builder.AddChild<HideDegree>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -9166,9 +9752,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "sPrePr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class PreSubSuperProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9200,6 +9783,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public PreSubSuperProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sPrePr");
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -9237,9 +9827,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "sSubPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SubscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9271,6 +9858,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SubscriptProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sSubPr");
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -9309,10 +9903,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(AlignScripts))]
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "sSubSupPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9344,6 +9934,14 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public SubSuperscriptProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sSubSupPr");
+            builder.AddChild<AlignScripts>();
+            builder.AddChild<ControlProperties>();
         }
 
         /// <summary>
@@ -9395,9 +9993,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ControlProperties))]
-    [SchemaAttr(21, "sSupPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class SuperscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9431,6 +10026,13 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "sSupPr");
+            builder.AddChild<ControlProperties>();
+        }
+
         /// <summary>
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
@@ -9460,8 +10062,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:argSz.</para>
     /// </summary>
-    [SchemaAttr(21, "argSz")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ArgumentSize : OpenXmlLeafElement
     {
         /// <summary>
@@ -9478,11 +10078,23 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [NumberValidator(MinInclusive = -2L, MaxInclusive = 2L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public IntegerValue Val { get; set; }
+        public IntegerValue Val
+        {
+            get => GetAttribute<IntegerValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "argSz");
+            builder.AddElement<ArgumentSize>()
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+ aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-2L), MaxInclusive = (2L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArgumentSize>(deep);
@@ -9499,9 +10111,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ArgumentSize &lt;m:argSz></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(ArgumentSize))]
-    [SchemaAttr(21, "argPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ArgumentProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9535,6 +10144,13 @@ namespace DocumentFormat.OpenXml.Math
         {
         }
 
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "argPr");
+            builder.AddChild<ArgumentSize>();
+        }
+
         /// <summary>
         /// <para>Argument Size.</para>
         /// <para>Represents the following element tag in the schema: m:argSz.</para>
@@ -9564,8 +10180,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:jc.</para>
     /// </summary>
-    [SchemaAttr(21, "jc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class Justification : OfficeMathJustificationType
     {
         /// <summary>
@@ -9573,6 +10187,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public Justification() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "jc");
         }
 
         /// <inheritdoc/>
@@ -9584,8 +10204,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:defJc.</para>
     /// </summary>
-    [SchemaAttr(21, "defJc")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class DefaultJustification : OfficeMathJustificationType
     {
         /// <summary>
@@ -9593,6 +10211,12 @@ namespace DocumentFormat.OpenXml.Math
         /// </summary>
         public DefaultJustification() : base()
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "defJc");
         }
 
         /// <inheritdoc/>
@@ -9620,10 +10244,21 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OfficeMathJustificationType>()
+                           .AddAttribute(21, "val", a => a.Val, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                           });
+        }
     }
 
     /// <summary>
@@ -9631,8 +10266,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mathFont.</para>
     /// </summary>
-    [SchemaAttr(21, "mathFont")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class MathFont : OpenXmlLeafElement
     {
         /// <summary>
@@ -9649,11 +10282,23 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator()]
-        [StringValidator(MaxLength = 31L)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public StringValue Val { get; set; }
+        public StringValue Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "mathFont");
+            builder.AddElement<MathFont>()
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (31L) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MathFont>(deep);
@@ -9664,8 +10309,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBin.</para>
     /// </summary>
-    [SchemaAttr(21, "brkBin")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BreakBinary : OpenXmlLeafElement
     {
         /// <summary>
@@ -9682,9 +10325,19 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "brkBin");
+            builder.AddElement<BreakBinary>()
+.AddAttribute(21, "val", a => a.Val);
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BreakBinary>(deep);
@@ -9695,8 +10348,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBinSub.</para>
     /// </summary>
-    [SchemaAttr(21, "brkBinSub")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class BreakBinarySubtraction : OpenXmlLeafElement
     {
         /// <summary>
@@ -9713,11 +10364,23 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        [RequiredValidator(Version = FileFormatVersions.Office2007)]
-        [RequiredValidator(IsRequired = false, InitialVersion = FileFormatVersions.Office2010)]
-        [SchemaAttr(21, "val")]
-        [Index(0)]
-        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val { get; set; }
+        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "brkBinSub");
+            builder.AddElement<BreakBinarySubtraction>()
+.AddAttribute(21, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+});
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BreakBinarySubtraction>(deep);
@@ -9734,9 +10397,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Justification &lt;m:jc></description></item>
     /// </list>
     /// </remark>
-    [ChildElementInfo(typeof(Justification))]
-    [SchemaAttr(21, "oMathParaPr")]
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     public partial class ParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9768,6 +10428,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public ParagraphProperties(string outerXml) : base(outerXml)
         {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(21, "oMathParaPr");
+            builder.AddChild<Justification>();
         }
 
         /// <summary>

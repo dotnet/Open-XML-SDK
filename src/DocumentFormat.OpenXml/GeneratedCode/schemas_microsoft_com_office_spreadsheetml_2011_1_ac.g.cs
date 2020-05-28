@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -17,8 +18,6 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x12ac:list.</para>
     /// </summary>
-    [SchemaAttr(72, "list")]
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public partial class List : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -39,6 +38,13 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
             return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(72, "list");
+            builder.Availability = FileFormatVersions.Office2013;
         }
 
         /// <inheritdoc/>
