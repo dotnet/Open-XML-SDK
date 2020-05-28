@@ -30,20 +30,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public bool Any() => Length > 0;
 
-        public ref OpenXmlSimpleType GetProperty(string propertyName)
-        {
-            for (var i = 0; i < _attributes.Length; i++)
-            {
-                var property = _attributes[i];
-
-                if (property.PropertyName.Equals(propertyName, StringComparison.Ordinal))
-                {
-                    return ref _data[i];
-                }
-            }
-
-            throw new InvalidOperationException();
-        }
+        public AttributeEntry GetProperty(string propertyName) => this[GetIndex(propertyName)];
 
         public AttributeEntry this[int index] => new AttributeEntry(this, index);
 
@@ -63,6 +50,21 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                     {
                         return i;
                     }
+                }
+            }
+
+            return -1;
+        }
+
+        private int GetIndex(string propertyName)
+        {
+            for (var i = 0; i < _attributes.Length; i++)
+            {
+                var property = _attributes[i];
+
+                if (property.PropertyName.Equals(propertyName, StringComparison.Ordinal))
+                {
+                    return i;
                 }
             }
 
@@ -115,7 +117,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public ref readonly AttributeMetadata Property => ref _collection._attributes[_index];
 
-            public OpenXmlSimpleType Value => _collection._data[_index];
+            public ref OpenXmlSimpleType Value => ref _collection._data[_index];
 
             public void SetValue(OpenXmlSimpleType value) => _collection._data[_index] = value;
 

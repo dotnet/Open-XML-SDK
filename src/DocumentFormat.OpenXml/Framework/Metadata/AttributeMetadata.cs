@@ -24,10 +24,6 @@ namespace DocumentFormat.OpenXml.Framework
 
         public string NamespacePrefix => NamespaceIdMap.GetNamespacePrefix(NamespaceId);
 
-        public abstract OpenXmlSimpleType GetValue(OpenXmlElement element);
-
-        public abstract void SetValue(OpenXmlElement element, OpenXmlSimpleType value);
-
         public abstract OpenXmlSimpleType CreateNew();
 
         public abstract Type Type { get; }
@@ -112,10 +108,6 @@ namespace DocumentFormat.OpenXml.Framework
                 public override Type Type => typeof(TSimpleType);
 
                 public override OpenXmlSimpleType CreateNew() => new TSimpleType();
-
-                public override OpenXmlSimpleType GetValue(OpenXmlElement element) => element.ParsedState.Attributes.GetProperty(PropertyName);
-
-                public override void SetValue(OpenXmlElement element, OpenXmlSimpleType value) => element.ParsedState.Attributes.GetProperty(PropertyName) = value;
             }
         }
     }

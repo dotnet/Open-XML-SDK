@@ -211,11 +211,11 @@ namespace DocumentFormat.OpenXml
 
         private protected void SetAttribute<TSimpleType>(TSimpleType value, [CallerMemberName] string propertyName = null)
             where TSimpleType : OpenXmlSimpleType
-            => ParsedState.Attributes.GetProperty(propertyName) = value;
+            => ParsedState.Attributes.GetProperty(propertyName).Value = value;
 
         private protected TSimpleType GetAttribute<TSimpleType>([CallerMemberName] string propertyName = null)
             where TSimpleType : OpenXmlSimpleType
-            => ParsedState.Attributes.GetProperty(propertyName) as TSimpleType;
+            => ParsedState.Attributes.GetProperty(propertyName).Value as TSimpleType;
 
         #endregion
 
@@ -232,8 +232,6 @@ namespace DocumentFormat.OpenXml
         internal virtual OpenXmlElementContext RootElementContext => Parent?.RootElementContext;
 
         internal virtual ParticleConstraint ParticleConstraint { get; }
-
-        internal virtual ISemanticConstraint[] SemanticConstraints => Cached.Array<ISemanticConstraint>();
 
         /// <summary>
         /// Gets the first child of the OpenXmlElement element.
