@@ -770,8 +770,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionCenterDirectionTypeValues>>(new EnumValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionCenterDirectionTypeValues>>(new EnumValidatorAttribute());
 });
 });
         }

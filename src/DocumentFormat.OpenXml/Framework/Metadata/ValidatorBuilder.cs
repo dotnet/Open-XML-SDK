@@ -43,6 +43,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             _validators.Insert(index, validator);
         }
 
-        protected IOpenXmlSimpleTypeValidator[] ToArray() => _validators?.ToArray() ?? Cached.Array<IOpenXmlSimpleTypeValidator>();
+        protected IOpenXmlSimpleTypeValidator[] GetValidators() => _validators?.ToArray() ?? Cached.Array<IOpenXmlSimpleTypeValidator>();
     }
 }

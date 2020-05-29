@@ -103,8 +103,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleMethodEnum>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleMethodEnum>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 })
 .AddAttribute(0, "id", a => a.Id);
@@ -1118,9 +1118,9 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColorEnum>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<UInt32Value>(new NumberValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColorEnum>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 });
         }

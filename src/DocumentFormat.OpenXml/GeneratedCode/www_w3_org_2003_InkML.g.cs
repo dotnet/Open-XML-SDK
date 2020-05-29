@@ -572,8 +572,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 })
 .AddAttribute(0, "type", a => a.Type)
@@ -581,8 +581,8 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DecimalValue>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator<BooleanValue>(new NumberValidatorAttribute() { UnionId = (0) });
+union.AddValidator<DecimalValue>(new NumberValidatorAttribute());
+union.AddValidator<BooleanValue>(new NumberValidatorAttribute());
 });
 })
 .AddAttribute(0, "min", a => a.Min)
@@ -596,17 +596,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 });
         }
@@ -754,8 +754,8 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -763,8 +763,8 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelPropertyNameValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelPropertyNameValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 })
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
@@ -775,17 +775,17 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 });
         }
@@ -1035,17 +1035,17 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 });
         }
@@ -1121,17 +1121,17 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 });
         }
@@ -1467,8 +1467,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardBrushPropertyNameValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardBrushPropertyNameValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 })
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
@@ -1476,28 +1476,28 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DecimalValue>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator<BooleanValue>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.PenTipShapeValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.RasterOperationValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<DecimalValue>(new NumberValidatorAttribute());
+union.AddValidator<BooleanValue>(new NumberValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.PenTipShapeValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.RasterOperationValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 })
 .AddAttribute(0, "units", a => a.Units, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 });
         }

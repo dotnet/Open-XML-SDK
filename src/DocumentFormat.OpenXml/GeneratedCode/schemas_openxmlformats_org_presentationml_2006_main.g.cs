@@ -4367,13 +4367,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
+     union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
  });
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+     union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
  });
 });
         }
@@ -4857,13 +4857,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
+union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 });
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
 });
 });
         }
@@ -7946,8 +7946,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L), UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute());
 });
 })
 .AddAttribute(0, "fmla", a => a.Fomula);
@@ -9286,13 +9286,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
+union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 });
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
 });
 });
         }
@@ -22896,8 +22896,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
                            {
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(new EnumValidatorAttribute() { UnionId = (0) });
+                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(new EnumValidatorAttribute());
+                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(new EnumValidatorAttribute());
                                });
                            });
         }

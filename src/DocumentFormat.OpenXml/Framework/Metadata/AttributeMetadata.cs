@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public abstract byte NamespaceId { get; }
 
-        public abstract ValidatorCollection Validators { get; }
+        public abstract ReadOnlyArray<IOpenXmlSimpleTypeValidator> Validators { get; }
 
         public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
 
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 action(union);
 
-                AddValidator(new UnionValidator(union.ToArray(), 0));
+                AddValidator(new UnionValidator(union.GetValidators(), 0));
             }
 
             public byte Namespace { get; }
@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 AddValidator(_defaultValidator);
 
-                return new AttributeInfo(Namespace, Name, PropertyName, ToArray());
+                return new AttributeInfo(Namespace, Name, PropertyName, GetValidators());
             }
 
             private static IOpenXmlSimpleTypeValidator GetDefaultValidator()
@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                     PropertyName = propertyName;
                     NamespaceId = ns;
                     Name = name;
-                    Validators = new ValidatorCollection(validators);
+                    Validators = validators;
                 }
 
                 public override string PropertyName { get; }
@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 public override byte NamespaceId { get; }
 
-                public override ValidatorCollection Validators { get; }
+                public override ReadOnlyArray<IOpenXmlSimpleTypeValidator> Validators { get; }
 
                 public override Type Type => typeof(TSimpleType);
 

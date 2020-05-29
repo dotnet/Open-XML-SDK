@@ -6,11 +6,10 @@ using System;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal abstract class VersionedValidatorAttribute : Attribute, IOpenXmlSimpleTypeValidator, IUnionValidator
+    internal abstract class VersionedValidatorAttribute : Attribute, IOpenXmlSimpleTypeValidator
     {
         private FileFormatVersions? _version;
         private FileFormatVersions? _initialVersion;
-        private byte? _unionId;
 
         public FileFormatVersions Version
         {
@@ -23,14 +22,6 @@ namespace DocumentFormat.OpenXml.Framework
             get => _initialVersion.GetValueOrDefault();
             set => _initialVersion = value;
         }
-
-        public byte UnionId
-        {
-            get => _unionId.GetValueOrDefault();
-            set => _unionId = value;
-        }
-
-        byte? IUnionValidator.UnionId => _unionId;
 
         public void Validate(ValidationContext context)
         {

@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        private static void ValidateValue(ValidationContext validationContext, ValidatorCollection validators, OpenXmlSimpleType value, AttributeMetadata state, bool isAttribute)
+        private static void ValidateValue(ValidationContext validationContext, ReadOnlyArray<IOpenXmlSimpleTypeValidator> validators, OpenXmlSimpleType value, AttributeMetadata state, bool isAttribute)
         {
             var errors = validationContext.Errors.Count;
 
@@ -236,7 +236,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             public override byte NamespaceId => _element.NamespaceId;
 
-            public override ValidatorCollection Validators => _element.ParsedState.Metadata.Validators;
+            public override ReadOnlyArray<IOpenXmlSimpleTypeValidator> Validators => _element.ParsedState.Metadata.Validators;
 
             public override Type Type => Value.GetType();
 
