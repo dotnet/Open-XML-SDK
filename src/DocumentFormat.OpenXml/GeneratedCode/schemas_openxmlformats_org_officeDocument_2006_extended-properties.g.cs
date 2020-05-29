@@ -824,7 +824,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "Pages");
         }
 
@@ -862,7 +862,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "Words");
         }
 
@@ -900,7 +900,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "Characters");
         }
 
@@ -938,7 +938,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "Lines");
         }
 
@@ -976,7 +976,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "Paragraphs");
         }
 
@@ -1014,7 +1014,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "Slides");
         }
 
@@ -1052,7 +1052,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "Notes");
         }
 
@@ -1090,7 +1090,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "TotalTime");
         }
 
@@ -1128,7 +1128,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "HiddenSlides");
         }
 
@@ -1166,7 +1166,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "MMClips");
         }
 
@@ -1204,7 +1204,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "CharactersWithSpaces");
         }
 
@@ -1242,7 +1242,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(3, "DocSecurity");
         }
 
@@ -1280,7 +1280,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<BooleanValue>(new NumberValidatorAttribute());
+            builder.AddValidator<BooleanValue>(NumberValidator.Instance);
             builder.SetSchema(3, "ScaleCrop");
         }
 
@@ -1318,7 +1318,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<BooleanValue>(new NumberValidatorAttribute());
+            builder.AddValidator<BooleanValue>(NumberValidator.Instance);
             builder.SetSchema(3, "LinksUpToDate");
         }
 
@@ -1356,7 +1356,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<BooleanValue>(new NumberValidatorAttribute());
+            builder.AddValidator<BooleanValue>(NumberValidator.Instance);
             builder.SetSchema(3, "SharedDoc");
         }
 
@@ -1394,7 +1394,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<BooleanValue>(new NumberValidatorAttribute());
+            builder.AddValidator<BooleanValue>(NumberValidator.Instance);
             builder.SetSchema(3, "HyperlinksChanged");
         }
 

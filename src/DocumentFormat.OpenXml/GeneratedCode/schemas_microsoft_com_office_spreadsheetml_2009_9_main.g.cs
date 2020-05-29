@@ -1616,7 +1616,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             builder.AddElement<SlicerStyles>()
 .AddAttribute(0, "defaultSlicerStyle", a => a.DefaultSlicerStyle, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1805,7 +1805,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<OleItem>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "icon", a => a.Icon)
 .AddAttribute(0, "advise", a => a.Advise)
@@ -1940,7 +1940,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+            builder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
             builder.SetSchema(53, "id");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -1991,11 +1991,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<IconFilter>()
 .AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "iconId", a => a.IconId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2209,7 +2209,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(0, "sortBy", a => a.SortBy)
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "customList", a => a.CustomList)
 .AddAttribute(0, "dxfId", a => a.FormatId)
@@ -2261,7 +2261,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<SourceConnection>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2332,7 +2332,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<DatastoreItem>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2762,17 +2762,17 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<FormControlProperties>()
 .AddAttribute(0, "objectType", a => a.ObjectType, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "checked", a => a.Checked, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "colored", a => a.Colored)
 .AddAttribute(0, "dropLines", a => a.DropLines)
 .AddAttribute(0, "dropStyle", a => a.DropStyle, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "dx", a => a.ScrollBarWidth)
 .AddAttribute(0, "firstButton", a => a.FirstButton)
@@ -2793,7 +2793,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "sel", a => a.Selected)
 .AddAttribute(0, "seltype", a => a.SelectionType, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "textHAlign", a => a.TextHorizontalAlign)
 .AddAttribute(0, "textVAlign", a => a.TextVerticalAlign)
@@ -2801,7 +2801,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "widthMin", a => a.MinimumWidth)
 .AddAttribute(0, "editVal", a => a.EditVal, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "multiLine", a => a.MultipleLines)
 .AddAttribute(0, "verticalBar", a => a.VerticalBar)
@@ -3058,11 +3058,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<SlicerCacheDefinition>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "sourceName", a => a.SourceName, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3446,7 +3446,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(0, "activePresent", a => a.ActivePresent)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
         }
 
@@ -4865,7 +4865,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
                            .AddAttribute(0, "indexed", a => a.Indexed)
                            .AddAttribute(0, "rgb", a => a.Rgb, aBuilder =>
                            {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+                               aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                            })
                            .AddAttribute(0, "theme", a => a.Theme)
                            .AddAttribute(0, "tint", a => a.Tint);
@@ -5062,7 +5062,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             builder.AddElement<SlicerRef>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5111,7 +5111,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<SlicerCache>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5188,7 +5188,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<DefinedName>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5342,7 +5342,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ArgumentDescription>()
 .AddAttribute(0, "index", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5802,7 +5802,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<SetLevel>()
 .AddAttribute(0, "hierarchy", a => a.Hierarchy, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -6511,7 +6511,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ConditionalFormattingValueObject>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "gte", a => a.GreaterThanOrEqual);
         }
@@ -6596,11 +6596,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ConditionalFormattingIcon>()
 .AddAttribute(0, "iconSet", a => a.IconSet, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "iconId", a => a.IconId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -7570,7 +7570,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<PivotEditValue>()
 .AddAttribute(0, "valueType", a => a.ValueType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -7869,8 +7869,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(0, "priority", a => a.Priority)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
         }
 
@@ -8058,7 +8058,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             builder.AddElement<SlicerStyle>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -8136,7 +8136,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<SlicerStyleElement>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "dxfId", a => a.FormatId);
         }
@@ -8451,7 +8451,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ProtectedRange>()
 .AddAttribute(0, "password", a => a.Password, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
 .AddAttribute(0, "algorithmName", a => a.AlgorithmName)
 .AddAttribute(0, "hashValue", a => a.HashValue)
@@ -8459,7 +8459,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
 .AddAttribute(0, "spinCount", a => a.SpinCount)
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "securityDescriptor", a => a.SecurityDescriptor);
         }
@@ -8576,7 +8576,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ListItem>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -8803,11 +8803,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Slicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "cache", a => a.Cache, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "caption", a => a.Caption)
 .AddAttribute(0, "startItem", a => a.StartItem)
@@ -8818,7 +8818,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(0, "lockedPosition", a => a.LockedPosition)
 .AddAttribute(0, "rowHeight", a => a.RowHeight, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -8922,7 +8922,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<OlapSlicerCache>()
 .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -9083,7 +9083,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<TabularSlicerCache>()
 .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "sortOrder", a => a.SortOrder)
 .AddAttribute(0, "customListSort", a => a.CustomListSort)
@@ -9171,11 +9171,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<SlicerCachePivotTable>()
 .AddAttribute(0, "tabId", a => a.TabId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -9221,7 +9221,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<OlapSlicerCacheItemParent>()
 .AddAttribute(0, "n", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -9312,7 +9312,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<OlapSlicerCacheItem>()
 .AddAttribute(0, "n", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "c", a => a.DisplayName)
 .AddAttribute(0, "nd", a => a.NonDisplay);
@@ -9392,7 +9392,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<OlapSlicerCacheRange>()
 .AddAttribute(0, "startItem", a => a.StartItem, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -9579,12 +9579,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<OlapSlicerCacheLevelData>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "sourceCaption", a => a.SourceCaption)
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "sortOrder", a => a.SortOrder)
 .AddAttribute(0, "crossFilter", a => a.CrossFilter);
@@ -9833,7 +9833,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<OlapSlicerCacheSelection>()
 .AddAttribute(0, "n", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -9975,7 +9975,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<TabularSlicerCacheItem>()
 .AddAttribute(0, "x", a => a.Atom, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "s", a => a.IsSelected)
 .AddAttribute(0, "nd", a => a.NonDisplay);

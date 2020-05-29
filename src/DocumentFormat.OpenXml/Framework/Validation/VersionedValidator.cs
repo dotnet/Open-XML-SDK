@@ -2,11 +2,10 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation;
-using System;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal abstract class VersionedValidatorAttribute : Attribute, IOpenXmlSimpleTypeValidator
+    internal abstract class VersionedValidator : IOpenXmlSimpleTypeValidator
     {
         private FileFormatVersions? _version;
         private FileFormatVersions? _initialVersion;

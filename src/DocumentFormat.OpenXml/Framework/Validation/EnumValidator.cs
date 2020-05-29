@@ -5,9 +5,9 @@ using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal sealed class EnumValidatorAttribute : VersionedValidatorAttribute
+    internal sealed class EnumValidator : VersionedValidator
     {
-        public static IOpenXmlSimpleTypeValidator Instance { get; } = new EnumValidatorAttribute();
+        public static IOpenXmlSimpleTypeValidator Instance { get; } = new EnumValidator();
 
         protected override void ValidateVersion(ValidationContext context)
         {

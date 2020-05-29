@@ -144,7 +144,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
             builder.AddElement<WebExtensionPartReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -332,19 +332,19 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<WebExtensionTaskpane>()
 .AddAttribute(0, "dockstate", a => a.DockState, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "visibility", a => a.Visibility, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "width", a => a.Width, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "row", a => a.Row, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "locked", a => a.Locked);
         }

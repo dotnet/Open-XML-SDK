@@ -9,9 +9,10 @@ namespace DocumentFormat.OpenXml.Framework
     /// <summary>
     /// Describes a required item.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Property, AllowMultiple = true, Inherited = true)]
-    internal sealed class RequiredValidatorAttribute : VersionedValidatorAttribute
+    internal sealed class RequiredValidator : VersionedValidator
     {
+        public static IOpenXmlSimpleTypeValidator Instance { get; } = new RequiredValidator();
+
         public bool IsRequired { get; set; } = true;
 
         protected override void ValidateVersion(ValidationContext context)

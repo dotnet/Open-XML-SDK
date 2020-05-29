@@ -247,7 +247,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<UInt32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<UInt32Value>(NumberValidator.Instance);
             builder.SetSchema(80, "binCount");
             builder.Availability = FileFormatVersions.Office2016;
         }
@@ -312,7 +312,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             builder.AddElement<Extension2>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -372,7 +372,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<ChartStringValue>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -425,7 +425,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<NumericValue>()
 .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -498,7 +498,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<NumericDimension>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -582,7 +582,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<StringDimension>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -712,11 +712,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ExternalData>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(80, "autoUpdate", a => a.AutoUpdate, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2016));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
 });
         }
 
@@ -791,7 +791,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<Data>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1279,7 +1279,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -1497,8 +1497,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinInclusive = (0L) });
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<DoubleValue>(new NumberValidator() { MinInclusive = (0L) });
+union.AddValidator(StringValidator.Instance);
 });
 });
         }
@@ -1571,32 +1571,32 @@ union.AddValidator(new StringValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<DoubleValue>(NumberValidator.Instance);
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "min", a => a.Min, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<DoubleValue>(NumberValidator.Instance);
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "majorUnit", a => a.MajorUnit, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinExclusive = (0L) });
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<DoubleValue>(new NumberValidator() { MinExclusive = (0L) });
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "minorUnit", a => a.MinorUnit, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinExclusive = (0L) });
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<DoubleValue>(new NumberValidator() { MinExclusive = (0L) });
+union.AddValidator(StringValidator.Instance);
 });
 });
         }
@@ -2358,7 +2358,7 @@ union.AddValidator(new StringValidatorAttribute());
             builder.AddElement<NumberFormat>()
 .AddAttribute(0, "formatCode", a => a.FormatCode, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "sourceLinked", a => a.SourceLinked);
         }
@@ -2397,7 +2397,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<DoubleValue>(new NumberValidatorAttribute());
+            builder.AddValidator<DoubleValue>(NumberValidator.Instance);
             builder.SetSchema(80, "binSize");
             builder.Availability = FileFormatVersions.Office2016;
         }
@@ -2438,7 +2438,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ParentLabelLayout>()
 .AddAttribute(0, "val", a => a.ParentLabelLayoutVal, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2640,16 +2640,16 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<DoubleValue>(NumberValidator.Instance);
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "overflow", a => a.Overflow, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<DoubleValue>(NumberValidator.Instance);
+union.AddValidator(StringValidator.Instance);
 });
 });
         }
@@ -3238,7 +3238,7 @@ union.AddValidator(new StringValidatorAttribute());
             builder.AddElement<DataLabel>()
 .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "pos", a => a.Pos);
         }
@@ -3369,7 +3369,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<DataLabelHidden>()
 .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3442,7 +3442,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<DataPoint>()
 .AddAttribute(0, "idx", a => a.Idx, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3677,7 +3677,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<DataId>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3825,7 +3825,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<UInt32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<UInt32Value>(NumberValidator.Instance);
             builder.SetSchema(80, "axisId");
             builder.Availability = FileFormatVersions.Office2016;
         }
@@ -4043,7 +4043,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Series>()
 .AddAttribute(0, "layoutId", a => a.LayoutId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "hidden", a => a.Hidden)
 .AddAttribute(0, "ownerIdx", a => a.OwnerIdx)
@@ -4274,7 +4274,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Axis>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "hidden", a => a.Hidden);
         }
@@ -4962,27 +4962,27 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<PageMargins>()
 .AddAttribute(0, "l", a => a.L, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "r", a => a.R, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "t", a => a.T, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "b", a => a.B, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "header", a => a.Header, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "footer", a => a.Footer, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5494,63 +5494,63 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ColorMappingType>()
 .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -5799,7 +5799,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<StringLevel>()
 .AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5887,7 +5887,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<NumericLevel>()
 .AddAttribute(0, "ptCount", a => a.PtCount, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "formatCode", a => a.FormatCode);
         }
@@ -5935,7 +5935,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<UnsignedIntegerType>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 

@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             builder.AddElement<IsCanvas>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -231,11 +231,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<GvmlContentPart>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -605,19 +605,19 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<HiddenLineProperties>()
 .AddAttribute(0, "w", a => a.Width, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (20116800L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (20116800L) });
 })
 .AddAttribute(0, "cap", a => a.CapType, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "cmpd", a => a.CompoundLineType, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "algn", a => a.Alignment, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -984,19 +984,19 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<HiddenShape3D>()
 .AddAttribute(0, "z", a => a.Z, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
 .AddAttribute(0, "extrusionH", a => a.ExtrusionHeight, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
 .AddAttribute(0, "contourW", a => a.ContourWidth, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
 .AddAttribute(0, "prstMaterial", a => a.PresetMaterial, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -1536,23 +1536,23 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<ForegroundMark>()
 .AddAttribute(0, "x1", a => a.FirstXCoordinate, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "y1", a => a.FirstYCoordinate, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "x2", a => a.SecondXCoordinate, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "y2", a => a.SecondYCoordinate, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
 
@@ -1622,23 +1622,23 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<BackgroundMark>()
 .AddAttribute(0, "x1", a => a.FirstXCoordinate, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "y1", a => a.FirstYCoordinate, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "x2", a => a.SecondXCoordinate, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "y2", a => a.SecondYCoordinate, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
 
@@ -1678,7 +1678,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticBlur>()
 .AddAttribute(0, "radius", a => a.Radius, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -1728,11 +1728,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticCement>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "crackSpacing", a => a.CrackSpacing, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -1782,11 +1782,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticChalkSketch>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (4L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (4L) });
 });
         }
 
@@ -1836,11 +1836,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticCrisscrossEtching>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -1890,11 +1890,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticCutout>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "numberOfShades", a => a.NumberOfShades, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (6L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (6L) });
 });
         }
 
@@ -1944,11 +1944,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticFilmGrain>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "grainSize", a => a.GrainSize, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -1998,11 +1998,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticGlass>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "scaling", a => a.Scaling, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -2052,11 +2052,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticGlowDiffused>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "intensity", a => a.Intensity, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
 });
         }
 
@@ -2106,11 +2106,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticGlowEdges>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "smoothness", a => a.Smoothness, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
 });
         }
 
@@ -2160,11 +2160,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticLightScreen>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "gridSize", a => a.GridSize, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
 });
         }
 
@@ -2214,11 +2214,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticLineDrawing>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "pencilSize", a => a.PencilSize, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -2268,11 +2268,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticMarker>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "size", a => a.Size, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -2322,11 +2322,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticMosaicBubbles>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -2376,11 +2376,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticPaintStrokes>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "intensity", a => a.Intensity, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
 });
         }
 
@@ -2430,11 +2430,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticPaintBrush>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "brushSize", a => a.BrushSize, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
 });
         }
 
@@ -2484,11 +2484,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticPastelsSmooth>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "scaling", a => a.BrushSize, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -2538,11 +2538,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticPencilGrayscale>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "pencilSize", a => a.BrushSize, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -2592,11 +2592,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticPencilSketch>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "pressure", a => a.Pressure, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -2646,11 +2646,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticPhotocopy>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "detail", a => a.Detail, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
 });
         }
 
@@ -2700,11 +2700,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticPlasticWrap>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "smoothness", a => a.Smoothness, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
 });
         }
 
@@ -2754,11 +2754,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticTexturizer>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "scaling", a => a.Scaling, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100L) });
 });
         }
 
@@ -2808,11 +2808,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<ArtisticWatercolorSponge>()
 .AddAttribute(0, "trans", a => a.Transparancy, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "brushSize", a => a.BrushSize, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10L) });
 });
         }
 
@@ -2915,23 +2915,23 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<BackgroundRemoval>()
 .AddAttribute(0, "t", a => a.MarqueeTop, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "b", a => a.MarqueeBottom, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "l", a => a.MarqueeLeft, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "r", a => a.MarqueeRight, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
 
@@ -2989,11 +2989,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<BrightnessContrast>()
 .AddAttribute(0, "bright", a => a.Bright, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "contrast", a => a.Contrast, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
 });
         }
 
@@ -3033,7 +3033,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L)
             builder.AddElement<ColorTemperature>()
 .AddAttribute(0, "colorTemp", a => a.ColorTemperatureValue, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1500L), MaxInclusive = (11500L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1500L), MaxInclusive = (11500L) });
 });
         }
 
@@ -3073,7 +3073,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1500L), M
             builder.AddElement<Saturation>()
 .AddAttribute(0, "sat", a => a.SaturationAmount, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (400000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (400000L) });
 });
         }
 
@@ -3113,7 +3113,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<SharpenSoften>()
 .AddAttribute(0, "amount", a => a.Amount, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
 });
         }
 
@@ -3810,11 +3810,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L)
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)

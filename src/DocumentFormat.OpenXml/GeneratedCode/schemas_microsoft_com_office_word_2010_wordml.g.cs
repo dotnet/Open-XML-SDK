@@ -722,17 +722,17 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             builder.AddElement<RunTrackChangeType>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
 })
 .AddAttribute(23, "date", a => a.Date)
 .AddAttribute(23, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
+union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -897,17 +897,17 @@ union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (
             builder.AddElement<TrackChangeType>()
                            .AddAttribute(23, "author", a => a.Author, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                            })
                            .AddAttribute(23, "date", a => a.Date)
                            .AddAttribute(23, "id", a => a.Id, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
+                                   union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                                   union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                                });
                            });
         }
@@ -1021,9 +1021,9 @@ union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (
             builder.AddElement<PositiveFixedPercentageType>()
                            .AddAttribute(52, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
                            });
         }
     }
@@ -1063,9 +1063,9 @@ union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (
             builder.AddElement<HueModulation>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 });
         }
 
@@ -1256,8 +1256,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
             builder.AddElement<PercentageType>()
                            .AddAttribute(52, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
                            });
         }
     }
@@ -1346,9 +1346,9 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
             builder.AddElement<RgbColorModelHex>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (3L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { Length = (3L) });
 });
         }
 
@@ -1462,8 +1462,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (3L) });
             builder.AddElement<SchemeColor>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -1541,12 +1541,12 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<LinearShadeProperties>()
 .AddAttribute(52, "ang", a => a.Angle, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(52, "scaled", a => a.Scaled, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -1620,7 +1620,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<PathShadeProperties>()
 .AddAttribute(52, "path", a => a.Path, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -1989,7 +1989,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<PresetLineDashProperties>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -2032,8 +2032,8 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<LineJoinMiterProperties>()
 .AddAttribute(52, "lim", a => a.Limit, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 });
         }
 
@@ -2109,8 +2109,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
             builder.AddElement<Glow>()
 .AddAttribute(52, "rad", a => a.GlowRadius, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 });
         }
 
@@ -2317,40 +2317,40 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<Shadow>()
 .AddAttribute(52, "blurRad", a => a.BlurRadius, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
 .AddAttribute(52, "dist", a => a.DistanceFromText, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
 .AddAttribute(52, "dir", a => a.DirectionAngle, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(52, "sx", a => a.HorizontalScalingFactor, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "sy", a => a.VerticalScalingFactor, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "kx", a => a.HorizontalSkewAngle, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
 })
 .AddAttribute(52, "ky", a => a.VerticalSkewAngle, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
 })
 .AddAttribute(52, "algn", a => a.Alignment, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -2589,65 +2589,65 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<Reflection>()
 .AddAttribute(52, "blurRad", a => a.BlurRadius, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
 .AddAttribute(52, "stA", a => a.StartingOpacity, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(52, "stPos", a => a.StartPosition, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(52, "endA", a => a.EndingOpacity, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(52, "endPos", a => a.EndPosition, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(52, "dist", a => a.DistanceFromText, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
 .AddAttribute(52, "dir", a => a.DirectionAngle, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(52, "fadeDir", a => a.FadeDirection, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(52, "sx", a => a.HorizontalScalingFactor, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "sy", a => a.VerticalScalingFactor, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "kx", a => a.HorizontalSkewAngle, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
 })
 .AddAttribute(52, "ky", a => a.VerticalSkewAngle, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinExclusive = (-5400000L), MaxExclusive = (5400000L) });
 })
 .AddAttribute(52, "algn", a => a.Alignment, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -2772,20 +2772,20 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<TextOutlineEffect>()
 .AddAttribute(52, "w", a => a.LineWidth, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (20116800L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (20116800L) });
 })
 .AddAttribute(52, "cap", a => a.CapType, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "cmpd", a => a.Compound, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "algn", a => a.Alignment, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -3128,18 +3128,18 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<Properties3D>()
 .AddAttribute(52, "extrusionH", a => a.ExtrusionHeight, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
 .AddAttribute(52, "contourW", a => a.ContourWidth, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
 .AddAttribute(52, "prstMaterial", a => a.PresetMaterialType, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -3244,8 +3244,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<Ligatures>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -3288,8 +3288,8 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<NumberingFormat>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -3332,8 +3332,8 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<NumberSpacing>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -3537,7 +3537,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<OnOffType>()
                            .AddAttribute(52, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
                            });
         }
     }
@@ -3625,12 +3625,12 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<ContentPart>()
 .AddAttribute(52, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3721,9 +3721,9 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<DocumentId>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
         }
 
@@ -3820,11 +3820,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             builder.AddElement<MarkupType>()
                            .AddAttribute(23, "id", a => a.Id, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
+                                   union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
+                                   union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
                                });
                            });
         }
@@ -3865,8 +3865,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             builder.AddElement<DefaultImageDpi>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -4050,9 +4050,9 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<GradientStop>()
 .AddAttribute(52, "pos", a => a.StopPosition, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
 
@@ -4174,19 +4174,19 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<FillToRectangle>()
 .AddAttribute(52, "l", a => a.Left, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "t", a => a.Top, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "r", a => a.Right, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "b", a => a.Bottom, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -4318,21 +4318,21 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<SphereCoordinates>()
 .AddAttribute(52, "lat", a => a.Lattitude, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(52, "lon", a => a.Longitude, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(52, "rev", a => a.Revolution, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L), MinInclusive = (0L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 });
         }
 
@@ -4375,9 +4375,9 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (21600000L
             builder.AddElement<Camera>()
 .AddAttribute(52, "prst", a => a.PresetCameraType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -4464,15 +4464,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<LightRig>()
 .AddAttribute(52, "rig", a => a.LightRigType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(52, "dir", a => a.LightDirectionType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -4609,18 +4609,18 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<BevelType>()
                            .AddAttribute(52, "w", a => a.Width, aBuilder =>
                            {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                               aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
                            })
                            .AddAttribute(52, "h", a => a.Height, aBuilder =>
                            {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                               aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
                            })
                            .AddAttribute(52, "prst", a => a.PresetProfileType, aBuilder =>
                            {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                               aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            });
         }
     }
@@ -4892,12 +4892,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<StyleSet>()
 .AddAttribute(52, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -5007,12 +5007,12 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<CheckBoxSymbolType>()
                            .AddAttribute(52, "font", a => a.Font, aBuilder =>
                            {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
                            })
                            .AddAttribute(52, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-                               aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+                               aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                               aBuilder.AddValidator(new StringValidator() { Length = (2L) });
                            });
         }
     }
@@ -5124,11 +5124,11 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)

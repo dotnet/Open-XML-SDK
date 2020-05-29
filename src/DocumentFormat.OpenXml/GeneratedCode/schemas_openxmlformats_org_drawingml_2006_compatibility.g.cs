@@ -45,8 +45,8 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
             builder.AddElement<LegacyDrawing>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 

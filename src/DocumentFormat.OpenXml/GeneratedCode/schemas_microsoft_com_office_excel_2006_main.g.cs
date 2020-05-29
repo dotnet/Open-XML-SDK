@@ -388,7 +388,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute());
+            builder.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
             builder.SetSchema(32, "sqref");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -507,11 +507,11 @@ namespace DocumentFormat.OpenXml.Office.Excel
             builder.AddElement<RowSortMap>()
 .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910L) });
+aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
 });
         }
 
@@ -598,11 +598,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
             builder.AddElement<ColumnSortMap>()
 .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910L) });
+aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
 });
         }
 
@@ -705,11 +705,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (536870910
             builder.AddElement<SortMapItemType>()
                            .AddAttribute(0, "newVal", a => a.NewVal, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            })
                            .AddAttribute(0, "oldVal", a => a.OldVal, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }

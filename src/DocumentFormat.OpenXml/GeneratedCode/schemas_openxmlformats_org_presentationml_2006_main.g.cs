@@ -467,11 +467,11 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddElement<IndexRangeType>()
                            .AddAttribute(0, "st", a => a.Start, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            })
                            .AddAttribute(0, "end", a => a.End, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -507,7 +507,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddElement<CustomShowReference>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -576,8 +576,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Extension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+   aBuilder.AddValidator(RequiredValidator.Instance);
+   aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -836,63 +836,63 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ColorMap>()
 .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -1193,7 +1193,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<BackgroundStyleReference>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1612,18 +1612,18 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<OleObject>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "showAsIcon", a => a.ShowAsIcon)
 .AddAttribute(19, "id", a => a.Id)
 .AddAttribute(0, "imgW", a => a.ImageWidth, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 })
 .AddAttribute(0, "imgH", a => a.ImageHeight, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 })
 .AddAttribute(0, "progId", a => a.ProgId);
         }
@@ -1858,7 +1858,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
 .AddAttribute(0, "autoCompressPictures", a => a.AutoCompressPictures)
 .AddAttribute(0, "bookmarkIdSeed", a => a.BookmarkIdSeed, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (1L) });
+aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (1L) });
 })
 .AddAttribute(0, "conformance", a => a.Conformance);
         }
@@ -2627,7 +2627,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (214748364
 .AddAttribute(0, "matchingName", a => a.MatchingName)
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "preserve", a => a.Preserve)
 .AddAttribute(0, "userDrawn", a => a.UserDrawn);
@@ -3585,15 +3585,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<SlideSyncProperties>()
 .AddAttribute(0, "serverSldId", a => a.ServerSlideId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "serverSldModifiedTime", a => a.ServerSlideModifiedTime, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "clientInsertedTime", a => a.ClientInsertedTime, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3831,7 +3831,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ViewProperties>()
 .AddAttribute(0, "lastView", a => a.LastView, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "showComments", a => a.ShowComments);
         }
@@ -4072,11 +4072,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<ContentPart>()
 .AddAttribute(49, "bwMode", a => a.BwMode, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -4239,7 +4239,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<EmbeddedWavAudioFileType>()
                            .AddAttribute(19, "embed", a => a.Embed, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            })
                            .AddAttribute(0, "name", a => a.Name)
                            .AddAttribute(0, "builtIn", a => a.BuiltIn);
@@ -4364,16 +4364,16 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<TimeAbsolute>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+     union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
  });
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+     union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
  });
 });
         }
@@ -4413,8 +4413,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<TimePercentage>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidatorAttribute());
- aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+ aBuilder.AddValidator(RequiredValidator.Instance);
+ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 });
         }
 
@@ -4598,7 +4598,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<TimeNode>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-    aBuilder.AddValidator(new RequiredValidatorAttribute());
+    aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -4637,8 +4637,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<RuntimeNodeTrigger>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+   aBuilder.AddValidator(RequiredValidator.Instance);
+   aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -4851,19 +4851,19 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<TimeListConditionalType>()
 .AddAttribute(0, "evt", a => a.Event, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "delay", a => a.Delay, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
 });
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
 });
 });
         }
@@ -5070,11 +5070,11 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
 .AddAttribute(0, "concurrent", a => a.Concurrent)
 .AddAttribute(0, "prevAc", a => a.PreviousAction, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "nextAc", a => a.NextAction, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -5325,16 +5325,16 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "to", a => a.To)
 .AddAttribute(0, "calcmode", a => a.CalculationMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "valueType", a => a.ValueType, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
 
@@ -5454,11 +5454,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<AnimateColor>()
 .AddAttribute(0, "clrSpc", a => a.ColorSpace, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -5612,7 +5612,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<AnimateEffect>()
 .AddAttribute(0, "transition", a => a.Transition, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "filter", a => a.Filter)
 .AddAttribute(0, "prLst", a => a.PropertyList);
@@ -5779,19 +5779,19 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<AnimateMotion>()
 .AddAttribute(0, "origin", a => a.Origin, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "path", a => a.Path)
 .AddAttribute(0, "pathEditMode", a => a.PathEditMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "rAng", a => a.RelativeAngle)
 .AddAttribute(0, "ptsTypes", a => a.PointTypes)
 .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
 
@@ -5979,8 +5979,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(0, "to", a => a.To)
 .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
 
@@ -6098,8 +6098,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(0, "zoomContents", a => a.ZoomContents)
 .AddAttribute(49, "bounceEnd", a => a.BounceEnd, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
 
@@ -6241,7 +6241,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<Command>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "cmd", a => a.CommandName);
         }
@@ -6842,7 +6842,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "presetID", a => a.PresetId)
 .AddAttribute(0, "presetClass", a => a.PresetClass, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "presetSubtype", a => a.PresetSubtype)
 .AddAttribute(0, "dur", a => a.Duration)
@@ -6851,44 +6851,44 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "spd", a => a.Speed)
 .AddAttribute(0, "accel", a => a.Acceleration, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "decel", a => a.Deceleration, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "autoRev", a => a.AutoReverse)
 .AddAttribute(0, "restart", a => a.Restart, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "fill", a => a.Fill, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "syncBehavior", a => a.SyncBehavior, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "tmFilter", a => a.TimeFilter)
 .AddAttribute(0, "evtFilter", a => a.EventFilter)
 .AddAttribute(0, "display", a => a.Display)
 .AddAttribute(0, "masterRel", a => a.MasterRelation, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "bldLvl", a => a.BuildLevel)
 .AddAttribute(0, "grpId", a => a.GroupId)
 .AddAttribute(0, "afterEffect", a => a.AfterEffect)
 .AddAttribute(0, "nodeType", a => a.NodeType, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "nodePh", a => a.NodePlaceholder)
 .AddAttribute(49, "presetBounceEnd", a => a.PresetBounceEnd, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
 
@@ -7454,7 +7454,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<BooleanVariantValue>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -7493,7 +7493,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<IntegerVariantValue>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -7532,7 +7532,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<FloatVariantValue>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -7571,7 +7571,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<StringVariantValue>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -7946,8 +7946,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute());
+union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(EnumValidator.Instance);
 });
 })
 .AddAttribute(0, "fmla", a => a.Fomula);
@@ -8028,18 +8028,18 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             builder.AddElement<RgbColor>()
 .AddAttribute(0, "r", a => a.Red, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+   aBuilder.AddValidator(RequiredValidator.Instance);
+   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "g", a => a.Green, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+   aBuilder.AddValidator(RequiredValidator.Instance);
+   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "b", a => a.Blue, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+   aBuilder.AddValidator(RequiredValidator.Instance);
+   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
 });
         }
 
@@ -8098,17 +8098,17 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             builder.AddElement<HslColor>()
 .AddAttribute(0, "h", a => a.Hue, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "s", a => a.Saturation, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+   aBuilder.AddValidator(RequiredValidator.Instance);
+   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "l", a => a.Lightness, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
+   aBuilder.AddValidator(RequiredValidator.Instance);
+   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
 });
         }
 
@@ -8252,15 +8252,15 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             builder.AddElement<CommonBehavior>()
 .AddAttribute(0, "additive", a => a.Additive, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accumulate", a => a.Accumulate, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "xfrmType", a => a.TransformType, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "from", a => a.From)
 .AddAttribute(0, "to", a => a.To)
@@ -8268,7 +8268,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "rctx", a => a.RuntimeContext)
 .AddAttribute(0, "override", a => a.Override, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -8755,7 +8755,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<CommonMediaNode>()
 .AddAttribute(0, "vol", a => a.Volume, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 })
 .AddAttribute(0, "mute", a => a.Mute)
 .AddAttribute(0, "numSld", a => a.SlideCount)
@@ -9264,19 +9264,19 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<BuildParagraph>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
 })
 .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "uiExpand", a => a.UiExpand)
 .AddAttribute(0, "build", a => a.Build, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "bldLvl", a => a.BuildLevel)
 .AddAttribute(0, "animBg", a => a.AnimateBackground)
@@ -9286,13 +9286,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
+union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
 });
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
 });
 });
         }
@@ -9388,19 +9388,19 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             builder.AddElement<BuildDiagram>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
 })
 .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "uiExpand", a => a.UiExpand)
 .AddAttribute(0, "bld", a => a.Build, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -9486,19 +9486,19 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<BuildOleChart>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
 })
 .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "uiExpand", a => a.UiExpand)
 .AddAttribute(0, "bld", a => a.Build, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "animBg", a => a.AnimateBackground);
         }
@@ -9598,14 +9598,14 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<BuildGraphics>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
 })
 .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "uiExpand", a => a.UiExpand);
         }
@@ -10212,7 +10212,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<SlideListEntry>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -10260,7 +10260,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<CustomerData>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -10302,7 +10302,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<CustomerDataTags>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -10412,23 +10412,23 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<CommentAuthor>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "initials", a => a.Initials, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "lastIdx", a => a.LastIndex, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "clrIdx", a => a.ColorIndex, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -10550,12 +10550,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Comment>()
 .AddAttribute(0, "authorId", a => a.AuthorId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "dt", a => a.DateTime)
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -10796,18 +10796,18 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Control>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "showAsIcon", a => a.ShowAsIcon)
 .AddAttribute(19, "id", a => a.Id)
 .AddAttribute(0, "imgW", a => a.ImageWidth, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 })
 .AddAttribute(0, "imgH", a => a.ImageHeight, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 });
         }
 
@@ -10924,12 +10924,12 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
             builder.AddElement<SlideId>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (256L) });
 })
 .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -11039,11 +11039,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<SlideMasterId>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2147483648L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2147483648L) });
 })
 .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -11143,7 +11143,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<NotesMasterId>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -11242,7 +11242,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<HandoutMasterId>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -11338,7 +11338,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(0, "typeface", a => a.Typeface)
 .AddAttribute(0, "panose", a => a.Panose, aBuilder =>
 {
-  aBuilder.AddValidator(new StringValidatorAttribute() { Length = (10L) });
+  aBuilder.AddValidator(new StringValidator() { Length = (10L) });
 })
 .AddAttribute(0, "pitchFamily", a => a.PitchFamily)
 .AddAttribute(0, "charset", a => a.CharacterSet);
@@ -11477,7 +11477,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<EmbeddedFontDataIdType>()
                            .AddAttribute(19, "id", a => a.Id, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -11757,11 +11757,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<CustomShow>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -11909,11 +11909,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)
@@ -12397,7 +12397,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -14348,11 +14348,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<SlideLayoutId>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (2147483648L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2147483648L) });
 })
 .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -14579,11 +14579,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Tag>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -14685,8 +14685,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<NormalViewPortionType>()
                            .AddAttribute(0, "sz", a => a.Size, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L) });
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
                            })
                            .AddAttribute(0, "autoAdjust", a => a.AutoAdjust);
         }
@@ -14871,13 +14871,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Point2DType>()
                            .AddAttribute(0, "x", a => a.X, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            })
                            .AddAttribute(0, "y", a => a.Y, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            });
         }
     }
@@ -15029,7 +15029,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<OutlineViewSlideListEntry>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "collapse", a => a.Collapse);
         }
@@ -15141,7 +15141,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Guide>()
 .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
 {
- aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "pos", a => a.Position);
         }
@@ -15445,11 +15445,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(0, "snapVertSplitter", a => a.SnapVerticalSplitter)
 .AddAttribute(0, "vertBarState", a => a.VerticalBarState, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "horzBarState", a => a.HorizontalBarState, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "preferSingleView", a => a.PreferSingleView);
         }
@@ -16077,13 +16077,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<PositiveSize2DType>()
                            .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
                            })
                            .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
                            });
         }
     }
@@ -16152,8 +16152,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<SlideExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -16232,8 +16232,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<CommonSlideDataExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -16315,8 +16315,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<ShowPropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -16535,7 +16535,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<OleObjectEmbed>()
 .AddAttribute(0, "followColorScheme", a => a.FollowColorScheme, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -16829,18 +16829,18 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<Transition>()
 .AddAttribute(0, "spd", a => a.Speed, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(49, "dur", a => a.Duration, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(0, "advClick", a => a.AdvanceOnClick)
 .AddAttribute(0, "advTm", a => a.AdvanceAfterTime, aBuilder =>
 {
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2013) });
 });
         }
 
@@ -17139,7 +17139,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFor
             builder.AddElement<Background>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -17818,7 +17818,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<GroupShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -18397,10 +18397,10 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<ShapeTarget>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
 });
         }
 
@@ -18562,8 +18562,8 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersi
             builder.AddElement<TimeListSubShapeIdType>()
                            .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                               aBuilder.AddValidator(RequiredValidator.Instance);
+                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            });
         }
     }
@@ -18630,8 +18630,8 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersi
             builder.AddElement<CommentAuthorExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -18709,8 +18709,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<CommentExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -18788,8 +18788,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<SlideLayoutExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -18867,8 +18867,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<SlideMasterExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -18946,8 +18946,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<HandoutMasterExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -19025,8 +19025,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<NotesMasterExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -19144,15 +19144,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<PlaceholderShape>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "sz", a => a.Size, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "idx", a => a.Index)
 .AddAttribute(0, "hasCustomPrompt", a => a.HasCustomPrompt);
@@ -19308,8 +19308,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<ApplicationNonVisualDrawingPropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -19400,7 +19400,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<Iterate>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "backwards", a => a.Backwards);
         }
@@ -19886,11 +19886,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<TimeListType>()
                            .AddAttribute(0, "x", a => a.X, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            })
                            .AddAttribute(0, "y", a => a.Y, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -20344,17 +20344,17 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<SlideSize>()
 .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidatorAttribute());
- aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
+ aBuilder.AddValidator(RequiredValidator.Instance);
+ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
 })
 .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidatorAttribute());
- aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
+ aBuilder.AddValidator(RequiredValidator.Instance);
+ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (914400L), MaxInclusive = (51206400L) });
 })
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
- aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -20580,11 +20580,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "showCaptions", a => a.ShowCaptions)
 .AddAttribute(0, "layout", a => a.Layout, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "frame", a => a.Frame, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -20664,11 +20664,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "invalStChars", a => a.InvalidStartChars, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "invalEndChars", a => a.InvalidEndChars, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -20857,38 +20857,38 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ModificationVerifier>()
 .AddAttribute(0, "cryptProviderType", a => a.CryptographicProviderType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
 })
 .AddAttribute(0, "cryptAlgorithmClass", a => a.CryptographicAlgorithmClass, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
 })
 .AddAttribute(0, "cryptAlgorithmType", a => a.CryptographicAlgorithmType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
 })
 .AddAttribute(0, "cryptAlgorithmSid", a => a.CryptographicAlgorithmSid, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
 })
 .AddAttribute(0, "spinCount", a => a.SpinCount, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
 })
 .AddAttribute(0, "saltData", a => a.SaltData, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
 })
 .AddAttribute(0, "hashData", a => a.HashData, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator(new RequiredValidator() { Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVersion = (FileFormatVersions.Office2010) });
 })
 .AddAttribute(0, "cryptProvider", a => a.CryptographicProvider)
 .AddAttribute(0, "algIdExt", a => a.ExtendedCryptographicAlgorithm)
@@ -20897,19 +20897,19 @@ aBuilder.AddValidator(new RequiredValidatorAttribute() { IsRequired = (false), I
 .AddAttribute(0, "cryptProviderTypeExtSource", a => a.CryptographicProviderTypeExtensibilitySource)
 .AddAttribute(0, "algorithmName", a => a.AlgorithmName, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(0, "hashValue", a => a.HashValue, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(0, "saltValue", a => a.SaltValue, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(0, "spinValue", a => a.SpinValue, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
 
@@ -21056,8 +21056,8 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<PresentationExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -21168,11 +21168,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "showSpeakerNotes", a => a.ShowSpeakerNotes)
 .AddAttribute(0, "pubBrowser", a => a.TargetBrowser, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -21344,12 +21344,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(0, "useLongFilenames", a => a.UseLongFilenames)
 .AddAttribute(0, "imgSz", a => a.ImageSize, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "encoding", a => a.Encoding)
 .AddAttribute(0, "clr", a => a.Color, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -21479,11 +21479,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<PrintingProperties>()
 .AddAttribute(0, "prnWhat", a => a.PrintWhat, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "clrMode", a => a.ColorMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "hiddenSlides", a => a.HiddenSlides)
 .AddAttribute(0, "scaleToFitPaper", a => a.ScaleToFitPaper)
@@ -21879,8 +21879,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<PresentationPropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -22493,8 +22493,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<OleChartElement>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "lvl", a => a.Level);
         }
@@ -22811,7 +22811,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<OrientationTransitionType>()
                            .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
                            {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            });
         }
     }
@@ -22896,8 +22896,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
                            {
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(new EnumValidatorAttribute());
-                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(new EnumValidatorAttribute());
+                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(EnumValidator.Instance);
+                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(EnumValidator.Instance);
                                });
                            });
         }
@@ -23061,7 +23061,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<SideDirectionTransitionType>()
                            .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
                            {
-                               aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                            });
         }
     }
@@ -23107,11 +23107,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<SplitTransition>()
 .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
 {
- aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
 {
- aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -23150,7 +23150,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<StripsTransition>()
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -23225,7 +23225,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<ZoomTransition>()
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
 {
-  aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+  aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 

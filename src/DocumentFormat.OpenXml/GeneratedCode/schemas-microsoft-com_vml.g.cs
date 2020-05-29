@@ -2673,7 +2673,7 @@ namespace DocumentFormat.OpenXml.Vml
 .AddAttribute(0, "insetpen", a => a.InsetPen)
 .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
 .AddAttribute(27, "connectortype", a => a.ConnectorType)
 .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
@@ -3524,7 +3524,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(0, "insetpen", a => a.InsetPen)
 .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
 .AddAttribute(27, "connectortype", a => a.ConnectorType)
 .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
@@ -4283,7 +4283,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<Background>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLength = (255L) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255L) });
 })
 .AddAttribute(0, "fill", a => a.Filled)
 .AddAttribute(0, "fillcolor", a => a.Fillcolor)
@@ -5083,7 +5083,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLeng
 .AddAttribute(0, "insetpen", a => a.InsetPen)
 .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
 .AddAttribute(27, "connectortype", a => a.ConnectorType)
 .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
@@ -5098,7 +5098,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(27, "gfxdata", a => a.Gfxdata)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLength = (255L) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255L) });
 })
 .AddAttribute(0, "style", a => a.Style)
 .AddAttribute(0, "href", a => a.Href)
@@ -5964,7 +5964,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), MaxLeng
 .AddAttribute(0, "insetpen", a => a.InsetPen)
 .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
 .AddAttribute(27, "connectortype", a => a.ConnectorType)
 .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
@@ -6881,7 +6881,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(0, "insetpen", a => a.InsetPen)
 .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
 .AddAttribute(27, "connectortype", a => a.ConnectorType)
 .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
@@ -7735,7 +7735,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(0, "insetpen", a => a.InsetPen)
 .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
 .AddAttribute(27, "connectortype", a => a.ConnectorType)
 .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
@@ -8559,7 +8559,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(0, "insetpen", a => a.InsetPen)
 .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
 .AddAttribute(27, "connectortype", a => a.ConnectorType)
 .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
@@ -9395,7 +9395,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(0, "insetpen", a => a.InsetPen)
 .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
 .AddAttribute(27, "connectortype", a => a.ConnectorType)
 .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
@@ -10220,7 +10220,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(0, "insetpen", a => a.InsetPen)
 .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
 .AddAttribute(27, "connectortype", a => a.ConnectorType)
 .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)
@@ -11043,7 +11043,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(0, "insetpen", a => a.InsetPen)
 .AddAttribute(27, "spt", a => a.OptionalNumber, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (202L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (202L) });
 })
 .AddAttribute(27, "connectortype", a => a.ConnectorType)
 .AddAttribute(27, "bwmode", a => a.BlackWhiteMode)

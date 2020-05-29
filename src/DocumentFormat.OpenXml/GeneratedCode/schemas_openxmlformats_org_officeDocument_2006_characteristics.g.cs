@@ -135,19 +135,19 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
             builder.AddElement<Characteristic>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "relation", a => a.Relation, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "vocabulary", a => a.Vocabulary, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 

@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             builder.AddElement<SomeElement>()
                 .AddAttribute(0, "s", a => a.Str, a =>
                 {
-                    a.AddValidator(new RequiredValidatorAttribute());
+                    a.AddValidator(new RequiredValidator());
                 });
             var data = builder.Build();
 
@@ -54,8 +54,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             Assert.Collection(
                 elementData.Validators,
-                v => Assert.IsType<RequiredValidatorAttribute>(v),
-                v => Assert.IsType<StringValidatorAttribute>(v));
+                v => Assert.IsType<RequiredValidator>(v),
+                v => Assert.IsType<StringValidator>(v));
         }
 
         private class SomeElement : OpenXmlElement

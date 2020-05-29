@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+            builder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.SetSchema(37, "XMLNamespace");
         }
 
@@ -174,7 +174,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+            builder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.SetSchema(37, "defaultPropertyEditorNamespace");
         }
 
@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<BooleanValue>(new NumberValidatorAttribute());
+            builder.AddValidator<BooleanValue>(NumberValidator.Instance);
             builder.SetSchema(37, "showOnOpen");
         }
 

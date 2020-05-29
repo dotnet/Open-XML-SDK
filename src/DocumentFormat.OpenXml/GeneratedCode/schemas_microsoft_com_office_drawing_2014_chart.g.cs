@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -197,7 +197,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<UnsignedIntegerType>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -829,7 +829,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<UniqueIDChart>()
                            .AddAttribute(0, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -1528,7 +1528,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<LiteralDataChart>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1603,7 +1603,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<UInt32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<UInt32Value>(NumberValidator.Instance);
             builder.SetSchema(82, "ptidx");
             builder.Availability = FileFormatVersions.Office2016;
         }

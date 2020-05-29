@@ -116,13 +116,13 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
             builder.AddElement<ActiveXControlData>()
 .AddAttribute(35, "classid", a => a.ActiveXControlClassId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(35, "license", a => a.License)
 .AddAttribute(19, "id", a => a.Id)
 .AddAttribute(35, "persistence", a => a.Persistence, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -217,7 +217,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ActiveXObjectProperty>()
 .AddAttribute(35, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(35, "value", a => a.Value);
         }

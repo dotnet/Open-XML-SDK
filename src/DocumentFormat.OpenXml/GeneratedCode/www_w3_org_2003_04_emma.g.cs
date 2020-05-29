@@ -55,8 +55,8 @@ namespace DocumentFormat.OpenXml.EMMA
             builder.AddElement<DerivedFrom>()
 .AddAttribute(0, "resource", a => a.Resource, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "composite", a => a.Composite);
         }
@@ -120,7 +120,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             builder.AddElement<Info>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-  aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+  aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 });
         }
 
@@ -235,12 +235,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             builder.AddElement<Lattice>()
 .AddAttribute(0, "initial", a => a.Initial, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
 })
 .AddAttribute(0, "final", a => a.Final, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(44, "time-ref-uri", a => a.TimeReference)
 .AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
@@ -690,8 +690,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Interpretation>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(44, "tokens", a => a.Tokens)
 .AddAttribute(44, "process", a => a.Process)
@@ -701,7 +701,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
 .AddAttribute(44, "media-type", a => a.MediaType)
 .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
 })
 .AddAttribute(44, "source", a => a.Source)
 .AddAttribute(44, "start", a => a.Start)
@@ -716,7 +716,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(44, "verbal", a => a.Verbal)
 .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
 })
 .AddAttribute(44, "grammar-ref", a => a.GrammarRef)
 .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
@@ -1133,8 +1133,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(0, "disjunction-type", a => a.DisjunctionType)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(44, "tokens", a => a.Tokens)
 .AddAttribute(44, "process", a => a.Process)
@@ -1144,7 +1144,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
 .AddAttribute(44, "media-type", a => a.MediaType)
 .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
 })
 .AddAttribute(44, "source", a => a.Source)
 .AddAttribute(44, "start", a => a.Start)
@@ -1159,7 +1159,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(44, "verbal", a => a.Verbal)
 .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
 })
 .AddAttribute(44, "grammar-ref", a => a.GrammarRef)
 .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
@@ -1565,8 +1565,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<Group>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(44, "tokens", a => a.Tokens)
 .AddAttribute(44, "process", a => a.Process)
@@ -1576,7 +1576,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
 .AddAttribute(44, "media-type", a => a.MediaType)
 .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
 })
 .AddAttribute(44, "source", a => a.Source)
 .AddAttribute(44, "start", a => a.Start)
@@ -1591,7 +1591,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(44, "verbal", a => a.Verbal)
 .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
 })
 .AddAttribute(44, "grammar-ref", a => a.GrammarRef)
 .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
@@ -1990,8 +1990,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<Sequence>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(44, "tokens", a => a.Tokens)
 .AddAttribute(44, "process", a => a.Process)
@@ -2001,7 +2001,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
 .AddAttribute(44, "media-type", a => a.MediaType)
 .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
 })
 .AddAttribute(44, "source", a => a.Source)
 .AddAttribute(44, "start", a => a.Start)
@@ -2016,7 +2016,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 .AddAttribute(44, "verbal", a => a.Verbal)
 .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
 })
 .AddAttribute(44, "grammar-ref", a => a.GrammarRef)
 .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
@@ -2098,7 +2098,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<GroupInfo>()
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 
@@ -2225,13 +2225,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             builder.AddElement<Grammar>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 
@@ -2304,12 +2304,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             builder.AddElement<Model>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidatorAttribute());
- aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+ aBuilder.AddValidator(RequiredValidator.Instance);
+ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
- aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 
@@ -2386,8 +2386,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             builder.AddElement<EndPointInfo>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 });
         }
 
@@ -2587,8 +2587,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
             builder.AddElement<EndPoint>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = (true), IsNcName = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(44, "endpoint-role", a => a.EndpointRole)
 .AddAttribute(44, "endpoint-address", a => a.EndPointAddress)
@@ -2701,16 +2701,16 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsId = (true), IsToken = 
             builder.AddElement<Node>()
 .AddAttribute(0, "node-number", a => a.NodeNumber, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
 })
 .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
 })
 .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
 });
         }
 
@@ -2927,13 +2927,13 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<Arc>()
 .AddAttribute(0, "from", a => a.From, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
 })
 .AddAttribute(0, "to", a => a.To, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
 })
 .AddAttribute(44, "start", a => a.Start)
 .AddAttribute(44, "end", a => a.End)
@@ -2941,11 +2941,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { IsNonNegative = (true) })
 .AddAttribute(44, "duration", a => a.Duration)
 .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (1L) });
 })
 .AddAttribute(44, "cost", a => a.Cost, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (10000000L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
 })
 .AddAttribute(44, "lang", a => a.Language)
 .AddAttribute(44, "medium", a => a.Medium)
@@ -3042,7 +3042,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<Emma>()
 .AddAttribute(0, "version", a => a.Version, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
