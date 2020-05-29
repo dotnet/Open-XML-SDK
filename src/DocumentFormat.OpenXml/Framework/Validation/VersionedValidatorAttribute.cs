@@ -32,8 +32,6 @@ namespace DocumentFormat.OpenXml.Framework
 
         byte? IUnionValidator.UnionId => _unionId;
 
-        public Type SimpleType { get; set; }
-
         public void Validate(ValidationContext context)
         {
             if (IsValid(context.FileFormat))
@@ -56,33 +54,6 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 return true;
             }
-        }
-
-        protected OpenXmlSimpleType GetValue(in ValidationElement current)
-        {
-            var input = current.Value;
-
-            if (input is null)
-            {
-                return null;
-            }
-
-            if (SimpleType is null)
-            {
-                return input;
-            }
-
-            if (input.GetType() == SimpleType)
-            {
-                return input;
-            }
-
-            var factory = PackageCache.Cache.GetFactory<OpenXmlSimpleType>(SimpleType);
-            var output = factory();
-
-            output.InnerText = input.InnerText;
-
-            return output;
         }
 
         protected abstract void ValidateVersion(ValidationContext context);

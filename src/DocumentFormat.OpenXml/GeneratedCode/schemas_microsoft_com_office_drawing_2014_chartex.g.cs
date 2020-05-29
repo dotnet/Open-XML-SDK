@@ -247,7 +247,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
+            builder.AddValidator<UInt32Value>(new NumberValidatorAttribute());
             builder.SetSchema(80, "binCount");
             builder.Availability = FileFormatVersions.Office2016;
         }
@@ -1497,7 +1497,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 });
@@ -1571,7 +1571,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -1579,7 +1579,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -1587,7 +1587,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinExclusive = (0L), SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinExclusive = (0L), UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -1595,7 +1595,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinExclusive = (0L), SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinExclusive = (0L), UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 });
@@ -2397,7 +2397,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)) });
+            builder.AddValidator<DoubleValue>(new NumberValidatorAttribute());
             builder.SetSchema(80, "binSize");
             builder.Availability = FileFormatVersions.Office2016;
         }
@@ -2640,7 +2640,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -2648,7 +2648,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)), UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 });
@@ -3825,7 +3825,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
+            builder.AddValidator<UInt32Value>(new NumberValidatorAttribute());
             builder.SetSchema(80, "axisId");
             builder.Availability = FileFormatVersions.Office2016;
         }

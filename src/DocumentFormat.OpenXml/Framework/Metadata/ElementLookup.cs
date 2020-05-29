@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     /// </summary>
     internal class ElementLookup
     {
-        public static ElementLookup Parts { get; } = CreatePartLookup(typeof(OpenXmlPartRootElement), PackageCache.Cache.GetFactory<OpenXmlElement>);
+        public static ElementLookup Parts { get; } = CreatePartLookup(typeof(OpenXmlPartRootElement), PackageCache.Cache.GetFactory);
 
         public static readonly ElementLookup Empty = new ElementLookup(Enumerable.Empty<ElementChild>());
 

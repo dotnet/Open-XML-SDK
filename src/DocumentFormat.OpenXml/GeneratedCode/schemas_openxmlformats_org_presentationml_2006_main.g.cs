@@ -4367,13 +4367,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
-     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+     union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
  });
  aBuilder.AddUnion(union =>
  {
      union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
-     union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
  });
 });
         }
@@ -4857,13 +4857,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
 });
 aBuilder.AddUnion(union =>
 {
 union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
 });
 });
         }
@@ -7946,8 +7946,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (100000L), UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { UnionId = (0) });
 });
 })
 .AddAttribute(0, "fmla", a => a.Fomula);
@@ -9266,8 +9266,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
 {
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
 })
 .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
 {
@@ -9286,13 +9286,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), Version = (FileFormatVersions.Office2007), UnionId = (0) });
+union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { Version = (FileFormatVersions.Office2007), UnionId = (0) });
 });
 aBuilder.AddUnion(union =>
 {
 union.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>)), InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (1) });
 });
 });
         }
@@ -9390,8 +9390,8 @@ union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue
 {
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
 })
 .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
 {
@@ -9488,8 +9488,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
 })
 .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
 {
@@ -9600,8 +9600,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
 })
 .AddAttribute(0, "grpId", a => a.GroupId, aBuilder =>
 {
@@ -16838,7 +16838,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
 .AddAttribute(0, "advClick", a => a.AdvanceOnClick)
 .AddAttribute(0, "advTm", a => a.AdvanceAfterTime, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2007) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
 aBuilder.AddValidator(new StringValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
 });
@@ -18399,8 +18399,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddValidator(new StringValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), Version = (FileFormatVersions.Office2010) });
-aBuilder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), InitialVersion = (FileFormatVersions.Office2013) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
+aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
 });
         }
 
@@ -22896,8 +22896,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
                            {
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>)), UnionId = (0) });
-                                   union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>)), UnionId = (0) });
+                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(new EnumValidatorAttribute() { UnionId = (0) });
+                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(new EnumValidatorAttribute() { UnionId = (0) });
                                });
                            });
         }

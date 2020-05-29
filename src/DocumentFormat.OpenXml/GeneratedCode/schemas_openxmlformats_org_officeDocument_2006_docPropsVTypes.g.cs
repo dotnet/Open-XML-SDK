@@ -966,7 +966,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "blob");
         }
 
@@ -1004,7 +1004,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "oblob");
         }
 
@@ -1042,7 +1042,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "stream");
         }
 
@@ -1080,7 +1080,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "ostream");
         }
 
@@ -1118,7 +1118,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "storage");
         }
 
@@ -1156,7 +1156,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Base64BinaryValue)) });
+            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "ostorage");
         }
 
@@ -1242,7 +1242,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(SByteValue)) });
+            builder.AddValidator<SByteValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "i1");
         }
 
@@ -1280,7 +1280,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int16Value)) });
+            builder.AddValidator<Int16Value>(new NumberValidatorAttribute());
             builder.SetSchema(5, "i2");
         }
 
@@ -1318,7 +1318,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
             builder.SetSchema(5, "i4");
         }
 
@@ -1356,7 +1356,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
             builder.SetSchema(5, "int");
         }
 
@@ -1394,7 +1394,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int64Value)) });
+            builder.AddValidator<Int64Value>(new NumberValidatorAttribute());
             builder.SetSchema(5, "i8");
         }
 
@@ -1432,7 +1432,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ByteValue)) });
+            builder.AddValidator<ByteValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "ui1");
         }
 
@@ -1470,7 +1470,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt16Value)) });
+            builder.AddValidator<UInt16Value>(new NumberValidatorAttribute());
             builder.SetSchema(5, "ui2");
         }
 
@@ -1508,7 +1508,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
+            builder.AddValidator<UInt32Value>(new NumberValidatorAttribute());
             builder.SetSchema(5, "ui4");
         }
 
@@ -1546,7 +1546,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
+            builder.AddValidator<UInt32Value>(new NumberValidatorAttribute());
             builder.SetSchema(5, "uint");
         }
 
@@ -1584,7 +1584,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt64Value)) });
+            builder.AddValidator<UInt64Value>(new NumberValidatorAttribute());
             builder.SetSchema(5, "ui8");
         }
 
@@ -1622,7 +1622,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(SingleValue)) });
+            builder.AddValidator<SingleValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "r4");
         }
 
@@ -1660,7 +1660,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)) });
+            builder.AddValidator<DoubleValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "r8");
         }
 
@@ -1698,7 +1698,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DecimalValue)) });
+            builder.AddValidator<DecimalValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "decimal");
         }
 
@@ -1847,7 +1847,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DateTimeValue)) });
+            builder.AddValidator<DateTimeValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "date");
         }
 
@@ -1885,7 +1885,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DateTimeValue)) });
+            builder.AddValidator<DateTimeValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "filetime");
         }
 
@@ -1923,7 +1923,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
+            builder.AddValidator<BooleanValue>(new NumberValidatorAttribute());
             builder.SetSchema(5, "bool");
         }
 

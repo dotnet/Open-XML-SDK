@@ -3086,7 +3086,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>)) });
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>>(new EnumValidatorAttribute());
             builder.SetSchema(27, "LinkType");
         }
 
@@ -3124,7 +3124,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(TrueFalseBlankValue)) });
+            builder.AddValidator<TrueFalseBlankValue>(new NumberValidatorAttribute());
             builder.SetSchema(27, "LockedField");
         }
 

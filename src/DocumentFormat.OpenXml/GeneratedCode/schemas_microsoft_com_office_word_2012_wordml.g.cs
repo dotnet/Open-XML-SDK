@@ -91,8 +91,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>)), UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { SimpleType = (typeof(HexBinaryValue)), Length = (3L), UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute() { UnionId = (0) });
+union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L), UnionId = (0) });
 });
 })
 .AddAttribute(23, "themeColor", a => a.ThemeColor)

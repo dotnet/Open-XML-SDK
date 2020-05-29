@@ -2659,7 +2659,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L), SimpleType = (typeof(DoubleValue)) });
+            builder.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
             builder.SetSchema(12, "x");
         }
 
@@ -2697,7 +2697,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L), SimpleType = (typeof(DoubleValue)) });
+            builder.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (1L) });
             builder.SetSchema(12, "y");
         }
 

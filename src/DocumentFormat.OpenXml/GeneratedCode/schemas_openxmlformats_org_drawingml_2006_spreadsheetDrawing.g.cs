@@ -2359,7 +2359,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
+            builder.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
             builder.SetSchema(18, "col");
         }
 
@@ -2397,7 +2397,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)) });
+            builder.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
             builder.SetSchema(18, "colOff");
         }
 
@@ -2435,7 +2435,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)) });
+            builder.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
             builder.SetSchema(18, "rowOff");
         }
 
@@ -2473,7 +2473,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
+            builder.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
             builder.SetSchema(18, "row");
         }
 

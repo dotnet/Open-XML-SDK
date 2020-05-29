@@ -388,7 +388,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(ListValue<StringValue>)) });
+            builder.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute());
             builder.SetSchema(32, "sqref");
             builder.Availability = FileFormatVersions.Office2010;
         }

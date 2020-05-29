@@ -731,8 +731,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
-union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
 });
 });
         }
@@ -906,8 +906,8 @@ union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), Simple
                                aBuilder.AddValidator(new RequiredValidatorAttribute());
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
                                });
                            });
         }
@@ -3823,8 +3823,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
                                aBuilder.AddValidator(new RequiredValidatorAttribute());
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
-                                   union.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (-2L), SimpleType = (typeof(Int32Value)), UnionId = (0) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
                                });
                            });
         }
