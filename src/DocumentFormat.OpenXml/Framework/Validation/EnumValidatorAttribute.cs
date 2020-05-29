@@ -2,11 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation;
-using System;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
     internal sealed class EnumValidatorAttribute : VersionedValidatorAttribute
     {
         public static IOpenXmlSimpleTypeValidator Instance { get; } = new EnumValidatorAttribute();
@@ -14,7 +12,7 @@ namespace DocumentFormat.OpenXml.Framework
         protected override void ValidateVersion(ValidationContext context)
         {
             var current = context.Stack.Current;
-            var value = GetValue(current);
+            var value = current.Value;
 
             if (value != null && !value.IsValid)
             {

@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(BooleanValue)) });
+            builder.AddValidator<BooleanValue>(new NumberValidatorAttribute());
             builder.SetSchema(37, "showOnOpen");
         }
 

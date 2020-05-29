@@ -60,10 +60,6 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     return _nonNegativeQname;
                 }
-                else if (SimpleType != null)
-                {
-                    return SimpleType.GetSimpleTypeQualifiedName();
-                }
                 else
                 {
                     return null;
@@ -74,15 +70,15 @@ namespace DocumentFormat.OpenXml.Framework
         protected override void ValidateVersion(ValidationContext context)
         {
             var current = context.Stack.Current;
-            var id = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
-            var description = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
-
-            var stValue = GetValue(current);
+            var stValue = current.Value;
 
             if (stValue is null)
             {
                 return;
             }
+
+            var id = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
+            var description = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
 
             if (!stValue.IsValid)
             {

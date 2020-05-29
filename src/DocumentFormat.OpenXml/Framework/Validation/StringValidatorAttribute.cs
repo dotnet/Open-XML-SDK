@@ -46,10 +46,6 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     return _anyUri;
                 }
-                else if (SimpleType != null)
-                {
-                    return OpenXmlSimpleTypeExtensions.GetSimpleTypeQualifiedName(SimpleType);
-                }
 
                 return null;
             }
@@ -111,7 +107,7 @@ namespace DocumentFormat.OpenXml.Framework
 
             if (current.Value is StringValue str)
             {
-                Validate((StringValue)GetValue(current), context, current, includeDetails: true);
+                Validate(str, context, current, includeDetails: true);
             }
             else if (current.Value is IEnumerable<StringValue> list)
             {

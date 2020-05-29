@@ -16321,8 +16321,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-    union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.AnimationBuildValues>)), UnionId = (0) });
-    union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.AnimationDiagramOnlyBuildValues>)), UnionId = (0) });
+    union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationBuildValues>>(new EnumValidatorAttribute() { UnionId = (0) });
+    union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationDiagramOnlyBuildValues>>(new EnumValidatorAttribute() { UnionId = (0) });
 });
 })
 .AddAttribute(0, "rev", a => a.ReverseAnimation);
@@ -16375,8 +16375,8 @@ aBuilder.AddUnion(union =>
 {
 aBuilder.AddUnion(union =>
 {
-  union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.AnimationBuildValues>)), UnionId = (0) });
-  union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.AnimationChartOnlyBuildValues>)), UnionId = (0) });
+  union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationBuildValues>>(new EnumValidatorAttribute() { UnionId = (0) });
+  union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationChartOnlyBuildValues>>(new EnumValidatorAttribute() { UnionId = (0) });
 });
 })
 .AddAttribute(0, "animBg", a => a.AnimateBackground);
@@ -19315,7 +19315,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
                                aBuilder.AddValidator(new RequiredValidatorAttribute());
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+                                   union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
                                    union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
                                });
                            })
@@ -19324,7 +19324,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
                                aBuilder.AddValidator(new RequiredValidatorAttribute());
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+                                   union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
                                    union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
                                });
                            });
@@ -19449,7 +19449,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -19457,7 +19457,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -19469,7 +19469,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -19477,7 +19477,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 });
@@ -19625,7 +19625,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -19633,7 +19633,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -19645,7 +19645,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -19653,7 +19653,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 });
@@ -19748,7 +19748,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 });
@@ -20016,7 +20016,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
  aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+     union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
      union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
  });
 })
@@ -20025,7 +20025,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
  aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+     union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
      union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
  });
 })
@@ -20034,7 +20034,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
  aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+     union.AddValidator<Int32Value>(new NumberValidatorAttribute() { UnionId = (0) });
      union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
  });
 })
@@ -20043,7 +20043,7 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
  aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)), UnionId = (0) });
+     union.AddValidator<Int32Value>(new NumberValidatorAttribute() { UnionId = (0) });
      union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
  });
 });
@@ -20683,7 +20683,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
   aBuilder.AddValidator(new RequiredValidatorAttribute());
   aBuilder.AddUnion(union =>
   {
-      union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+      union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
       union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
   });
 })
@@ -20692,7 +20692,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
   aBuilder.AddValidator(new RequiredValidatorAttribute());
   aBuilder.AddUnion(union =>
   {
-      union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+      union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
       union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
   });
 })
@@ -20701,7 +20701,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
   aBuilder.AddValidator(new RequiredValidatorAttribute());
   aBuilder.AddUnion(union =>
   {
-      union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+      union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
       union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
   });
 })
@@ -20710,7 +20710,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
   aBuilder.AddValidator(new RequiredValidatorAttribute());
   aBuilder.AddUnion(union =>
   {
-      union.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), SimpleType = (typeof(Int64Value)), UnionId = (0) });
+      union.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L), UnionId = (0) });
       union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
   });
 });

@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
             builder.SetSchema(51, "pctPosHOffset");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
             builder.SetSchema(51, "pctPosVOffset");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -305,7 +305,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
+            builder.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
             builder.SetSchema(51, "pctWidth");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -344,7 +344,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), SimpleType = (typeof(Int32Value)) });
+            builder.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
             builder.SetSchema(51, "pctHeight");
             builder.Availability = FileFormatVersions.Office2010;
         }

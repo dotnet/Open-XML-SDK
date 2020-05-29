@@ -42,6 +42,20 @@ namespace DocumentFormat.OpenXml.Validation
             return _popDisposable;
         }
 
+        public IDisposable Push(OpenXmlSimpleType value)
+        {
+            var current = Current;
+            var element = GetOrCreateElement();
+
+            element.CopyFrom(current);
+
+            element.Value = value;
+
+            _elements.Push(element);
+
+            return _popDisposable;
+        }
+
         public IDisposable Push(OpenXmlSimpleType value, AttributeMetadata property, bool isAttribute)
         {
             var current = Current;

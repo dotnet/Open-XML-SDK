@@ -3776,7 +3776,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>)) });
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>>(new EnumValidatorAttribute());
             builder.SetSchema(9, "SourceType");
         }
 

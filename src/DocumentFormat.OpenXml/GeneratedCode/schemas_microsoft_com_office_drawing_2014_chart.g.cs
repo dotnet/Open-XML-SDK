@@ -1603,7 +1603,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)) });
+            builder.AddValidator<UInt32Value>(new NumberValidatorAttribute());
             builder.SetSchema(82, "ptidx");
             builder.Availability = FileFormatVersions.Office2016;
         }

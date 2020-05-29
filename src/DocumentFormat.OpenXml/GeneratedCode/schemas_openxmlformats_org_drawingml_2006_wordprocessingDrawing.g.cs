@@ -1971,7 +1971,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues>)) });
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues>>(new EnumValidatorAttribute());
             builder.SetSchema(16, "align");
         }
 
@@ -2009,7 +2009,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(Int32Value)) });
+            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
             builder.SetSchema(16, "posOffset");
         }
 
@@ -2048,7 +2048,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-            builder.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues>)) });
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues>>(new EnumValidatorAttribute());
             builder.SetSchema(16, "align");
         }
 

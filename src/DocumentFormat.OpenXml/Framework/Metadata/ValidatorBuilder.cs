@@ -21,6 +21,23 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             }
         }
 
+        public void AddValidator<TSimpleType>(IOpenXmlSimpleTypeValidator validator)
+            where TSimpleType : OpenXmlSimpleType, new()
+        {
+            var wrapped = new SimpleTypeValidator<TSimpleType>(validator);
+
+            // If the original validator provided a qname, we need to ensure the wrapped one does too
+            if (validator is INameProvider name)
+            {
+                var qname = name.QName ?? typeof(TSimpleType).GetSimpleTypeQualifiedName();
+                _validators.Add(new NameProviderValidator(wrapped, qname));
+            }
+            else
+            {
+                _validators.Add(wrapped);
+            }
+        }
+
         public void InsertValidator(int index, IOpenXmlSimpleTypeValidator validator)
         {
             _validators.Insert(index, validator);

@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleMethodEnum>)), UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleMethodEnum>>(new EnumValidatorAttribute() { UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 })
@@ -1118,8 +1118,8 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(UInt32Value)), UnionId = (0) });
-union.AddValidator(new EnumValidatorAttribute() { SimpleType = (typeof(EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColorEnum>)), UnionId = (0) });
+union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColorEnum>>(new EnumValidatorAttribute() { UnionId = (0) });
 union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 });
 });
@@ -1528,7 +1528,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new NumberValidatorAttribute() { SimpleType = (typeof(DoubleValue)) });
+            builder.AddValidator<DoubleValue>(new NumberValidatorAttribute());
             builder.SetSchema(65, "lineWidthScale");
             builder.Availability = FileFormatVersions.Office2013;
         }

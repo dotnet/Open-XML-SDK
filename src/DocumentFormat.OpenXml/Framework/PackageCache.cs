@@ -17,27 +17,13 @@ namespace DocumentFormat.OpenXml.Framework
     /// </remarks>
     internal class PackageCache
     {
-        private readonly TypeConcurrentDictionary<Func<OpenXmlSimpleType>> _simpleTypeFactory = new TypeConcurrentDictionary<Func<OpenXmlSimpleType>>();
         private readonly TypeConcurrentDictionary<Func<OpenXmlElement>> _elementFactory = new TypeConcurrentDictionary<Func<OpenXmlElement>>();
         private readonly TypeConcurrentDictionary<OpenXmlPartData> _partData = new TypeConcurrentDictionary<OpenXmlPartData>();
 
         public static PackageCache Cache { get; } = new PackageCache();
 
-        public Func<T> GetFactory<T>(Type type)
-        {
-            if (typeof(T) == typeof(OpenXmlSimpleType))
-            {
-                return (Func<T>)(object)_simpleTypeFactory.GetOrAdd(type, ClassActivator<OpenXmlSimpleType>.CreateActivator);
-            }
-            else if (typeof(T) == typeof(OpenXmlElement))
-            {
-                return (Func<T>)(object)_elementFactory.GetOrAdd(type, ClassActivator<OpenXmlElement>.CreateActivator);
-            }
-            else
-            {
-                throw new ArgumentOutOfRangeException(nameof(T));
-            }
-        }
+        public Func<OpenXmlElement> GetFactory(Type type)
+            => _elementFactory.GetOrAdd(type, ClassActivator<OpenXmlElement>.CreateActivator);
 
         /// <summary>
         /// Extract the part constraints from a given container.
