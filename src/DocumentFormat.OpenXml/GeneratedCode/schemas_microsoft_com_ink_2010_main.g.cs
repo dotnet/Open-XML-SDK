@@ -285,8 +285,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>>(new EnumValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 })
 .AddAttribute(0, "rotatedBoundingBox", a => a.RotatedBoundingBox, aBuilder =>
@@ -299,32 +299,32 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { UnionId = (0) });
+union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute());
+union.AddValidator<Int32Value>(new NumberValidatorAttribute());
 });
 })
 .AddAttribute(0, "descender", a => a.Descender, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { UnionId = (0) });
+union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute());
+union.AddValidator<Int32Value>(new NumberValidatorAttribute());
 });
 })
 .AddAttribute(0, "baseline", a => a.Baseline, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { UnionId = (0) });
+union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute());
+union.AddValidator<Int32Value>(new NumberValidatorAttribute());
 });
 })
 .AddAttribute(0, "midline", a => a.Midline, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { UnionId = (0) });
+union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute());
+union.AddValidator<Int32Value>(new NumberValidatorAttribute());
 });
 })
 .AddAttribute(0, "customRecognizerId", a => a.CustomRecognizerId, aBuilder =>
@@ -349,8 +349,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>>(new EnumValidatorAttribute());
+union.AddValidator<UInt32Value>(new NumberValidatorAttribute());
 });
 })
 .AddAttribute(0, "shapeName", a => a.ShapeName)
@@ -516,8 +516,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
                            {
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"), UnionId = (0) });
-                                   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                                   union.AddValidator<UInt32Value>(new NumberValidatorAttribute());
                                });
                            });
         }

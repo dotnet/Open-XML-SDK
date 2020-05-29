@@ -1497,8 +1497,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator(new StringValidatorAttribute());
 });
 });
         }
@@ -1571,32 +1571,32 @@ union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 })
 .AddAttribute(0, "min", a => a.Min, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 })
 .AddAttribute(0, "majorUnit", a => a.MajorUnit, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinExclusive = (0L), UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinExclusive = (0L) });
+union.AddValidator(new StringValidatorAttribute());
 });
 })
 .AddAttribute(0, "minorUnit", a => a.MinorUnit, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinExclusive = (0L), UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { MinExclusive = (0L) });
+union.AddValidator(new StringValidatorAttribute());
 });
 });
         }
@@ -2640,16 +2640,16 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 })
 .AddAttribute(0, "overflow", a => a.Overflow, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DoubleValue>(new NumberValidatorAttribute() { UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { UnionId = (0) });
+union.AddValidator<DoubleValue>(new NumberValidatorAttribute());
+union.AddValidator(new StringValidatorAttribute());
 });
 });
         }

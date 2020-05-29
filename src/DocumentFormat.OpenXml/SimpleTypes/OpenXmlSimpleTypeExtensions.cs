@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Framework
             return null;
         }
 
-        public static XmlQualifiedName GetSimpleTypeQualifiedName(this ValidatorCollection validators, Type type = null)
+        public static XmlQualifiedName GetSimpleTypeQualifiedName(this ReadOnlyArray<IOpenXmlSimpleTypeValidator> validators, Type type = null)
         {
             foreach (var validator in validators)
             {

@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         internal ElementMetadata(
             ReadOnlyArray<AttributeMetadata> attributes,
-            ValidatorCollection validators,
+            ReadOnlyArray<IOpenXmlSimpleTypeValidator> validators,
             FileFormatVersions version,
             SchemaAttrAttribute schema,
             Lazy<ElementLookup> lookup)
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public ElementLookup Children => _children?.Value ?? ElementLookup.Empty;
 
-        public ValidatorCollection Validators { get; }
+        public ReadOnlyArray<IOpenXmlSimpleTypeValidator> Validators { get; }
 
         public FileFormatVersions Availability { get; }
 
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 var schema = _localName is null ? null : new SchemaAttrAttribute(_nsId, _localName);
                 var lookup = _children is null ? _lazy : new Lazy<ElementLookup>(() => new ElementLookup(_children.Select(c => c.Build())), true);
 
-                return new ElementMetadata(BuildAttributes(), new ValidatorCollection(ToArray()), Availability, schema, lookup);
+                return new ElementMetadata(BuildAttributes(), GetValidators(), Availability, schema, lookup);
             }
 
             private AttributeMetadata[] BuildAttributes()

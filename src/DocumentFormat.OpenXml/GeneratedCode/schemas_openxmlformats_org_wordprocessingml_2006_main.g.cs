@@ -376,8 +376,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                                aBuilder.AddValidator(new RequiredValidatorAttribute());
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
                                });
                            });
         }
@@ -480,8 +480,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
- union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
- union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+ union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+ union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -593,8 +593,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (40L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -811,8 +811,8 @@ union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (
                                aBuilder.AddValidator(new RequiredValidatorAttribute());
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
                                });
                            });
         }
@@ -1008,8 +1008,8 @@ union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (
                                aBuilder.AddValidator(new RequiredValidatorAttribute());
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
                                });
                            });
         }
@@ -1196,8 +1196,8 @@ union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (
                                aBuilder.AddValidator(new RequiredValidatorAttribute());
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
                                });
                            });
         }
@@ -6614,8 +6614,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (1L), MaxI
 aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "h", a => a.Height, aBuilder =>
@@ -6627,8 +6627,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MaxInclusive = (31680L) }
 aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "hSpace", a => a.HorizontalSpace, aBuilder =>
@@ -6636,8 +6636,8 @@ aBuilder.AddUnion(union =>
 aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "wrap", a => a.Wrap)
@@ -6648,8 +6648,8 @@ aBuilder.AddUnion(union =>
 aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-   union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+   union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "xAlign", a => a.XAlign)
@@ -6658,8 +6658,8 @@ aBuilder.AddUnion(union =>
 aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-   union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+   union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "yAlign", a => a.YAlign)
@@ -7093,8 +7093,8 @@ aBuilder.AddUnion(union =>
 {
    aBuilder.AddUnion(union =>
    {
-       union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-       union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L), UnionId = (0) });
+       union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute());
+       union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L) });
    });
 })
 .AddAttribute(23, "themeColor", a => a.ThemeColor)
@@ -7110,8 +7110,8 @@ aBuilder.AddUnion(union =>
 {
    aBuilder.AddUnion(union =>
    {
-       union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-       union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L), UnionId = (0) });
+       union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute());
+       union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L) });
    });
 })
 .AddAttribute(23, "themeFill", a => a.ThemeFill)
@@ -7319,8 +7319,8 @@ aBuilder.AddUnion(union =>
 aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "beforeLines", a => a.BeforeLines)
@@ -7330,8 +7330,8 @@ aBuilder.AddUnion(union =>
 aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "afterLines", a => a.AfterLines)
@@ -7341,8 +7341,8 @@ aBuilder.AddUnion(union =>
 aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-   union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+   union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "lineRule", a => a.LineRule);
@@ -7532,8 +7532,8 @@ aBuilder.AddUnion(union =>
    aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
    aBuilder.AddUnion(union =>
    {
-       union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-       union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+       union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+       union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
    });
 })
 .AddAttribute(23, "start", a => a.Start, aBuilder =>
@@ -7542,8 +7542,8 @@ aBuilder.AddUnion(union =>
    aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
    aBuilder.AddUnion(union =>
    {
-       union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-       union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+       union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+       union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
    });
 })
 .AddAttribute(23, "leftChars", a => a.LeftChars)
@@ -7556,8 +7556,8 @@ aBuilder.AddUnion(union =>
    aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
    aBuilder.AddUnion(union =>
    {
-       union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-       union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+       union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+       union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
    });
 })
 .AddAttribute(23, "end", a => a.End, aBuilder =>
@@ -7566,8 +7566,8 @@ aBuilder.AddUnion(union =>
    aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
    aBuilder.AddUnion(union =>
    {
-       union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-       union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+       union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+       union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
    });
 })
 .AddAttribute(23, "rightChars", a => a.RightChars)
@@ -7580,8 +7580,8 @@ aBuilder.AddUnion(union =>
    aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
    aBuilder.AddUnion(union =>
    {
-       union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-       union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+       union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+       union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
    });
 })
 .AddAttribute(23, "hangingChars", a => a.HangingChars)
@@ -7590,8 +7590,8 @@ aBuilder.AddUnion(union =>
    aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
    aBuilder.AddUnion(union =>
    {
-       union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-       union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+       union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+       union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
    });
 })
 .AddAttribute(23, "firstLineChars", a => a.FirstLineChars);
@@ -8225,8 +8225,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -10686,8 +10686,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (31L) });
  aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-     union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L), UnionId = (0) });
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute());
+     union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L) });
  });
 })
 .AddAttribute(23, "themeColor", a => a.ThemeColor)
@@ -10871,8 +10871,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-  union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-  union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+  union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+  union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 });
         }
@@ -11038,8 +11038,8 @@ aBuilder.AddUnion(union =>
                                aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { MinInclusive = (2L), MaxInclusive = (3277L), Version = (FileFormatVersions.Office2007) });
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
                                });
                            });
         }
@@ -11176,8 +11176,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
  {
      aBuilder.AddUnion(union =>
      {
-         union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-         union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L), UnionId = (0) });
+         union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute());
+         union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L) });
      });
  })
  .AddAttribute(23, "themeColor", a => a.ThemeColor)
@@ -11694,8 +11694,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
                            {
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-                                   union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L), UnionId = (0) });
+                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute());
+                                   union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L) });
                                });
                            })
                            .AddAttribute(23, "themeColor", a => a.ThemeColor)
@@ -12173,8 +12173,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -13255,8 +13255,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -13394,8 +13394,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -13701,8 +13701,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -16624,8 +16624,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -21957,13 +21957,13 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
                                aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010), UnionId = (0) });
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
                                });
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
-                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013) });
+                                   union.AddValidator<Int32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
                                });
                            })
                            .AddAttribute(23, "type", a => a.Type);
@@ -22992,8 +22992,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddValidator(new RequiredValidatorAttribute());
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (1L), UnionId = (0) });
-     union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-1L), UnionId = (0) });
+     union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (1L) });
+     union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-1L) });
  });
 });
         }
@@ -25011,8 +25011,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
 aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
- union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
- union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+ union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+ union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "restart", a => a.Restart);
@@ -25214,8 +25214,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
 aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "num", a => a.ColumnCount, aBuilder =>
@@ -30944,8 +30944,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -32595,8 +32595,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (64L) });
    aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
    aBuilder.AddUnion(union =>
    {
-       union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-       union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+       union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+       union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
    });
 })
 .AddAttribute(23, "space", a => a.Space, aBuilder =>
@@ -32604,8 +32604,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (64L) });
    aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
    aBuilder.AddUnion(union =>
    {
-       union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-       union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+       union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+       union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
    });
 });
         }
@@ -32714,8 +32714,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -32853,8 +32853,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -35650,8 +35650,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 });
         }
@@ -35728,8 +35728,8 @@ aBuilder.AddUnion(union =>
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -35868,8 +35868,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -36340,8 +36340,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -36479,8 +36479,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -39778,8 +39778,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
                                aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
                                });
                            });
         }
@@ -40415,8 +40415,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddValidator<UInt32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-    union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-    union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+    union.AddValidator<UInt32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+    union.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 })
 .AddAttribute(23, "legacyIndent", a => a.LegacyIndent, aBuilder =>
@@ -40424,8 +40424,8 @@ aBuilder.AddUnion(union =>
 aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-    union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-    union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+    union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+    union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
 });
 });
         }
@@ -45977,8 +45977,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
                                aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010), UnionId = (0) });
+                                   union.AddValidator<IntegerValue>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2010) });
+                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?(mm|cm|in|pt|pc|pi)"), InitialVersion = (FileFormatVersions.Office2010) });
                                });
                            });
         }
@@ -46362,8 +46362,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (1L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-1L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (1L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-1L) });
 });
 });
         }
@@ -46622,8 +46622,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -47749,8 +47749,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute() { UnionId = (0) });
-union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L), UnionId = (0) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute());
+union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L) });
 });
 })
 .AddAttribute(23, "themeColor", a => a.ThemeColor)
@@ -49607,8 +49607,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MaxLength = (255L) });
 aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L), UnionId = (0) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { MaxInclusive = (-2L) });
 });
 });
         }
@@ -51796,13 +51796,13 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
   aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
   aBuilder.AddUnion(union =>
   {
-      union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010), UnionId = (0) });
-      union.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010), UnionId = (0) });
+      union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010) });
+      union.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
   });
   aBuilder.AddUnion(union =>
   {
-      union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
-      union.AddValidator<Int32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
+      union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013) });
+      union.AddValidator<Int32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
   });
 });
         }
@@ -55630,13 +55630,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 aBuilder.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2007) });
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010), UnionId = (0) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010), UnionId = (0) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), Version = (FileFormatVersions.Office2010) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { Version = (FileFormatVersions.Office2010) });
 });
 aBuilder.AddUnion(union =>
 {
-union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
-union.AddValidator<Int32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013), UnionId = (1) });
+union.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+(\\.[0-9]+)?%"), InitialVersion = (FileFormatVersions.Office2013) });
+union.AddValidator<Int32Value>(new NumberValidatorAttribute() { InitialVersion = (FileFormatVersions.Office2013) });
 });
 });
         }
