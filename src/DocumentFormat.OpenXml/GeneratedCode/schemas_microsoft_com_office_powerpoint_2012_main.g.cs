@@ -116,11 +116,11 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             builder.AddElement<PresenceInfo>()
 .AddAttribute(0, "userId", a => a.UserId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "providerId", a => a.ProviderId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -436,7 +436,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ChartTrackingReferenceBased>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -828,12 +828,12 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<ExtendedGuide>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "pos", a => a.Position)
 .AddAttribute(0, "userDrawn", a => a.IsUserDrawn);

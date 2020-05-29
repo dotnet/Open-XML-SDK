@@ -61,12 +61,12 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
             builder.AddElement<SymEx>()
 .AddAttribute(86, "font", a => a.Font, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2016));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
 })
 .AddAttribute(86, "char", a => a.Char, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2016));
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016));
+aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
         }
 

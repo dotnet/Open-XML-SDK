@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             builder.AddElement<WebExtension>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "frozen", a => a.Frozen);
         }
@@ -268,7 +268,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<WebExtensionReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -318,11 +318,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<WebExtensionProperty>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -482,15 +482,15 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<WebExtensionBinding>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "appref", a => a.AppReference, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -611,11 +611,11 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<WebExtensionStoreReference>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "version", a => a.Version, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "store", a => a.Store)
 .AddAttribute(0, "storeType", a => a.StoreType);
@@ -965,7 +965,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 .AddAttribute(19, "link", a => a.Link)
 .AddAttribute(0, "cstate", a => a.CompressionState, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 

@@ -278,20 +278,20 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
             builder.AddElement<ContextNode>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownContextNodeTypeValues>>(new EnumValidator());
+union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 })
 .AddAttribute(0, "rotatedBoundingBox", a => a.RotatedBoundingBox, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
 })
 .AddAttribute(0, "alignmentLevel", a => a.AlignmentLevel)
 .AddAttribute(0, "contentType", a => a.ContentType)
@@ -299,37 +299,37 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute());
-union.AddValidator<Int32Value>(new NumberValidatorAttribute());
+union.AddValidator<ListValue<StringValue>>(new NumberValidator());
+union.AddValidator<Int32Value>(new NumberValidator());
 });
 })
 .AddAttribute(0, "descender", a => a.Descender, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute());
-union.AddValidator<Int32Value>(new NumberValidatorAttribute());
+union.AddValidator<ListValue<StringValue>>(new NumberValidator());
+union.AddValidator<Int32Value>(new NumberValidator());
 });
 })
 .AddAttribute(0, "baseline", a => a.Baseline, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute());
-union.AddValidator<Int32Value>(new NumberValidatorAttribute());
+union.AddValidator<ListValue<StringValue>>(new NumberValidator());
+union.AddValidator<Int32Value>(new NumberValidator());
 });
 })
 .AddAttribute(0, "midline", a => a.Midline, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<ListValue<StringValue>>(new NumberValidatorAttribute());
-union.AddValidator<Int32Value>(new NumberValidatorAttribute());
+union.AddValidator<ListValue<StringValue>>(new NumberValidator());
+union.AddValidator<Int32Value>(new NumberValidator());
 });
 })
 .AddAttribute(0, "customRecognizerId", a => a.CustomRecognizerId, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
 .AddAttribute(0, "mathML", a => a.MathML)
 .AddAttribute(0, "mathStruct", a => a.MathStruct)
@@ -339,24 +339,24 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
 .AddAttribute(0, "rotationAngle", a => a.RotationAngle)
 .AddAttribute(0, "hotPoints", a => a.HotPoints, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
 })
 .AddAttribute(0, "centroid", a => a.Centroid, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
 })
 .AddAttribute(0, "semanticType", a => a.SemanticType, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>>(new EnumValidatorAttribute());
-union.AddValidator<UInt32Value>(new NumberValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.KnownSemanticTypeValues>>(new EnumValidator());
+union.AddValidator<UInt32Value>(new NumberValidator());
 });
 })
 .AddAttribute(0, "shapeName", a => a.ShapeName)
 .AddAttribute(0, "shapeGeometry", a => a.ShapeGeometry, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0-9]+") });
+aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") });
 });
         }
 
@@ -417,7 +417,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("-?[0-9]+,-?[0
             builder.AddElement<ContextNodeProperty>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
         }
 
@@ -516,8 +516,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
                            {
                                aBuilder.AddUnion(union =>
                                {
-                                   union.AddValidator(new StringValidatorAttribute() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                                   union.AddValidator<UInt32Value>(new NumberValidatorAttribute());
+                                   union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                                   union.AddValidator<UInt32Value>(new NumberValidator());
                                });
                            });
         }

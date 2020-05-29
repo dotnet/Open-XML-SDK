@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
             builder.AddElement<TimeSlicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 

@@ -141,8 +141,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
             builder.AddElement<WrapSquare>()
 .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "distT", a => a.DistanceFromTop)
 .AddAttribute(0, "distB", a => a.DistanceFromBottom)
@@ -256,8 +256,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<WrapTight>()
 .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "distL", a => a.DistanceFromLeft)
 .AddAttribute(0, "distR", a => a.DistanceFromRight);
@@ -369,8 +369,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<WrapThrough>()
 .AddAttribute(0, "wrapText", a => a.WrapText, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "distL", a => a.DistanceFromLeft)
 .AddAttribute(0, "distR", a => a.DistanceFromRight);
@@ -628,13 +628,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "distR", a => a.DistanceFromRight)
 .AddAttribute(51, "anchorId", a => a.AnchorId, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 })
 .AddAttribute(51, "editId", a => a.EditId, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
         }
 
@@ -939,34 +939,34 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
 .AddAttribute(0, "simplePos", a => a.SimplePos)
 .AddAttribute(0, "relativeHeight", a => a.RelativeHeight, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "behindDoc", a => a.BehindDoc, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "locked", a => a.Locked, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "layoutInCell", a => a.LayoutInCell, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "hidden", a => a.Hidden)
 .AddAttribute(0, "allowOverlap", a => a.AllowOverlap, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(51, "editId", a => a.EditId, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 })
 .AddAttribute(51, "anchorId", a => a.AnchorId, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2010));
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
         }
 
@@ -1181,13 +1181,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             builder.AddElement<Point2DType>()
                            .AddAttribute(0, "x", a => a.X, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            })
                            .AddAttribute(0, "y", a => a.Y, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidatorAttribute());
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            });
         }
     }
@@ -1253,23 +1253,23 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
             builder.AddElement<EffectExtent>()
 .AddAttribute(0, "l", a => a.LeftEdge, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
 .AddAttribute(0, "t", a => a.TopEdge, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
 .AddAttribute(0, "r", a => a.RightEdge, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
 .AddAttribute(0, "b", a => a.BottomEdge, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 });
         }
 
@@ -1433,8 +1433,8 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042
             builder.AddElement<HorizontalPosition>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -1559,8 +1559,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<VerticalPosition>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -1660,13 +1660,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<Extent>()
 .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
 .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 });
         }
 
@@ -1780,11 +1780,11 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxI
             builder.AddElement<DocProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)
@@ -1970,8 +1970,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues>>(new EnumValidatorAttribute());
+            builder.AddValidator(new StringValidator() { IsToken = (true) });
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues>>(new EnumValidator());
             builder.SetSchema(16, "align");
         }
 
@@ -2009,7 +2009,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(new NumberValidator());
             builder.SetSchema(16, "posOffset");
         }
 
@@ -2047,8 +2047,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues>>(new EnumValidatorAttribute());
+            builder.AddValidator(new StringValidator() { IsToken = (true) });
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues>>(new EnumValidator());
             builder.SetSchema(16, "align");
         }
 

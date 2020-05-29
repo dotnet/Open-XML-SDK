@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
                            .AddAttribute(0, "type", a => a.Type)
                            .AddAttribute(0, "width", a => a.Width, aBuilder =>
                            {
-                               aBuilder.AddValidator(new NumberValidatorAttribute() { IsPositive = (true) });
+                               aBuilder.AddValidator(new NumberValidator() { IsPositive = (true) });
                            })
                            .AddAttribute(0, "shadow", a => a.Shadow);
         }

@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.InkML
             builder.AddElement<Ink>()
 .AddAttribute(0, "documentID", a => a.DocumentId, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 
@@ -396,7 +396,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "mappingRef", a => a.MappingRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 
@@ -569,11 +569,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(new EnumValidator());
+union.AddValidator(new StringValidator());
 });
 })
 .AddAttribute(0, "type", a => a.Type)
@@ -581,8 +581,8 @@ union.AddValidator(new StringValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DecimalValue>(new NumberValidatorAttribute());
-union.AddValidator<BooleanValue>(new NumberValidatorAttribute());
+union.AddValidator<DecimalValue>(new NumberValidator());
+union.AddValidator<BooleanValue>(new NumberValidator());
 });
 })
 .AddAttribute(0, "min", a => a.Min)
@@ -590,23 +590,23 @@ union.AddValidator<BooleanValue>(new NumberValidatorAttribute());
 .AddAttribute(0, "orientation", a => a.Orientation)
 .AddAttribute(0, "respectTo", a => a.RespectTo, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "units", a => a.Units, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidator());
+union.AddValidator(new StringValidator());
 });
 });
         }
@@ -751,41 +751,41 @@ union.AddValidator(new StringValidatorAttribute());
             builder.AddElement<ChannelProperty>()
 .AddAttribute(0, "channel", a => a.Channel, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelNameValues>>(new EnumValidator());
+union.AddValidator(new StringValidator());
 });
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelPropertyNameValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardChannelPropertyNameValues>>(new EnumValidator());
+union.AddValidator(new StringValidator());
 });
 })
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "units", a => a.Units, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidator());
+union.AddValidator(new StringValidator());
 });
 });
         }
@@ -922,7 +922,7 @@ union.AddValidator(new StringValidatorAttribute());
 .AddAttribute(0, "uniform", a => a.Uniform)
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -961,7 +961,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Latency>()
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -1035,17 +1035,17 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidator());
+union.AddValidator(new StringValidator());
 });
 });
         }
@@ -1111,27 +1111,27 @@ union.AddValidator(new StringValidatorAttribute());
             builder.AddElement<SourceProperty>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "units", a => a.Units, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidator());
+union.AddValidator(new StringValidator());
 });
 });
         }
@@ -1352,7 +1352,7 @@ union.AddValidator(new StringValidatorAttribute());
 .AddAttribute(0, "encoding", a => a.Encoding)
 .AddAttribute(0, "href", a => a.Href, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 
@@ -1464,40 +1464,40 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             builder.AddElement<BrushProperty>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardBrushPropertyNameValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardBrushPropertyNameValues>>(new EnumValidator());
+union.AddValidator(new StringValidator());
 });
 })
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<DecimalValue>(new NumberValidatorAttribute());
-union.AddValidator<BooleanValue>(new NumberValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.PenTipShapeValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.RasterOperationValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<DecimalValue>(new NumberValidator());
+union.AddValidator<BooleanValue>(new NumberValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.PenTipShapeValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.RasterOperationValues>>(new EnumValidator());
+union.AddValidator(new StringValidator());
 });
 })
 .AddAttribute(0, "units", a => a.Units, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidatorAttribute());
-union.AddValidator(new StringValidatorAttribute());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardLengthUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerLengthUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardTimeUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerTimeUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardMassForceUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerMassForceUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardAngleUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerAngleUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardOtherUnitsValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsValues>>(new EnumValidator());
+union.AddValidator(new StringValidator());
 });
 });
         }
@@ -1596,7 +1596,7 @@ union.AddValidator(new StringValidatorAttribute());
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "traceFormatRef", a => a.TraceFormatRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 
@@ -1837,14 +1837,14 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             builder.AddElement<InkSource>()
 .AddAttribute(1, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "manufacturer", a => a.Manufacturer)
 .AddAttribute(0, "model", a => a.Model)
 .AddAttribute(0, "serialNo", a => a.SerialNo)
 .AddAttribute(0, "specificationRef", a => a.SpecificationRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "description", a => a.Description);
         }
@@ -1997,7 +1997,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 
@@ -2088,12 +2088,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
             builder.AddElement<Timestamp>()
 .AddAttribute(1, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "time", a => a.Time)
 .AddAttribute(0, "timestampRef", a => a.TimestampRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "timeString", a => a.TimeString)
 .AddAttribute(0, "timeOffset", a => a.TimeOffset);
@@ -2223,15 +2223,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 .AddAttribute(0, "continuation", a => a.Continuation)
 .AddAttribute(0, "priorRef", a => a.PriorRef, aBuilder =>
 {
- aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
 {
- aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
 {
- aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "duration", a => a.Duration)
 .AddAttribute(0, "timeOffset", a => a.TimeOffset);
@@ -2333,11 +2333,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 
@@ -2465,11 +2465,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "traceDataRef", a => a.TraceDataRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "from", a => a.From)
 .AddAttribute(0, "to", a => a.To);
@@ -2634,31 +2634,31 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "contextRef", a => a.ContextRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "canvasRef", a => a.CanvasRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "canvasTransformRef", a => a.CanvasTransformRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "traceFormatRef", a => a.TraceFromatRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "inkSourceRef", a => a.InkSourceRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "brushRef", a => a.BrushRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "timestampRef", a => a.TimestampRef, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsUri = (true) });
+aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
 

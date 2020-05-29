@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 .AddAttribute(0, "uri", a => a.Uri)
                 .AddAttribute(23, "element", a => a.Element, a =>
                 {
-                    a.AddValidator(new StringValidatorAttribute { IsNcName = true });
+                    a.AddValidator(new StringValidator { IsNcName = true });
                 });
         }
     }

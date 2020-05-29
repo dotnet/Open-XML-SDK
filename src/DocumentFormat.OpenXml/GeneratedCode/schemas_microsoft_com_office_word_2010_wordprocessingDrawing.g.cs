@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(new NumberValidator());
             builder.SetSchema(51, "pctPosHOffset");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(new NumberValidator());
             builder.SetSchema(51, "pctPosVOffset");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -154,8 +154,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             builder.AddElement<RelativeWidth>()
 .AddAttribute(0, "relativeFrom", a => a.ObjectId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -246,8 +246,8 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<RelativeHeight>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -305,7 +305,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+            builder.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
             builder.SetSchema(51, "pctWidth");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -344,7 +344,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+            builder.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
             builder.SetSchema(51, "pctHeight");
             builder.Availability = FileFormatVersions.Office2010;
         }

@@ -21,19 +21,19 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             var single = Assert.Single(attribute.Validators);
 
-            Assert.IsType<StringValidatorAttribute>(single);
+            Assert.IsType<StringValidator>(single);
         }
 
         [Fact]
         public void RequiredValidation()
         {
-            var attributes = ElementMetadata.Create<RequiredValidator>();
+            var attributes = ElementMetadata.Create<ContainsRequiredValidator>();
             var attribute = Assert.Single(attributes.Attributes);
 
             Assert.Collection(
                 attribute.Validators,
-                t => Assert.IsType<RequiredValidatorAttribute>(t),
-                t => Assert.IsType<StringValidatorAttribute>(t));
+                t => Assert.IsType<RequiredValidator>(t),
+                t => Assert.IsType<StringValidator>(t));
         }
 
         [Fact]
@@ -50,10 +50,10 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
                     Assert.Collection(
                         union.Validators,
-                        v => Assert.IsType<StringValidatorAttribute>(v),
-                        v => Assert.IsType<StringValidatorAttribute>(v));
+                        v => Assert.IsType<StringValidator>(v),
+                        v => Assert.IsType<StringValidator>(v));
                 },
-                t => Assert.IsType<StringValidatorAttribute>(t));
+                t => Assert.IsType<StringValidator>(t));
         }
 
         private class NoValidatorsElement : BaseElement
@@ -64,14 +64,14 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 .AddAttribute(0, "val", a => a.Val);
         }
 
-        private class RequiredValidator : BaseElement
+        private class ContainsRequiredValidator : BaseElement
         {
             public StringValue Val { get; set; }
 
             internal override void ConfigureMetadata(ElementMetadata.Builder builder) => builder.AddElement<NoValidatorsElement>()
                 .AddAttribute(0, "val", a => a.Val, a =>
                 {
-                    a.AddValidator(new RequiredValidatorAttribute());
+                    a.AddValidator(new RequiredValidator());
                 });
         }
 
@@ -84,8 +84,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 {
                     a.AddUnion(aa =>
                     {
-                        aa.AddValidator(new StringValidatorAttribute { IsId = true });
-                        aa.AddValidator(new StringValidatorAttribute { IsNcName = true });
+                        aa.AddValidator(new StringValidator { IsId = true });
+                        aa.AddValidator(new StringValidator { IsNcName = true });
                     });
                 });
         }

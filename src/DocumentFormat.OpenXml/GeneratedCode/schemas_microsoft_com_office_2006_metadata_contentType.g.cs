@@ -165,11 +165,11 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 .AddAttribute(41, "contentTypeName", a => a.ContentTypeName)
 .AddAttribute(41, "contentTypeID", a => a.ContentTypeID, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("0x([0-9A-Fa-f][1-9A-Fa-f]|[1-9A-Fa-f][0-9A-Fa-f]|00[0-9A-Fa-f]{32})*"), MinLength = (2L), MaxLength = (1026L) });
+aBuilder.AddValidator(new StringValidator() { Pattern = ("0x([0-9A-Fa-f][1-9A-Fa-f]|[1-9A-Fa-f][0-9A-Fa-f]|00[0-9A-Fa-f]{32})*"), MinLength = (2L), MaxLength = (1026L) });
 })
 .AddAttribute(41, "contentTypeVersion", a => a.ContentTypeVersion, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 })
 .AddAttribute(41, "contentTypeDescription", a => a.ContentTypeDescription)
 .AddAttribute(41, "contentTypeScope", a => a.ContentTypeScope)

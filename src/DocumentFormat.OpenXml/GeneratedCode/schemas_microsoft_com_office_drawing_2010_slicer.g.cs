@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
             builder.AddElement<Slicer>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 

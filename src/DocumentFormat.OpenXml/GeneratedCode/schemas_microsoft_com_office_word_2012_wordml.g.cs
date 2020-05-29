@@ -88,21 +88,21 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             builder.AddElement<Color>()
 .AddAttribute(23, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidatorAttribute());
-union.AddValidator<HexBinaryValue>(new StringValidatorAttribute() { Length = (3L) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(new EnumValidator());
+union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
 });
 })
 .AddAttribute(23, "themeColor", a => a.ThemeColor)
 .AddAttribute(23, "themeTint", a => a.ThemeTint, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
 })
 .AddAttribute(23, "themeShade", a => a.ThemeShade, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
+aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLength = (1L), MaxLength = (2L) });
 });
         }
 
@@ -172,11 +172,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]*"
 .AddAttribute(23, "prefixMappings", a => a.PrefixMappings)
 .AddAttribute(23, "xpath", a => a.XPath, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(23, "storeItemID", a => a.StoreItemId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -219,7 +219,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Appearance>()
 .AddAttribute(69, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 });
         }
 
@@ -727,8 +727,8 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<PersistentDocumentId>()
 .AddAttribute(69, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
         }
 
@@ -771,7 +771,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             builder.AddElement<FootnoteColumns>()
 .AddAttribute(23, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -840,18 +840,18 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<CommentEx>()
 .AddAttribute(69, "paraId", a => a.ParaId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 })
 .AddAttribute(69, "paraIdParent", a => a.ParaIdParent, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 })
 .AddAttribute(69, "done", a => a.Done, aBuilder =>
 {
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 });
         }
 
@@ -945,13 +945,13 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<Person>()
 .AddAttribute(69, "author", a => a.Author, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 })
 .AddAttribute(69, "contact", a => a.Contact, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 });
         }
 
@@ -1027,13 +1027,13 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<PresenceInfo>()
 .AddAttribute(69, "providerId", a => a.ProviderId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 })
 .AddAttribute(69, "userId", a => a.UserId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2013));
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 });
         }
 
@@ -1083,7 +1083,7 @@ aBuilder.AddValidator(new OfficeAvailabilityAttribute(FileFormatVersions.Office2
             builder.AddElement<SectionTitle>()
 .AddAttribute(23, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 

@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
             builder.AddElement<AbsolutePath>()
 .AddAttribute(0, "url", a => a.Url, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 

@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
-using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -11,10 +10,9 @@ using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
-    internal sealed class StringValidatorAttribute : VersionedValidatorAttribute, INameProvider
+    internal sealed class StringValidator : VersionedValidator, INameProvider
     {
-        internal static IOpenXmlSimpleTypeValidator Instance { get; } = new StringValidatorAttribute();
+        internal static IOpenXmlSimpleTypeValidator Instance { get; } = new StringValidator();
 
         private static readonly XmlQualifiedName _anyUri = new XmlQualifiedName("anyUri", "http://www.w3.org/2001/XMLSchema");
         private static readonly XmlQualifiedName _token = new XmlQualifiedName("token", "http://www.w3.org/2001/XMLSchema");

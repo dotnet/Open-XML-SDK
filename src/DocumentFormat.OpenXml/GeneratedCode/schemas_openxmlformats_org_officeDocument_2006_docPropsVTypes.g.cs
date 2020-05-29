@@ -744,11 +744,11 @@ namespace DocumentFormat.OpenXml.VariantTypes
             builder.AddElement<VTVector>()
 .AddAttribute(0, "baseType", a => a.BaseType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "size", a => a.Size, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -897,15 +897,15 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<VTArray>()
 .AddAttribute(0, "lBound", a => a.LowerBounds, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "uBound", a => a.UpperBounds, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "baseType", a => a.BaseType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -966,7 +966,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
+            builder.AddValidator<Base64BinaryValue>(new NumberValidator());
             builder.SetSchema(5, "blob");
         }
 
@@ -1004,7 +1004,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
+            builder.AddValidator<Base64BinaryValue>(new NumberValidator());
             builder.SetSchema(5, "oblob");
         }
 
@@ -1042,7 +1042,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
+            builder.AddValidator<Base64BinaryValue>(new NumberValidator());
             builder.SetSchema(5, "stream");
         }
 
@@ -1080,7 +1080,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
+            builder.AddValidator<Base64BinaryValue>(new NumberValidator());
             builder.SetSchema(5, "ostream");
         }
 
@@ -1118,7 +1118,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
+            builder.AddValidator<Base64BinaryValue>(new NumberValidator());
             builder.SetSchema(5, "storage");
         }
 
@@ -1156,7 +1156,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Base64BinaryValue>(new NumberValidatorAttribute());
+            builder.AddValidator<Base64BinaryValue>(new NumberValidator());
             builder.SetSchema(5, "ostorage");
         }
 
@@ -1242,7 +1242,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<SByteValue>(new NumberValidatorAttribute());
+            builder.AddValidator<SByteValue>(new NumberValidator());
             builder.SetSchema(5, "i1");
         }
 
@@ -1280,7 +1280,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int16Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int16Value>(new NumberValidator());
             builder.SetSchema(5, "i2");
         }
 
@@ -1318,7 +1318,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(new NumberValidator());
             builder.SetSchema(5, "i4");
         }
 
@@ -1356,7 +1356,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int32Value>(new NumberValidator());
             builder.SetSchema(5, "int");
         }
 
@@ -1394,7 +1394,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int64Value>(new NumberValidatorAttribute());
+            builder.AddValidator<Int64Value>(new NumberValidator());
             builder.SetSchema(5, "i8");
         }
 
@@ -1432,7 +1432,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<ByteValue>(new NumberValidatorAttribute());
+            builder.AddValidator<ByteValue>(new NumberValidator());
             builder.SetSchema(5, "ui1");
         }
 
@@ -1470,7 +1470,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<UInt16Value>(new NumberValidatorAttribute());
+            builder.AddValidator<UInt16Value>(new NumberValidator());
             builder.SetSchema(5, "ui2");
         }
 
@@ -1508,7 +1508,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<UInt32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<UInt32Value>(new NumberValidator());
             builder.SetSchema(5, "ui4");
         }
 
@@ -1546,7 +1546,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<UInt32Value>(new NumberValidatorAttribute());
+            builder.AddValidator<UInt32Value>(new NumberValidator());
             builder.SetSchema(5, "uint");
         }
 
@@ -1584,7 +1584,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<UInt64Value>(new NumberValidatorAttribute());
+            builder.AddValidator<UInt64Value>(new NumberValidator());
             builder.SetSchema(5, "ui8");
         }
 
@@ -1622,7 +1622,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<SingleValue>(new NumberValidatorAttribute());
+            builder.AddValidator<SingleValue>(new NumberValidator());
             builder.SetSchema(5, "r4");
         }
 
@@ -1660,7 +1660,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<DoubleValue>(new NumberValidatorAttribute());
+            builder.AddValidator<DoubleValue>(new NumberValidator());
             builder.SetSchema(5, "r8");
         }
 
@@ -1698,7 +1698,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<DecimalValue>(new NumberValidatorAttribute());
+            builder.AddValidator<DecimalValue>(new NumberValidator());
             builder.SetSchema(5, "decimal");
         }
 
@@ -1847,7 +1847,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<DateTimeValue>(new NumberValidatorAttribute());
+            builder.AddValidator<DateTimeValue>(new NumberValidator());
             builder.SetSchema(5, "date");
         }
 
@@ -1885,7 +1885,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<DateTimeValue>(new NumberValidatorAttribute());
+            builder.AddValidator<DateTimeValue>(new NumberValidator());
             builder.SetSchema(5, "filetime");
         }
 
@@ -1923,7 +1923,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<BooleanValue>(new NumberValidatorAttribute());
+            builder.AddValidator<BooleanValue>(new NumberValidator());
             builder.SetSchema(5, "bool");
         }
 
@@ -1961,7 +1961,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*[0-9]*\\.[0-9]{4}\\s*") });
+            builder.AddValidator(new StringValidator() { Pattern = ("\\s*[0-9]*\\.[0-9]{4}\\s*") });
             builder.SetSchema(5, "cy");
         }
 
@@ -1999,7 +1999,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { Pattern = ("0x[0-9A-Fa-f]{8}") });
+            builder.AddValidator(new StringValidator() { Pattern = ("0x[0-9A-Fa-f]{8}") });
             builder.SetSchema(5, "error");
         }
 
@@ -2051,8 +2051,8 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<VTVStreamData>()
 .AddAttribute(0, "version", a => a.Version, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
 });
         }
 
@@ -2096,7 +2096,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
+            builder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
             builder.SetSchema(5, "clsid");
         }
 
@@ -2158,11 +2158,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("\\s*\\{[a-fA-
             builder.AddElement<VTClipboardData>()
  .AddAttribute(0, "format", a => a.Format, aBuilder =>
  {
-     aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-3L) });
+     aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-3L) });
  })
  .AddAttribute(0, "size", a => a.Size, aBuilder =>
  {
-     aBuilder.AddValidator(new RequiredValidatorAttribute());
+     aBuilder.AddValidator(new RequiredValidator());
  });
         }
 

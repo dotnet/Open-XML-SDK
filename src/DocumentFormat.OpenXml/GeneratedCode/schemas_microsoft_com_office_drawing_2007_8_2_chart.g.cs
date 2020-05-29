@@ -355,8 +355,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             builder.AddElement<Style>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (101L), MaxInclusive = (148L) });
+aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusive = (148L) });
 });
         }
 
@@ -455,7 +455,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (101L), Ma
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 

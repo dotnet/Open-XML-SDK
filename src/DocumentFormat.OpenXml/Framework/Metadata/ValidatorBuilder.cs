@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public void AddValidator(IOpenXmlSimpleTypeValidator validator)
         {
-            if (validator is RequiredValidatorAttribute)
+            if (validator is RequiredValidator)
             {
                 _validators.Insert(0, validator);
             }

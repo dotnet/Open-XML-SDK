@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             builder.AddElement<TwoCellAnchor>()
 .AddAttribute(0, "editAs", a => a.EditAs, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -1179,11 +1179,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<ContentPart>()
 .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -1539,7 +1539,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -2359,7 +2359,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+            builder.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
             builder.SetSchema(18, "col");
         }
 
@@ -2397,7 +2397,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+            builder.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
             builder.SetSchema(18, "colOff");
         }
 
@@ -2435,7 +2435,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int64Value>(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+            builder.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
             builder.SetSchema(18, "rowOff");
         }
 
@@ -2473,7 +2473,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidatorAttribute() { MinInclusive = (0L) });
+            builder.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
             builder.SetSchema(18, "row");
         }
 
@@ -2812,13 +2812,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<Extent>()
 .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 })
 .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
+   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 });
         }
 
@@ -2867,13 +2867,13 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<Position>()
 .AddAttribute(0, "x", a => a.X, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
 .AddAttribute(0, "y", a => a.Y, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
+   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 });
         }
 
@@ -2987,11 +2987,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)
@@ -3740,7 +3740,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<GroupShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 

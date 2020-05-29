@@ -69,11 +69,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 if (instance is StringValue)
                 {
-                    return StringValidatorAttribute.Instance;
+                    return StringValidator.Instance;
                 }
                 else if (instance.IsEnum || instance is OnOffValue || instance is TrueFalseBlankValue)
                 {
-                    return EnumValidatorAttribute.Instance;
+                    return EnumValidator.Instance;
                 }
                 else if (instance is System.Collections.IEnumerable)
                 {
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 }
                 else
                 {
-                    return NumberValidatorAttribute.Instance;
+                    return NumberValidator.Instance;
                 }
             }
 

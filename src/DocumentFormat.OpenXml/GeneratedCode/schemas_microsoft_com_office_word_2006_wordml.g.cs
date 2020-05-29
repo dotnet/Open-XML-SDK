@@ -422,11 +422,11 @@ namespace DocumentFormat.OpenXml.Office.Word
 .AddAttribute(33, "fciName", a => a.CommandName)
 .AddAttribute(33, "fciIndex", a => a.CommandIndex, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+   aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
 .AddAttribute(33, "swArg", a => a.Argument, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+   aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 });
         }
 
@@ -634,8 +634,8 @@ namespace DocumentFormat.OpenXml.Office.Word
             builder.AddElement<CharacterInsertion>()
 .AddAttribute(33, "val", a => a.Val, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidatorAttribute());
-   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (4L) });
+   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
         }
 
@@ -768,19 +768,19 @@ namespace DocumentFormat.OpenXml.Office.Word
             builder.AddElement<KeyMapEntry>()
 .AddAttribute(33, "chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
 .AddAttribute(33, "chmSecondary", a => a.CharacterMapSecondary, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
 .AddAttribute(33, "kcmPrimary", a => a.KeyCodePrimary, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
 .AddAttribute(33, "kcmSecondary", a => a.KeyCodeSecondary, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
 .AddAttribute(33, "mask", a => a.Mask);
         }
@@ -940,7 +940,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
 .AddAttribute(33, "fciBasedOn", a => a.CommandBasedOn)
 .AddAttribute(33, "fciIndexBasedOn", a => a.CommandIndexBasedOn, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
+   aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 })
 .AddAttribute(33, "acdName", a => a.AcceleratorName);
         }
@@ -1038,11 +1038,11 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
 .AddAttribute(33, "menuHelp", a => a.MenuHelp)
 .AddAttribute(33, "bEncrypt", a => a.BEncrypt, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
+   aBuilder.AddValidator(new StringValidator() { Length = (1L) });
 })
 .AddAttribute(33, "cmg", a => a.Cmg, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidatorAttribute() { Length = (1L) });
+   aBuilder.AddValidator(new StringValidator() { Length = (1L) });
 });
         }
 
@@ -1902,7 +1902,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { Length = (2L) });
             builder.AddElement<ToolbarData>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -2283,7 +2283,7 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<RecordHashCode>()
 .AddAttribute(33, "val", a => a.Val, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidatorAttribute());
+  aBuilder.AddValidator(new RequiredValidator());
 });
         }
 

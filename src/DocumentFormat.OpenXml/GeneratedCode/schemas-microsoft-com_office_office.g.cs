@@ -659,11 +659,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
 .AddAttribute(0, "issignatureline", a => a.IsSignatureLine)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
 .AddAttribute(0, "provid", a => a.ProviderId, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
 .AddAttribute(0, "signinginstructionsset", a => a.SigningInstructionsSet)
 .AddAttribute(0, "allowcomments", a => a.AllowComments)
@@ -2476,7 +2476,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true), Pattern
             builder.AddElement<ClipPath>()
 .AddAttribute(27, "v", a => a.Value, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 });
         }
 
@@ -2877,13 +2877,13 @@ aBuilder.AddValidator(new RequiredValidatorAttribute());
             builder.AddElement<Rule>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidatorAttribute());
+aBuilder.AddValidator(new RequiredValidator());
 })
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "how", a => a.How)
 .AddAttribute(0, "idref", a => a.ShapeReference, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -3040,15 +3040,15 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "idsrc", a => a.SourceId, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+   aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "iddest", a => a.DestinationId, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+   aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "idcntr", a => a.CenterShapeId, aBuilder =>
 {
-   aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+   aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
@@ -3086,7 +3086,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>>(new EnumValidatorAttribute());
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>>(new EnumValidator());
             builder.SetSchema(27, "LinkType");
         }
 
@@ -3124,7 +3124,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<TrueFalseBlankValue>(new NumberValidatorAttribute());
+            builder.AddValidator<TrueFalseBlankValue>(new NumberValidator());
             builder.SetSchema(27, "LockedField");
         }
 
@@ -3232,12 +3232,12 @@ aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
 .AddAttribute(0, "end", a => a.End)
 .AddAttribute(0, "idref", a => a.ShapeReference, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidatorAttribute());
- aBuilder.AddValidator(new StringValidatorAttribute() { IsToken = (true) });
+ aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "connectloc", a => a.ConnectionLocation, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidatorAttribute());
+ aBuilder.AddValidator(new RequiredValidator());
 });
         }
 

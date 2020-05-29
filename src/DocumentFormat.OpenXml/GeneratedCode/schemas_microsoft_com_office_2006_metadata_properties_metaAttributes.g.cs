@@ -210,7 +210,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 .AddAttribute(0, "hidden", a => a.Hidden)
 .AddAttribute(0, "index", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
+aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 })
 .AddAttribute(0, "internalName", a => a.InternalName)
 .AddAttribute(0, "LCID", a => a.LCID)
@@ -222,7 +222,7 @@ aBuilder.AddValidator(new NumberValidatorAttribute() { MinInclusive = (0L) });
 .AddAttribute(0, "showField", a => a.ShowField)
 .AddAttribute(0, "web", a => a.Web, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { Pattern = ("[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}") });
+aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}") });
 });
         }
 

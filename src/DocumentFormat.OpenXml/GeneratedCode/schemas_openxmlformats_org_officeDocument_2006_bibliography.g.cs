@@ -94,15 +94,15 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.AddElement<Sources>()
 .AddAttribute(0, "SelectedStyle", a => a.SelectedStyle, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
 })
 .AddAttribute(0, "StyleName", a => a.StyleName, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
 })
 .AddAttribute(0, "URI", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
 });
         }
 
@@ -215,7 +215,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Last");
         }
 
@@ -253,7 +253,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "First");
         }
 
@@ -291,7 +291,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Middle");
         }
 
@@ -329,7 +329,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Corporate");
         }
 
@@ -367,7 +367,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "AbbreviatedCaseNumber");
         }
 
@@ -405,7 +405,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "AlbumTitle");
         }
 
@@ -443,7 +443,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "BookTitle");
         }
 
@@ -481,7 +481,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Broadcaster");
         }
 
@@ -519,7 +519,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "BroadcastTitle");
         }
 
@@ -557,7 +557,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "CaseNumber");
         }
 
@@ -595,7 +595,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "ChapterNumber");
         }
 
@@ -633,7 +633,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "City");
         }
 
@@ -671,7 +671,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Comments");
         }
 
@@ -709,7 +709,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "ConferenceName");
         }
 
@@ -747,7 +747,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "CountryRegion");
         }
 
@@ -785,7 +785,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Court");
         }
 
@@ -823,7 +823,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Day");
         }
 
@@ -861,7 +861,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "DayAccessed");
         }
 
@@ -899,7 +899,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Department");
         }
 
@@ -937,7 +937,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Distributor");
         }
 
@@ -975,7 +975,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Edition");
         }
 
@@ -1013,7 +1013,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Guid");
         }
 
@@ -1051,7 +1051,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Institution");
         }
 
@@ -1089,7 +1089,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "InternetSiteTitle");
         }
 
@@ -1127,7 +1127,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Issue");
         }
 
@@ -1165,7 +1165,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "JournalName");
         }
 
@@ -1203,7 +1203,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "LCID");
         }
 
@@ -1241,7 +1241,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Medium");
         }
 
@@ -1279,7 +1279,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Month");
         }
 
@@ -1317,7 +1317,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "MonthAccessed");
         }
 
@@ -1355,7 +1355,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "NumberVolumes");
         }
 
@@ -1393,7 +1393,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Pages");
         }
 
@@ -1431,7 +1431,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "PatentNumber");
         }
 
@@ -1469,7 +1469,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "PeriodicalTitle");
         }
 
@@ -1507,7 +1507,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "ProductionCompany");
         }
 
@@ -1545,7 +1545,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "PublicationTitle");
         }
 
@@ -1583,7 +1583,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Publisher");
         }
 
@@ -1621,7 +1621,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "RecordingNumber");
         }
 
@@ -1659,7 +1659,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "RefOrder");
         }
 
@@ -1697,7 +1697,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Reporter");
         }
 
@@ -1735,7 +1735,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "ShortTitle");
         }
 
@@ -1773,7 +1773,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "StandardNumber");
         }
 
@@ -1811,7 +1811,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "StateProvince");
         }
 
@@ -1849,7 +1849,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Station");
         }
 
@@ -1887,7 +1887,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Tag");
         }
 
@@ -1925,7 +1925,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Theater");
         }
 
@@ -1963,7 +1963,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "ThesisType");
         }
 
@@ -2001,7 +2001,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Title");
         }
 
@@ -2039,7 +2039,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Type");
         }
 
@@ -2077,7 +2077,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "URL");
         }
 
@@ -2115,7 +2115,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Version");
         }
 
@@ -2153,7 +2153,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Volume");
         }
 
@@ -2191,7 +2191,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "Year");
         }
 
@@ -2229,7 +2229,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLength = (255L) });
+            builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
             builder.SetSchema(9, "YearAccessed");
         }
 
@@ -3776,7 +3776,7 @@ aBuilder.AddValidator(new StringValidatorAttribute() { MinLength = (0L), MaxLeng
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>>(new EnumValidatorAttribute());
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>>(new EnumValidator());
             builder.SetSchema(9, "SourceType");
         }
 
