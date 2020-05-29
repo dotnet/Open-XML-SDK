@@ -265,12 +265,12 @@ namespace DocumentFormat.OpenXml.CustomProperties
             builder.AddElement<CustomDocumentProperty>()
 .AddAttribute(0, "fmtid", a => a.FormatId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\\}\\s*") });
 })
 .AddAttribute(0, "pid", a => a.PropertyId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "linkTarget", a => a.LinkTarget);

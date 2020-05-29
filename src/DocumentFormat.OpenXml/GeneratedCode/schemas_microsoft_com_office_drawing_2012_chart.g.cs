@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             builder.AddElement<NumberingFormat>()
 .AddAttribute(0, "formatCode", a => a.FormatCode, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "sourceLinked", a => a.SourceLinked);
         }
@@ -3942,7 +3942,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Explosion>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 

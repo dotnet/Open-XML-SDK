@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidator());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(51, "pctPosHOffset");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<Int32Value>(new NumberValidator());
+            builder.AddValidator<Int32Value>(NumberValidator.Instance);
             builder.SetSchema(51, "pctPosVOffset");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -154,7 +154,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             builder.AddElement<RelativeWidth>()
 .AddAttribute(0, "relativeFrom", a => a.ObjectId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -246,7 +246,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<RelativeHeight>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }

@@ -159,15 +159,15 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             builder.AddElement<ModelTimeGrouping>()
 .AddAttribute(0, "tableName", a => a.TableName, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "columnId", a => a.ColumnId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -244,19 +244,19 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<CalculatedTimeColumn>()
 .AddAttribute(0, "columnName", a => a.ColumnName, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "columnId", a => a.ColumnId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "contentType", a => a.ContentType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "isSelected", a => a.IsSelected, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 

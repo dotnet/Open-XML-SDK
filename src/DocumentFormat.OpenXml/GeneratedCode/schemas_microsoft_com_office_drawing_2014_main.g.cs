@@ -227,7 +227,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddElement<OpenXmlIdentifierElement>()
                            .AddAttribute(0, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }

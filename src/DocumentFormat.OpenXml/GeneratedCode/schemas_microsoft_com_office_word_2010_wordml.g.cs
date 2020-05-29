@@ -722,13 +722,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             builder.AddElement<RunTrackChangeType>()
 .AddAttribute(23, "author", a => a.Author, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
 })
 .AddAttribute(23, "date", a => a.Date)
 .AddAttribute(23, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
 {
 union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
@@ -897,13 +897,13 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.AddElement<TrackChangeType>()
                            .AddAttribute(23, "author", a => a.Author, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                            })
                            .AddAttribute(23, "date", a => a.Date)
                            .AddAttribute(23, "id", a => a.Id, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddUnion(union =>
                                {
                                    union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
@@ -1021,7 +1021,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.AddElement<PositiveFixedPercentageType>()
                            .AddAttribute(52, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
                            });
@@ -1063,7 +1063,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
             builder.AddElement<HueModulation>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 });
@@ -1256,7 +1256,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
             builder.AddElement<PercentageType>()
                            .AddAttribute(52, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
                            });
         }
@@ -1346,7 +1346,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
             builder.AddElement<RgbColorModelHex>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new StringValidator() { Length = (3L) });
 });
@@ -1462,7 +1462,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (3L) });
             builder.AddElement<SchemeColor>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
@@ -3244,7 +3244,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Ligatures>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
@@ -3288,7 +3288,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddElement<NumberingFormat>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
@@ -3332,7 +3332,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddElement<NumberSpacing>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
@@ -3630,7 +3630,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(19, "id", a => a.RelationshipId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3721,7 +3721,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<DocumentId>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
@@ -3820,7 +3820,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.AddElement<MarkupType>()
                            .AddAttribute(23, "id", a => a.Id, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddUnion(union =>
                                {
                                    union.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
@@ -3865,7 +3865,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.AddElement<DefaultImageDpi>()
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
         }
@@ -4050,7 +4050,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddElement<GradientStop>()
 .AddAttribute(52, "pos", a => a.StopPosition, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
@@ -4318,19 +4318,19 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddElement<SphereCoordinates>()
 .AddAttribute(52, "lat", a => a.Lattitude, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(52, "lon", a => a.Longitude, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(52, "rev", a => a.Revolution, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 });
@@ -4375,7 +4375,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
             builder.AddElement<Camera>()
 .AddAttribute(52, "prst", a => a.PresetCameraType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -4464,13 +4464,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<LightRig>()
 .AddAttribute(52, "rig", a => a.LightRigType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(52, "dir", a => a.LightDirectionType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
@@ -4892,7 +4892,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<StyleSet>()
 .AddAttribute(52, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 })
 .AddAttribute(52, "val", a => a.Val, aBuilder =>
@@ -5124,11 +5124,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)

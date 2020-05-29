@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddElement<Script>()
 .AddAttribute(21, "val", a => a.Val, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddElement<Style>()
 .AddAttribute(21, "val", a => a.Val, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -4137,7 +4137,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddElement<CharType>()
                            .AddAttribute(21, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new StringValidator() { MaxLength = (1L) });
                            });
         }
@@ -6919,7 +6919,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddElement<TopBottomType>()
                            .AddAttribute(21, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -7407,7 +7407,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddElement<Shape>()
 .AddAttribute(21, "val", a => a.Val, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -7604,7 +7604,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddElement<BaseJustification>()
 .AddAttribute(21, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -7693,7 +7693,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<SpacingRuleType>()
                            .AddAttribute(21, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (4L) });
                            });
         }
@@ -7780,7 +7780,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<UnsignedShortType>()
                            .AddAttribute(21, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -7974,7 +7974,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<FractionType>()
 .AddAttribute(21, "val", a => a.Val, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -8455,7 +8455,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<MatrixColumnCount>()
 .AddAttribute(21, "val", a => a.Val, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (64L) });
 });
         }
@@ -8498,7 +8498,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<MatrixColumnJustification>()
 .AddAttribute(21, "val", a => a.Val, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -8897,7 +8897,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<TwipsMeasureType>()
                            .AddAttribute(21, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (31680L) });
                            });
         }
@@ -9335,7 +9335,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<LimitLocationType>()
                            .AddAttribute(21, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -10091,7 +10091,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<ArgumentSize>()
 .AddAttribute(21, "val", a => a.Val, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-2L), MaxInclusive = (2L) });
 });
         }
@@ -10256,7 +10256,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<OfficeMathJustificationType>()
                            .AddAttribute(21, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -10295,7 +10295,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<MathFont>()
 .AddAttribute(21, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
 });
         }

@@ -227,7 +227,7 @@ namespace DocumentFormat.OpenXml.Drawing
             builder.AddElement<EmbeddedWavAudioFileType>()
                            .AddAttribute(19, "embed", a => a.Embed, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            })
                            .AddAttribute(0, "name", a => a.Name)
                            .AddAttribute(0, "builtIn", a => a.BuiltIn);
@@ -299,7 +299,7 @@ namespace DocumentFormat.OpenXml.Drawing
             builder.AddElement<AudioFromFile>()
 .AddAttribute(19, "link", a => a.Link, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -392,7 +392,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<VideoFromFile>()
 .AddAttribute(19, "link", a => a.Link, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -485,7 +485,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<QuickTimeFromFile>()
 .AddAttribute(19, "link", a => a.Link, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -615,7 +615,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<PositiveFixedPercentageType>()
                            .AddAttribute(0, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
                            });
         }
@@ -724,7 +724,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<AlphaOffset>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxInclusive = (100000L) });
 });
         }
@@ -811,7 +811,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
             builder.AddElement<PositivePercentageType>()
                            .AddAttribute(0, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
                            });
         }
@@ -848,7 +848,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
             builder.AddElement<Hue>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 });
         }
@@ -888,7 +888,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
             builder.AddElement<HueOffset>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1292,7 +1292,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<PercentageType>()
                            .AddAttribute(0, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -1551,15 +1551,15 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<RgbColorModelPercentage>()
 .AddAttribute(0, "r", a => a.RedPortion, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "g", a => a.GreenPortion, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "b", a => a.BluePortion, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1736,7 +1736,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<RgbColorModelHex>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { Length = (3L) });
 })
 .AddAttribute(48, "legacySpreadsheetColorIndex", a => a.LegacySpreadsheetColorIndex, aBuilder =>
@@ -1926,16 +1926,16 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<HslColor>()
 .AddAttribute(0, "hue", a => a.HueValue, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(0, "sat", a => a.SatValue, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "lum", a => a.LumValue, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2109,7 +2109,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<SystemColor>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "lastClr", a => a.LastColor, aBuilder =>
@@ -2278,7 +2278,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (3L) });
             builder.AddElement<SchemeColor>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -2443,7 +2443,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<PresetColor>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -4054,7 +4054,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<AlphaBiLevel>()
 .AddAttribute(0, "thresh", a => a.Threshold, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
@@ -4456,7 +4456,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.AddElement<AlphaReplace>()
 .AddAttribute(0, "a", a => a.Alpha, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
@@ -4496,7 +4496,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<BiLevel>()
 .AddAttribute(0, "thresh", a => a.Threshold, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
@@ -4567,7 +4567,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<Blend>()
 .AddAttribute(0, "blend", a => a.BlendMode, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -5226,7 +5226,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<FillOverlay>()
 .AddAttribute(0, "blend", a => a.Blend, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -6226,7 +6226,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<PresetShadow>()
 .AddAttribute(0, "prst", a => a.Preset, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "dist", a => a.Distance, aBuilder =>
@@ -6629,7 +6629,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<SoftEdge>()
 .AddAttribute(0, "rad", a => a.Radius, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
 });
         }
@@ -7198,7 +7198,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<PresetGeometry>()
 .AddAttribute(0, "prst", a => a.Preset, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -7289,7 +7289,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<PresetTextWrap>()
 .AddAttribute(0, "prst", a => a.Preset, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -7969,7 +7969,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<StyleMatrixReferenceType>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -8526,7 +8526,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<FontReference>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -9566,7 +9566,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<BulletSizePercentage>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (25000L), MaxInclusive = (400000L) });
 });
         }
@@ -9606,7 +9606,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (25000L), MaxInclus
             builder.AddElement<BulletSizePoints>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (100L), MaxInclusive = (400000L) });
 });
         }
@@ -9892,7 +9892,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (100L), MaxInclusiv
             builder.AddElement<AutoNumberedBullet>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "startAt", a => a.StartAt, aBuilder =>
@@ -9936,7 +9936,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
             builder.AddElement<CharacterBullet>()
 .AddAttribute(0, "char", a => a.Char, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -11405,7 +11405,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Field>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
 .AddAttribute(0, "type", a => a.Type);
@@ -12266,7 +12266,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F
             builder.AddElement<TableStyleList>()
 .AddAttribute(0, "def", a => a.Default, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
         }
@@ -12469,7 +12469,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddElement<AudioCDTimeType>()
                            .AddAttribute(0, "track", a => a.Track, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            })
                            .AddAttribute(0, "time", a => a.Time);
         }
@@ -12689,11 +12689,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddElement<SupplementalFont>()
 .AddAttribute(0, "script", a => a.Script, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "typeface", a => a.Typeface, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -13277,7 +13277,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddElement<ColorScheme>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -13539,7 +13539,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<FontScheme>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -14770,11 +14770,11 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<RatioType>()
                            .AddAttribute(0, "n", a => a.Numerator, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            })
                            .AddAttribute(0, "d", a => a.Denominator, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -14867,12 +14867,12 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<Point2DType>()
                            .AddAttribute(0, "x", a => a.X, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            })
                            .AddAttribute(0, "y", a => a.Y, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            });
         }
@@ -14966,12 +14966,12 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<PositiveSize2DType>()
                            .AddAttribute(0, "cx", a => a.Cx, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
                            })
                            .AddAttribute(0, "cy", a => a.Cy, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (2147483647L) });
                            });
         }
@@ -15448,11 +15448,11 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<ConnectionType>()
                            .AddAttribute(0, "id", a => a.Id, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            })
                            .AddAttribute(0, "idx", a => a.Index, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -16147,7 +16147,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<GraphicData>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -16269,7 +16269,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "categoryIdx", a => a.CategoryIndex)
 .AddAttribute(0, "bldStep", a => a.BuildStep, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -16321,8 +16321,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-    union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationBuildValues>>(new EnumValidator());
-    union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationDiagramOnlyBuildValues>>(new EnumValidator());
+    union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationBuildValues>>(EnumValidator.Instance);
+    union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationDiagramOnlyBuildValues>>(EnumValidator.Instance);
 });
 })
 .AddAttribute(0, "rev", a => a.ReverseAnimation);
@@ -16375,8 +16375,8 @@ aBuilder.AddUnion(union =>
 {
 aBuilder.AddUnion(union =>
 {
-  union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationBuildValues>>(new EnumValidator());
-  union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationChartOnlyBuildValues>>(new EnumValidator());
+  union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationBuildValues>>(EnumValidator.Instance);
+  union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.AnimationChartOnlyBuildValues>>(EnumValidator.Instance);
 });
 })
 .AddAttribute(0, "animBg", a => a.AnimateBackground);
@@ -16735,11 +16735,11 @@ aBuilder.AddUnion(union =>
             builder.AddElement<NonVisualDrawingProperties>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)
@@ -18084,17 +18084,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Rotation>()
 .AddAttribute(0, "lat", a => a.Latitude, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(0, "lon", a => a.Longitude, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 })
 .AddAttribute(0, "rev", a => a.Revolution, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInclusive = (0L) });
 });
         }
@@ -18185,7 +18185,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Camera>()
 .AddAttribute(0, "prst", a => a.Preset, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "fov", a => a.FieldOfView, aBuilder =>
@@ -18294,12 +18294,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
             builder.AddElement<LightRig>()
 .AddAttribute(0, "rig", a => a.Rig, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "dir", a => a.Direction, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -18502,17 +18502,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Anchor>()
 .AddAttribute(0, "x", a => a.X, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
 .AddAttribute(0, "y", a => a.Y, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 })
 .AddAttribute(0, "z", a => a.Z, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 });
         }
@@ -18619,17 +18619,17 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.AddElement<Vector3DType>()
                            .AddAttribute(0, "dx", a => a.Dx, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            })
                            .AddAttribute(0, "dy", a => a.Dy, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            })
                            .AddAttribute(0, "dz", a => a.Dz, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
                            });
         }
@@ -19003,7 +19003,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.AddElement<GradientStop>()
 .AddAttribute(0, "pos", a => a.Position, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
         }
@@ -19211,12 +19211,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<ShapeGuide>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-    aBuilder.AddValidator(new RequiredValidator());
+    aBuilder.AddValidator(RequiredValidator.Instance);
     aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "fmla", a => a.Formula, aBuilder =>
 {
-    aBuilder.AddValidator(new RequiredValidator());
+    aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -19312,20 +19312,20 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<AdjustPoint2DType>()
                            .AddAttribute(0, "x", a => a.X, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddUnion(union =>
                                {
                                    union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                                   union.AddValidator(new StringValidator());
+                                   union.AddValidator(StringValidator.Instance);
                                });
                            })
                            .AddAttribute(0, "y", a => a.Y, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                                aBuilder.AddUnion(union =>
                                {
                                    union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-                                   union.AddValidator(new StringValidator());
+                                   union.AddValidator(StringValidator.Instance);
                                });
                            });
         }
@@ -19450,7 +19450,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddUnion(union =>
 {
 union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-union.AddValidator(new StringValidator());
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "maxX", a => a.MaxX, aBuilder =>
@@ -19458,7 +19458,7 @@ union.AddValidator(new StringValidator());
 aBuilder.AddUnion(union =>
 {
 union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-union.AddValidator(new StringValidator());
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "gdRefY", a => a.YAdjustmentGuide, aBuilder =>
@@ -19470,7 +19470,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddUnion(union =>
 {
 union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-union.AddValidator(new StringValidator());
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "maxY", a => a.MaxY, aBuilder =>
@@ -19478,7 +19478,7 @@ union.AddValidator(new StringValidator());
 aBuilder.AddUnion(union =>
 {
 union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-union.AddValidator(new StringValidator());
+union.AddValidator(StringValidator.Instance);
 });
 });
         }
@@ -19626,7 +19626,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddUnion(union =>
 {
 union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-union.AddValidator(new StringValidator());
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "maxR", a => a.MaxRadial, aBuilder =>
@@ -19634,7 +19634,7 @@ union.AddValidator(new StringValidator());
 aBuilder.AddUnion(union =>
 {
 union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-union.AddValidator(new StringValidator());
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "gdRefAng", a => a.AngleAdjustmentGuide, aBuilder =>
@@ -19645,16 +19645,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
-union.AddValidator(new StringValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "maxAng", a => a.MaxAngle, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
-union.AddValidator(new StringValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
+union.AddValidator(StringValidator.Instance);
 });
 });
         }
@@ -19745,11 +19745,11 @@ union.AddValidator(new StringValidator());
             builder.AddElement<ConnectionSite>()
 .AddAttribute(0, "ang", a => a.Angle, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
-union.AddValidator(new StringValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
+union.AddValidator(StringValidator.Instance);
 });
 });
         }
@@ -20013,38 +20013,38 @@ union.AddValidator(new StringValidator());
             builder.AddElement<ArcTo>()
 .AddAttribute(0, "wR", a => a.WidthRadius, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddUnion(union =>
  {
      union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-     union.AddValidator(new StringValidator());
+     union.AddValidator(StringValidator.Instance);
  });
 })
 .AddAttribute(0, "hR", a => a.HeightRadius, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddUnion(union =>
  {
      union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-     union.AddValidator(new StringValidator());
+     union.AddValidator(StringValidator.Instance);
  });
 })
 .AddAttribute(0, "stAng", a => a.StartAngle, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator<Int32Value>(new NumberValidator());
-     union.AddValidator(new StringValidator());
+     union.AddValidator<Int32Value>(NumberValidator.Instance);
+     union.AddValidator(StringValidator.Instance);
  });
 })
 .AddAttribute(0, "swAng", a => a.SwingAngle, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator<Int32Value>(new NumberValidator());
-     union.AddValidator(new StringValidator());
+     union.AddValidator<Int32Value>(NumberValidator.Instance);
+     union.AddValidator(StringValidator.Instance);
  });
 });
         }
@@ -20680,38 +20680,38 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Rectangle>()
 .AddAttribute(0, "l", a => a.Left, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
   aBuilder.AddUnion(union =>
   {
       union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-      union.AddValidator(new StringValidator());
+      union.AddValidator(StringValidator.Instance);
   });
 })
 .AddAttribute(0, "t", a => a.Top, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
   aBuilder.AddUnion(union =>
   {
       union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-      union.AddValidator(new StringValidator());
+      union.AddValidator(StringValidator.Instance);
   });
 })
 .AddAttribute(0, "r", a => a.Right, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
   aBuilder.AddUnion(union =>
   {
       union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-      union.AddValidator(new StringValidator());
+      union.AddValidator(StringValidator.Instance);
   });
 })
 .AddAttribute(0, "b", a => a.Bottom, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
   aBuilder.AddUnion(union =>
   {
       union.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-      union.AddValidator(new StringValidator());
+      union.AddValidator(StringValidator.Instance);
   });
 });
         }
@@ -20823,12 +20823,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<DashStop>()
 .AddAttribute(0, "d", a => a.DashLength, aBuilder =>
 {
-    aBuilder.AddValidator(new RequiredValidator());
+    aBuilder.AddValidator(RequiredValidator.Instance);
     aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 })
 .AddAttribute(0, "sp", a => a.SpaceLength, aBuilder =>
 {
-    aBuilder.AddValidator(new RequiredValidator());
+    aBuilder.AddValidator(RequiredValidator.Instance);
     aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 });
         }
@@ -22310,62 +22310,62 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<ColorMappingType>()
 .AddAttribute(0, "bg1", a => a.Background1, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "tx1", a => a.Text1, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "bg2", a => a.Background2, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "tx2", a => a.Text2, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent1", a => a.Accent1, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent2", a => a.Accent2, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent3", a => a.Accent3, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent4", a => a.Accent4, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent5", a => a.Accent5, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "accent6", a => a.Accent6, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "hlink", a => a.Hyperlink, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "folHlink", a => a.FollowedHyperlink, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -23464,12 +23464,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<TableStyleType>()
 .AddAttribute(0, "styleId", a => a.StyleId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
 .AddAttribute(0, "styleName", a => a.StyleName, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -23769,7 +23769,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<GridColumn>()
 .AddAttribute(0, "w", a => a.Width, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 });
         }
@@ -24109,7 +24109,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.AddElement<TableRow>()
 .AddAttribute(0, "h", a => a.Height, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
 });
         }
@@ -28551,7 +28551,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
             builder.AddElement<SpacingPercent>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (13200000L) });
 });
         }
@@ -28591,7 +28591,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<SpacingPoints>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (158400L) });
 });
         }
@@ -29039,7 +29039,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<ShapePropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -29123,7 +29123,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<GvmlGroupShapeExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -30191,7 +30191,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<NonVisualGroupDrawingShapePropsExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -30270,7 +30270,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<OfficeStyleSheetExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -30349,7 +30349,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<ConnectorLockingExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -30872,7 +30872,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<NonVisualDrawingPropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -31215,7 +31215,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<NonVisualPicturePropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -31577,7 +31577,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<BlipExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -32067,7 +32067,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<DataModelExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
@@ -32147,7 +32147,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<PtExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }

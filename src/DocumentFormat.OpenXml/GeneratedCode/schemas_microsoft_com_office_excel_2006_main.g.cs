@@ -388,7 +388,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<ListValue<StringValue>>(new NumberValidator());
+            builder.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
             builder.SetSchema(32, "sqref");
             builder.Availability = FileFormatVersions.Office2010;
         }
@@ -507,7 +507,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
             builder.AddElement<RowSortMap>()
 .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
@@ -598,7 +598,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
             builder.AddElement<ColumnSortMap>()
 .AddAttribute(0, "ref", a => a.Ref, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
@@ -705,11 +705,11 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
             builder.AddElement<SortMapItemType>()
                            .AddAttribute(0, "newVal", a => a.NewVal, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            })
                            .AddAttribute(0, "oldVal", a => a.OldVal, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }

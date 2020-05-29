@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.EMMA
             builder.AddElement<DerivedFrom>()
 .AddAttribute(0, "resource", a => a.Resource, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "composite", a => a.Composite);
@@ -235,12 +235,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddElement<Lattice>()
 .AddAttribute(0, "initial", a => a.Initial, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
 })
 .AddAttribute(0, "final", a => a.Final, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(44, "time-ref-uri", a => a.TimeReference)
 .AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
@@ -690,7 +690,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<Interpretation>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(44, "tokens", a => a.Tokens)
@@ -1133,7 +1133,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(0, "disjunction-type", a => a.DisjunctionType)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(44, "tokens", a => a.Tokens)
@@ -1565,7 +1565,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<Group>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(44, "tokens", a => a.Tokens)
@@ -1990,7 +1990,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<Sequence>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(44, "tokens", a => a.Tokens)
@@ -2225,12 +2225,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddElement<Grammar>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
         }
@@ -2304,7 +2304,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddElement<Model>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(0, "ref", a => a.Reference, aBuilder =>
@@ -2386,7 +2386,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddElement<EndPointInfo>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 });
         }
@@ -2587,7 +2587,7 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
             builder.AddElement<EndPoint>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 })
 .AddAttribute(44, "endpoint-role", a => a.EndpointRole)
@@ -2701,7 +2701,7 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
             builder.AddElement<Node>()
 .AddAttribute(0, "node-number", a => a.NodeNumber, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
 })
 .AddAttribute(44, "confidence", a => a.Confidence, aBuilder =>
@@ -2927,12 +2927,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<Arc>()
 .AddAttribute(0, "from", a => a.From, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
 })
 .AddAttribute(0, "to", a => a.To, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new NumberValidator() { IsNonNegative = (true) });
 })
 .AddAttribute(44, "start", a => a.Start)
@@ -3042,7 +3042,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddElement<Emma>()
 .AddAttribute(0, "version", a => a.Version, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 

@@ -3639,7 +3639,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 })
 .AddAttribute(0, "getContent", a => a.GetContent, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
@@ -9492,7 +9492,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 })
 .AddAttribute(0, "getContent", a => a.GetContent, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "invalidateContentOnDrop", a => a.InvalidateContentOnDrop)
@@ -13100,7 +13100,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddElement<ContextualTabSet>()
 .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "visible", a => a.Visible)

@@ -236,7 +236,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             builder.AddElement<ColorsDefinitionHeader>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "minVer", a => a.MinVersion)
 .AddAttribute(0, "resId", a => a.ResourceId);
@@ -734,7 +734,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<LayoutDefinitionHeader>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "minVer", a => a.MinVersion)
 .AddAttribute(0, "defStyle", a => a.DefaultStyle)
@@ -890,19 +890,19 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<RelationshipIds>()
 .AddAttribute(19, "dm", a => a.DataPart, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(19, "lo", a => a.LayoutPart, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(19, "qs", a => a.StylePart, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(19, "cs", a => a.ColorPart, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1139,7 +1139,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<StyleDefinitionHeader>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "minVer", a => a.MinVersion)
 .AddAttribute(0, "resId", a => a.ResourceId);
@@ -1262,12 +1262,12 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<ColorTransformCategory>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "pri", a => a.Priority, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1937,7 +1937,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1987,7 +1987,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2131,7 +2131,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<ColorTransformStyleLabel>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2331,10 +2331,10 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<Point>()
 .AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
 union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 })
@@ -2346,7 +2346,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
 union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 });
@@ -2560,10 +2560,10 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
             builder.AddElement<Connection>()
 .AddAttribute(0, "modelId", a => a.ModelId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
 union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 })
@@ -2573,35 +2573,35 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "srcId", a => a.SourceId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
 union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 })
 .AddAttribute(0, "destId", a => a.DestinationId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
 union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 })
 .AddAttribute(0, "srcOrd", a => a.SourcePosition, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "destOrd", a => a.DestinationPosition, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "parTransId", a => a.ParentTransitionId, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
 union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 })
@@ -2609,7 +2609,7 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
 union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 })
@@ -2809,7 +2809,7 @@ union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4
             builder.AddElement<Constraint>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "for", a => a.For, aBuilder =>
@@ -2988,7 +2988,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Rule>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "for", a => a.For, aBuilder =>
@@ -3070,12 +3070,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Adjust>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L) });
 })
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3186,49 +3186,49 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Parameter>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
  aBuilder.AddUnion(union =>
  {
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>>(new EnumValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>>(new EnumValidator());
-     union.AddValidator<Int32Value>(new NumberValidator());
-     union.AddValidator<DoubleValue>(new NumberValidator());
-     union.AddValidator<BooleanValue>(new NumberValidator());
-     union.AddValidator(new StringValidator());
-     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>>(new EnumValidator());
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>>(EnumValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>>(EnumValidator.Instance);
+     union.AddValidator<Int32Value>(NumberValidator.Instance);
+     union.AddValidator<DoubleValue>(NumberValidator.Instance);
+     union.AddValidator<BooleanValue>(NumberValidator.Instance);
+     union.AddValidator(StringValidator.Instance);
+     union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>>(EnumValidator.Instance);
  });
 });
         }
@@ -3311,7 +3311,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Algorithm>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "rev", a => a.Revision);
@@ -3459,8 +3459,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>>(new EnumValidator());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShapeValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>>(EnumValidator.Instance);
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShapeValues>>(EnumValidator.Instance);
 });
 })
 .AddAttribute(19, "blip", a => a.Blip)
@@ -4711,33 +4711,33 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "step", a => a.Step)
 .AddAttribute(0, "func", a => a.Function, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "arg", a => a.Argument, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VariableValues>>(new EnumValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VariableValues>>(EnumValidator.Instance);
 });
 })
 .AddAttribute(0, "op", a => a.Operator, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
-union.AddValidator<BooleanValue>(new NumberValidator());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>>(new EnumValidator());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>>(new EnumValidator());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>>(new EnumValidator());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>>(new EnumValidator());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>>(new EnumValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
+union.AddValidator<BooleanValue>(NumberValidator.Instance);
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>>(EnumValidator.Instance);
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>>(EnumValidator.Instance);
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>>(EnumValidator.Instance);
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>>(EnumValidator.Instance);
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>>(EnumValidator.Instance);
 });
 });
         }
@@ -5051,12 +5051,12 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
             builder.AddElement<Category>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "pri", a => a.Priority, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5106,7 +5106,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5156,7 +5156,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5994,12 +5994,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<StyleDisplayCategory>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "pri", a => a.Priority, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -6465,7 +6465,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -6515,7 +6515,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "lang", a => a.Language)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -6655,7 +6655,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<StyleLabel>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -7443,7 +7443,7 @@ aBuilder.AddValidator(new RequiredValidator());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<Int32Value>(new NumberValidator());
+union.AddValidator<Int32Value>(NumberValidator.Instance);
 union.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
 })

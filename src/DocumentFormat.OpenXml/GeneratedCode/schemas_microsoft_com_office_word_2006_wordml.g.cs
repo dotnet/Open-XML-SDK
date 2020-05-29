@@ -634,7 +634,7 @@ namespace DocumentFormat.OpenXml.Office.Word
             builder.AddElement<CharacterInsertion>()
 .AddAttribute(33, "val", a => a.Val, aBuilder =>
 {
-   aBuilder.AddValidator(new RequiredValidator());
+   aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
         }
@@ -1902,7 +1902,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             builder.AddElement<ToolbarData>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2283,7 +2283,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<RecordHashCode>()
 .AddAttribute(33, "val", a => a.Val, aBuilder =>
 {
-  aBuilder.AddValidator(new RequiredValidator());
+  aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 

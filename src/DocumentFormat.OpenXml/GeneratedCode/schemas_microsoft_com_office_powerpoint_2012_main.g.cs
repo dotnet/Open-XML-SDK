@@ -116,11 +116,11 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             builder.AddElement<PresenceInfo>()
 .AddAttribute(0, "userId", a => a.UserId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "providerId", a => a.ProviderId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -436,7 +436,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<ChartTrackingReferenceBased>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -828,7 +828,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<ExtendedGuide>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "orient", a => a.Orientation, aBuilder =>

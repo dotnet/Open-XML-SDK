@@ -2476,7 +2476,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddElement<ClipPath>()
 .AddAttribute(27, "v", a => a.Value, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2877,7 +2877,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<Rule>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "how", a => a.How)
@@ -3086,7 +3086,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>>(new EnumValidator());
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>>(EnumValidator.Instance);
             builder.SetSchema(27, "LinkType");
         }
 
@@ -3124,7 +3124,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<TrueFalseBlankValue>(new NumberValidator());
+            builder.AddValidator<TrueFalseBlankValue>(NumberValidator.Instance);
             builder.SetSchema(27, "LockedField");
         }
 
@@ -3232,12 +3232,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "end", a => a.End)
 .AddAttribute(0, "idref", a => a.ShapeReference, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "connectloc", a => a.ConnectionLocation, aBuilder =>
 {
- aBuilder.AddValidator(new RequiredValidator());
+ aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 

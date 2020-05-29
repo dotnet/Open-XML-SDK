@@ -197,7 +197,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<UnsignedIntegerType>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -829,7 +829,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<UniqueIDChart>()
                            .AddAttribute(0, "val", a => a.Val, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -1528,7 +1528,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<LiteralDataChart>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1603,7 +1603,7 @@ aBuilder.AddValidator(new RequiredValidator());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<UInt32Value>(new NumberValidator());
+            builder.AddValidator<UInt32Value>(NumberValidator.Instance);
             builder.SetSchema(82, "ptidx");
             builder.Availability = FileFormatVersions.Office2016;
         }

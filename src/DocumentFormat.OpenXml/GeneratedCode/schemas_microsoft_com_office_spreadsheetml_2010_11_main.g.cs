@@ -602,7 +602,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddElement<TimelineStyles>()
 .AddAttribute(0, "defaultTimelineStyle", a => a.DefaultTimelineStyle, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -803,7 +803,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<Connection>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "model", a => a.Model)
 .AddAttribute(0, "excludeFromRefreshAll", a => a.ExcludeFromRefreshAll)
@@ -1071,7 +1071,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<PivotFilter>()
 .AddAttribute(0, "useWholeDay", a => a.UseWholeDay, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1174,7 +1174,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<CacheHierarchy>()
 .AddAttribute(0, "aggregatedColumn", a => a.AggregatedColumn, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1261,11 +1261,11 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<PivotCacheIdVersion>()
 .AddAttribute(0, "cacheIdSupportedVersion", a => a.CacheIdSupportedVersion, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "cacheIdCreatedVersion", a => a.CacheIdCreatedVersion, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1478,7 +1478,7 @@ aBuilder.AddValidator(new RequiredValidator());
 .AddAttribute(0, "columnCount", a => a.ColumnCount)
 .AddAttribute(0, "cacheId", a => a.CacheId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1642,23 +1642,23 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<MovingPeriodState>()
 .AddAttribute(0, "referenceDateBegin", a => a.ReferenceDateBegin, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "referencePeriod", a => a.ReferencePeriod, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "referenceMultiple", a => a.ReferenceMultiple, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "movingPeriod", a => a.MovingPeriod, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "movingMultiple", a => a.MovingMultiple, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -1832,11 +1832,11 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<TableSlicerCache>()
 .AddAttribute(0, "tableId", a => a.TableId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "column", a => a.Column, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "sortOrder", a => a.SortOrder)
 .AddAttribute(0, "customListSort", a => a.CustomListSort)
@@ -2106,11 +2106,11 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<Survey>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "guid", a => a.Guid, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
 .AddAttribute(0, "title", a => a.Title)
@@ -2368,11 +2368,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddElement<TimelineCacheDefinition>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "sourceName", a => a.SourceName, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2494,7 +2494,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<PivotTableReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2565,7 +2565,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<WebExtension>()
 .AddAttribute(0, "appRef", a => a.ApplicationReference, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2628,7 +2628,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<TimelineCacheReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2671,7 +2671,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<TimelineReference>()
 .AddAttribute(19, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2742,7 +2742,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<TimelineStyle>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2812,7 +2812,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<TimelineStyleElement>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "dxfId", a => a.FormatId);
         }
@@ -2916,7 +2916,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<DbTable>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3019,7 +3019,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<DbCommand>()
 .AddAttribute(0, "text", a => a.Text, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3349,7 +3349,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<RangeProperties>()
 .AddAttribute(0, "sourceName", a => a.SourceName, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3524,7 +3524,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<DataFeedProperties>()
 .AddAttribute(0, "connection", a => a.Connection, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3594,7 +3594,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<FieldListActiveTabTopLevelEntity>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "type", a => a.Type);
         }
@@ -3714,11 +3714,11 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<CachedUniqueName>()
 .AddAttribute(0, "index", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3778,15 +3778,15 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<ModelTable>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "connection", a => a.Connection, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -3856,19 +3856,19 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<ModelRelationship>()
 .AddAttribute(0, "fromTable", a => a.FromTable, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "fromColumn", a => a.FromColumn, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "toTable", a => a.ToTable, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "toColumn", a => a.ToColumn, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -4327,7 +4327,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             builder.AddElement<PivotTableServerFormats>()
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -4432,11 +4432,11 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<SlicerCacheOlapLevelName>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5131,7 +5131,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<SurveyQuestion>()
 .AddAttribute(0, "binding", a => a.Binding, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "text", a => a.Text)
 .AddAttribute(0, "type", a => a.Type)
@@ -5344,11 +5344,11 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<Timeline>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "cache", a => a.Cache, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "caption", a => a.Caption)
 .AddAttribute(0, "showHeader", a => a.ShowHeader)
@@ -5357,11 +5357,11 @@ aBuilder.AddValidator(new RequiredValidator());
 .AddAttribute(0, "showHorizontalScrollbar", a => a.ShowHorizontalScrollbar)
 .AddAttribute(0, "level", a => a.Level, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "selectionLevel", a => a.SelectionLevel, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "scrollPosition", a => a.ScrollPosition)
 .AddAttribute(0, "style", a => a.Style);
@@ -5439,11 +5439,11 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<TimelineCachePivotTable>()
 .AddAttribute(0, "tabId", a => a.TabId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -5541,11 +5541,11 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<TimelineRange>()
                            .AddAttribute(0, "startDate", a => a.StartDate, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            })
                            .AddAttribute(0, "endDate", a => a.EndDate, aBuilder =>
                            {
-                               aBuilder.AddValidator(new RequiredValidator());
+                               aBuilder.AddValidator(RequiredValidator.Instance);
                            });
         }
     }
@@ -5834,19 +5834,19 @@ aBuilder.AddValidator(new RequiredValidator());
 .AddAttribute(0, "singleRangeFilterState", a => a.SingleRangeFilterState)
 .AddAttribute(0, "minimalRefreshVersion", a => a.MinimalRefreshVersion, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "lastRefreshVersion", a => a.LastRefreshVersion, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "pivotCacheId", a => a.PivotCacheId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "filterType", a => a.FilterType, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "filterId", a => a.FilterId)
 .AddAttribute(0, "filterTabId", a => a.FilterTabId)
@@ -5993,7 +5993,7 @@ aBuilder.AddValidator(new RequiredValidator());
 .AddAttribute(0, "r", a => a.Reference)
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 

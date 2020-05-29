@@ -100,11 +100,11 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.AddElement<ColorStyle>()
 .AddAttribute(0, "meth", a => a.Method, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleMethodEnum>>(new EnumValidator());
-union.AddValidator(new StringValidator());
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleMethodEnum>>(EnumValidator.Instance);
+union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "id", a => a.Id);
@@ -1118,9 +1118,9 @@ union.AddValidator(new StringValidator());
 {
 aBuilder.AddUnion(union =>
 {
-union.AddValidator<UInt32Value>(new NumberValidator());
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColorEnum>>(new EnumValidator());
-union.AddValidator(new StringValidator());
+union.AddValidator<UInt32Value>(NumberValidator.Instance);
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColorEnum>>(EnumValidator.Instance);
+union.AddValidator(StringValidator.Instance);
 });
 });
         }
@@ -1492,7 +1492,7 @@ union.AddValidator(new StringValidator());
             builder.AddElement<StyleReference>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "mods", a => a.Modifiers);
         }
@@ -1528,7 +1528,7 @@ aBuilder.AddValidator(new RequiredValidator());
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<DoubleValue>(new NumberValidator());
+            builder.AddValidator<DoubleValue>(NumberValidator.Instance);
             builder.SetSchema(65, "lineWidthScale");
             builder.Availability = FileFormatVersions.Office2013;
         }
@@ -1622,7 +1622,7 @@ aBuilder.AddValidator(new RequiredValidator());
             builder.AddElement<FontReference>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "mods", a => a.Modifiers);

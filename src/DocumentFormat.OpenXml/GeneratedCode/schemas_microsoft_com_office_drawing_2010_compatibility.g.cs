@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
             builder.AddElement<CompatibilityShape>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
-aBuilder.AddValidator(new RequiredValidator());
+aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
