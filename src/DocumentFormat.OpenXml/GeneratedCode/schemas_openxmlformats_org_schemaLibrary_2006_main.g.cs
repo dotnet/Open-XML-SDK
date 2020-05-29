@@ -62,14 +62,11 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
             base.ConfigureMetadata(builder);
             builder.SetSchema(25, "schemaLibrary");
             builder.AddChild<Schema>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemaLibrary>(deep);

@@ -579,14 +579,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new AnyParticle(1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new AnyParticle(1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Extension>(deep);
@@ -894,6 +891,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -908,13 +909,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorMap>(deep);
@@ -971,6 +965,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "clrMapOvr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.MasterColorMapping>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.OverrideColorMapping>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.MasterColorMapping), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.OverrideColorMapping), 1, 1)
+                }
+            };
         }
 
         /// <summary>
@@ -998,17 +1000,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.OverrideColorMapping>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.MasterColorMapping), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.OverrideColorMapping), 1, 1)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorMapOverride>(deep);
@@ -1089,33 +1080,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<ExtensionList>();
             builder.AddElement<BackgroundProperties>()
 .AddAttribute(0, "shadeToTitle", a => a.ShadeToTitle);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new CompositeParticle(ParticleType.Group, 1, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Group, 1, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
-                }
-            },
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundProperties>(deep);
@@ -1195,6 +1183,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                    }
+                }
+            };
         }
 
         /// <summary>
@@ -1275,24 +1278,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             set => SetElement(value);
         }
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
-                }
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundStyleReference>(deep);
     }
@@ -1346,14 +1331,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cmAuthorLst");
             builder.AddChild<CommentAuthor>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthor), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthor), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentAuthorList>(deep);
@@ -1439,14 +1421,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cmLst");
             builder.AddChild<Comment>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Comment), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Comment), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentList>(deep);
@@ -1626,6 +1605,15 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 })
 .AddAttribute(0, "progId", a => a.ProgId);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OleObjectEmbed), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OleObjectLink), 1, 1)
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 0, 1)
+            };
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1633,18 +1621,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OleObjectEmbed), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OleObjectLink), 1, 1)
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleObject>(deep);
@@ -1861,6 +1837,23 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinInclusive = (1L) });
 })
 .AddAttribute(0, "conformance", a => a.Conformance);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterIdList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterIdList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterIdList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideIdList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideSize), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesSize), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EmbeddedFontList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShowList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PhotoAlbum), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Kinsoku), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.DefaultTextStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ModificationVerifier), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -2051,26 +2044,6 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterIdList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterIdList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterIdList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideIdList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideSize), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesSize), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EmbeddedFontList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShowList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PhotoAlbum), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Kinsoku), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.DefaultTextStyle), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ModificationVerifier), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Presentation>(deep);
 
@@ -2165,6 +2138,15 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
             builder.AddChild<ShowProperties>();
             builder.AddChild<ColorMostRecentlyUsed>();
             builder.AddChild<PresentationPropertiesExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HtmlPublishProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WebProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PrintingProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -2244,18 +2226,6 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
             get => GetElement<PresentationPropertiesExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HtmlPublishProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WebProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PrintingProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationProperties>(deep);
@@ -2383,6 +2353,20 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
 .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
 .AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
 .AddAttribute(0, "show", a => a.Show);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -2449,23 +2433,6 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
             get => GetElement<SlideExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Slide>(deep);
@@ -2631,6 +2598,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "preserve", a => a.Preserve)
 .AddAttribute(0, "userDrawn", a => a.UserDrawn);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -2710,24 +2692,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<SlideLayoutExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideLayout>(deep);
@@ -2839,6 +2803,23 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<SlideMasterExtensionList>();
             builder.AddElement<SlideMaster>()
 .AddAttribute(0, "preserve", a => a.Preserve);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new CompositeParticle(ParticleType.Group, 1, 1)
+                {
+                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutIdList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TextStyles), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -2945,26 +2926,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             set => SetElement(value);
         }
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
-            new CompositeParticle(ParticleType.Group, 1, 1)
-            {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutIdList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TextStyles), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideMaster>(deep);
 
@@ -3055,6 +3016,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<ColorMap>();
             builder.AddChild<HeaderFooter>();
             builder.AddChild<HandoutMasterExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new CompositeParticle(ParticleType.Group, 1, 1)
+                {
+                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -3108,22 +3082,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<HandoutMasterExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
-            new CompositeParticle(ParticleType.Group, 1, 1)
-            {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HandoutMaster>(deep);
@@ -3217,6 +3175,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<HeaderFooter>();
             builder.AddChild<NotesStyle>();
             builder.AddChild<NotesMasterExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new CompositeParticle(ParticleType.Group, 1, 1)
+                {
+                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -3283,23 +3255,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<NotesMasterExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
-            new CompositeParticle(ParticleType.Group, 1, 1)
-            {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesStyle), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesMaster>(deep);
@@ -3412,6 +3367,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<NotesSlide>()
 .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
 .AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
         }
 
         /// <summary>
@@ -3452,21 +3419,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesSlide>(deep);
@@ -3595,6 +3547,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -3609,13 +3565,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideSyncProperties>(deep);
@@ -3701,14 +3650,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "tagLst");
             builder.AddChild<Tag>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Tag), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Tag), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TagList>(deep);
@@ -3834,6 +3780,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "showComments", a => a.ShowComments);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NormalViewProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideViewProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesTextViewProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SorterViewProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesViewProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GridSpacing), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -3939,20 +3896,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NormalViewProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideViewProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesTextViewProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SorterViewProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesViewProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GridSpacing), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ViewProperties>(deep);
@@ -4078,6 +4021,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify), 0, 1, version: FileFormatVersions.Office2010)
+            };
         }
 
         /// <summary>
@@ -4124,15 +4073,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify), 0, 1, version: FileFormatVersions.Office2010)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContentPart>(deep);
@@ -4307,6 +4247,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Sound>();
             builder.AddElement<StartSoundAction>()
 .AddAttribute(0, "loop", a => a.Loop);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Sound), 1, 1)
+            };
         }
 
         /// <summary>
@@ -4321,13 +4265,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<Sound>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Sound), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartSoundAction>(deep);
@@ -4485,6 +4422,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ShapeTarget>();
             builder.AddChild<InkTarget>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget>();
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideTarget), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SoundTarget), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeTarget), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.InkTarget), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget), 1, 1, version: FileFormatVersions.Office2010)
+            };
         }
 
         /// <summary>
@@ -4551,17 +4496,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideTarget), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SoundTarget), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeTarget), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.InkTarget), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget), 1, 1, version: FileFormatVersions.Office2010)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TargetElement>(deep);
@@ -4696,16 +4630,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cond");
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Condition>(deep);
@@ -4761,16 +4692,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "endSync");
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndSync>(deep);
@@ -4957,6 +4885,10 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "par");
             builder.AddChild<CommonTimeNode>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1)
+            };
         }
 
         /// <summary>
@@ -4971,13 +4903,6 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             get => GetElement<CommonTimeNode>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ParallelTimeNode>(deep);
@@ -5076,6 +5001,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PreviousConditionList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NextConditionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -5116,15 +5047,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<NextConditionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PreviousConditionList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NextConditionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SequenceTimeNode>(deep);
@@ -5179,6 +5101,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "excl");
             builder.AddChild<CommonTimeNode>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1)
+            };
         }
 
         /// <summary>
@@ -5193,13 +5119,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<CommonTimeNode>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExclusiveTimeNode>(deep);
@@ -5336,6 +5255,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAnimateValueList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -5363,14 +5287,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             get => GetElement<TimeAnimateValueList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAnimateValueList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Animate>(deep);
@@ -5460,6 +5376,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ByColor), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FromColor), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToColor), 0, 1)
+            };
         }
 
         /// <summary>
@@ -5513,16 +5436,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ToColor>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ByColor), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FromColor), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToColor), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateColor>(deep);
@@ -5616,6 +5529,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "filter", a => a.Filter)
 .AddAttribute(0, "prLst", a => a.PropertyList);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Progress), 0, 1)
+            };
         }
 
         /// <summary>
@@ -5643,14 +5561,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<Progress>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Progress), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateEffect>(deep);
@@ -5793,6 +5703,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ByPosition), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FromPosition), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToPosition), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RotationCenter), 0, 1)
+            };
         }
 
         /// <summary>
@@ -5865,17 +5783,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ByPosition), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FromPosition), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToPosition), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RotationCenter), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateMotion>(deep);
@@ -5982,6 +5889,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1)
+            };
         }
 
         /// <summary>
@@ -6004,13 +5915,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateRotation>(deep);
@@ -6101,6 +6005,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ByPosition), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FromPosition), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToPosition), 0, 1)
+            };
         }
 
         /// <summary>
@@ -6154,16 +6065,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             get => GetElement<ToPosition>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ByPosition), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FromPosition), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToPosition), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateScale>(deep);
@@ -6244,6 +6145,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "cmd", a => a.CommandName);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1)
+            };
         }
 
         /// <summary>
@@ -6258,13 +6163,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Command>(deep);
@@ -6321,6 +6219,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "set");
             builder.AddChild<CommonBehavior>();
             builder.AddChild<ToVariantValue>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToVariantValue), 0, 1)
+            };
         }
 
         /// <summary>
@@ -6348,14 +6251,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ToVariantValue>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToVariantValue), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SetBehavior>(deep);
@@ -6422,6 +6317,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<CommonMediaNode>();
             builder.AddElement<Audio>()
 .AddAttribute(0, "isNarration", a => a.IsNarration);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonMediaNode), 1, 1)
+            };
         }
 
         /// <summary>
@@ -6436,13 +6335,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<CommonMediaNode>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonMediaNode), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Audio>(deep);
@@ -6509,6 +6401,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<CommonMediaNode>();
             builder.AddElement<Video>()
 .AddAttribute(0, "fullScrn", a => a.FullScreen);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonMediaNode), 1, 1)
+            };
         }
 
         /// <summary>
@@ -6523,13 +6419,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<CommonMediaNode>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonMediaNode), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Video>(deep);
@@ -6890,6 +6779,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StartConditionList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EndConditionList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EndSync), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Iterate), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ChildTimeNodeList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SubTimeNodeList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -6976,18 +6874,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StartConditionList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EndConditionList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EndSync), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Iterate), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ChildTimeNodeList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SubTimeNodeList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommonTimeNode>(deep);
     }
@@ -7040,14 +6926,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "prevCondLst");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreviousConditionList>(deep);
@@ -7101,14 +6984,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "nextCondLst");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NextConditionList>(deep);
@@ -7162,14 +7042,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "stCondLst");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartConditionList>(deep);
@@ -7223,14 +7100,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "endCondLst");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndConditionList>(deep);
@@ -7410,14 +7284,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "attrNameLst");
             builder.AddChild<AttributeName>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AttributeName), 1, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AttributeName), 1, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AttributeNameList>(deep);
@@ -7632,25 +7503,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "clrVal");
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Group, 1, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle(ParticleType.Group, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                    }
                 }
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorValue>(deep);
@@ -7709,25 +7577,22 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "penClr");
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Group, 1, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle(ParticleType.Group, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                    }
                 }
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PenColor>(deep);
@@ -7951,6 +7816,10 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
 });
 })
 .AddAttribute(0, "fmla", a => a.Fomula);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.VariantValue), 0, 1)
+            };
         }
 
         /// <summary>
@@ -7965,13 +7834,6 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             get => GetElement<VariantValue>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.VariantValue), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimeAnimateValue>(deep);
@@ -8270,6 +8132,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AttributeNameList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -8310,15 +8178,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<AttributeNameList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AttributeNameList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommonBehavior>(deep);
@@ -8373,6 +8232,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "progress");
             builder.AddChild<FloatVariantValue>();
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1)
+            };
         }
 
         /// <summary>
@@ -8387,13 +8250,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<FloatVariantValue>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Progress>(deep);
@@ -8451,18 +8307,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "to");
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.IntegerVariantValue), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StringVariantValue), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorValue), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.IntegerVariantValue), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StringVariantValue), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorValue), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToVariantValue>(deep);
@@ -8520,18 +8373,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "val");
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.IntegerVariantValue), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StringVariantValue), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorValue), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.IntegerVariantValue), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StringVariantValue), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorValue), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<VariantValue>(deep);
@@ -8760,6 +8610,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(0, "mute", a => a.Mute)
 .AddAttribute(0, "numSld", a => a.SlideCount)
 .AddAttribute(0, "showWhenStopped", a => a.ShowWhenStopped);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1)
+            };
         }
 
         /// <summary>
@@ -8787,14 +8642,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             get => GetElement<TargetElement>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommonMediaNode>(deep);
@@ -8849,6 +8696,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "tnLst");
             builder.AddChild<ParallelTimeNode>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1)
+            };
         }
 
         /// <summary>
@@ -8863,13 +8714,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             get => GetElement<ParallelTimeNode>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimeNodeList>(deep);
@@ -8936,6 +8780,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.AddChild<TimeNodeList>();
             builder.AddElement<Template>()
 .AddAttribute(0, "lvl", a => a.Level);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 1, 1)
+            };
         }
 
         /// <summary>
@@ -8957,13 +8805,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Template>(deep);
@@ -9018,14 +8859,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "tmplLst");
             builder.AddChild<Template>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Template), 0, 9)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Template), 0, 9)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemplateList>(deep);
@@ -9082,6 +8920,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             builder.SetSchema(24, "bldSub");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BuildDiagram>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BuildChart>();
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BuildDiagram), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BuildChart), 1, 1)
+            };
         }
 
         /// <summary>
@@ -9109,14 +8952,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             get => GetElement<DocumentFormat.OpenXml.Drawing.BuildChart>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BuildDiagram), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BuildChart), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildSubElement>(deep);
@@ -9295,6 +9130,10 @@ union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.
 union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
 });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TemplateList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -9315,13 +9154,6 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TemplateList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildParagraph>(deep);
@@ -9608,6 +9440,11 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (Fil
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "uiExpand", a => a.UiExpand);
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildAsOne), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildSubElement), 1, 1)
+            };
         }
 
         /// <summary>
@@ -9642,14 +9479,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildAsOne), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildSubElement), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildGraphics>(deep);
@@ -9710,17 +9539,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<BuildDiagram>();
             builder.AddChild<BuildOleChart>();
             builder.AddChild<BuildGraphics>();
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildParagraph), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildDiagram), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildOleChart), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildGraphics), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildParagraph), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildDiagram), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildOleChart), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildGraphics), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildList>(deep);
@@ -9787,20 +9613,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Extension>();
             builder.AddElement<ExtensionListWithModification>()
 .AddAttribute(0, "mod", a => a.Modify);
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Group, 0, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle(ParticleType.Group, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                    }
                 }
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionListWithModification>(deep);
@@ -9857,6 +9680,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(24, "by");
             builder.AddChild<RgbColor>();
             builder.AddChild<HslColor>();
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RgbColor), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HslColor), 1, 1)
+            };
         }
 
         /// <summary>
@@ -9884,14 +9712,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<HslColor>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RgbColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HslColor), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ByColor>(deep);
@@ -9950,19 +9770,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "from");
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1, version: FileFormatVersions.Office2010)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1, version: FileFormatVersions.Office2010)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FromColor>(deep);
@@ -10021,19 +9838,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "to");
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1, version: FileFormatVersions.Office2010)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1, version: FileFormatVersions.Office2010)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToColor>(deep);
@@ -10430,6 +10244,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -10452,13 +10270,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentAuthor>(deep);
@@ -10557,6 +10368,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Position), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Text), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -10597,15 +10414,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<CommentExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Position), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Text), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comment>(deep);
@@ -10660,20 +10468,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<Extension>();
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Group, 0, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle(ParticleType.Group, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                    }
                 }
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionList>(deep);
@@ -10809,6 +10614,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 0, 1)
+            };
         }
 
         /// <summary>
@@ -10836,14 +10646,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
             get => GetElement<Picture>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Control>(deep);
@@ -10931,6 +10733,10 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -10952,13 +10758,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideId>(deep);
@@ -11045,6 +10844,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2147483648L) });
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -11066,13 +10869,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideMasterId>(deep);
@@ -11145,6 +10941,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -11165,13 +10965,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesMasterId>(deep);
@@ -11244,6 +11037,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -11264,13 +11061,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HandoutMasterId>(deep);
@@ -11539,6 +11329,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<BoldFont>();
             builder.AddChild<ItalicFont>();
             builder.AddChild<BoldItalicFont>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Font), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RegularFont), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BoldFont), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ItalicFont), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BoldItalicFont), 0, 1)
+            };
         }
 
         /// <summary>
@@ -11606,17 +11404,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             set => SetElement(value);
         }
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Font), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RegularFont), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BoldFont), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ItalicFont), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BoldItalicFont), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbeddedFont>(deep);
     }
@@ -11670,14 +11457,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sldLst");
             builder.AddChild<SlideListEntry>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideListEntry), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideListEntry), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideList>(deep);
@@ -11763,6 +11547,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideList), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -11790,14 +11579,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideList), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomShow>(deep);
@@ -11918,6 +11699,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)
 .AddAttribute(0, "title", a => a.Title);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -11958,15 +11745,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingProperties>(deep);
@@ -12035,6 +11813,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<NonVisualShapeDrawingProperties>()
 .AddAttribute(0, "txBox", a => a.TextBox);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -12062,14 +11845,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualShapeDrawingProperties>(deep);
@@ -12161,6 +11936,23 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
 .AddAttribute(0, "isPhoto", a => a.IsPhoto)
 .AddAttribute(0, "userDrawn", a => a.UserDrawn);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape), 0, 1),
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromFile), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VideoFromFile), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile), 1, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -12175,26 +11967,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<PlaceholderShape>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape), 0, 1),
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromFile), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VideoFromFile), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile), 1, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationNonVisualDrawingProperties>(deep);
@@ -12253,6 +12025,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualShapeDrawingProperties>();
             builder.AddChild<ApplicationNonVisualDrawingProperties>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
+            };
         }
 
         /// <summary>
@@ -12293,15 +12071,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualShapeProperties>(deep);
@@ -12399,6 +12168,42 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -12413,45 +12218,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
-                }
-            },
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeProperties>(deep);
@@ -12512,6 +12278,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1, 1)
+            };
         }
 
         /// <summary>
@@ -12565,16 +12338,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeStyle>(deep);
@@ -12633,6 +12396,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+            };
         }
 
         /// <summary>
@@ -12660,15 +12429,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBody>(deep);
@@ -12729,6 +12489,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.StartConnection), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EndConnection), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -12782,16 +12549,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.StartConnection), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EndConnection), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualConnectorShapeDrawingProperties>(deep);
@@ -12850,6 +12607,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualConnectorShapeDrawingProperties>();
             builder.AddChild<ApplicationNonVisualDrawingProperties>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
+            };
         }
 
         /// <summary>
@@ -12890,15 +12653,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualConnectionShapeProperties>(deep);
@@ -12967,6 +12721,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
 .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -12994,14 +12753,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualPictureDrawingProperties>(deep);
@@ -13060,6 +12811,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualPictureDrawingProperties>();
             builder.AddChild<ApplicationNonVisualDrawingProperties>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
+            };
         }
 
         /// <summary>
@@ -13100,15 +12857,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualPictureProperties>(deep);
@@ -13192,6 +12940,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<BlipFill>()
 .AddAttribute(0, "dpi", a => a.Dpi)
 .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0, 1),
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tile), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1, 1)
+                    }
+                }
+            };
         }
 
         /// <summary>
@@ -13219,22 +12980,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0, 1),
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tile), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1, 1)
-                }
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipFill>(deep);
@@ -13291,6 +13036,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "cNvGraphicFramePr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -13318,14 +13068,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualGraphicFrameDrawingProperties>(deep);
@@ -13384,6 +13126,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualGraphicFrameDrawingProperties>();
             builder.AddChild<ApplicationNonVisualDrawingProperties>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
+            };
         }
 
         /// <summary>
@@ -13424,15 +13172,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualGraphicFrameProperties>(deep);
@@ -13523,6 +13262,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "flipH", a => a.HorizontalFlip)
 .AddAttribute(0, "flipV", a => a.VerticalFlip);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+            };
         }
 
         /// <summary>
@@ -13550,14 +13294,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Transform>(deep);
@@ -13614,6 +13350,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "cNvGrpSpPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -13641,14 +13382,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualGroupShapeDrawingProperties>(deep);
@@ -13712,24 +13445,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "titleStyle");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TitleStyle>(deep);
@@ -13793,24 +13523,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "bodyStyle");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BodyStyle>(deep);
@@ -13874,24 +13601,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "otherStyle");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OtherStyle>(deep);
@@ -13955,24 +13679,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "defaultTextStyle");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTextStyle>(deep);
@@ -14036,24 +13757,21 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "notesStyle");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesStyle>(deep);
@@ -14354,6 +14072,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2147483648L) });
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -14375,13 +14097,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideLayoutId>(deep);
@@ -14456,6 +14171,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<CommonSlideDataExtensionList>();
             builder.AddElement<CommonSlideData>()
 .AddAttribute(0, "name", a => a.Name);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Background), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeTree), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ControlList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -14522,17 +14245,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<CommonSlideDataExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Background), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeTree), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ControlList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommonSlideData>(deep);
@@ -14743,6 +14455,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(24, "scale");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ScaleX>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ScaleY>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ScaleX), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ScaleY), 1, 1)
+            };
         }
 
         /// <summary>
@@ -14770,14 +14487,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DocumentFormat.OpenXml.Drawing.ScaleY>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ScaleX), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ScaleY), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScaleFactor>(deep);
@@ -14945,6 +14654,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Origin>();
             builder.AddElement<CommonViewProperties>()
 .AddAttribute(0, "varScale", a => a.VariableScale);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ScaleFactor), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Origin), 1, 1)
+            };
         }
 
         /// <summary>
@@ -14972,14 +14686,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<Origin>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ScaleFactor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Origin), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommonViewProperties>(deep);
@@ -15087,14 +14793,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sldLst");
             builder.AddChild<OutlineViewSlideListEntry>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OutlineViewSlideList>(deep);
@@ -15199,14 +14902,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "guideLst");
             builder.AddChild<Guide>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Guide), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Guide), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GuideList>(deep);
@@ -15297,6 +14997,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "snapToGrid", a => a.SnapToGrid)
 .AddAttribute(0, "snapToObjects", a => a.SnapToObjects)
 .AddAttribute(0, "showGuides", a => a.ShowGuides);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GuideList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -15324,14 +15029,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<GuideList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GuideList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommonSlideViewProperties>(deep);
@@ -15452,6 +15149,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "preferSingleView", a => a.PreferSingleView);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RestoredLeft), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RestoredTop), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -15492,15 +15195,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RestoredLeft), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RestoredTop), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NormalViewProperties>(deep);
@@ -15557,6 +15251,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "slideViewPr");
             builder.AddChild<CommonSlideViewProperties>();
             builder.AddChild<ExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -15584,14 +15283,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideViewProperties>(deep);
@@ -15650,6 +15341,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<CommonViewProperties>();
             builder.AddChild<OutlineViewSlideList>();
             builder.AddChild<ExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewSlideList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -15690,15 +15387,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewSlideList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OutlineViewProperties>(deep);
@@ -15755,6 +15443,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "notesTextViewPr");
             builder.AddChild<CommonViewProperties>();
             builder.AddChild<ExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -15782,14 +15475,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesTextViewProperties>(deep);
@@ -15858,6 +15543,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<ExtensionList>();
             builder.AddElement<SorterViewProperties>()
 .AddAttribute(0, "showFormatting", a => a.ShowFormatting);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -15885,14 +15575,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SorterViewProperties>(deep);
@@ -15949,6 +15631,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "notesViewPr");
             builder.AddChild<CommonSlideViewProperties>();
             builder.AddChild<ExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -15976,14 +15663,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesViewProperties>(deep);
@@ -16155,16 +15834,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList), 1, 1, version: FileFormatVersions.Office2010),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList), 1, 1, version: FileFormatVersions.Office2010),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideExtension>(deep);
@@ -16235,15 +15911,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId), 1, 1, version: FileFormatVersions.Office2010),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId), 1, 1, version: FileFormatVersions.Office2010),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommonSlideDataExtension>(deep);
@@ -16318,17 +15991,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls), 1, 1, version: FileFormatVersions.Office2010),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls), 1, 1, version: FileFormatVersions.Office2010),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowPropertiesExtension>(deep);
@@ -16391,6 +16061,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<ShapeProperties>();
             builder.AddChild<ShapeStyle>();
             builder.AddChild<ExtensionListWithModification>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BlipFill), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
         }
 
         /// <summary>
@@ -16457,17 +16135,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BlipFill), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeStyle), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Picture>(deep);
@@ -16537,6 +16204,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -16551,13 +16222,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleObjectEmbed>(deep);
@@ -16624,6 +16288,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<ExtensionList>();
             builder.AddElement<OleObjectLink>()
 .AddAttribute(0, "updateAutomatic", a => a.AutoUpdate);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -16638,13 +16306,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleObjectLink>(deep);
@@ -16842,6 +16503,55 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormat
 aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Office2010) });
 aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2013) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BlindsTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CheckerTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CircleTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.DissolveTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CombTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CoverTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CutTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.DiamondTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FadeTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NewsflashTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlusTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PullTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PushTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RandomTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RandomBarTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SplitTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StripsTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WedgeTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WheelTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WipeTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ZoomTransition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlashTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.HoneycombTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DoorsTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WindowTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlythroughTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.GalleryTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ConveyorTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.RevealTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition), 1, 1, version: FileFormatVersions.Office2013)
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SoundAction), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -16849,58 +16559,6 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Choice, 0, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BlindsTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CheckerTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CircleTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.DissolveTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CombTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CoverTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CutTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.DiamondTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FadeTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NewsflashTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlusTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PullTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PushTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RandomTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RandomBarTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SplitTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StripsTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WedgeTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WheelTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WipeTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ZoomTransition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlashTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.HoneycombTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DoorsTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WindowTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlythroughTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.GalleryTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ConveyorTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.RevealTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition), 1, 1, version: FileFormatVersions.Office2013)
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SoundAction), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Transition>(deep);
@@ -16959,6 +16617,12 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
             builder.AddChild<TimeNodeList>();
             builder.AddChild<BuildList>();
             builder.AddChild<ExtensionListWithModification>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
         }
 
         /// <summary>
@@ -16999,15 +16663,6 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
             get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildList), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Timing>(deep);
@@ -17062,14 +16717,11 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<SlideExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideExtensionList>(deep);
@@ -17141,6 +16793,17 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new CompositeParticle(ParticleType.Group, 1, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BackgroundProperties), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BackgroundStyleReference), 1, 1)
+                    }
+                }
+            };
         }
 
         /// <summary>
@@ -17168,20 +16831,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<BackgroundStyleReference>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Group, 1, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BackgroundProperties), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BackgroundStyleReference), 1, 1)
-                }
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Background>(deep);
@@ -17243,25 +16892,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "spTree");
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShapeProperties), 1, 1),
-            new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Shape), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShape), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicFrame), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ConnectionShape), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShapeProperties), 1, 1),
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Shape), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShape), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicFrame), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ConnectionShape), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeTree>(deep);
@@ -17323,25 +16969,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "grpSp");
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShapeProperties), 1, 1),
-            new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Shape), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShape), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicFrame), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ConnectionShape), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShapeProperties), 1, 1),
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Shape), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShape), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicFrame), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ConnectionShape), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupShape>(deep);
@@ -17491,15 +17134,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "custDataLst");
             builder.AddChild<CustomerData>();
             builder.AddChild<CustomerDataTags>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerData), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataTags), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerData), 0, 0),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataTags), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomerDataList>(deep);
@@ -17554,14 +17194,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "controls");
             builder.AddChild<Control>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Control), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Control), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlList>(deep);
@@ -17616,14 +17253,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<CommonSlideDataExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommonSlideDataExtensionList>(deep);
@@ -17682,6 +17316,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualGroupShapeDrawingProperties>();
             builder.AddChild<ApplicationNonVisualDrawingProperties>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
+            };
         }
 
         /// <summary>
@@ -17722,15 +17362,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualGroupShapeProperties>(deep);
@@ -17820,6 +17451,32 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -17834,35 +17491,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
-                }
-            },
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupShapeProperties>(deep);
@@ -17937,6 +17565,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<ExtensionListWithModification>();
             builder.AddElement<Shape>()
 .AddAttribute(0, "useBgFill", a => a.UseBackgroundFill);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TextBody), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
         }
 
         /// <summary>
@@ -18004,17 +17640,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             set => SetElement(value);
         }
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeStyle), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TextBody), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
     }
@@ -18074,6 +17699,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<Transform>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddChild<ExtensionListWithModification>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transform), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
         }
 
         /// <summary>
@@ -18127,16 +17759,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transform), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GraphicFrame>(deep);
@@ -18197,6 +17819,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<ShapeProperties>();
             builder.AddChild<ShapeStyle>();
             builder.AddChild<ExtensionListWithModification>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
         }
 
         /// <summary>
@@ -18251,16 +17880,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             set => SetElement(value);
         }
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeProperties), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeStyle), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectionShape>(deep);
     }
@@ -18314,14 +17933,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<ShowPropertiesExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowPropertiesExtensionList>(deep);
@@ -18402,6 +18018,14 @@ aBuilder.AddValidator(new StringValidator() { Version = (FileFormatVersions.Offi
 aBuilder.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2010) });
 aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (FileFormatVersions.Office2013) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BackgroundAnimation), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SubShape), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OleChartElement), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TextElement), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicElement), 1, 1)
+            };
         }
 
         /// <summary>
@@ -18468,17 +18092,6 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (Fil
             get => GetElement<GraphicElement>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BackgroundAnimation), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SubShape), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OleChartElement), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TextElement), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicElement), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeTarget>(deep);
@@ -18633,15 +18246,12 @@ aBuilder.AddValidator<UInt32Value>(new NumberValidator() { InitialVersion = (Fil
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo), 1, 1, version: FileFormatVersions.Office2013),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo), 1, 1, version: FileFormatVersions.Office2013),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentAuthorExtension>(deep);
@@ -18712,15 +18322,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo), 1, 1, version: FileFormatVersions.Office2013),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo), 1, 1, version: FileFormatVersions.Office2013),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentExtension>(deep);
@@ -18791,15 +18398,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideLayoutExtension>(deep);
@@ -18870,15 +18474,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideMasterExtension>(deep);
@@ -18949,15 +18550,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HandoutMasterExtension>(deep);
@@ -19028,15 +18626,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesMasterExtension>(deep);
@@ -19156,6 +18751,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "idx", a => a.Index)
 .AddAttribute(0, "hasCustomPrompt", a => a.HasCustomPrompt);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
         }
 
         /// <summary>
@@ -19170,13 +18769,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlaceholderShape>(deep);
@@ -19231,14 +18823,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<ApplicationNonVisualDrawingPropertiesExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationNonVisualDrawingPropertiesExtensionList>(deep);
@@ -19311,16 +18900,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Media), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId), 1, 1, version: FileFormatVersions.Office2010),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Media), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId), 1, 1, version: FileFormatVersions.Office2010),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationNonVisualDrawingPropertiesExtension>(deep);
@@ -19403,6 +18989,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "backwards", a => a.Backwards);
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAbsolute), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimePercentage), 1, 1)
+            };
         }
 
         /// <summary>
@@ -19430,14 +19021,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<TimePercentage>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAbsolute), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimePercentage), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Iterate>(deep);
@@ -19503,26 +19086,23 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "childTnLst");
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SequenceTimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Animate), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateColor), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateEffect), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateMotion), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateRotation), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateScale), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Command), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SetBehavior), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Audio), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Video), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SequenceTimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Animate), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateEffect), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateMotion), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateRotation), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateScale), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Command), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SetBehavior), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Audio), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Video), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChildTimeNodeList>(deep);
@@ -19588,26 +19168,23 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "subTnLst");
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SequenceTimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Animate), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateColor), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateEffect), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateMotion), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateRotation), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateScale), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Command), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SetBehavior), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Audio), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Video), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SequenceTimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Animate), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateColor), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateEffect), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateMotion), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateRotation), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateScale), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Command), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SetBehavior), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Audio), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Video), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubTimeNodeList>(deep);
@@ -19737,14 +19314,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "tavLst");
             builder.AddChild<TimeAnimateValue>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAnimateValue), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAnimateValue), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimeAnimateValueList>(deep);
@@ -19944,14 +19518,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<CommentAuthorExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentAuthorExtensionList>(deep);
@@ -20006,14 +19577,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<CommentExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentExtensionList>(deep);
@@ -20068,14 +19636,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sldMasterIdLst");
             builder.AddChild<SlideMasterId>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterId), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterId), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideMasterIdList>(deep);
@@ -20130,6 +19695,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "notesMasterIdLst");
             builder.AddChild<NotesMasterId>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterId), 0, 1)
+            };
         }
 
         /// <summary>
@@ -20144,13 +19713,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<NotesMasterId>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterId), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesMasterIdList>(deep);
@@ -20205,6 +19767,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "handoutMasterIdLst");
             builder.AddChild<HandoutMasterId>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterId), 0, 1)
+            };
         }
 
         /// <summary>
@@ -20219,13 +19785,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<HandoutMasterId>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterId), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HandoutMasterIdList>(deep);
@@ -20280,14 +19839,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sldIdLst");
             builder.AddChild<SlideId>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideId), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideId), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideIdList>(deep);
@@ -20411,14 +19967,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "embeddedFontLst");
             builder.AddChild<EmbeddedFont>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EmbeddedFont), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EmbeddedFont), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbeddedFontList>(deep);
@@ -20473,14 +20026,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "custShowLst");
             builder.AddChild<CustomShow>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShow), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShow), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomShowList>(deep);
@@ -20586,6 +20136,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -20600,13 +20154,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhotoAlbum>(deep);
@@ -20975,14 +20522,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<PresentationExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationExtensionList>(deep);
@@ -21059,18 +20603,15 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList), 1, 1, version: FileFormatVersions.Office2013),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationExtension>(deep);
@@ -21174,23 +20715,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Group, 1, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle(ParticleType.Group, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideAll), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideRange), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShowReference), 1, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideAll), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideRange), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShowReference), 1, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HtmlPublishProperties>(deep);
@@ -21351,6 +20889,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -21365,13 +20907,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebProperties>(deep);
@@ -21488,6 +21023,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "hiddenSlides", a => a.HiddenSlides)
 .AddAttribute(0, "scaleToFitPaper", a => a.ScaleToFitPaper)
 .AddAttribute(0, "frameSlides", a => a.FrameSlides);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -21502,13 +21041,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintingProperties>(deep);
@@ -21622,33 +21154,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "showNarration", a => a.ShowNarration)
 .AddAttribute(0, "showAnimation", a => a.ShowAnimation)
 .AddAttribute(0, "useTimings", a => a.UseTimings);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            {
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresenterSlideMode), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BrowseSlideMode), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.KioskSlideMode), 1, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideAll), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideRange), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShowReference), 1, 1)
+                    }
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PenColor), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
-        {
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresenterSlideMode), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BrowseSlideMode), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.KioskSlideMode), 1, 1)
-                }
-            },
-            new CompositeParticle(ParticleType.Group, 0, 1)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideAll), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideRange), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShowReference), 1, 1)
-                }
-            },
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PenColor), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowProperties>(deep);
@@ -21713,37 +21242,34 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1, requireFilter: true)
+            {
+                new CompositeParticle(ParticleType.Group, 0, 10, version: FileFormatVersions.Office2007)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Group, 0, 0, version: FileFormatVersions.Office2010)
+                {
+                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                    }
+                }
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1, requireFilter: true)
-        {
-            new CompositeParticle(ParticleType.Group, 0, 10, version: FileFormatVersions.Office2007)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
-                }
-            },
-            new CompositeParticle(ParticleType.Group, 0, 0, version: FileFormatVersions.Office2010)
-            {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
-                }
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorMostRecentlyUsed>(deep);
@@ -21798,14 +21324,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<PresentationPropertiesExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationPropertiesExtensionList>(deep);
@@ -21882,18 +21405,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.TextMath), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased), 1, 1, version: FileFormatVersions.Office2010),
+                new AnyParticle(0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi), 1, 1, version: FileFormatVersions.Office2010),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.TextMath), 1, 1, version: FileFormatVersions.Office2013),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased), 1, 1, version: FileFormatVersions.Office2010),
-            new AnyParticle(0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationPropertiesExtension>(deep);
@@ -21993,6 +21513,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "hdr", a => a.Header)
 .AddAttribute(0, "ftr", a => a.Footer)
 .AddAttribute(0, "dt", a => a.DateTime);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+            };
         }
 
         /// <summary>
@@ -22007,13 +21531,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionListWithModification>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeaderFooter>(deep);
@@ -22068,14 +21585,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<SlideLayoutExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideLayoutExtensionList>(deep);
@@ -22130,14 +21644,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sldLayoutIdLst");
             builder.AddChild<SlideLayoutId>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutId), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutId), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideLayoutIdList>(deep);
@@ -22198,6 +21709,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<BodyStyle>();
             builder.AddChild<OtherStyle>();
             builder.AddChild<ExtensionList>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TitleStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BodyStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OtherStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+            };
         }
 
         /// <summary>
@@ -22252,16 +21770,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             set => SetElement(value);
         }
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TitleStyle), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BodyStyle), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OtherStyle), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextStyles>(deep);
     }
@@ -22315,14 +21823,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<SlideMasterExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideMasterExtensionList>(deep);
@@ -22377,14 +21882,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<HandoutMasterExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HandoutMasterExtensionList>(deep);
@@ -22439,14 +21941,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "extLst");
             builder.AddChild<NotesMasterExtension>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterExtension), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterExtension), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesMasterExtensionList>(deep);
@@ -22554,6 +22053,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "txEl");
             builder.AddChild<CharRange>();
             builder.AddChild<ParagraphIndexRange>();
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CharRange), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParagraphIndexRange), 1, 1)
+            };
         }
 
         /// <summary>
@@ -22581,14 +22085,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ParagraphIndexRange>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CharRange), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParagraphIndexRange), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextElement>(deep);
@@ -22645,6 +22141,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "graphicEl");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagram>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Chart>();
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagram), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Chart), 1, 1)
+            };
         }
 
         /// <summary>
@@ -22672,14 +22173,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<DocumentFormat.OpenXml.Drawing.Chart>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagram), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Chart), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GraphicElement>(deep);
@@ -23284,6 +22777,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "sndAc");
             builder.AddChild<StartSoundAction>();
             builder.AddChild<EndSoundAction>();
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StartSoundAction), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EndSoundAction), 1, 1)
+            };
         }
 
         /// <summary>
@@ -23311,14 +22809,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<EndSoundAction>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StartSoundAction), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EndSoundAction), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SoundAction>(deep);

@@ -174,14 +174,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 .AddAttribute(41, "contentTypeDescription", a => a.ContentTypeDescription)
 .AddAttribute(41, "contentTypeScope", a => a.ContentTypeScope)
 .AddAttribute(41, "versionID", a => a.VersionID);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new AnyParticle(XsdAny.Any, 1, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new AnyParticle(XsdAny.Any, 1, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContentTypeSchema>(deep);

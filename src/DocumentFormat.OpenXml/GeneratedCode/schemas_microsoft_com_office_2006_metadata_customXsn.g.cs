@@ -67,6 +67,13 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             builder.AddChild<CachedView>();
             builder.AddChild<OpenByDefault>();
             builder.AddChild<Scope>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.CachedView), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.Scope), 1, 1)
+            };
         }
 
         /// <summary>
@@ -120,16 +127,6 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             get => GetElement<Scope>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.CachedView), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.Scope), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXsn>(deep);

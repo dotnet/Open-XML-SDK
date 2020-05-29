@@ -192,7 +192,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                         if (version.AtLeast(element.InitialVersion))
                         {
-                            var constraint = element.ParticleConstraint?.Build(version);
+                            var constraint = element.Metadata.Particle.Particle?.Build(version);
 
                             if (constraint != null)
                             {

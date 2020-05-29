@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
             ColorTransformCategories categories = new ColorTransformCategories();
             var expected = categories;
-            var particleConstraint = categories.ParticleConstraint.Build(Version);
+            var particleConstraint = categories.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Stack.Push(element: categories);
 
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Tests
             Divs divs = new Divs();
             OpenXmlElement errorChild;
 
-            var particleConstraint = divs.ParticleConstraint.Build(Version);
+            var particleConstraint = divs.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Stack.Push(element: divs);
             var expected = divs;
@@ -241,7 +241,7 @@ namespace DocumentFormat.OpenXml.Tests
             Ruby ruby = new Ruby();
             OpenXmlElement errorChild;
 
-            var particleConstraint = ruby.ParticleConstraint.Build(Version);
+            var particleConstraint = ruby.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Stack.Push(element: ruby);
             var expected = ruby;
@@ -366,7 +366,7 @@ namespace DocumentFormat.OpenXml.Tests
             //  </xsd:sequence>
             //</xsd:complexType>
             DropDownListFormField ddList = new DropDownListFormField();
-            var particleConstraint = ddList.ParticleConstraint.Build(Version);
+            var particleConstraint = ddList.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
 
             validationContext.Stack.Push(element: ddList);

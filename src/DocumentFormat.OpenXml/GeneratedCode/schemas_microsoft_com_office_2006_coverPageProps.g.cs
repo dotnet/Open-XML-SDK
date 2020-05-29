@@ -71,6 +71,15 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             builder.AddChild<CompanyPhoneNumber>();
             builder.AddChild<CompanyFaxNumber>();
             builder.AddChild<CompanyEmailAddress>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress), 1, 1)
+            };
         }
 
         /// <summary>
@@ -150,18 +159,6 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             get => GetElement<CompanyEmailAddress>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CoverPageProperties>(deep);

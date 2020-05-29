@@ -122,14 +122,11 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
   aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new AnyParticle(XsdAny.Other, 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new AnyParticle(XsdAny.Other, 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Info>(deep);
@@ -244,15 +241,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(44, "time-ref-uri", a => a.TimeReference)
 .AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Arc), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Node), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Arc), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Node), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Lattice>(deep);
@@ -724,6 +718,17 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(44, "dialog-turn", a => a.DialogTurn)
 .AddAttribute(44, "no-input", a => a.NoInput)
 .AddAttribute(44, "uninterpreted", a => a.Uninterpreted);
+            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Lattice), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Literal), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode), 0, 1)
+                }
+            };
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -732,20 +737,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
-        {
-            new CompositeParticle(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Lattice), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Literal), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode), 0, 1)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Interpretation>(deep);
@@ -1165,6 +1156,18 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
 .AddAttribute(44, "model-ref", a => a.ModelRef)
 .AddAttribute(44, "dialog-turn", a => a.DialogTurn);
+            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                }
+            };
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1172,21 +1175,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
-        {
-            new CompositeParticle(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OneOf>(deep);
@@ -1597,23 +1585,20 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
 .AddAttribute(44, "model-ref", a => a.ModelRef)
 .AddAttribute(44, "dialog-turn", a => a.DialogTurn);
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
-        {
-            new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.GroupInfo), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.GroupInfo), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                }
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Group>(deep);
@@ -2022,22 +2007,19 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
 .AddAttribute(44, "model-ref", a => a.ModelRef)
 .AddAttribute(44, "dialog-turn", a => a.DialogTurn);
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
-        {
-            new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                }
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sequence>(deep);
@@ -2100,14 +2082,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new AnyParticle(XsdAny.Other, 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new AnyParticle(XsdAny.Other, 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupInfo>(deep);
@@ -2168,17 +2147,14 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<OneOf>();
             builder.AddChild<Sequence>();
             builder.AddChild<Group>();
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Derivation>(deep);
@@ -2311,14 +2287,11 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
  aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new AnyParticle(XsdAny.Other, 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new AnyParticle(XsdAny.Other, 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Model>(deep);
@@ -2389,14 +2362,11 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPoint), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPoint), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndPointInfo>(deep);
@@ -2600,14 +2570,11 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
 .AddAttribute(44, "media-type", a => a.MediaType)
 .AddAttribute(44, "medium", a => a.Medium)
 .AddAttribute(44, "mode", a => a.Mode);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new AnyParticle(XsdAny.Other, 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new AnyParticle(XsdAny.Other, 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndPoint>(deep);
@@ -2712,14 +2679,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Node>(deep);
@@ -2951,14 +2915,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(44, "medium", a => a.Medium)
 .AddAttribute(44, "mode", a => a.Mode)
 .AddAttribute(44, "source", a => a.Source);
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Arc>(deep);
@@ -3044,25 +3005,22 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
-        {
-            new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Derivation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Grammar), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Model), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPointInfo), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+                new CompositeParticle(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Derivation), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Grammar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Model), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPointInfo), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                }
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Emma>(deep);

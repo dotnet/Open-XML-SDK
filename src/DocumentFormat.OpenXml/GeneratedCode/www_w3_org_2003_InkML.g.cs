@@ -89,20 +89,17 @@ namespace DocumentFormat.OpenXml.InkML
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Definitions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Context), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Definitions), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Context), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Ink>(deep);
@@ -398,26 +395,23 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, 0),
-                new CompositeParticle(ParticleType.Choice, 0, 1)
+                new CompositeParticle(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Table), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Matrix), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, 0),
+                    new CompositeParticle(ParticleType.Choice, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Table), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Matrix), 1, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
                 }
-            },
-            new CompositeParticle(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Mapping>(deep);
@@ -609,6 +603,10 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsV
 union.AddValidator(StringValidator.Instance);
 });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
+            };
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -616,13 +614,6 @@ union.AddValidator(StringValidator.Instance);
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Channel>(deep);
@@ -677,14 +668,11 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "intermittentChannels");
             builder.AddChild<Channel>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IntermittentChannels>(deep);
@@ -866,15 +854,12 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<IntermittentChannels>();
             builder.AddElement<TraceFormat>()
 .AddAttribute(1, "id", a => a.Id);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.IntermittentChannels), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.IntermittentChannels), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TraceFormat>(deep);
@@ -1195,14 +1180,11 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channelProperties");
             builder.AddChild<ChannelProperty>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChannelProperties>(deep);
@@ -1354,6 +1336,10 @@ union.AddValidator(StringValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Emma), 0, 1)
+            };
         }
 
         /// <summary>
@@ -1368,13 +1354,6 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Emma), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnnotationXml>(deep);
@@ -1500,6 +1479,11 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsV
 union.AddValidator(StringValidator.Instance);
 });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0)
+            };
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
@@ -1507,14 +1491,6 @@ union.AddValidator(StringValidator.Instance);
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BrushProperty>(deep);
@@ -1598,6 +1574,10 @@ union.AddValidator(StringValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1)
+            };
         }
 
         /// <summary>
@@ -1612,13 +1592,6 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             get => GetElement<TraceFormat>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Canvas>(deep);
@@ -1699,14 +1672,11 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddElement<CanvasTransform>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "invertible", a => a.Invertible);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 1, 2)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 1, 2)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CanvasTransform>(deep);
@@ -1847,6 +1817,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "description", a => a.Description);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SampleRate), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Latency), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ActiveArea), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SourceProperty), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperties), 0, 1)
+            };
         }
 
         /// <summary>
@@ -1900,18 +1879,6 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             get => GetElement<ActiveArea>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SampleRate), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Latency), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ActiveArea), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SourceProperty), 0, 0),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperties), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InkSource>(deep);
@@ -1999,16 +1966,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.BrushProperty), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.BrushProperty), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Brush>(deep);
@@ -2339,17 +2303,14 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TraceGroup>(deep);
@@ -2473,16 +2434,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "from", a => a.From)
 .AddAttribute(0, "to", a => a.To);
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TraceView>(deep);
@@ -2660,6 +2618,15 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1)
+            };
         }
 
         /// <summary>
@@ -2740,18 +2707,6 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             set => SetElement(value);
         }
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Context>(deep);
     }
@@ -2825,24 +2780,21 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<TraceFormat>();
             builder.AddChild<TraceGroup>();
             builder.AddChild<TraceView>();
+            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Context), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Context), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Definitions>(deep);

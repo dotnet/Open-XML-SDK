@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         public ParticleConstraint GetConstraint(OpenXmlElement element)
         {
-            var constraint = element.ParticleConstraint;
+            var constraint = element.Metadata.Particle.Particle;
 
             if (constraint is null)
             {

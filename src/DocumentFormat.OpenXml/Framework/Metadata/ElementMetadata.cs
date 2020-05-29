@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -24,12 +25,14 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             ReadOnlyArray<IOpenXmlSimpleTypeValidator> validators,
             FileFormatVersions version,
             SchemaAttrAttribute schema,
+            CompiledParticle particle,
             Lazy<ElementLookup> lookup)
         {
             Attributes = attributes;
             Validators = validators;
             Availability = version;
             Schema = schema;
+            Particle = particle;
             _children = lookup;
         }
 
@@ -44,6 +47,8 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         public ReadOnlyArray<IOpenXmlSimpleTypeValidator> Validators { get; }
 
         public FileFormatVersions Availability { get; }
+
+        public CompiledParticle Particle { get; }
 
         public SchemaAttrAttribute Schema { get; }
 
@@ -95,6 +100,8 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             public void SetSchema(string ns, string localName)
                 => SetSchema(NamespaceIdMap.GetNamespaceId(ns), localName);
 
+            public CompositeParticle Particle { get; set; }
+
             public void SetSchema(byte nsId, string localName)
             {
                 _nsId = nsId;
@@ -129,7 +136,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 var schema = _localName is null ? null : new SchemaAttrAttribute(_nsId, _localName);
                 var lookup = _children is null ? _lazy : new Lazy<ElementLookup>(() => new ElementLookup(_children.Select(c => c.Build())), true);
 
-                return new ElementMetadata(BuildAttributes(), GetValidators(), Availability, schema, lookup);
+                return new ElementMetadata(BuildAttributes(), GetValidators(), Availability, schema, Particle.Compile(), lookup);
             }
 
             private AttributeMetadata[] BuildAttributes()

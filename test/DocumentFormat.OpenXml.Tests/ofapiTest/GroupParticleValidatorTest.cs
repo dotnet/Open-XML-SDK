@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Header header = new Header();
             var expected = header;
-            var particleConstraint = header.ParticleConstraint.Build(Version);
+            var particleConstraint = header.Metadata.Particle.Particle.Build(Version);
 
             // the complex type contains a <xsd:group .../> as child
             var target = particleConstraint.ParticleValidator as GroupParticleValidator;
@@ -147,7 +147,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             SectionProperties sectPr = new SectionProperties();
             var expected = sectPr;
-            var particleConstraint = sectPr.ParticleConstraint.Build(Version);
+            var particleConstraint = sectPr.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Stack.Push(element: sectPr);
 
