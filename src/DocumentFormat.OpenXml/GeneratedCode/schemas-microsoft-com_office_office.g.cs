@@ -206,6 +206,20 @@ namespace DocumentFormat.OpenXml.Vml.Office
 .AddAttribute(27, "allowincell", a => a.AllowInCell)
 .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
 .AddAttribute(27, "insetmode", a => a.InsetMode);
+            builder.Particle = new CompositeParticle(ParticleType.All, 0, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColorMenu), 0, 1)
+            };
         }
 
         /// <summary>
@@ -351,23 +365,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
             set => SetElement(value);
         }
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.All, 0, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColorMenu), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeDefaults>(deep);
     }
@@ -440,6 +437,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
             builder.AddChild<Rules>();
             builder.AddElement<ShapeLayout>()
 .AddAttribute(26, "ext", a => a.Extension);
+            builder.Particle = new CompositeParticle(ParticleType.All, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeIdMap), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RegroupTable), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rules), 0, 1)
+            };
         }
 
         /// <summary>
@@ -480,15 +483,6 @@ namespace DocumentFormat.OpenXml.Vml.Office
             get => GetElement<Rules>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.All, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeIdMap), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RegroupTable), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rules), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeLayout>(deep);
@@ -896,6 +890,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "dgmfontsize", a => a.FontSize)
 .AddAttribute(0, "constrainbounds", a => a.ConstrainBounds)
 .AddAttribute(0, "dgmbasetextscale", a => a.BaseTextScale);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RelationTable), 0, 1)
+            };
         }
 
         /// <summary>
@@ -910,13 +908,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             get => GetElement<RelationTable>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RelationTable), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Diagram>(deep);
@@ -1876,6 +1867,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "ObjectID", a => a.ObjectId)
 .AddAttribute(19, "id", a => a.Id)
 .AddAttribute(0, "UpdateMode", a => a.UpdateMode);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LinkType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LockedField), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FieldCodes), 0, 1)
+            };
         }
 
         /// <summary>
@@ -1923,15 +1920,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LinkType), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LockedField), 0, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FieldCodes), 0, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleObject>(deep);
@@ -2648,14 +2636,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Entry>();
             builder.AddElement<RegroupTable>()
 .AddAttribute(26, "ext", a => a.Extension);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Entry), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Entry), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RegroupTable>(deep);
@@ -2725,14 +2710,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Rule>();
             builder.AddElement<Rules>()
 .AddAttribute(26, "ext", a => a.Extension);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rule), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rule), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rules>(deep);
@@ -2885,14 +2867,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Proxy), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Proxy), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rule>(deep);
@@ -2962,14 +2941,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<Relation>();
             builder.AddElement<RelationTable>()
 .AddAttribute(26, "ext", a => a.Extension);
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Relation), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Relation), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelationTable>(deep);

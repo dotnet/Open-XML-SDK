@@ -65,6 +65,12 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             builder.AddChild<ShowOnOpen>();
             builder.AddChild<DefaultPropertyEditorNamespace>();
             builder.AddChild<CustomPropertyEditor>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor), 1, 0)
+            };
         }
 
         /// <summary>
@@ -92,15 +98,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             get => GetElement<DefaultPropertyEditorNamespace>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor), 1, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomPropertyEditors>(deep);
@@ -308,6 +305,11 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             builder.SetSchema(37, "customPropertyEditor");
             builder.AddChild<PropertyEditorNamespace>();
             builder.AddChild<XsnFileLocation>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation), 1, 1)
+            };
         }
 
         /// <summary>
@@ -335,14 +337,6 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             get => GetElement<XsnFileLocation>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomPropertyEditor>(deep);

@@ -758,15 +758,11 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal virtual CompiledParticle CompiledParticle { get; }
-
-        internal sealed override ParticleConstraint ParticleConstraint => CompiledParticle?.Particle;
-
         private protected TElement GetElement<TElement>()
-            where TElement : OpenXmlElement => CompiledParticle.Get<TElement>(this);
+            where TElement : OpenXmlElement => Metadata.Particle.Get<TElement>(this);
 
         private protected void SetElement<TElement>(TElement value)
-            where TElement : OpenXmlElement => CompiledParticle.Set(this, value);
+            where TElement : OpenXmlElement => Metadata.Particle.Set(this, value);
 
         private void AddANode(OpenXmlElement node)
         {

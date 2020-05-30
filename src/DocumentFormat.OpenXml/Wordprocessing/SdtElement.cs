@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Validation.Schema;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
@@ -11,17 +11,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// </summary>
     public abstract class SdtElement : OpenXmlCompositeElement
     {
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
-        {
-            new ElementParticle(typeof(SdtProperties), 0, 1),
-            new ElementParticle(typeof(SdtEndCharProperties), 0, 1),
-        }.Compile();
-
         /// <summary>
         /// Initializes a new instance of the SdtElement class.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
-        protected SdtElement(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        protected SdtElement(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
+            : base(childElements)
         {
         }
 
@@ -48,8 +43,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </summary>
         public SdtProperties SdtProperties
         {
-            get => _constraint.Get<SdtProperties>(this);
-            set => _constraint.Set(this, value);
+            get => GetElement<SdtProperties>();
+            set => SetElement(value);
         }
 
         /// <summary>
@@ -57,8 +52,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </summary>
         public SdtEndCharProperties SdtEndCharProperties
         {
-            get => _constraint.Get<SdtEndCharProperties>(this);
-            set => _constraint.Set(this, value);
+            get => GetElement<SdtEndCharProperties>();
+            set => SetElement(value);
         }
     }
 }

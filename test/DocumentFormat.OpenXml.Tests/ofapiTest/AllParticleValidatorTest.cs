@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
 
             Properties properties = new Properties();
-            var particleConstraint = properties.ParticleConstraint.Build(Version);
+            var particleConstraint = properties.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as AllParticleValidator;
             validationContext.Stack.Push(element: properties);
             var expected = properties;
@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
 
             ShapeLayout shapeLayout = new ShapeLayout();
-            var particleConstraint = shapeLayout.ParticleConstraint.Build(Version);
+            var particleConstraint = shapeLayout.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as AllParticleValidator;
             validationContext.Stack.Push(element: shapeLayout);
             var expected = shapeLayout;

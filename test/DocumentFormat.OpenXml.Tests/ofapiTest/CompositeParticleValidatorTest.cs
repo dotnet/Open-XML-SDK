@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
 
             ParagraphProperties pPr = new ParagraphProperties();
-            var particleConstraint = pPr.ParticleConstraint.Build(Version);
+            var particleConstraint = pPr.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as ParticleValidator;
             validationContext.Stack.Push(element: pPr);
             var expected = pPr;
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
 
             Body body = new Body();
-            var particleConstraint = body.ParticleConstraint.Build(Version);
+            var particleConstraint = body.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as ParticleValidator;
             validationContext.Stack.Push(element: body);
             var expected = body;
@@ -361,7 +361,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
 
             Drawing.Blip blip = new Drawing.Blip();
-            var particleConstraint = blip.ParticleConstraint.Build(Version);
+            var particleConstraint = blip.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as ParticleValidator;
             validationContext.Stack.Push(element: blip);
             var expected = blip;

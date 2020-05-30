@@ -231,8 +231,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal virtual OpenXmlElementContext RootElementContext => Parent?.RootElementContext;
 
-        internal virtual ParticleConstraint ParticleConstraint { get; }
-
         internal virtual ISemanticConstraint[] SemanticConstraints => Cached.Array<ISemanticConstraint>();
 
         /// <summary>

@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(!(theElement is AlternateContentChoice));
                 Debug.Assert(!(theElement is AlternateContentFallback));
 
-                if (theElement.ParticleConstraint != null)
+                if (theElement.Metadata.Particle != null)
                 {
                     // composite element
                     ValidateCompositeComplexType(validationContext);

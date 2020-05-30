@@ -104,14 +104,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
 });
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sources>(deep);
@@ -170,16 +167,13 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             builder.AddChild<Last>();
             builder.AddChild<First>();
             builder.AddChild<Middle>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Middle), 0, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, 0),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Middle), 0, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Person>(deep);
@@ -2286,14 +2280,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "NameList");
             builder.AddChild<Person>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NameList>(deep);
@@ -2347,14 +2338,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Artist");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Artist>(deep);
@@ -2408,14 +2396,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "BookAuthor");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookAuthor>(deep);
@@ -2469,14 +2454,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Compiler");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Compiler>(deep);
@@ -2530,14 +2512,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Composer");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Composer>(deep);
@@ -2591,14 +2570,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Conductor");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Conductor>(deep);
@@ -2652,14 +2628,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Counsel");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Counsel>(deep);
@@ -2713,14 +2686,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Director");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Director>(deep);
@@ -2774,14 +2744,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Editor");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Editor>(deep);
@@ -2835,14 +2802,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewee");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Interviewee>(deep);
@@ -2896,14 +2860,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewer");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Interviewer>(deep);
@@ -2957,14 +2918,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Inventor");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Inventor>(deep);
@@ -3018,14 +2976,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "ProducerName");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProducerName>(deep);
@@ -3079,14 +3034,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Translator");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Translator>(deep);
@@ -3140,14 +3092,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Writer");
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+            };
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Writer>(deep);
@@ -3266,18 +3215,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Choice, 0, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+                new CompositeParticle(ParticleType.Choice, 0, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
+                }
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Author>(deep);
@@ -3332,18 +3278,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Performer");
-        }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Choice, 0, 1)
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
+                new CompositeParticle(ParticleType.Choice, 0, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
+                }
+            };
+        }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Performer>(deep);
@@ -3507,6 +3450,28 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             builder.AddChild<ProducerName>();
             builder.AddChild<Translator>();
             builder.AddChild<Writer>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookAuthor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Compiler), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Composer), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Conductor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Counsel), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Director), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Editor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewee), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewer), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Inventor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Performer), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProducerName), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Translator), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Writer), 1, 1)
+                }
+            };
         }
 
         /// <summary>
@@ -3717,31 +3682,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             set => SetElement(value);
         }
 
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Choice, 0, 0)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookAuthor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Compiler), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Composer), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Conductor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Counsel), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Director), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Editor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewee), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewer), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Inventor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Performer), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProducerName), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Translator), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Writer), 1, 1)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AuthorList>(deep);
     }
@@ -3935,6 +3875,64 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             builder.AddChild<Volume>();
             builder.AddChild<Year>();
             builder.AddChild<YearAccessed>();
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AuthorList), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Broadcaster), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BroadcastTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CaseNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ChapterNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.City), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Comments), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ConferenceName), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CountryRegion), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Court), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Day), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.DayAccessed), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Department), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Distributor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Edition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.GuidString), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Institution), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Issue), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.JournalName), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.LcId), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Medium), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Month), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.MonthAccessed), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NumberVolumes), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Pages), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProductionCompany), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PublicationTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Publisher), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.RecordingNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ReferenceOrder), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Reporter), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.SourceType), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ShortTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StandardNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StateProvince), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Station), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Tag), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Theater), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ThesisType), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Title), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentType), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.UrlString), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Version), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Volume), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Year), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.YearAccessed), 1, 1)
+                }
+            };
         }
 
         /// <summary>
@@ -4612,67 +4610,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             get => GetElement<YearAccessed>();
             set => SetElement(value);
         }
-
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
-        {
-            new CompositeParticle(ParticleType.Choice, 0, 0)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AuthorList), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookTitle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Broadcaster), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BroadcastTitle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CaseNumber), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ChapterNumber), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.City), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Comments), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ConferenceName), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CountryRegion), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Court), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Day), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.DayAccessed), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Department), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Distributor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Edition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.GuidString), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Institution), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Issue), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.JournalName), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.LcId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Medium), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Month), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.MonthAccessed), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NumberVolumes), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Pages), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentNumber), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProductionCompany), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PublicationTitle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Publisher), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.RecordingNumber), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ReferenceOrder), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Reporter), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.SourceType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ShortTitle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StandardNumber), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StateProvince), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Station), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Tag), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Theater), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ThesisType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Title), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.UrlString), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Version), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Volume), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Year), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.YearAccessed), 1, 1)
-            }
-        }.Compile();
-
-        internal override CompiledParticle CompiledParticle => _constraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Source>(deep);

@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
 
             TextBox textBox = new TextBox();
-            var particleConstraint = textBox.ParticleConstraint.Build(FileFormatVersions.Office2007);
+            var particleConstraint = textBox.Metadata.Particle.Particle.Build(FileFormatVersions.Office2007);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Stack.Push(element: textBox);
             var expected = textBox;

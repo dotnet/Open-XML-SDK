@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
 
             RevisionRowColumn rRowColumn = new RevisionRowColumn();
-            var particleConstraint = rRowColumn.ParticleConstraint.Build(FileFormatVersions.Office2007);
+            var particleConstraint = rRowColumn.Metadata.Particle.Particle.Build(FileFormatVersions.Office2007);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Stack.Push(element: rRowColumn);
             var expected = rRowColumn;
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
 
             FormFieldData ffData = new FormFieldData();
-            var particleConstraint = ffData.ParticleConstraint.Build(Version);
+            var particleConstraint = ffData.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Stack.Push(element: ffData);
             var expected = ffData;
@@ -237,7 +237,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
 
             BuildSubElement bldSub = new BuildSubElement();
-            var particleConstraint = bldSub.ParticleConstraint.Build(Version);
+            var particleConstraint = bldSub.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Stack.Push(element: bldSub);
             var expected = bldSub;
@@ -308,7 +308,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlElement errorChild;
 
             FieldChar fldChar = new FieldChar();
-            var particleConstraint = fldChar.ParticleConstraint.Build(Version);
+            var particleConstraint = fldChar.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Stack.Push(element: fldChar);
             var expected = fldChar;

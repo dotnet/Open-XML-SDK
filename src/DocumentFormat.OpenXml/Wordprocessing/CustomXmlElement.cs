@@ -12,11 +12,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// </summary>
     public abstract class CustomXmlElement : OpenXmlCompositeElement
     {
-        private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
-        {
-            new ElementParticle(typeof(CustomXmlProperties), 0, 1),
-        }.Compile();
-
         /// <summary>
         /// Initializes a new instance of the CustomXmlElement class with the specified child elements.
         /// </summary>
@@ -78,8 +73,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </remark>
         public CustomXmlProperties CustomXmlProperties
         {
-            get => _constraint.Get<CustomXmlProperties>(this);
-            set => _constraint.Set(this, value);
+            get => GetElement<CustomXmlProperties>();
+            set => SetElement(value);
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -92,6 +87,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 {
                     a.AddValidator(new StringValidator { IsNcName = true });
                 });
+
+            builder.Particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            {
+                new ElementParticle(typeof(CustomXmlProperties), 0, 1),
+            };
         }
     }
 }
