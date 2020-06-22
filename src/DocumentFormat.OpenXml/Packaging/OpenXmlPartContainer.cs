@@ -1777,11 +1777,8 @@ namespace DocumentFormat.OpenXml.Packaging
             var liveParts = new Dictionary<OpenXmlPart, bool>();
             var processedParts = new Dictionary<OpenXmlPart, bool>();
 
-            var child = GetPartById(id);
-
-            if (child == null)
+            if(!TryGetPartById(id, out var child) || child == null)
             {
-                // TODO: should we throw? or just return?
                 return false;
             }
 
