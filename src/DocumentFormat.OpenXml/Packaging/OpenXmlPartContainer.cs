@@ -1781,7 +1781,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 return false;
             }
-            
+
             child.FindAllReachableParts(processedParts);
 
             // remove from the collection
