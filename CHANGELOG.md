@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Ensure .NET Framework builds pass PEVerify (#744)
+- DeletePart no longer throws an exception if there isn't a match for the identifier given (#740)
 
 ## Version 2.11.0 - 2020-05-21
 ### Added

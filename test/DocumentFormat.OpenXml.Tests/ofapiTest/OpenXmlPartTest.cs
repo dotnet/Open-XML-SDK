@@ -254,5 +254,20 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
         }
+
+        [Fact]
+        public void DeleteInvalidPartIdSafely()
+        {
+            using (Stream stream = new MemoryStream())
+            {
+                using (var testDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                {
+                    var testId = "invalidId";
+                    var mainDocPart = testDocument.AddMainDocumentPart();
+                    Assert.False(mainDocPart.TryGetPartById(testId, out _));
+                    Assert.False(mainDocPart.DeletePart(testId));
+                }
+            }
+        }
     }
 }
