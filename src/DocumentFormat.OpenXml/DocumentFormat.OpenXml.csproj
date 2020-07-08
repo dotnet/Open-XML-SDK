@@ -21,6 +21,10 @@
 
   <Choose>
     <When Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' ">
+      <PropertyGroup>
+        <CompileWithPeVerify>true</CompileWithPeVerify>
+      </PropertyGroup>
+      
       <ItemGroup>
         <Reference Include="System" />
         <Reference Include="System.Xml" />
@@ -46,6 +50,10 @@
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'net46' ">
+      <PropertyGroup>
+        <CompileWithPeVerify>true</CompileWithPeVerify>
+      </PropertyGroup>
+
       <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
         <Reference Include="System" />
         <Reference Include="System.Xml" />
@@ -111,5 +119,7 @@
       <LastGenOutput>ValidationResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)\PEVerify.targets" />
 
 </Project>

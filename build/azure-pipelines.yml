@@ -7,6 +7,9 @@ pr:
     include:
     - master
 
+variables:
+  RunPeVerify: true
+
 stages:
   - stage: Build
     jobs:
