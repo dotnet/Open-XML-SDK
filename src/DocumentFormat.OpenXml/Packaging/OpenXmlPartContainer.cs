@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO.Packaging;
 using System.Linq;
@@ -937,6 +938,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <typeparam name="T">The type of the part.</typeparam>
         /// <returns>The number of parts of this type.</returns>
         [Obsolete("Use GetPartsOfType<T>().Count() instead")]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         public int GetPartsCountOfType<T>()
             where T : OpenXmlPart
         {
@@ -1279,6 +1281,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="partCollection">The part collection to be filled in.</param>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="partCollection"/> is null.</exception>
         [Obsolete("Use GetPartsOfType<T> to manually add to a collection")]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         public void GetPartsOfType<T>(ICollection<T> partCollection)
             where T : OpenXmlPart
         {

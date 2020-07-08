@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -67,6 +68,7 @@ namespace DocumentFormat.OpenXml
         /// Gets the namespace definitions used in <see cref="XPath"/>. Use <see cref="Namespaces"/> instead
         /// </summary>
         [Obsolete("Use the Namespaces property instead")]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         public IList<string> NamespacesDefinitions { get; }
 
         /// <summary>

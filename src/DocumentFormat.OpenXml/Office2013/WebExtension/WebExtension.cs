@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.ComponentModel;
 
 namespace DocumentFormat.OpenXml.Office2013.WebExtension
 {
@@ -12,6 +13,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// until the next major version change. The <see cref="Frozen"/> property should be used instead.
         /// </summary>
         [Obsolete("Please use the property 'Frozen' as this property will be removed in a future version")]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         public BooleanValue Fronzen
         {
             get => Frozen;
