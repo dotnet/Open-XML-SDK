@@ -265,7 +265,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var testId = "invalidId";
                     var mainDocPart = testDocument.AddMainDocumentPart();
                     Assert.False(mainDocPart.TryGetPartById(testId, out _));
-                    mainDocPart.DeletePart(testId);
+                    Assert.False(mainDocPart.DeletePart(testId));
                 }
             }
         }
