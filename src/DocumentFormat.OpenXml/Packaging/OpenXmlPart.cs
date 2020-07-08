@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Packaging;
@@ -397,6 +398,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="schemas">The set of XML schemas to be used.</param>
         /// <param name="validationEventHandler">ValidationEventHandler for validation events.</param>
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         public void ValidateXml(XmlSchemaSet schemas, ValidationEventHandler validationEventHandler)
         {
             ThrowIfObjectDisposed();
@@ -441,6 +443,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="schemaFile">The XML schema to be used.</param>
         /// <param name="validationEventHandler">ValidationEventHandler for validation events.</param>
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         public void ValidateXml(string schemaFile, ValidationEventHandler validationEventHandler)
         {
             ThrowIfObjectDisposed();

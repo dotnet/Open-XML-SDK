@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.ComponentModel;
 
 namespace DocumentFormat.OpenXml
 {
@@ -10,6 +11,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
     [Obsolete("This attribute is no longer used and will be removed in a later release")]
+    [EditorBrowsable(EditorBrowsableState.Never)]
     public sealed class ChildElementInfoAttribute : Attribute
     {
         /// <summary>
