@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="$(CompileWithPeVerify)">
-    <!-- <Features>$(Features);peverify-compat</Features> -->
+    <Features>$(Features);peverify-compat</Features>
   </PropertyGroup>
 
   <Target Name="Run PEVerify" AfterTargets="Build" Condition="$(CompileWithPeVerify) AND $(RunPeVerify)">
