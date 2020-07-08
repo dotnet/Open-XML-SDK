@@ -7,6 +7,10 @@ pr:
     include:
     - master
 
+variables:
+  RunPeVerify: true
+  PeVerifyPath: 'C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\PEVerify.exe'
+
 stages:
   - stage: Build
     jobs:
