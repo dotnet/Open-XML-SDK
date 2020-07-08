@@ -1,0 +1,22 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- .NET Framework builds should pass PEVerify -->
+    <RunPeVerify Condition=" '$(RunPeVerify)' == '' ">false</RunPeVerify>
+    <CompileWithPeVerify Condition=" '$(CompileWithPeVerify)' == '' ">false</CompileWithPeVerify>
+    <PeVerifyPath Condition=" '$(PeVerifyPath)' == '' ">C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\PEVerify.exe</PeVerifyPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(CompileWithPeVerify)">
+    <Features>$(Features);peverify-compat</Features>
+  </PropertyGroup>
+
+  <Target Name="Run PEVerify" AfterTargets="Build" Condition="$(CompileWithPeVerify) AND $(RunPeVerify)">
+    <ItemGroup>
+        <_OutputFileToVerify Include="@(FileWrites)" Condition="'%(Extension)' == '.dll' AND $([System.Text.RegularExpressions.Regex]::IsMatch('%(FullPath)', '.+\\bin\\.+'))" />
+    </ItemGroup>
+    <Message Text="Running PEVerify" />
+    <Exec Command='"$(PeVerifyPath)" %(_OutputFileToVerify.Identity)' />
+  </Target>
+
+</Project>

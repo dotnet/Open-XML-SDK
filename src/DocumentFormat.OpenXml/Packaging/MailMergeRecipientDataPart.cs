@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootEle = value as DocumentFormat.OpenXml.OpenXmlPartRootElement;
+                _rootEle = value;
             }
         }
 
