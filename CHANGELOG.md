@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## Version 2.11.1 - 2020-07-08
+### Fixed
+- Calling DeletePart threw an exception if there wasn't a match for the identifier given (#740)
+
 ## Version 2.11.0 - 2020-05-21
 ### Added
 - Added `FileFormatVersions.2019` enum (#695)
