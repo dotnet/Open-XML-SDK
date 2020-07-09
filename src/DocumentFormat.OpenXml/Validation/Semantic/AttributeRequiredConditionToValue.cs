@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -10,24 +8,24 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeRequiredConditionToValue : SemanticConstraint
     {
-        private readonly string[] _values;
+        private readonly string _value;
         private readonly byte _requiredAttribute;
         private readonly byte _conditionAttribute;
 
-        public AttributeRequiredConditionToValue(byte requiredAttribute, byte conditionAttribute, params string[] values)
+        public AttributeRequiredConditionToValue(byte requiredAttribute, byte conditionAttribute, string value)
             : base(SemanticValidationLevel.Element)
         {
             _requiredAttribute = requiredAttribute;
             _conditionAttribute = conditionAttribute;
-            _values = values;
+            _value = value;
         }
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
-            var attribute = element.ParsedState.Attributes[_requiredAttribute];
+            var requiredAttribute = element.ParsedState.Attributes[_requiredAttribute];
 
-            if (!attribute.HasValue)
+            if (requiredAttribute.HasValue)
             {
                 return null;
             }
@@ -39,34 +37,19 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            foreach (string value in _values)
+            if (AttributeValueEquals(conditionAttribute.Value, _value, false))
             {
-                if (AttributeValueEquals(conditionAttribute.Value, value, false))
+                return new ValidationErrorInfo()
                 {
-                    string valueString = "'" + _values[0] + "'";
-
-                    if (_values.Length > 1)
-                    {
-                        for (int i = 1; i < _values.Length - 1; i++)
-                        {
-                            valueString += ", '" + _values[i] + "'";
-                        }
-
-                        valueString += " or '" + _values[_values.Length - 1] + "'";
-                    }
-
-                    return new ValidationErrorInfo()
-                    {
-                        Id = "Sem_AttributeRequiredConditionToValue",
-                        ErrorType = ValidationErrorType.Semantic,
-                        Node = element,
-                        Description = SR.Format(
-                            ValidationResources.Sem_AttributeRequiredConditionToValue,
-                            GetAttributeQualifiedName(element, _requiredAttribute),
-                            GetAttributeQualifiedName(element, _conditionAttribute),
-                            valueString),
-                    };
-                }
+                    Id = "Sem_AttributeRequiredConditionToValue",
+                    ErrorType = ValidationErrorType.Semantic,
+                    Node = element,
+                    Description = SR.Format(
+                        ValidationResources.Sem_AttributeRequiredConditionToValue,
+                        GetAttributeQualifiedName(element, _requiredAttribute),
+                        GetAttributeQualifiedName(element, _conditionAttribute),
+                        _value),
+                };
             }
 
             return null;

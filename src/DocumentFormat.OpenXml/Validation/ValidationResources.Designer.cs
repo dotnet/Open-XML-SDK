@@ -521,7 +521,7 @@ namespace DocumentFormat.OpenXml.Validation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attribute &apos;{0}&apos; should be present when the value of attribute &apos;{1}&apos; is {2}..
+        ///   Looks up a localized string similar to Attribute &apos;{0}&apos; should be present when the value of attribute &apos;{1}&apos; is &apos;{2}&apos;..
         /// </summary>
         internal static string Sem_AttributeRequiredConditionToValue {
             get {
