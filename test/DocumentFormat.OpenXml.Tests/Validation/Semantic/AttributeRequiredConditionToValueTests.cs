@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
         [InlineData(RequiredValue, UnexpectedValue)]
         [InlineData(RequiredValue, null)]
         [InlineData(RequiredValue, ExpectedValue)]
-        public void NoErrors(StringValue required, StringValue condition)
+        public void NoErrors(string required, string condition)
         {
             var validator = new OpenXmlValidator();
             var element = new TestElement
