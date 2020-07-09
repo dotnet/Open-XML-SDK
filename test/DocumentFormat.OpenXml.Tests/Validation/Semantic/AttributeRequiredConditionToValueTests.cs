@@ -10,7 +10,6 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
 {
     public class AttributeRequiredConditionToValueTests
     {
-        private const string Empty = "";
         private const string RequiredValue = "requiredValue";
         private const string ExpectedConditionValue = "hello";
         private const string UnexpectedConditionValue = "helloWorld!";
@@ -29,12 +28,12 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
             if (required is string)
             {
                 element.Required = required;
-            };
+            }
 
             if (condition is string)
             {
                 element.Condition = condition;
-            };
+            }
 
             var results = validator.Validate(element);
 
