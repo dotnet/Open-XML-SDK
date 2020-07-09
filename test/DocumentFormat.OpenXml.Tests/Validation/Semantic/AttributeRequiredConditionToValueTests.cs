@@ -10,23 +10,30 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
 {
     public class AttributeRequiredConditionToValueTests
     {
+        private const string Empty = "";
         private const string RequiredValue = "requiredValue";
-        private const string ExpectedValue = "hello";
-        private const string UnexpectedValue = "helloWorld!";
+        private const string ExpectedConditionValue = "hello";
+        private const string UnexpectedConditionValue = "helloWorld!";
 
         [Theory]
         [InlineData(null, null)]
-        [InlineData(null, UnexpectedValue)]
-        [InlineData(RequiredValue, UnexpectedValue)]
+        [InlineData(null, UnexpectedConditionValue)]
+        [InlineData(RequiredValue, UnexpectedConditionValue)]
         [InlineData(RequiredValue, null)]
-        [InlineData(RequiredValue, ExpectedValue)]
+        [InlineData(RequiredValue, ExpectedConditionValue)]
         public void NoErrors(string required, string condition)
         {
             var validator = new OpenXmlValidator();
-            var element = new TestElement
+            var element = new TestElement();
+
+            if (required is string)
             {
-                Required = required,
-                Condition = condition,
+                element.Required = required;
+            };
+
+            if (condition is string)
+            {
+                element.Condition = condition;
             };
 
             var results = validator.Validate(element);
@@ -40,10 +47,13 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
             var validator = new OpenXmlValidator();
             var element = new TestElement
             {
-                Condition = ExpectedValue,
+                Condition = ExpectedConditionValue,
             };
 
             var error = Assert.Single(validator.Validate(element));
+
+            Assert.Equal("Sem_AttributeRequiredConditionToValue", error.Id);
+            Assert.Equal(ValidationErrorType.Semantic, error.ErrorType);
         }
 
         private class TestElement : OpenXmlCompositeElement
@@ -69,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
 
             internal override ISemanticConstraint[] SemanticConstraints { get; } = new[]
             {
-                new AttributeRequiredConditionToValue(0, 1, ExpectedValue),
+                new AttributeRequiredConditionToValue(0, 1, ExpectedConditionValue),
             };
         }
     }
