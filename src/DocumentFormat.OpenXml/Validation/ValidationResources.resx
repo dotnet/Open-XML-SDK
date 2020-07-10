@@ -265,7 +265,7 @@
     <value>Attribute '{0}' and '{1}' cannot be present at the same time. Only one of these attributes '{2}' can be present at a given time.</value>
   </data>
   <data name="Sem_AttributeRequiredConditionToValue" xml:space="preserve">
-    <value>Attribute '{0}' should be present when the value of attribute '{1}' is {2}.</value>
+    <value>Attribute '{0}' should be present when the value of attribute '{1}' is '{2}'.</value>
   </data>
   <data name="Sem_AttributeValueConditionToAnother" xml:space="preserve">
     <value>Attribute '{0}' should have value(s) {1} when attribute '{2}' has value(s) {3}. Current value of attribute '{4}' is '{5}'.</value>

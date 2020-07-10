@@ -198,6 +198,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             var particleConstraint = validationContext.GetParticleConstraint();
 
+            if (particleConstraint is null)
+            {
+                return;
+            }
+
             switch (particleConstraint.ParticleType)
             {
                 case ParticleType.All:
