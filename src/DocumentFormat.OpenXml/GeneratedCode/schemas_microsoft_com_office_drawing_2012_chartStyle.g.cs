@@ -2001,7 +2001,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>smtClean</para>
         /// <para>Represents the following attribute in the schema: smtClean</para>
         /// </summary>
-        public BooleanValue SmtClean
+        public BooleanValue SmartTagClean
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2011,7 +2011,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>smtId</para>
         /// <para>Represents the following attribute in the schema: smtId</para>
         /// </summary>
-        public UInt32Value SmtId
+        public UInt32Value SmartTagId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2089,8 +2089,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 .AddAttribute(0, "noProof", a => a.NoProof)
 .AddAttribute(0, "dirty", a => a.Dirty)
 .AddAttribute(0, "err", a => a.SpellingError)
-.AddAttribute(0, "smtClean", a => a.SmtClean)
-.AddAttribute(0, "smtId", a => a.SmtId)
+.AddAttribute(0, "smtClean", a => a.SmartTagClean)
+.AddAttribute(0, "smtId", a => a.SmartTagId)
 .AddAttribute(0, "bmk", a => a.Bookmark);
             builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
