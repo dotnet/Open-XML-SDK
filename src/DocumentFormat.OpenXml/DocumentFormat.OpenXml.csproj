@@ -7,8 +7,18 @@
     <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
     <NoWarn>$(NoWarn);3003</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>  
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,8 +29,16 @@
     <None Include="**\*.md" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+  </ItemGroup>
+
   <Choose>
     <When Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' ">
+      <PropertyGroup>
+        <CompileWithPeVerify>true</CompileWithPeVerify>
+      </PropertyGroup>
+      
       <ItemGroup>
         <Reference Include="System" />
         <Reference Include="System.Xml" />
@@ -46,6 +64,10 @@
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'net46' ">
+      <PropertyGroup>
+        <CompileWithPeVerify>true</CompileWithPeVerify>
+      </PropertyGroup>
+
       <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
         <Reference Include="System" />
         <Reference Include="System.Xml" />
@@ -111,5 +133,7 @@
       <LastGenOutput>ValidationResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)\PEVerify.targets" />
 
 </Project>

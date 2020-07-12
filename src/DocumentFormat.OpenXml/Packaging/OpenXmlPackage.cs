@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Packaging;
@@ -482,6 +483,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="validationSettings">The OpenXmlPackageValidationSettings for validation events.</param>
         /// <remarks>If validationSettings is null or no EventHandler is set, the default behavior is to throw an OpenXmlPackageException on the validation error. </remarks>
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         public void Validate(OpenXmlPackageValidationSettings validationSettings)
         {
             ThrowIfObjectDisposed();
@@ -515,6 +517,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         internal void Validate(OpenXmlPackageValidationSettings validationSettings, FileFormatVersions fileFormatVersions)
         {
             Debug.Assert(validationSettings != null);

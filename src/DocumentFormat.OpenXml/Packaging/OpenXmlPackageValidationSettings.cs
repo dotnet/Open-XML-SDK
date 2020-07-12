@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.ComponentModel;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -9,6 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Specifies event handlers that will handle OpenXmlPackage validation events and the OpenXmlPackageValidationEventArgs.
     /// </summary>
     [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
+    [EditorBrowsable(EditorBrowsableState.Never)]
     public class OpenXmlPackageValidationSettings
     {
         private EventHandler<OpenXmlPackageValidationEventArgs> valEventHandler;

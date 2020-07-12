@@ -55,6 +55,14 @@ steps:
           }
         ]
 
+  - task: PowerShell@2
+    displayName: 'Remove code sign summary'
+    name: removeSummary
+    inputs:
+      targetType: 'inline'
+      script: |
+        rm $(Pipeline.Workspace)/$(Version)/CodeSignSummary*
+
   - task: ArchiveFiles@2
     inputs:
       rootFolderOrFile: '$(Pipeline.Workspace)/$(Version)' 

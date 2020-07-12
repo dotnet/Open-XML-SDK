@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## Version 2.11.2 - 2020-07-10
+
+### Fixed
+- Fixed broken source link (#749)
+- Ensured compilation is deterministic (#749)
+- Removed extra file in NuGet package (#749)
+
+## Version 2.11.1 - 2020-07-10
+
+### Fixed
+- Ensure .NET Framework builds pass PEVerify (#744)
+- `OpenXmlPartContainer.DeletePart` no longer throws an exception if there isn't a match for the identifier given (#740)
+- Mark obsolete members to not show up with Intellisense (#745)
+- Fixed issue with `AttributeRequiredConditionToValue` semantic constraint where validation could fail on correct input (#746)
+
 ## Version 2.11.0 - 2020-05-21
 ### Added
 - Added `FileFormatVersions.2019` enum (#695)
