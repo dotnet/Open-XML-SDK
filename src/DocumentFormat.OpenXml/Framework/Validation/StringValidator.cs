@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal sealed class StringValidator : VersionedValidator, INameProvider
     {
-        internal static IOpenXmlSimpleTypeValidator Instance { get; } = new StringValidator();
+        internal static IValidator Instance { get; } = new StringValidator();
 
         private static readonly XmlQualifiedName _anyUri = new XmlQualifiedName("anyUri", "http://www.w3.org/2001/XMLSchema");
         private static readonly XmlQualifiedName _token = new XmlQualifiedName("token", "http://www.w3.org/2001/XMLSchema");

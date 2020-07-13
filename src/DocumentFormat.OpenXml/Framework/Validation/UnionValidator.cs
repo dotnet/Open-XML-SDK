@@ -6,11 +6,11 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal class UnionValidator : IOpenXmlSimpleTypeValidator
+    internal class UnionValidator : IValidator
     {
-        private readonly ReadOnlyArray<IOpenXmlSimpleTypeValidator> _others;
+        private readonly ReadOnlyArray<IValidator> _others;
 
-        public UnionValidator(ReadOnlyArray<IOpenXmlSimpleTypeValidator> others, byte id)
+        public UnionValidator(ReadOnlyArray<IValidator> others, byte id)
         {
             _others = others;
             Id = id;
@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public byte Id { get; }
 
-        public IEnumerable<IOpenXmlSimpleTypeValidator> Validators => _others;
+        public IEnumerable<IValidator> Validators => _others;
 
         public void Validate(ValidationContext context)
         {

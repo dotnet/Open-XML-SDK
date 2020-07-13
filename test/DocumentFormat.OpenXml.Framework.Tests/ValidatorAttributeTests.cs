@@ -2,12 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Xml;
 using Xunit;
-
-#pragma warning disable CA1812
 
 namespace DocumentFormat.OpenXml.Framework.Tests
 {
@@ -88,11 +85,6 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                         aa.AddValidator(new StringValidator { IsNcName = true });
                     });
                 });
-        }
-
-        private class CustomValidator : Attribute, IOpenXmlSimpleTypeValidator
-        {
-            public void Validate(ValidationContext context) => throw new NotImplementedException();
         }
 
         private class BaseElement : OpenXmlElement

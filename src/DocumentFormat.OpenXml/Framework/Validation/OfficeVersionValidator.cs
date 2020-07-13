@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal class OfficeVersionValidator : IOpenXmlSimpleTypeValidator
+    internal class OfficeVersionValidator : IValidator
     {
         /// <summary>
         /// Gets the Office version of the available property.

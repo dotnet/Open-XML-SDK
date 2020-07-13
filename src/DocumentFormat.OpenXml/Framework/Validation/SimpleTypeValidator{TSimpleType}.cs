@@ -5,12 +5,12 @@ using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal class SimpleTypeValidator<TSimpleType> : IOpenXmlSimpleTypeValidator
+    internal class SimpleTypeValidator<TSimpleType> : IValidator
         where TSimpleType : OpenXmlSimpleType, new()
     {
-        private readonly IOpenXmlSimpleTypeValidator _other;
+        private readonly IValidator _other;
 
-        public SimpleTypeValidator(IOpenXmlSimpleTypeValidator other)
+        public SimpleTypeValidator(IValidator other)
         {
             _other = other;
         }

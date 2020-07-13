@@ -7,9 +7,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal class ValidatorBuilder
     {
-        private readonly List<IOpenXmlSimpleTypeValidator> _validators = new List<IOpenXmlSimpleTypeValidator>();
+        private readonly List<IValidator> _validators = new List<IValidator>();
 
-        public void AddValidator(IOpenXmlSimpleTypeValidator validator)
+        public void AddValidator(IValidator validator)
         {
             if (validator is RequiredValidator)
             {
@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             }
         }
 
-        public void AddValidator<TSimpleType>(IOpenXmlSimpleTypeValidator validator)
+        public void AddValidator<TSimpleType>(IValidator validator)
             where TSimpleType : OpenXmlSimpleType, new()
         {
             var wrapped = new SimpleTypeValidator<TSimpleType>(validator);
@@ -38,11 +38,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             }
         }
 
-        public void InsertValidator(int index, IOpenXmlSimpleTypeValidator validator)
+        public void InsertValidator(int index, IValidator validator)
         {
             _validators.Insert(index, validator);
         }
 
-        protected IOpenXmlSimpleTypeValidator[] GetValidators() => _validators?.ToArray() ?? Cached.Array<IOpenXmlSimpleTypeValidator>();
+        protected IValidator[] GetValidators() => _validators?.ToArray() ?? Cached.Array<IValidator>();
     }
 }

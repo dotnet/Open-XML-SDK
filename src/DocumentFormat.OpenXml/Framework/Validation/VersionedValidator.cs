@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal abstract class VersionedValidator : IOpenXmlSimpleTypeValidator
+    internal abstract class VersionedValidator : IValidator
     {
         private FileFormatVersions? _version;
         private FileFormatVersions? _initialVersion;

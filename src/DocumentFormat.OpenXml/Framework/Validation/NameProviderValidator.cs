@@ -6,11 +6,11 @@ using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal class NameProviderValidator : IOpenXmlSimpleTypeValidator, INameProvider
+    internal class NameProviderValidator : IValidator, INameProvider
     {
-        private readonly IOpenXmlSimpleTypeValidator _other;
+        private readonly IValidator _other;
 
-        public NameProviderValidator(IOpenXmlSimpleTypeValidator other, XmlQualifiedName qname)
+        public NameProviderValidator(IValidator other, XmlQualifiedName qname)
         {
             _other = other;
             QName = qname;
