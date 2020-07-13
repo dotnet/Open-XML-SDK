@@ -7,9 +7,9 @@ using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal sealed class NumberValidator : VersionedValidator, IOpenXmlSimpleTypeValidator, INameProvider
+    internal sealed class NumberValidator : VersionedValidator, IValidator, INameProvider
     {
-        public static IOpenXmlSimpleTypeValidator Instance { get; } = new NumberValidator();
+        public static IValidator Instance { get; } = new NumberValidator();
 
         private static readonly XmlQualifiedName _positiveQname = new XmlQualifiedName("positiveInteger", "http://www.w3.org/2001/XMLSchema");
         private static readonly XmlQualifiedName _nonNegativeQname = new XmlQualifiedName("nonNegativeInteger", "http://www.w3.org/2001/XMLSchema");

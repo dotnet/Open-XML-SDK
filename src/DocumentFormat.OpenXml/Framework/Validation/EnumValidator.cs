@@ -7,7 +7,7 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal sealed class EnumValidator : VersionedValidator
     {
-        public static IOpenXmlSimpleTypeValidator Instance { get; } = new EnumValidator();
+        public static IValidator Instance { get; } = new EnumValidator();
 
         protected override void ValidateVersion(ValidationContext context)
         {

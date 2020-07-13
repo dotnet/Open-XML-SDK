@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         internal ElementMetadata(
             ReadOnlyArray<AttributeMetadata> attributes,
-            ReadOnlyArray<IOpenXmlSimpleTypeValidator> validators,
+            ReadOnlyArray<IValidator> validators,
             FileFormatVersions version,
             SchemaAttrAttribute schema,
             CompiledParticle particle,
@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public ElementLookup Children => _children?.Value ?? ElementLookup.Empty;
 
-        public ReadOnlyArray<IOpenXmlSimpleTypeValidator> Validators { get; }
+        public ReadOnlyArray<IValidator> Validators { get; }
 
         public FileFormatVersions Availability { get; }
 

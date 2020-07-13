@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Framework
     /// </summary>
     internal sealed class RequiredValidator : VersionedValidator
     {
-        public static IOpenXmlSimpleTypeValidator Instance { get; } = new RequiredValidator();
+        public static IValidator Instance { get; } = new RequiredValidator();
 
         public bool IsRequired { get; set; } = true;
 
