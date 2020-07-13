@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         /// <param name="dateTime">DateTime for cell</param>
         public CellValue(DateTime dateTime)
-            : this(dateTime.ToString("o", CultureInfo.InvariantCulture))
+            : this(ToCellFormat(dateTime))
         {
         }
 
@@ -27,8 +27,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         /// <param name="dateTimeOffset">DateTime for cell</param>
         public CellValue(DateTimeOffset dateTimeOffset)
-            : this(dateTimeOffset.ToString("o", CultureInfo.InvariantCulture))
+            : this(ToCellFormat(dateTimeOffset))
         {
+        }
+
+        private const string DateTimeFormatString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff";
+        private const string DateTimeOffsetFormatString = DateTimeFormatString + "zzz";
+
+        private static string ToCellFormat(DateTime dateTime)
+        {
+            return dateTime.ToString(DateTimeFormatString, CultureInfo.InvariantCulture);
+        }
+
+        private static string ToCellFormat(DateTimeOffset dateTime)
+        {
+            return dateTime.ToString(DateTimeOffsetFormatString, CultureInfo.InvariantCulture);
         }
     }
 }

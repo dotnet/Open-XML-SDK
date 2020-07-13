@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## Version 2.11.3
+### Fixed
+- CellValue limits to three most signficant digits on second fractions to correct issue loading DateTime in Office 2016
+
 ## Version 2.11.2 - 2020-07-10
 
 ### Fixed
