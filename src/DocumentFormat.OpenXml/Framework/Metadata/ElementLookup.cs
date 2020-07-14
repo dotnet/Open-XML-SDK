@@ -36,15 +36,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public bool Contains(byte id, string name)
         {
-            foreach (var child in _data)
-            {
-                if (child.NamespaceId == id && object.Equals(child.Name, name))
-                {
-                    return true;
-                }
-            }
+            var idx = FindIndex(id, name);
 
-            return false;
+            return idx >= 0;
         }
 
         public OpenXmlElement Create(byte id, string name)
@@ -56,7 +50,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so using a sorted
             // list to store them with a binary search improves overall performance.
-            var idx = Array.BinarySearch(_data, new ElementChild(null, id, name), ElementChildNameComparer.Instance);
+            var idx = FindIndex(id, name);
 
             if (idx < 0)
             {
@@ -65,6 +59,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             return _data[idx].Create();
         }
+
+        private int FindIndex(byte id, string name) => Array.BinarySearch(_data, new ElementChild(type: null, id, name),
+            ElementChildNameComparer.Instance);
 
         private static ElementLookup CreatePartLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)
         {
