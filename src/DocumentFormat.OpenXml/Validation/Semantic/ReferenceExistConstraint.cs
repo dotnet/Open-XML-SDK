@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var result = GetReferencedAttributes(context);
 
-            if (result.Item.Contains(attribute.Value.InnerText))
+            if (result.Item != null && result.Item.Contains(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -68,15 +68,17 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         private PartHolder<HashSet<string>> GetReferencedAttributes(ValidationContext context)
         {
-            var referencedAttributes = new HashSet<string>(StringComparer.Ordinal);
             var part = GetReferencedPart(context, _partPath);
 
-            void ElementTraverse(ValidationContext ctx)
+            if (part?.RootElement is null)
             {
-                var element = ctx.Stack.Current.Element;
+                return default;
+            }
 
-                Debug.Assert(element != null);
+            var referencedAttributes = new HashSet<string>(StringComparer.Ordinal);
 
+            foreach (var element in part.RootElement.Descendants())
+            {
                 if (element.GetType() == _element)
                 {
                     var attribute = element.ParsedState.Attributes[_attribute];
@@ -86,16 +88,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     {
                         referencedAttributes.Add(attribute.Value.InnerText);
                     }
-                }
-            }
-
-            if (part != null)
-            {
-                var partContext = new ValidationContext(context);
-
-                using (partContext.Stack.Push(context.Stack.Current.Package, part, part.RootElement))
-                {
-                    ValidationTraverser.ValidatingTraverse(partContext, ElementTraverse, null);
                 }
             }
 
