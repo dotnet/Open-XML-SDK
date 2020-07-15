@@ -8,15 +8,13 @@ namespace DocumentFormat.OpenXml.Validation
 {
     internal class StateManager : IValidationContextEvents
     {
-        private Dictionary<Key, object> _state;
+        private Dictionary<object, object> _state;
 
-        public T Get<T>(Type type, int attributeIdx, Type parent, Func<T> factory)
+        public T Get<T>(object key, Func<T> factory)
         {
-            var key = new Key(type, attributeIdx, parent);
-
             if (_state is null)
             {
-                _state = new Dictionary<Key, object>();
+                _state = new Dictionary<object, object>();
             }
             else if (_state.TryGetValue(key, out var value))
             {
@@ -37,6 +35,13 @@ namespace DocumentFormat.OpenXml.Validation
             return result;
         }
 
+        public T Get<T>(Type type, int attributeIdx, Type parent, Func<T> factory)
+        {
+            var key = new Key(type, attributeIdx, parent);
+
+            return Get(key, factory);
+        }
+
         void IValidationContextEvents.OnPartValidationStarted(ValidationContext context)
         {
             _state = null;
@@ -53,7 +58,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             foreach (var state in _state)
             {
-                if (state.Key.Parent == type && state.Value is IValidationContextEvents events)
+                if (state.Key is Key key && key.Parent == type && state.Value is IValidationContextEvents events)
                 {
                     events.OnElementValidationStarted(context);
                 }
@@ -71,7 +76,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             foreach (var state in _state)
             {
-                if (state.Key.Type == type && state.Value is IValidationContextEvents events)
+                if (state.Key is Key key && key.Type == type && state.Value is IValidationContextEvents events)
                 {
                     events.OnElementValidationFinished(context);
                 }

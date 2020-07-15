@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -44,7 +45,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var result = GetReferencedAttributes(context);
 
-            if (result.Item != null && result.Item.Contains(attribute.Value.InnerText))
+            if (result.Item.Contains(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -66,32 +67,37 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             };
         }
 
-        private PartHolder<HashSet<string>> GetReferencedAttributes(ValidationContext context)
+        private PartHolder<ICollection<string>> GetReferencedAttributes(ValidationContext context)
         {
             var part = GetReferencedPart(context, _partPath);
 
             if (part?.RootElement is null)
             {
-                return default;
+                return new PartHolder<ICollection<string>>(Cached.Array<string>(), part);
             }
 
-            var referencedAttributes = new HashSet<string>(StringComparer.Ordinal);
-
-            foreach (var element in part.RootElement.Descendants())
+            var result = context.State.Get(new { part.Uri, _partPath, _element, _attribute }, () =>
             {
-                if (element.GetType() == _element)
-                {
-                    var attribute = element.ParsedState.Attributes[_attribute];
+                var referencedAttributes = new HashSet<string>(StringComparer.Ordinal);
 
-                    //Attributes whose value is empty string or null don't need to be cached.
-                    if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))
+                foreach (var element in part.RootElement.Descendants())
+                {
+                    if (element.GetType() == _element)
                     {
-                        referencedAttributes.Add(attribute.Value.InnerText);
+                        var attribute = element.ParsedState.Attributes[_attribute];
+
+                        //Attributes whose value is empty string or null don't need to be cached.
+                        if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))
+                        {
+                            referencedAttributes.Add(attribute.Value.InnerText);
+                        }
                     }
                 }
-            }
 
-            return new PartHolder<HashSet<string>>(referencedAttributes, part);
+                return referencedAttributes;
+            });
+
+            return new PartHolder<ICollection<string>>(result, part);
         }
     }
 }

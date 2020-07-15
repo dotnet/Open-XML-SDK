@@ -76,17 +76,22 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return new PartHolder<int>(0, null);
             }
 
-            var count = 0;
-
-            foreach (var element in part.RootElement.Descendants())
+            var result = context.State.Get(new { part.Uri, _refElement, _attribute, _refElementParent }, () =>
             {
-                if (_refElementParent is null || element.Parent.GetType() == _refElementParent)
-                {
-                    count++;
-                }
-            }
+                var count = 0;
 
-            return new PartHolder<int>(count, part);
+                foreach (var element in part.RootElement.Descendants())
+                {
+                    if (_refElementParent is null || element.Parent.GetType() == _refElementParent)
+                    {
+                        count++;
+                    }
+                }
+
+                return count;
+            });
+
+            return new PartHolder<int>(result, part);
         }
     }
 }
