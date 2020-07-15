@@ -34,13 +34,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public IEnumerable<ElementChild> Elements => _data;
 
-        public bool Contains(byte id, string name)
-        {
-            var idx = FindIndex(id, name);
-
-            return idx >= 0;
-        }
-
         public OpenXmlElement Create(byte id, string name)
         {
             if (_data.Length == 0)
