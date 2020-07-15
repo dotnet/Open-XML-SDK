@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Version 2.11.3
 ### Fixed
-- CellValue limits to three most signficant digits on second fractions to correct issue loading DateTime in Office 2016
+- Fixed massive performance bottleneck when IndexReferenceConstraint and ReferenceExistConstraint are involved (#763)
+- Fixed CellValue to only include three most signficant digits on second fractions to correct issue loading dates (#741)
 
 ## Version 2.11.2 - 2020-07-10
 
