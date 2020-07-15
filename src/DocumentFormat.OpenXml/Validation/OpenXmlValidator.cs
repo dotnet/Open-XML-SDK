@@ -2,10 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace DocumentFormat.OpenXml.Validation
 {
@@ -76,6 +75,21 @@ namespace DocumentFormat.OpenXml.Validation
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the "openXmlPackage" parameter is null.</exception>
         public IEnumerable<ValidationErrorInfo> Validate(OpenXmlPackage openXmlPackage)
+            => Validate(openXmlPackage, default);
+
+        /// <summary>
+        /// Validates the specified document.
+        /// </summary>
+        /// <param name="openXmlPackage">The target WordprocessingDocument, SpreadsheetDocument or PresentationDocument.</param>
+        /// <param name="token"></param>
+        /// <returns>A set of validation errors.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when the "openXmlPackage" parameter is null.</exception>
+#if FEATURE_CANCELLATION_TOKEN
+        public
+#else
+        private 
+#endif
+        IEnumerable<ValidationErrorInfo> Validate(OpenXmlPackage openXmlPackage, CancellationToken token = default)
         {
             if (openXmlPackage == null)
             {
@@ -93,7 +107,7 @@ namespace DocumentFormat.OpenXml.Validation
                 throw new InvalidOperationException(exceptionMessage);
             }
 
-            return ValidateCore(openXmlPackage);
+            return ValidateCore(openXmlPackage, token);
         }
 
         /// <summary>
@@ -104,6 +118,22 @@ namespace DocumentFormat.OpenXml.Validation
         /// <exception cref="ArgumentNullException">Thrown when the "openXmlPart" parameter is null.</exception>
         /// <exception cref="InvalidOperationException">Throw when the specified part is not a defined part in the specified FileFormat version.</exception>
         public IEnumerable<ValidationErrorInfo> Validate(OpenXmlPart openXmlPart)
+            => Validate(openXmlPart, default);
+
+        /// <summary>
+        /// Validates the specified content in the OpenXmlPart.
+        /// </summary>
+        /// <param name="openXmlPart">The target OpenXmlPart.</param>
+        /// <param name="token"></param>
+        /// <returns>A set of validation errors.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when the "openXmlPart" parameter is null.</exception>
+        /// <exception cref="InvalidOperationException">Throw when the specified part is not a defined part in the specified FileFormat version.</exception>
+#if FEATURE_CANCELLATION_TOKEN
+        public
+#else
+        private 
+#endif
+        IEnumerable<ValidationErrorInfo> Validate(OpenXmlPart openXmlPart, CancellationToken token = default)
         {
             if (openXmlPart == null)
             {
@@ -124,21 +154,21 @@ namespace DocumentFormat.OpenXml.Validation
 
             FileFormat.ThrowIfNotInVersion(openXmlPart);
 
-            return ValidateCore(openXmlPart);
+            return ValidateCore(openXmlPart, token);
         }
 
-        private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPart part)
+        private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPart part, CancellationToken token)
         {
             var validator = _cache.GetOrCreateDocumentValidator(part.OpenXmlPackage.ApplicationType);
 
-            return validator.Validate(part, _settings);
+            return validator.Validate(part, _settings, token);
         }
 
-        private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPackage package)
+        private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPackage package, CancellationToken token)
         {
             var validator = _cache.GetOrCreateDocumentValidator(package.ApplicationType);
 
-            return validator.Validate(package, _settings);
+            return validator.Validate(package, _settings, token);
         }
 
         /// <summary>
@@ -150,6 +180,23 @@ namespace DocumentFormat.OpenXml.Validation
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the "openXmlElement" is type of OpenXmlUnknownElement, OpenXmlMiscNode, AlternateContent, AlternateContentChoice or AlternateContentFallback.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the "openXmlElement" is not defined in the specified FileFormat.</exception>
         public IEnumerable<ValidationErrorInfo> Validate(OpenXmlElement openXmlElement)
+            => Validate(openXmlElement, default);
+
+        /// <summary>
+        /// Validates the specified element.
+        /// </summary>
+        /// <param name="openXmlElement">The target OpenXmlElement.</param>
+        /// <param name="token"></param>
+        /// <returns>A set of validation errors.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when the "openXmlElement" parameter is null.</exception>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown when the "openXmlElement" is type of OpenXmlUnknownElement, OpenXmlMiscNode, AlternateContent, AlternateContentChoice or AlternateContentFallback.</exception>
+        /// <exception cref="InvalidOperationException">Thrown when the "openXmlElement" is not defined in the specified FileFormat.</exception>
+#if FEATURE_CANCELLATION_TOKEN
+        public
+#else
+        private 
+#endif
+        IEnumerable<ValidationErrorInfo> Validate(OpenXmlElement openXmlElement, CancellationToken token)
         {
             if (openXmlElement == null)
             {
@@ -175,7 +222,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             FileFormat.ThrowIfNotInVersion(openXmlElement);
 
-            var validationContext = new ValidationContext(_settings, _cache);
+            var validationContext = new ValidationContext(_settings, _cache, token);
 
             using (validationContext.Stack.Push(element: openXmlElement))
             {

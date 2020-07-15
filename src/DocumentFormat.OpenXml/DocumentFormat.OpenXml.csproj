@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <Choose>
@@ -59,6 +59,8 @@
       <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
         <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
         <Compile Include="System\IO\StreamCopyExtensions.cs" />
+        <Compile Include="System\ICloneable.cs" />
+        <Compile Include="System\Threading\CancellationToken.cs" />
         <Compile Include="System\Lazy{T}.cs" />
       </ItemGroup>
     </When>

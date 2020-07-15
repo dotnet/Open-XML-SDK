@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 
 namespace DocumentFormat.OpenXml.Validation
 {
@@ -38,10 +39,11 @@ namespace DocumentFormat.OpenXml.Validation
         /// </summary>
         /// <param name="document">The document to be validated.</param>
         /// <param name="settings">The settings to be used during validation.</param>
+        /// <param name="token"></param>
         /// <returns>Return results in ValidationResult.</returns>
-        public List<ValidationErrorInfo> Validate(OpenXmlPackage document, ValidationSettings settings)
+        public List<ValidationErrorInfo> Validate(OpenXmlPackage document, ValidationSettings settings, CancellationToken token)
         {
-            var context = new ValidationContext(settings, _cache);
+            var context = new ValidationContext(settings, _cache, token);
 
             using (context.Stack.Push(document))
             {
@@ -65,10 +67,11 @@ namespace DocumentFormat.OpenXml.Validation
         /// </summary>
         /// <param name="part">The OpenXmlPart to be validated.</param>
         /// <param name="settings">The settings to be used during validation.</param>
+        /// <param name="token"></param>
         /// <returns></returns>
-        public List<ValidationErrorInfo> Validate(OpenXmlPart part, ValidationSettings settings)
+        public List<ValidationErrorInfo> Validate(OpenXmlPart part, ValidationSettings settings, CancellationToken token)
         {
-            var context = new ValidationContext(settings, _cache);
+            var context = new ValidationContext(settings, _cache, token);
 
             ValidatePart(part, context);
 

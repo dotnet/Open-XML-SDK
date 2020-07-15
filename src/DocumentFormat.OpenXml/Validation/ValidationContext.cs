@@ -4,26 +4,28 @@
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace DocumentFormat.OpenXml.Validation
 {
-    /// <summary>
-    /// Validation context.
-    /// </summary>
     internal class ValidationContext
     {
+        private readonly CancellationToken _token;
+
         public ValidationContext(FileFormatVersions version = FileFormatVersions.Office2007)
-            : this(new ValidationSettings(version), new ValidationCache(version))
+            : this(new ValidationSettings(version), new ValidationCache(version), default)
         {
         }
 
         public ValidationContext(ValidationContext other)
-            : this(other.Settings, other.Cache)
+            : this(other.Settings, other.Cache, other._token)
         {
         }
 
-        public ValidationContext(ValidationSettings settings, ValidationCache cache)
+        public ValidationContext(ValidationSettings settings, ValidationCache cache, CancellationToken token)
         {
+            _token = token;
+
             Cache = cache ?? throw new ArgumentNullException(nameof(cache));
             Settings = settings ?? throw new ArgumentNullException(nameof(settings));
             Errors = new List<ValidationErrorInfo>();
@@ -47,7 +49,15 @@ namespace DocumentFormat.OpenXml.Validation
 
         public bool Valid => Errors.Count == 0;
 
-        public bool IsCancelled => MaxNumberOfErrors > 0 && Errors.Count >= MaxNumberOfErrors;
+        public bool IsCancelled
+        {
+            get
+            {
+                _token.ThrowIfCancellationRequested();
+
+                return MaxNumberOfErrors > 0 && Errors.Count >= MaxNumberOfErrors;
+            }
+        }
 
         public void Clear() => Errors.Clear();
 
