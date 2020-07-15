@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so using a sorted
             // list to store them with a binary search improves overall performance.
-            var idx = FindIndex(id, name);
+            var idx = Array.BinarySearch(_data, new ElementChild(null, id, name), ElementChildNameComparer.Instance);
 
             if (idx < 0)
             {
@@ -52,9 +52,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             return _data[idx].Create();
         }
-
-        private int FindIndex(byte id, string name) => Array.BinarySearch(_data, new ElementChild(type: null, id, name),
-            ElementChildNameComparer.Instance);
 
         private static ElementLookup CreatePartLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)
         {
