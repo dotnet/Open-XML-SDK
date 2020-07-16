@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
@@ -52,9 +51,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         public void Clear() => Errors.Clear();
 
-        internal StateManager State { get; } = new StateManager();
-
-        internal IValidationContextEvents Events => State;
+        public StateManager State { get; } = new StateManager();
 
         /// <summary>
         /// Gets used to track MC context.
