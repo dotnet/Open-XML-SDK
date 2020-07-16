@@ -36,4 +36,3 @@ namespace DocumentFormat.OpenXml.Validation
         }
     }
 }
-
