@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation
 {
-    internal class StateManager : IValidationContextEvents
+    internal class StateManager
     {
         private Dictionary<object, object> _state;
 
@@ -34,69 +34,6 @@ namespace DocumentFormat.OpenXml.Validation
 
             return result;
         }
-
-        public T Get<T>(Type type, int attributeIdx, Type parent, Func<T> factory)
-        {
-            var key = new Key(type, attributeIdx, parent);
-
-            return Get(key, factory);
-        }
-
-        void IValidationContextEvents.OnPartValidationStarted(ValidationContext context)
-        {
-            _state = null;
-        }
-
-        void IValidationContextEvents.OnElementValidationStarted(ValidationContext context)
-        {
-            if (_state is null)
-            {
-                return;
-            }
-
-            var type = context.Stack.Current.Element.GetType();
-
-            foreach (var state in _state)
-            {
-                if (state.Key is Key key && key.Parent == type && state.Value is IValidationContextEvents events)
-                {
-                    events.OnElementValidationStarted(context);
-                }
-            }
-        }
-
-        void IValidationContextEvents.OnElementValidationFinished(ValidationContext context)
-        {
-            if (_state is null)
-            {
-                return;
-            }
-
-            var type = context.Stack.Current.Element.GetType();
-
-            foreach (var state in _state)
-            {
-                if (state.Key is Key key && key.Type == type && state.Value is IValidationContextEvents events)
-                {
-                    events.OnElementValidationFinished(context);
-                }
-            }
-        }
-
-        private readonly struct Key
-        {
-            public Key(Type type, int attribute, Type parent)
-            {
-                Type = type;
-                Attribute = attribute;
-                Parent = parent;
-            }
-
-            public int Attribute { get; }
-
-            public Type Type { get; }
-
-            public Type Parent { get; }
-        }
     }
 }
+

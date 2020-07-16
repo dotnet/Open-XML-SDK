@@ -2,22 +2,20 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using System;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation
 {
     internal static class ValidationTraverser
     {
-        internal delegate void ValidationAction(ValidationContext validationContext);
-
         /// <summary>
         /// Enumerate all the descendants elements of this element and do validating.
         /// Preorder traversing.
         /// </summary>
         /// <param name="validationContext"></param>
         /// <param name="validateAction">The delegate method to do the validating.</param>
-        /// <param name="finishAction">The delegate method to be called when the traverse finished.</param>
-        internal static void ValidatingTraverse(ValidationContext validationContext, ValidationAction validateAction, ValidationAction finishAction)
+        internal static void ValidatingTraverse(ValidationContext validationContext, Action<ValidationContext> validateAction)
         {
             Debug.Assert(validationContext != null);
             Debug.Assert(validationContext.McContext != null);
@@ -29,9 +27,6 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             OpenXmlElement element = validationContext.Stack.Current.Element;
-
-            //specify whether ValidationAction is called
-            bool validatingActed = false;
 
             // 1. Skip elements in ProcessContent.
             // 2. Select correct Choice / Fallback
@@ -48,7 +43,6 @@ namespace DocumentFormat.OpenXml.Validation
                 if (validationContext.FileFormat.AtLeast(element.InitialVersion))
                 {
                     validateAction(validationContext);
-                    validatingActed = true;
                 }
                 else if (validationContext.McContext.IsProcessContent(element))
                 {
@@ -59,7 +53,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     using (validationContext.Stack.Push(element: child))
                     {
-                        ValidatingTraverse(validationContext, validateAction, finishAction);
+                        ValidatingTraverse(validationContext, validateAction);
                     }
                 }
             }
@@ -73,7 +67,7 @@ namespace DocumentFormat.OpenXml.Validation
                     {
                         using (validationContext.Stack.Push(element: child))
                         {
-                            ValidatingTraverse(validationContext, validateAction, finishAction);
+                            ValidatingTraverse(validationContext, validateAction);
                         }
                     }
                 }
@@ -81,7 +75,6 @@ namespace DocumentFormat.OpenXml.Validation
             else if (element.IsAlternateContent())
             {
                 validateAction(validationContext);
-                validatingActed = true;
 
                 OpenXmlCompositeElement selectedContent;
 
@@ -93,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation
                     {
                         using (validationContext.Stack.Push(element: child))
                         {
-                            ValidatingTraverse(validationContext, validateAction, finishAction);
+                            ValidatingTraverse(validationContext, validateAction);
                         }
                     }
                 }
@@ -112,14 +105,6 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             validationContext.McContext.PopMCAttributes2();
-
-            if (validatingActed && finishAction != null)
-            {
-                using (validationContext.Stack.Push(element: element))
-                {
-                    finishAction(validationContext);
-                }
-            }
         }
     }
 }

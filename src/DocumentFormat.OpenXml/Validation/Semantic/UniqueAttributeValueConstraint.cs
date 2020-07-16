@@ -1,9 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -24,8 +23,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
         }
 
-        private State GetState(ValidationContext context) => context.State.Get(context.Stack.Current.Element.GetType(), _attribute, _parent, () => new State(_comparer));
-
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
             if (_parent != null)
@@ -35,6 +32,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_attribute];
+            var elementType = element.GetType();
 
             //if the attribute is omitted, semantic validation will do nothing
             if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -42,12 +40,52 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (GetState(context).Add(attribute.Value.InnerText))
+            var part = element.GetPart();
+            var root = GetRoot(element);
+
+            if (root is null)
             {
                 return null;
             }
 
-            return new ValidationErrorInfo()
+            var attributeText = attribute.Value.InnerText;
+
+            var added = false;
+            var isDuplicate = context.State.Get(new { part.Uri, elementType, _parent, attributeText, _attribute, _comparer }, () =>
+            {
+                added = true;
+
+                var found = false;
+                var innerContext = new ValidationContext(context);
+
+                using (innerContext.Stack.Push(part.OpenXmlPackage, part, part.RootElement))
+                {
+                    // We want to use ValidationTraverser as it will correctly handle AlternateContent blocks
+                    ValidationTraverser.ValidatingTraverse(innerContext, c =>
+                    {
+                        var e = c.Stack.Current.Element;
+
+                        if (e != element & e.GetType() == elementType)
+                        {
+                            var eValue = e.ParsedState.Attributes[_attribute];
+
+                            if (eValue.HasValue && _comparer.Equals(attributeText, eValue.Value.InnerText))
+                            {
+                                found = true;
+                            }
+                        }
+                    });
+                }
+
+                return found;
+            });
+
+            if (!isDuplicate || !added)
+            {
+                return null;
+            }
+
+            return new ValidationErrorInfo
             {
                 Id = "Sem_UniqueAttributeValue",
                 ErrorType = ValidationErrorType.Semantic,
@@ -59,59 +97,22 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             };
         }
 
-        private class State : IValidationContextEvents
+        private OpenXmlElement GetRoot(OpenXmlElement element)
         {
-            private readonly Stack<HashSet<string>> _stateStack;
-            private readonly StringComparer _comparer;
-
-            /// <summary>
-            /// We must track the count because there are more calls to <see cref="IValidationContextEvents.OnElementValidationFinished(ValidationContext)"/>
-            /// than there are to <see cref="IValidationContextEvents.OnElementValidationStarted(ValidationContext)"/>
-            /// </summary>
-            private int count = 0;
-
-            public State(StringComparer comparer)
+            if (_parent is null)
             {
-                _stateStack = new Stack<HashSet<string>>();
-                _comparer = comparer;
-
-                Push();
+                return element.GetPart()?.RootElement;
             }
 
-            public void Push() => _stateStack.Push(new HashSet<string>(_comparer));
-
-            public bool Add(string str)
+            foreach (var ancestor in element.Ancestors())
             {
-                if (_stateStack.Count == 0)
+                if (ancestor.GetType() == _parent)
                 {
-                    return false;
-                }
-                else
-                {
-                    return _stateStack.Peek().Add(str);
+                    return ancestor;
                 }
             }
 
-            void IValidationContextEvents.OnElementValidationStarted(ValidationContext context)
-            {
-                count++;
-                Push();
-            }
-
-            void IValidationContextEvents.OnElementValidationFinished(ValidationContext context)
-            {
-                while (count-- > 0)
-                {
-                    if (_stateStack.Any())
-                    {
-                        _stateStack.Pop();
-                    }
-                }
-            }
-
-            void IValidationContextEvents.OnPartValidationStarted(ValidationContext context)
-            {
-            }
+            return null;
         }
     }
 }

@@ -105,7 +105,6 @@ namespace DocumentFormat.OpenXml.Validation
                         // TODO: Is this needed? It's set 8 lines up
                         using (context.Stack.Push(element: part.PartRootElement))
                         {
-                            context.Events.OnPartValidationStarted(context);
                             _semanticValidator.Validate(context);
                         }
                     }
