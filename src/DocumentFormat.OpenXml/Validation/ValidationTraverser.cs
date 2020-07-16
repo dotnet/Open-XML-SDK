@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation
                 return Cached.Array<OpenXmlElement>();
             }
 
-            if (options.HasFlag(TraversalOptions.SelectAlternateContent))
+            if ((options & TraversalOptions.SelectAlternateContent) == TraversalOptions.SelectAlternateContent)
             {
                 return ValidatingTraverse(element, new MCContext(false), version);
             }
