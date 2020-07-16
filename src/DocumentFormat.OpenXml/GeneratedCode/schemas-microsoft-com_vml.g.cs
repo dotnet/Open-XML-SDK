@@ -4113,7 +4113,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(31 /*ovml:tableproperties*/, true, new string[] { "1", "2", "3" }),
+            new AttributeValueSetConstraint(32 /*ovml:tableproperties*/, true, new string[] { "1", "2", "3" }),
             new AttributeValueSetConstraint(26 /*ovml:dgmlayout*/, true, new string[] { "0", "1", "2", "3" }),
             new AttributeValueSetConstraint(28 /*ovml:dgmlayoutmru*/, true, new string[] { "0", "1", "2", "3" }),
             new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
@@ -5124,7 +5124,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
             new AttributeValueRangeConstraint(10 /*ovml:hrpct*/, true, 0, true, 1000, true),
             new AttributeValueRangeConstraint(20 /*ovml:dgmnodekind*/, true, 0, true, 6, true),
             new AttributeValueSetConstraint(29 /*ovml:spt*/, true, new string[] { "19" }),
-            new UniqueAttributeValueConstraint(40 /*:id*/, true, null)
+            new UniqueAttributeValueConstraint(41 /*:id*/, true, null)
         };
 
         internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
