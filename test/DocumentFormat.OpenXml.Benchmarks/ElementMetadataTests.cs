@@ -15,15 +15,17 @@ namespace DocumentFormat.OpenXml.Benchmarks
         }
 
         [Benchmark]
-        public void CreateWithInstance()
+        public object CreateWithInstance()
         {
-            _ = ElementMetadata.Create(_element);
+            object o = ElementMetadata.Create(_element);
+            return o; // return the object to make the release build do not optimize it
         }
 
         [Benchmark]
-        public void CreateWithGeneric()
+        public object CreateWithGeneric()
         {
-            _ = ElementMetadata.Create<AlternateContent>();
+            object o = ElementMetadata.Create<AlternateContent>();
+            return o; // return the object to make the release build do not optimize it
         }
 
         private OpenXmlElement _element;
