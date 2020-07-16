@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -66,40 +67,37 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             };
         }
 
-        private PartHolder<HashSet<string>> GetReferencedAttributes(ValidationContext context)
+        private PartHolder<ICollection<string>> GetReferencedAttributes(ValidationContext context)
         {
-            var referencedAttributes = new HashSet<string>(StringComparer.Ordinal);
             var part = GetReferencedPart(context, _partPath);
 
-            void ElementTraverse(ValidationContext ctx)
+            if (part?.RootElement is null)
             {
-                var element = ctx.Stack.Current.Element;
+                return new PartHolder<ICollection<string>>(Cached.Array<string>(), part);
+            }
 
-                Debug.Assert(element != null);
+            var result = context.State.Get(new { part.Uri, _partPath, _element, _attribute }, () =>
+            {
+                var referencedAttributes = new HashSet<string>(StringComparer.Ordinal);
 
-                if (element.GetType() == _element)
+                foreach (var element in part.RootElement.Descendants())
                 {
-                    var attribute = element.ParsedState.Attributes[_attribute];
-
-                    //Attributes whose value is empty string or null don't need to be cached.
-                    if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))
+                    if (element.GetType() == _element)
                     {
-                        referencedAttributes.Add(attribute.Value.InnerText);
+                        var attribute = element.ParsedState.Attributes[_attribute];
+
+                        //Attributes whose value is empty string or null don't need to be cached.
+                        if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))
+                        {
+                            referencedAttributes.Add(attribute.Value.InnerText);
+                        }
                     }
                 }
-            }
 
-            if (part != null)
-            {
-                var partContext = new ValidationContext(context);
+                return referencedAttributes;
+            });
 
-                using (partContext.Stack.Push(context.Stack.Current.Package, part, part.RootElement))
-                {
-                    ValidationTraverser.ValidatingTraverse(partContext, ElementTraverse, null);
-                }
-            }
-
-            return new PartHolder<HashSet<string>>(referencedAttributes, part);
+            return new PartHolder<ICollection<string>>(result, part);
         }
     }
 }
