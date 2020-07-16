@@ -27,15 +27,20 @@ namespace DocumentFormat.OpenXml.Tests
             var openxmlElement = new Run(runOuterXml);
             var result = target.Validate(openxmlElement);
 
-            Assert.Equal(2, result.Count);
-
-            Assert.Same(openxmlElement.GetFirstChild<RunProperties>().WebHidden, result[0].Node);
-            Assert.Equal("Sch_InvalidChildinLeafElement", result[0].Id);
-            Assert.Equal("The element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:webHidden' is a leaf element and cannot contain children.", result[0].Description);
-
-            Assert.Same(openxmlElement.LastChild, result[1].Node);
-            Assert.Equal("Sch_InvalidChildinLeafElement", result[1].Id);
-            Assert.Equal("The element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:t' is a leaf element and cannot contain children.", result[1].Description);
+            Assert.Collection(
+                result,
+                error =>
+                {
+                    Assert.Same(openxmlElement.LastChild, error.Node);
+                    Assert.Equal("Sch_InvalidChildinLeafElement", error.Id);
+                    Assert.Equal("The element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:t' is a leaf element and cannot contain children.", error.Description);
+                },
+                error =>
+                {
+                    Assert.Same(openxmlElement.GetFirstChild<RunProperties>().WebHidden, error.Node);
+                    Assert.Equal("Sch_InvalidChildinLeafElement", error.Id);
+                    Assert.Equal("The element 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:webHidden' is a leaf element and cannot contain children.", error.Description);
+                });
         }
     }
 }

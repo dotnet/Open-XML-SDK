@@ -80,9 +80,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 var count = 0;
 
-                foreach (var element in part.RootElement.Descendants())
+                foreach (var element in part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (_refElementParent is null || element.Parent.GetType() == _refElementParent)
+                    if (_refElementParent is null || element.Parent?.GetType() == _refElementParent)
                     {
                         count++;
                     }

@@ -55,29 +55,20 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 added = true;
 
-                var found = false;
-                var innerContext = new ValidationContext(context);
-
-                using (innerContext.Stack.Push(part.OpenXmlPackage, part, part.RootElement))
+                foreach (var e in root.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    // We want to use ValidationTraverser as it will correctly handle AlternateContent blocks
-                    ValidationTraverser.ValidatingTraverse(innerContext, c =>
+                    if (e != element & e.GetType() == elementType)
                     {
-                        var e = c.Stack.Current.Element;
+                        var eValue = e.ParsedState.Attributes[_attribute];
 
-                        if (e != element & e.GetType() == elementType)
+                        if (eValue.HasValue && _comparer.Equals(attributeText, eValue.Value.InnerText))
                         {
-                            var eValue = e.ParsedState.Attributes[_attribute];
-
-                            if (eValue.HasValue && _comparer.Equals(attributeText, eValue.Value.InnerText))
-                            {
-                                found = true;
-                            }
+                            return true;
                         }
-                    });
+                    }
                 }
 
-                return found;
+                return false;
             });
 
             if (!isDuplicate || !added)
