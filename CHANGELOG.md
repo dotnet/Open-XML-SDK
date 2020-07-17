@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Fixed massive performance bottleneck when IndexReferenceConstraint and ReferenceExistConstraint are involved (#763)
 - Fixed CellValue to only include three most signficant digits on second fractions to correct issue loading dates (#741)
+- Fixed a couple of validation indexing errors that might cause erroneous validation errors (#767)
 
 ## Version 2.11.2 - 2020-07-10
 
