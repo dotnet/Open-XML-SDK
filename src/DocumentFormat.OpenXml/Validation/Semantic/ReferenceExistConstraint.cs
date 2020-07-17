@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 var referencedAttributes = new HashSet<string>(StringComparer.Ordinal);
 
-                foreach (var element in part.RootElement.Descendants())
+                foreach (var element in part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
                     if (element.GetType() == _element)
                     {
