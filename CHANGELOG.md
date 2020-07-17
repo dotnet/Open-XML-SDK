@@ -4,11 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Version 2.11.3
+## Version 2.11.3 - 2020-07-17
 ### Fixed
 - Fixed massive performance bottleneck when IndexReferenceConstraint and ReferenceExistConstraint are involved (#763)
 - Fixed CellValue to only include three most signficant digits on second fractions to correct issue loading dates (#741)
 - Fixed a couple of validation indexing errors that might cause erroneous validation errors (#767)
+- Updated internal validation system to not use recursion, allowing for better short-circuiting (#766)
 
 ## Version 2.11.2 - 2020-07-10
 
