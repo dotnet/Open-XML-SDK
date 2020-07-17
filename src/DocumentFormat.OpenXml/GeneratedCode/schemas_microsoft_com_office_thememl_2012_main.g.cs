@@ -113,6 +113,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:id*/, 1, 100) { Application = ApplicationType.Excel | ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
         }
 
         /// <summary>
@@ -127,12 +128,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:id*/, 1, 100) { Application = ApplicationType.Excel | ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThemeFamily>(deep);

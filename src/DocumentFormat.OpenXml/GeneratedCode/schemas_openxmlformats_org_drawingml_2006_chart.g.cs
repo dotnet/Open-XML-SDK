@@ -2180,13 +2180,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "idx");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Index>(deep);
@@ -2210,13 +2205,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "order");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Order>(deep);
@@ -2240,13 +2230,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "axId");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisId>(deep);
@@ -2270,13 +2255,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "crossAx");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CrossingAxis>(deep);
@@ -2300,13 +2280,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "ptCount");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PointCount>(deep);
@@ -2330,13 +2305,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "secondPiePt");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SecondPiePoint>(deep);
@@ -2360,13 +2330,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "explosion");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Explosion>(deep);
@@ -2390,13 +2355,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "fmtId");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormatId>(deep);
@@ -4223,13 +4183,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "crossesAt");
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" }));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CrossesAt>(deep);
@@ -4349,14 +4304,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "forward");
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" }));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, double.PositiveInfinity, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" }),
-            new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, double.PositiveInfinity, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Forward>(deep);
@@ -4380,13 +4330,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "backward");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, double.PositiveInfinity, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, double.PositiveInfinity, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Backward>(deep);
@@ -4458,13 +4403,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "splitPos");
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" }));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitPosition>(deep);
@@ -4488,13 +4428,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "custUnit");
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" }));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:val*/, false, new string[] { "INF", "-INF", "NaN" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomDisplayUnit>(deep);
@@ -4874,13 +4809,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(11, "chart");
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(0 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartReference>(deep);
@@ -5451,6 +5381,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericValue), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:idx*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <summary>
@@ -5465,12 +5396,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<NumericValue>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:idx*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumericPoint>(deep);
@@ -10187,18 +10112,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:b*/, true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:footer*/, true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:header*/, true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:l*/, true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:r*/, true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:t*/, true, 0, true, 49, false));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:b*/, true, 0, true, 49, false),
-            new AttributeValueRangeConstraint(5 /*:footer*/, true, 0, true, 49, false),
-            new AttributeValueRangeConstraint(4 /*:header*/, true, 0, true, 49, false),
-            new AttributeValueRangeConstraint(0 /*:l*/, true, 0, true, 49, false),
-            new AttributeValueRangeConstraint(1 /*:r*/, true, 0, true, 49, false),
-            new AttributeValueRangeConstraint(2 /*:t*/, true, 0, true, 49, false)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageMargins>(deep);
@@ -10322,14 +10242,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "horizontalDpi", a => a.HorizontalDpi)
 .AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
 .AddAttribute(0, "copies", a => a.Copies);
+            builder.AddConstraint(new AttributeValueRangeConstraint(8 /*:copies*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:paperSize*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(8 /*:copies*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new AttributeValueRangeConstraint(0 /*:paperSize*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageSetup>(deep);
@@ -13848,6 +13763,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericValue), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:idx*/, true, 0, true, 2147483647, true));
         }
 
         /// <summary>
@@ -13862,12 +13778,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<NumericValue>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:idx*/, true, 0, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StringPoint>(deep);
@@ -21559,6 +21469,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate), 0, 1)
             };
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
         }
 
         /// <summary>
@@ -21573,12 +21484,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<AutoUpdate>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(0 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalData>(deep);

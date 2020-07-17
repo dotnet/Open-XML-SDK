@@ -352,6 +352,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Style), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.TextBody), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256));
         }
 
         /// <summary>
@@ -405,12 +406,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             get => GetElement<TextBody>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
@@ -607,6 +602,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Transform), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256));
         }
 
         /// <summary>
@@ -647,12 +643,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GraphicFrame>(deep);
@@ -740,6 +730,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Style), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256));
         }
 
         /// <summary>
@@ -780,12 +771,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             get => GetElement<Style>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectionShape>(deep);
@@ -876,6 +861,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Style), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256));
         }
 
         /// <summary>
@@ -929,12 +915,6 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             get => GetElement<Style>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:macro*/, 0, 256)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Picture>(deep);
@@ -1061,6 +1041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, true, null));
         }
 
         /// <summary>
@@ -1101,12 +1082,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingProperties>(deep);

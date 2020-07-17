@@ -819,13 +819,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(18, 20, 19, 21) /*:insertAfterMso, :insertAfterQ, :insertBeforeMso, :insertBeforeQ*/ { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeMutualExclusive(18, 20, 19, 21) /*:insertAfterMso, :insertAfterQ, :insertBeforeMso, :insertBeforeQ*/ { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ButtonRegular>(deep);
@@ -5106,13 +5101,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(0, 1) /*:size, :getSize*/ { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeMutualExclusive(0, 1) /*:size, :getSize*/ { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlClone>(deep);
@@ -5868,13 +5858,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(0, 1) /*:size, :getSize*/ { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeMutualExclusive(0, 1) /*:size, :getSize*/ { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Button>(deep);
@@ -17423,13 +17408,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
+            builder.AddConstraint(new AttributeMutualExclusive(5, 6) /*:size, :getSize*/ { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeMutualExclusive(5, 6) /*:size, :getSize*/ { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlCloneQat>(deep);
