@@ -414,6 +414,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:link*/) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:embed*/) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -467,13 +469,6 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(1 /*r:link*/) { Version = FileFormatVersions.Office2010 },
-            new RelationshipExistConstraint(0 /*r:embed*/) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Media>(deep);
@@ -2512,14 +2507,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<MediaBookmark>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "time", a => a.Time);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*:time*/, true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 },
-            new UniqueAttributeValueConstraint(1 /*:time*/, true, typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList)) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MediaBookmark>(deep);

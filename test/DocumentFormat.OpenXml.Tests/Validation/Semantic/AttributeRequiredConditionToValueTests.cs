@@ -74,12 +74,9 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
                 builder.AddElement<TestElement>()
                     .AddAttribute(0, "required", t => t.Required)
                     .AddAttribute(0, "condition", t => t.Condition);
-            }
 
-            internal override ISemanticConstraint[] SemanticConstraints { get; } = new[]
-            {
-                new AttributeRequiredConditionToValue(0, 1, ExpectedConditionValue),
-            };
+                builder.AddConstraint(new AttributeRequiredConditionToValue(0, 1, ExpectedConditionValue));
+            }
         }
     }
 }

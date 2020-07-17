@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 level = SemanticValidationLevel.Package;
             }
 
-            foreach (var constraint in current.Element.SemanticConstraints)
+            foreach (var constraint in current.Element.Metadata.Constraints)
             {
                 if ((constraint.SemanticValidationLevel & level) == level)
                 {

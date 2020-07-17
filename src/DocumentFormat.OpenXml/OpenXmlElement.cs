@@ -230,8 +230,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal virtual OpenXmlElementContext RootElementContext => Parent?.RootElementContext;
 
-        internal virtual ISemanticConstraint[] SemanticConstraints => Cached.Array<ISemanticConstraint>();
-
         /// <summary>
         /// Gets the first child of the OpenXmlElement element.
         /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.

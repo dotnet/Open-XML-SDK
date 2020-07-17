@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         internal ElementMetadata(
             ReadOnlyArray<AttributeMetadata> attributes,
             ReadOnlyArray<IValidator> validators,
+            ReadOnlyArray<ISemanticConstraint> constraints,
             FileFormatVersions version,
             SchemaAttrAttribute schema,
             CompiledParticle particle,
@@ -30,6 +32,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         {
             Attributes = attributes;
             Validators = validators;
+            Constraints = constraints;
             Availability = version;
             Schema = schema;
             Particle = particle;
@@ -45,6 +48,8 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         public ElementLookup Children => _children?.Value ?? ElementLookup.Empty;
 
         public ReadOnlyArray<IValidator> Validators { get; }
+
+        public ReadOnlyArray<ISemanticConstraint> Constraints { get; }
 
         public FileFormatVersions Availability { get; }
 
@@ -87,6 +92,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private static readonly Lazy<ElementLookup> _lazy = new Lazy<ElementLookup>(() => ElementLookup.Empty, true);
 
             private List<IMetadataBuilder<AttributeMetadata>> _attributes;
+            private List<ISemanticConstraint> _constraints;
             private HashSet<IMetadataBuilder<ElementLookup.ElementChild>> _children;
             private byte _nsId;
             private string _localName;
@@ -95,6 +101,16 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 where TElement : OpenXmlElement
             {
                 return new Builder<TElement>(this);
+            }
+
+            public void AddConstraint(ISemanticConstraint constraint)
+            {
+                if (_constraints is null)
+                {
+                    _constraints = new List<ISemanticConstraint>();
+                }
+
+                _constraints.Add(constraint);
             }
 
             public void SetSchema(string ns, string localName)
@@ -136,7 +152,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 var schema = _localName is null ? null : new SchemaAttrAttribute(_nsId, _localName);
                 var lookup = _children is null ? _lazy : new Lazy<ElementLookup>(() => new ElementLookup(_children.Select(c => c.Build())), true);
 
-                return new ElementMetadata(BuildAttributes(), GetValidators(), Availability, schema, Particle.Compile(), lookup);
+                return new ElementMetadata(BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, schema, Particle.Compile(), lookup);
             }
 
             private AttributeMetadata[] BuildAttributes()

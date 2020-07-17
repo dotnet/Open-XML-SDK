@@ -48,13 +48,8 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:spid*/, true, null));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:spid*/, true, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyDrawing>(deep);

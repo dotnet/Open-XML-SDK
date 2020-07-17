@@ -279,14 +279,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:ObjectType*/, false, new string[] { "Movie" }) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:ObjectType*/, false, new string[] { "LineA", "RectA" }) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:ObjectType*/, false, new string[] { "Movie" }) { Application = ApplicationType.Excel },
-            new AttributeValueSetConstraint(0 /*:ObjectType*/, false, new string[] { "LineA", "RectA" }) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClientData>(deep);

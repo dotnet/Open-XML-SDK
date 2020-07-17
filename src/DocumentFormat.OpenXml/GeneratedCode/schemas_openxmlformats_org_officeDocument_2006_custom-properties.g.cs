@@ -308,6 +308,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:pid*/, true, 2, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*:name*/, false, null));
         }
 
         /// <summary>
@@ -751,13 +753,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:pid*/, true, 2, true, double.PositiveInfinity, true),
-            new UniqueAttributeValueConstraint(2 /*:name*/, false, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomDocumentProperty>(deep);
