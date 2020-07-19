@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal interface IOpenXmlSimpleTypeValidator
+    internal interface IValidator
     {
         void Validate(ValidationContext context);
     }

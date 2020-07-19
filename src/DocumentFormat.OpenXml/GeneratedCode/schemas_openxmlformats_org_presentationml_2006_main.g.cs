@@ -367,13 +367,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sldRg");
+            builder.AddConstraint(new AttributeValueLessEqualToAnother(0 /*:st*/, 1 /*:end*/, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLessEqualToAnother(0 /*:st*/, 1 /*:end*/, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideRange>(deep);
@@ -509,13 +504,8 @@ namespace DocumentFormat.OpenXml.Presentation
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, false, null) { Application = ApplicationType.PowerPoint });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:id*/, false, null) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomShowReference>(deep);
@@ -1614,13 +1604,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 0, 1)
             };
+            builder.AddConstraint(new RelationshipExistConstraint(3 /*r:id*/));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(3 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleObject>(deep);
@@ -1854,6 +1839,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ModificationVerifier), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:firstSlideNum*/, true, 0, true, 9999, true) { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -2037,12 +2023,6 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
             get => GetElement<PresentationExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:firstSlideNum*/, true, 0, true, 9999, true) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Presentation>(deep);
@@ -4027,6 +4007,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:id*/) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -4067,12 +4048,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(1 /*r:id*/) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContentPart>(deep);
@@ -4353,13 +4328,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddValidator(RequiredValidator.Instance);
  aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483625, true) { Application = ApplicationType.PowerPoint });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 2147483625, true) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimePercentage>(deep);
@@ -5711,6 +5681,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToPosition), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RotationCenter), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:rAng*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -5777,12 +5748,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             get => GetElement<RotationCenter>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:rAng*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateMotion>(deep);
@@ -5893,6 +5858,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:by*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:from*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:to*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -5907,14 +5875,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             get => GetElement<CommonBehavior>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:by*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint },
-            new AttributeValueRangeConstraint(1 /*:from*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint },
-            new AttributeValueRangeConstraint(2 /*:to*/, true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimateRotation>(deep);
@@ -6788,6 +6748,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ChildTimeNodeList), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SubTimeNodeList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueSetConstraint(7 /*:spd*/, false, new string[] { "0" }) { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -6867,12 +6828,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             get => GetElement<SubTimeNodeList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(7 /*:spd*/, false, new string[] { "0" }) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommonTimeNode>(deep);
@@ -8784,6 +8739,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:lvl*/, true, double.NegativeInfinity, true, 9, true) { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:lvl*/, true, typeof(DocumentFormat.OpenXml.Presentation.TemplateList)) { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -8798,13 +8755,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             get => GetElement<TimeNodeList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:lvl*/, true, double.NegativeInfinity, true, 9, true) { Application = ApplicationType.PowerPoint },
-            new UniqueAttributeValueConstraint(0 /*:lvl*/, true, typeof(DocumentFormat.OpenXml.Presentation.TemplateList)) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Template>(deep);
@@ -9134,6 +9084,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TemplateList), 0, 1)
             };
+            builder.AddConstraint(new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -9148,12 +9099,6 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
             get => GetElement<TemplateList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildParagraph>(deep);
@@ -9234,14 +9179,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
+            builder.AddConstraint(new ReferenceExistConstraint(1 /*:grpId*/, ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", 19 /*:grpId*/) { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new ReferenceExistConstraint(1 /*:grpId*/, ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", 19 /*:grpId*/) { Application = ApplicationType.PowerPoint },
-            new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildDiagram>(deep);
@@ -9333,14 +9273,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "animBg", a => a.AnimateBackground);
+            builder.AddConstraint(new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new ReferenceExistConstraint(1 /*:grpId*/, ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", 19 /*:grpId*/) { Application = ApplicationType.PowerPoint });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint },
-            new ReferenceExistConstraint(1 /*:grpId*/, ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", 19 /*:grpId*/) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildOleChart>(deep);
@@ -9445,6 +9380,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildAsOne), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildSubElement), 1, 1)
             };
+            builder.AddConstraint(new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new ReferenceExistConstraint(1 /*:grpId*/, ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", 19 /*:grpId*/) { Application = ApplicationType.PowerPoint });
         }
 
         /// <summary>
@@ -9472,13 +9409,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<BuildSubElement>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new ReferenceExistConstraint(0 /*:spid*/, ".", typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties", 0 /*:id*/) { Application = ApplicationType.PowerPoint },
-            new ReferenceExistConstraint(1 /*:grpId*/, ".", typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), "DocumentFormat.OpenXml.Presentation.CommonTimeNode", 19 /*:grpId*/) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildGraphics>(deep);
@@ -10028,13 +9958,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
    aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(0 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideListEntry>(deep);
@@ -10248,6 +10173,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, false, null));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:id*/, true, 0, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(4 /*:clrIdx*/, true, typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorList)));
         }
 
         /// <summary>
@@ -10262,14 +10190,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<CommentAuthorExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:id*/, false, null),
-            new AttributeValueRangeConstraint(0 /*:id*/, true, 0, true, double.PositiveInfinity, true),
-            new UniqueAttributeValueConstraint(4 /*:clrIdx*/, true, typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorList))
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentAuthor>(deep);
@@ -10737,6 +10657,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, true, null));
+            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:id*/));
         }
 
         /// <summary>
@@ -10751,13 +10673,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
-            new RelationshipExistConstraint(1 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideId>(deep);
@@ -10848,6 +10763,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, false, null));
+            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:id*/));
         }
 
         /// <summary>
@@ -10862,13 +10779,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:id*/, false, null),
-            new RelationshipExistConstraint(1 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideMasterId>(deep);
@@ -10945,6 +10855,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
         }
 
         /// <summary>
@@ -10959,12 +10870,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(0 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesMasterId>(deep);
@@ -11041,6 +10946,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
         }
 
         /// <summary>
@@ -11055,12 +10961,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(0 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HandoutMasterId>(deep);
@@ -14076,6 +13976,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, true, null));
+            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:id*/));
         }
 
         /// <summary>
@@ -14090,13 +13992,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
-            new RelationshipExistConstraint(1 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideLayoutId>(deep);
@@ -14297,13 +14192,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
    aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, false, typeof(DocumentFormat.OpenXml.Presentation.TagList)) { Application = ApplicationType.PowerPoint });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:name*/, false, typeof(DocumentFormat.OpenXml.Presentation.TagList)) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tag>(deep);
@@ -16552,13 +16442,8 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SoundAction), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:advTm*/, true, 0, true, 2147483647, true) { Application = ApplicationType.PowerPoint });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:advTm*/, true, 0, true, 2147483647, true) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Transition>(deep);
@@ -20458,16 +20343,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
+            builder.AddConstraint(new AttributeValueSetConstraint(3 /*:cryptAlgorithmSid*/, true, new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }) { Application = ApplicationType.Word | ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint(3 /*:cryptAlgorithmSid*/, true, new string[] { "1", "2", "3", "4", "12", "13", "14" }) { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new AttributeValueSetConstraint(11 /*:cryptProviderTypeExtSource*/, true, new string[] { "wincrypt", "" }) { Application = ApplicationType.PowerPoint });
+            builder.AddConstraint(new AttributeValueSetConstraint(9 /*:algIdExtSource*/, true, new string[] { "wincrypt", "" }) { Application = ApplicationType.PowerPoint });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(3 /*:cryptAlgorithmSid*/, true, new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }) { Application = ApplicationType.Word | ApplicationType.Excel },
-            new AttributeValueSetConstraint(3 /*:cryptAlgorithmSid*/, true, new string[] { "1", "2", "3", "4", "12", "13", "14" }) { Application = ApplicationType.PowerPoint },
-            new AttributeValueSetConstraint(11 /*:cryptProviderTypeExtSource*/, true, new string[] { "wincrypt", "" }) { Application = ApplicationType.PowerPoint },
-            new AttributeValueSetConstraint(9 /*:algIdExtSource*/, true, new string[] { "wincrypt", "" }) { Application = ApplicationType.PowerPoint }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModificationVerifier>(deep);

@@ -174,14 +174,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidation), 1, 0, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:xWindow*/, true, double.NegativeInfinity, true, 65535, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:yWindow*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:xWindow*/, true, double.NegativeInfinity, true, 65535, true) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueRangeConstraint(2 /*:yWindow*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataValidations>(deep);
@@ -663,13 +658,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 .AddAttribute(0, "defaultImageDpi", a => a.DefaultImageDpi)
 .AddAttribute(0, "discardImageEditData", a => a.DiscardImageEditData)
 .AddAttribute(0, "accuracyVersion", a => a.AccuracyVersion);
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:defaultImageDpi*/, true, new string[] { "96", "150", "220" }) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:defaultImageDpi*/, true, new string[] { "96", "150", "220" }) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookProperties>(deep);
@@ -785,6 +775,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleSet), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:displayFolder*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:mdxLong*/, 32766, 1073741822) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -799,13 +791,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             get => GetElement<TupleSet>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:displayFolder*/, 0, 65535) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(4 /*:mdxLong*/, 32766, 1073741822) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedMember>(deep);
@@ -910,6 +895,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SetLevels), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueConditionToAnother(0 /*:flattenHierarchies*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother(1 /*:measuresSet*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueConditionToAnother(2 /*:hierarchizeDistinct*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -924,14 +912,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             get => GetElement<SetLevels>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueConditionToAnother(0 /*:flattenHierarchies*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 },
-            new AttributeValueConditionToAnother(1 /*:measuresSet*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 },
-            new AttributeValueConditionToAnother(2 /*:hierarchizeDistinct*/, 3 /*:ignore*/, new string[] { "false" }, new string[] { "true" }) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheHierarchy>(deep);
@@ -990,14 +970,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 .AddAttribute(0, "pivotShowAs", a => a.PivotShowAs)
 .AddAttribute(0, "sourceField", a => a.SourceField)
 .AddAttribute(0, "uniqueName", a => a.UniqueName);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*:uniqueName*/, true, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:uniqueName*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(2 /*:uniqueName*/, true, null) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(2 /*:uniqueName*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataField>(deep);
@@ -1222,6 +1197,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotChanges), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:altText*/, 0, 2000) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:altTextSummary*/, 0, 2000) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(8 /*:weightExpression*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -1262,14 +1240,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             get => GetElement<ConditionalFormats>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(3 /*:altText*/, 0, 2000) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(4 /*:altTextSummary*/, 0, 2000) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(8 /*:weightExpression*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableDefinition>(deep);
@@ -1433,6 +1403,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:culture*/, 0, 84) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:embeddedDataId*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -1447,13 +1419,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             get => GetElement<CalculatedMembers>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:culture*/, 0, 84) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(1 /*:embeddedDataId*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Connection>(deep);
@@ -1501,14 +1466,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             builder.AddElement<Table>()
 .AddAttribute(0, "altText", a => a.AltText)
 .AddAttribute(0, "altTextSummary", a => a.AltTextSummary);
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:altText*/, 0, 25000) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:altTextSummary*/, 0, 50000) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:altText*/, 0, 25000) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(1 /*:altTextSummary*/, 0, 50000) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Table>(deep);
@@ -1583,13 +1543,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle), 0, 0, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:defaultSlicerStyle*/, 1, 255) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:defaultSlicerStyle*/, 1, 255) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerStyles>(deep);
@@ -2164,15 +2119,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "dxfId", a => a.FormatId)
 .AddAttribute(0, "iconSet", a => a.IconSet)
 .AddAttribute(0, "iconId", a => a.IconId);
+            builder.AddConstraint(new AttributeAbsentConditionToValue(4 /*:dxfId*/, 1 /*:sortBy*/ , "icon", "value") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(5 /*:iconSet*/, 1 /*:sortBy*/ , "icon") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(6 /*:iconId*/, 1 /*:sortBy*/ , "icon") { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeAbsentConditionToValue(4 /*:dxfId*/, 1 /*:sortBy*/ , "icon", "value") { Version = FileFormatVersions.Office2010 },
-            new AttributeAbsentConditionToNonValue(5 /*:iconSet*/, 1 /*:sortBy*/ , "icon") { Version = FileFormatVersions.Office2010 },
-            new AttributeAbsentConditionToNonValue(6 /*:iconId*/, 1 /*:sortBy*/ , "icon") { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SortCondition>(deep);
@@ -2287,6 +2237,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:id*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -2301,12 +2252,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:id*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DatastoreItem>(deep);
@@ -2757,6 +2702,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ListItems), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:dropLines*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(12 /*:inc*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(15 /*:max*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(16 /*:min*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(20 /*:page*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -2784,16 +2734,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:dropLines*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueRangeConstraint(12 /*:inc*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueRangeConstraint(15 /*:max*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueRangeConstraint(16 /*:min*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueRangeConstraint(20 /*:page*/, true, 0, true, 30000, true) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormControlProperties>(deep);
@@ -3391,21 +3331,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DifferentialType), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:priority*/, true, 0, false, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*:priority*/, true, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(3 /*:aboveAverage*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(4 /*:percent*/, 0 /*:type*/ , "top10") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(5 /*:bottom*/, 0 /*:type*/ , "top10") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(7 /*:text*/, 0 /*:type*/ , "beginsWith", "containsText", "endsWith", "notContainsText") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(8 /*:timePeriod*/, 0 /*:type*/ , "timePeriod") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(10 /*:stdDev*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(11 /*:equalAverage*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:priority*/, true, 0, false, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 },
-            new UniqueAttributeValueConstraint(1 /*:priority*/, true, null) { Version = FileFormatVersions.Office2010 },
-            new AttributeAbsentConditionToNonValue(3 /*:aboveAverage*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 },
-            new AttributeAbsentConditionToNonValue(4 /*:percent*/, 0 /*:type*/ , "top10") { Version = FileFormatVersions.Office2010 },
-            new AttributeAbsentConditionToNonValue(5 /*:bottom*/, 0 /*:type*/ , "top10") { Version = FileFormatVersions.Office2010 },
-            new AttributeAbsentConditionToNonValue(7 /*:text*/, 0 /*:type*/ , "beginsWith", "containsText", "endsWith", "notContainsText") { Version = FileFormatVersions.Office2010 },
-            new AttributeAbsentConditionToNonValue(8 /*:timePeriod*/, 0 /*:type*/ , "timePeriod") { Version = FileFormatVersions.Office2010 },
-            new AttributeAbsentConditionToNonValue(10 /*:stdDev*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 },
-            new AttributeAbsentConditionToNonValue(11 /*:equalAverage*/, 0 /*:type*/ , "aboveAverage") { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormattingRule>(deep);
@@ -3670,6 +3605,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(9 /*:error*/, 0, 225) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(10 /*:promptTitle*/, 0, 32) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(11 /*:prompt*/, 0, 225) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -3710,14 +3648,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(9 /*:error*/, 0, 225) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(10 /*:promptTitle*/, 0, 32) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(11 /*:prompt*/, 0, 225) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataValidation>(deep);
@@ -4174,6 +4104,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Sparklines), 1, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueConditionToAnother(1 /*:manualMin*/, 14 /*:minAxisType*/, new string[] { "0" }, new string[] { "individual", "group" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:lineWeight*/, true, 0, true, 1584, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -4306,13 +4238,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             set => SetElement(value);
         }
 
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueConditionToAnother(1 /*:manualMin*/, 14 /*:minAxisType*/, new string[] { "0" }, new string[] { "individual", "group" }) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueRangeConstraint(2 /*:lineWeight*/, true, 0, true, 1584, true) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SparklineGroup>(deep);
     }
@@ -4336,13 +4261,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorSeries");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeriesColor>(deep);
@@ -4367,13 +4287,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorNegative");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NegativeColor>(deep);
@@ -4398,13 +4313,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorAxis");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisColor>(deep);
@@ -4429,13 +4339,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorMarkers");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MarkersColor>(deep);
@@ -4460,13 +4365,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorFirst");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstMarkerColor>(deep);
@@ -4491,13 +4391,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorLast");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LastMarkerColor>(deep);
@@ -4522,13 +4417,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(53, "colorHigh");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:auto*/, true, new string[] { "false" }) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<HighMarkerColor>(deep);
@@ -4974,13 +4864,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(0 /*r:id*/) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerRef>(deep);
@@ -5023,13 +4908,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(0 /*r:id*/) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerCache>(deep);
@@ -5104,6 +4984,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames)) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -5118,12 +4999,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ArgumentDescriptions>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames)) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefinedName>(deep);
@@ -5248,13 +5123,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:index*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions)) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:index*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions)) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArgumentDescription>(deep);
@@ -5534,14 +5404,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<TupleSetHeader>()
 .AddAttribute(0, "uniqueName", a => a.UniqueName)
 .AddAttribute(0, "hierarchyName", a => a.HierarchyName);
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:uniqueName*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:hierarchyName*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:uniqueName*/, 0, 65535) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(1 /*:hierarchyName*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TupleSetHeader>(deep);
@@ -5649,14 +5514,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<TupleSetRowItem>()
 .AddAttribute(0, "u", a => a.UniqueName)
 .AddAttribute(0, "d", a => a.DisplayName);
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:u*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:d*/, 0, 65535) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:u*/, 0, 65535) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(1 /*:d*/, 0, 65535) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TupleSetRowItem>(deep);
@@ -5696,13 +5556,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:hierarchy*/, true, -2, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:hierarchy*/, true, -2, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SetLevel>(deep);
@@ -6012,14 +5867,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.NegativeBorderColor), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.BarAxisColor), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueLessEqualToAnother(0 /*:minLength*/, 1 /*:maxLength*/, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:maxLength*/, true, double.NegativeInfinity, true, 100, true) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLessEqualToAnother(0 /*:minLength*/, 1 /*:maxLength*/, true) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueRangeConstraint(1 /*:maxLength*/, true, double.NegativeInfinity, true, 100, true) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataBar>(deep);
@@ -7321,6 +7171,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.TupleItems), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:weightExpression*/, 1, 65535) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -7361,12 +7212,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:weightExpression*/, 1, 65535) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotChange>(deep);
@@ -7419,13 +7264,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:valueType*/, 1, 32767) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:valueType*/, 1, 32767) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotEditValue>(deep);
@@ -7718,6 +7558,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotAreas), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueSetConstraint(1 /*:type*/, true, new string[] { "none" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:priority*/, true, 1, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new ReferenceExistConstraint(2 /*:priority*/, "..", typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule), "DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule", 1 /*:priority*/) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -7745,14 +7588,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(1 /*:type*/, true, new string[] { "none" }) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueRangeConstraint(2 /*:priority*/, true, 1, true, double.PositiveInfinity, true) { Version = FileFormatVersions.Office2010 },
-            new ReferenceExistConstraint(2 /*:priority*/, "..", typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule), "DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule", 1 /*:priority*/) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormat>(deep);
@@ -7899,6 +7734,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new ReferenceExistConstraint(0 /*:name*/, ".", typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyle), "DocumentFormat.OpenXml.Spreadsheet.TableStyle", 0 /*:name*/) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles)) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -7913,14 +7751,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<SlicerStyleElements>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Version = FileFormatVersions.Office2010 },
-            new ReferenceExistConstraint(0 /*:name*/, ".", typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyle), "DocumentFormat.OpenXml.Spreadsheet.TableStyle", 0 /*:name*/) { Version = FileFormatVersions.Office2010 },
-            new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles)) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerStyle>(deep);
@@ -7971,14 +7801,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "dxfId", a => a.FormatId);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:type*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements)) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:dxfId*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:type*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements)) { Version = FileFormatVersions.Office2010 },
-            new IndexReferenceConstraint(1 /*:dxfId*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerStyleElement>(deep);
@@ -8295,6 +8120,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
             };
+            builder.AddConstraint(new AttributeMutualExclusive(0, 1) /*:password, :algorithmName*/ { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:spinCount*/, true, double.NegativeInfinity, true, 10000000, true) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(5 /*:name*/, 1, 255) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -8309,14 +8137,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeMutualExclusive(0, 1) /*:password, :algorithmName*/ { Version = FileFormatVersions.Office2010 },
-            new AttributeValueRangeConstraint(4 /*:spinCount*/, true, double.NegativeInfinity, true, 10000000, true) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(5 /*:name*/, 1, 255) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProtectedRange>(deep);
@@ -8647,6 +8467,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, false, null) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 32767) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:caption*/, 1, int.MaxValue) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:columnCount*/, true, 1, true, 20000, true) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -8661,15 +8485,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:name*/, false, null) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 32767) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueLengthConstraint(2 /*:caption*/, 1, int.MaxValue) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueRangeConstraint(4 /*:columnCount*/, true, 1, true, 20000, true) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Slicer>(deep);
@@ -8991,13 +8806,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new ReferenceExistConstraint(0 /*:tabId*/, "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), "DocumentFormat.OpenXml.Spreadsheet.Sheet", 1 /*:sheetId*/) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new ReferenceExistConstraint(0 /*:tabId*/, "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), "DocumentFormat.OpenXml.Spreadsheet.Sheet", 1 /*:sheetId*/) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerCachePivotTable>(deep);
@@ -9209,13 +9019,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem), 1, 0, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValuePatternConstraint(0 /*:startItem*/, @"(0|[1-9][0-9]*000)") { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValuePatternConstraint(0 /*:startItem*/, @"(0|[1-9][0-9]*000)") { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OlapSlicerCacheRange>(deep);
@@ -9397,6 +9202,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:uniqueName*/, 1, 32767) { Version = FileFormatVersions.Office2010 });
         }
 
         /// <summary>
@@ -9411,12 +9217,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<OlapSlicerCacheRanges>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:uniqueName*/, 1, 32767) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OlapSlicerCacheLevelData>(deep);
@@ -9769,13 +9569,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "s", a => a.IsSelected)
 .AddAttribute(0, "nd", a => a.NonDisplay);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:x*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems)) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:x*/, true, typeof(DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems)) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabularSlicerCacheItem>(deep);

@@ -1,0 +1,15 @@
+name: GitHub Polls Actions Bot
+
+on:
+  issue_comment:
+    types: [created, edited] # issue comment is created or edited
+  issues:
+    types: [opened, edited] # issue is opened or edited
+
+jobs:
+  polls:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: imjohnbo/gh-polls-bot-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # created for you automatically; https://help.github.com/en/github/automating-your-workflow-with-github-actions/virtual-environments-for-github-actions#github_token-secret

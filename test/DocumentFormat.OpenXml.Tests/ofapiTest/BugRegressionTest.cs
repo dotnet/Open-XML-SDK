@@ -93,10 +93,19 @@ namespace DocumentFormat.OpenXml.Tests
 
             // an empty "AlternateContent"
             var errors = validator.Validate(p); // should no hang, no OOM
-            Assert.Equal(2, errors.Count());
-            Assert.Equal("Sch_IncompleteContentExpectingComplex", errors.First().Id);
-            Assert.Same(p.FirstChild, errors.First().Node);  // acb should have a choice
-            Assert.Same(p.FirstChild.NextSibling().FirstChild.NextSibling(), errors.ElementAt(1).RelatedNode);
+
+            Assert.Collection(
+                errors,
+                error =>
+                {
+                    Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", error.Id);
+                    Assert.Same(p.FirstChild.NextSibling().FirstChild.NextSibling(), error.RelatedNode);
+                },
+                error =>
+                {
+                    Assert.Equal("Sch_IncompleteContentExpectingComplex", error.Id);
+                    Assert.Same(p.FirstChild, error.Node);  // acb should have a choice
+                });
 
             // append an empty "Choice"
             p.AddNamespaceDeclaration("w14", "http://w14");

@@ -2,13 +2,30 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation
 {
     internal static class ValidationTraverser
     {
-        internal delegate void ValidationAction(ValidationContext validationContext);
+        public static IEnumerable<OpenXmlElement> Descendants(this OpenXmlElement element, FileFormatVersions version = FileFormatVersions.Office2007, TraversalOptions options = TraversalOptions.None)
+        {
+            if (element is null)
+            {
+                return Cached.Array<OpenXmlElement>();
+            }
+
+            if ((options & TraversalOptions.SelectAlternateContent) == TraversalOptions.SelectAlternateContent)
+            {
+                return ValidatingTraverse(element, new MCContext(false), version);
+            }
+            else
+            {
+                return element.Descendants();
+            }
+        }
 
         /// <summary>
         /// Enumerate all the descendants elements of this element and do validating.
@@ -16,108 +33,104 @@ namespace DocumentFormat.OpenXml.Validation
         /// </summary>
         /// <param name="validationContext"></param>
         /// <param name="validateAction">The delegate method to do the validating.</param>
-        /// <param name="finishAction">The delegate method to be called when the traverse finished.</param>
-        internal static void ValidatingTraverse(ValidationContext validationContext, ValidationAction validateAction, ValidationAction finishAction)
+        internal static void ValidatingTraverse(ValidationContext validationContext, Action<ValidationContext> validateAction)
         {
-            Debug.Assert(validationContext != null);
-            Debug.Assert(validationContext.McContext != null);
-            Debug.Assert(validateAction != null);
+            var children = ValidatingTraverse(validationContext.Stack.Current.Element, validationContext.McContext, validationContext.FileFormat);
 
-            if (validationContext.IsCancelled)
+            foreach (var child in children)
             {
-                return;
-            }
+                if (validationContext.IsCancelled)
+                {
+                    return;
+                }
 
-            OpenXmlElement element = validationContext.Stack.Current.Element;
-
-            //specify whether ValidationAction is called
-            bool validatingActed = false;
-
-            // 1. Skip elements in ProcessContent.
-            // 2. Select correct Choice / Fallback
-            // Need bookkeep MC context
-            // Need to collect MC context from ancestor
-
-            // bookkeep MC context,
-            // MC Spec: Compatibility-rule attributes shall affect the element to which they 1 are attached, including the element’s other attributes and contents.
-            validationContext.McContext.PushMCAttributes2(element.MCAttributes, element.LookupNamespace);
-
-            if (element.IsStrongTypedElement())
-            {
-                // only call validate on elements that defined in the format.
-                if (validationContext.FileFormat.AtLeast(element.InitialVersion))
+                using (validationContext.Stack.Push(element: child))
                 {
                     validateAction(validationContext);
-                    validatingActed = true;
-                }
-                else if (validationContext.McContext.IsProcessContent(element))
-                {
-                    // do not validate this element.
-                }
-
-                foreach (OpenXmlElement child in element.ChildElements)
-                {
-                    using (validationContext.Stack.Push(element: child))
-                    {
-                        ValidatingTraverse(validationContext, validateAction, finishAction);
-                    }
                 }
             }
-            else if (element.IsUnknown())
+        }
+
+        private static IEnumerable<OpenXmlElement> ValidatingTraverse(OpenXmlElement inElement, MCContext mcContext, FileFormatVersions version)
+        {
+            var stack = new Stack<OpenXmlElement>();
+
+            stack.Push(inElement);
+
+            while (stack.Count > 0)
             {
-                // TODO: Issue: all types are weak types now, need to change the Framework to load strong typed elements!!!
-                if (validationContext.McContext.IsProcessContent(element))
+                var element = stack.Pop();
+
+                if (element is null)
                 {
-                    // do validating on children elements.
-                    foreach (OpenXmlElement child in element.ChildElements)
+                    mcContext.PopMCAttributes2();
+                    continue;
+                }
+
+                // 1. Skip elements in ProcessContent.
+                // 2. Select correct Choice / Fallback
+                // Need bookkeep MC context
+                // Need to collect MC context from ancestor
+
+                // bookkeep MC context,
+                // MC Spec: Compatibility-rule attributes shall affect the element to which they 1 are attached, including the element’s other attributes and contents.
+                mcContext.PushMCAttributes2(element.MCAttributes, element.LookupNamespace);
+                stack.Push(null);
+
+                if (element.IsStrongTypedElement())
+                {
+                    // only call validate on elements that defined in the format.
+                    if (version.AtLeast(element.InitialVersion))
                     {
-                        using (validationContext.Stack.Push(element: child))
+                        yield return element;
+                    }
+                    else if (mcContext.IsProcessContent(element))
+                    {
+                        // do not validate this element.
+                    }
+
+                    foreach (var child in element.ChildElements)
+                    {
+                        stack.Push(child);
+                    }
+                }
+                else if (element.IsUnknown())
+                {
+                    // TODO: Issue: all types are weak types now, need to change the Framework to load strong typed elements!!!
+                    if (mcContext.IsProcessContent(element))
+                    {
+                        // do validating on children elements.
+                        foreach (var child in element.ChildElements)
                         {
-                            ValidatingTraverse(validationContext, validateAction, finishAction);
+                            stack.Push(child);
                         }
                     }
                 }
-            }
-            else if (element.IsAlternateContent())
-            {
-                validateAction(validationContext);
-                validatingActed = true;
-
-                OpenXmlCompositeElement selectedContent;
-
-                selectedContent = validationContext.McContext.GetContentFromACBlock((AlternateContent)element, validationContext.FileFormat);
-
-                if (selectedContent != null)
+                else if (element.IsAlternateContent())
                 {
-                    foreach (var child in selectedContent.ChildElements)
+                    yield return element;
+
+                    var selectedContent = mcContext.GetContentFromACBlock((AlternateContent)element, version);
+
+                    if (selectedContent != null)
                     {
-                        using (validationContext.Stack.Push(element: child))
+                        foreach (var child in selectedContent.ChildElements)
                         {
-                            ValidatingTraverse(validationContext, validateAction, finishAction);
+                            stack.Push(child);
                         }
                     }
                 }
-            }
-            else if (element.IsMiscNode())
-            {
-                // non-element node
-                // just skip
-            }
-            else
-            {
-                Debug.Assert(element is AlternateContentChoice || element is AlternateContentFallback);
-                Debug.Assert(element.Parent != null && element.Parent is AlternateContent);
-
-                // should not be here, otherwise, wrong case ( the parent is not AlternateContent).
-            }
-
-            validationContext.McContext.PopMCAttributes2();
-
-            if (validatingActed && finishAction != null)
-            {
-                using (validationContext.Stack.Push(element: element))
+                else if (element.IsMiscNode())
                 {
-                    finishAction(validationContext);
+                    // non-element node
+                    // just skip
+                }
+                else
+                {
+                    Debug.Assert(element is AlternateContentChoice || element is AlternateContentFallback);
+                    Debug.Assert(element.Parent != null && element.Parent is AlternateContent);
+
+                    // should not be here, otherwise, wrong case ( the parent is not AlternateContent).
                 }
             }
         }

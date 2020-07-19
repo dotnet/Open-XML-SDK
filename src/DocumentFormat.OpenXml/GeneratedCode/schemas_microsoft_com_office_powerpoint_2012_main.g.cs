@@ -122,14 +122,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:providerId*/, 1, 100) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:userId*/, 1, 300) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:providerId*/, 1, 100) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 },
-            new AttributeValueLengthConstraint(0 /*:userId*/, 1, 300) { Application = ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresenceInfo>(deep);

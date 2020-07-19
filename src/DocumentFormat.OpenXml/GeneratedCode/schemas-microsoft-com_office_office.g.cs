@@ -668,13 +668,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "signinginstructions", a => a.SigningInstructions)
 .AddAttribute(0, "addlxml", a => a.AdditionalXml)
 .AddAttribute(0, "sigprovurl", a => a.SignatureProviderUrl);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*:id*/, true, null));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(2 /*:id*/, true, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SignatureLine>(deep);
@@ -1370,16 +1365,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "lightposition2", a => a.LightPosition2)
 .AddAttribute(0, "lightlevel2", a => a.LightLevel2)
 .AddAttribute(0, "lightharsh2", a => a.LightHarsh2);
+            builder.AddConstraint(new AttributeValueRangeConstraint(22 /*:facet*/, true, 1, true, 65536, true));
+            builder.AddConstraint(new AttributeValuePatternConstraint(21 /*:edge*/, @"(\d{1,5}|1[0-6][0-8]\d{3}|1690[0-8]\d|16909[0-3])pt"));
+            builder.AddConstraint(new AttributeValueRangeConstraint(11 /*:orientationangle*/, true, -32767, true, 32767, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(6 /*:skewangle*/, true, -32767, true, 32767, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(22 /*:facet*/, true, 1, true, 65536, true),
-            new AttributeValuePatternConstraint(21 /*:edge*/, @"(\d{1,5}|1[0-6][0-8]\d{3}|1690[0-8]\d|16909[0-3])pt"),
-            new AttributeValueRangeConstraint(11 /*:orientationangle*/, true, -32767, true, 32767, true),
-            new AttributeValueRangeConstraint(6 /*:skewangle*/, true, -32767, true, 32767, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Extrusion>(deep);
@@ -1561,13 +1551,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "textborder", a => a.TextBorder)
 .AddAttribute(0, "minusx", a => a.MinusX)
 .AddAttribute(0, "minusy", a => a.MinusY);
+            builder.AddConstraint(new AttributeValueSetConstraint(2 /*:type*/, true, new string[] { "rightAngle", "oneSegment", "twoSegment", "threeSegment" }));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(2 /*:type*/, true, new string[] { "rightAngle", "oneSegment", "twoSegment", "threeSegment" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Callout>(deep);
@@ -1873,6 +1858,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LockedField), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FieldCodes), 0, 1)
             };
+            builder.AddConstraint(new AttributeValuePatternConstraint(4 /*:ObjectID*/, @"_(\d{1,9}|1\d{9}|20\d{8}|21[0-3]\d{7}|214[0-6]\d{6}|2147[0-3]\d{5}|21474[0-7]\d{4}|214748[0-2]\d{3}|2147483[0-5]\d{2}|21474836[0-3]\d|214748364[0-7])"));
+            builder.AddConstraint(new ReferenceExistConstraint(2 /*:ShapeID*/, ".", typeof(DocumentFormat.OpenXml.Vml.Shape), "DocumentFormat.OpenXml.Vml.Shape", 0 /*:id*/));
         }
 
         /// <summary>
@@ -1913,13 +1900,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             get => GetElement<FieldCodes>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValuePatternConstraint(4 /*:ObjectID*/, @"_(\d{1,9}|1\d{9}|20\d{8}|21[0-3]\d{7}|214[0-6]\d{6}|2147[0-3]\d{5}|21474[0-7]\d{4}|214748[0-2]\d{3}|2147483[0-5]\d{2}|21474836[0-3]\d|214748364[0-7])"),
-            new ReferenceExistConstraint(2 /*:ShapeID*/, ".", typeof(DocumentFormat.OpenXml.Vml.Shape), "DocumentFormat.OpenXml.Vml.Shape", 0 /*:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleObject>(deep);
@@ -2054,14 +2034,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "bottom");
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:weight*/, true, 0, true, 20116800, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(7 /*:miterlimit*/, true, double.NegativeInfinity, true, 32767, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(2 /*:weight*/, true, 0, true, 20116800, true),
-            new AttributeValueRangeConstraint(7 /*:miterlimit*/, true, double.NegativeInfinity, true, 32767, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomStroke>(deep);
@@ -2085,13 +2060,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "column");
+            builder.AddConstraint(new AttributeValueSetConstraint(10 /*:dashstyle*/, true, new string[] { "solid", "shortdash", "shortdot", "shortdashdot", "shortdashdotdot", "dot", "dash", "longdash", "longdashdotdot", "dashdot" }));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(10 /*:dashstyle*/, true, new string[] { "solid", "shortdash", "shortdot", "shortdashdot", "shortdashdotdot", "dot", "dash", "longdash", "longdashdotdot", "dashdot" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnStroke>(deep);

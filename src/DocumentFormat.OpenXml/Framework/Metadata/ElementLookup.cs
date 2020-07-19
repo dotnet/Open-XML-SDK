@@ -34,19 +34,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public IEnumerable<ElementChild> Elements => _data;
 
-        public bool Contains(byte id, string name)
-        {
-            foreach (var child in _data)
-            {
-                if (child.NamespaceId == id && object.Equals(child.Name, name))
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
         public OpenXmlElement Create(byte id, string name)
         {
             if (_data.Length == 0)

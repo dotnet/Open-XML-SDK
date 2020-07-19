@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
@@ -230,8 +229,6 @@ namespace DocumentFormat.OpenXml
         /// Gets the OpenXmlElementContext from the root element.
         /// </summary>
         internal virtual OpenXmlElementContext RootElementContext => Parent?.RootElementContext;
-
-        internal virtual ISemanticConstraint[] SemanticConstraints => Cached.Array<ISemanticConstraint>();
 
         /// <summary>
         /// Gets the first child of the OpenXmlElement element.
@@ -793,8 +790,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The OpenXmlElement element that immediately precedes the current OpenXmlElement element.</returns>
         public OpenXmlElement PreviousSibling()
         {
-            var parent = Parent as OpenXmlCompositeElement;
-            if (parent == null)
+            if (!(Parent is OpenXmlCompositeElement parent))
             {
                 return null;
             }
@@ -827,9 +823,9 @@ namespace DocumentFormat.OpenXml
 
             while (element != null)
             {
-                if (element is T)
+                if (element is T t)
                 {
-                    return (T)element;
+                    return t;
                 }
 
                 element = element.PreviousSibling();
@@ -866,9 +862,9 @@ namespace DocumentFormat.OpenXml
 
             while (element != null)
             {
-                if (element is T)
+                if (element is T t)
                 {
-                    return (T)element;
+                    return t;
                 }
 
                 element = element.NextSibling();
@@ -904,9 +900,9 @@ namespace DocumentFormat.OpenXml
 
             while (ancestor != null)
             {
-                if (ancestor is T)
+                if (ancestor is T t)
                 {
-                    yield return (T)ancestor;
+                    yield return t;
                 }
 
                 ancestor = ancestor.Parent;
@@ -936,12 +932,9 @@ namespace DocumentFormat.OpenXml
         public IEnumerable<T> Descendants<T>()
             where T : OpenXmlElement
         {
-            T elementT = null;
-
             foreach (var element in Descendants())
             {
-                elementT = element as T;
-                if (elementT != null)
+                if (element is T elementT)
                 {
                     yield return elementT;
                 }

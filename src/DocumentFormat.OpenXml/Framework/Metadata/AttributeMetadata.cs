@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public abstract byte NamespaceId { get; }
 
-        public abstract ReadOnlyArray<IOpenXmlSimpleTypeValidator> Validators { get; }
+        public abstract ReadOnlyArray<IValidator> Validators { get; }
 
         public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
 
@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         public class Builder<TSimpleType> : ValidatorBuilder, IMetadataBuilder<AttributeMetadata>
             where TSimpleType : OpenXmlSimpleType, new()
         {
-            private static IOpenXmlSimpleTypeValidator _defaultValidator = GetDefaultValidator();
+            private static IValidator _defaultValidator = GetDefaultValidator();
 
             public Builder(byte nsId, string name, string propertyName)
             {
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 return new AttributeInfo(Namespace, Name, PropertyName, GetValidators());
             }
 
-            private static IOpenXmlSimpleTypeValidator GetDefaultValidator()
+            private static IValidator GetDefaultValidator()
             {
                 var instance = new TSimpleType();
 
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             [DebuggerDisplay("{PropertyName,nq}")]
             private class AttributeInfo : AttributeMetadata
             {
-                public AttributeInfo(byte ns, string name, string propertyName, IOpenXmlSimpleTypeValidator[] validators)
+                public AttributeInfo(byte ns, string name, string propertyName, IValidator[] validators)
                 {
                     PropertyName = propertyName;
                     NamespaceId = ns;
@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
                 public override byte NamespaceId { get; }
 
-                public override ReadOnlyArray<IOpenXmlSimpleTypeValidator> Validators { get; }
+                public override ReadOnlyArray<IValidator> Validators { get; }
 
                 public override Type Type => typeof(TSimpleType);
 

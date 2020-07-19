@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // Debug.Assert(!(openxmlElement is AlternateContent))
             Debug.Assert(!(openxmlElement is AlternateContentChoice || openxmlElement is AlternateContentFallback));
 
-            ValidationTraverser.ValidatingTraverse(validationContext, SchemaTypeValidator.Validate, null);
+            ValidationTraverser.ValidatingTraverse(validationContext, SchemaTypeValidator.Validate);
 
             return;
         }

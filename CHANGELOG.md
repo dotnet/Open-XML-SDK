@@ -9,7 +9,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added `SmartTagClean` and `SmartTagId` in place of `SmtClean` and `SmtId` (#747)
 
-## Version 2.11.1
+## Version 2.11.3 - 2020-07-17
+### Fixed
+- Fixed massive performance bottleneck when IndexReferenceConstraint and ReferenceExistConstraint are involved (#763)
+- Fixed CellValue to only include three most signficant digits on second fractions to correct issue loading dates (#741)
+- Fixed a couple of validation indexing errors that might cause erroneous validation errors (#767)
+- Updated internal validation system to not use recursion, allowing for better short-circuiting (#766)
+
+## Version 2.11.2 - 2020-07-10
+
+### Fixed
+- Fixed broken source link (#749)
+- Ensured compilation is deterministic (#749)
+- Removed extra file in NuGet package (#749)
+
+## Version 2.11.1 - 2020-07-10
 
 ### Fixed
 - Ensure .NET Framework builds pass PEVerify (#744)

@@ -1029,15 +1029,10 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 {
    aBuilder.AddValidator(new StringValidator() { Length = (1L) });
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*wne:name*/, 0, 255) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(3 /*wne:bEncrypt*/, true, new string[] { "0" }) { Version = FileFormatVersions.Office2010 });
+            builder.AddConstraint(new AttributeValueSetConstraint(4 /*wne:cmg*/, true, new string[] { "56" }) { Version = FileFormatVersions.Office2010 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*wne:name*/, 0, 255) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueSetConstraint(3 /*wne:bEncrypt*/, true, new string[] { "0" }) { Version = FileFormatVersions.Office2010 },
-            new AttributeValueSetConstraint(4 /*wne:cmg*/, true, new string[] { "56" }) { Version = FileFormatVersions.Office2010 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Mcd>(deep);

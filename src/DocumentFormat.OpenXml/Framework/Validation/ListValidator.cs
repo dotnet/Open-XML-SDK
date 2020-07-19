@@ -5,9 +5,9 @@ using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal class ListValidator : IOpenXmlSimpleTypeValidator
+    internal class ListValidator : IValidator
     {
-        public static IOpenXmlSimpleTypeValidator Instance { get; } = new ListValidator();
+        public static IValidator Instance { get; } = new ListValidator();
 
         private ListValidator()
         {

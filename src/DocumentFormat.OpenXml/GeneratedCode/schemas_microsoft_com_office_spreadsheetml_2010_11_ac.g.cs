@@ -48,13 +48,8 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:url*/, 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:url*/, 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbsolutePath>(deep);

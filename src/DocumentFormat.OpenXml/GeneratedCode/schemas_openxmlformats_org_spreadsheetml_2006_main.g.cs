@@ -808,6 +808,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Maps), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(6 /*:refreshedBy*/, 0, 255));
         }
 
         /// <summary>
@@ -952,12 +953,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<PivotCacheDefinitionExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(6 /*:refreshedBy*/, 0, 255)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheDefinition>(deep);
@@ -1958,6 +1953,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:autoFormatId*/, true, 0, true, 16, true));
+            builder.AddConstraint(new ReferenceExistConstraint(1 /*:cacheId*/, "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), "DocumentFormat.OpenXml.Spreadsheet.PivotCache", 0 /*:cacheId*/));
+            builder.AddConstraint(new AttributeValueRangeConstraint(50 /*:indent*/, true, double.NegativeInfinity, true, 127, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(40 /*:pageWrap*/, true, double.NegativeInfinity, true, 255, true));
+            builder.AddConstraint(new AttributeValueLengthConstraint(11 /*:dataCaption*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(12 /*:grandTotalCaption*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(13 /*:errorCaption*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(15 /*:missingCaption*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(17 /*:pageStyle*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(18 /*:pivotTableStyle*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(19 /*:vacatedStyle*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(20 /*:tag*/, 0, 255) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -2180,24 +2188,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<PivotTableDefinitionExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(4 /*:autoFormatId*/, true, 0, true, 16, true),
-            new ReferenceExistConstraint(1 /*:cacheId*/, "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), "DocumentFormat.OpenXml.Spreadsheet.PivotCache", 0 /*:cacheId*/),
-            new AttributeValueRangeConstraint(50 /*:indent*/, true, double.NegativeInfinity, true, 127, true),
-            new AttributeValueRangeConstraint(40 /*:pageWrap*/, true, double.NegativeInfinity, true, 255, true),
-            new AttributeValueLengthConstraint(11 /*:dataCaption*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(12 /*:grandTotalCaption*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(13 /*:errorCaption*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(15 /*:missingCaption*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(17 /*:pageStyle*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(18 /*:pivotTableStyle*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(19 /*:vacatedStyle*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(20 /*:tag*/, 0, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableDefinition>(deep);
@@ -2539,6 +2529,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueConditionToAnother(4 /*:backgroundRefresh*/, 5 /*:firstBackgroundRefresh*/, new string[] { "true" }, new string[] { "true" }));
+            builder.AddConstraint(new AttributeValueRangeConstraint(14 /*:connectionId*/, true, 1, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new ReferenceExistConstraint(14 /*:connectionId*/, "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", 0 /*:id*/));
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 255));
         }
 
         /// <summary>
@@ -2566,15 +2560,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<QueryTableExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueConditionToAnother(4 /*:backgroundRefresh*/, 5 /*:firstBackgroundRefresh*/, new string[] { "true" }, new string[] { "true" }),
-            new AttributeValueRangeConstraint(14 /*:connectionId*/, true, 1, true, double.PositiveInfinity, true),
-            new ReferenceExistConstraint(14 /*:connectionId*/, "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", 0 /*:id*/),
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<QueryTable>(deep);
@@ -2690,14 +2675,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SharedStringItem), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:uniqueCount*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:uniqueCount*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedStringTable>(deep);
@@ -2927,16 +2907,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Header), 1, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(8 /*:version*/, true, 1, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(11 /*:preserveHistory*/, true, 0, true, 32768, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(7 /*:revisionId*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:guid*/, false, new string[] { "00000000-0000-0000-0000-000000000000" }));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(8 /*:version*/, true, 1, true, 2147483647, true),
-            new AttributeValueRangeConstraint(11 /*:preserveHistory*/, true, 0, true, 32768, true),
-            new AttributeValueRangeConstraint(7 /*:revisionId*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new AttributeValueSetConstraint(0 /*:guid*/, false, new string[] { "00000000-0000-0000-0000-000000000000" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Headers>(deep);
@@ -3161,13 +3136,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.UserInfo), 0, 256)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 256, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 256, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Users>(deep);
@@ -5030,6 +5000,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtensionList), 0, 1)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(13 /*:dataDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(15 /*:headerRowBorderDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(12 /*:headerRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(16 /*:tableBorderDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(17 /*:totalsRowBorderDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(14 /*:totalsRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new ReferenceExistConstraint(21 /*:connectionId*/, "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", 0 /*:id*/));
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:id*/, false, new string[] { "0", "" }));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 4294967294, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:name*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:comment*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(19 /*:dataCellStyle*/, 1, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(18 /*:headerRowCellStyle*/, 1, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(20 /*:totalsRowCellStyle*/, 1, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(21 /*:connectionId*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -5096,26 +5081,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<TableExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(13 /*:dataDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
-            new IndexReferenceConstraint(15 /*:headerRowBorderDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
-            new IndexReferenceConstraint(12 /*:headerRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
-            new IndexReferenceConstraint(16 /*:tableBorderDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
-            new IndexReferenceConstraint(17 /*:totalsRowBorderDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
-            new IndexReferenceConstraint(14 /*:totalsRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
-            new ReferenceExistConstraint(21 /*:connectionId*/, "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", 0 /*:id*/),
-            new AttributeValueSetConstraint(0 /*:id*/, false, new string[] { "0", "" }),
-            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 4294967294, true) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(1 /*:name*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(3 /*:comment*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(19 /*:dataCellStyle*/, 1, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(18 /*:headerRowCellStyle*/, 1, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(20 /*:totalsRowCellStyle*/, 1, 255) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(21 /*:connectionId*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Table>(deep);
@@ -6146,15 +6111,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
  .AddAttribute(0, "l", a => a.NewLevel)
  .AddAttribute(0, "t", a => a.NewThread)
  .AddAttribute(0, "a", a => a.Array);
+            builder.AddConstraint(new AttributeMutualExclusive(3, 2) /*:l, :s*/ );
+            builder.AddConstraint(new ReferenceExistConstraint(1 /*:i*/, "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), "DocumentFormat.OpenXml.Spreadsheet.Sheet", 1 /*:sheetId*/));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:i*/, true, 1, true, 65534, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeMutualExclusive(3, 2) /*:l, :s*/ ,
-            new ReferenceExistConstraint(1 /*:i*/, "/WorkbookPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), "DocumentFormat.OpenXml.Spreadsheet.Sheet", 1 /*:sheetId*/),
-            new AttributeValueRangeConstraint(1 /*:i*/, true, 1, true, 65534, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculationCell>(deep);
@@ -6391,6 +6351,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentText), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentProperties), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:authorId*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Author), "DocumentFormat.OpenXml.Spreadsheet.Author", 0));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*:guid*/, false, null));
         }
 
         /// <summary>
@@ -6418,13 +6380,6 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             get => GetElement<CommentProperties>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(1 /*:authorId*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Author), "DocumentFormat.OpenXml.Spreadsheet.Author", 0),
-            new UniqueAttributeValueConstraint(2 /*:guid*/, false, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comment>(deep);
@@ -7116,16 +7071,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new AnyParticle(0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:ID*/, true, null));
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:ID*/, 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:SchemaRef*/, 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:Namespace*/, 0, 65535) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:ID*/, true, null),
-            new AttributeValueLengthConstraint(0 /*:ID*/, 0, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(1 /*:SchemaRef*/, 0, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(2 /*:Namespace*/, 0, 65535) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Schema>(deep);
@@ -7311,6 +7261,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataBinding), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(3 /*:SchemaID*/, true, null));
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:Name*/, 0, 65535));
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:RootElement*/, 0, 65535));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:ID*/, true, 1, true, 2147483647, true));
         }
 
         /// <summary>
@@ -7325,15 +7279,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DataBinding>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(3 /*:SchemaID*/, true, null),
-            new AttributeValueLengthConstraint(1 /*:Name*/, 0, 65535),
-            new AttributeValueLengthConstraint(2 /*:RootElement*/, 0, 65535),
-            new AttributeValueRangeConstraint(0 /*:ID*/, true, 1, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Map>(deep);
@@ -7444,21 +7389,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new AnyParticle(0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:DataBindingName*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(3 /*:FileBindingName*/, true, null));
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:DataBindingLoadMode*/, true, 0, true, 4, true));
+            builder.AddConstraint(new AttributeAbsentConditionToValue(2 /*:ConnectionID*/, 1 /*:FileBinding*/ , "false"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue(2 /*:ConnectionID*/, 1 /*:FileBinding*/ , "true"));
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:DataBindingName*/, 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:FileBindingName*/, 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:ConnectionID*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeAbsentConditionToValue(3 /*:FileBindingName*/, 1 /*:FileBinding*/ , "false") { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:DataBindingName*/, true, null),
-            new UniqueAttributeValueConstraint(3 /*:FileBindingName*/, true, null),
-            new AttributeValueRangeConstraint(4 /*:DataBindingLoadMode*/, true, 0, true, 4, true),
-            new AttributeAbsentConditionToValue(2 /*:ConnectionID*/, 1 /*:FileBinding*/ , "false"),
-            new AttributeRequiredConditionToValue(2 /*:ConnectionID*/, 1 /*:FileBinding*/ , "true"),
-            new AttributeValueLengthConstraint(0 /*:DataBindingName*/, 0, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(3 /*:FileBindingName*/, 0, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(2 /*:ConnectionID*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel },
-            new AttributeAbsentConditionToValue(3 /*:FileBindingName*/, 1 /*:FileBinding*/ , "false") { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataBinding>(deep);
@@ -7759,6 +7699,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Parameters), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(5 /*:name*/, true, null));
+            builder.AddConstraint(new AttributeValueRangeConstraint(7 /*:type*/, true, 1, true, 8, true));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, true, null));
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:interval*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(5 /*:name*/, 1, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(6 /*:description*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(19 /*:singleSignOnId*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:odcFile*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:sourceFile*/, 0, 255) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -7838,20 +7787,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ConnectionExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(5 /*:name*/, true, null),
-            new AttributeValueRangeConstraint(7 /*:type*/, true, 1, true, 8, true),
-            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
-            new AttributeValueRangeConstraint(4 /*:interval*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(5 /*:name*/, 1, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(6 /*:description*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(19 /*:singleSignOnId*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(2 /*:odcFile*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(1 /*:sourceFile*/, 0, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Connection>(deep);
@@ -8063,17 +7998,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "integer", a => a.Integer)
 .AddAttribute(0, "string", a => a.String)
 .AddAttribute(0, "cell", a => a.Cell);
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 0, 255));
+            builder.AddConstraint(new AttributeValueSetConstraint(1 /*:sqlType*/, true, new string[] { "-22", "-20", "-11", "-10", "-9", "-8", "-7", "-6", "-5", "-4", "-3", "-2", "-1", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113" }));
+            builder.AddConstraint(new AttributeValueLengthConstraint(8 /*:string*/, 0, 255));
+            builder.AddConstraint(new AttributeRequiredConditionToValue(9 /*:cell*/, 2 /*:parameterType*/ , "cell"));
+            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:prompt*/, 0, 65535));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255),
-            new AttributeValueSetConstraint(1 /*:sqlType*/, true, new string[] { "-22", "-20", "-11", "-10", "-9", "-8", "-7", "-6", "-5", "-4", "-3", "-2", "-1", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113" }),
-            new AttributeValueLengthConstraint(8 /*:string*/, 0, 255),
-            new AttributeRequiredConditionToValue(9 /*:cell*/, 2 /*:parameterType*/ , "cell"),
-            new AttributeValueLengthConstraint(4 /*:prompt*/, 0, 65535)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Parameter>(deep);
@@ -8222,13 +8152,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<TextField>()
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "position", a => a.Position);
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:position*/, true, 0, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:position*/, true, 0, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextField>(deep);
@@ -8443,6 +8368,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, null));
         }
 
         /// <summary>
@@ -8470,12 +8396,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<FieldGroup>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:name*/, true, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheField>(deep);
@@ -8843,14 +8763,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "sheet", a => a.Sheet)
 .AddAttribute(19, "id", a => a.Id);
+            builder.AddConstraint(new AttributeMutualExclusive(5, 4) /*:name, :ref*/ );
+            builder.AddConstraint(new AttributeValueLengthConstraint(6 /*:sheet*/, 1, 31));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeMutualExclusive(5, 4) /*:name, :ref*/ ,
-            new AttributeValueLengthConstraint(6 /*:sheet*/, 1, 31)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RangeSet>(deep);
@@ -9040,14 +8955,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(4 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0));
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:c*/, 0, 65535) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(4 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0),
-            new AttributeValueLengthConstraint(2 /*:c*/, 0, 65535) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MissingItem>(deep);
@@ -9251,15 +9161,10 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(5 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0));
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:v*/, false, new string[] { "INF", "-INF", "NaN" }) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(5 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0),
-            new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueSetConstraint(0 /*:v*/, false, new string[] { "INF", "-INF", "NaN" }) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberItem>(deep);
@@ -9377,13 +9282,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BooleanItem>(deep);
@@ -9587,6 +9487,8 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(5 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0));
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -9601,13 +9503,6 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             get => GetElement<Tuples>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(5 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0),
-            new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorItem>(deep);
@@ -9811,14 +9706,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(5 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0));
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(5 /*:in*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), "DocumentFormat.OpenXml.Spreadsheet.ServerFormat", 0),
-            new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<StringItem>(deep);
@@ -9936,13 +9826,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(3 /*:c*/, 0, 65535) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DateTimeItem>(deep);
@@ -10169,13 +10054,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mpMap");
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:v*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:v*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MemberPropertiesMap>(deep);
@@ -10428,22 +10308,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "status", a => a.Status)
 .AddAttribute(0, "trend", a => a.Trend)
 .AddAttribute(0, "weight", a => a.Weight);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(6 /*:goal*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(7 /*:status*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(8 /*:trend*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(5 /*:value*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(9 /*:weight*/, true, null));
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:caption*/, 1, 32767) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:displayFolder*/, 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:measureGroup*/, 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:parent*/, 0, 32767) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(6 /*:goal*/, true, null),
-            new UniqueAttributeValueConstraint(7 /*:status*/, true, null),
-            new UniqueAttributeValueConstraint(8 /*:trend*/, true, null),
-            new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null),
-            new UniqueAttributeValueConstraint(5 /*:value*/, true, null),
-            new UniqueAttributeValueConstraint(9 /*:weight*/, true, null),
-            new AttributeValueLengthConstraint(1 /*:caption*/, 1, 32767) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(2 /*:displayFolder*/, 0, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(3 /*:measureGroup*/, 0, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(4 /*:parent*/, 0, 32767) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Kpi>(deep);
@@ -10482,14 +10357,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:x*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:x*/, true, -1, true, double.PositiveInfinity, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:x*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0),
-            new AttributeValueRangeConstraint(0 /*:x*/, true, -1, true, double.PositiveInfinity, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldUsage>(deep);
@@ -10602,6 +10472,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Groups), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null));
         }
 
         /// <summary>
@@ -10629,12 +10500,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupLevel>(deep);
@@ -10829,6 +10694,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMembers), 1, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(4 /*:id*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Groups)));
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:id*/, true, 1, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:uniqueParent*/, 0, 65535));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*:uniqueName*/, true, null));
         }
 
         /// <summary>
@@ -10843,15 +10712,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<GroupMembers>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(4 /*:id*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Groups)),
-            new AttributeValueRangeConstraint(4 /*:id*/, true, 1, true, double.PositiveInfinity, true),
-            new AttributeValueLengthConstraint(3 /*:uniqueParent*/, 0, 65535),
-            new UniqueAttributeValueConstraint(1 /*:uniqueName*/, true, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Group>(deep);
@@ -10972,14 +10832,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "group", a => a.Group);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null));
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:uniqueName*/, 1, 65535) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null),
-            new AttributeValueLengthConstraint(0 /*:uniqueName*/, 1, 65535) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupMember>(deep);
@@ -11319,15 +11174,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<ServerFormat>()
 .AddAttribute(0, "culture", a => a.Culture)
 .AddAttribute(0, "format", a => a.Format);
+            builder.AddConstraint(new AttributeMutualExclusive(0, 1) /*:culture, :format*/ );
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:culture*/, 0, 31));
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:format*/, 0, 65535));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeMutualExclusive(0, 1) /*:culture, :format*/ ,
-            new AttributeValueLengthConstraint(0 /*:culture*/, 0, 31),
-            new AttributeValueLengthConstraint(1 /*:format*/, 0, 65535)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ServerFormat>(deep);
@@ -11388,15 +11238,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
    aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:fld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:hier*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy), "DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy", 0));
+            builder.AddConstraint(new AttributeMutualExclusive(0, 1) /*:fld, :hier*/ { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:fld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0),
-            new IndexReferenceConstraint(1 /*:hier*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy), "DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy", 0),
-            new AttributeMutualExclusive(0, 1) /*:fld, :hier*/ { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tuple>(deep);
@@ -11520,14 +11365,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortByTuple), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:setDefinition*/, 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:maxRank*/, true, 0, true, 1048576, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(2 /*:setDefinition*/, 0, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(1 /*:maxRank*/, true, 0, true, 1048576, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TupleSet>(deep);
@@ -11601,6 +11441,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:mdx*/, 0, 65535));
         }
 
         /// <summary>
@@ -11615,12 +11456,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<Tuples>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:mdx*/, 0, 65535)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Query>(deep);
@@ -11926,6 +11761,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(11 /*:fieldPosition*/, true, 0, true, 255, true));
         }
 
         /// <summary>
@@ -11953,12 +11789,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(11 /*:fieldPosition*/, true, 0, true, 255, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotArea>(deep);
@@ -12101,6 +11931,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 63999));
+            builder.AddConstraint(new AttributeAbsentConditionToValue(3 /*:hierarchy*/, 6 /*:set*/ , "1"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue(3 /*:hierarchy*/, 6 /*:set*/ , "0"));
+            builder.AddConstraint(new AttributeAbsentConditionToValue(4 /*:parent*/, 6 /*:set*/ , "1"));
+            builder.AddConstraint(new AttributeAbsentConditionToValue(2 /*:memberName*/, 6 /*:set*/ , "1"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue(2 /*:memberName*/, 6 /*:set*/ , "0"));
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:memberName*/, 1, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:hierarchy*/, 1, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:parent*/, 1, 65535) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -12115,20 +11954,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<CalculatedMemberExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 63999),
-            new AttributeAbsentConditionToValue(3 /*:hierarchy*/, 6 /*:set*/ , "1"),
-            new AttributeRequiredConditionToValue(3 /*:hierarchy*/, 6 /*:set*/ , "0"),
-            new AttributeAbsentConditionToValue(4 /*:parent*/, 6 /*:set*/ , "1"),
-            new AttributeAbsentConditionToValue(2 /*:memberName*/, 6 /*:set*/ , "1"),
-            new AttributeRequiredConditionToValue(2 /*:memberName*/, 6 /*:set*/ , "0"),
-            new AttributeValueLengthConstraint(2 /*:memberName*/, 1, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(3 /*:hierarchy*/, 1, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(4 /*:parent*/, 1, 65535) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedMember>(deep);
@@ -12722,6 +12547,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoSortScope), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueSetConstraint(1 /*:axis*/, false, new string[] { "axisValues" }));
         }
 
         /// <summary>
@@ -12762,12 +12588,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<PivotFieldExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(1 /*:axis*/, false, new string[] { "axisValues" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotField>(deep);
@@ -12913,15 +12733,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "x", a => a.Index)
 .AddAttribute(0, "d", a => a.Expanded)
 .AddAttribute(0, "e", a => a.DrillAcrossAttributes);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:n*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField)));
+            builder.AddConstraint(new AttributeValueSetConstraint(1 /*:t*/, false, new string[] { "blank", "grand" }));
+            builder.AddConstraint(new AttributeRequiredConditionToValue(8 /*:x*/, 1 /*:t*/ , "data") { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:n*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField)),
-            new AttributeValueSetConstraint(1 /*:t*/, false, new string[] { "blank", "grand" }),
-            new AttributeRequiredConditionToValue(8 /*:x*/, 1 /*:t*/ , "data") { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Item>(deep);
@@ -13061,6 +12876,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList), 0, 1)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:fld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0));
         }
 
         /// <summary>
@@ -13075,12 +12891,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DataFieldExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(1 /*:fld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataField>(deep);
@@ -13173,13 +12983,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(2 /*:i*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DataField), "DocumentFormat.OpenXml.Spreadsheet.DataField", 0));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(2 /*:i*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DataField), "DocumentFormat.OpenXml.Spreadsheet.DataField", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowItem>(deep);
@@ -13218,13 +13023,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
  aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:x*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnFields)));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:x*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnFields))
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Field>(deep);
@@ -13309,6 +13109,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
         }
 
         /// <summary>
@@ -13336,12 +13137,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(1 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Format>(deep);
@@ -13440,6 +13235,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreas), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueConditionToAnother(1 /*:type*/, 0 /*:scope*/, new string[] { "none", "all" }, new string[] { "data", "selection" }));
         }
 
         /// <summary>
@@ -13467,12 +13263,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueConditionToAnother(1 /*:type*/, 0 /*:scope*/, new string[] { "none", "all" }, new string[] { "data", "selection" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormat>(deep);
@@ -13842,6 +13632,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Members), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(10 /*:caption*/, 0, 65535));
         }
 
         /// <summary>
@@ -13856,12 +13647,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<MemberProperties>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(10 /*:caption*/, 0, 65535)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotHierarchy>(deep);
@@ -14071,13 +13856,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
     aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new IndexReferenceConstraint(8 /*:field*/, "PivotTableCacheDefinitionPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(8 /*:field*/, "PivotTableCacheDefinitionPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MemberProperty>(deep);
@@ -14194,16 +13974,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*:uniqueName*/, true, null));
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:caption*/, 1, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:name*/, 1, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:uniqueName*/, 1, 32767) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(2 /*:uniqueName*/, true, null),
-            new AttributeValueLengthConstraint(3 /*:caption*/, 1, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(1 /*:name*/, 1, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(2 /*:uniqueName*/, 1, 32767) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Dimension>(deep);
@@ -14256,14 +14031,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:caption*/, 1, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 65535) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:caption*/, 1, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 65535) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MeasureGroup>(deep);
@@ -14509,6 +14279,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList), 0, 1)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:fld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(4 /*:id*/, false, null));
+            builder.AddConstraint(new IndexReferenceConstraint(6 /*:iMeasureFld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(5 /*:iMeasureHier*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy), "DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy", 0));
         }
 
         /// <summary>
@@ -14536,15 +14310,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<PivotFilterExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:fld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0),
-            new UniqueAttributeValueConstraint(4 /*:id*/, false, null),
-            new IndexReferenceConstraint(6 /*:iMeasureFld*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), "DocumentFormat.OpenXml.Spreadsheet.PivotField", 0),
-            new IndexReferenceConstraint(5 /*:iMeasureHier*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy), "DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotFilter>(deep);
@@ -14858,6 +14623,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupLevels), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(10 /*:allUniqueName*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(9 /*:defaultMemberUniqueName*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null));
+            builder.AddConstraint(new AttributeValueLengthConstraint(13 /*:displayFolder*/, 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(14 /*:measureGroup*/, 0, 65535) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:iconSet*/, true, 0, true, 11, true) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -14898,17 +14669,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<CacheHierarchyExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(10 /*:allUniqueName*/, true, null),
-            new UniqueAttributeValueConstraint(9 /*:defaultMemberUniqueName*/, true, null),
-            new UniqueAttributeValueConstraint(0 /*:uniqueName*/, true, null),
-            new AttributeValueLengthConstraint(13 /*:displayFolder*/, 0, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(14 /*:measureGroup*/, 0, 65535) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(5 /*:iconSet*/, true, 0, true, 11, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheHierarchy>(deep);
@@ -15021,13 +14781,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "startDate", a => a.StartDate)
 .AddAttribute(0, "endDate", a => a.EndDate)
 .AddAttribute(0, "groupInterval", a => a.GroupInterval);
+            builder.AddConstraint(new AttributeValueLessEqualToAnother(3 /*:startNum*/, 4 /*:endNum*/, false));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLessEqualToAnother(3 /*:startNum*/, 4 /*:endNum*/, false)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RangeProperties>(deep);
@@ -15302,6 +15057,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:fld*/, "PivotTableCacheDefinitionPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(3 /*:name*/, true, null));
         }
 
         /// <summary>
@@ -15316,13 +15073,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:fld*/, "PivotTableCacheDefinitionPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), "DocumentFormat.OpenXml.Spreadsheet.CacheField", 0),
-            new UniqueAttributeValueConstraint(3 /*:name*/, true, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageField>(deep);
@@ -15824,13 +15574,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedField>(deep);
@@ -15970,6 +15715,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, true, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*:name*/, true, null));
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:name*/, 0, 255));
+            builder.AddConstraint(new AttributeValueConditionToAnother(2 /*:dataBound*/, 5 /*:clipped*/, new string[] { "true" }, new string[] { "true" }));
+            builder.AddConstraint(new AttributeValueConditionToAnother(2 /*:dataBound*/, 4 /*:fillFormulas*/, new string[] { "false" }, new string[] { "true" }));
+            builder.AddConstraint(new AttributeValueConditionToAnother(2 /*:dataBound*/, 3 /*:rowNumbers*/, new string[] { "true" }, new string[] { "true" }));
         }
 
         /// <summary>
@@ -15984,17 +15735,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
-            new UniqueAttributeValueConstraint(1 /*:name*/, true, null),
-            new AttributeValueLengthConstraint(1 /*:name*/, 0, 255),
-            new AttributeValueConditionToAnother(2 /*:dataBound*/, 5 /*:clipped*/, new string[] { "true" }, new string[] { "true" }),
-            new AttributeValueConditionToAnother(2 /*:dataBound*/, 4 /*:fillFormulas*/, new string[] { "false" }, new string[] { "true" }),
-            new AttributeValueConditionToAnother(2 /*:dataBound*/, 3 /*:rowNumbers*/, new string[] { "true" }, new string[] { "true" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<QueryTableField>(deep);
@@ -16570,13 +16310,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
     aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, 1, true, 409.55, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, 1, true, 409.55, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontSize>(deep);
@@ -16600,15 +16335,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "color");
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:indexed*/, true, double.NegativeInfinity, true, 255, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:theme*/, true, 0, true, 255, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(1 /*:indexed*/, true, double.NegativeInfinity, true, 255, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(3 /*:theme*/, true, 0, true, 255, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Color>(deep);
@@ -16632,14 +16362,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tabColor");
+            builder.AddConstraint(new AttributeMutualExclusive(0, 1, 2, 3) /*:auto, :indexed, :rgb, :theme*/ );
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeMutualExclusive(0, 1, 2, 3) /*:auto, :indexed, :rgb, :theme*/ ,
-            new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabColor>(deep);
@@ -16663,13 +16388,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "fgColor");
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForegroundColor>(deep);
@@ -16693,13 +16413,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bgColor");
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(4 /*:tint*/, true, -1, true, 1, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundColor>(deep);
@@ -16817,13 +16532,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
  aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:val*/, 0, 31));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:val*/, 0, 31)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunFont>(deep);
@@ -16847,13 +16557,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "family");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 5, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 5, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontFamily>(deep);
@@ -16877,13 +16582,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "charset");
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 255, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, 0, true, 255, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunPropertyCharSet>(deep);
@@ -17234,6 +16934,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueLessEqualToAnother(0 /*:sb*/, 1 /*:eb*/, false));
         }
 
         /// <summary>
@@ -17248,12 +16949,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<Text>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLessEqualToAnother(0 /*:sb*/, 1 /*:eb*/, false)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhoneticRun>(deep);
@@ -17314,13 +17009,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "type", a => a.Type)
 .AddAttribute(0, "alignment", a => a.Alignment);
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:fontId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Font), "DocumentFormat.OpenXml.Spreadsheet.Font", 0));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:fontId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Font), "DocumentFormat.OpenXml.Spreadsheet.Font", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhoneticProperties>(deep);
@@ -17482,6 +17172,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ReviewedList), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:maxSheetId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:userName*/, 1, 54) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:minRId*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -17522,14 +17215,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(2 /*:maxSheetId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(3 /*:userName*/, 1, 54) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(5 /*:minRId*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Header>(deep);
@@ -17695,13 +17380,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionFormat), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:sId*/, 0, 32767));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(3 /*:sId*/, 0, 32767)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionRowColumn>(deep);
@@ -17856,14 +17536,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionFormat), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:sheetId*/, true, double.NegativeInfinity, true, 32767, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(6 /*:sourceSheetId*/, true, double.NegativeInfinity, true, 32767, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:sheetId*/, true, double.NegativeInfinity, true, 32767, true),
-            new AttributeValueRangeConstraint(6 /*:sourceSheetId*/, true, double.NegativeInfinity, true, 32767, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionMove>(deep);
@@ -18055,6 +17730,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:sheetId*/, 0, 32767));
         }
 
         /// <summary>
@@ -18069,12 +17745,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(3 /*:sheetId*/, 0, 32767)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionSheetName>(deep);
@@ -18177,14 +17847,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
    aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:sheetId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:sheetPosition*/, true, double.NegativeInfinity, true, 65533, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:sheetId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(5 /*:sheetPosition*/, true, double.NegativeInfinity, true, 65533, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionInsertSheet>(deep);
@@ -18416,6 +18081,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:sId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -18482,12 +18148,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:sId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionCellChange>(deep);
@@ -18622,6 +18282,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:sheetId*/, true, 0, true, 32767, true));
         }
 
         /// <summary>
@@ -18649,12 +18310,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:sheetId*/, true, 0, true, 32767, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionFormat>(deep);
@@ -18784,14 +18439,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
    aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:autoFormatId*/, true, 0, true, 16, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:sheetId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:autoFormatId*/, true, 0, true, 16, true),
-            new AttributeValueRangeConstraint(0 /*:sheetId*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionAutoFormat>(deep);
@@ -19127,6 +18777,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldFormula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(8 /*:functionGroupId*/, true, 1, true, 14, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:localSheetId*/, true, double.NegativeInfinity, true, 32767, true));
+            builder.AddConstraint(new AttributeValueLengthConstraint(14 /*:customMenu*/, 0, 32767));
+            builder.AddConstraint(new AttributeValueLengthConstraint(15 /*:oldCustomMenu*/, 0, 32767));
+            builder.AddConstraint(new AttributeValueLengthConstraint(16 /*:description*/, 0, 32767));
+            builder.AddConstraint(new AttributeValueLengthConstraint(17 /*:oldDescription*/, 0, 32767));
+            builder.AddConstraint(new AttributeValueLengthConstraint(18 /*:help*/, 0, 32767));
+            builder.AddConstraint(new AttributeValueLengthConstraint(19 /*:oldHelp*/, 0, 32767));
+            builder.AddConstraint(new AttributeValueLengthConstraint(20 /*:statusBar*/, 0, 32767));
+            builder.AddConstraint(new AttributeValueLengthConstraint(21 /*:oldStatusBar*/, 0, 32767));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(5 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Revisions)));
+            builder.AddConstraint(new AttributeValuePatternConstraint(5 /*:name*/, @"[a-zA-Z_\\][a-zA-Z0-9_.]*"));
+            builder.AddConstraint(new AttributeValueLengthConstraint(22 /*:comment*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(23 /*:oldComment*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:rId*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -19167,26 +18832,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(8 /*:functionGroupId*/, true, 1, true, 14, true),
-            new AttributeValueRangeConstraint(3 /*:localSheetId*/, true, double.NegativeInfinity, true, 32767, true),
-            new AttributeValueLengthConstraint(14 /*:customMenu*/, 0, 32767),
-            new AttributeValueLengthConstraint(15 /*:oldCustomMenu*/, 0, 32767),
-            new AttributeValueLengthConstraint(16 /*:description*/, 0, 32767),
-            new AttributeValueLengthConstraint(17 /*:oldDescription*/, 0, 32767),
-            new AttributeValueLengthConstraint(18 /*:help*/, 0, 32767),
-            new AttributeValueLengthConstraint(19 /*:oldHelp*/, 0, 32767),
-            new AttributeValueLengthConstraint(20 /*:statusBar*/, 0, 32767),
-            new AttributeValueLengthConstraint(21 /*:oldStatusBar*/, 0, 32767),
-            new UniqueAttributeValueConstraint(5 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Revisions)),
-            new AttributeValuePatternConstraint(5 /*:name*/, @"[a-zA-Z_\\][a-zA-Z0-9_.]*"),
-            new AttributeValueLengthConstraint(22 /*:comment*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(23 /*:oldComment*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(0 /*:rId*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionDefinedName>(deep);
@@ -19345,13 +18990,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "oldLength", a => a.OldLength)
 .AddAttribute(0, "newLength", a => a.NewLength);
+            builder.AddConstraint(new AttributeValueLengthConstraint(8 /*:author*/, 1, 52));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(8 /*:author*/, 1, 52)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionComment>(deep);
@@ -19490,13 +19130,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "ua", a => a.Ua)
 .AddAttribute(0, "ra", a => a.Ra)
 .AddAttribute(0, "sheetId", a => a.SheetId);
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:sheetId*/, true, 0, true, 32767, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:sheetId*/, true, 0, true, 32767, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionConflict>(deep);
@@ -19677,13 +19312,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:rId*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:rId*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Reviewed>(deep);
@@ -19838,16 +19468,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "dn", a => a.DefinedName)
 .AddAttribute(0, "r", a => a.CellReference)
 .AddAttribute(0, "sId", a => a.SheetId);
+            builder.AddConstraint(new AttributeValueRangeConstraint(10 /*:sId*/, true, double.NegativeInfinity, true, 32767, true));
+            builder.AddConstraint(new AttributeValueConditionToAnother(2 /*:ref3D*/, 5 /*:nf*/, new string[] { "false" }, new string[] { "true" }));
+            builder.AddConstraint(new AttributeMutualExclusive(8, 9) /*:dn, :r*/ );
+            builder.AddConstraint(new AttributeMutualExclusive(8, 10) /*:dn, :sId*/ );
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(10 /*:sId*/, true, double.NegativeInfinity, true, 32767, true),
-            new AttributeValueConditionToAnother(2 /*:ref3D*/, 5 /*:nf*/, new string[] { "false" }, new string[] { "true" }),
-            new AttributeMutualExclusive(8, 9) /*:dn, :r*/ ,
-            new AttributeMutualExclusive(8, 10) /*:dn, :sId*/
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Undo>(deep);
@@ -19911,15 +19536,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InlineString), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(3 /*:cm*/, "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), "DocumentFormat.OpenXml.Spreadsheet.CellMetadata", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:s*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyle), "DocumentFormat.OpenXml.Spreadsheet.CellStyle", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(4 /*:vm*/, "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), "DocumentFormat.OpenXml.Spreadsheet.ValueMetadata", 0));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(3 /*:cm*/, "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), "DocumentFormat.OpenXml.Spreadsheet.CellMetadata", 0),
-            new IndexReferenceConstraint(1 /*:s*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyle), "DocumentFormat.OpenXml.Spreadsheet.CellStyle", 0),
-            new IndexReferenceConstraint(4 /*:vm*/, "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), "DocumentFormat.OpenXml.Spreadsheet.ValueMetadata", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OldCell>(deep);
@@ -19983,18 +19603,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InlineString), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:cm*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new IndexReferenceConstraint(3 /*:cm*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), "DocumentFormat.OpenXml.Spreadsheet.MetadataBlock", 1));
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:vm*/, true, double.NegativeInfinity, true, 2147483648, true));
+            builder.AddConstraint(new IndexReferenceConstraint(4 /*:vm*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), "DocumentFormat.OpenXml.Spreadsheet.MetadataBlock", 1));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:s*/, true, 0, true, 65490, true));
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:s*/, "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:cm*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new IndexReferenceConstraint(3 /*:cm*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), "DocumentFormat.OpenXml.Spreadsheet.MetadataBlock", 1),
-            new AttributeValueRangeConstraint(4 /*:vm*/, true, double.NegativeInfinity, true, 2147483648, true),
-            new IndexReferenceConstraint(4 /*:vm*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), "DocumentFormat.OpenXml.Spreadsheet.MetadataBlock", 1),
-            new AttributeValueRangeConstraint(1 /*:s*/, true, 0, true, 65490, true),
-            new IndexReferenceConstraint(1 /*:s*/, "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Cell>(deep);
@@ -20308,6 +19923,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InlineString), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueSetConstraint(3 /*:cm*/, true, new string[] { "0" }) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint(4 /*:vm*/, true, new string[] { "0" }) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint(1 /*:s*/, true, new string[] { "0" }) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -20361,14 +19979,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(3 /*:cm*/, true, new string[] { "0" }) { Application = ApplicationType.Excel },
-            new AttributeValueSetConstraint(4 /*:vm*/, true, new string[] { "0" }) { Application = ApplicationType.Excel },
-            new AttributeValueSetConstraint(1 /*:s*/, true, new string[] { "0" }) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NewCell>(deep);
@@ -20771,13 +20381,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 65535, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:val*/, true, double.NegativeInfinity, true, 65535, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetId>(deep);
@@ -20961,14 +20566,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
  .AddAttribute(0, "si", a => a.SharedIndex)
  .AddAttribute(0, "bx", a => a.Bx)
  .AddAttribute(1, "space", a => a.Space);
+            builder.AddConstraint(new AttributeValueSetConstraint(11 /*:bx*/, true, new string[] { "false" }));
+            builder.AddConstraint(new AttributeRequiredConditionToValue(10 /*:si*/, 0 /*:t*/ , "shared"));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(11 /*:bx*/, true, new string[] { "false" }),
-            new AttributeRequiredConditionToValue(10 /*:si*/, 0 /*:t*/ , "shared")
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellFormula>(deep);
@@ -21310,15 +20910,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Cell), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:r*/, true, 1, true, 1048576, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(7 /*:outlineLevel*/, true, 0, true, 7, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:s*/, true, 0, true, 65490, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:r*/, true, 1, true, 1048576, true),
-            new AttributeValueRangeConstraint(7 /*:outlineLevel*/, true, 0, true, 7, true),
-            new AttributeValueRangeConstraint(2 /*:s*/, true, 0, true, 65490, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Row>(deep);
@@ -21459,19 +21054,14 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 .AddAttribute(0, "phonetic", a => a.Phonetic)
 .AddAttribute(0, "outlineLevel", a => a.OutlineLevel)
 .AddAttribute(0, "collapsed", a => a.Collapsed);
+            builder.AddConstraint(new AttributeValueRangeConstraint(8 /*:outlineLevel*/, true, 0, true, 7, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:min*/, true, 1, true, 16384, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:max*/, true, 1, true, 16384, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:width*/, true, 0, true, 255, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:style*/, true, 0, true, 65429, true));
+            builder.AddConstraint(new IndexReferenceConstraint(3 /*:style*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0));
+            builder.AddConstraint(new AttributeValueLessEqualToAnother(0 /*:min*/, 1 /*:max*/, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(8 /*:outlineLevel*/, true, 0, true, 7, true),
-            new AttributeValueRangeConstraint(0 /*:min*/, true, 1, true, 16384, true),
-            new AttributeValueRangeConstraint(1 /*:max*/, true, 1, true, 16384, true),
-            new AttributeValueRangeConstraint(2 /*:width*/, true, 0, true, 255, true),
-            new AttributeValueRangeConstraint(3 /*:style*/, true, 0, true, 65429, true),
-            new IndexReferenceConstraint(3 /*:style*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0),
-            new AttributeValueLessEqualToAnother(0 /*:min*/, 1 /*:max*/, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Column>(deep);
@@ -21736,13 +21326,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 .AddAttribute(0, "activeCell", a => a.ActiveCell)
 .AddAttribute(0, "activeCellId", a => a.ActiveCellId)
 .AddAttribute(0, "sqref", a => a.SequenceOfReferences);
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:activeCell*/, true, double.NegativeInfinity, true, 8191, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:activeCell*/, true, double.NegativeInfinity, true, 8191, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Selection>(deep);
@@ -21995,6 +21580,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueSetConstraint(6 /*:axis*/, false, new string[] { "axisValues" }));
+            builder.AddConstraint(new AttributeValueRangeConstraint(14 /*:previousCol*/, true, double.NegativeInfinity, true, 16383, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(13 /*:previousRow*/, true, double.NegativeInfinity, true, 1048575, true) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -22009,14 +21597,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<PivotArea>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(6 /*:axis*/, false, new string[] { "axisValues" }),
-            new AttributeValueRangeConstraint(14 /*:previousCol*/, true, double.NegativeInfinity, true, 16383, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(13 /*:previousRow*/, true, double.NegativeInfinity, true, 1048575, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotSelection>(deep);
@@ -22096,15 +21676,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "max", a => a.Max)
 .AddAttribute(0, "man", a => a.ManualPageBreak)
 .AddAttribute(0, "pt", a => a.PivotTablePageBreak);
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:min*/, true, double.NegativeInfinity, true, 1048576, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 1048576, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:max*/, true, 1, true, 1048576, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:min*/, true, double.NegativeInfinity, true, 1048576, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 1048576, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(2 /*:max*/, true, 1, true, 1048576, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Break>(deep);
@@ -22234,14 +21809,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 1022, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:manualBreakCount*/, true, double.NegativeInfinity, true, 1022, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 1022, true),
-            new AttributeValueRangeConstraint(1 /*:manualBreakCount*/, true, double.NegativeInfinity, true, 1022, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowBreaks>(deep);
@@ -22299,14 +21869,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 1023, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:manualBreakCount*/, true, double.NegativeInfinity, true, 1023, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 1023, true),
-            new AttributeValueRangeConstraint(1 /*:manualBreakCount*/, true, double.NegativeInfinity, true, 1023, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnBreaks>(deep);
@@ -22489,18 +22054,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:left*/, true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:right*/, true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:top*/, true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:bottom*/, true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:header*/, true, 0, true, 49, false));
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:footer*/, true, 0, true, 49, false));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:left*/, true, 0, true, 49, false),
-            new AttributeValueRangeConstraint(1 /*:right*/, true, 0, true, 49, false),
-            new AttributeValueRangeConstraint(2 /*:top*/, true, 0, true, 49, false),
-            new AttributeValueRangeConstraint(3 /*:bottom*/, true, 0, true, 49, false),
-            new AttributeValueRangeConstraint(4 /*:header*/, true, 0, true, 49, false),
-            new AttributeValueRangeConstraint(5 /*:footer*/, true, 0, true, 49, false)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageMargins>(deep);
@@ -22795,17 +22355,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
 .AddAttribute(0, "copies", a => a.Copies)
 .AddAttribute(19, "id", a => a.Id);
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:fitToWidth*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:fitToHeight*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(15 /*:copies*/, true, 1, true, 32767, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(13 /*:horizontalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(14 /*:verticalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:fitToWidth*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(4 /*:fitToHeight*/, true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(15 /*:copies*/, true, 1, true, 32767, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(13 /*:horizontalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(14 /*:verticalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageSetup>(deep);
@@ -23300,15 +22855,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IconSet), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeRequiredConditionToValue(7 /*:operator*/, 0 /*:type*/ , "cells"));
+            builder.AddConstraint(new AttributeRequiredConditionToValue(9 /*:timePeriod*/, 0 /*:type*/ , "timePeriod"));
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeRequiredConditionToValue(7 /*:operator*/, 0 /*:type*/ , "cells"),
-            new AttributeRequiredConditionToValue(9 /*:timePeriod*/, 0 /*:type*/ , "timePeriod"),
-            new IndexReferenceConstraint(1 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormattingRule>(deep);
@@ -23394,16 +22944,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "location", a => a.Location)
 .AddAttribute(0, "tooltip", a => a.Tooltip)
 .AddAttribute(0, "display", a => a.Display);
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:location*/, 0, 2084));
+            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:display*/, 0, 2084));
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:tooltip*/, 0, 255));
+            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:id*/));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(2 /*:location*/, 0, 2084),
-            new AttributeValueLengthConstraint(4 /*:display*/, 0, 2084),
-            new AttributeValueLengthConstraint(3 /*:tooltip*/, 0, 255),
-            new RelationshipExistConstraint(1 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hyperlink>(deep);
@@ -23641,17 +23186,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InputCells), 1, 32)
             };
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Worksheet)));
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:count*/, true, 1, true, 32, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:user*/, 1, 54) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(5 /*:comment*/, 0, 255) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Worksheet)),
-            new AttributeValueRangeConstraint(3 /*:count*/, true, 1, true, 32, true) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(4 /*:user*/, 1, 54) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(5 /*:comment*/, 0, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scenario>(deep);
@@ -23773,15 +23313,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "securityDescriptor", a => a.SecurityDescriptor);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(6 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRanges)));
+            builder.AddConstraint(new AttributeValueLengthConstraint(6 /*:name*/, 1, 255) { Application = ApplicationType.Word });
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:sqref*/, true, 1, true, double.PositiveInfinity, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(6 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRanges)),
-            new AttributeValueLengthConstraint(6 /*:name*/, 1, 255) { Application = ApplicationType.Word },
-            new AttributeValueRangeConstraint(5 /*:sqref*/, true, 1, true, double.PositiveInfinity, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProtectedRange>(deep);
@@ -23820,13 +23355,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:r*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatches)));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:r*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatches))
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellWatch>(deep);
@@ -23975,15 +23505,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "verticalDpi", a => a.VerticalDpi)
 .AddAttribute(0, "copies", a => a.Copies)
 .AddAttribute(19, "id", a => a.Id);
+            builder.AddConstraint(new AttributeValueRangeConstraint(9 /*:copies*/, true, 1, true, 32767, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(7 /*:horizontalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(8 /*:verticalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(9 /*:copies*/, true, 1, true, 32767, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(7 /*:horizontalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(8 /*:verticalDpi*/, true, 1, true, double.PositiveInfinity, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSheetPageSetup>(deep);
@@ -24039,13 +23564,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, false, null));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:name*/, false, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomProperty>(deep);
@@ -24170,19 +23690,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "title", a => a.Title)
 .AddAttribute(0, "autoRepublish", a => a.AutoRepublish);
+            builder.AddConstraint(new AttributeValueLengthConstraint(6 /*:title*/, 0, 255));
+            builder.AddConstraint(new AttributeValueLengthConstraint(5 /*:destinationFile*/, 1, 255));
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:divId*/, 1, 255));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 2147483647, true));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, true, null));
+            builder.AddConstraint(new AttributeRequiredConditionToValue(3 /*:sourceRef*/, 2 /*:sourceType*/ , "range"));
+            builder.AddConstraint(new AttributeAbsentConditionToNonValue(3 /*:sourceRef*/, 2 /*:sourceType*/ , "range"));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(6 /*:title*/, 0, 255),
-            new AttributeValueLengthConstraint(5 /*:destinationFile*/, 1, 255),
-            new AttributeValueLengthConstraint(1 /*:divId*/, 1, 255),
-            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 2147483647, true),
-            new UniqueAttributeValueConstraint(0 /*:id*/, true, null),
-            new AttributeRequiredConditionToValue(3 /*:sourceRef*/, 2 /*:sourceType*/ , "range"),
-            new AttributeAbsentConditionToNonValue(3 /*:sourceRef*/, 2 /*:sourceType*/ , "range")
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPublishItem>(deep);
@@ -24331,6 +23846,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(2 /*:workbookViewId*/, "/WorkbookPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), "DocumentFormat.OpenXml.Spreadsheet.WorkbookView", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:zoomScale*/, true, 10, true, 400, true));
         }
 
         /// <summary>
@@ -24345,13 +23862,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(2 /*:workbookViewId*/, "/WorkbookPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), "DocumentFormat.OpenXml.Spreadsheet.WorkbookView", 0),
-            new AttributeValueRangeConstraint(1 /*:zoomScale*/, true, 10, true, 400, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSheetView>(deep);
@@ -24465,6 +23975,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:scale*/, true, 10, true, 400, true));
         }
 
         /// <summary>
@@ -24505,12 +24016,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             get => GetElement<HeaderFooter>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:scale*/, true, 10, true, 400, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomChartsheetView>(deep);
@@ -24596,13 +24101,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "numFmtId", a => a.NumberFormatId);
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:val*/, 0, 255) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(3 /*:val*/, 0, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<InputCells>(deep);
@@ -24704,6 +24204,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ControlProperties), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:shapeId*/, true, 1, true, 67098623, true));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*:name*/, true, null) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:name*/, 0, 32) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -24718,14 +24221,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ControlProperties>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:shapeId*/, true, 1, true, 67098623, true),
-            new UniqueAttributeValueConstraint(2 /*:name*/, true, null) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(2 /*:name*/, 0, 32) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Control>(deep);
@@ -24863,13 +24358,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "emptyCellReference", a => a.EmptyCellReference)
 .AddAttribute(0, "listDataValidation", a => a.ListDataValidation)
 .AddAttribute(0, "calculatedColumn", a => a.CalculatedColumn);
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:sqref*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:sqref*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<IgnoredError>(deep);
@@ -25120,6 +24610,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula2), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(12 /*:sqref*/, true, 1, true, 32767, true));
+            builder.AddConstraint(new AttributeValueLengthConstraint(8 /*:errorTitle*/, 0, 32));
+            builder.AddConstraint(new AttributeValueLengthConstraint(10 /*:promptTitle*/, 0, 32));
         }
 
         /// <summary>
@@ -25160,14 +24653,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<Formula2>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(12 /*:sqref*/, true, 1, true, 32767, true),
-            new AttributeValueLengthConstraint(8 /*:errorTitle*/, 0, 32),
-            new AttributeValueLengthConstraint(10 /*:promptTitle*/, 0, 32)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataValidation>(deep);
@@ -25448,6 +24933,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotSelection), 0, 4),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(13 /*:colorId*/, true, double.NegativeInfinity, true, 64, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(14 /*:zoomScale*/, true, 10, true, 400, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(15 /*:zoomScaleNormal*/, true, 10, true, 400, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(17 /*:zoomScalePageLayoutView*/, true, 10, true, 400, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(16 /*:zoomScaleSheetLayoutView*/, true, 10, true, 400, true));
         }
 
         /// <summary>
@@ -25462,16 +24952,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<Pane>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(13 /*:colorId*/, true, double.NegativeInfinity, true, 64, true),
-            new AttributeValueRangeConstraint(14 /*:zoomScale*/, true, 10, true, 400, true),
-            new AttributeValueRangeConstraint(15 /*:zoomScaleNormal*/, true, 10, true, 400, true),
-            new AttributeValueRangeConstraint(17 /*:zoomScalePageLayoutView*/, true, 10, true, 400, true),
-            new AttributeValueRangeConstraint(16 /*:zoomScaleSheetLayoutView*/, true, 10, true, 400, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetView>(deep);
@@ -25782,6 +25262,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:colorId*/, true, double.NegativeInfinity, true, 64, true));
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:guid*/, false, new string[] { "00000000-0000-0000-0000-000000000000" }));
         }
 
         /// <summary>
@@ -25913,13 +25395,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(2 /*:colorId*/, true, double.NegativeInfinity, true, 64, true),
-            new AttributeValueSetConstraint(0 /*:guid*/, false, new string[] { "00000000-0000-0000-0000-000000000000" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomSheetView>(deep);
@@ -26062,6 +25537,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties), 0, 1, version: FileFormatVersions.Office2010)
             };
+            builder.AddConstraint(new AttributeValuePatternConstraint(0 /*:progId*/, @"[^\d].*"));
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:progId*/, 0, 39));
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:shapeId*/, true, 1, true, 67098623, true));
         }
 
         /// <summary>
@@ -26076,14 +25554,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<EmbeddedObjectProperties>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValuePatternConstraint(0 /*:progId*/, @"[^\d].*"),
-            new AttributeValueLengthConstraint(0 /*:progId*/, 0, 39),
-            new AttributeValueRangeConstraint(5 /*:shapeId*/, true, 1, true, 67098623, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleObject>(deep);
@@ -26154,13 +25624,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataType), 1, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MetadataTypes>(deep);
@@ -26231,13 +25696,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), 1, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MetadataStrings>(deep);
@@ -26308,13 +25768,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Mdx), 1, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MdxMetadata>(deep);
@@ -26402,16 +25857,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Metadata)));
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:name*/, false, new string[] { "XLMDX" }));
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 65535));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Metadata)),
-            new AttributeValueSetConstraint(0 /*:name*/, false, new string[] { "XLMDX" }),
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 65535)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FutureMetadata>(deep);
@@ -26469,13 +25919,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellMetadata>(deep);
@@ -26533,13 +25978,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:count*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ValueMetadata>(deep);
@@ -26941,14 +26381,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "coerce", a => a.Coerce)
 .AddAttribute(0, "adjust", a => a.Adjust)
 .AddAttribute(0, "cellMeta", a => a.CellMeta);
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataTypes)));
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 65535));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataTypes)),
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 65535)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MetadataType>(deep);
@@ -27060,14 +26495,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
     aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:t*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataType), "DocumentFormat.OpenXml.Spreadsheet.MetadataType", 1));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:t*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:t*/, ".", null, typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataType), "DocumentFormat.OpenXml.Spreadsheet.MetadataType", 1),
-            new AttributeValueRangeConstraint(0 /*:t*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MetadataRecord>(deep);
@@ -27236,6 +26666,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxKpi), 1, 1)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:n*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:n*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
 
         /// <summary>
@@ -27289,13 +26721,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<MdxKpi>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:n*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
-            new AttributeValueRangeConstraint(0 /*:n*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Mdx>(deep);
@@ -27471,16 +26896,11 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:si*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new IndexReferenceConstraint(2 /*:si*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:c*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:fi*/, true, double.NegativeInfinity, true, 58, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(2 /*:si*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new IndexReferenceConstraint(2 /*:si*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
-            new AttributeValueRangeConstraint(0 /*:c*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new AttributeValueRangeConstraint(3 /*:fi*/, true, double.NegativeInfinity, true, 58, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MdxTuple>(deep);
@@ -27576,15 +26996,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:ns*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:ns*/, true, 0, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:c*/, true, 0, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:ns*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
-            new AttributeValueRangeConstraint(0 /*:ns*/, true, 0, true, 2147483647, true),
-            new AttributeValueRangeConstraint(1 /*:c*/, true, 0, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MdxSet>(deep);
@@ -27637,16 +27052,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
  {
      aBuilder.AddValidator(RequiredValidator.Instance);
  });
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:n*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:n*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:np*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:np*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:n*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
-            new AttributeValueRangeConstraint(0 /*:n*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new IndexReferenceConstraint(1 /*:np*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
-            new AttributeValueRangeConstraint(1 /*:np*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MdxMemberProp>(deep);
@@ -27713,16 +27123,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
  {
      aBuilder.AddValidator(RequiredValidator.Instance);
  });
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:n*/, ".", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:n*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:np*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:np*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:n*/, ".", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
-            new AttributeValueRangeConstraint(0 /*:n*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new IndexReferenceConstraint(1 /*:np*/, "/WorkbookPart/CellMetadataPart", typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), "DocumentFormat.OpenXml.Spreadsheet.CharacterValue", 0),
-            new AttributeValueRangeConstraint(1 /*:np*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<MdxKpi>(deep);
@@ -27772,14 +27177,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
      aBuilder.AddValidator(RequiredValidator.Instance);
  })
  .AddAttribute(0, "s", a => a.IsASet);
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:x*/, true, 0, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:x*/, true, double.NegativeInfinity, true, 2147483647, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:x*/, true, 0, true, double.PositiveInfinity, true),
-            new AttributeValueRangeConstraint(0 /*:x*/, true, double.NegativeInfinity, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NameIndex>(deep);
@@ -27884,6 +27284,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 4294967294, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:connectionId*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, true, null));
         }
 
         /// <summary>
@@ -27911,14 +27314,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 4294967294, true),
-            new AttributeValueRangeConstraint(2 /*:connectionId*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new UniqueAttributeValueConstraint(0 /*:id*/, true, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SingleXmlCell>(deep);
@@ -28009,6 +27404,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueSetConstraint(0 /*:id*/, true, new string[] { "1" }));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*:uniqueName*/, true, null));
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:uniqueName*/, 1, 255) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -28036,14 +27434,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(0 /*:id*/, true, new string[] { "1" }),
-            new UniqueAttributeValueConstraint(1 /*:uniqueName*/, true, null),
-            new AttributeValueLengthConstraint(1 /*:uniqueName*/, 1, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XmlCellProperties>(deep);
@@ -28145,6 +27535,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:xpath*/, 0, 32000));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:mapId*/, true, 1, true, 2147483647, true));
         }
 
         /// <summary>
@@ -28159,13 +27551,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:xpath*/, 0, 32000),
-            new AttributeValueRangeConstraint(0 /*:mapId*/, true, 1, true, 2147483647, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XmlProperties>(deep);
@@ -28391,17 +27776,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientStop), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:top*/, true, 0, true, 1, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:bottom*/, true, 0, true, 1, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:left*/, true, 0, true, 1, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:right*/, true, 0, true, 1, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:degree*/, true, -1.7E+308, true, 1.7E+308, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(4 /*:top*/, true, 0, true, 1, true),
-            new AttributeValueRangeConstraint(5 /*:bottom*/, true, 0, true, 1, true),
-            new AttributeValueRangeConstraint(2 /*:left*/, true, 0, true, 1, true),
-            new AttributeValueRangeConstraint(3 /*:right*/, true, 0, true, 1, true),
-            new AttributeValueRangeConstraint(1 /*:degree*/, true, -1.7E+308, true, 1.7E+308, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GradientFill>(deep);
@@ -28475,6 +27855,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:position*/, true, 0, true, 1, true));
         }
 
         /// <summary>
@@ -28489,12 +27870,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<Color>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:position*/, true, 0, true, 1, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<GradientStop>(deep);
@@ -28547,13 +27922,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:formatCode*/, 0, 255));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:formatCode*/, 0, 255)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingFormat>(deep);
@@ -28688,15 +28058,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "shrinkToFit", a => a.ShrinkToFit)
 .AddAttribute(0, "readingOrder", a => a.ReadingOrder)
 .AddAttribute(0, "mergeCell", a => a.MergeCell);
+            builder.AddConstraint(new AttributeValueRangeConstraint(8 /*:readingOrder*/, true, 0, true, 2, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:indent*/, true, double.NegativeInfinity, true, 255, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueSetConstraint(8 /*:readingOrder*/, true, new string[] { "0", "1", "2" }) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(8 /*:readingOrder*/, true, 0, true, 2, true),
-            new AttributeValueRangeConstraint(4 /*:indent*/, true, double.NegativeInfinity, true, 255, true) { Application = ApplicationType.Excel },
-            new AttributeValueSetConstraint(8 /*:readingOrder*/, true, new string[] { "0", "1", "2" }) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Alignment>(deep);
@@ -29586,13 +28951,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleElement), 0, 28)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyle>(deep);
@@ -29760,6 +29120,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 0, 255));
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:builtinId*/, true, 0, true, 53, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:iLevel*/, true, 0, true, 7, true));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*:xfId*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyles)));
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:xfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0));
         }
 
         /// <summary>
@@ -29774,16 +29139,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255),
-            new AttributeValueRangeConstraint(2 /*:builtinId*/, true, 0, true, 53, true),
-            new AttributeValueRangeConstraint(3 /*:iLevel*/, true, 0, true, 7, true),
-            new UniqueAttributeValueConstraint(1 /*:xfId*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyles)),
-            new IndexReferenceConstraint(1 /*:xfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellStyle>(deep);
@@ -29992,6 +29347,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new IndexReferenceConstraint(3 /*:borderId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Border), "DocumentFormat.OpenXml.Spreadsheet.Border", 0));
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:borderId*/, true, 0, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new IndexReferenceConstraint(2 /*:fillId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), "DocumentFormat.OpenXml.Spreadsheet.Fill", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(1 /*:fontId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Font), "DocumentFormat.OpenXml.Spreadsheet.Font", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(4 /*:xfId*/, "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0));
         }
 
         /// <summary>
@@ -30033,16 +29393,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             set => SetElement(value);
         }
 
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(3 /*:borderId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Border), "DocumentFormat.OpenXml.Spreadsheet.Border", 0),
-            new AttributeValueRangeConstraint(3 /*:borderId*/, true, 0, true, double.PositiveInfinity, true),
-            new IndexReferenceConstraint(2 /*:fillId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), "DocumentFormat.OpenXml.Spreadsheet.Fill", 0),
-            new IndexReferenceConstraint(1 /*:fontId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.Font), "DocumentFormat.OpenXml.Spreadsheet.Font", 0),
-            new IndexReferenceConstraint(4 /*:xfId*/, "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), "DocumentFormat.OpenXml.Spreadsheet.CellFormat", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
-
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellFormat>(deep);
     }
@@ -30081,13 +29431,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
   aBuilder.AddValidator(RequiredValidator.Instance);
   aBuilder.AddValidator(new StringValidator() { MinLength = (1L) });
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:val*/, 1, 31) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:val*/, 1, 31) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontName>(deep);
@@ -30228,14 +29573,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "dxfId", a => a.FormatId);
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:size*/, true, 1, true, 9, true));
+            builder.AddConstraint(new IndexReferenceConstraint(2 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:size*/, true, 1, true, 9, true),
-            new IndexReferenceConstraint(2 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleElement>(deep);
@@ -30473,13 +29813,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "refersTo", a => a.RefersTo)
 .AddAttribute(0, "sheetId", a => a.SheetId);
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:sheetId*/, true, 0, true, 65533, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(2 /*:sheetId*/, true, 0, true, 65533, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalDefinedName>(deep);
@@ -30564,13 +29899,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalRow), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:sheetId*/, true, 0, true, 65533, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:sheetId*/, true, 0, true, 65533, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalSheetData>(deep);
@@ -30644,13 +29974,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalCell), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:r*/, true, double.NegativeInfinity, true, 1048576, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:r*/, true, double.NegativeInfinity, true, 1048576, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalRow>(deep);
@@ -30746,6 +30071,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Xstring), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueSetConstraint(1 /*:t*/, false, new string[] { "s" }));
+            builder.AddConstraint(new IndexReferenceConstraint(2 /*:vm*/, "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), "DocumentFormat.OpenXml.Spreadsheet.ValueMetadata", 0));
         }
 
         /// <summary>
@@ -30760,13 +30087,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<Xstring>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(1 /*:t*/, false, new string[] { "s" }),
-            new IndexReferenceConstraint(2 /*:vm*/, "/WorkbookPart/CellMetadataPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), "DocumentFormat.OpenXml.Spreadsheet.ValueMetadata", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalCell>(deep);
@@ -30929,6 +30249,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Values), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 0, 255));
+            builder.AddConstraint(new AttributeValueConditionToAnother(0 /*:name*/, 1 /*:ole*/, new string[] { "StdDocumentName" }, new string[] { "true" }));
         }
 
         /// <summary>
@@ -30943,13 +30265,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<Values>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255),
-            new AttributeValueConditionToAnother(0 /*:name*/, 1 /*:ole*/, new string[] { "StdDocumentName" }, new string[] { "true" })
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeItem>(deep);
@@ -31031,14 +30346,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Value), 1, 0)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:cols*/, true, 1, true, 16384, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:rows*/, true, 1, true, 1048576, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:cols*/, true, 1, true, 16384, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(0 /*:rows*/, true, 1, true, 1048576, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Values>(deep);
@@ -31394,6 +30704,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItems), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:ddeService*/, 1, 255));
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:ddeTopic*/, 0, 255));
         }
 
         /// <summary>
@@ -31408,13 +30720,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<DdeItems>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:ddeService*/, 1, 255),
-            new AttributeValueLengthConstraint(1 /*:ddeTopic*/, 0, 255)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeLink>(deep);
@@ -31505,6 +30810,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItems), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:progId*/, 1, 255));
         }
 
         /// <summary>
@@ -31519,12 +30825,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<OleItems>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:progId*/, 1, 255)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleLink>(deep);
@@ -31560,13 +30860,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(22, "sheetName");
             builder.AddElement<SheetName>()
 .AddAttribute(0, "val", a => a.Val);
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:val*/, 0, 31));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:val*/, 0, 31)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetName>(deep);
@@ -31810,6 +31105,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:name*/, 0, 255));
+            builder.AddConstraint(new AttributeAbsentConditionToValue(4 /*:totalsRowLabel*/, 3 /*:totalsRowFunction*/ , "custom"));
+            builder.AddConstraint(new AttributeValueLengthConstraint(9 /*:headerRowCellStyle*/, 1, 255));
+            builder.AddConstraint(new AttributeValueLengthConstraint(11 /*:totalsRowCellStyle*/, 1, 255));
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:queryTableFieldId*/, true, 1, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:totalsRowLabel*/, 0, 32767));
+            builder.AddConstraint(new AttributeValueLengthConstraint(10 /*:dataCellStyle*/, 1, 255));
+            builder.AddConstraint(new IndexReferenceConstraint(7 /*:dataDxfId*/, "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new IndexReferenceConstraint(6 /*:headerRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:id*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Table)));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(2 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Table)));
+            builder.AddConstraint(new IndexReferenceConstraint(8 /*:totalsRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:uniqueName*/, 0, 255) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -31863,25 +31172,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(2 /*:name*/, 0, 255),
-            new AttributeAbsentConditionToValue(4 /*:totalsRowLabel*/, 3 /*:totalsRowFunction*/ , "custom"),
-            new AttributeValueLengthConstraint(9 /*:headerRowCellStyle*/, 1, 255),
-            new AttributeValueLengthConstraint(11 /*:totalsRowCellStyle*/, 1, 255),
-            new AttributeValueRangeConstraint(5 /*:queryTableFieldId*/, true, 1, true, double.PositiveInfinity, true),
-            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, double.PositiveInfinity, true),
-            new AttributeValueLengthConstraint(4 /*:totalsRowLabel*/, 0, 32767),
-            new AttributeValueLengthConstraint(10 /*:dataCellStyle*/, 1, 255),
-            new IndexReferenceConstraint(7 /*:dataDxfId*/, "/WorkbookPart/WorkbookStylesPart", typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats), typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
-            new IndexReferenceConstraint(6 /*:headerRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
-            new UniqueAttributeValueConstraint(0 /*:id*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Table)),
-            new UniqueAttributeValueConstraint(2 /*:name*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.Table)),
-            new IndexReferenceConstraint(8 /*:totalsRowDxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0),
-            new AttributeValueLengthConstraint(1 /*:uniqueName*/, 0, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableColumn>(deep);
@@ -32127,6 +31417,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:xpath*/, 0, 32000));
+            builder.AddConstraint(new ReferenceExistConstraint(0 /*:mapId*/, "CustomXmlMappingsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Map), "DocumentFormat.OpenXml.Spreadsheet.Map", 0 /*:ID*/));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:mapId*/, true, 1, true, 21474836477, true) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -32141,14 +31434,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:xpath*/, 0, 32000),
-            new ReferenceExistConstraint(0 /*:mapId*/, "CustomXmlMappingsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Map), "DocumentFormat.OpenXml.Spreadsheet.Map", 0 /*:ID*/),
-            new AttributeValueRangeConstraint(0 /*:mapId*/, true, 1, true, 21474836477, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<XmlColumnProperties>(deep);
@@ -32296,13 +31581,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Topic), 1, 0)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:first*/, 1, 255) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:first*/, 1, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Main>(deep);
@@ -32445,13 +31725,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
     aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:s*/, true, 1, true, 65534, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:s*/, true, 1, true, 65534, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopicReferences>(deep);
@@ -32507,14 +31782,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:cacheId*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCaches)));
+            builder.AddConstraint(new RelationshipExistConstraint(1 /*r:id*/));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new UniqueAttributeValueConstraint(0 /*:cacheId*/, true, typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCaches)),
-            new RelationshipExistConstraint(1 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCache>(deep);
@@ -32614,17 +31884,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "title", a => a.Title)
 .AddAttribute(0, "autoRepublish", a => a.AutoRepublish);
+            builder.AddConstraint(new AttributeValueLengthConstraint(4 /*:title*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:sourceObject*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:destinationFile*/, 1, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:divId*/, 1, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 2147483647, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(4 /*:title*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(2 /*:sourceObject*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(3 /*:destinationFile*/, 1, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(1 /*:divId*/, 1, 255) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(0 /*:id*/, true, 1, true, 2147483647, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPublishObject>(deep);
@@ -33000,6 +32265,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(16 /*:windowWidth*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(18 /*:tabRatio*/, true, double.NegativeInfinity, true, 1000, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(19 /*:activeSheetId*/, true, 1, true, 65534, true));
+            builder.AddConstraint(new AttributeValueSetConstraint(1 /*:guid*/, false, new string[] { "00000000-0000-0000-0000-000000000000" }) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(17 /*:windowHeight*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -33014,16 +32284,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(16 /*:windowWidth*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new AttributeValueRangeConstraint(18 /*:tabRatio*/, true, double.NegativeInfinity, true, 1000, true),
-            new AttributeValueRangeConstraint(19 /*:activeSheetId*/, true, 1, true, 65534, true),
-            new AttributeValueSetConstraint(1 /*:guid*/, false, new string[] { "00000000-0000-0000-0000-000000000000" }) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(17 /*:windowHeight*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomWorkbookView>(deep);
@@ -33104,19 +32364,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
  aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValuePatternConstraint(0 /*:name*/, @"[^'*\[\]/\\:?]{1}[^*\[\]/\\:?]*"));
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 31));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(0 /*:name*/, false, null));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*:sheetId*/, true, null));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:sheetId*/, true, 1, true, 65534, true));
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*r:id*/, 0, 255));
+            builder.AddConstraint(new RelationshipExistConstraint(3 /*r:id*/));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValuePatternConstraint(0 /*:name*/, @"[^'*\[\]/\\:?]{1}[^*\[\]/\\:?]*"),
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 31),
-            new UniqueAttributeValueConstraint(0 /*:name*/, false, null),
-            new UniqueAttributeValueConstraint(1 /*:sheetId*/, true, null),
-            new AttributeValueRangeConstraint(1 /*:sheetId*/, true, 1, true, 65534, true),
-            new AttributeValueLengthConstraint(3 /*r:id*/, 0, 255),
-            new RelationshipExistConstraint(3 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sheet>(deep);
@@ -33319,6 +32574,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(7 /*:windowWidth*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(8 /*:windowHeight*/, true, double.NegativeInfinity, true, 2147483647, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(9 /*:tabRatio*/, true, double.NegativeInfinity, true, 1000, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(11 /*:activeTab*/, true, 0, true, 32766, true));
         }
 
         /// <summary>
@@ -33333,15 +32592,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(7 /*:windowWidth*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new AttributeValueRangeConstraint(8 /*:windowHeight*/, true, double.NegativeInfinity, true, 2147483647, true),
-            new AttributeValueRangeConstraint(9 /*:tabRatio*/, true, double.NegativeInfinity, true, 1000, true),
-            new AttributeValueRangeConstraint(11 /*:activeTab*/, true, 0, true, 32766, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookView>(deep);
@@ -33547,15 +32797,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "shortcutKey", a => a.ShortcutKey)
 .AddAttribute(0, "publishToServer", a => a.PublishToServer)
 .AddAttribute(0, "workbookParameter", a => a.WorkbookParameter);
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:comment*/, 0, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(6 /*:localSheetId*/, true, double.NegativeInfinity, true, 32766, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:comment*/, 0, 255) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(6 /*:localSheetId*/, true, double.NegativeInfinity, true, 32766, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefinedName>(deep);
@@ -33594,13 +32839,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 0, 32) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 0, 32) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FunctionGroup>(deep);
@@ -34493,13 +33733,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "showLastColumn", a => a.ShowLastColumn)
 .AddAttribute(0, "showRowStripes", a => a.ShowRowStripes)
 .AddAttribute(0, "showColumnStripes", a => a.ShowColumnStripes);
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleInfo>(deep);
@@ -34630,14 +33865,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "icon", a => a.Icon)
 .AddAttribute(0, "advise", a => a.Advise)
 .AddAttribute(0, "preferPic", a => a.PreferPicture);
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 0, 255));
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 1, int.MaxValue));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255),
-            new AttributeValueLengthConstraint(0 /*:name*/, 1, int.MaxValue)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleItem>(deep);
@@ -35770,6 +35000,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0, 1)
             };
+            builder.AddConstraint(new AttributeValuePatternConstraint(1 /*:codeName*/, @"[\p{L}\P{IsBasicLatin}][_\d\p{L}\P{IsBasicLatin}]*"));
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:codeName*/, 0, 32));
         }
 
         /// <summary>
@@ -35784,13 +35016,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<TabColor>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValuePatternConstraint(1 /*:codeName*/, @"[\p{L}\P{IsBasicLatin}][_\d\p{L}\P{IsBasicLatin}]*"),
-            new AttributeValueLengthConstraint(1 /*:codeName*/, 0, 32)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSheetProperties>(deep);
@@ -36058,13 +35283,8 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(0 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Drawing>(deep);
@@ -36088,13 +35308,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "legacyDrawing");
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new RelationshipExistConstraint(0 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyDrawing>(deep);
@@ -36667,14 +35882,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 2),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:maxLength*/, true, double.NegativeInfinity, true, 100, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:minLength*/, true, double.NegativeInfinity, true, 100, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:maxLength*/, true, double.NegativeInfinity, true, 100, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(0 /*:minLength*/, true, double.NegativeInfinity, true, 100, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataBar>(deep);
@@ -37073,6 +36283,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OutlineProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties), 0, 1)
             };
+            builder.AddConstraint(new AttributeValuePatternConstraint(6 /*:codeName*/, @"[\p{L}\P{IsBasicLatin}][_\d\p{L}\P{IsBasicLatin}]*"));
         }
 
         /// <summary>
@@ -37113,12 +36324,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<PageSetupProperties>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValuePatternConstraint(6 /*:codeName*/, @"[\p{L}\P{IsBasicLatin}][_\d\p{L}\P{IsBasicLatin}]*")
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetProperties>(deep);
@@ -37324,16 +36529,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(8 /*:outlineLevelCol*/, true, 0, true, 7, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(7 /*:outlineLevelRow*/, true, 0, true, 7, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:baseColWidth*/, true, double.NegativeInfinity, true, 255, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:defaultColWidth*/, true, 0, true, 65535, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(8 /*:outlineLevelCol*/, true, 0, true, 7, true),
-            new AttributeValueRangeConstraint(7 /*:outlineLevelRow*/, true, 0, true, 7, true),
-            new AttributeValueRangeConstraint(0 /*:baseColWidth*/, true, double.NegativeInfinity, true, 255, true),
-            new AttributeValueRangeConstraint(1 /*:defaultColWidth*/, true, 0, true, 65535, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetFormatProperties>(deep);
@@ -38142,13 +37342,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule), 1, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:sqref*/, 1, int.MaxValue));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:sqref*/, 1, int.MaxValue)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormatting>(deep);
@@ -38693,15 +37888,10 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "sheet", a => a.Sheet)
 .AddAttribute(19, "id", a => a.Id);
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:name*/, 1, 255));
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:sheet*/, 0, 31));
+            builder.AddConstraint(new RelationshipExistConstraint(3 /*r:id*/));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:name*/, 1, 255),
-            new AttributeValueLengthConstraint(2 /*:sheet*/, 0, 31),
-            new RelationshipExistConstraint(3 /*r:id*/)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorksheetSource>(deep);
@@ -39351,18 +38541,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:day*/, true, 1, true, 31, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:hour*/, true, 0, true, 23, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:minute*/, true, 0, true, 59, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:month*/, true, 1, true, 12, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:second*/, true, 0, true, 59, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:year*/, true, 1000, true, 9999, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(2 /*:day*/, true, 1, true, 31, true),
-            new AttributeValueRangeConstraint(3 /*:hour*/, true, 0, true, 23, true),
-            new AttributeValueRangeConstraint(4 /*:minute*/, true, 0, true, 59, true),
-            new AttributeValueRangeConstraint(1 /*:month*/, true, 1, true, 12, true),
-            new AttributeValueRangeConstraint(5 /*:second*/, true, 0, true, 59, true),
-            new AttributeValueRangeConstraint(0 /*:year*/, true, 1000, true, 9999, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DateGroupItem>(deep);
@@ -39732,13 +38917,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "cellColor", a => a.CellColor);
+            builder.AddConstraint(new IndexReferenceConstraint(0 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new IndexReferenceConstraint(0 /*:dxfId*/, "/WorkbookPart/WorkbookStylesPart", null, typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat", 0)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorFilter>(deep);
@@ -40097,14 +39277,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "command", a => a.Command)
 .AddAttribute(0, "serverCommand", a => a.ServerCommand)
 .AddAttribute(0, "commandType", a => a.CommandType);
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:commandType*/, true, 1, true, 5, true));
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:connection*/, 0, 65535) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(3 /*:commandType*/, true, 1, true, 5, true),
-            new AttributeValueLengthConstraint(0 /*:connection*/, 0, 65535) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DatabaseProperties>(deep);
@@ -40228,13 +39403,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "serverNumberFormat", a => a.ServerNumberFormat)
 .AddAttribute(0, "serverFont", a => a.ServerFont)
 .AddAttribute(0, "serverFontColor", a => a.ServerFontColor);
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:rowDrillCount*/, true, 1, true, 1048576, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(4 /*:rowDrillCount*/, true, 1, true, 1048576, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OlapProperties>(deep);
@@ -40437,6 +39607,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tables), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(8 /*:url*/, 1, int.MaxValue));
         }
 
         /// <summary>
@@ -40451,12 +39622,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<Tables>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(8 /*:url*/, 1, int.MaxValue)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebQueryProperties>(deep);
@@ -40692,6 +39857,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextFields), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(7 /*:decimal*/, 1, 255));
+            builder.AddConstraint(new AttributeValueLengthConstraint(8 /*:thousands*/, 1, 255));
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:firstRow*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueLengthConstraint(5 /*:sourceFile*/, 1, 218) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeRequiredConditionToValue(5 /*:sourceFile*/, 0 /*:prompt*/ , "false") { Application = ApplicationType.Excel });
         }
 
         /// <summary>
@@ -40706,16 +39876,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<TextFields>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(7 /*:decimal*/, 1, 255),
-            new AttributeValueLengthConstraint(8 /*:thousands*/, 1, 255),
-            new AttributeValueRangeConstraint(4 /*:firstRow*/, true, double.NegativeInfinity, true, 2147483647, true) { Application = ApplicationType.Excel },
-            new AttributeValueLengthConstraint(5 /*:sourceFile*/, 1, 218) { Application = ApplicationType.Excel },
-            new AttributeRequiredConditionToValue(5 /*:sourceFile*/, 0 /*:prompt*/ , "false") { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextProperties>(deep);
@@ -41086,6 +40246,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Consolidation), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList), 0, 1)
             };
+            builder.AddConstraint(new ReferenceExistConstraint(1 /*:connectionId*/, "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", 0 /*:id*/));
+            builder.AddConstraint(new UniqueAttributeValueConstraint(1 /*:connectionId*/, true, null));
         }
 
         /// <summary>
@@ -41126,13 +40288,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             get => GetElement<CacheSourceExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new ReferenceExistConstraint(1 /*:connectionId*/, "/WorkbookPart/ConnectionsPart", typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), "DocumentFormat.OpenXml.Spreadsheet.Connection", 0 /*:id*/),
-            new UniqueAttributeValueConstraint(1 /*:connectionId*/, true, null)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheSource>(deep);
@@ -42209,15 +41364,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StringItem), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DateTimeItem), 1, 1)
             };
+            builder.AddConstraint(new AttributeValueSetConstraint(9 /*:maxValue*/, false, new string[] { "NaN", "INF", "-INF" }));
+            builder.AddConstraint(new AttributeValueSetConstraint(8 /*:minValue*/, false, new string[] { "NaN", "INF", "-INF" }));
+            builder.AddConstraint(new AttributeValueLessEqualToAnother(8 /*:minValue*/, 9 /*:maxValue*/, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueSetConstraint(9 /*:maxValue*/, false, new string[] { "NaN", "INF", "-INF" }),
-            new AttributeValueSetConstraint(8 /*:minValue*/, false, new string[] { "NaN", "INF", "-INF" }),
-            new AttributeValueLessEqualToAnother(8 /*:minValue*/, 9 /*:maxValue*/, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedItems>(deep);
@@ -43839,13 +42989,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "showRowStripes", a => a.ShowRowStripes)
 .AddAttribute(0, "showColStripes", a => a.ShowColumnStripes)
 .AddAttribute(0, "showLastColumn", a => a.ShowLastColumn);
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:name*/, 0, 255) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:name*/, 0, 255) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableStyle>(deep);
@@ -44542,6 +43687,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(5 /*:unboundColumnsLeft*/, true, double.NegativeInfinity, true, 16383, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(6 /*:unboundColumnsRight*/, true, double.NegativeInfinity, true, 16383, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(4 /*:nextId*/, true, double.NegativeInfinity, true, 65535, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:minimumVersion*/, true, 0, true, 31, true));
         }
 
         /// <summary>
@@ -44595,15 +43744,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             get => GetElement<ExtensionList>();
             set => SetElement(value);
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(5 /*:unboundColumnsLeft*/, true, double.NegativeInfinity, true, 16383, true),
-            new AttributeValueRangeConstraint(6 /*:unboundColumnsRight*/, true, double.NegativeInfinity, true, 16383, true),
-            new AttributeValueRangeConstraint(4 /*:nextId*/, true, double.NegativeInfinity, true, 65535, true),
-            new AttributeValueRangeConstraint(3 /*:minimumVersion*/, true, 0, true, 31, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<QueryTableRefresh>(deep);
@@ -45025,15 +44165,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataValidation), 1, 65534)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(1 /*:xWindow*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(2 /*:yWindow*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel });
+            builder.AddConstraint(new AttributeValueRangeConstraint(3 /*:count*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel });
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(1 /*:xWindow*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(2 /*:yWindow*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel },
-            new AttributeValueRangeConstraint(3 /*:count*/, true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel }
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataValidations>(deep);
@@ -46118,13 +45253,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyle), 0, 0)
             };
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:defaultTableStyle*/, 1, 255));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:defaultTableStyle*/, 1, 255)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyles>(deep);
@@ -46439,16 +45569,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
+            builder.AddConstraint(new AttributeValueLengthConstraint(0 /*:appName*/, 0, 65535));
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:lastEdited*/, 0, 65535));
+            builder.AddConstraint(new AttributeValueLengthConstraint(2 /*:lowestEdited*/, 0, 65535));
+            builder.AddConstraint(new AttributeValueLengthConstraint(3 /*:rupBuild*/, 0, 65535));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(0 /*:appName*/, 0, 65535),
-            new AttributeValueLengthConstraint(1 /*:lastEdited*/, 0, 65535),
-            new AttributeValueLengthConstraint(2 /*:lowestEdited*/, 0, 65535),
-            new AttributeValueLengthConstraint(3 /*:rupBuild*/, 0, 65535)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FileVersion>(deep);
@@ -46553,13 +45678,8 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 .AddAttribute(0, "hashValue", a => a.HashValue)
 .AddAttribute(0, "saltValue", a => a.SaltValue)
 .AddAttribute(0, "spinCount", a => a.SpinCount);
+            builder.AddConstraint(new AttributeValueLengthConstraint(1 /*:userName*/, 1, 54));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueLengthConstraint(1 /*:userName*/, 1, 54)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FileSharing>(deep);
@@ -47159,13 +46279,8 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FunctionGroup), 0, 255)
             };
+            builder.AddConstraint(new AttributeValueRangeConstraint(0 /*:builtInGroupCount*/, true, double.NegativeInfinity, true, 255, true));
         }
-
-        private static readonly ISemanticConstraint[] _semanticConstraint = new ISemanticConstraint[] {
-            new AttributeValueRangeConstraint(0 /*:builtInGroupCount*/, true, double.NegativeInfinity, true, 255, true)
-        };
-
-        internal override ISemanticConstraint[] SemanticConstraints => _semanticConstraint;
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FunctionGroups>(deep);

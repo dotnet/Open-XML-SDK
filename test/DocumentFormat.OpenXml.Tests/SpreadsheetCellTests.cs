@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Tests
             var dt = new DateTime(2017, 11, 28, 12, 25, 2);
             var value = new CellValue(dt);
 
-            Assert.Equal("2017-11-28T12:25:02.0000000", value.Text);
+            Assert.Equal("2017-11-28T12:25:02.000", value.Text);
         }
 
         [Fact]
@@ -24,7 +24,25 @@ namespace DocumentFormat.OpenXml.Tests
             var dt = new DateTimeOffset(2017, 11, 28, 12, 25, 2, TimeSpan.Zero);
             var value = new CellValue(dt);
 
-            Assert.Equal("2017-11-28T12:25:02.0000000+00:00", value.Text);
+            Assert.Equal("2017-11-28T12:25:02.000+00:00", value.Text);
+        }
+
+        [Fact]
+        public void CellDateTimeWithMillisecondsTest()
+        {
+            var dt = new DateTime(2017, 11, 28, 12, 25, 2).AddMilliseconds(123);
+            var value = new CellValue(dt);
+
+            Assert.Equal("2017-11-28T12:25:02.123", value.Text);
+        }
+
+        [Fact]
+        public void CellDateTimeOffsetWithMillisecondsTest()
+        {
+            var dt = new DateTimeOffset(2017, 11, 28, 12, 25, 2, TimeSpan.Zero).AddMilliseconds(123);
+            var value = new CellValue(dt);
+
+            Assert.Equal("2017-11-28T12:25:02.123+00:00", value.Text);
         }
     }
 }
