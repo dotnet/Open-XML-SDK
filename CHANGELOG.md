@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## Version 2.12.0
+
+### Added
+- Added `SmartTagClean` and `SmartTagId` in place of `SmtClean` and `SmtId` (#747)
+
 ## Version 2.11.3 - 2020-07-17
 ### Fixed
 - Fixed massive performance bottleneck when IndexReferenceConstraint and ReferenceExistConstraint are involved (#763)
