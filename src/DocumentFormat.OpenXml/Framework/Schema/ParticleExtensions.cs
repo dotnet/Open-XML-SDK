@@ -11,9 +11,9 @@ namespace DocumentFormat.OpenXml.Framework
     /// </summary>
     internal static class ParticleExtensions
     {
-        public static ParticleCollection<TElement> GetCollection<TElement>(this CompiledParticle compiled, OpenXmlCompositeElement element)
+        public static ParticleCollection GetCollection<TElement>(this CompiledParticle compiled, OpenXmlCompositeElement element)
             where TElement : OpenXmlElement
-            => new ParticleCollection<TElement>(compiled, element);
+            => new ParticleCollection(typeof(TElement), compiled, element);
 
         public static TElement Get<TElement>(this CompiledParticle compiled, OpenXmlCompositeElement element)
             where TElement : OpenXmlElement
@@ -43,15 +43,19 @@ namespace DocumentFormat.OpenXml.Framework
             return null;
         }
 
-        public static bool Set<TElement>(this CompiledParticle compiled, OpenXmlCompositeElement parent, TElement value)
-            where TElement : OpenXmlElement
+        public static bool Set(this CompiledParticle compiled, OpenXmlCompositeElement parent, OpenXmlElement value)
         {
             if (compiled is null)
             {
                 return false;
             }
 
-            var collection = GetCollection<TElement>(compiled, parent);
+            if (value is null)
+            {
+                return false;
+            }
+
+            var collection = new ParticleCollection(value.GetType(), compiled, parent);
 
             collection.Clear();
             return collection.Add(value);

@@ -22,14 +22,10 @@ namespace DocumentFormat.OpenXml.Framework
 
         public ParticleConstraint Particle { get; }
 
-        public ParticlePath Find<TElement>()
-            where TElement : OpenXmlElement
-            => GetPath(typeof(TElement));
-
         public ParticlePath Find(object obj)
-            => GetPath(obj?.GetType());
+            => Find(obj?.GetType());
 
-        private ParticlePath GetPath(Type type)
+        public ParticlePath Find(Type type)
         {
             if (type is null)
             {
@@ -49,8 +45,8 @@ namespace DocumentFormat.OpenXml.Framework
 
         public int Compare(OpenXmlElement x, OpenXmlElement y)
         {
-            var xPath = GetPath(x?.GetType());
-            var yPath = GetPath(y?.GetType());
+            var xPath = Find(x?.GetType());
+            var yPath = Find(y?.GetType());
 
             if (xPath is null && yPath is null)
             {

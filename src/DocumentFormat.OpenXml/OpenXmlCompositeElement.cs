@@ -205,6 +205,22 @@ namespace DocumentFormat.OpenXml
         #region change children
 
         /// <summary>
+        /// Adds the specified element to the element if it is a known child. This adds the element in the correct location according to the schema.
+        /// </summary>
+        /// <param name="newChild">The OpenXmlElement element to append.</param>
+        /// <returns>Success if the element was added, otherwise <c>false</c>.</returns>
+        public bool TryAddChild<T>(T newChild)
+            where T : OpenXmlElement
+        {
+            if (newChild is null)
+            {
+                return false;
+            }
+
+            return SetElement(newChild);
+        }
+
+        /// <summary>
         /// Appends the specified element to the end of the current element's list of child nodes.
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to append.</param>
@@ -761,8 +777,8 @@ namespace DocumentFormat.OpenXml
         private protected TElement GetElement<TElement>()
             where TElement : OpenXmlElement => Metadata.Particle.Get<TElement>(this);
 
-        private protected void SetElement<TElement>(TElement value)
-            where TElement : OpenXmlElement => Metadata.Particle.Set(this, value);
+        private protected bool SetElement(OpenXmlElement value)
+            => Metadata.Particle.Set(this, value);
 
         private void AddANode(OpenXmlElement node)
         {

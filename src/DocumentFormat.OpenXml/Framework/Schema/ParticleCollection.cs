@@ -11,19 +11,19 @@ namespace DocumentFormat.OpenXml.Framework.Schema
     /// <summary>
     /// This struct represents a way to access elements in a structured way based on its compiled particle.
     /// </summary>
-    /// <typeparam name="TElement">The <see cref="OpenXmlElement"/> it is wrapping</typeparam>
-    internal readonly struct ParticleCollection<TElement> : IEnumerable<TElement>
-        where TElement : OpenXmlElement
+    internal readonly struct ParticleCollection : IEnumerable<OpenXmlElement>
     {
+        private readonly Type _type;
         private readonly OpenXmlCompositeElement _element;
         private readonly CompiledParticle _compiled;
         private readonly ParticlePath _elementPath;
 
-        internal ParticleCollection(CompiledParticle compiled, OpenXmlCompositeElement element)
+        internal ParticleCollection(Type type, CompiledParticle compiled, OpenXmlCompositeElement element)
         {
+            _type = type;
             _element = element;
             _compiled = compiled;
-            _elementPath = compiled.Find<TElement>();
+            _elementPath = compiled.Find(type);
         }
 
         /// <summary>
@@ -67,29 +67,11 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         public bool IsNil => _compiled is null || _elementPath is null;
 
         /// <summary>
-        /// Gets the count of <typeparamref name="TElement"/> instances there are in the collection.
-        /// </summary>
-        public int Count
-        {
-            get
-            {
-                int count = 0;
-
-                foreach (var _ in this)
-                {
-                    count++;
-                }
-
-                return count;
-            }
-        }
-
-        /// <summary>
         /// Adds an element into the collection at the appropriate location.
         /// </summary>
         /// <param name="value">Element to add.</param>
         /// <returns><c>true</c> if the element was added, and <c>false</c> if not.</returns>
-        public bool Add(TElement value)
+        public bool Add(OpenXmlElement value)
         {
             if (IsNil)
             {
@@ -115,7 +97,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         /// </summary>
         /// <param name="item">The item to search for.</param>
         /// <returns><c>true</c> if the element was found, and <c>false</c> if not.</returns>
-        public bool Contains(TElement item)
+        public bool Contains(OpenXmlElement item)
         {
             foreach (var child in this)
             {
@@ -161,23 +143,25 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             return null;
         }
 
-        public Enumerator GetEnumerator() => new Enumerator(_element);
+        public Enumerator GetEnumerator() => new Enumerator(_element, _type);
 
-        IEnumerator<TElement> IEnumerable<TElement>.GetEnumerator() => GetEnumerator();
+        IEnumerator<OpenXmlElement> IEnumerable<OpenXmlElement>.GetEnumerator() => GetEnumerator();
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        public struct Enumerator : IEnumerator<TElement>
+        public struct Enumerator : IEnumerator<OpenXmlElement>
         {
+            private readonly Type _type;
             private OpenXmlElement _child;
 
-            public Enumerator(OpenXmlElement element)
+            internal Enumerator(OpenXmlElement element, Type type)
             {
+                _type = type;
                 _child = element.FirstChild;
                 Current = null;
             }
 
-            public TElement Current { get; private set; }
+            public OpenXmlElement Current { get; private set; }
 
             object IEnumerator.Current => Current;
 
@@ -191,9 +175,9 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
                 while (_child != null)
                 {
-                    if (_child.GetType() == typeof(TElement))
+                    if (_child.GetType() == _type)
                     {
-                        Current = (TElement)_child;
+                        Current = _child;
                         _child = _child.NextSibling();
                         return true;
                     }
@@ -209,9 +193,9 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
         private struct OpenXmlCompositeElementEnumerator
         {
-            private ParticleCollection<TElement> _collection;
+            private ParticleCollection _collection;
 
-            public OpenXmlCompositeElementEnumerator(in ParticleCollection<TElement> collection)
+            public OpenXmlCompositeElementEnumerator(in ParticleCollection collection)
             {
                 _collection = collection;
                 Current = default;
