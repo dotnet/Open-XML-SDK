@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Validation
 #if FEATURE_CANCELLATION_TOKEN
         public
 #else
-        private 
+        private
 #endif
         IEnumerable<ValidationErrorInfo> Validate(OpenXmlPackage openXmlPackage, CancellationToken token = default)
         {
@@ -131,7 +131,7 @@ namespace DocumentFormat.OpenXml.Validation
 #if FEATURE_CANCELLATION_TOKEN
         public
 #else
-        private 
+        private
 #endif
         IEnumerable<ValidationErrorInfo> Validate(OpenXmlPart openXmlPart, CancellationToken token = default)
         {
@@ -194,7 +194,7 @@ namespace DocumentFormat.OpenXml.Validation
 #if FEATURE_CANCELLATION_TOKEN
         public
 #else
-        private 
+        private
 #endif
         IEnumerable<ValidationErrorInfo> Validate(OpenXmlElement openXmlElement, CancellationToken token)
         {
