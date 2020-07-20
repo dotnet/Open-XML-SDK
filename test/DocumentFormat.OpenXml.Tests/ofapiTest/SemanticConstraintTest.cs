@@ -15,49 +15,49 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AttributeMinMaxConstraintTest()
         {
-            Excel.Column column = new Excel.Column();
-            ValidationContext context = new ValidationContext();
+            var column = new Excel.Column();
+            var context = new ValidationContext();
             context.Stack.Push(element: column);
 
-            AttributeMinMaxConstraint constraint = new AttributeMinMaxConstraint(string.Empty, "min", string.Empty, "max") ;
+            var constraint = new AttributeMinMaxConstraint(string.Empty, "min", string.Empty, "max") ;
 
             column.Max = 2;
             column.Min = 1;
-            Assert.Null(constraint.Validate(context)); //max > min, should pass validation
+            Assert.Null(constraint.ValidateCore(context)); //max > min, should pass validation
 
             column.Max = 2;
             column.Min = 2;
-            Assert.Null(constraint.Validate(context)); //max == min, should pass validation
+            Assert.Null(constraint.ValidateCore(context)); //max == min, should pass validation
 
             column.Max = 2;
             column.Min = 3;
-            Assert.NotNull(constraint.Validate(context)); //max < min, validation should be failed.
+            Assert.NotNull(constraint.ValidateCore(context)); //max < min, validation should be failed.
         }
 
         [Fact]
         public void AttributePairConstraintTest()
         {
-            Word.MoveFromRangeStart moveFromRangeStart = new Word.MoveFromRangeStart();
-            ValidationContext context = new ValidationContext();
+            var moveFromRangeStart = new Word.MoveFromRangeStart();
+            var context = new ValidationContext();
             context.Stack.Push(element: moveFromRangeStart);
 
-            AttributePairConstraint constraint = new AttributePairConstraint("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "colFirst", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "colLast");
+            var constraint = new AttributePairConstraint("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "colFirst", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "colLast");
 
             moveFromRangeStart.ColumnFirst = 1;
             moveFromRangeStart.ColumnLast = 2;
-            Assert.Null(constraint.Validate(context));
+            Assert.Null(constraint.ValidateCore(context));
 
             moveFromRangeStart.RemoveAttribute("colFirst", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
             moveFromRangeStart.ColumnLast = 2;
-            Assert.NotNull(constraint.Validate(context));
+            Assert.NotNull(constraint.ValidateCore(context));
 
             moveFromRangeStart.ColumnFirst = 1;
             moveFromRangeStart.RemoveAttribute("colLast", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
-            Assert.NotNull(constraint.Validate(context));
+            Assert.NotNull(constraint.ValidateCore(context));
 
             moveFromRangeStart.ColumnFirst = null;
             moveFromRangeStart.ColumnLast = null;
-            Assert.Null(constraint.Validate(context));
+            Assert.Null(constraint.ValidateCore(context));
         }
     }
 }

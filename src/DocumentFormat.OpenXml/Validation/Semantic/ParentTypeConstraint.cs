@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _isValid = valid;
         }
 
-        public override ValidationErrorInfo Validate(ValidationContext context)
+        public override ValidationErrorInfo ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var parent = element.Parent;
