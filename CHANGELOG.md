@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added `SmartTagClean` and `SmartTagId` in place of `SmtClean` and `SmtId` (#747)
 - Added `OpenXmlValidator.Validate(..., CancellationToken)` overrides to allow easier cancellation of long running validation on .NET 4.0+ (#773)
 
+### Removed
+- Removed explicit reference to `System.IO.Packaging` on .NET 4.6 builds (#774)
+
 ## Version 2.11.3 - 2020-07-17
 ### Fixed
 - Fixed massive performance bottleneck when IndexReferenceConstraint and ReferenceExistConstraint are involved (#763)

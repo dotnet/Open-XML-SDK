@@ -14,7 +14,7 @@
          - DevCore31:      .NET Core 3.1
          - All: Will build for all platforms
          -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore31</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevFramework46</ProjectLoadStyle>
     <__InvalidProjectLoadStyle>false</__InvalidProjectLoadStyle>
   </PropertyGroup>
 
@@ -60,6 +60,9 @@
         <BenchmarkTargetFramework>net461</BenchmarkTargetFramework>
         <SamplesFrameworks>net46</SamplesFrameworks>
       </PropertyGroup>
+      <ItemGroup>
+        <Reference Include="WindowsBase" />
+      </ItemGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'DevCore11' ">
       <PropertyGroup>
@@ -104,6 +107,10 @@
         <!-- Must disable this due to https://github.com/NuGet/Home/issues/7414 so .NET Core 1.x will build -->
         <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
       </PropertyGroup>
+
+      <ItemGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)'=='net452' OR '$(TargetFramework)' == 'net46'  ">
+        <Reference Include="WindowsBase" />
+      </ItemGroup>
     </When>
     <Otherwise>
       <PropertyGroup>
