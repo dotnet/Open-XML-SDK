@@ -20,9 +20,7 @@ Table of Contents
 -----------------
 
 - [Releases](#releases)
-  - [Supported platforms](#supported-platforms)
-  - [WindowsBase or System.IO.Packaging](#windowsbase-or-systemiopackaging)
-  - [How to install the NuGet package](#how-to-install-the-nuget-package)
+- [How to install the NuGet package](#how-to-install-the-nuget-package)
 - [If You Have Problems](#if-you-have-problems)
 - [Known Issues](#known-issues)
 - [Documentation](#documentation)
@@ -40,35 +38,7 @@ The NuGet package for the latest builds of the Open XML SDK is available as a cu
 
 For latests changes, please see the [changelog](CHANGELOG.md)
 
-Supported platforms
------------------
-
-This library supports many platforms. There are builds for .NET 3.5, .NET 4.0, .NET 4.6, and .NET Standard 1.3. The following platforms are currently supported:
-
-|    Platform     | Minimum Version |
-|-----------------|-----------------|
-| .NET Framework  | 3.5             |
-| .NET Core       | 1.0             |
-| UWP             | 10.0            |
-| Mono            | 3.5             |
-| Xamarin.iOS     | 10.0            |
-| Xamarin.Mac     | 3.0             |
-| Xamarin.Android | 7.0             |
-
-WindowsBase or System.IO.Packaging
-----------------------------------
-
-There is a known issue in `WindowsBase` that causes crashes when handling large data sources. This is fixed in later versions of the library, based on the platform availability of the `System.IO.Packaging` package. When possible, we use this package instead of `WindowsBase`. This not only fixes the crash seen by some users, but is available cross platform. However, it is only available on .NET Standard 1.3+ and .NET Framework 4.6+. For this reason, the NuGet package has multiple targets to bring in, when possible. The targets are determined by NuGet at installation and build time and are listed in the table below.
-
-| Platform          | System.IO.Packing Source | Tested by                    |
-| ----------------- | ------------------------ | ---------------------------- |
-| .NET 3.5          | WindowsBase              | N/A                          |
-| .NET 4.0          | WindowsBase              | .NET 4.5.2                   |
-| .NET 4.6          | NuGet                    | .NET 4.6                     |
-| .NET Standard 1.3 | NuGet                    | .NET Core 1.1                |
-| .NET Standard 2.0 | NuGet                    | .NET Core 2.1, .NET Core 3.1 |
-
-Keep in mind, though, that the `System.IO.Packaging` on .NET 4.6+ is simply a facade over WindowsBase, and thus everything running on .NET 4.6 will use WindowsBase instead of the newer implementation.
+This library supports many platforms. There are builds for .NET 3.5, .NET 4.0, .NET 4.6, .NET Standard 1.3, .NET Standard 2.0. The following platforms are currently supported:
 
 How to install the NuGet package
 ---------------------------------
