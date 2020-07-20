@@ -49,14 +49,16 @@ namespace DocumentFormat.OpenXml.Validation
 
         public bool Valid => Errors.Count == 0;
 
-        public bool IsCancelled
+        /// <summary>
+        /// If a <see cref="CancellationToken"/> is used and is cancelled, this will throw. Otherwise, it will
+        /// check the number of errors against the <see cref="MaxNumberOfErrors"/>.
+        /// </summary>
+        /// <returns><c>true</c> if error count is too high.</returns>
+        public bool CheckIfCancelled()
         {
-            get
-            {
-                _token.ThrowIfCancellationRequested();
+            _token.ThrowIfCancellationRequested();
 
-                return MaxNumberOfErrors > 0 && Errors.Count >= MaxNumberOfErrors;
-            }
+            return MaxNumberOfErrors > 0 && Errors.Count >= MaxNumberOfErrors;
         }
 
         public void Clear() => Errors.Clear();
@@ -104,7 +106,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         public void AddError(ValidationErrorInfo error)
         {
-            if (error != null && !IsCancelled)
+            if (error != null && !CheckIfCancelled())
             {
                 Stack.Current.AddError(error);
             }

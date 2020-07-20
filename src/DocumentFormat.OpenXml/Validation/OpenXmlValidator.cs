@@ -155,7 +155,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             return ValidateCore(openXmlPart, token);
         }
-        
+
         /// <summary>
         /// Validates the specified element.
         /// </summary>

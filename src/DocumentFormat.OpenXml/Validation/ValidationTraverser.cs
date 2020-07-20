@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             foreach (var child in children)
             {
-                if (validationContext.IsCancelled)
+                if (validationContext.CheckIfCancelled())
                 {
                     return;
                 }
