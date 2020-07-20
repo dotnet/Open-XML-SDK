@@ -219,19 +219,5 @@ namespace DocumentFormat.OpenXml.Validation
                 return validationContext.Errors;
             }
         }
-
-        private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPart part, CancellationToken token)
-        {
-            var validator = _cache.GetOrCreateDocumentValidator(part.OpenXmlPackage.ApplicationType);
-
-            return validator.Validate(part, _settings, token);
-        }
-
-        private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPackage package, CancellationToken token)
-        {
-            var validator = _cache.GetOrCreateDocumentValidator(package.ApplicationType);
-
-            return validator.Validate(package, _settings, token);
-        }
     }
 }
