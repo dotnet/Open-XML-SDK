@@ -4,26 +4,28 @@
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace DocumentFormat.OpenXml.Validation
 {
-    /// <summary>
-    /// Validation context.
-    /// </summary>
     internal class ValidationContext
     {
+        private readonly CancellationToken _token;
+
         public ValidationContext(FileFormatVersions version = FileFormatVersions.Office2007)
-            : this(new ValidationSettings(version), new ValidationCache(version))
+            : this(new ValidationSettings(version), new ValidationCache(version), default)
         {
         }
 
         public ValidationContext(ValidationContext other)
-            : this(other.Settings, other.Cache)
+            : this(other.Settings, other.Cache, other._token)
         {
         }
 
-        public ValidationContext(ValidationSettings settings, ValidationCache cache)
+        public ValidationContext(ValidationSettings settings, ValidationCache cache, CancellationToken token)
         {
+            _token = token;
+
             Cache = cache ?? throw new ArgumentNullException(nameof(cache));
             Settings = settings ?? throw new ArgumentNullException(nameof(settings));
             Errors = new List<ValidationErrorInfo>();
@@ -47,7 +49,17 @@ namespace DocumentFormat.OpenXml.Validation
 
         public bool Valid => Errors.Count == 0;
 
-        public bool IsCancelled => MaxNumberOfErrors > 0 && Errors.Count >= MaxNumberOfErrors;
+        /// <summary>
+        /// If a <see cref="CancellationToken"/> is used and is cancelled, this will throw. Otherwise, it will
+        /// check the number of errors against the <see cref="MaxNumberOfErrors"/>.
+        /// </summary>
+        /// <returns><c>true</c> if error count is too high.</returns>
+        public bool CheckIfCancelled()
+        {
+            _token.ThrowIfCancellationRequested();
+
+            return MaxNumberOfErrors > 0 && Errors.Count >= MaxNumberOfErrors;
+        }
 
         public void Clear() => Errors.Clear();
 
@@ -94,7 +106,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         public void AddError(ValidationErrorInfo error)
         {
-            if (error != null && !IsCancelled)
+            if (error != null && !CheckIfCancelled())
             {
                 Stack.Current.AddError(error);
             }
