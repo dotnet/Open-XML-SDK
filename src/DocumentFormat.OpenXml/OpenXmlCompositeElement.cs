@@ -610,7 +610,7 @@ namespace DocumentFormat.OpenXml
 
                 while (!xmlReader.EOF)
                 {
-                    // O15:#3024890, OpenXmlCompositElement ignores the Whitespace NodeType.
+                    // O15:#3024890, OpenXmlCompositeElement ignores the Whitespace NodeType.
                     if (xmlReader.NodeType == XmlNodeType.Whitespace)
                     {
                         xmlReader.Skip();

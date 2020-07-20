@@ -15,6 +15,7 @@ namespace DocumentFormat.OpenXml.Validation
     {
         private readonly ValidationSettings _settings;
         private readonly ValidationCache _cache;
+        private readonly DocumentValidator _documentValidator;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenXmlValidator"/>.
@@ -38,6 +39,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             _settings = new ValidationSettings(fileFormat);
             _cache = new ValidationCache(fileFormat);
+            _documentValidator = new DocumentValidator(_cache);
         }
 
         /// <summary>
@@ -105,7 +107,7 @@ namespace DocumentFormat.OpenXml.Validation
                 throw new InvalidOperationException(exceptionMessage);
             }
 
-            return ValidateCore(openXmlPackage, token);
+            return _documentValidator.Validate(openXmlPackage, _settings, token);
         }
 
         /// <summary>
@@ -153,7 +155,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             FileFormat.ThrowIfNotInVersion(openXmlPart);
 
-            return ValidateCore(openXmlPart, token);
+            return _documentValidator.Validate(openXmlPart, _settings, token);
         }
 
         /// <summary>
@@ -212,10 +214,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             using (validationContext.Stack.Push(element: openXmlElement))
             {
-                _cache.SchemaValidator.Validate(validationContext);
-
-                var semanticValidator = _cache.GetOrCreateSemanticValidator(ApplicationType.All);
-                semanticValidator.Validate(validationContext);
+                _documentValidator.Validate(validationContext);
 
                 return validationContext.Errors;
             }

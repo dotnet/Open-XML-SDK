@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _otherValues = otherValues;
         }
 
-        public override ValidationErrorInfo Validate(ValidationContext context)
+        public override ValidationErrorInfo ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_attribute];

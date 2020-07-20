@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
@@ -24,7 +25,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         internal ElementMetadata(
             ReadOnlyArray<AttributeMetadata> attributes,
             ReadOnlyArray<IValidator> validators,
-            ReadOnlyArray<ISemanticConstraint> constraints,
+            ReadOnlyArray<IValidator> constraints,
             FileFormatVersions version,
             SchemaAttrAttribute schema,
             CompiledParticle particle,
@@ -49,7 +50,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public ReadOnlyArray<IValidator> Validators { get; }
 
-        public ReadOnlyArray<ISemanticConstraint> Constraints { get; }
+        public ReadOnlyArray<IValidator> Constraints { get; }
 
         public FileFormatVersions Availability { get; }
 
@@ -92,8 +93,8 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private static readonly Lazy<ElementLookup> _lazy = new Lazy<ElementLookup>(() => ElementLookup.Empty, true);
 
             private List<IMetadataBuilder<AttributeMetadata>> _attributes;
-            private List<ISemanticConstraint> _constraints;
             private HashSet<IMetadataBuilder<ElementLookup.ElementChild>> _children;
+            private List<IValidator> _constraints;
             private byte _nsId;
             private string _localName;
 
@@ -103,11 +104,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 return new Builder<TElement>(this);
             }
 
-            public void AddConstraint(ISemanticConstraint constraint)
+            public void AddConstraint(SemanticConstraint constraint)
             {
                 if (_constraints is null)
                 {
-                    _constraints = new List<ISemanticConstraint>();
+                    _constraints = new List<IValidator>();
                 }
 
                 _constraints.Add(constraint);

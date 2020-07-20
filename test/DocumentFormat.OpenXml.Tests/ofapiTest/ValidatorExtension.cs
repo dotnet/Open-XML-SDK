@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Validation.Schema;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -19,7 +18,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <remarks>
         /// Only schema validating.
         /// </remarks>
-        public static List<ValidationErrorInfo> Validate(this SchemaValidator schemaValidator, OpenXmlElement openXmlElement)
+        public static List<ValidationErrorInfo> Validate(this DocumentValidator schemaValidator, OpenXmlElement openXmlElement)
         {
             Debug.Assert(openXmlElement != null);
 

@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _attribute2LocalName = attribute2LocalName;
         }
 
-        public override ValidationErrorInfo Validate(ValidationContext context)
+        public override ValidationErrorInfo ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var attribute1Exist = element.GetAttributeValueEx(_attribute1LocalName, _attribute1Namespace) != null;

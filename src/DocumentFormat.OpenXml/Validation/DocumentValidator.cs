@@ -3,12 +3,12 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml.Validation.Semantic;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
+
+#pragma warning disable CA1822
 
 namespace DocumentFormat.OpenXml.Validation
 {
@@ -17,21 +17,15 @@ namespace DocumentFormat.OpenXml.Validation
     /// </summary>
     internal sealed class DocumentValidator
     {
-        private readonly SchemaValidator _schemaValidator;
         private readonly ValidationCache _cache;
-        private readonly SemanticValidator _semanticValidator;
 
         /// <summary>
         /// Initializes a new instance of the DocumentValidator.
         /// </summary>
-        /// <param name="schemaValidator">The schema validator to be used for schema validation.</param>
-        /// <param name="semanticValidator">The semantic validator to be used for semantic validation.</param>
         /// <param name="cache">The shared validation cache.</param>
-        public DocumentValidator(SchemaValidator schemaValidator, SemanticValidator semanticValidator, ValidationCache cache)
+        public DocumentValidator(ValidationCache cache)
         {
             _cache = cache;
-            _schemaValidator = schemaValidator;
-            _semanticValidator = semanticValidator;
         }
 
         /// <summary>
@@ -86,11 +80,6 @@ namespace DocumentFormat.OpenXml.Validation
                 return;
             }
 
-            /*******************
-             * DOM traversal is not performance bottleneck.
-             * Is this the good way that we separate the schema validation and the semantics validation?
-             *******************/
-
             try
             {
                 // Must be called before the call to PartRootElement { get; }
@@ -103,13 +92,7 @@ namespace DocumentFormat.OpenXml.Validation
 
                     if (part.PartRootElement != null)
                     {
-                        _schemaValidator.Validate(context);
-
-                        // TODO: Is this needed? It's set 8 lines up
-                        using (context.Stack.Push(element: part.PartRootElement))
-                        {
-                            _semanticValidator.Validate(context);
-                        }
+                        Validate(context);
                     }
 
                     if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)
@@ -131,6 +114,30 @@ namespace DocumentFormat.OpenXml.Validation
 
                 context.AddError(errorInfo);
             }
+        }
+
+        public void Validate(ValidationContext validationContext)
+        {
+            Debug.Assert(validationContext != null);
+            Debug.Assert(validationContext.Stack.Current.Element != null);
+
+            var openxmlElement = validationContext.Stack.Current.Element;
+
+            Debug.Assert(!(openxmlElement is OpenXmlUnknownElement || openxmlElement is OpenXmlMiscNode));
+
+            // Can not just validate AlternateContent / Choice / Fallback
+            // Debug.Assert(!(openxmlElement is AlternateContent))
+            Debug.Assert(!(openxmlElement is AlternateContentChoice || openxmlElement is AlternateContentFallback));
+
+            ValidationTraverser.ValidatingTraverse(validationContext, SchemaTypeValidator.Validate);
+
+            ValidationTraverser.ValidatingTraverse(validationContext, context =>
+            {
+                foreach (var constraint in context.Stack.Current.Element.Metadata.Constraints)
+                {
+                    constraint.Validate(context);
+                }
+            });
         }
 
         /// <summary>
