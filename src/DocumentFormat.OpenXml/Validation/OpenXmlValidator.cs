@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation
         private readonly ValidationCache _cache;
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlValidator.
+        /// Initializes a new instance of the <see cref="OpenXmlValidator"/>.
         /// </summary>
         /// <remarks>
         /// Defaults to <see cref="FileFormatVersions.Office2007"/>.
@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlValidator.
+        /// Initializes a new instance of the <see cref="OpenXmlValidator"/>.
         /// </summary>
         /// <param name="fileFormat">The target file format to be validated against.</param>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the <paramref name="fileFormat"/> parameter is not a known format.</exception>
@@ -109,23 +109,23 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// Validates the specified content in the OpenXmlPart.
+        /// Validates the specified content in the <paramref name="openXmlPart"/>.
         /// </summary>
         /// <param name="openXmlPart">The target OpenXmlPart.</param>
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlPart"/> parameter is null.</exception>
-        /// <exception cref="InvalidOperationException">Throw when the specified part is not a defined part in the specified FileFormat version.</exception>
+        /// <exception cref="InvalidOperationException">Throw when the specified part is not a defined part in the specified <see cref="FileFormat"/> version.</exception>
         public IEnumerable<ValidationErrorInfo> Validate(OpenXmlPart openXmlPart)
             => Validate(openXmlPart, default);
 
         /// <summary>
-        /// Validates the specified content in the OpenXmlPart.
+        /// Validates the specified content in the <paramref name="openXmlPart"/>.
         /// </summary>
         /// <param name="openXmlPart">The target OpenXmlPart.</param>
         /// <param name="token">Cancellation token</param>
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlPart"/> parameter is null.</exception>
-        /// <exception cref="InvalidOperationException">Throw when the specified part is not a defined part in the specified FileFormat version.</exception>
+        /// <exception cref="InvalidOperationException">Throw when the specified part is not a defined part in the specified <see cref="FileFormat"/> version.</exception>
 #if FEATURE_CANCELLATION_TOKEN
         public
 #else
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlElement"/> parameter is null.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the <paramref name="openXmlElement"/> is type of <see cref="OpenXmlUnknownElement"/>, <see cref="OpenXmlMiscNode"/>, <see cref="AlternateContent"/>, <see cref="AlternateContentChoice"/> or <see cref="AlternateContentFallback"/>.</exception>
-        /// <exception cref="InvalidOperationException">Thrown when the <paramref name="openXmlElement"/> is not defined in the specified FileFormat.</exception>
+        /// <exception cref="InvalidOperationException">Thrown when the <paramref name="openXmlElement"/> is not defined in the specified <see cref="FileFormat"/>.</exception>
         public IEnumerable<ValidationErrorInfo> Validate(OpenXmlElement openXmlElement)
             => Validate(openXmlElement, default);
 
@@ -175,7 +175,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlElement"/> parameter is null.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the <paramref name="openXmlElement"/> is type of <see cref="OpenXmlUnknownElement"/>, <see cref="OpenXmlMiscNode"/>, <see cref="AlternateContent"/>, <see cref="AlternateContentChoice"/> or <see cref="AlternateContentFallback"/>.</exception>
-        /// <exception cref="InvalidOperationException">Thrown when the <paramref name="openXmlElement"/> is not defined in the specified FileFormat.</exception>
+        /// <exception cref="InvalidOperationException">Thrown when the <paramref name="openXmlElement"/> is not defined in the specified <see cref="FileFormat"/>.</exception>
 #if FEATURE_CANCELLATION_TOKEN
         public
 #else
