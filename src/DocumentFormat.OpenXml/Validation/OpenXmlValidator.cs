@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml.Validation
 #else
         private
 #endif
-        IEnumerable<ValidationErrorInfo> Validate(OpenXmlElement openXmlElement, CancellationToken token)
+        IEnumerable<ValidationErrorInfo> Validate(OpenXmlElement openXmlElement, CancellationToken token = default)
         {
             // Note: This is private on .NET 3.5 as CancellationToken on that platform is not available.
             if (openXmlElement == null)
