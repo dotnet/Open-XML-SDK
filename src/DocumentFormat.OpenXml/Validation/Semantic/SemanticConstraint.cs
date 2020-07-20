@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// <summary>
     /// Base class for each semantic constraint category.
     /// </summary>
-    internal abstract class SemanticConstraint : ISemanticConstraint
+    internal abstract class SemanticConstraint : IValidator
     {
         public SemanticConstraint(SemanticValidationLevel level)
         {
@@ -34,7 +35,46 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         /// </summary>
         /// <param name="context">return null if validation succeed</param>
         /// <returns></returns>
-        abstract public ValidationErrorInfo Validate(ValidationContext context);
+        public void Validate(ValidationContext context)
+        {
+            Get(context, out var level, out var type);
+
+            if ((SemanticValidationLevel & level) == level)
+            {
+                if (context.FileFormat.AtLeast(Version) && (Application & type) == type)
+                {
+                    var err = ValidateCore(context);
+
+                    if (err != null)
+                    {
+                        context.AddError(err);
+                    }
+                }
+            }
+        }
+
+        public abstract ValidationErrorInfo ValidateCore(ValidationContext context);
+
+        private void Get(ValidationContext context, out SemanticValidationLevel level, out ApplicationType type)
+        {
+            var current = context.Stack.Current;
+
+            if (current.Package != null)
+            {
+                level = SemanticValidationLevel.Package;
+                type = current.Package.ApplicationType;
+            }
+            else if (current.Part != null)
+            {
+                level = SemanticValidationLevel.Part;
+                type = current.Part.OpenXmlPackage.ApplicationType;
+            }
+            else
+            {
+                level = SemanticValidationLevel.Element;
+                type = ApplicationType.All;
+            }
+        }
 
         protected static OpenXmlPart GetReferencedPart(ValidationContext context, string path)
         {

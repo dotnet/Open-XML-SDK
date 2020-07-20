@@ -2,8 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 
@@ -16,6 +14,7 @@ namespace DocumentFormat.OpenXml.Validation
     {
         private readonly ValidationSettings _settings;
         private readonly ValidationCache _cache;
+        private readonly DocumentValidator _documentValidator;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlValidator.
@@ -42,6 +41,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             _settings = new ValidationSettings(fileFormat);
             _cache = new ValidationCache(fileFormat);
+            _documentValidator = new DocumentValidator(_cache);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Validation
                 throw new InvalidOperationException(exceptionMessage);
             }
 
-            return ValidateCore(openXmlPackage);
+            return _documentValidator.Validate(openXmlPackage, _settings);
         }
 
         /// <summary>
@@ -124,21 +124,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             FileFormat.ThrowIfNotInVersion(openXmlPart);
 
-            return ValidateCore(openXmlPart);
-        }
-
-        private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPart part)
-        {
-            var validator = _cache.GetOrCreateDocumentValidator(part.OpenXmlPackage.ApplicationType);
-
-            return validator.Validate(part, _settings);
-        }
-
-        private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPackage package)
-        {
-            var validator = _cache.GetOrCreateDocumentValidator(package.ApplicationType);
-
-            return validator.Validate(package, _settings);
+            return _documentValidator.Validate(openXmlPart, _settings);
         }
 
         /// <summary>
@@ -179,10 +165,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             using (validationContext.Stack.Push(element: openXmlElement))
             {
-                _cache.SchemaValidator.Validate(validationContext);
-
-                var semanticValidator = _cache.GetOrCreateSemanticValidator(ApplicationType.All);
-                semanticValidator.Validate(validationContext);
+                _documentValidator.Validate(validationContext);
 
                 return validationContext.Errors;
             }

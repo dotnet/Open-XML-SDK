@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
         }
 
-        public override ValidationErrorInfo Validate(ValidationContext context)
+        public override ValidationErrorInfo ValidateCore(ValidationContext context)
         {
             if (_parent != null)
             {
