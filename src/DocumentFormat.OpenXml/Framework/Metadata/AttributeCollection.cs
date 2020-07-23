@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             }
         }
 
-        public bool IsEmpty => _data is null;
+        public bool IsEmpty => _data.Length == 0;
 
         public bool Any() => Length > 0;
 
