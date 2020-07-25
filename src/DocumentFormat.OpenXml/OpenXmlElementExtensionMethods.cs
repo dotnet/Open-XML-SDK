@@ -92,14 +92,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(element));
             }
 
-            OpenXmlPartRootElement partRootElement = element.GetPartRootElement();
-
-            if (partRootElement != null && partRootElement.OpenXmlPart != null)
-            {
-                return partRootElement.OpenXmlPart;
-            }
-
-            return null;
+            return element.GetPartRootElement()?.OpenXmlPart;
         }
 
         /// <summary>

@@ -80,9 +80,9 @@ namespace DocumentFormat.OpenXml
         {
             foreach (OpenXmlElement item in this)
             {
-                if (item is T)
+                if (item is T t)
                 {
-                    yield return (T)item;
+                    yield return t;
                 }
             }
         }

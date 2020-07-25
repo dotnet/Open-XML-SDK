@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added `SmartTagClean` and `SmartTagId` in place of `SmtClean` and `SmtId` (#747)
 - Added `OpenXmlValidator.Validate(..., CancellationToken)` overrides to allow easier cancellation of long running validation on .NET 4.0+ (#773)
+- Added overloads for `CellValue` to take `decimal`, `double`, and `int`, as well as convenience methods to parse them (#782)
+- Added validation for `CelLType` for numbers and date formats (#782)
 
 ## Version 2.11.3 - 2020-07-17
 ### Fixed
