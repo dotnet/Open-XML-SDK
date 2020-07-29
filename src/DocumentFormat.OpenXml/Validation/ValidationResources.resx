@@ -339,4 +339,7 @@
   <data name="MoreThanOnePartForOneUri" xml:space="preserve">
     <value>Invalid document error: more than one part retrieved for one URI.</value>
   </data>
+  <data name="Sem_CellValue" xml:space="preserve">
+    <value>Cell contents have invalid value '{0}' for type '{1}'.</value>
+  </data>
 </root>

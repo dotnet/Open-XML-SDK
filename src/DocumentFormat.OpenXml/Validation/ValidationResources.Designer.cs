@@ -575,6 +575,15 @@ namespace DocumentFormat.OpenXml.Validation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cell contents have invalid value &apos;{0}&apos; for type &apos;{1}&apos;..
+        /// </summary>
+        internal static string Sem_CellValue {
+            get {
+                return ResourceManager.GetString("Sem_CellValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Relationship &apos;{0}&apos; referenced by attribute &apos;{1}&apos; has incorrect type. Its type should be &apos;{2}&apos;..
         /// </summary>
         internal static string Sem_IncorrectRelationshipType {

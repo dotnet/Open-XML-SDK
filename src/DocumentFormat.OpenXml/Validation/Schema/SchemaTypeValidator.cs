@@ -45,6 +45,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // validate Ignorable, ProcessContent, etc. compatibility-rule attributes
             CompatibilityRuleAttributesValidator.ValidateMcAttributes(validationContext);
 
+            if (theElement is IValidator validator)
+            {
+                validator.Validate(validationContext);
+            }
+
             ValidateAttributes(validationContext);
 
             // validate particles

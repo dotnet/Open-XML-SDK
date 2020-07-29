@@ -2901,9 +2901,7 @@ namespace DocumentFormat.OpenXml
                 root = root.Parent;
             }
 
-            var partRootElement = root as OpenXmlPartRootElement;
-
-            return partRootElement;
+            return root as OpenXmlPartRootElement;
         }
     }
 }
