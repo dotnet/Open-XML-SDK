@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 .Compile();
             var data = new TestOpenXmlCompositeElement();
 
-            Assert.False(particle.Set<T2>(data, new T2()));
+            Assert.False(particle.Set(data, new T2()));
             Assert.Null(particle.Get<T2>(data));
         }
 
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var data = new TestOpenXmlCompositeElement();
             var instance = new T1();
 
-            Assert.True(particle.Set<T1>(data, instance));
+            Assert.True(particle.Set(data, instance));
             Assert.Equal(instance, particle.Get<T1>(data));
         }
 
