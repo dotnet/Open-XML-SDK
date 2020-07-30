@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Version 2.12.0
 
 ### Added
+- Added `OpenXmlCompositeElement.AddChild(OpenXmlElement)` to add children in the correct order per schema (#774)
 - Added `SmartTagClean` and `SmartTagId` in place of `SmtClean` and `SmtId` (#747)
 - Added `OpenXmlValidator.Validate(..., CancellationToken)` overrides to allow easier cancellation of long running validation on .NET 4.0+ (#773)
 - Added overloads for `CellValue` to take `decimal`, `double`, and `int`, as well as convenience methods to parse them (#782)
