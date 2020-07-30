@@ -208,16 +208,28 @@ namespace DocumentFormat.OpenXml
         /// Adds the specified element to the element if it is a known child. This adds the element in the correct location according to the schema.
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to append.</param>
+        /// <param name="throwOnError">A flag to indicate if the method should throw if the child could not be added.</param>
         /// <returns>Success if the element was added, otherwise <c>false</c>.</returns>
-        public bool TryAddChild<T>(T newChild)
-            where T : OpenXmlElement
+        public bool AddChild(OpenXmlElement newChild, bool throwOnError = true)
         {
             if (newChild is null)
             {
+                if (throwOnError)
+                {
+                    throw new ArgumentNullException(nameof(newChild));
+                }
+
                 return false;
             }
 
-            return SetElement(newChild);
+            var wasAdded = SetElement(newChild);
+
+            if (throwOnError && !wasAdded)
+            {
+                throw new InvalidOperationException(ExceptionMessages.ElementIsNotChild);
+            }
+
+            return wasAdded;
         }
 
         /// <summary>
