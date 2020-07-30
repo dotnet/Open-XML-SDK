@@ -724,7 +724,7 @@ namespace DocumentFormat.OpenXml
                                     }
                                     else
                                     {
-                                        //append the orignal node
+                                        //append the original node
                                         AddANode(node);
                                     }
                                 }
