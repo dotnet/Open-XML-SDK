@@ -962,31 +962,38 @@ namespace DocumentFormat.OpenXml
 
             while (true)
             {
-                if (stack.Peek() == root && stack.Peek().FirstChild != null)
+                var topElement = stack.Peek();
+                var firstChildInTopElement = topElement.FirstChild;
+
+                if (topElement == root && firstChildInTopElement != null)
                 {
-                    root = stack.Peek().FirstChild;
-                    stack.Push(root);
-                    yield return root;
-                }
-                else if (stack.Peek().NextSibling() != null)
-                {
-                    root = stack.Peek().NextSibling();
-                    stack.Pop();
+                    root = firstChildInTopElement;
                     stack.Push(root);
                     yield return root;
                 }
                 else
                 {
-                    stack.Pop();
-                    if (stack.Count == 0)
+                    var nextSiblingElement = topElement.NextSibling();
+                    if (nextSiblingElement != null)
                     {
-                        yield break;
+                        root = nextSiblingElement;
+                        stack.Pop();
+                        stack.Push(root);
+                        yield return root;
+                    }
+                    else
+                    {
+                        stack.Pop();
+                        if (stack.Count == 0)
+                        {
+                            yield break;
+                        }
                     }
                 }
             }
         }
 
-        /// <summary>
+/// <summary>
         /// Enumerates all of the sibling elements that precede the current element and have the same parent as the current element.
         /// </summary>
         /// <returns>An IEnumerable object that contains a list of OpenXmlElement elements.</returns>
