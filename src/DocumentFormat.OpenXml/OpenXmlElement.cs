@@ -993,7 +993,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-/// <summary>
+        /// <summary>
         /// Enumerates all of the sibling elements that precede the current element and have the same parent as the current element.
         /// </summary>
         /// <returns>An IEnumerable object that contains a list of OpenXmlElement elements.</returns>
