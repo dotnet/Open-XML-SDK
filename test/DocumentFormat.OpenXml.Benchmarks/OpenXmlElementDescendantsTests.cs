@@ -3,11 +3,7 @@
 
 using BenchmarkDotNet.Attributes;
 using DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Tests;
-using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace DocumentFormat.OpenXml.Benchmarks
@@ -36,13 +32,6 @@ namespace DocumentFormat.OpenXml.Benchmarks
         public List<OpenXmlElement> Descendants()
         {
             var list = _element.Descendants().ToList();
-            return list;
-        }
-
-        [Benchmark]
-        public List<OpenXmlElement> OldDescendants()
-        {
-            var list = _element.OldDescendants().ToList();
             return list;
         }
 

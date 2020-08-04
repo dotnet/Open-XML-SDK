@@ -994,51 +994,6 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Enumerates all of the current element's descendants.
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<OpenXmlElement> OldDescendants()
-        {
-            if (FirstChild == null)
-            {
-                yield break;
-            }
-
-            var root = FirstChild;
-
-            yield return root;
-
-            var stack = new Stack<OpenXmlElement>();
-
-            stack.Push(root);
-
-            while (true)
-            {
-                if (stack.Peek() == root && stack.Peek().FirstChild != null)
-                {
-                    root = stack.Peek().FirstChild;
-                    stack.Push(root);
-                    yield return root;
-                }
-                else if (stack.Peek().NextSibling() != null)
-                {
-                    root = stack.Peek().NextSibling();
-                    stack.Pop();
-                    stack.Push(root);
-                    yield return root;
-                }
-                else
-                {
-                    stack.Pop();
-                    if (stack.Count == 0)
-                    {
-                        yield break;
-                    }
-                }
-            }
-        }
-
-        /// <summary>
         /// Enumerates all of the sibling elements that precede the current element and have the same parent as the current element.
         /// </summary>
         /// <returns>An IEnumerable object that contains a list of OpenXmlElement elements.</returns>
