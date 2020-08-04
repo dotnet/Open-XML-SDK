@@ -974,16 +974,15 @@ namespace DocumentFormat.OpenXml
                 else
                 {
                     var nextSiblingElement = topElement.NextSibling();
+                    stack.Pop();
                     if (nextSiblingElement != null)
                     {
                         root = nextSiblingElement;
-                        stack.Pop();
                         stack.Push(root);
                         yield return root;
                     }
                     else
                     {
-                        stack.Pop();
                         if (stack.Count == 0)
                         {
                             yield break;
