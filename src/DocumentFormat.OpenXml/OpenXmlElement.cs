@@ -737,12 +737,14 @@ namespace DocumentFormat.OpenXml
             {
                 NamespaceDeclField = new List<KeyValuePair<string, string>>();
             }
-
-            foreach (var item in NamespaceDeclField)
+            else
             {
-                if (item.Key == prefix)
+                foreach (var item in NamespaceDeclField)
                 {
-                    throw new InvalidOperationException(SR.Format(ExceptionMessages.DuplicatedPrefix, prefix));
+                    if (item.Key == prefix)
+                    {
+                        throw new InvalidOperationException(SR.Format(ExceptionMessages.DuplicatedPrefix, prefix));
+                    }
                 }
             }
 
