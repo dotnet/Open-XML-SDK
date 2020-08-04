@@ -960,7 +960,7 @@ namespace DocumentFormat.OpenXml
 
             stack.Push(root);
 
-            while (true)
+            while (stack.Count > 0)
             {
                 var topElement = stack.Peek();
                 var firstChildInTopElement = topElement.FirstChild;
@@ -980,13 +980,6 @@ namespace DocumentFormat.OpenXml
                         root = nextSiblingElement;
                         stack.Push(root);
                         yield return root;
-                    }
-                    else
-                    {
-                        if (stack.Count == 0)
-                        {
-                            yield break;
-                        }
                     }
                 }
             }
