@@ -31,8 +31,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [Benchmark]
         public List<OpenXmlElement> Descendants()
         {
-            var list = _element.Descendants().ToList();
-            return list;
+            return _element.Descendants().ToList();
         }
 
         private OpenXmlElement _element;
