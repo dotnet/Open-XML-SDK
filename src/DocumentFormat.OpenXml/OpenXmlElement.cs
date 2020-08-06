@@ -960,27 +960,26 @@ namespace DocumentFormat.OpenXml
 
             stack.Push(root);
 
-            while (true)
+            while (stack.Count > 0)
             {
-                if (stack.Peek() == root && stack.Peek().FirstChild != null)
+                var topElement = stack.Peek();
+                var firstChildInTopElement = topElement.FirstChild;
+
+                if (topElement == root && firstChildInTopElement != null)
                 {
-                    root = stack.Peek().FirstChild;
-                    stack.Push(root);
-                    yield return root;
-                }
-                else if (stack.Peek().NextSibling() != null)
-                {
-                    root = stack.Peek().NextSibling();
-                    stack.Pop();
+                    root = firstChildInTopElement;
                     stack.Push(root);
                     yield return root;
                 }
                 else
                 {
+                    var nextSiblingElement = topElement.NextSibling();
                     stack.Pop();
-                    if (stack.Count == 0)
+                    if (nextSiblingElement != null)
                     {
-                        yield break;
+                        root = nextSiblingElement;
+                        stack.Push(root);
+                        yield return root;
                     }
                 }
             }
