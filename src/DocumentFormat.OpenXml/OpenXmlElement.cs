@@ -752,6 +752,40 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
+        /// Fx
+        /// </summary>
+        /// <param name="prefix"></param>
+        /// <param name="uri"></param>
+        public void OldAddNamespaceDeclaration(string prefix, string uri)
+        {
+            if (string.IsNullOrEmpty(prefix))
+            {
+                throw new ArgumentNullException(nameof(prefix));
+            }
+
+            if (string.IsNullOrEmpty(uri))
+            {
+                throw new ArgumentNullException(nameof(uri));
+            }
+
+            MakeSureParsed();
+            if (NamespaceDeclField == null)
+            {
+                NamespaceDeclField = new List<KeyValuePair<string, string>>();
+            }
+
+            foreach (var item in NamespaceDeclField)
+            {
+                if (item.Key == prefix)
+                {
+                    throw new InvalidOperationException(SR.Format(ExceptionMessages.DuplicatedPrefix, prefix));
+                }
+            }
+
+            NamespaceDeclField.Add(new KeyValuePair<string, string>(prefix, uri));
+        }
+
+        /// <summary>
         /// Removes the namespace declaration for the specified prefix. Removes nothing if there is no prefix.
         /// </summary>
         /// <param name="prefix"></param>
