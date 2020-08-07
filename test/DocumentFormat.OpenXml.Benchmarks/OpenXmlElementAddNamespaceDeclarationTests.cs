@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [Benchmark]
         public void AddNamespaceDeclaration()
         {
-            _element.AddNamespaceDeclaration("test","test");
+            _element.AddNamespaceDeclaration("test", "test");
         }
 
         private OpenXmlElement _element;
