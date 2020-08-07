@@ -20,12 +20,6 @@ namespace DocumentFormat.OpenXml.Benchmarks
             _element.AddNamespaceDeclaration("test","test");
         }
 
-        [Benchmark]
-        public void OldAddNamespaceDeclaration()
-        {
-            _element.OldAddNamespaceDeclaration("test", "test");
-        }
-
         private OpenXmlElement _element;
     }
 }
