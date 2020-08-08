@@ -543,5 +543,11 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         ///</summary>
         [EnumString("text")]
         Text,
+        ///<summary>
+        ///Line.
+        ///<para>When the item is serialized out as xml, its value is "line".</para>
+        ///</summary>
+        [EnumString("line")]
+        Line,
     }
 }
