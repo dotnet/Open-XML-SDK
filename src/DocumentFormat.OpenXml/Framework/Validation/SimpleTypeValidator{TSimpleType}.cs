@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        private bool TryTransformValue(in ValidationElement current, out OpenXmlSimpleType type)
+        private static bool TryTransformValue(in ValidationElement current, out OpenXmlSimpleType type)
         {
             var input = current.Value;
 

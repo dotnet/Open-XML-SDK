@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlPartRootElement : OpenXmlCompositeElement
     {
-        private bool? _standaloneDeclaration = null;
+        private bool? _standaloneDeclaration;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartRootElement class.
