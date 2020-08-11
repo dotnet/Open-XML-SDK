@@ -41,6 +41,8 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
+            base.Dispose(disposing);
+
 #if FEATURE_XML_DISPOSE_PROTECTED
             (BaseReader as IDisposable)?.Dispose();
 #else

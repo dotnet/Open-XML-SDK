@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var element in elements)
             {
-                xpath.Append("/");
+                xpath.Append('/');
 
                 if (element is OpenXmlMiscNode)
                 {
@@ -142,19 +142,19 @@ namespace DocumentFormat.OpenXml
                         }
 
                         xpath.Append(element.Prefix);
-                        xpath.Append(":");
+                        xpath.Append(':');
                     }
                     else if (!string.IsNullOrEmpty(element.NamespaceUri))
                     {
                         xpath.Append(element.NamespaceUri);
-                        xpath.Append(":");
+                        xpath.Append(':');
                     }
 
                     xpath.Append(element.LocalName);
 
-                    xpath.Append("[");
+                    xpath.Append('[');
                     xpath.Append(element.GetXPathIndex());
-                    xpath.Append("]");
+                    xpath.Append(']');
                 }
             }
 

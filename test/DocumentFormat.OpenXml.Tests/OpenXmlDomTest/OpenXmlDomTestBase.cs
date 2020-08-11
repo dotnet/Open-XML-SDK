@@ -250,7 +250,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         /// <summary>Get element with parent and sibling. </summary>
         internal GetTargetElement getElementWithParentAndSibling =
-            e => e.Descendants().Where(d => d.Parent != null && d.Parent.ChildElements.Count() > 1).First();
+            e => e.Descendants().Where(d => d.Parent != null && d.Parent.ChildElements.Count > 1).First();
 
         /// <summary>Get element without children</summary>
         internal GetTargetElement getElementWithoutChildren =

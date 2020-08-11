@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public abstract ValidationErrorInfo ValidateCore(ValidationContext context);
 
-        private void Get(ValidationContext context, out SemanticValidationLevel level, out ApplicationType type)
+        private static void Get(ValidationContext context, out SemanticValidationLevel level, out ApplicationType type)
         {
             var current = context.Stack.Current;
 
