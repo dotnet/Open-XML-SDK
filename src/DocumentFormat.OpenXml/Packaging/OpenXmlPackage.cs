@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -177,10 +176,9 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             try
             {
-                Dictionary<Uri, OpenXmlPart> loadedParts = new Dictionary<Uri, OpenXmlPart>();
-
-                bool hasMainPart = false;
-                RelationshipCollection relationshipCollection = new PackageRelationshipPropertyCollection(_package);
+                var loadedParts = new Dictionary<Uri, OpenXmlPart>();
+                var hasMainPart = false;
+                var relationshipCollection = new PackageRelationshipPropertyCollection(_package);
 
                 // relationCollection.StrictRelationshipFound is true when this collection contains Transitional relationships converted from Strict.
                 StrictRelationshipFound = relationshipCollection.StrictRelationshipFound;
@@ -195,14 +193,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 //}
 
                 // auto detect document type (main part type for Transitional)
-                foreach (RelationshipProperty relationship in relationshipCollection)
+                foreach (var relationship in relationshipCollection)
                 {
                     if (relationship.RelationshipType == MainPartRelationshipType)
                     {
                         hasMainPart = true;
 
-                        Uri uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
-                        PackagePart metroPart = Package.GetPart(uriTarget);
+                        var uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
+                        var metroPart = Package.GetPart(uriTarget);
 
                         if (!IsValidMainPartContentType(metroPart.ContentType))
                         {
@@ -291,14 +289,14 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets or sets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value indicates that there are no limits on the size
+        /// Gets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value indicates that there are no limits on the size
         /// of the part. A non-zero value specifies the maximum size, in characters.
         /// </summary>
         /// <remarks>
         /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of a
         /// part, you can detect the attack and recover reliably.
         /// </remarks>
-        public long MaxCharactersInPart { get; internal set; }
+        public long MaxCharactersInPart => OpenSettings.MaxCharactersInPart;
 
         /// <summary>
         /// Gets a value indicating whether saving the package is supported by calling <see cref="Save"/>. Some platforms (such as .NET Core), have limited support for saving.
@@ -1441,10 +1439,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // package.Flush();
 
                 // Configure OpenSettings.
-                clone.OpenSettings.AutoSave = openSettings.AutoSave;
-                clone.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-                clone.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-                clone.MaxCharactersInPart = openSettings.MaxCharactersInPart;
+                clone.OpenSettings = new OpenSettings(openSettings);
 
                 return clone;
             }

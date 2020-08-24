@@ -14,7 +14,7 @@
          - DevCore31:      .NET Core 3.1
          - All: Will build for all platforms
          -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevFramework46</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore31</ProjectLoadStyle>
     <__InvalidProjectLoadStyle>false</__InvalidProjectLoadStyle>
   </PropertyGroup>
 

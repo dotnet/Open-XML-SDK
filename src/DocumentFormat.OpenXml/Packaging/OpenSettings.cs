@@ -8,8 +8,23 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public class OpenSettings
     {
-        private bool? autoSave;
+        private bool? _autoSave;
         private MarkupCompatibilityProcessSettings _mcSettings;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OpenSettings"/> class.
+        /// </summary>
+        public OpenSettings()
+        {
+        }
+
+        internal OpenSettings(OpenSettings other)
+        {
+            AutoSave = other.AutoSave;
+            MarkupCompatibilityProcessSettings.ProcessMode = other.MarkupCompatibilityProcessSettings.ProcessMode;
+            MarkupCompatibilityProcessSettings.TargetFileFormatVersions = other.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
+            MaxCharactersInPart = other.MaxCharactersInPart;
+        }
 
         /// <summary>
         /// Gets or sets a value indicating whether to auto save document modifications.
@@ -17,20 +32,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public bool AutoSave
         {
-            get
-            {
-                if (autoSave == null)
-                {
-                    return true;
-                }
-
-                return (bool)autoSave;
-            }
-
-            set
-            {
-                autoSave = value;
-            }
+            get => _autoSave ?? true;
+            set => _autoSave = value;
         }
 
         /// <summary>
@@ -40,7 +43,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_mcSettings == null)
+                if (_mcSettings is null)
                 {
                     _mcSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007);
                 }
