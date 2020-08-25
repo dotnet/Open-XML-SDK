@@ -183,6 +183,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 // relationCollection.StrictRelationshipFound is true when this collection contains Transitional relationships converted from Strict.
                 StrictRelationshipFound = relationshipCollection.StrictRelationshipFound;
 
+                var handler = OpenSettings.RelationshipErrorHandlerFactory?.Invoke(this);
+
+                handler?.Handle(Package);
+
                 // AutoSave must be false when opening ISO Strict doc as editable.
                 // (Attention: #2545529. Now we disable this code until we finally decide to go with this. Instead, we take an alternative approach that is added in the SavePartContents() method
                 // which we ignore AutoSave when this.StrictRelationshipFound is true to keep consistency in the document.)
@@ -218,6 +222,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 LoadReferencedPartsAndRelationships(this, null, relationshipCollection, loadedParts);
+
+                handler?.OnPackageLoaded();
             }
             catch (UriFormatException exception)
             {

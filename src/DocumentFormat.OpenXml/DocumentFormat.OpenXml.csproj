@@ -60,6 +60,7 @@
         <Compile Include="System\IO\StreamCopyExtensions.cs" />
         <Compile Include="System\Threading\CancellationToken.cs" />
         <Compile Include="System\Lazy{T}.cs" />
+        <Compile Include="System\Xml\Linq\XDocumentExtensions.cs" />
       </ItemGroup>
     </When>
 
