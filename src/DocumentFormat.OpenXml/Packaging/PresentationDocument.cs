@@ -158,12 +158,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(path);
             }
 
-            PresentationDocument doc = new PresentationDocument();
-            doc.DocumentType = type;
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = autoSave;
-            doc.MainPartContentType = MainPartContentTypes[type];
+            var doc = new PresentationDocument
+            {
+                DocumentType = type,
+                OpenSettings = new OpenSettings { AutoSave = autoSave },
+                MainPartContentType = MainPartContentTypes[type],
+            };
+
             doc.CreateCore(path);
+
             return doc;
         }
 
@@ -178,12 +181,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static PresentationDocument Create(Stream stream, PresentationDocumentType type, bool autoSave)
         {
-            PresentationDocument doc = new PresentationDocument();
-            doc.DocumentType = type;
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = autoSave;
-            doc.MainPartContentType = MainPartContentTypes[type];
+            var doc = new PresentationDocument
+            {
+                DocumentType = type,
+                OpenSettings = new OpenSettings { AutoSave = autoSave },
+                MainPartContentType = MainPartContentTypes[type],
+            };
+
             doc.CreateCore(stream);
+
             return doc;
         }
 
@@ -198,12 +204,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static PresentationDocument Create(Package package, PresentationDocumentType type, bool autoSave)
         {
-            PresentationDocument doc = new PresentationDocument();
-            doc.DocumentType = type;
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = autoSave;
-            doc.MainPartContentType = MainPartContentTypes[type];
+            var doc = new PresentationDocument
+            {
+                DocumentType = type,
+                OpenSettings = new OpenSettings { AutoSave = autoSave },
+                MainPartContentType = MainPartContentTypes[type],
+            };
+
             doc.CreateCore(package);
+
             return doc;
         }
 
@@ -312,13 +321,13 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            PresentationDocument doc = new PresentationDocument();
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = openSettings.AutoSave;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            doc.MaxCharactersInPart = openSettings.MaxCharactersInPart;
+            var doc = new PresentationDocument
+            {
+                OpenSettings = new OpenSettings(openSettings),
+            };
+
             doc.OpenCore(path, isEditable);
+
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
                 doc.UpdateDocumentTypeFromContentType();
@@ -351,13 +360,13 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            PresentationDocument doc = new PresentationDocument();
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = openSettings.AutoSave;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            doc.MaxCharactersInPart = openSettings.MaxCharactersInPart;
+            var doc = new PresentationDocument
+            {
+                OpenSettings = new OpenSettings(openSettings),
+            };
+
             doc.OpenCore(stream, isEditable);
+
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
                 doc.UpdateDocumentTypeFromContentType();
@@ -389,13 +398,13 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            PresentationDocument doc = new PresentationDocument();
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = openSettings.AutoSave;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            doc.MaxCharactersInPart = openSettings.MaxCharactersInPart;
+            var doc = new PresentationDocument
+            {
+                OpenSettings = new OpenSettings(openSettings),
+            };
+
             doc.OpenCore(package);
+
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
                 doc.UpdateDocumentTypeFromContentType();

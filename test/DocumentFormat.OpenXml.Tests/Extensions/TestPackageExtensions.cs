@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public static class PackageExtensions
+    public static class TestPackageExtensions
     {
         /// <summary>
         /// Get Main Part of current package
