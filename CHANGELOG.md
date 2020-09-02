@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Version 2.12.0
 
 ### Added
+- Added `OpenSettings.RelationshipErrorHandlerFactory` to provide a way to handle URIs that break parsing documents with malformed links (#793)
 - Added `OpenXmlCompositeElement.AddChild(OpenXmlElement)` to add children in the correct order per schema (#774)
 - Added `SmartTagClean` and `SmartTagId` in place of `SmtClean` and `SmtId` (#747)
 - Added `OpenXmlValidator.Validate(..., CancellationToken)` overrides to allow easier cancellation of long running validation on .NET 4.0+ (#773)
@@ -18,8 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Version 2.11.3 - 2020-07-17
 ### Fixed
-- Fixed massive performance bottleneck when IndexReferenceConstraint and ReferenceExistConstraint are involved (#763)
-- Fixed CellValue to only include three most signficant digits on second fractions to correct issue loading dates (#741)
+- Fixed massive performance bottleneck when `IndexReferenceConstraint` and `ReferenceExistConstraint` are involved (#763)
+- Fixed `CellValue` to only include three most signficant digits on second fractions to correct issue loading dates (#741)
 - Fixed a couple of validation indexing errors that might cause erroneous validation errors (#767)
 - Updated internal validation system to not use recursion, allowing for better short-circuiting (#766)
 
