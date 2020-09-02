@@ -14,7 +14,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>  
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
@@ -34,11 +34,37 @@
   </ItemGroup>
 
   <Choose>
-    <When Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' ">
+    <When Condition=" '$(TargetFramework)' == 'net35'">
       <PropertyGroup>
         <CompileWithPeVerify>true</CompileWithPeVerify>
       </PropertyGroup>
-      
+
+      <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xml.Linq" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
+        <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
+        <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
+        <Compile Include="System\FormattableString.cs" />
+        <Compile Include="System\IO\StreamCopyExtensions.cs" />
+        <Compile Include="System\Lazy{T}.cs" />
+        <Compile Include="System\Reflection\TypeExtensions.cs" />
+        <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
+        <Compile Include="System\Runtime\CompilerServices\FormattableStringFactory.cs" />
+        <Compile Include="System\Threading\CancellationToken.cs" />
+        <Compile Include="System\Xml\Linq\XDocumentExtensions.cs" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net40' ">
+      <PropertyGroup>
+        <CompileWithPeVerify>true</CompileWithPeVerify>
+      </PropertyGroup>
+
       <ItemGroup>
         <Reference Include="System" />
         <Reference Include="System.Xml" />
@@ -49,18 +75,9 @@
         <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
         <Compile Include="System\Reflection\TypeExtensions.cs" />
-        <Compile Include="System\Runtime\InteropServices\Marshal.cs" />
         <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
         <Compile Include="System\Runtime\CompilerServices\FormattableStringFactory.cs" />
         <Compile Include="System\FormattableString.cs" />
-      </ItemGroup>
-
-      <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
-        <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
-        <Compile Include="System\IO\StreamCopyExtensions.cs" />
-        <Compile Include="System\Threading\CancellationToken.cs" />
-        <Compile Include="System\Lazy{T}.cs" />
-        <Compile Include="System\Xml\Linq\XDocumentExtensions.cs" />
       </ItemGroup>
     </When>
 
