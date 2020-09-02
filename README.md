@@ -38,7 +38,12 @@ The NuGet package for the latest builds of the Open XML SDK is available as a cu
 
 For latests changes, please see the [changelog](CHANGELOG.md)
 
-This library supports many platforms. There are builds for .NET 3.5, .NET 4.0, .NET 4.6, .NET Standard 1.3, .NET Standard 2.0. The following platforms are currently supported:
+Package currently supports the following targets:
+- .NET 3.5
+- .NET 4.0
+- .NET 4.6
+- .NET Standard 1.3
+- .NET Standard 2.0.
 
 How to install the NuGet package
 ---------------------------------
