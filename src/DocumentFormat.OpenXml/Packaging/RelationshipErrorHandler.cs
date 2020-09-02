@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private const string RelationshipTagName = "Relationship";
         private const string RelationshipNamespaceUri = "http://schemas.openxmlformats.org/package/2006/relationships";
         private const string TargetAttributeName = "Target";
+        private const string TargetModeAttributeName = "TargetMode";
         private const string IdAttributeName = "Id";
 
         /// <summary>
@@ -97,29 +98,51 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 foreach (var child in doc.Root.Descendants(XName.Get(RelationshipTagName, RelationshipNamespaceUri)))
                 {
-                    var id = child.Attribute(IdAttributeName)?.Value;
-                    var target = child.Attribute(TargetAttributeName)?.Value;
-
-                    if (!Uri.TryCreate(target, UriHelper.RelativeOrAbsolute, out _))
+                    if (ValidateLink(part, child))
                     {
-                        var updated = Rewrite(part.Uri, id, target);
-
-                        if (updated != null)
-                        {
-                            if (!Uri.TryCreate(updated, UriHelper.RelativeOrAbsolute, out _))
-                            {
-                                throw new InvalidOperationException(ExceptionMessages.InvalidUriProvided);
-                            }
-
-                            child.SetAttributeValue(TargetAttributeName, updated);
-
-                            changed = true;
-                        }
+                        changed = true;
                     }
                 }
             }
 
             return changed ? doc : null;
+        }
+
+        private bool ValidateLink(PackagePart part, XElement child)
+        {
+            if (!EnumHelper.TryParse<TargetMode>(child.Attribute(TargetModeAttributeName)?.Value, out var targetMode))
+            {
+                return false;
+            }
+
+            if (targetMode != TargetMode.External)
+            {
+                return false;
+            }
+
+            var target = child.Attribute(TargetAttributeName)?.Value;
+
+            if (Uri.TryCreate(target, UriHelper.RelativeOrAbsolute, out _))
+            {
+                return false;
+            }
+
+            var id = child.Attribute(IdAttributeName)?.Value;
+            var updated = Rewrite(part.Uri, id, target);
+
+            if (updated is null)
+            {
+                return false;
+            }
+
+            if (!Uri.TryCreate(updated, UriHelper.RelativeOrAbsolute, out _))
+            {
+                throw new InvalidOperationException(ExceptionMessages.InvalidUriProvided);
+            }
+
+            child.SetAttributeValue(TargetAttributeName, updated);
+
+            return true;
         }
 
         private class DelegateRelationshipErrorHandler : RelationshipErrorHandler

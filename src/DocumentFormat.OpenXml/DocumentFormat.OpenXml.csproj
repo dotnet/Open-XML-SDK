@@ -25,6 +25,7 @@
     <!-- Remove all files under System as they need to be specifically opted into. They are
          helper files to fill the gaps of the various platforms that are targeted -->
     <Compile Remove="System\**\*.cs" />
+    <Compile Include="System\EnumHelper.cs" />
     <Compile Include="System\UriHelper.cs" />
     <None Include="**\*.md" />
   </ItemGroup>
