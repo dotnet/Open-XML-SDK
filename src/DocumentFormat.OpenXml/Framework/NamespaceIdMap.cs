@@ -107,6 +107,7 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://schemas.microsoft.com/office/spreadsheetml/2014/11/main", "x16", FileFormatVersions.Office2016 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2015/02/main", "x16r2", FileFormatVersions.Office2016 },
             { "http://schemas.microsoft.com/office/word/2015/wordml/symex", "w16se", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/drawing/2016/SVG/main", "asvg", FileFormatVersions.Office2016 },
         };
 
         // This dictionary contains the Strict and Transitional namespaces pairs to be interpreted equivalent.
