@@ -45,6 +45,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 case ImagePartType.Wmf:
                     return "image/x-wmf";
 
+                case ImagePartType.Svg:
+                    return "image/svg+xml";
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(imageType));
             }
@@ -87,6 +90,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 case ImagePartType.Wmf:
                     return ".wmf";
+
+                case ImagePartType.Svg:
+                    return ".svg";
 
                 default:
                     return ".image";
