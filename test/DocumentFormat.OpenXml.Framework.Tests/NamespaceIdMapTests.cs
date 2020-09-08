@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void NamespaceCount()
         {
-            Assert.Equal(87, NamespaceIdMap.Count);
+            Assert.Equal(88, NamespaceIdMap.Count);
         }
 
         [InlineData("", "", FileFormatVersions.None, 0)]
@@ -100,6 +100,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [InlineData("http://schemas.microsoft.com/office/spreadsheetml/2014/11/main", "x16", FileFormatVersions.Office2016, 84)]
         [InlineData("http://schemas.microsoft.com/office/spreadsheetml/2015/02/main", "x16r2", FileFormatVersions.Office2016, 85)]
         [InlineData("http://schemas.microsoft.com/office/word/2015/wordml/symex", "w16se", FileFormatVersions.Office2016, 86)]
+        [InlineData("http://schemas.microsoft.com/office/drawing/2016/SVG/main", "asvg", FileFormatVersions.Office2016, 87)]
         [Theory]
         public void NamespacePrefixTest(string ns, string prefix, FileFormatVersions version, byte id)
         {

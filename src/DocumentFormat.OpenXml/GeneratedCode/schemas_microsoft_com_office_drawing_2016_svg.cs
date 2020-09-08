@@ -1,4 +1,7 @@
-﻿using DocumentFormat.OpenXml.Framework.Metadata;
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,7 +13,6 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures.SVG
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is asvg:svgBlip.</para>
     /// </summary>
-    /// <remark>
     public partial class SvgBlip : OpenXmlCompositeElement
     {
         /// <summary>
