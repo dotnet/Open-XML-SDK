@@ -12741,6 +12741,10 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Drawing.Pictures.SVG.SvgBlip",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties",
     "Children": [
       {
