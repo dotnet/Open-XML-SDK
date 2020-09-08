@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
@@ -39,10 +40,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
         /// <returns>The newly created OpenXmlReader.</returns>
-        public static OpenXmlReader Create(OpenXmlPart openXmlPart)
-        {
-            return new OpenXmlPartReader(openXmlPart);
-        }
+        public static OpenXmlReader Create(OpenXmlPart openXmlPart) => new OpenXmlPartReader(openXmlPart);
 
         /// <summary>
         /// Creates an OpenXmlReader from the specified OpenXmlPart and Boolean values.
@@ -50,20 +48,14 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         /// <returns>The newly created OpenXmlReader.</returns>
-        public static OpenXmlReader Create(OpenXmlPart openXmlPart, bool readMiscNodes)
-        {
-            return new OpenXmlPartReader(openXmlPart, readMiscNodes);
-        }
+        public static OpenXmlReader Create(OpenXmlPart openXmlPart, bool readMiscNodes) => new OpenXmlPartReader(openXmlPart, readMiscNodes);
 
         /// <summary>
         /// Creates an OpenXmlReader from the specified part stream.
         /// </summary>
         /// <param name="partStream">The part stream.</param>
         /// <returns></returns>
-        public static OpenXmlReader Create(Stream partStream)
-        {
-            return new OpenXmlPartReader(partStream);
-        }
+        public static OpenXmlReader Create(Stream partStream) => new OpenXmlPartReader(partStream);
 
         /// <summary>
         /// Creates an OpenXmlReader from the specified part stream and Boolean values.
@@ -71,20 +63,14 @@ namespace DocumentFormat.OpenXml
         /// <param name="partStream">The part stream.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         /// <returns></returns>
-        public static OpenXmlReader Create(Stream partStream, bool readMiscNodes)
-        {
-            return new OpenXmlPartReader(partStream, readMiscNodes);
-        }
+        public static OpenXmlReader Create(Stream partStream, bool readMiscNodes) => new OpenXmlPartReader(partStream, readMiscNodes);
 
         /// <summary>
         /// Creates an OpenXmlReader from the OpenXmlElement (travel the DOM tree).
         /// </summary>
         /// <param name="openXmlElement">The OpenXmlElement to read.</param>
         /// <returns>The newly created OpenXmlReader.</returns>
-        public static OpenXmlReader Create(OpenXmlElement openXmlElement)
-        {
-            return new OpenXmlDomReader(openXmlElement);
-        }
+        public static OpenXmlReader Create(OpenXmlElement openXmlElement) => new OpenXmlDomReader(openXmlElement);
 
         /// <summary>
         /// Creates an OpenXmlReader from the OpenXmlElement (travel the DOM tree).
@@ -92,10 +78,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlElement">The OpenXmlElement to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         /// <returns>The newly created OpenXmlReader.</returns>
-        public static OpenXmlReader Create(OpenXmlElement openXmlElement, bool readMiscNodes)
-        {
-            return new OpenXmlDomReader(openXmlElement, readMiscNodes);
-        }
+        public static OpenXmlReader Create(OpenXmlElement openXmlElement, bool readMiscNodes) => new OpenXmlDomReader(openXmlElement, readMiscNodes);
 
         /// <summary>
         /// Gets a value indicating whether the OpenXmlReader will read or skip all miscellaneous nodes.
@@ -207,6 +190,12 @@ namespace DocumentFormat.OpenXml
         public abstract string Prefix { get; }
 
         /// <summary>
+        /// Gets an instance of <see cref="IXmlLineInfo"/> if available for the current reader.
+        /// </summary>
+        /// <returns>An object for obtaining information about line info</returns>
+        public virtual IXmlLineInfo GetLineInfo() => XmlLineInfo.Empty;
+
+        /// <summary>
         /// Moves to read the next element.
         /// </summary>
         /// <returns>Returns true if the next element was read successfully; false if there are no more elements to read. </returns>
@@ -250,9 +239,9 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Closes the reader.
         /// </summary>
-        public abstract void Close( );
+        public abstract void Close();
 
-#region dispose related methods
+        #region dispose related methods
 
         /// <summary>
         /// Thrown if the object is disposed.
@@ -282,9 +271,9 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-#endregion
+        #endregion
 
-#region IDisposable Members
+        #region IDisposable Members
 
         /// <summary>
         /// Closes the reader, and releases all resources.
@@ -295,6 +284,6 @@ namespace DocumentFormat.OpenXml
             GC.SuppressFinalize(this);
         }
 
-#endregion
+        #endregion
     }
 }

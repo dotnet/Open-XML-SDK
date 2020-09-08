@@ -20,33 +20,23 @@ namespace DocumentFormat.OpenXml
 
         public static XmlReader Create(Stream partStream, XmlReaderSettings settings, bool strictRelationshipFound)
         {
-            XmlReader xmlReader = XmlReader.Create(partStream, settings);
+            var xmlReader = XmlReader.Create(partStream, settings);
 
             return new XmlConvertingReader(xmlReader, strictRelationshipFound);
         }
 
         public static XmlReader Create(TextReader textReader, XmlReaderSettings settings)
         {
-            return Create(textReader, settings, true);
-        }
+            var xmlReader = XmlReader.Create(textReader, settings);
 
-        public static XmlReader Create(TextReader textReader, XmlReaderSettings settings, bool strictRelationshipFound)
-        {
-            XmlReader xmlReader = XmlReader.Create(textReader, settings);
-
-            return new XmlConvertingReader(xmlReader, strictRelationshipFound);
+            return new XmlConvertingReader(xmlReader, true);
         }
 
         public static XmlReader Create(TextReader textReader)
         {
-            return Create(textReader, true);
-        }
+            var xmlReader = XmlReader.Create(textReader);
 
-        public static XmlReader Create(TextReader textReader, bool strictRelationshipFound)
-        {
-            XmlReader xmlReader = XmlReader.Create(textReader);
-
-            return new XmlConvertingReader(xmlReader, strictRelationshipFound);
+            return new XmlConvertingReader(xmlReader, true);
         }
     }
 }
