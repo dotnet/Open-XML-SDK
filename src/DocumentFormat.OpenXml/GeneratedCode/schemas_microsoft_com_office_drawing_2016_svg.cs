@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures.SVG
         }
 
         /// <summary>
-        /// <para>Embedded Picture Reference</para>
+        /// <para>Gets or sets Embedded Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:embed</para>
         /// </summary>
         /// <remark>
