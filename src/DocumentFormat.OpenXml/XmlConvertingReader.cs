@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines the XmlConvertingReader - This XmlReader tries to replace the Strict namespaces with equivalent Transitional namespaces.
     /// </summary>
-    internal class XmlConvertingReader : XmlReader
+    internal class XmlConvertingReader : XmlReader, IXmlLineInfo
     {
         /// <summary>
         /// Creates an instance of <see cref="XmlConvertingReader"/>
@@ -165,6 +165,12 @@ namespace DocumentFormat.OpenXml
 
         /// <inheritdoc/>
         public override XmlSpace XmlSpace => BaseReader.XmlSpace;
+
+        int IXmlLineInfo.LineNumber => XmlLineInfo.Get(BaseReader).LineNumber;
+
+        int IXmlLineInfo.LinePosition => XmlLineInfo.Get(BaseReader).LinePosition;
+
+        bool IXmlLineInfo.HasLineInfo() => XmlLineInfo.Get(BaseReader).HasLineInfo();
 
         private string ApplyStrictTranslation(string uri)
         {

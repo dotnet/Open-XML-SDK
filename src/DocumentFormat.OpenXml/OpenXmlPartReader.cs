@@ -389,6 +389,9 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        /// <inheritdoc/>
+        public override IXmlLineInfo GetLineInfo() => XmlLineInfo.Get(_xmlReader);
+
         #region private methods
 
         /// <summary>

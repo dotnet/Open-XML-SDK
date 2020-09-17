@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added `OpenXmlValidator.Validate(..., CancellationToken)` overrides to allow easier cancellation of long running validation on .NET 4.0+ (#773)
 - Added overloads for `CellValue` to take `decimal`, `double`, and `int`, as well as convenience methods to parse them (#782)
 - Added validation for `CellType` for numbers and date formats (#782)
+- Added `OpenXmlReader.GetLineInfo()` to retrieve `IXmlLineInfo` of the underlying reader if available (#804)
 
 ### Removed
 - Removed explicit reference to `System.IO.Packaging` on .NET 4.6 builds (#774)
