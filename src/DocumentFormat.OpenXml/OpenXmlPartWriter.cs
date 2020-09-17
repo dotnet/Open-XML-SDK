@@ -5,7 +5,6 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Text;
 using System.Xml;
 
@@ -16,22 +15,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlPartWriter : OpenXmlWriter
     {
-        private static Type _openXmlLeafTextElementClass;
-
-        private static Type OpenXmlLeafTextElementClass
-        {
-            get
-            {
-                if (_openXmlLeafTextElementClass == null)
-                {
-                    _openXmlLeafTextElementClass = typeof(OpenXmlLeafTextElement);
-                }
-
-                return _openXmlLeafTextElementClass;
-            }
-        }
-
-        private XmlWriter _xmlWriter;
+        private readonly XmlWriter _xmlWriter;
         private bool _isLeafTextElementStart; // default is false
 
         // private Stack<OpenXmlElement> _elementStack;
@@ -62,8 +46,14 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(encoding));
             }
 
-            Stream partStream = openXmlPart.GetStream(FileMode.Create);
-            Init(partStream, /*closeOutput*/true, encoding);
+            var partStream = openXmlPart.GetStream(FileMode.Create);
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = true,
+                Encoding = encoding,
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
         /// <summary>
@@ -92,7 +82,13 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(encoding));
             }
 
-            Init(partStream, /*closeOutput*/false, encoding);
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = false,
+                Encoding = encoding,
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
         #region public OpenXmlWriter methods
@@ -186,13 +182,13 @@ namespace DocumentFormat.OpenXml
             if (attributes != null)
             {
                 // write attributes
-                foreach (OpenXmlAttribute attribute in attributes)
+                foreach (var attribute in attributes)
                 {
                     _xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
             }
 
-            if (IsOpenXmlLeafTextElement(elementReader.ElementType))
+            if (elementReader.ElementType.IsSubclassOf(typeof(OpenXmlLeafTextElement)))
             {
                 _isLeafTextElementStart = true;
             }
@@ -225,13 +221,13 @@ namespace DocumentFormat.OpenXml
             if (elementObject.HasAttributes)
             {
                 // write attributes
-                foreach (OpenXmlAttribute attribute in elementObject.GetAttributes())
+                foreach (var attribute in elementObject.GetAttributes())
                 {
                     _xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
             }
 
-            if (IsOpenXmlLeafTextElement(elementObject))
+            if (elementObject is OpenXmlLeafTextElement)
             {
                 _isLeafTextElementStart = true;
             }
@@ -289,13 +285,13 @@ namespace DocumentFormat.OpenXml
             if (attributes != null)
             {
                 // write attributes
-                foreach (OpenXmlAttribute attribute in attributes)
+                foreach (var attribute in attributes)
                 {
                     _xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
             }
 
-            if (IsOpenXmlLeafTextElement(elementObject))
+            if (elementObject is OpenXmlLeafTextElement)
             {
                 _isLeafTextElementStart = true;
             }
@@ -373,31 +369,5 @@ namespace DocumentFormat.OpenXml
         }
 
         #endregion
-
-        #region private methods
-
-        private void Init(Stream partStream, bool closeOutput, Encoding encoding)
-        {
-            XmlWriterSettings settings = new XmlWriterSettings
-            {
-                CloseOutput = closeOutput,
-                Encoding = encoding,
-            };
-
-            _xmlWriter = XmlWriter.Create(partStream, settings);
-        }
-
-        private static bool IsOpenXmlLeafTextElement(Type elementType)
-        {
-            return elementType.IsSubclassOf(OpenXmlLeafTextElementClass);
-        }
-
-        private static bool IsOpenXmlLeafTextElement(OpenXmlElement element)
-        {
-            return element is OpenXmlLeafTextElement;
-        }
-
-        #endregion
-
     }
 }

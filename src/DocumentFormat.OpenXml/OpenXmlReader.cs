@@ -241,8 +241,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public abstract void Close();
 
-        #region dispose related methods
-
         /// <summary>
         /// Thrown if the object is disposed.
         /// </summary>
@@ -271,10 +269,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #endregion
-
-        #region IDisposable Members
-
         /// <summary>
         /// Closes the reader, and releases all resources.
         /// </summary>
@@ -283,7 +277,5 @@ namespace DocumentFormat.OpenXml
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-
-        #endregion
     }
 }
