@@ -3,6 +3,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -13,6 +14,8 @@ namespace DocumentFormat.OpenXml
     [DebuggerDisplay("{InnerText}")]
     public class Int64Value : OpenXmlComparableSimpleValue<long>
     {
+        private static readonly NumberStyles ParseStyles = NumberStyles.AllowLeadingSign | NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite | NumberStyles.AllowExponent;
+
         /// <summary>
         /// Initializes a new instance of the Int64Value class.
         /// </summary>
@@ -40,7 +43,11 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(long input) => XmlConvert.ToString(input);
 
-        private protected override long Parse(string input) => XmlConvert.ToInt64(input);
+        private protected override long Parse(string input)
+          => long.Parse(input, ParseStyles, NumberFormatInfo.InvariantInfo);
+
+        private protected override bool TryParse(string input, out long value)
+          => long.TryParse(input, ParseStyles, NumberFormatInfo.InvariantInfo, out value);
 
         /// <summary>
         /// Implicitly converts the specified Int64Value to an Int64 value.

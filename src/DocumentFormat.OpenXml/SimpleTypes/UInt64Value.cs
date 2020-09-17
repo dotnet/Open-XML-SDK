@@ -3,6 +3,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -14,6 +15,8 @@ namespace DocumentFormat.OpenXml
     [DebuggerDisplay("{InnerText}")]
     public class UInt64Value : OpenXmlComparableSimpleValue<ulong>
     {
+        private static readonly NumberStyles ParseStyles = NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite | NumberStyles.AllowExponent;
+
         /// <summary>
         /// Initializes a new instance of the UInt64Value class.
         /// </summary>
@@ -41,7 +44,11 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(ulong input) => XmlConvert.ToString(input);
 
-        private protected override ulong Parse(string input) => XmlConvert.ToUInt64(input);
+        private protected override ulong Parse(string input)
+             => ulong.Parse(input, ParseStyles, NumberFormatInfo.InvariantInfo);
+
+        private protected override bool TryParse(string input, out ulong value)
+             => ulong.TryParse(input, ParseStyles, NumberFormatInfo.InvariantInfo, out value);
 
         /// <summary>
         /// Implicitly converts the specified UInt64Value object to a UInt64 value.

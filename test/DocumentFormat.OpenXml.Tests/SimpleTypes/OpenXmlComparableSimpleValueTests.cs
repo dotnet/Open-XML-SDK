@@ -2,6 +2,8 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
@@ -17,7 +19,18 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 
         protected abstract T[] Values { get; }
 
+        protected virtual IEnumerable<TestValue> TestValues { get; } = Enumerable.Empty<TestValue>();
+
         protected abstract OpenXmlComparableSimpleValue<T> Create(T input);
+
+        protected OpenXmlComparableSimpleValue<T> Create(string input)
+        {
+            var result = Create(default(T));
+
+            result.InnerText = input;
+
+            return result;
+        }
 
         [Fact]
         public void TestValuesAreConsistent()
@@ -62,7 +75,7 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         [Fact]
         public void CompareTo_NoValue()
         {
-            var value = Create(default);
+            var value = Create(default(T));
             value.InnerText = Guid.NewGuid().ToString();
 
             Assert.False(value.HasValue);
@@ -118,7 +131,7 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         [Fact]
         public void Equals_NoValue()
         {
-            var value = Create(default);
+            var value = Create(default(T));
             value.InnerText = Guid.NewGuid().ToString();
 
             Assert.False(value.HasValue);
@@ -172,6 +185,31 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
             Assert.True(LargeValue >= SmallValue1);
 
             Assert.True(LargeValue > SmallValue1);
+        }
+
+        [Fact]
+        public void VerifySimpleType()
+        {
+            foreach (var t in TestValues)
+            {
+                var type = Create(t.Data);
+
+                Assert.True(type.HasValue, $"{t.Data} should have value");
+                Assert.Equal(t.Value, type.Value);
+            }
+        }
+
+        protected class TestValue
+        {
+            public TestValue(T value, string data)
+            {
+                Data = data;
+                Value = value;
+            }
+
+            public string Data { get; }
+
+            public T Value { get; }
         }
     }
 }

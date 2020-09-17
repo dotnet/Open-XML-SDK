@@ -3,6 +3,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -13,6 +14,8 @@ namespace DocumentFormat.OpenXml
     [DebuggerDisplay("{InnerText}")]
     public class Int32Value : OpenXmlComparableSimpleValue<int>
     {
+        private static readonly NumberStyles ParseStyles = NumberStyles.AllowLeadingSign | NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite | NumberStyles.AllowExponent;
+
         /// <summary>
         /// Initializes a new instance of the Int32Value class.
         /// </summary>
@@ -40,7 +43,11 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(int input) => XmlConvert.ToString(input);
 
-        private protected override int Parse(string input) => XmlConvert.ToInt32(input);
+        private protected override int Parse(string input)
+             => int.Parse(input, ParseStyles, NumberFormatInfo.InvariantInfo);
+
+        private protected override bool TryParse(string input, out int value)
+             => int.TryParse(input, ParseStyles, NumberFormatInfo.InvariantInfo, out value);
 
         /// <summary>
         /// Implicitly converts the specified value to an Int32 value.

@@ -3,6 +3,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -14,6 +15,8 @@ namespace DocumentFormat.OpenXml
     [DebuggerDisplay("{InnerText}")]
     public class UInt32Value : OpenXmlComparableSimpleValue<uint>
     {
+        private static readonly NumberStyles ParseStyle = NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite | NumberStyles.AllowExponent;
+
         /// <summary>
         /// Initializes a new instance of the UInt32Value class.
         /// </summary>
@@ -41,7 +44,11 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(uint input) => XmlConvert.ToString(input);
 
-        private protected override uint Parse(string input) => XmlConvert.ToUInt32(input);
+        private protected override uint Parse(string input)
+            => uint.Parse(input, ParseStyle, NumberFormatInfo.InvariantInfo);
+
+        private protected override bool TryParse(string input, out uint value)
+            => uint.TryParse(input, ParseStyle, NumberFormatInfo.InvariantInfo, out value);
 
         /// <summary>
         /// Implicitly converts the specified UInt32Value class to a UInt32 value.

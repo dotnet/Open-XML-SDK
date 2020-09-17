@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 - Removed explicit reference to `System.IO.Packaging` on .NET 4.6 builds (#774)
 
+### Fixed
+- Fixed parsing of `U?Int[32|64]Value` text when an exponenent is present (#809)
+
 ## Version 2.11.3 - 2020-07-17
 ### Fixed
 - Fixed massive performance bottleneck when `IndexReferenceConstraint` and `ReferenceExistConstraint` are involved (#763)
