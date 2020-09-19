@@ -3,8 +3,9 @@
 
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
+using System.Collections.Generic;
 
-#if NET35 && DEBUG
+#if NET35
 using System.Linq;
 #endif
 
@@ -40,12 +41,11 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         public int CompareTo(ParticlePath other)
             => CompareTo(other, true);
 
-#if DEBUG
+        public override string ToString()
 #if NET35
-        public string Path => string.Join(", ", _values.Select(v => v.ToString()).ToArray());
+            => string.Join(", ", _values.Select(v => v.ToString()).ToArray());
 #else
-        public string Path => string.Join(", ", (object[])_values);
-#endif
+            => string.Join(", ", (IEnumerable<ParticlePathItem>)_values);
 #endif
 
         private int CompareTo(ParticlePath other, bool isCompare)
