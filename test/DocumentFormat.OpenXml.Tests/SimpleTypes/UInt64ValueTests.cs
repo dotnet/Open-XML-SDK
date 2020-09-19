@@ -18,6 +18,7 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
             new TestValue(ulong.MaxValue, "18446744073709551615"),
             new TestValue(ulong.MaxValue - 1, "18446744073709551614"),
             new TestValue((ulong)1e6, "1e6"),
+            new TestValue((int)1.00001e6, "1.00001e6"),
         };
 
         public UInt64ValueTests()

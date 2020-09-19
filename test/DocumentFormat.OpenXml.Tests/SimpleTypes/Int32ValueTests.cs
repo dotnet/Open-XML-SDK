@@ -21,6 +21,7 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
             new TestValue(int.MaxValue, "2147483647"),
             new TestValue(int.MaxValue - 1, "2147483646"),
             new TestValue((int)1e6, "1e6"),
+            new TestValue((int)1.00001e6, "1.00001e6"),
         };
 
         public Int32ValueTests()

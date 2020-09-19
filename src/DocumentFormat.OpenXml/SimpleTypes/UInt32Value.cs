@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml
     [DebuggerDisplay("{InnerText}")]
     public class UInt32Value : OpenXmlComparableSimpleValue<uint>
     {
-        private static readonly NumberStyles ParseStyle = NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite | NumberStyles.AllowExponent;
+        private static readonly NumberStyles ParseStyle = NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite | NumberStyles.AllowExponent | NumberStyles.AllowDecimalPoint;
 
         /// <summary>
         /// Initializes a new instance of the UInt32Value class.

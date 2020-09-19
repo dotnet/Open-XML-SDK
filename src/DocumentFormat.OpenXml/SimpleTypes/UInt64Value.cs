@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml
     [DebuggerDisplay("{InnerText}")]
     public class UInt64Value : OpenXmlComparableSimpleValue<ulong>
     {
-        private static readonly NumberStyles ParseStyles = NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite | NumberStyles.AllowExponent;
+        private const NumberStyles ParseStyles = NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite | NumberStyles.AllowExponent | NumberStyles.AllowDecimalPoint;
 
         /// <summary>
         /// Initializes a new instance of the UInt64Value class.
