@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml
     [DebuggerDisplay("{InnerText}")]
     public class Int32Value : OpenXmlComparableSimpleValue<int>
     {
-        private static readonly NumberStyles ParseStyles = NumberStyles.AllowLeadingSign | NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite | NumberStyles.AllowExponent | NumberStyles.AllowDecimalPoint;
+        private const NumberStyles ParseStyles = NumberStyles.AllowLeadingSign | NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite | NumberStyles.AllowExponent | NumberStyles.AllowDecimalPoint;
 
         /// <summary>
         /// Initializes a new instance of the Int32Value class.
