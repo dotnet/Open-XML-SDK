@@ -3,9 +3,11 @@
 
 using DocumentFormat.OpenXml.Framework.Schema;
 using System;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Framework
 {
+    [DebuggerDisplay("[{Type}] - {Path}")]
     internal readonly struct LookupItem
     {
         public LookupItem(Type type, ParticlePath path)
@@ -23,9 +25,5 @@ namespace DocumentFormat.OpenXml.Framework
             type = Type;
             path = Path;
         }
-
-#if DEBUG
-        public override string ToString() => $"[{Type}] - {Path.Path}";
-#endif
     }
 }
