@@ -136,11 +136,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(id));
             }
 
-            foreach (var referenceRelatinship in ReferenceRelationshipList)
+            foreach (var referenceRelationship in ReferenceRelationshipList)
             {
-                if (referenceRelatinship.Id == id)
+                if (referenceRelationship.Id == id)
                 {
-                    return referenceRelatinship;
+                    return referenceRelationship;
                 }
             }
 
