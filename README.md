@@ -90,7 +90,8 @@ If you have "how-to" questions please post to one of the following resources:
 Known Issues
 ------------
 
-- On .NET Core, zip packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/corefx/issues/24457).
+- On .NET Core and .NET 5, zip packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/runtime/issues/1544).
+- On .NET Core, targeting .NET Framework 4.5+, and .NET 5, `System.Uri` will not parse invalid links. This causes an exception. A workaround in v2.12.0+ of OpenXml SDK is to use `OpenSettings.RelationshipErrorRewriter` to rewrite them to something that can be parsed. A discussion is available [here](https://github.com/dotnet/runtime/issues/26084) to enable something more robust in `System.IO.Packaging`.
 - On .NET Framework, an `IsolatedStorageException` may be thrown under certain circumstances. This generally occurs when manipulating a large document in an environment with an AppDomain that does not have enough evidence. A sample with a workaround is available [here](/samples/IsolatedStorageExceptionWorkaround).
 
 Documentation
