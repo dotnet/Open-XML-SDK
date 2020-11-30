@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added validation for `CellType` for numbers and date formats (#782)
 - Added `OpenXmlReader.GetLineInfo()` to retrieve `IXmlLineInfo` of the underlying reader if available (#804)
 
+### Fixed
+- Fixed exception that would be thrown if attempting to save a document as FlatOPC if it contains SVG files (#822)
+
 ### Removed
 - Removed explicit reference to `System.IO.Packaging` on .NET 4.6 builds (#774)
 

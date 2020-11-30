@@ -76,6 +76,8 @@ namespace DocumentFormat.OpenXml.Tests
 
             public const string simpleSdt = "TestFiles.simpleSdt.docx";
 
+            public const string Svg = "TestFiles.svg.docx";
+
             public const string Spreadsheet = "TestFiles.Spreadsheet.xlsx";
 
             public const string Strict01 = "TestFiles.Strict01.docx";

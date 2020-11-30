@@ -86,19 +86,31 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The corresponding <see cref="XElement"/>.</returns>
         private static XElement GetContentsAsXml(PackagePart part, HashSet<Uri> altChunkPartUris)
         {
+#if FEATURE_XML_PROHIBIT_DTD
+            var settings = default(XmlReaderSettings);
+#else
+            var settings = new XmlReaderSettings
+            {
+                DtdProcessing = DtdProcessing.Ignore,
+            };
+#endif
+
             if (part.ContentType.EndsWith("xml", StringComparison.Ordinal) &&
                 !altChunkPartUris.Contains(part.Uri))
             {
-                using (Stream stream = part.GetStream())
-                using (var streamReader = new StreamReader(stream))
-                using (XmlReader xmlReader = XmlReader.Create(streamReader))
-                {
-                    return new XElement(
-                        Pkg + "part",
-                        new XAttribute(Pkg + "name", part.Uri),
-                        new XAttribute(Pkg + "contentType", part.ContentType),
-                        new XElement(Pkg + "xmlData", XElement.Load(xmlReader)));
-                }
+                using var stream = part.GetStream();
+                using var streamReader = new StreamReader(stream);
+                using var xmlReader = XmlReader.Create(streamReader, settings);
+
+                // Some content, such as SVG, may have a preamble and doctype. Office does not include this, so we
+                // load the content as a document and then just extract the root node.
+                var doc = XDocument.Load(xmlReader);
+
+                return new XElement(
+                    Pkg + "part",
+                    new XAttribute(Pkg + "name", part.Uri),
+                    new XAttribute(Pkg + "contentType", part.ContentType),
+                    new XElement(Pkg + "xmlData", doc.Root));
             }
 
             return GetBinaryPartContentsAsXml(part);
@@ -216,7 +228,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             IEnumerable<XElement> flatOpcParts = flatOpcPackage
                 .Elements()
-                .Where(p => (string) p.Attribute(Pkg + "contentType") != RelationshipContentType);
+                .Where(p => (string)p.Attribute(Pkg + "contentType") != RelationshipContentType);
 
             foreach (XElement flatOpcPart in flatOpcParts)
             {
@@ -256,7 +268,7 @@ namespace DocumentFormat.OpenXml.Packaging
             using (Stream stream = part.GetStream(FileMode.Create))
             using (var binaryWriter = new BinaryWriter(stream))
             {
-                var chunkedBase64String = (string) flatOpcPart.Element(Pkg + "binaryData");
+                var chunkedBase64String = (string)flatOpcPart.Element(Pkg + "binaryData");
                 byte[] byteArray = FromChunkedBase64String(chunkedBase64String);
                 binaryWriter.Write(byteArray);
             }
@@ -264,8 +276,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private static PackagePart CreatePackagePart(XElement flatOpcPart, Package package)
         {
-            var name = (string) flatOpcPart.Attribute(Pkg + "name");
-            var contentType = (string) flatOpcPart.Attribute(Pkg + "contentType");
+            var name = (string)flatOpcPart.Attribute(Pkg + "name");
+            var contentType = (string)flatOpcPart.Attribute(Pkg + "contentType");
             var uri = new Uri(name, UriKind.Relative);
             return package.CreatePart(uri, contentType, CompressionOption.SuperFast);
         }
@@ -280,11 +292,11 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             IEnumerable<XElement> flatOpcRelationshipParts = flatOpcPackage
                 .Elements()
-                .Where(p => (string) p.Attribute(Pkg + "contentType") == RelationshipContentType);
+                .Where(p => (string)p.Attribute(Pkg + "contentType") == RelationshipContentType);
 
             foreach (XElement flatOpcRelationshipPart in flatOpcRelationshipParts)
             {
-                var name = (string) flatOpcRelationshipPart.Attribute(Pkg + "name");
+                var name = (string)flatOpcRelationshipPart.Attribute(Pkg + "name");
                 if (name == "/_rels/.rels")
                 {
                     AddPackageLevelRelationships(flatOpcRelationshipPart, package);
@@ -300,10 +312,10 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             foreach (XElement relationship in flatOpcRelationshipPart.Descendants(Rel + "Relationship"))
             {
-                var id = (string) relationship.Attribute("Id");
-                var type = (string) relationship.Attribute("Type");
-                var target = (string) relationship.Attribute("Target");
-                var targetMode = (string) relationship.Attribute("TargetMode");
+                var id = (string)relationship.Attribute("Id");
+                var type = (string)relationship.Attribute("Type");
+                var target = (string)relationship.Attribute("Target");
+                var targetMode = (string)relationship.Attribute("TargetMode");
 
                 if (targetMode == "External")
                 {
@@ -326,10 +338,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
             foreach (XElement relationship in flatOpcRelationshipPart.Descendants(Rel + "Relationship"))
             {
-                var id = (string) relationship.Attribute("Id");
-                var type = (string) relationship.Attribute("Type");
-                var target = (string) relationship.Attribute("Target");
-                var targetMode = (string) relationship.Attribute("TargetMode");
+                var id = (string)relationship.Attribute("Id");
+                var type = (string)relationship.Attribute("Type");
+                var target = (string)relationship.Attribute("Target");
+                var targetMode = (string)relationship.Attribute("TargetMode");
 
                 if (targetMode == "External")
                 {
@@ -348,7 +360,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private static PackagePart GetSourcePart(XElement flatOpcRelationshipPart, Package package)
         {
-            var name = (string) flatOpcRelationshipPart.Attribute(Pkg + "name");
+            var name = (string)flatOpcRelationshipPart.Attribute(Pkg + "name");
             string directory = name.Substring(0, name.IndexOf("/_rels", StringComparison.Ordinal));
             string relsFilename = name.Substring(name.LastIndexOf('/'));
             string filename = relsFilename.Substring(0, relsFilename.IndexOf(".rels", StringComparison.Ordinal));
