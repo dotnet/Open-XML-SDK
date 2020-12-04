@@ -202,7 +202,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace ID of the current element.
         /// </summary>
-        internal byte NamespaceId => Metadata.Schema?.NamespaceId ?? throw new InvalidOperationException();
+        internal byte NamespaceId => Metadata.Schema.NamespaceId;
 
         internal virtual void ConfigureMetadata(ElementMetadata.Builder builder)
         {

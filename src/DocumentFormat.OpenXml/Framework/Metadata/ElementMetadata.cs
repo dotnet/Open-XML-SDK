@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             ReadOnlyArray<IValidator> validators,
             ReadOnlyArray<IValidator> constraints,
             FileFormatVersions version,
-            SchemaAttrAttribute schema,
+            OpenXmlSchema schema,
             CompiledParticle particle,
             Lazy<ElementLookup> lookup)
         {
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public CompiledParticle Particle { get; }
 
-        public SchemaAttrAttribute Schema { get; }
+        public OpenXmlSchema Schema { get; }
 
         public static ElementMetadata Create(OpenXmlElement element)
         {
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public ElementMetadata Build()
             {
-                var schema = _localName is null ? null : new SchemaAttrAttribute(_nsId, _localName);
+                var schema = _localName is null ? default : new OpenXmlSchema(_nsId, _localName);
                 var lookup = _children is null ? _lazy : new Lazy<ElementLookup>(() => new ElementLookup(_children.Select(c => c.Build())), true);
 
                 return new ElementMetadata(BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, schema, Particle.Compile(), lookup);

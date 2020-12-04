@@ -142,28 +142,18 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 _activator = activator;
             }
 
-            private ActivatorElementChild(Type child, SchemaAttrAttribute schema)
+            private ActivatorElementChild(Type child, OpenXmlSchema schema)
                 : base(child, schema.NamespaceId, schema.Tag)
             {
             }
 
             public override OpenXmlElement Create() => _activator();
 
-            private static SchemaAttrAttribute GetSchema(Type child, Func<OpenXmlElement> activator)
+            private static OpenXmlSchema GetSchema(Type child, Func<OpenXmlElement> activator)
             {
-                var schema = child.GetTypeInfo().GetCustomAttribute<SchemaAttrAttribute>();
+                var instance = activator();
 
-                if (schema is null)
-                {
-                    var instance = activator();
-
-                    schema = instance.Metadata.Schema;
-
-                    if (schema is null)
-                    {
-                        throw new InvalidOperationException($"{child} does not contain schema information");
-                    }
-                }
+                var schema = instance.Metadata.Schema;
 
                 return schema;
             }

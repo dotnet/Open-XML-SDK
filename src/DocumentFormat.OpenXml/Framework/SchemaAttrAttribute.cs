@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml
     /// Defines the attribute which is used to decorate a property for its corresponding attribute information.
     /// </summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, Inherited = true, AllowMultiple = false)]
+    [Obsolete("This attribute is no longer used to identify schema information. It didn't contain everything and a new API will be forthcoming.")]
     public sealed class SchemaAttrAttribute : Attribute
     {
         /// <summary>
